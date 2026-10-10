@@ -1,0 +1,11 @@
+# Scratch test images and caches
+scratch_*
+verify_*
+test_*
+thumb_*
+user_img*
+*.log
+__pycache__/
+.tempmediaStorage/
+.system_generated/
+*.py

@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoverItUp | Colorful and Trendy Mobile Covers</title>
+  <meta name="description" content="Explore a world of colorful, trendy, and shockproof mobile covers. Premium iPhone cases, tempered glass back covers, and custom accessories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Navigation Header matching hero.png exactly -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <!-- Left: Logo & Nav Links -->
+      <div class="header-left">
+        <a href="#" class="brand-logo" aria-label="Home">
+          <img src="assets/logo.png" alt="Logo" class="logo-img">
+        </a>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="product.html" class="nav-link active">PHONE CASE</a>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#brands" class="nav-link">
+                ACCESSORIES
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#glass-case" class="dropdown-item">Tempered Glass Protectors</a>
+                <a href="#style-section" class="dropdown-item">MagSafe Stands & Wallets</a>
+                <a href="#products" class="dropdown-item">Camera Lens Bumpers</a>
+                <a href="#shop-dual" class="dropdown-item">Phone Charms & Straps</a>
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <a href="#brands" class="nav-link">
+                COLLECTION
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <div class="dropdown-menu">
+                <a href="#products" class="dropdown-item">iPhone 15 Series</a>
+                <a href="#brands" class="dropdown-item">iPhone 12 & 11 Series</a>
+                <a href="#glass-case" class="dropdown-item">Tempered Glass Covers</a>
+                <a href="#iphone-cover-feature" class="dropdown-item">Artistic & Bohemian Prints</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#iphone-cover-feature" class="nav-link">
+                CUSTOMISE
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Right: Utility Icons matching hero.png -->
+      <div class="header-right">
+        <button class="icon-btn" id="searchBtn" aria-label="Search products" title="Search">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" id="userBtn" aria-label="My Account" title="Account">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+        <button class="icon-btn store-btn" id="cartBtn" aria-label="Store" title="Store">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l2.5-5h13L21 9v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
+            <path d="M3 9h18"></path>
+            <path d="M9 21V9"></path>
+          </svg>
+        </button>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <img src="assets/logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">COVERITUP</span>
+      </div>
+      <button class="close-btn" id="closeMobileDrawer">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#products" class="mobile-link">PHONE CASE</a></li>
+      <li><a href="#brands" class="mobile-link">ACCESSORIES</a></li>
+      <li><a href="#glass-case" class="mobile-link">COLLECTION</a></li>
+      <li><a href="#iphone-cover-feature" class="mobile-link">CUSTOMISE</a></li>
+      <li><a href="#faq" class="mobile-link">HELP & SUPPORT</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#faq" class="btn btn-dark full-width">CONTACT US</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION (With Dynamic 4-Banner Carousel & Background Image) -->
+    <section class="hero-section" id="hero" aria-label="Featured Mobile Cover Banners">
+      <div class="hero-container">
+        <!-- The custom notched hero canvas -->
+        <div class="hero-card" id="heroCarousel">
+          <!-- Exact Vector Shape with Embedded Background Image & Gradient Overlays -->
+          <svg class="hero-bg-svg" viewBox="0 0 1680 940" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <clipPath id="heroCardClip">
+                <path d="
+                  M 33 755
+                  L 33 140
+                  C 33 110, 55 96, 85 96
+                  L 815 96
+                  C 850 96, 865 29, 895 29
+                  L 1350 29
+                  C 1380 29, 1395 96, 1430 96
+                  L 1600 96
+                  C 1630 96, 1655 115, 1655 145
+                  L 1655 855
+                  C 1655 885, 1635 903, 1605 903
+                  L 316 903
+                  C 280 903, 300 801, 250 801
+                  L 85 801
+                  C 55 801, 33 785, 33 755
+                  Z
+                "/>
+              </clipPath>
+              <!-- Gradient Overlay for enhanced contrast -->
+              <linearGradient id="heroGradientOverlay" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32"/>
+                <stop offset="50%" stop-color="#B9CEE7" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#8FAFD3" stop-opacity="0.36"/>
+              </linearGradient>
+            </defs>
+            <!-- Base Tint Layer -->
+            <rect width="1680" height="940" fill="#B9CEE7" clip-path="url(#heroCardClip)"/>
+            <!-- Background Image -->
+            <image href="assets/hero_bg_abstract_waves.jpg" width="1680" height="940" preserveAspectRatio="xMidYMid slice" clip-path="url(#heroCardClip)" opacity="0.68"/>
+            <!-- Contrast Overlay -->
+            <rect width="1680" height="940" fill="url(#heroGradientOverlay)" clip-path="url(#heroCardClip)"/>
+          </svg>
+
+          <!-- 4 HEADING BANNERS SLIDER CONTAINER -->
+          <div class="hero-slider-wrap">
+            <!-- BANNER SLIDE 1: Colorful & Trendy Wave Swirl -->
+            <div class="hero-slide active" data-slide="0" data-theme="sky" data-btn-text="CONTACT US" data-btn-link="#faq">
+              <div class="hero-content">
+                <div class="hero-pill-badge">✨ SIGNATURE COLLECTION</div>
+                <h1 class="hero-headline">COLORFUL AND<br>TRENDY MOBILE<br>COVERS</h1>
+                <p class="hero-subtext">Explore a world of colorful, trendy, and shockproof designer phone cases crafted for everyday expression.</p>
+              </div>
+              <div class="hero-visual">
+                <div class="hero-phone-wrap hero-phone-wrap-hand">
+                  <img src="assets/banner_1_hand_wave.png" alt="Hand holding colorful pastel wave swirl designer mobile cover" class="hero-phone-img banner-img-hand">
+                </div>
+              </div>
+            </div>
+
+            <!-- BANNER SLIDE 2: Diamond 9H Tempered Glass Luxury Back Covers -->
+            <div class="hero-slide" data-slide="1" data-theme="glass" data-btn-text="EXPLORE GLASS CASES" data-btn-link="#glass-case">
+              <div class="hero-content">
+                <div class="hero-pill-badge">💎 9H TEMPERED GLASS</div>
+                <h1 class="hero-headline">DIAMOND GLASS<br>LUXURY BACK<br>COVERS</h1>
+                <p class="hero-subtext">Ultra-scratch resistant 9H tempered glass shield with shock-dispersing silicone bumpers and genuine Apple silhouette shine.</p>
+              </div>
+              <div class="hero-visual">
+                <div class="hero-phone-wrap hero-phone-wrap-floating">
+                  <img src="assets/banner_2_tempered_glass.png" alt="9H Tempered Glass luxury protective back cover in 3D" class="hero-phone-img banner-img-floating banner-img-glass">
+                </div>
+              </div>
+            </div>
+
+            <!-- BANNER SLIDE 3: Shockproof MagSafe Impact Series -->
+            <div class="hero-slide" data-slide="2" data-theme="magsafe" data-btn-text="EXPLORE MAGSAFE" data-btn-link="#products">
+              <div class="hero-content">
+                <div class="hero-pill-badge">⚡ MILITARY-GRADE ARMOR</div>
+                <h1 class="hero-headline">SHOCKPROOF<br>MAGSAFE ARMOR<br>SERIES</h1>
+                <p class="hero-subtext">Engineered for 10ft drop protection with high-speed magnetic alignment for seamless MagSafe wireless charging.</p>
+              </div>
+              <div class="hero-visual">
+                <div class="hero-phone-wrap hero-phone-wrap-floating">
+                  <img src="assets/banner_3_magsafe_armor.png" alt="Crystal-clear MagSafe shockproof armor case with magnetic ring" class="hero-phone-img banner-img-floating banner-img-magsafe">
+                </div>
+              </div>
+            </div>
+
+            <!-- BANNER SLIDE 4: Artistic & Bohemian Prints Edition -->
+            <div class="hero-slide" data-slide="3" data-theme="boho" data-btn-text="VIEW BOHO PRINTS" data-btn-link="#iphone-cover-feature">
+              <div class="hero-content">
+                <div class="hero-pill-badge">🎨 ARTISAN EDITION</div>
+                <h1 class="hero-headline">ARTISTIC &<br>BOHEMIAN PRINTS<br>EDITION</h1>
+                <p class="hero-subtext">Handcrafted golden mandalas, turquoise botanicals, and bohemian illustrations printed with vivid scratch-proof inks.</p>
+              </div>
+              <div class="hero-visual">
+                <div class="hero-phone-wrap hero-phone-wrap-floating">
+                  <img src="assets/banner_4_boho_mandala.png" alt="Artistic bohemian mandala and floral designer phone case" class="hero-phone-img banner-img-floating banner-img-boho">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Left Notched CTA Pocket -->
+          <div class="hero-cta-group">
+            <a href="#faq" class="btn btn-pill-dark hero-contact-btn" id="heroDynamicCta">
+              CONTACT US
+            </a>
+            <a href="product.html" class="btn-circle-arrow hero-arrow-btn" id="heroExploreArrow" aria-label="Explore collection" title="Explore Products">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Hero Carousel Navigation: Dots & Arrow Controls -->
+          <div class="hero-carousel-nav" aria-label="Hero slider pagination">
+            <button class="hero-nav-arrow prev" id="heroPrevBtn" aria-label="Previous slide" title="Previous Slide">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="hero-nav-dots" id="heroDotsWrap">
+              <button class="hero-dot active" data-index="0" aria-label="Slide 1: Trendy Covers">
+                <span class="dot-num">01</span>
+                <span class="dot-label">TRENDS</span>
+              </button>
+              <button class="hero-dot" data-index="1" aria-label="Slide 2: Tempered Glass">
+                <span class="dot-num">02</span>
+                <span class="dot-label">GLASS</span>
+              </button>
+              <button class="hero-dot" data-index="2" aria-label="Slide 3: MagSafe Armor">
+                <span class="dot-num">03</span>
+                <span class="dot-label">MAGSAFE</span>
+              </button>
+              <button class="hero-dot" data-index="3" aria-label="Slide 4: Bohemian Prints">
+                <span class="dot-num">04</span>
+                <span class="dot-label">BOHO</span>
+              </button>
+            </div>
+            <button class="hero-nav-arrow next" id="heroNextBtn" aria-label="Next slide" title="Next Slide">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: OUR PRODUCTS (From image.png) -->
+    <section class="products-section" id="products">
+      <div class="section-container">
+        <div class="section-header-center">
+          <h2 class="section-title">OUR PRODUCTS</h2>
+          <div class="products-action-bar">
+            <a href="product.html" class="btn btn-pill-outline view-all-btn">
+              VIEW ALL
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Product Card 1 -->
+          <div class="product-card" data-category="iphone15 trending">
+            <div class="product-card-inner">
+              <div class="product-image-box">
+                <img src="assets/phone_cream_transparent.png" alt="iPhone 15 Cream Color Men Design Mobile Cover" class="product-img">
+                <button class="product-arrow-btn" data-product-id="1" aria-label="View product details" title="Quick View">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <div class="quick-add-overlay">
+                  <button class="btn btn-quick-add" data-id="1" data-name="iPhone 15 Cream Color Men Design" data-price="12" data-img="assets/phone_cream_transparent.png">
+                    + Add To Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="product-price">$12</div>
+                <h3 class="product-name">IPHONE 15 CREAM COLOR MEN DESIGN MOBILE COVER</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="product-card" data-category="iphone15 trending pop">
+            <div class="product-card-inner">
+              <div class="product-image-box">
+                <img src="assets/phone_fire_blue_transparent.png" alt="iPhone 15 Fire Blue Color New Addition Cover" class="product-img">
+                <button class="product-arrow-btn" data-product-id="2" aria-label="View product details" title="Quick View">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <div class="quick-add-overlay">
+                  <button class="btn btn-quick-add" data-id="2" data-name="iPhone 15 Fire Blue Color New Addition" data-price="22" data-img="assets/phone_fire_blue_transparent.png">
+                    + Add To Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="product-price">$22</div>
+                <h3 class="product-name">IPHONE 15 FIRE BLUE COLOR NEW ADDITION COVER</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card" data-category="iphone15 pop">
+            <div class="product-card-inner">
+              <div class="product-image-box">
+                <img src="assets/phone_spiderman_transparent.png" alt="iPhone 15 Spiderman Edition Mobile Cover" class="product-img">
+                <button class="product-arrow-btn" data-product-id="3" aria-label="View product details" title="Quick View">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+                <div class="quick-add-overlay">
+                  <button class="btn btn-quick-add" data-id="3" data-name="iPhone 15 Spiderman Edition" data-price="16" data-img="assets/phone_spiderman_transparent.png">
+                    + Add To Cart
+                  </button>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="product-price">$16</div>
+                <h3 class="product-name">IPHONE 15 SPIDERMAN EDITION MOBILE COVER</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GO ULTRA. GO FRAMELESS. (From Reference Image 2) -->
+    <section class="frameless-section" id="frameless" aria-label="Go Ultra Go Frameless Series">
+      <div class="section-container">
+        <div class="frameless-header">
+          <h2 class="frameless-title">GO ULTRA. GO FRAMELESS.</h2>
+          <p class="frameless-subtitle">Ultra-slim shock-absorbing bumper protection with naked phone feel and floating aerospace lens bezel.</p>
+        </div>
+
+        <div class="frameless-cards-container">
+          <!-- Card 1: Terracotta Orange -->
+          <div class="frameless-card frameless-card-orange">
+            <div class="frameless-card-header">
+              <button class="frameless-icon-btn wishlist-toggle" aria-label="Wishlist orange case" title="Add to Wishlist">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button class="frameless-icon-btn share-btn" aria-label="Share product" title="Share">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              </button>
+            </div>
+            <div class="frameless-visual-wrap">
+              <img src="assets/frameless_orange.png" alt="Ultra-Thin Frameless Case in Desert Orange" class="frameless-case-img">
+            </div>
+            <div class="frameless-card-footer">
+              <span class="frameless-card-title">Ultra-Thin Frameless Case · Orange</span>
+              <button class="frameless-add-btn" data-id="fl_orange" data-name="Frameless Case - Desert Orange" data-price="22" data-img="assets/frameless_orange.png">
+                <span>+</span> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Matte Black (Center Elevated) -->
+          <div class="frameless-card frameless-card-black">
+            <div class="frameless-card-header">
+              <button class="frameless-icon-btn wishlist-toggle liked" aria-label="Wishlist black case" title="Add to Wishlist">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button class="frameless-icon-btn share-btn" aria-label="Share product" title="Share">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              </button>
+            </div>
+            <div class="frameless-visual-wrap">
+              <img src="assets/frameless_black.png" alt="Ultra-Thin Frameless Case in Matte Black with Apple Logo" class="frameless-case-img">
+            </div>
+            <div class="frameless-card-footer">
+              <span class="frameless-card-title">Ultra-Thin Frameless Case · Matte Black</span>
+              <button class="frameless-add-btn" data-id="fl_black" data-name="Frameless Case - Matte Black" data-price="24" data-img="assets/frameless_black.png">
+                <span>+</span> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Light Silver -->
+          <div class="frameless-card frameless-card-silver">
+            <div class="frameless-card-header">
+              <button class="frameless-icon-btn wishlist-toggle" aria-label="Wishlist silver case" title="Add to Wishlist">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button class="frameless-icon-btn share-btn" aria-label="Share product" title="Share">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              </button>
+            </div>
+            <div class="frameless-visual-wrap">
+              <img src="assets/frameless_white.png" alt="Ultra-Thin Frameless Case in Frosted Silver" class="frameless-case-img">
+            </div>
+            <div class="frameless-card-footer">
+              <span class="frameless-card-title">Ultra-Thin Frameless Case · Silver Frost</span>
+              <button class="frameless-add-btn" data-id="fl_silver" data-name="Frameless Case - Silver Frost" data-price="22" data-img="assets/frameless_white.png">
+                <span>+</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Proof Toast -->
+        <div class="social-proof-toast" id="socialProofToast">
+          <div style="font-size: 1.4rem;">🛍️</div>
+          <div>
+            <span class="toast-tag-label">Someone liked and Bought</span>
+            <span class="toast-item-name">MagSafe Leather Card Holder – Snap-On Wallet</span>
+          </div>
+          <button class="toast-close-btn" id="closeSocialToast" aria-label="Close notification">&times;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BUILD YOUR OWN COMBO (From Reference Image 3) -->
+    <section class="combo-section" id="combo-deals" aria-label="Build Your Own Combo Offer">
+      <div class="section-container">
+        <div class="combo-header">
+          <h2 class="combo-title">BUILD YOUR OWN COMBO</h2>
+          <p style="color: #94A3B8; font-size: 1.15rem; max-width: 580px; margin: 0 auto;">Bundle your favorite mobile protection essentials and unlock our best seasonal pricing.</p>
+        </div>
+
+        <div class="combo-arena">
+          <!-- Top Left: Best Value Deal -->
+          <div class="combo-badge-card badge-pos-tl">
+            <div class="badge-icon-box">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78L12 20.67l7.65-7.66.77-.78a5.4 5.4 0 0 0 0-7.65z"></path></svg>
+            </div>
+            <span class="badge-text-label">Best Value Deal</span>
+          </div>
+
+          <!-- Top Right: Limited Time Offer -->
+          <div class="combo-badge-card badge-pos-tr">
+            <div class="badge-icon-box">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <span class="badge-text-label">Limited Time Offer</span>
+          </div>
+
+          <!-- Center 3D Bundle Image -->
+          <div class="combo-center-visual">
+            <img src="assets/combo_bundle_hero.png" alt="Apple Mobile Accessories Combo Bundle" class="combo-bundle-img">
+          </div>
+
+          <!-- Bottom Left: Premium Quality -->
+          <div class="combo-badge-card badge-pos-bl">
+            <div class="badge-icon-box">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            </div>
+            <span class="badge-text-label">Premium Quality</span>
+          </div>
+
+          <!-- Bottom Right: Trending Styles -->
+          <div class="combo-badge-card badge-pos-br">
+            <div class="badge-icon-box">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+            </div>
+            <span class="badge-text-label">Trending Styles</span>
+          </div>
+        </div>
+
+        <div class="combo-bottom-bar">
+          <p class="combo-offer-price">Grab Any 3 Accessories for <strong>₹1199 ($14.00)</strong></p>
+          <a href="product.html#combo" class="combo-shop-btn" id="openComboBuilderBtn">Shop now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SHOP OUR COLLECTIONS (From Reference Image 4) -->
+    <section class="collections-section" id="collections" aria-label="Shop Our Collections">
+      <div class="section-container">
+        <!-- 4 Featured Category Cards -->
+        <div class="collections-grid-4">
+          <a href="product.html?cat=iphone" class="collection-card-item">
+            <div class="collection-img-box">
+              <img src="assets/cat_iphone_covers.png" alt="iPhone Luxury Covers Lineup">
+            </div>
+            <span class="collection-card-caption">IPHONE COVERS</span>
+          </a>
+          <a href="product.html?cat=airpods" class="collection-card-item">
+            <div class="collection-img-box">
+              <img src="assets/cat_airpod_covers.png" alt="AirPod Silicone Protective Covers">
+            </div>
+            <span class="collection-card-caption">AIRPOD COVERS</span>
+          </a>
+          <a href="product.html?cat=iwatch" class="collection-card-item">
+            <div class="collection-img-box">
+              <img src="assets/cat_iwatch_bands.png" alt="iWatch Alpine Loop and Silicone Bands">
+            </div>
+            <span class="collection-card-caption">IWATCH BANDS</span>
+          </a>
+          <a href="product.html?cat=accessories" class="collection-card-item">
+            <div class="collection-img-box">
+              <img src="assets/cat_other_accessories.png" alt="Other MagSafe Mobile Accessories">
+            </div>
+            <span class="collection-card-caption">OTHER ACCESSORIES</span>
+          </a>
+        </div>
+
+        <!-- Filter Pills Bar -->
+        <div class="collections-filter-wrap">
+          <h2 class="collections-filter-title">Shop Our Collections</h2>
+          <div class="filter-pills-row" id="collectionsFilterPills">
+            <button class="filter-pill-btn active" data-filter="all">BUY THREE</button>
+            <button class="filter-pill-btn" data-filter="iphone">IPHONE COVER</button>
+            <button class="filter-pill-btn" data-filter="iwatch">IWATCH BANDS</button>
+            <button class="filter-pill-btn" data-filter="airpods">AIRPODS COVER</button>
+            <button class="filter-pill-btn" data-filter="accessories">OTHER ACCESSORIES</button>
+            <button class="filter-pill-btn" data-filter="cables">CHARGER & CABLES</button>
+            <button class="filter-pill-btn" data-filter="chargers">CHARGER CASES</button>
+            <button class="filter-pill-btn" data-filter="charms">COVER CHARMS</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: STYLE MEETS PROTECTION (From image copy.png) -->
+    <section class="style-section" id="style-section">
+      <div class="section-container">
+        <!-- Section Title with inline badge -->
+        <div class="universe-header">
+          <h2 class="universe-title">
+            Know More About 
+            <span class="inline-universe-badge">
+              <img src="assets/universe_badge.png?v=2" alt="Funky Cover Design Badge">
+            </span> 
+            Mobile New
+          </h2>
+          <h3 class="universe-subtitle">Funky Cover Universe</h3>
+        </div>
+
+        <!-- The Notched Card Container -->
+        <div class="style-card-container">
+          <!-- Top Tab / Left Section Header -->
+          <div class="style-tab-header">
+            <div class="style-title-block">
+              <span class="style-sub">STYLE MEETS</span>
+              <h2 class="style-main-title">PROTECTION</h2>
+            </div>
+            
+            <div class="feature-tags-group">
+              <span class="feature-tag active">Durable</span>
+              <span class="feature-tag">Sleek</span>
+              <span class="feature-tag">Lightweight</span>
+              <span class="feature-tag">Scratchproof</span>
+              <span class="feature-tag">Trendy</span>
+              <span class="feature-tag">Precision-Fit</span>
+            </div>
+          </div>
+
+          <!-- Interactive Visual Grid -->
+          <div class="style-card-body">
+            <div class="style-visuals-grid">
+              <!-- Left Card: Angled Phone View -->
+              <div class="style-subcard style-subcard-left">
+                <img src="assets/style_left_phone.png" alt="MagSafe Clear Case with Orange Rim" class="subcard-img">
+              </div>
+
+              <!-- Center Card: Feature Close-Up with Strength that Protects -->
+              <div class="style-subcard style-subcard-center">
+                <div class="style-actions-row">
+                  <a href="#products" class="btn btn-pill-dark">SHOP NOW</a>
+                  <a href="#products" class="btn btn-pill-outline">
+                    VIEW ALL
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+                <div class="center-card-media">
+                  <img src="assets/style_center_card.png" alt="Precision Camera Module with Lens Protection" class="center-card-img">
+                </div>
+                <div class="center-card-text">
+                  <p class="subcard-desc">
+                    Elevate Your Tech Game With Our Sleek, Origami-Inspired MOFT X Cover It Up Accessories. From Portable Laptop Stands To Stylish MagSafe Phone Cases .
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right Card: Peek Phone View -->
+              <div class="style-subcard style-subcard-right">
+                <img src="assets/style_right_phone.png" alt="Sleek MagSafe Case Vertical Profile" class="subcard-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: POPULAR BRANDS / SIRPHIRE COLLECTIONS (From image copy 3.png) -->
+    <section class="brands-section" id="brands">
+      <div class="section-container">
+        <div class="brands-header">
+          <span class="brands-subtitle-label">SIRPHIRE COLLECTIONS</span>
+          <h2 class="brands-main-title">POPULAR BRANDS</h2>
+          <p class="brands-description">Trending & Stylish Mobile Phone Accessories by Sirphire.com</p>
+        </div>
+
+        <!-- Bento Grid layout matching mockup -->
+        <div class="bento-grid">
+          <!-- Card 1: Tall Left Card (iPhone 11) -->
+          <div class="bento-card bento-card-tall" data-brand="iphone-11">
+            <div class="bento-image-wrapper">
+              <img src="assets/brand_iphone11_transparent.png" alt="iPhone 11 Colorful Collection Stack" class="bento-img">
+            </div>
+            <div class="bento-card-footer">
+              <span class="bento-brand-name">IPHONE 11</span>
+            </div>
+          </div>
+
+          <!-- Middle Column -->
+          <div class="bento-col-mid">
+            <!-- Card 2: iPhone 12 Top -->
+            <div class="bento-card bento-card-square" data-brand="iphone-12">
+              <div class="bento-image-wrapper">
+                <img src="assets/brand_iphone12_transparent.png" alt="iPhone 12 Lineup" class="bento-img">
+              </div>
+              <div class="bento-card-footer">
+                <span class="bento-brand-name">IPHONE 12</span>
+              </div>
+            </div>
+
+            <!-- Card 3: iPhone 8 Bottom -->
+            <div class="bento-card bento-card-square" data-brand="iphone-8">
+              <div class="bento-image-wrapper">
+                <img src="assets/brand_iphone8_transparent.png" alt="iPhone 8 Red Edition" class="bento-img">
+              </div>
+              <div class="bento-card-footer">
+                <span class="bento-brand-name">IPHONE 8</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="bento-col-right">
+            <!-- Card 4: iPhone 7 Top -->
+            <div class="bento-card bento-card-square" data-brand="iphone-7">
+              <div class="bento-image-wrapper">
+                <img src="assets/brand_iphone7_transparent.png" alt="iPhone 7 Jet Black Series" class="bento-img">
+              </div>
+              <div class="bento-card-footer">
+                <span class="bento-brand-name">IPHONE 7</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Redmi Note 7 Bottom -->
+            <div class="bento-card bento-card-square" data-brand="redmi-note-7">
+              <div class="bento-image-wrapper">
+                <img src="assets/brand_redminote7_transparent.png" alt="Redmi Note 7 Aurora Blue" class="bento-img">
+              </div>
+              <div class="bento-card-footer">
+                <span class="bento-brand-name">REDMI NOTE 7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: TEMPERED GLASS BACK COVERS (From image copy 4.png) -->
+    <section class="glass-section" id="glass-case">
+      <div class="section-container">
+        <div class="glass-banner">
+          <!-- Background watermark text -->
+          <div class="glass-watermark" aria-hidden="true">Best Sellers</div>
+
+          <div class="glass-banner-content">
+            <!-- Left: Exploded 3D case diagram matching image copy 4 exactly -->
+            <!-- Left: 3D WebGL Exploded & Assembled Animation (UGC Ads Loop) -->
+            <div class="glass-graphic-wrap webgl-stage-wrap" id="webglStageWrap">
+              <canvas id="explodedCaseCanvas" class="exploded-case-canvas"></canvas>
+              
+              <!-- 3D UGC HUD Overlay -->
+              <div class="webgl-hud-overlay">
+                <div class="ugc-status-pill">
+                  <span class="status-indicator-dot pulse"></span>
+                  <span id="ugcStatusText">4 LAYERS EXPLODED</span>
+                </div>
+                <div class="ugc-actions-bar">
+                  <button class="ugc-action-btn" id="ugcManualSnapBtn" type="button" aria-label="Toggle assemble or explode">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                    <span id="ugcSnapBtnText">ASSEMBLE</span>
+                  </button>
+                  <button class="ugc-action-btn active" id="ugcToggleLoopBtn" type="button" aria-label="Toggle UGC continuous animation loop">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+                    <span id="ugcLoopBtnText">LOOPING</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Specs and details exactly matching image copy 4 -->
+            <div class="glass-details-wrap">
+              <span class="glass-subtitle">CUSTOMIZED GLASS BACK COVERS</span>
+              <h2 class="glass-title">Tempered Glass Mobile<br>Back Covers</h2>
+
+              <!-- Specs Columns -->
+              <div class="glass-specs-grid">
+                <div class="spec-col">
+                  <div class="spec-heading">FRAME:</div>
+                  <div class="spec-val">Silicone Rubber</div>
+                </div>
+                <div class="spec-col">
+                  <div class="spec-heading">BASE:</div>
+                  <div class="spec-val">Polycarbonate Plastic</div>
+                </div>
+                <div class="spec-col">
+                  <div class="spec-heading">GLASS:</div>
+                  <div class="spec-val">Tempered Glass</div>
+                </div>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="glass-action-row">
+                <div class="glass-price">$16</div>
+                <button class="btn btn-outline-white glass-cta-btn" id="exploreGlassBtn" data-id="glass16" data-name="Tempered Glass Mobile Back Cover" data-price="16" data-img="assets/exact_exploded_glass.png">
+                  EXPLORE NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: IPHONE COVER ARTISTIC SHOWCASE (From image copy 5.png) -->
+    <section class="iphone-cover-showcase" id="iphone-cover-feature">
+      <div class="section-container">
+        <div class="cover-showcase-wrap">
+          <!-- Giant Background Typography -->
+          <div class="big-watermark-text" aria-hidden="true">
+            <span class="wm-left">IPHON</span>
+            <span class="wm-right">COVER</span>
+          </div>
+
+          <!-- Center Stack: 5 Animated Cards circularly scattering and assembling into exact stack -->
+          <div class="cards-deck-container" id="cardsDeck">
+            <div class="deck-animated-stage" id="deckStage">
+              <!-- Card 5 (Leaf collection, bottom-most in stack) -->
+              <div class="deck-card deck-card-5" data-card="5">
+                <img src="assets/deck_card_5.png" alt="Colorful iPhone 11 Collection Cover" class="deck-card-img">
+              </div>
+              <!-- Card 4 (Knit sleeve lifestyle) -->
+              <div class="deck-card deck-card-4" data-card="4">
+                <img src="assets/deck_card_4.png" alt="Sleek Swirl Phone Case Lifestyle" class="deck-card-img">
+              </div>
+              <!-- Card 3 (Top dual camera art) -->
+              <div class="deck-card deck-card-3" data-card="3">
+                <img src="assets/deck_card_3.png" alt="Spiderweb Art Edition Phone Cover" class="deck-card-img">
+              </div>
+              <!-- Card 2 (Wood mahogany studio) -->
+              <div class="deck-card deck-card-2" data-card="2">
+                <img src="assets/deck_card_2.png" alt="iPhone 8 Red Edition Mahogany Case" class="deck-card-img">
+              </div>
+              <!-- Card 1 (Front bohemian mandala, top-most in stack) -->
+              <div class="deck-card deck-card-1" data-card="1">
+                <img src="assets/deck_card_1.png" alt="Bohemian Artistic Mandala iPhone Cover" class="deck-card-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SHOP OUR PRODUCT & DUAL PROMO (From image copy 6.png Top) -->
+    <section class="shop-dual-section" id="shop-dual">
+      <div class="section-container">
+        <!-- Dual Header -->
+        <div class="shop-dual-header">
+          <div class="dual-header-left">
+            <h2 class="dual-main-title">SHOP<br>OUR PRODUCT</h2>
+            <p class="dual-subtext">Protect Your iPhone In Style With Our Premium Covers, Blending Durability And Design For The Perfect Fit.</p>
+          </div>
+        </div>
+
+        <!-- Cards Row -->
+        <div class="dual-cards-row">
+          <!-- Promo Card 1: 20% OFF Mint Green -->
+          <div class="promo-card promo-card-mint">
+            <div class="promo-card-body">
+              <span class="promo-discount-badge">20% OFF</span>
+              <p class="promo-copy">Safeguard Your iPhone Against Drops, Scratches, And Everyday Wear.</p>
+              
+              <div class="promo-media-box">
+                <img src="assets/promo_mint_transparent.png" alt="Mint Green Silicone Case" class="promo-case-img">
+                <button class="promo-arrow-btn" aria-label="Explore 20% OFF Collection" data-product="mint">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promo Card 2: SUPERIOR PROTECT Blue -->
+          <div class="promo-card promo-card-blue">
+            <div class="promo-card-body">
+              <span class="promo-discount-badge">SUPERIOR PROTECT</span>
+              <p class="promo-copy">Safeguard Your iPhone Against Drops, Scratches, And Everyday Wear.</p>
+              
+              <div class="promo-media-box">
+                <img src="assets/promo_blue_transparent.png" alt="Slate Blue Impact Shock Case" class="promo-case-img">
+                <button class="promo-arrow-btn" aria-label="Explore Superior Protection" data-product="blue">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Showcase Card: Designer Phone Cases photo with interactive hotspots -->
+          <div class="promo-card promo-card-photo">
+            <div class="showcase-photo-box">
+              <img src="assets/shop_showcase_cases.png" alt="Three stylish artist designed iPhone cases on table" class="showcase-photo-img">
+              <a href="#products" class="showcase-hotspot-btn hotspot-shop-now" aria-label="Shop Now" title="Shop Now"></a>
+              <a href="#products" class="showcase-hotspot-btn hotspot-view-all" aria-label="View All" title="View All"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FAQ & CUSTOMER SUPPORT (From image copy 6.png Bottom) -->
+    <section class="support-faq-section" id="faq">
+      <div class="section-container">
+        <!-- Breadcrumb / Toolbar Pills from design -->
+        <div class="faq-toolbar-row">
+          <span class="toolbar-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            More Like This
+          </span>
+          <span class="toolbar-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            Save
+          </span>
+          <span class="toolbar-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            Permalink
+          </span>
+        </div>
+
+        <div class="support-faq-grid">
+          <!-- Left: Questions Headline & Team Support -->
+          <div class="support-left-col">
+            <h2 class="faq-main-title">
+              HAVE YOU QUESTIONS ?<br>
+              <span class="faq-sub-title">WE ARE HERE</span>
+            </h2>
+
+            <div class="team-avatars-wrap">
+              <div class="avatars-group">
+                <img src="assets/support_avatars.png?v=3" alt="Customer Support Team" class="avatars-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Accordion Component matching image copy 6.png -->
+          <div class="support-right-col">
+            <div class="faq-accordion-box">
+              <!-- Item 1 (Expanded by default matching image) -->
+              <div class="faq-item active">
+                <button class="faq-question-btn" aria-expanded="true">
+                  <span class="faq-question-text">How Do I Track My Converitup Order ?</span>
+                  <span class="faq-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-panel">
+                  <div class="faq-answer-content">
+                    <p>On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled And Demoralized By The Charms Of Pleasure Of The Moment, So Blinded By Desire, That They Cannot Foresee The Pain And Trouble That Are Bound To Ensue;</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false">
+                  <span class="faq-question-text">How Do I Track My Converitup Order ?</span>
+                  <span class="faq-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-panel">
+                  <div class="faq-answer-content">
+                    <p>On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled And Demoralized By The Charms Of Pleasure Of The Moment, So Blinded By Desire, That They Cannot Foresee The Pain And Trouble That Are Bound To Ensue;</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false">
+                  <span class="faq-question-text">How Do I Track My Converitup Order ?</span>
+                  <span class="faq-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-panel">
+                  <div class="faq-answer-content">
+                    <p>On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled And Demoralized By The Charms Of Pleasure Of The Moment, So Blinded By Desire, That They Cannot Foresee The Pain And Trouble That Are Bound To Ensue;</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="faq-item">
+                <button class="faq-question-btn" aria-expanded="false">
+                  <span class="faq-question-text">How Do I Track My Converitup Order ?</span>
+                  <span class="faq-chevron">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+                <div class="faq-answer-panel">
+                  <div class="faq-answer-content">
+                    <p>On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled And Demoralized By The Charms Of Pleasure Of The Moment, So Blinded By Desire, That They Cannot Foresee The Pain And Trouble That Are Bound To Ensue;</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: TRUST & VALUE PROPOSITION BANNER -->
+    <section class="trust-banner-section">
+      <div class="section-container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon">🚀</div>
+            <div class="trust-info">
+              <h4>Lightning Fast Shipping</h4>
+              <p>Dispatched in 24 hours with express delivery</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div class="trust-info">
+              <h4>10ft Drop Tested</h4>
+              <p>Military grade shockproof protection</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">🔄</div>
+            <div class="trust-info">
+              <h4>30-Day Easy Returns</h4>
+              <p>Hassle-free replacement guarantee</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">✨</div>
+            <div class="trust-info">
+              <h4>Fade-Proof Printing</h4>
+              <p>UV cured HD inks that never peel or fade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Complete Premium E-Commerce Footer -->
+  <footer class="site-footer">
+    <div class="section-container">
+      <!-- Newsletter Row -->
+      <div class="footer-newsletter-row">
+        <div class="newsletter-left">
+          <h3 class="newsletter-title">Join The Cover Club</h3>
+          <p class="newsletter-desc">Subscribe to get secret drops, exclusive VIP deals, and 15% off your first order.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="input-wrap">
+            <input type="email" placeholder="Enter your email address" required id="newsletterEmail">
+            <button type="submit" class="btn btn-pill-dark">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="footer-links-grid">
+        <div class="footer-col brand-col">
+          <div class="brand-logo footer-logo">
+            <img src="assets/logo.png" alt="Logo" class="logo-img">
+            <span class="logo-text">COVERITUP</span>
+          </div>
+          <p class="footer-about">
+            Crafting vibrant, shockproof, and stylish smartphone armor that lets you express your personality without compromising device safety.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Shop by Device</h4>
+          <ul class="footer-links">
+            <li><a href="#products">iPhone 15 / 15 Pro Max</a></li>
+            <li><a href="#brands">iPhone 14 & 13 Series</a></li>
+            <li><a href="#brands">iPhone 12 & 11 Series</a></li>
+            <li><a href="#brands">Samsung Galaxy S Series</a></li>
+            <li><a href="#brands">Redmi Note Series</a></li>
+            <li><a href="#products">OnePlus & Pixel Series</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#glass-case">Tempered Glass Covers</a></li>
+            <li><a href="#products">Pop Art & Anime Series</a></li>
+            <li><a href="#iphone-cover-feature">Bohemian Mandala Edition</a></li>
+            <li><a href="#style-section">MagSafe Clear Shockproof</a></li>
+            <li><a href="#shop-dual">Minimalist Matte Covers</a></li>
+            <li><a href="#products">Best Sellers 2026</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#faq">Track My Order</a></li>
+            <li><a href="#faq">Shipping & Delivery Info</a></li>
+            <li><a href="#faq">Returns & Refunds</a></li>
+            <li><a href="#faq">Warranty Registration</a></li>
+            <li><a href="#faq">Bulk & Corporate Orders</a></li>
+            <li><a href="#faq">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Credits & Payment Badges -->
+      <div class="footer-bottom-row">
+        <div class="copyright-text">
+          © 2026 CoverItUp & Sirphire Collections. All rights reserved. Designed for lovers of art & tech.
+        </div>
+        <div class="payment-methods">
+          <span class="pay-badge">Apple Pay</span>
+          <span class="pay-badge">Google Pay</span>
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">PayPal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <h3>Your Cart (<span id="cartDrawerCount">3</span>)</h3>
+        <span class="cart-shipping-notice">🎉 You've unlocked FREE EXPRESS SHIPPING!</span>
+      </div>
+      <button class="close-drawer-btn" id="closeCartBtn" aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-drawer-items" id="cartItemsContainer">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$50.00</strong>
+      </div>
+      <div class="cart-summary-line">
+        <span>Shipping</span>
+        <span class="text-free">FREE</span>
+      </div>
+      <div class="cart-summary-line total-line">
+        <span>Total</span>
+        <strong id="cartTotal">$50.00</strong>
+      </div>
+      <button class="btn btn-pill-dark full-width checkout-btn" id="checkoutBtn">
+        Proceed To Checkout →
+      </button>
+      <button class="btn-text-continue" id="continueShoppingBtn">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeQuickView">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-image-col">
+          <img src="assets/phone_cream.png" alt="Product Preview" id="modalProductImg" class="modal-prod-img">
+        </div>
+        <div class="modal-details-col">
+          <span class="modal-brand-badge">COVERITUP SIGNATURE</span>
+          <h2 class="modal-title" id="modalProductTitle">iPhone 15 Cream Color Men Design</h2>
+          <div class="modal-price" id="modalProductPrice">$12.00</div>
+          <p class="modal-desc" id="modalProductDesc">
+            Precision molded for a seamless snug fit with elevated camera lip, tactile responsive buttons, and dual-layer shock dispersal technology.
+          </p>
+
+          <div class="modal-selector">
+            <label>Select Device Model:</label>
+            <select class="custom-select" id="deviceSelect">
+              <option>iPhone 15 Pro Max</option>
+              <option>iPhone 15 Pro</option>
+              <option selected>iPhone 15</option>
+              <option>iPhone 14 Pro Max</option>
+              <option>iPhone 13</option>
+            </select>
+          </div>
+
+          <div class="modal-selector">
+            <label>Finish:</label>
+            <div class="finish-options">
+              <button class="finish-btn active">Matte Velvet</button>
+              <button class="finish-btn">Tempered Glass</button>
+              <button class="finish-btn">MagSafe Clear</button>
+            </div>
+          </div>
+
+          <div class="modal-actions-row">
+            <div class="quantity-control">
+              <button class="qty-btn" id="modalQtyMinus">-</button>
+              <span id="modalQtyVal">1</span>
+              <button class="qty-btn" id="modalQtyPlus">+</button>
+            </div>
+            <button class="btn btn-pill-dark modal-add-cart-btn" id="modalAddToCartBtn">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-card search-modal-card">
+      <button class="modal-close-btn" id="closeSearchModal">&times;</button>
+      <div class="search-input-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search mobile cases, models, or aesthetics..." id="searchInput" autofocus>
+      </div>
+      <div class="search-popular-tags">
+        <span>Trending:</span>
+        <button class="tag-search">iPhone 15 Pro Max</button>
+        <button class="tag-search">Tempered Glass</button>
+        <button class="tag-search">Spiderman</button>
+        <button class="tag-search">Fire Blue</button>
+        <button class="tag-search">Bohemian</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Three.js 3D WebGL Engine & UGC Animation Controller -->
+  <script src="assets/three.min.js"></script>
+  <script src="webgl_exploded.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
