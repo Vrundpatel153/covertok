@@ -6,64 +6,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 1. STATE MANAGEMENT
   // ==========================================
-  const cartState = [
-    {
-      id: '1',
-      name: 'iPhone 15 Cream Color Men Design',
-      price: 12,
-      qty: 1,
-      img: 'assets/phone_cream.png'
-    },
-    {
-      id: '2',
-      name: 'iPhone 15 Fire Blue Color New Addition',
-      price: 22,
-      qty: 1,
-      img: 'assets/phone_fire_blue.png'
-    },
-    {
-      id: '3',
-      name: 'iPhone 15 Spiderman Edition',
-      price: 16,
-      qty: 1,
-      img: 'assets/phone_spiderman.png'
-    }
-  ];
+  const cartState = [];
 
   const productsDatabase = {
     '1': {
       id: '1',
       name: 'iPhone 15 Cream Color Men Design Mobile Cover',
-      price: 12,
+      price: 399,
       img: 'assets/phone_cream.png',
       desc: 'Minimalist editorial line-art aesthetic printed on dual-layer shock dispersal polycarbonate. Featuring tactile responsive buttons, precision speaker cutouts, and 1.8mm elevated screen bumper lip.'
     },
     '2': {
       id: '2',
       name: 'iPhone 15 Fire Blue Color New Addition Cover',
-      price: 22,
+      price: 799,
       img: 'assets/phone_fire_blue.png',
       desc: 'Neon flame cyan graphics engineered with vibrant high-density UV ink. Matte anti-fingerprint coating with reinforced airbag impact corners that withstand drops up to 10 feet.'
     },
     '3': {
       id: '3',
       name: 'iPhone 15 Spiderman Edition Mobile Cover',
-      price: 16,
+      price: 499,
       img: 'assets/phone_spiderman.png',
       desc: 'Official comic web pattern on deep midnight chassis with neon magenta accents. Crafted with flexible thermoplastic polyurethane with anti-scratch coating and full wireless charging support.'
     },
     'glass16': {
       id: 'glass16',
       name: 'Tempered Glass Mobile Back Cover',
-      price: 16,
-      img: 'assets/exploded_glass_case.png',
+      price: 499,
+      img: 'assets/exact_exploded_glass.png',
       desc: 'Laminated 9H diamond tempered glass over high-density polycarbonate with honeycomb shock absorber and soft silicone TPU grip frame.'
     },
     '4': {
       id: '4',
       name: 'Bohemian Mandala Series iPhone Cover',
-      price: 24,
-      img: 'assets/cover_stack.png',
+      price: 599,
+      img: 'assets/mandala_phone_top.png',
       desc: 'Intricate ethnic bohemian mandala artwork bonded onto luxury textured leather finish. High tactile grip with aerospace grade shock protection.'
     }
   };
@@ -117,15 +95,35 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentModalQty = 1;
 
   // ==========================================
-  // 3. TOAST NOTIFICATIONS
+  // 3. CUSTOM ICONS & TOAST NOTIFICATIONS (NO EMOJIS)
   // ==========================================
-  function showToast(message, icon = '🛍️') {
+  const customIcons = {
+    bag: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>',
+    cart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>',
+    check: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
+    trash: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>',
+    alert: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>',
+    lock: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>',
+    star: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
+    search: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+    chat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>',
+    mail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>',
+    phone: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>',
+    shield: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>',
+    palette: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>',
+    pause: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>',
+    play: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>',
+    heart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="#EF4444" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>'
+  };
+
+  function showToast(message, iconKey = 'bag') {
     const container = document.getElementById('toastContainer');
     if (!container) return;
 
+    const iconSvg = customIcons[iconKey] || (iconKey && iconKey.startsWith('<svg') ? iconKey : customIcons.bag);
     const toast = document.createElement('div');
     toast.className = 'toast';
-    toast.innerHTML = `<span>${icon}</span><span>${message}</span>`;
+    toast.innerHTML = `<span class="toast-custom-icon">${iconSvg}</span><span>${message}</span>`;
     container.appendChild(toast);
 
     // Trigger animation
@@ -146,15 +144,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalItems = cartState.reduce((sum, item) => sum + item.qty, 0);
     const subtotal = cartState.reduce((sum, item) => sum + (item.price * item.qty), 0);
 
-    cartCountEl.textContent = totalItems;
-    cartDrawerCountEl.textContent = totalItems;
-    cartSubtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-    cartTotalEl.textContent = `$${subtotal.toFixed(2)}`;
+    if (cartCountEl) cartCountEl.textContent = totalItems;
+    if (cartDrawerCountEl) cartDrawerCountEl.textContent = totalItems;
+    if (cartSubtotalEl) cartSubtotalEl.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+    if (cartTotalEl) cartTotalEl.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+
+    if (!cartItemsContainer) return;
 
     if (cartState.length === 0) {
       cartItemsContainer.innerHTML = `
         <div style="text-align: center; padding: 40px 20px; color: #94A3B8;">
-          <p style="font-size: 2.5rem; margin-bottom: 12px;">🛒</p>
+          <div style="margin-bottom: 12px; display: flex; justify-content: center; color: #94A3B8;">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
           <h4 style="color: #121316; font-size: 1.1rem; margin-bottom: 6px;">Your cart is empty</h4>
           <p style="font-size: 0.875rem;">Discover our trendy cases and add your favorites!</p>
         </div>
@@ -167,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${item.img}" alt="${item.name}" class="cart-item-img">
         <div class="cart-item-info">
           <div class="cart-item-title">${item.name}</div>
-          <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
+          <div class="cart-item-price">₹${(item.price * item.qty).toLocaleString('en-IN')}</div>
           <div class="cart-item-qty">
             <button class="qty-pill-btn" onclick="window.updateCartQty(${index}, -1)">-</button>
             <span style="font-size: 0.8125rem; font-weight: 700;">${item.qty}</span>
@@ -194,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (item) {
       cartState.splice(index, 1);
       renderCart();
-      showToast(`Removed "${item.name}" from cart`, '🗑️');
+      showToast(`Removed "${item.name}" from cart`, 'trash');
     }
   };
 
@@ -212,19 +214,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     renderCart();
-    showToast(`Added "${item.name}" to cart!`, '🎉');
+    showToast(`Added "${item.name}" to cart!`, 'check');
     openCart();
   }
 
   function openCart() {
-    cartDrawer.classList.add('open');
-    cartOverlay.classList.add('active');
+    if (cartDrawer) cartDrawer.classList.add('open');
+    if (cartOverlay) cartOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeCart() {
-    cartDrawer.classList.remove('open');
-    cartOverlay.classList.remove('active');
+    if (cartDrawer) cartDrawer.classList.remove('open');
+    if (cartOverlay) cartOverlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 
@@ -236,12 +238,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
       if (cartState.length === 0) {
-        showToast('Your cart is empty! Add a case first.', '⚠️');
+        showToast('Your cart is empty! Add a case first.', 'alert');
         return;
       }
-      showToast('Redirecting to Secure Checkout...', '🔒');
+      showToast('Redirecting to Secure Checkout...', 'lock');
       setTimeout(() => {
-        alert('Thank you for exploring CoverItUp! In a live production environment, this connects directly to Shopify or Stripe checkout.');
+        alert('Thank you for exploring Covertok! In a live production environment, this connects directly to Shopify or Stripe checkout.');
       }, 600);
     });
   }
@@ -256,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalProductImg.src = product.img;
     modalProductTitle.textContent = product.name;
-    modalProductPrice.textContent = `$${product.price.toFixed(2)}`;
+    modalProductPrice.textContent = `₹${product.price.toLocaleString('en-IN')}`;
     modalProductDesc.textContent = product.desc;
     modalQtyVal.textContent = '1';
 
@@ -409,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tag.addEventListener('click', function() {
       document.querySelectorAll('.feature-tag').forEach(t => t.classList.remove('active'));
       this.classList.add('active');
-      showToast(`Selected attribute: ${this.textContent}`, '✨');
+      showToast(`Selected attribute: ${this.textContent}`, 'check');
     });
   });
 
@@ -469,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tag-search').forEach(tag => {
     tag.addEventListener('click', () => {
       searchInput.value = tag.textContent;
-      showToast(`Filtering for "${tag.textContent}"...`, '🔍');
+      showToast(`Filtering for "${tag.textContent}"...`, 'search');
       setTimeout(() => {
         searchModal.classList.remove('active');
         document.body.style.overflow = '';
@@ -505,9 +507,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   if (openChatBtn) {
     openChatBtn.addEventListener('click', () => {
-      showToast('Connecting to Customer Support Agent (Online)...', '💬');
+      showToast('Connecting to Customer Support Agent (Online)...', 'chat');
       setTimeout(() => {
-        alert('Welcome to CoverItUp Live Support! David is here to assist you with order status, device compatibility, and custom requests.');
+        alert('Welcome to Covertok Live Support! David is here to assist you with order status, device compatibility, and custom requests.');
       }, 500);
     });
   }
@@ -520,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const emailInput = document.getElementById('newsletterEmail');
       if (emailInput && emailInput.value) {
-        showToast(`🎉 Thank you! Your 15% VIP code has been sent to ${emailInput.value}`, '🎁');
+        showToast(`Thank you! Your 15% VIP code has been sent to ${emailInput.value}`, 'mail');
         emailInput.value = '';
       }
     });
@@ -532,7 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.bento-card').forEach(card => {
     card.addEventListener('click', () => {
       const brand = card.getAttribute('data-brand') || 'Collection';
-      showToast(`Showing covers for ${brand.toUpperCase()}...`, '📱');
+      showToast(`Showing covers for ${brand.toUpperCase()}...`, 'phone');
       const productsSection = document.getElementById('products');
       if (productsSection) productsSection.scrollIntoView({ behavior: 'smooth' });
     });
@@ -551,12 +553,12 @@ document.addEventListener('DOMContentLoaded', () => {
       isPlaying = !isPlaying;
       if (isPlaying) {
         deckAnimStage.classList.remove('paused');
-        animStatusIcon.textContent = '⏸ Pause Flow';
-        showToast('Resumed cinematic card orbit flow', '✨');
+        if (animStatusIcon) animStatusIcon.textContent = 'Pause Flow';
+        showToast('Resumed cinematic card orbit flow', 'play');
       } else {
         deckAnimStage.classList.add('paused');
-        animStatusIcon.textContent = '▶ Play Flow';
-        showToast('Paused card animation stage', '⏸');
+        if (animStatusIcon) animStatusIcon.textContent = 'Play Flow';
+        showToast('Paused card animation stage', 'pause');
       }
     });
   }
@@ -565,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.animated-card').forEach(card => {
     card.addEventListener('click', () => {
       const idx = card.getAttribute('data-index');
-      showToast(`Selected Mandala Layer #${idx} from collection`, '🎨');
+      showToast(`Selected Mandala Layer #${idx} from collection`, 'palette');
     });
   });
 
@@ -584,12 +586,12 @@ document.addEventListener('DOMContentLoaded', () => {
       isFlowing = !isFlowing;
       if (isFlowing) {
         explodedCaseStage.classList.remove('paused', 'force-assembled', 'force-exploded');
-        ugcFlowIcon.textContent = '⏸ Pause 3D Flow';
-        showToast('Resumed continuous 3D exploded & assemble flow', '🛡️');
+        if (ugcFlowIcon) ugcFlowIcon.textContent = 'Pause 3D Flow';
+        showToast('Resumed continuous 3D exploded & assemble flow', 'shield');
       } else {
         explodedCaseStage.classList.add('paused');
-        ugcFlowIcon.textContent = '▶ Play 3D Flow';
-        showToast('Paused 4-layer 3D animation', '⏸');
+        if (ugcFlowIcon) ugcFlowIcon.textContent = 'Play 3D Flow';
+        showToast('Paused 4-layer 3D animation', 'pause');
       }
     });
   }
@@ -602,13 +604,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isExploded) {
         explodedCaseStage.classList.remove('force-assembled');
         explodedCaseStage.classList.add('force-exploded');
-        ugcSnapText.textContent = '🔒 Snap Assemble';
-        showToast('Exploded view: Inspecting all 4 protective layers', '🔍');
+        if (ugcSnapText) ugcSnapText.textContent = 'Snap Assemble';
+        showToast('Exploded view: Inspecting all 4 protective layers', 'layers');
       } else {
         explodedCaseStage.classList.remove('force-exploded');
         explodedCaseStage.classList.add('force-assembled');
-        ugcSnapText.textContent = '🔍 Toggle Explode View';
-        showToast('Assembled view: Layers unified into seamless back cover', '✨');
+        if (ugcSnapText) ugcSnapText.textContent = 'Toggle Explode View';
+        showToast('Assembled view: Layers unified into seamless back cover', 'check');
       }
     });
   }
@@ -625,7 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
     layer.addEventListener('click', () => {
       const lNum = layer.getAttribute('data-layer');
       const name = layerNames[lNum] || `Layer ${lNum}`;
-      showToast(`Selected Layer ${lNum}: ${name}`, '🛡️');
+      showToast(`Selected Layer ${lNum}: ${name}`, 'shield');
     });
   });
 
@@ -650,10 +652,14 @@ document.addEventListener('DOMContentLoaded', () => {
       currentHeroIndex = initialSlide;
       heroSlides.forEach((s, idx) => s.classList.toggle('active', idx === currentHeroIndex));
       heroDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
+      const initSvgBgs = document.querySelectorAll('.hero-svg-bg-slide');
+      initSvgBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
+      const initMobBgs = document.querySelectorAll('.hero-mob-bg');
+      initMobBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
       const initBtnText = heroSlides[currentHeroIndex].getAttribute('data-btn-text');
       const initBtnLink = heroSlides[currentHeroIndex].getAttribute('data-btn-link');
       if (heroDynamicCta && initBtnText) {
-        heroDynamicCta.textContent = initBtnText;
+        heroDynamicCta.innerHTML = `${initBtnText} <span class="cta-arrow">&rarr;</span>`;
         if (initBtnLink) heroDynamicCta.setAttribute('href', initBtnLink);
       }
     }
@@ -678,7 +684,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btnLink = activeSlide.getAttribute('data-btn-link');
 
         if (heroDynamicCta && btnText) {
-          heroDynamicCta.textContent = btnText;
+          heroDynamicCta.innerHTML = `${btnText} <span class="cta-arrow">&rarr;</span>`;
           if (btnLink) heroDynamicCta.setAttribute('href', btnLink);
         }
       }
@@ -686,6 +692,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (activeDot) {
         activeDot.classList.add('active');
       }
+
+      // Sync SVG background slides (Desktop)
+      const svgBgSlides = document.querySelectorAll('.hero-svg-bg-slide');
+      svgBgSlides.forEach((bg, idx) => {
+        bg.classList.toggle('active', idx === currentHeroIndex);
+      });
+
+      // Sync Mobile background slides (Mobile & Tablet)
+      const mobBgSlides = document.querySelectorAll('.hero-mob-bg');
+      mobBgSlides.forEach((bg, idx) => {
+        bg.classList.toggle('active', idx === currentHeroIndex);
+      });
     };
 
     const startHeroAutoPlay = () => {
@@ -769,7 +787,153 @@ document.addEventListener('DOMContentLoaded', () => {
     startHeroAutoPlay();
   }
 
+  // Social Proof Toast Dismiss Handler
+  const socialProofToast = document.getElementById('socialProofToast');
+  const closeSocialToast = document.getElementById('closeSocialToast');
+  if (closeSocialToast && socialProofToast) {
+    closeSocialToast.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      socialProofToast.classList.add('hide');
+      setTimeout(() => {
+        socialProofToast.style.display = 'none';
+      }, 300);
+    });
+  }
+
+  // Style Meets Protection Bento Filter Pills Handler
+  const bentoPills = document.querySelectorAll('.bento-filter-pill');
+  const bentoCards = document.querySelectorAll('.bento-grid-item');
+  if (bentoPills.length > 0) {
+    bentoPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        bentoPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filterKey = pill.getAttribute('data-bento-filter');
+        
+        bentoCards.forEach(card => {
+          const target = card.getAttribute('data-bento-target');
+          if (target === filterKey) {
+            card.classList.add('highlighted');
+            setTimeout(() => card.classList.remove('highlighted'), 2000);
+          } else {
+            card.classList.remove('highlighted');
+          }
+        });
+      });
+    });
+  }
+
+  // ==========================================
+  // SHOP OUR COLLECTIONS INTERACTIVITY
+  // ==========================================
+  const colPills = document.querySelectorAll('.col-pill-btn');
+  const colCards = document.querySelectorAll('.col-prod-card');
+
+  if (colPills.length > 0) {
+    colPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        colPills.forEach(p => {
+          p.classList.remove('active');
+          p.setAttribute('aria-selected', 'false');
+        });
+        pill.classList.add('active');
+        pill.setAttribute('aria-selected', 'true');
+
+        const filter = pill.getAttribute('data-filter');
+
+        let visibleCount = 0;
+        colCards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = 'flex';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // If filter has no specific product cards in bottom row, show all with helpful notification
+        if (visibleCount === 0) {
+          colCards.forEach(card => {
+            card.style.display = 'flex';
+            card.style.opacity = '1';
+          });
+          const catName = pill.querySelector('span')?.textContent || 'this collection';
+          showToast(`Displaying top curated products for ${catName}`, 'bag');
+        }
+      });
+    });
+  }
+
+  // Wishlist heart button toggle
+  const wishlistButtons = document.querySelectorAll('.col-prod-wishlist-btn');
+  wishlistButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isFav = btn.classList.toggle('active');
+      const prodName = btn.getAttribute('data-product') || 'Item';
+      if (isFav) {
+        showToast(`Saved "${prodName}" to wishlist!`, 'heart');
+      } else {
+        showToast(`Removed "${prodName}" from wishlist`, 'bag');
+      }
+    });
+  });
+
+  // Collections Add to Cart buttons
+  const colAddToCartBtns = document.querySelectorAll('.col-add-cart-btn');
+  colAddToCartBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const name = btn.getAttribute('data-name');
+      const price = parseFloat(btn.getAttribute('data-price')) || 999;
+      const img = btn.getAttribute('data-img');
+      addToCart({
+        id: 'col_' + name.toLowerCase().replace(/[^a-z0-9]/g, '_'),
+        name: name,
+        price: price,
+        img: img
+      }, 1);
+    });
+  });
+
+  // Frameless Section Interactive Controls
+  const flColorPills = document.querySelectorAll('.fl-color-pill');
+  const flStepItems = document.querySelectorAll('.fl-step-item');
+  const flMediaImg = document.querySelector('.fl-stage-media-img');
+
+  if (flColorPills.length > 0) {
+    flColorPills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        flColorPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const colorName = pill.getAttribute('data-color');
+        if (typeof showToast === 'function') {
+          const formatted = colorName === 'orange' ? 'Desert Terracotta Orange' : (colorName === 'black' ? 'Matte Obsidian Black' : 'Silver Frost Titanium');
+          showToast(`Selected Frameless Case: ${formatted}`, 'sparkle');
+        }
+      });
+    });
+  }
+
+  if (flStepItems.length > 0) {
+    flStepItems.forEach((step, idx) => {
+      step.style.cursor = 'pointer';
+      step.style.pointerEvents = 'auto';
+      step.addEventListener('click', () => {
+        flStepItems.forEach(s => s.classList.remove('active'));
+        step.classList.add('active');
+      });
+    });
+  }
+
   // Initialize cart display
   renderCart();
-  console.log('CoverItUp App Loaded successfully with 4-Banner Hero & UGC 3D Animation!');
+  console.log('Covertok App Loaded successfully with 4-Banner Hero & UGC 3D Animation!');
 });

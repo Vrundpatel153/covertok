@@ -1,47 +1,56 @@
 /**
  * WebGL 3D Exploded & Assembled Case UGC Animation
  * Powered by Three.js
- * 
- * Features:
- * - 4 separated, intact, background-removed PNG layers:
- *   1. 9H Tempered Glass Shield (glossy transparent plate with 3D reflections & bevel)
- *   2. Printed Polycarbonate Shell (jet-black shell with Apple logo & metallic sheen)
- *   3. Honeycomb Impact Cushion Pad (triangular dot lattice shock pad)
- *   4. Silicone Bumper Frame (outer protective rim with buttons & ports)
- * - UGC Commercial Loop:
- *   Exploded floating hold -> Cinematic assembly -> Complete merged back cover -> Cinematic explosion -> Seamless Loop
- * - Mouse parallax tilt & hover response
- * - Dynamic HUD indicator & manual assemble/explode controls
+ * Covertok - 4-Layer Tempered Glass & Hybrid Protection
  */
 
 (function () {
   'use strict';
 
+  let isInitialized = false;
+
   function initExplodedWebgl() {
+    if (isInitialized) return;
+
     const container = document.getElementById('webglStageWrap');
     const canvas = document.getElementById('explodedCaseCanvas');
-    if (!container || !canvas || typeof THREE === 'undefined') {
-      console.warn('WebGL exploded container or Three.js not available.');
+    if (!container || !canvas) return;
+
+    if (typeof THREE === 'undefined') {
+      console.warn('Three.js library not loaded yet.');
       return;
     }
 
-    const width = container.clientWidth || 560;
-    const height = container.clientHeight || 520;
+    isInitialized = true;
+
+    const getWidth = () => Math.max(container.clientWidth || 560, 320);
+    const getHeight = () => Math.max(container.clientHeight || 520, 360);
+
+    let width = getWidth();
+    let height = getHeight();
 
     // Scene & Renderer
     const scene = new THREE.Scene();
-    const renderer = new THREE.WebGLRenderer({
-      canvas: canvas,
-      alpha: true,
-      antialias: true,
-      powerPreference: 'high-performance'
-    });
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+        antialias: true,
+        powerPreference: 'high-performance',
+        preserveDrawingBuffer: true
+      });
+    } catch (e) {
+      console.error('WebGL renderer creation failed:', e);
+      return;
+    }
+
     renderer.setSize(width, height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 
     // Orthographic Camera for perfect isometric projection
-    const aspect = width / height;
     const frustumSize = 720;
+    const aspect = width / height;
     const camera = new THREE.OrthographicCamera(
       (-frustumSize * aspect) / 2,
       (frustumSize * aspect) / 2,
@@ -58,19 +67,51 @@
     rootGroup.position.set(0, 0, 0);
     scene.add(rootGroup);
 
-    // Texture Loader & Plane Geometry
-    const textureLoader = new THREE.TextureLoader();
+    // Dynamic 3D Studio Backlight Texture & Billboard
+    function createBacklightTexture() {
+      const c = document.createElement('canvas');
+      c.width = 512;
+      c.height = 512;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createRadialGradient(256, 256, 12, 256, 256, 250);
+      grad.addColorStop(0, 'rgba(0, 240, 255, 0.7)');
+      grad.addColorStop(0.24, 'rgba(56, 189, 248, 0.48)');
+      grad.addColorStop(0.52, 'rgba(37, 99, 235, 0.25)');
+      grad.addColorStop(0.8, 'rgba(14, 165, 233, 0.06)');
+      grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 512, 512);
+      const tex = new THREE.CanvasTexture(c);
+      return tex;
+    }
+
+    const backlightGeom = new THREE.PlaneGeometry(620, 620);
+    const backlightMat = new THREE.MeshBasicMaterial({
+      map: createBacklightTexture(),
+      transparent: true,
+      depthWrite: false,
+      depthTest: false
+    });
+    const backlightMesh = new THREE.Mesh(backlightGeom, backlightMat);
+    backlightMesh.position.set(18, 20, -35);
+    backlightMesh.renderOrder = -1;
+    rootGroup.add(backlightMesh);
+
+    // Plane Geometry for case layers
     const planeSize = 580;
     const geom = new THREE.PlaneGeometry(planeSize, planeSize);
 
+    // Texture Loader
+    const textureLoader = new THREE.TextureLoader();
+    textureLoader.setCrossOrigin('');
+
     // 4 Distinct Intact Layers (from base Frame to top Glass)
-    // When assembled (animProgress = 0), all layers are at (0, 0) and merge into the complete case!
-    // When exploded (animProgress = 1), layers separate along the isometric normal vector:
     const layerConfigs = [
       {
         id: 4,
         name: 'Silicone Rubber Frame',
         path: 'assets/case_layer_4_frame.png',
+        key: 'frame',
         exploded: { x: 0, y: -65, z: 0 },
         assembled: { x: 0, y: 0, z: 0 }
       },
@@ -78,6 +119,7 @@
         id: 3,
         name: 'Honeycomb Shock Cushion',
         path: 'assets/case_layer_3_grid.png',
+        key: 'grid',
         exploded: { x: 12, y: -10, z: 35 },
         assembled: { x: 0, y: 0, z: 4 }
       },
@@ -85,6 +127,7 @@
         id: 2,
         name: 'Printed Polycarbonate Shell',
         path: 'assets/case_layer_2_pc.png',
+        key: 'pc',
         exploded: { x: 24, y: 45, z: 70 },
         assembled: { x: 0, y: 0, z: 8 }
       },
@@ -92,35 +135,66 @@
         id: 1,
         name: '9H Tempered Glass Shield',
         path: 'assets/case_layer_1_glass.png',
+        key: 'glass',
         exploded: { x: 36, y: 100, z: 105 },
         assembled: { x: 0, y: 0, z: 12 }
       }
     ];
 
     const meshes = [];
+    let loadedCount = 0;
+
+    function applyTexture(texture, index, cfg) {
+      texture.generateMipmaps = true;
+      texture.minFilter = THREE.LinearMipmapLinearFilter;
+      texture.magFilter = THREE.LinearFilter;
+
+      const mat = new THREE.MeshBasicMaterial({
+        map: texture,
+        transparent: true,
+        alphaTest: 0.002,
+        depthWrite: false,
+        depthTest: true
+      });
+      mat.color = new THREE.Color(1.15, 1.15, 1.22);
+
+      const mesh = new THREE.Mesh(geom, mat);
+      mesh.position.set(cfg.exploded.x, cfg.exploded.y, cfg.exploded.z);
+      mesh.renderOrder = index;
+      mesh.userData = cfg;
+
+      rootGroup.add(mesh);
+      meshes[index] = mesh;
+      loadedCount++;
+
+      // Once all layers are loaded, activate WebGL container class
+      if (loadedCount >= layerConfigs.length) {
+        container.classList.add('webgl-active');
+      }
+      renderer.render(scene, camera);
+    }
 
     layerConfigs.forEach((cfg, index) => {
-      textureLoader.load(cfg.path, function (texture) {
-        texture.generateMipmaps = true;
-        texture.minFilter = THREE.LinearMipmapLinearFilter;
-        texture.magFilter = THREE.LinearFilter;
+      // If protocol is file:// or CASE_LAYER_ASSETS is available, use base64 data URI to prevent CORS block
+      const isFileProtocol = window.location.protocol === 'file:';
+      const fallbackData = window.CASE_LAYER_ASSETS && window.CASE_LAYER_ASSETS[cfg.key];
+      const primaryUrl = (isFileProtocol && fallbackData) ? fallbackData : cfg.path;
 
-        const mat = new THREE.MeshBasicMaterial({
-          map: texture,
-          transparent: true,
-          alphaTest: 0.005,
-          depthWrite: false,
-          depthTest: true
-        });
-
-        const mesh = new THREE.Mesh(geom, mat);
-        mesh.position.set(cfg.exploded.x, cfg.exploded.y, cfg.exploded.z);
-        mesh.renderOrder = index;
-        mesh.userData = cfg;
-
-        rootGroup.add(mesh);
-        meshes[index] = mesh;
-      });
+      textureLoader.load(
+        primaryUrl,
+        function (texture) {
+          applyTexture(texture, index, cfg);
+        },
+        undefined,
+        function (err) {
+          console.warn('Initial texture load failed for ' + cfg.path + ', attempting fallback data URI...', err);
+          if (fallbackData && primaryUrl !== fallbackData) {
+            textureLoader.load(fallbackData, function (fallbackTexture) {
+              applyTexture(fallbackTexture, index, cfg);
+            });
+          }
+        }
+      );
     });
 
     // Animation & State Variables
@@ -171,7 +245,8 @@
     const snapBtnText = document.getElementById('ugcSnapBtnText');
 
     if (toggleLoopBtn) {
-      toggleLoopBtn.addEventListener('click', () => {
+      toggleLoopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         isAutoLoop = !isAutoLoop;
         if (isAutoLoop) {
           toggleLoopBtn.classList.add('active');
@@ -184,7 +259,8 @@
     }
 
     if (snapBtn) {
-      snapBtn.addEventListener('click', () => {
+      snapBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         isAutoLoop = false;
         if (toggleLoopBtn) {
           toggleLoopBtn.classList.remove('active');
@@ -198,18 +274,42 @@
       });
     }
 
+    // Interactive Layer Callout Pins
+    const stagePins = container.querySelectorAll('.layer-pin');
+    if (stagePins.length > 0) {
+      stagePins.forEach(pin => {
+        pin.addEventListener('click', (e) => {
+          e.preventDefault();
+          const layerKey = pin.getAttribute('data-layer');
+          stagePins.forEach(p => p.classList.remove('active'));
+          pin.classList.add('active');
+
+          // Highlight and pulse targeted 3D mesh
+          meshes.forEach(m => {
+            if (m && m.userData && m.userData.key === layerKey) {
+              const origZ = m.position.z;
+              m.position.z += 18;
+              setTimeout(() => {
+                m.position.z = origZ;
+              }, 450);
+            }
+          });
+        });
+      });
+    }
+
     function easeInOutCubic(t) {
       t = Math.max(0, Math.min(1, t));
       return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
     }
 
     // Main Render Loop
-    let clock = new THREE.Clock();
+    const clock = new THREE.Clock();
 
     function animate() {
       requestAnimationFrame(animate);
 
-      const delta = clock.getDelta();
+      const delta = Math.min(clock.getDelta(), 0.1);
 
       if (isAutoLoop) {
         animTime += delta;
@@ -253,8 +353,6 @@
       }
 
       // Update Mesh positions based on animProgress:
-      // When animProgress is 0.0 -> curX = 0, curY = 0, exactly assembled!
-      // When animProgress is 1.0 -> curX = exploded.x, curY = exploded.y
       layerConfigs.forEach((cfg, i) => {
         const mesh = meshes[i];
         if (!mesh) return;
@@ -279,8 +377,9 @@
     animate();
 
     function onResize() {
-      const nw = container.clientWidth || 560;
-      const nh = container.clientHeight || 520;
+      const nw = getWidth();
+      const nh = getHeight();
+      if (nw <= 0 || nh <= 0) return;
       renderer.setSize(nw, nh);
       const naspect = nw / nh;
       camera.left = (-frustumSize * naspect) / 2;
@@ -288,17 +387,26 @@
       camera.top = frustumSize / 2;
       camera.bottom = -frustumSize / 2;
       camera.updateProjectionMatrix();
+      renderer.render(scene, camera);
     }
 
     window.addEventListener('resize', onResize);
-    setTimeout(onResize, 400);
+    setTimeout(onResize, 200);
+    setTimeout(onResize, 800);
+
+    if (window.ResizeObserver) {
+      const ro = new ResizeObserver(() => onResize());
+      ro.observe(container);
+    }
   }
 
+  // Safe multi-hook initialization
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initExplodedWebgl);
   } else {
     initExplodedWebgl();
   }
 
+  window.addEventListener('load', initExplodedWebgl);
   window.initExplodedWebgl = initExplodedWebgl;
 })();

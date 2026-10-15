@@ -6,7 +6,7 @@ A modern, high-performance, and visually stunning mobile cover and tech accessor
 
 - **4-Banner Interactive Hero Showcase**: Signature Wave Swirls, Diamond 9H Tempered Glass, Shockproof MagSafe Armor, and Artisan Bohemian Prints with dynamic bottom toolbar navigation.
 - **Go Ultra. Go Frameless.**: Interactive 3D perspective trio of ultra-thin frameless cases with floating camera bezels, wishlist toggling, and live social proof notifications.
-- **Build Your Own Combo**: Interactive 3-in-1 accessory bundle builder with real-time discount unlocks (Grab Any 3 for ₹1199 / $14.00).
+- **Build Your Own Combo**: Interactive 3-in-1 accessory bundle builder with real-time discount unlocks (Grab Any 3 for ₹1199).
 - **Shop Our Collections**: 4 category showcases for iPhone Covers, AirPod Covers, iWatch Bands, and MagSafe Accessories with filter tabs.
 - **Dedicated Product Configurator (`product.html`)**:
   - Full iPhone model selector (iPhone 16 Pro Max, 16 Pro, 16, 15 series, 14 series, 13 series, 12 series) with real-time stock indicator.

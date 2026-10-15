@@ -1,0 +1,22 @@
+{
+  "name": "covertok",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Covertok - Colorful, Trendy & Protective Mobile Covers & Accessories",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve .",
+    "dev": "npx -y serve .",
+    "build": "echo 'Static assets ready for deployment'"
+  },
+  "keywords": [
+    "covertok",
+    "mobile-covers",
+    "iphone-cases",
+    "ecommerce",
+    "threejs",
+    "vanilla-web"
+  ],
+  "author": "Covertok",
+  "license": "MIT"
+}

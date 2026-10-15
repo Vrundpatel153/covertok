@@ -1,11 +1,31 @@
-# Scratch test images and caches
+# OS & IDE metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Vercel & Node caches
+.vercel/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary test profiles and browser scrap
+.temp_cdp*/
+.tempmediaStorage/
+.system_generated/
 scratch_*
 verify_*
 test_*
 thumb_*
 user_img*
 *.log
-__pycache__/
-.tempmediaStorage/
-.system_generated/
-*.py
+temp_crop_*
+snapshot_*

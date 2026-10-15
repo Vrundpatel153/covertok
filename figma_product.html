@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covertok Product Page - Full PC & Mobile Snapshots for Figma</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #FFFFFF;
+      margin: 0;
+      padding: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: auto;
+      min-width: max-content;
+    }
+    .figma-canvas {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 60px;
+      min-width: max-content;
+    }
+    .artboard-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .artboard-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #64748B;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .pc-frame {
+      width: 1440px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid #E2E8F0;
+      border-radius: 4px;
+      overflow: hidden;
+      display: block;
+    }
+    .pc-frame img {
+      width: 1440px;
+      height: auto;
+      display: block;
+    }
+    .mobile-frame {
+      width: 390px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid #E2E8F0;
+      border-radius: 4px;
+      overflow: hidden;
+      display: block;
+    }
+    .mobile-frame img {
+      width: 390px;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="figma-canvas">
+    
+    <!-- PC Layout (1440px Full Page Snapshot) -->
+    <div class="artboard-col">
+      <div class="artboard-label">Product Detail Page &mdash; PC Layout (1440px)</div>
+      <div class="pc-frame" id="productPcFrame">
+        <img src="assets/snapshot_product_pc.png" alt="Covertok Product Page Desktop Full Page Layout">
+      </div>
+    </div>
+
+    <!-- Mobile Layout (390px Full Page Snapshot) -->
+    <div class="artboard-col">
+      <div class="artboard-label">Product Detail Page &mdash; Mobile Layout (390px)</div>
+      <div class="mobile-frame" id="productMobileFrame">
+        <img src="assets/snapshot_product_mobile.png" alt="Covertok Product Page Mobile Full Page Layout">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
