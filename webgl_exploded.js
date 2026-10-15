@@ -120,8 +120,8 @@
         name: 'Frameless Bumper & 3D Lens Armor',
         path: 'assets/blue_protector_layer.png',
         key: 'protector',
-        exploded: { x: 0, y: 0, z: 70 },
-        assembled: { x: 97.4, y: -56.6, z: 2 }
+        exploded: { x: -35, y: 38, z: 70 },
+        assembled: { x: 0, y: 0, z: 2 }
       }
     ];
 
@@ -136,11 +136,11 @@
       const mat = new THREE.MeshBasicMaterial({
         map: texture,
         transparent: true,
-        alphaTest: 0.05,
+        alphaTest: 0.01,
         depthWrite: false,
         depthTest: true
       });
-      mat.color = new THREE.Color(1.15, 1.15, 1.22);
+      mat.color = new THREE.Color(1.05, 1.05, 1.08);
 
       const mesh = new THREE.Mesh(geom, mat);
       mesh.position.set(cfg.exploded.x, cfg.exploded.y, cfg.exploded.z);
@@ -336,6 +336,11 @@
         if (Math.abs(targetProgress - animProgress) < 0.003) {
           animProgress = targetProgress;
         }
+        if (statusPill) {
+          if (animProgress > 0.8) statusPill.textContent = '2 LAYERS EXPLODED';
+          else if (animProgress < 0.2) statusPill.textContent = 'PROTECTOR ASSEMBLED';
+          else statusPill.textContent = targetProgress === 0.0 ? 'ASSEMBLING PROTECTOR...' : 'DETACHING PROTECTOR...';
+        }
       }
 
       // Update Mesh positions based on animProgress:
@@ -351,11 +356,6 @@
         const breath = animProgress * Math.sin(animTime * 2.2 + i * 0.75) * 2.5;
 
         mesh.position.set(curX, curY + breath, curZ);
-
-        // For protector layer, seamlessly blend opacity as it docks onto the phone
-        if (cfg.key === 'protector') {
-          mesh.material.opacity = Math.min(1.0, animProgress * 4.0);
-        }
       });
 
       // Smooth mouse parallax rotation
