@@ -18,6 +18,9 @@ __pycache__/
 *$py.class
 
 # Temporary test profiles and browser scrap
+scratch/
+server.js
+
 .temp_cdp*/
 .tempmediaStorage/
 .system_generated/

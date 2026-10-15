@@ -105,39 +105,31 @@
     const textureLoader = new THREE.TextureLoader();
     textureLoader.setCrossOrigin('');
 
-    // 4 Distinct Intact Layers (from base Frame to top Glass)
+    // 3D Multi-Layer Architecture: Base Mobile Phone + Dual-Zone Protector (Camera Armor & Corner Bumper)
     const layerConfigs = [
       {
-        id: 4,
-        name: 'Silicone Rubber Frame',
-        path: 'assets/case_layer_4_frame.png',
-        key: 'frame',
-        exploded: { x: 0, y: -65, z: 0 },
+        id: 1,
+        name: 'iPhone 16 Pro Sierra Blue Body',
+        path: 'assets/blue_phone_body.png',
+        key: 'phone',
+        exploded: { x: 0, y: 0, z: 0 },
         assembled: { x: 0, y: 0, z: 0 }
       },
       {
-        id: 3,
-        name: 'Honeycomb Shock Cushion',
-        path: 'assets/case_layer_3_grid.png',
-        key: 'grid',
-        exploded: { x: 12, y: -10, z: 35 },
-        assembled: { x: 0, y: 0, z: 4 }
-      },
-      {
         id: 2,
-        name: 'Printed Polycarbonate Shell',
-        path: 'assets/case_layer_2_pc.png',
-        key: 'pc',
-        exploded: { x: 24, y: 45, z: 70 },
-        assembled: { x: 0, y: 0, z: 8 }
+        name: 'Bottom Corner Bumper Armor',
+        path: 'assets/blue_protector_bottom.png',
+        key: 'bumper_bottom',
+        exploded: { x: 0, y: 0, z: 60 },
+        assembled: { x: 117.8, y: -56.6, z: 2 }
       },
       {
-        id: 1,
-        name: '9H Tempered Glass Shield',
-        path: 'assets/case_layer_1_glass.png',
-        key: 'glass',
-        exploded: { x: 36, y: 100, z: 105 },
-        assembled: { x: 0, y: 0, z: 12 }
+        id: 3,
+        name: '3D Camera Lens Armor & Top Bumper',
+        path: 'assets/blue_protector_top.png',
+        key: 'bumper_top',
+        exploded: { x: 0, y: 0, z: 60 },
+        assembled: { x: 96.3, y: -56.6, z: 3 }
       }
     ];
 
@@ -175,10 +167,9 @@
     }
 
     layerConfigs.forEach((cfg, index) => {
-      // If protocol is file:// or CASE_LAYER_ASSETS is available, use base64 data URI to prevent CORS block
-      const isFileProtocol = window.location.protocol === 'file:';
+      // Use fallback base64 data URI if available for instant zero-latency loading
       const fallbackData = window.CASE_LAYER_ASSETS && window.CASE_LAYER_ASSETS[cfg.key];
-      const primaryUrl = (isFileProtocol && fallbackData) ? fallbackData : cfg.path;
+      const primaryUrl = fallbackData || cfg.path;
 
       textureLoader.load(
         primaryUrl,
@@ -187,9 +178,9 @@
         },
         undefined,
         function (err) {
-          console.warn('Initial texture load failed for ' + cfg.path + ', attempting fallback data URI...', err);
-          if (fallbackData && primaryUrl !== fallbackData) {
-            textureLoader.load(fallbackData, function (fallbackTexture) {
+          console.warn('Initial texture load failed for ' + cfg.path + ', attempting fallback...', err);
+          if (cfg.path && primaryUrl !== cfg.path) {
+            textureLoader.load(cfg.path, function (fallbackTexture) {
               applyTexture(fallbackTexture, index, cfg);
             });
           }
@@ -319,26 +310,29 @@
         // 3.4s - 5.4s: Hold Assembled (showcase complete, pristine merged cover)
         // 5.4s - 7.0s: Glide Explode (layers separate cleanly)
         // 7.0s - 7.2s: Settle back into exploded hold
-        const cycle = animTime % 7.2;
+        // Commercial cycle: 9.0 seconds
+        // 0.0s - 2.5s: Hold Exploded (showcase floating detached protector and phone)
+        // 2.5s - 4.5s: Glide Assemble (protector glides down and snaps onto the phone)
+        // 4.5s - 7.0s: Hold Assembled (showcase complete, pristine assembled phone)
+        // 7.0s - 9.0s: Glide Explode (protector detaches cleanly into floating position)
+        const cycle = animTime % 9.0;
 
-        if (cycle < 1.8) {
+        if (cycle < 2.5) {
           targetProgress = 1.0;
-          if (statusPill) statusPill.textContent = '4 LAYERS EXPLODED';
+          if (statusPill) statusPill.textContent = '2 LAYERS EXPLODED';
           if (snapBtnText) snapBtnText.textContent = 'ASSEMBLE';
-        } else if (cycle < 3.4) {
-          const t = (cycle - 1.8) / 1.6;
+        } else if (cycle < 4.5) {
+          const t = (cycle - 2.5) / 2.0;
           targetProgress = 1.0 - easeInOutCubic(t);
-          if (statusPill) statusPill.textContent = 'ASSEMBLING COVER...';
-        } else if (cycle < 5.4) {
-          targetProgress = 0.0;
-          if (statusPill) statusPill.textContent = 'COMPLETED PHONE COVER';
-          if (snapBtnText) snapBtnText.textContent = 'EXPLODE';
+          if (statusPill) statusPill.textContent = 'ASSEMBLING PROTECTOR...';
         } else if (cycle < 7.0) {
-          const t = (cycle - 5.4) / 1.6;
+          targetProgress = 0.0;
+          if (statusPill) statusPill.textContent = 'PROTECTOR ASSEMBLED';
+          if (snapBtnText) snapBtnText.textContent = 'EXPLODE';
+        } else if (cycle < 9.0) {
+          const t = (cycle - 7.0) / 2.0;
           targetProgress = easeInOutCubic(t);
-          if (statusPill) statusPill.textContent = 'EXPLODING LAYERS...';
-        } else {
-          targetProgress = 1.0;
+          if (statusPill) statusPill.textContent = 'DETACHING PROTECTOR...';
         }
       }
 

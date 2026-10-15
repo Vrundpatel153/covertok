@@ -1129,34 +1129,49 @@
               <canvas id="explodedCaseCanvas" class="exploded-case-canvas"></canvas>
 
               <!-- High-Resolution Crystal Glass Exploded Architecture Showcase (Fallback before WebGL textures initialize) -->
-              <img src="assets/exact_exploded_glass.png" alt="Tempered Glass Layer Architecture" class="glass-exploded-hero-img" id="glassExplodedImg">
+              <img src="assets/blue_frameless_exploded.png" alt="Frameless Bumper & 3D Lens Armor Architecture" class="glass-exploded-hero-img" id="glassExplodedImg">
+
+              <!-- 3D Interactive Controls Overlay -->
+              <div class="webgl-hud-overlay">
+                <span class="ugc-status-pill" id="ugcStatusText">2 LAYERS EXPLODED</span>
+                <div class="ugc-actions-bar">
+                  <button class="ugc-action-btn" id="ugcManualSnapBtn" type="button" aria-label="Toggle assemble or explode">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                    <span id="ugcSnapBtnText">ASSEMBLE</span>
+                  </button>
+                  <button class="ugc-action-btn active" id="ugcToggleLoopBtn" type="button" aria-label="Toggle continuous 3D loop">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+                    <span id="ugcLoopBtnText">LOOPING</span>
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <!-- Right: Specs and details exactly matching image copy 4 -->
+            <!-- Right: Specs and details for the new 2-layer blue model -->
             <div class="glass-details-wrap">
-              <span class="glass-subtitle">CUSTOMIZED GLASS BACK COVERS</span>
-              <h2 class="glass-title">Tempered Glass Mobile<br>Back Covers</h2>
+              <span class="glass-subtitle">ULTRA-THIN FRAMELESS BUMPER SERIES</span>
+              <h2 class="glass-title">Precision Bumper &amp; 3D Lens<br>Armor Case</h2>
 
               <!-- Specs Columns -->
               <div class="glass-specs-grid">
                 <div class="spec-col">
-                  <div class="spec-heading">FRAME:</div>
-                  <div class="spec-val">Silicone Rubber</div>
+                  <div class="spec-heading">LAYER 1:</div>
+                  <div class="spec-val">Titanium Blue Mobile</div>
                 </div>
                 <div class="spec-col">
-                  <div class="spec-heading">BASE:</div>
-                  <div class="spec-val">Polycarbonate Plastic</div>
+                  <div class="spec-heading">LAYER 2:</div>
+                  <div class="spec-val">Armor Lens &amp; Bumper</div>
                 </div>
                 <div class="spec-col">
-                  <div class="spec-heading">GLASS:</div>
-                  <div class="spec-val">Tempered Glass</div>
+                  <div class="spec-heading">DESIGN:</div>
+                  <div class="spec-val">Ultra-Thin Frameless</div>
                 </div>
               </div>
 
               <!-- Price & CTA -->
               <div class="glass-action-row">
                 <div class="glass-price">₹499</div>
-                <button class="btn btn-outline-white glass-cta-btn" id="exploreGlassBtn" data-id="glass16" data-name="Tempered Glass Mobile Back Cover" data-price="499" data-img="assets/exact_exploded_glass.png">
+                <button class="btn btn-outline-white glass-cta-btn" id="exploreGlassBtn" data-id="glass16" data-name="Frameless Bumper & 3D Lens Armor Case" data-price="499" data-img="assets/blue_frameless_assembled.png">
                   EXPLORE NOW
                 </button>
               </div>
@@ -1628,7 +1643,8 @@
 
   <!-- Three.js 3D WebGL Engine & Case Layer Exploded Animation -->
   <script src="assets/three.min.js"></script>
-  <script src="webgl_exploded.js"></script>
+  <script src="webgl_exploded_assets.js?v=20261016_02"></script>
+  <script src="webgl_exploded.js?v=20261016_02"></script>
 
   <!-- Core App Controller & Dynamic Products -->
   <script src="assets/products_data.js"></script>
