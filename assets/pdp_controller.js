@@ -983,11 +983,11 @@
 
     container.innerHTML = related.map(p => {
       const hasC = p.colors && p.colors.length > 1;
-      const img = hasC ? p.colors[0].image : p.primary_image;
+      const img = p.primary_image || (hasC ? p.colors[0].image : '');
       return `
         <div class="catalog-card" style="border-radius: 20px; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(14px); border: 1.5px solid rgba(226, 232, 240, 0.9); box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05); transition: all 0.25s ease;">
-          <div class="card-media-stage" style="padding: 16px; background: transparent;" onclick="window.location.href='product.html?id=${p.id}'">
-            <img src="${img}" alt="${p.title}" class="card-main-img" style="max-height: 180px; filter: drop-shadow(0 12px 20px rgba(15, 23, 42, 0.1));">
+          <div class="card-media-stage" style="padding: 16px; background: #FFFFFF;" onclick="window.location.href='product.html?id=${p.id}'">
+            <img src="${img}" alt="${p.title}" class="card-main-img" style="max-height: 180px; mix-blend-mode: multiply; filter: drop-shadow(0 12px 20px rgba(15, 23, 42, 0.06));">
           </div>
           <div class="card-body-wrap" style="padding: 14px 16px;">
             <div class="card-cat-rating">

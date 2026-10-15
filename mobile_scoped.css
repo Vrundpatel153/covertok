@@ -352,10 +352,22 @@
 }
 .mobile-view .col-prod-card {
   border-radius: 14px;
+  background: #FFFFFF;
 }
 .mobile-view .col-prod-media {
-  height: 115px;
-    aspect-ratio: auto;
+  height: 135px;
+  aspect-ratio: 1 / 1;
+  background: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.mobile-view .col-prod-img {
+  max-width: 88%;
+  max-height: 88%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .mobile-view .col-prod-info {
   padding: 10px 8px 10px;
@@ -1459,19 +1471,21 @@
 }
 .mobile-view .product-image-box {
   min-height: 0 !important;
-    height: 175px !important;
-    padding: 16px 10px !important;
-    border-radius: 18px !important;
-    background: #F2F4F7 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
+  height: 175px !important;
+  padding: 16px 10px !important;
+  border-radius: 18px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #EAECEF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
 }
 .mobile-view .product-img {
-  max-height: 135px !important;
-    max-width: 85% !important;
-    object-fit: contain !important;
+  max-height: 140px !important;
+  max-width: 88% !important;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
 }
 .mobile-view .product-arrow-btn {
   width: 30px !important;

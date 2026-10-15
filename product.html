@@ -1561,7 +1561,7 @@
               (function() {
                 var p = window.__PDP_INITIAL_PRODUCT__;
                 if (p) {
-                  var img = (p.colors && p.colors.length && p.colors[0].image) ? p.colors[0].image : p.primary_image;
+                  var img = p.primary_image || ((p.colors && p.colors.length && p.colors[0].image) ? p.colors[0].image : '');
                   var el = document.getElementById('pdpMainImg');
                   if (el && img) {
                     el.src = img;

@@ -52,13 +52,13 @@
 
       grid.innerHTML = prods.map(p => {
         const hasColors = p.colors && p.colors.length > 1;
-        const initialImg = hasColors ? p.colors[0].image : p.primary_image;
+        const initialImg = p.primary_image || (hasColors ? p.colors[0].image : '');
 
         let swatchesHtml = '';
         if (hasColors) {
           const dots = p.colors.slice(0, 5).map((c, i) => `
             <button type="button" 
-              class="card-color-dot ${i === 0 ? 'active' : ''}" 
+              class="card-color-dot ${c.image === initialImg ? 'active' : ''}" 
               data-img="${c.image}" 
               data-color="${c.name}"
               style="background: ${c.hex};" 
@@ -70,14 +70,14 @@
 
         return `
           <div class="col-prod-card" data-id="${p.id}" style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAECEF; overflow: hidden; position: relative;">
-            <div class="col-prod-media" style="position: relative; background: #F4F6F9; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 20px; cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
+            <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 20px; cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2;">${p.discount_percent}% OFF</span>` : ''}
               <button class="col-prod-wishlist-btn" type="button" aria-label="Save to wishlist" data-product="${p.title}" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                 </svg>
               </button>
-              <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="max-height: 85%; max-width: 85%; object-fit: contain;" loading="lazy">
+              <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;" loading="lazy">
               ${swatchesHtml}
             </div>
 
@@ -193,13 +193,13 @@
 
     grid.innerHTML = prods.map(p => {
       const hasColors = p.colors && p.colors.length > 1;
-      const initialImg = hasColors ? p.colors[0].image : p.primary_image;
+      const initialImg = p.primary_image || (hasColors ? p.colors[0].image : '');
 
       let swatchesHtml = '';
       if (hasColors) {
         const dots = p.colors.slice(0, 5).map((c, i) => `
           <button type="button" 
-            class="card-color-dot ${i === 0 ? 'active' : ''}" 
+            class="card-color-dot ${c.image === initialImg ? 'active' : ''}" 
             data-img="${c.image}" 
             data-color="${c.name}"
             style="background: ${c.hex};" 
@@ -212,9 +212,9 @@
       return `
         <div class="product-card" data-id="${p.id}">
           <div class="product-card-inner">
-            <div class="product-image-box" style="position: relative; overflow: hidden; background: #F4F6F9; border-radius: 20px; display: flex; align-items: center; justify-content: center; padding: 24px;">
+            <div class="product-image-box" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAECEF; display: flex; align-items: center; justify-content: center; padding: 20px; aspect-ratio: 1 / 1;">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2;">${p.discount_percent}% OFF</span>` : ''}
-              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="max-height: 220px; object-fit: contain;">
+              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;">
               <button class="product-arrow-btn" data-product-id="${p.id}" aria-label="View product details" title="View details" onclick="window.location.href='product.html?id=${p.id}'">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>

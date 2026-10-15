@@ -1,6 +1,6 @@
 /**
  * Covertok Real Product Catalog Database
- * Auto-generated with 75 authentic products and 583 locally downloaded images.
+ * Auto-generated with 75 authentic products and locally optimized packshots.
  */
 window.CovertokProducts = [
   {
@@ -1709,12 +1709,12 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873120330026/1_49921040089386.png",
+    "primary_image": "assets/products/9873120330026/4_49921040187690.jpg",
     "images": [
+      "assets/products/9873120330026/4_49921040187690.jpg",
       "assets/products/9873120330026/1_49921040089386.png",
       "assets/products/9873120330026/2_49921039925546.png",
-      "assets/products/9873120330026/3_49921039991082.png",
-      "assets/products/9873120330026/4_49921040187690.jpg"
+      "assets/products/9873120330026/3_49921039991082.png"
     ],
     "has_colors": false,
     "colors": [],
@@ -1984,10 +1984,10 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108435242/1_49984376242474.jpg",
+    "primary_image": "assets/products/9873108435242/2_49984376144170.jpg",
     "images": [
-      "assets/products/9873108435242/1_49984376242474.jpg",
       "assets/products/9873108435242/2_49984376144170.jpg",
+      "assets/products/9873108435242/1_49984376242474.jpg",
       "assets/products/9873108435242/3_49984376045866.jpg",
       "assets/products/9873108435242/4_49984376078634.jpg",
       "assets/products/9873108435242/5_49984375980330.jpg",
@@ -2044,11 +2044,11 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108238634/1_49984401637674.jpg",
+    "primary_image": "assets/products/9873108238634/3_49984401539370.jpg",
     "images": [
+      "assets/products/9873108238634/3_49984401539370.jpg",
       "assets/products/9873108238634/1_49984401637674.jpg",
       "assets/products/9873108238634/2_49984401441066.jpg",
-      "assets/products/9873108238634/3_49984401539370.jpg",
       "assets/products/9873108238634/4_49984401604906.jpg",
       "assets/products/9873108238634/5_49984401375530.jpg",
       "assets/products/9873108238634/6_49984401408298.jpg",
@@ -2104,10 +2104,10 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108074794/1_49984412090666.jpg",
+    "primary_image": "assets/products/9873108074794/2_49984412057898.jpg",
     "images": [
-      "assets/products/9873108074794/1_49984412090666.jpg",
       "assets/products/9873108074794/2_49984412057898.jpg",
+      "assets/products/9873108074794/1_49984412090666.jpg",
       "assets/products/9873108074794/3_49984412188970.jpg",
       "assets/products/9873108074794/4_49984411861290.jpg",
       "assets/products/9873108074794/5_49984412123434.jpg",
@@ -2671,14 +2671,14 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870560330026/1_49900009357610.png",
+    "primary_image": "assets/products/9870560330026/6_49900011127082.png",
     "images": [
+      "assets/products/9870560330026/6_49900011127082.png",
       "assets/products/9870560330026/1_49900009357610.png",
       "assets/products/9870560330026/2_49900009718058.png",
       "assets/products/9870560330026/3_49900008669482.png",
       "assets/products/9870560330026/4_49900004540714.png",
       "assets/products/9870560330026/5_49900009947434.png",
-      "assets/products/9870560330026/6_49900011127082.png",
       "assets/products/9870560330026/7_49900009750826.png",
       "assets/products/9870560330026/8_49900004573482.png",
       "assets/products/9870560330026/9_49900005884202.png",
@@ -2778,11 +2778,11 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870559183146/1_49899984716074.png",
+    "primary_image": "assets/products/9870559183146/3_49899983831338.png",
     "images": [
+      "assets/products/9870559183146/3_49899983831338.png",
       "assets/products/9870559183146/1_49899984716074.png",
       "assets/products/9870559183146/2_49899983241514.png",
-      "assets/products/9870559183146/3_49899983831338.png",
       "assets/products/9870559183146/4_49899983143210.png",
       "assets/products/9870559183146/5_49899984257322.png",
       "assets/products/9870559183146/6_49900075712810.png"
@@ -2955,10 +2955,10 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870554038570/1_49899823038762.png",
+    "primary_image": "assets/products/9870554038570/2_49899823497514.png",
     "images": [
-      "assets/products/9870554038570/1_49899823038762.png",
       "assets/products/9870554038570/2_49899823497514.png",
+      "assets/products/9870554038570/1_49899823038762.png",
       "assets/products/9870554038570/3_49899823366442.png"
     ],
     "has_colors": false,
@@ -3126,11 +3126,11 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870544142634/1_49899700814122.png",
+    "primary_image": "assets/products/9870544142634/3_49899700289834.png",
     "images": [
+      "assets/products/9870544142634/3_49899700289834.png",
       "assets/products/9870544142634/1_49899700814122.png",
-      "assets/products/9870544142634/2_49899699700010.png",
-      "assets/products/9870544142634/3_49899700289834.png"
+      "assets/products/9870544142634/2_49899699700010.png"
     ],
     "has_colors": false,
     "colors": [],
@@ -3248,10 +3248,10 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870500364586/1_49899385323818.png",
+    "primary_image": "assets/products/9870500364586/2_49899385356586.png",
     "images": [
-      "assets/products/9870500364586/1_49899385323818.png",
       "assets/products/9870500364586/2_49899385356586.png",
+      "assets/products/9870500364586/1_49899385323818.png",
       "assets/products/9870500364586/3_49899385585962.png",
       "assets/products/9870500364586/4_49899385618730.png"
     ],
@@ -3547,11 +3547,11 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9870469464362/1_49899202085162.jpg",
+    "primary_image": "assets/products/9870469464362/3_49899201921322.png",
     "images": [
+      "assets/products/9870469464362/3_49899201921322.png",
       "assets/products/9870469464362/1_49899202085162.jpg",
       "assets/products/9870469464362/2_49899202117930.jpg",
-      "assets/products/9870469464362/3_49899201921322.png",
       "assets/products/9870469464362/4_49899202806058.jpg"
     ],
     "has_colors": false,
@@ -3600,13 +3600,13 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870456357162/1_49899114627370.png",
+    "primary_image": "assets/products/9870456357162/5_49899107844394.png",
     "images": [
+      "assets/products/9870456357162/5_49899107844394.png",
       "assets/products/9870456357162/1_49899114627370.png",
       "assets/products/9870456357162/2_49899115348266.png",
       "assets/products/9870456357162/3_49899118428458.png",
-      "assets/products/9870456357162/4_49899113316650.png",
-      "assets/products/9870456357162/5_49899107844394.png"
+      "assets/products/9870456357162/4_49899113316650.png"
     ],
     "has_colors": true,
     "colors": [
@@ -4336,11 +4336,11 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869724844330/1_49887214960938.png",
+    "primary_image": "assets/products/9869724844330/3_49887215386922.png",
     "images": [
+      "assets/products/9869724844330/3_49887215386922.png",
       "assets/products/9869724844330/1_49887214960938.png",
       "assets/products/9869724844330/2_49887214633258.png",
-      "assets/products/9869724844330/3_49887215386922.png",
       "assets/products/9869724844330/4_49887215485226.png",
       "assets/products/9869724844330/5_49887215517994.png",
       "assets/products/9869724844330/6_49887216271658.png"
@@ -4412,10 +4412,10 @@ window.CovertokProducts = [
       "suction grip pad",
       "suction pads"
     ],
-    "primary_image": "assets/products/9855468175658/1_49719304421674.png",
+    "primary_image": "assets/products/9855468175658/2_49719325458730.png",
     "images": [
-      "assets/products/9855468175658/1_49719304421674.png",
       "assets/products/9855468175658/2_49719325458730.png",
+      "assets/products/9855468175658/1_49719304421674.png",
       "assets/products/9855468175658/3_49719338172714.png",
       "assets/products/9855468175658/4_49719338959146.png",
       "assets/products/9855468175658/5_49719353606442.png",
@@ -4485,11 +4485,11 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9854428905770/1_49704201290026.png",
+    "primary_image": "assets/products/9854428905770/3_49970058920234.png",
     "images": [
+      "assets/products/9854428905770/3_49970058920234.png",
       "assets/products/9854428905770/1_49704201290026.png",
       "assets/products/9854428905770/2_49704201322794.png",
-      "assets/products/9854428905770/3_49970058920234.png",
       "assets/products/9854428905770/4_49970058887466.png"
     ],
     "has_colors": false,
@@ -5286,15 +5286,15 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9827998794026/1_49945203212586.png",
+    "primary_image": "assets/products/9827998794026/7_50218796056874.png",
     "images": [
+      "assets/products/9827998794026/7_50218796056874.png",
       "assets/products/9827998794026/1_49945203212586.png",
       "assets/products/9827998794026/2_50090708631850.png",
       "assets/products/9827998794026/3_49950010671402.png",
       "assets/products/9827998794026/4_49680406249770.jpg",
       "assets/products/9827998794026/5_50218796024106.png",
       "assets/products/9827998794026/6_49676200804650.jpg",
-      "assets/products/9827998794026/7_50218796056874.png",
       "assets/products/9827998794026/8_49676184846634.jpg",
       "assets/products/9827998794026/9_50218796089642.png",
       "assets/products/9827998794026/10_49676185239850.jpg",
@@ -5407,17 +5407,4 @@ window.CovertokProducts = [
     "raw_html": "<div style=\"text-align: left;\"><br></div>\n<p>This ultra-thin frameless phone case for iPhone offers sleek, minimalist protection without adding bulk. Designed to preserve the phone’s original design and feel, it provides reliable scratch resistance and everyday impact protection. Its precise cutouts ensure full access to all ports and buttons, maintaining seamless functionality while keeping your device safe. Ideal for users seeking a discreet yet effective case that complements the iPhone’s aesthetics.</p>\n<p><span>This ultra-thin, frameless phone case in an eye-catching purple color is specifically designed for the latest iPhone. With a sleek and slim design, it offers reliable protection without adding extra bulk. Its frameless feature provides a seamless look and allows for easy access to all ports and buttons. Upgrade your phone's style and protection with this must-have case.</span></p>\n<p><span><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162261.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162258.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162255.jpg?v=1754028668\"></span></p>",
     "in_stock": true
   }
-];
-
-window.CovertokCollections = [
-  { id: 'all', title: 'All Products', count: 75 },
-  { id: 'iphone-cases', title: 'iPhone Covers', count: 25 },
-  { id: 'watchbands', title: 'Watch Bands & Covers', count: 17 },
-  { id: 'airpod-covers', title: 'AirPods Covers', count: 5 },
-  { id: 'charger-and-cables', title: 'Charger & Cables', count: 4 },
-  { id: 'charger-covers', title: 'Charger Cases', count: 6 },
-  { id: 'cover-charms', title: 'Cover Charms', count: 6 },
-  { id: 'other-accessories', title: 'Other Accessories', count: 12 },
-  { id: 'our-bestsellers', title: 'Best Sellers', count: 45 },
-  { id: 'new-arrivals', title: 'New Arrivals', count: 48 }
 ];

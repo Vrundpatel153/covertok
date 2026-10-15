@@ -176,7 +176,7 @@
     card.setAttribute('data-id', product.id);
 
     const hasColors = product.colors && product.colors.length > 1;
-    const initialImg = (hasColors && product.colors[0].image) ? product.colors[0].image : product.primary_image;
+    const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : '');
 
     // Badges HTML
     let badgeHtml = '';
@@ -194,7 +194,7 @@
     if (hasColors) {
       const swatches = product.colors.slice(0, 6).map((c, idx) => `
         <button type="button" 
-          class="card-color-dot ${idx === 0 ? 'active' : ''}" 
+          class="card-color-dot ${c.image === initialImg ? 'active' : ''}" 
           data-img="${c.image}" 
           data-color="${c.name}"
           style="background: ${c.hex};" 
