@@ -642,11 +642,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroExploreArrow = document.getElementById('heroExploreArrow');
   const heroCarousel = document.getElementById('heroCarousel');
 
-  const HERO_CTA_ARROW_SVG = `<svg class="cta-arrow-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
-
   const syncHeroCta = (btnText, btnLink) => {
     if (heroDynamicCta && btnText) {
-      heroDynamicCta.innerHTML = `<span>${btnText}</span> ${HERO_CTA_ARROW_SVG}`;
+      heroDynamicCta.textContent = btnText;
       if (btnLink) heroDynamicCta.setAttribute('href', btnLink);
     }
     if (heroExploreArrow && btnLink) {

@@ -841,12 +841,14 @@ img {
 }
 
 .hero-contact-btn {
-  width: clamp(168px, 13.8vw, 232px);
+  width: auto;
+  min-width: clamp(168px, 13.8vw, 232px);
+  padding: 0 clamp(24px, 2.2vw, 36px);
   height: clamp(54px, 4.64vw, 78px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: clamp(0.8125rem, 0.95vw, 1.0625rem);
   font-weight: 800;
   letter-spacing: 0.04em;
