@@ -105,7 +105,7 @@
     const textureLoader = new THREE.TextureLoader();
     textureLoader.setCrossOrigin('');
 
-    // 3D Multi-Layer Architecture: Base Mobile Phone + Dual-Zone Protector (Camera Armor & Corner Bumper)
+    // 3D Dual-Layer Architecture: Base Mobile Phone + Frameless Bumper & 3D Lens Armor
     const layerConfigs = [
       {
         id: 1,
@@ -117,19 +117,11 @@
       },
       {
         id: 2,
-        name: 'Bottom Corner Bumper Armor',
-        path: 'assets/blue_protector_bottom.png',
-        key: 'bumper_bottom',
-        exploded: { x: 0, y: 0, z: 60 },
-        assembled: { x: 117.8, y: -56.6, z: 2 }
-      },
-      {
-        id: 3,
-        name: '3D Camera Lens Armor & Top Bumper',
-        path: 'assets/blue_protector_top.png',
-        key: 'bumper_top',
-        exploded: { x: 0, y: 0, z: 60 },
-        assembled: { x: 96.3, y: -56.6, z: 3 }
+        name: 'Frameless Bumper & 3D Lens Armor',
+        path: 'assets/blue_protector_layer.png',
+        key: 'protector',
+        exploded: { x: 0, y: 0, z: 70 },
+        assembled: { x: 97.4, y: -56.6, z: 2 }
       }
     ];
 
@@ -144,7 +136,7 @@
       const mat = new THREE.MeshBasicMaterial({
         map: texture,
         transparent: true,
-        alphaTest: 0.002,
+        alphaTest: 0.05,
         depthWrite: false,
         depthTest: true
       });
@@ -359,6 +351,11 @@
         const breath = animProgress * Math.sin(animTime * 2.2 + i * 0.75) * 2.5;
 
         mesh.position.set(curX, curY + breath, curZ);
+
+        // For protector layer, seamlessly blend opacity as it docks onto the phone
+        if (cfg.key === 'protector') {
+          mesh.material.opacity = Math.min(1.0, animProgress * 4.0);
+        }
       });
 
       // Smooth mouse parallax rotation
