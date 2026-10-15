@@ -598,20 +598,200 @@ img {
 }
 
 .hero-text-sub {
-  font-size: 0.85em;
-  font-weight: 800;
-  color: #475569;
-  letter-spacing: 0.04em;
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: inherit;
+  display: inline-block;
 }
 
 .hero-subtext {
   font-size: clamp(0.92rem, 1.1vw, 1.12rem);
-  color: #475569;
-  font-weight: 500;
+  color: #334155;
+  font-weight: 550;
   margin-bottom: clamp(12px, 1.4vw, 18px);
   line-height: 1.55;
   max-width: 500px;
   letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   HERO BANNER THEME PALETTES (Curated Per-Slide Contrast Systems)
+   ============================================================ */
+
+/* --- THEME 1: SKY / AIR BLUE (Slide 1) --- */
+.hero-slide[data-theme="sky"] .hero-headline,
+.mobile-view .hero-slide[data-theme="sky"] .hero-headline {
+  color: #0A192F;
+}
+.hero-slide[data-theme="sky"] .hero-text-accent,
+.mobile-view .hero-slide[data-theme="sky"] .hero-text-accent {
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-slide[data-theme="sky"] .hero-text-sub,
+.mobile-view .hero-slide[data-theme="sky"] .hero-text-sub {
+  color: #0F294A;
+}
+.hero-slide[data-theme="sky"] .hero-kicker,
+.mobile-view .hero-slide[data-theme="sky"] .hero-kicker {
+  color: #1E40AF;
+}
+.hero-slide[data-theme="sky"] .hero-kicker-num,
+.mobile-view .hero-slide[data-theme="sky"] .hero-kicker-num {
+  color: #0284C7;
+}
+.hero-slide[data-theme="sky"] .hero-kicker-dot,
+.mobile-view .hero-slide[data-theme="sky"] .hero-kicker-dot {
+  background: #2563EB;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.45);
+}
+.hero-slide[data-theme="sky"] .hero-subtext,
+.mobile-view .hero-slide[data-theme="sky"] .hero-subtext {
+  color: #1E3A5F;
+}
+.hero-slide[data-theme="sky"] .hero-spec-tag,
+.mobile-view .hero-slide[data-theme="sky"] .hero-spec-tag {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(186, 230, 253, 0.9);
+  color: #0C4A6E;
+  box-shadow: 0 2px 8px rgba(14, 116, 144, 0.08);
+}
+.hero-slide[data-theme="sky"] .hero-spec-sep,
+.mobile-view .hero-slide[data-theme="sky"] .hero-spec-sep {
+  color: #7DD3FC;
+}
+
+/* --- THEME 2: MAGSAFE ARMOR & WARM AMBER/LEATHER (Slide 2) --- */
+.hero-slide[data-theme="magsafe"] .hero-headline,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-headline {
+  color: #18110D;
+}
+.hero-slide[data-theme="magsafe"] .hero-text-accent,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-text-accent {
+  background: linear-gradient(135deg, #9A3412 0%, #C2410C 35%, #EA580C 70%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-slide[data-theme="magsafe"] .hero-text-sub,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-text-sub {
+  color: #29180E;
+}
+.hero-slide[data-theme="magsafe"] .hero-kicker,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-kicker {
+  color: #9A3412;
+}
+.hero-slide[data-theme="magsafe"] .hero-kicker-num,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-kicker-num {
+  color: #C2410C;
+}
+.hero-slide[data-theme="magsafe"] .hero-kicker-dot,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-kicker-dot {
+  background: #EA580C;
+  box-shadow: 0 0 8px rgba(234, 88, 12, 0.5);
+}
+.hero-slide[data-theme="magsafe"] .hero-subtext,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-subtext {
+  color: #382114;
+}
+.hero-slide[data-theme="magsafe"] .hero-spec-tag,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-spec-tag {
+  background: rgba(255, 253, 250, 0.92);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #78350F;
+  box-shadow: 0 2px 8px rgba(120, 53, 15, 0.08);
+}
+.hero-slide[data-theme="magsafe"] .hero-spec-sep,
+.mobile-view .hero-slide[data-theme="magsafe"] .hero-spec-sep {
+  color: #F59E0B;
+}
+
+/* --- THEME 3: DIAMOND GLASS & TITANIUM PRECISION (Slide 3) --- */
+.hero-slide[data-theme="glass"] .hero-headline,
+.mobile-view .hero-slide[data-theme="glass"] .hero-headline {
+  color: #090F17;
+}
+.hero-slide[data-theme="glass"] .hero-text-accent,
+.mobile-view .hero-slide[data-theme="glass"] .hero-text-accent {
+  background: linear-gradient(135deg, #0369A1 0%, #0EA5E9 45%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-slide[data-theme="glass"] .hero-text-sub,
+.mobile-view .hero-slide[data-theme="glass"] .hero-text-sub {
+  color: #0F1D2C;
+}
+.hero-slide[data-theme="glass"] .hero-kicker,
+.mobile-view .hero-slide[data-theme="glass"] .hero-kicker {
+  color: #0369A1;
+}
+.hero-slide[data-theme="glass"] .hero-kicker-num,
+.mobile-view .hero-slide[data-theme="glass"] .hero-kicker-num {
+  color: #0EA5E9;
+}
+.hero-slide[data-theme="glass"] .hero-kicker-dot,
+.mobile-view .hero-slide[data-theme="glass"] .hero-kicker-dot {
+  background: #0EA5E9;
+  box-shadow: 0 0 8px rgba(14, 165, 233, 0.5);
+}
+.hero-slide[data-theme="glass"] .hero-subtext,
+.mobile-view .hero-slide[data-theme="glass"] .hero-subtext {
+  color: #1E293B;
+}
+.hero-slide[data-theme="glass"] .hero-spec-tag,
+.mobile-view .hero-slide[data-theme="glass"] .hero-spec-tag {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(14, 165, 233, 0.35);
+  color: #075985;
+  box-shadow: 0 2px 8px rgba(3, 105, 161, 0.08);
+}
+.hero-slide[data-theme="glass"] .hero-spec-sep,
+.mobile-view .hero-slide[data-theme="glass"] .hero-spec-sep {
+  color: #38BDF8;
+}
+
+/* --- THEME 4: ARTISAN PRINTS & ROSE BEADED CHARMS (Slide 4) --- */
+.hero-slide[data-theme="boho"] .hero-headline,
+.mobile-view .hero-slide[data-theme="boho"] .hero-headline {
+  color: #260A18;
+}
+.hero-slide[data-theme="boho"] .hero-text-accent,
+.mobile-view .hero-slide[data-theme="boho"] .hero-text-accent {
+  background: linear-gradient(135deg, #9F1239 0%, #E11D48 50%, #BE185D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-slide[data-theme="boho"] .hero-text-sub,
+.mobile-view .hero-slide[data-theme="boho"] .hero-text-sub {
+  color: #380C23;
+}
+.hero-slide[data-theme="boho"] .hero-kicker,
+.mobile-view .hero-slide[data-theme="boho"] .hero-kicker {
+  color: #9F1239;
+}
+.hero-slide[data-theme="boho"] .hero-kicker-num,
+.mobile-view .hero-slide[data-theme="boho"] .hero-kicker-num {
+  color: #E11D48;
+}
+.hero-slide[data-theme="boho"] .hero-kicker-dot,
+.mobile-view .hero-slide[data-theme="boho"] .hero-kicker-dot {
+  background: #E11D48;
+  box-shadow: 0 0 8px rgba(225, 29, 72, 0.45);
+}
+.hero-slide[data-theme="boho"] .hero-subtext,
+.mobile-view .hero-slide[data-theme="boho"] .hero-subtext {
+  color: #421228;
+}
+.hero-slide[data-theme="boho"] .hero-spec-tag,
+.mobile-view .hero-slide[data-theme="boho"] .hero-spec-tag {
+  background: rgba(255, 250, 252, 0.92);
+  border-color: rgba(244, 63, 94, 0.35);
+  color: #881337;
+  box-shadow: 0 2px 8px rgba(159, 18, 57, 0.08);
+}
+.hero-slide[data-theme="boho"] .hero-spec-sep,
+.mobile-view .hero-slide[data-theme="boho"] .hero-spec-sep {
+  color: #FB7185;
 }
 
 /* Detailing Row: Clean technical metadata tags */
@@ -666,6 +846,7 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   font-size: clamp(0.8125rem, 0.95vw, 1.0625rem);
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -673,7 +854,7 @@ img {
   color: #FFFFFF;
   border-radius: 9999px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -681,6 +862,21 @@ img {
 .hero-contact-btn:hover {
   background: #000000;
   transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.hero-contact-btn .cta-arrow-svg {
+  width: clamp(16px, 1.15vw, 19px);
+  height: clamp(16px, 1.15vw, 19px);
+  flex-shrink: 0;
+  stroke: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-contact-btn:hover .cta-arrow-svg {
+  transform: translateX(4px);
 }
 
 .hero-arrow-btn {
@@ -3256,9 +3452,13 @@ img {
     text-decoration: none;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
   }
+  .hero-contact-btn .cta-arrow-svg,
   .hero-contact-btn .cta-arrow {
-    font-size: 1rem;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
     line-height: 1;
+    display: inline-block;
   }
   .hero-arrow-btn {
     width: 44px;

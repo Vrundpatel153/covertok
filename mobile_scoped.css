@@ -245,9 +245,13 @@
     text-decoration: none;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
 }
+.mobile-view .hero-contact-btn .cta-arrow-svg,
 .mobile-view .hero-contact-btn .cta-arrow {
-  font-size: 1rem;
-    line-height: 1;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  line-height: 1;
+  display: inline-block;
 }
 .mobile-view .hero-arrow-btn {
   width: 44px;
