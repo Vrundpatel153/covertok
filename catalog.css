@@ -1036,4 +1036,33 @@
   .card-view-btn {
     display: none !important;
   }
+
+  /* Mobile Search Modal */
+  .search-modal-overlay {
+    padding: 16px 12px !important;
+    align-items: flex-start !important;
+  }
+  .search-modal-content {
+    padding: 18px 16px 20px !important;
+    border-radius: 20px !important;
+    max-height: 85vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .search-input-wrap input {
+    font-size: 0.95rem !important;
+  }
+  .search-quick-tags {
+    padding: 10px 0 8px !important;
+    gap: 6px !important;
+  }
+  .search-tag-chip {
+    padding: 5px 12px !important;
+    font-size: 0.75rem !important;
+  }
+  .search-results-list {
+    max-height: calc(85vh - 170px) !important;
+    overflow-y: auto !important;
+    padding-bottom: 12px !important;
+  }
 }

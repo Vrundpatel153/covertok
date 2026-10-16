@@ -187,6 +187,12 @@
       el.textContent = `Rs. ${subtotal.toLocaleString('en-IN')}.00`;
     });
 
+    // Update footer visibility based on cart emptiness
+    const footers = document.querySelectorAll('.cart-drawer-footer, .cart-footer');
+    footers.forEach(f => {
+      f.style.display = cart.length === 0 ? 'none' : 'block';
+    });
+
     // Render items list
     const containers = document.querySelectorAll('#cartItemsContainer, #cartItemsList');
     containers.forEach(container => {
@@ -205,7 +211,7 @@
             </div>
             <p style="font-weight: 800; font-size: 1.05rem; color: #121316; margin-bottom: 6px;">Your cart is empty</p>
             <p style="font-size: 0.875rem; color: #64748B;">Explore our trendy cases and accessories to start shopping.</p>
-            <a href="collections.html" class="btn btn-pill-dark" style="margin-top: 20px; display: inline-block; padding: 10px 24px; font-size: 0.85rem;">EXPLORE PRODUCTS</a>
+            <a href="collections.html" class="btn btn-pill-dark" style="margin-top: 20px; display: inline-block; padding: 10px 24px; font-size: 0.85rem; border-radius: 999px;">EXPLORE PRODUCTS</a>
           </div>
         `;
         return;
@@ -399,7 +405,7 @@
   }
 
   // 7. INITIALIZE STORE
-  document.addEventListener('DOMContentLoaded', () => {
+  function initStoreCore() {
     updateCartUI();
     setupSearch();
 
@@ -475,6 +481,11 @@
       const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
       alert(`Covertok Secure Checkout\n\nItems in order: ${cart.length}\nTotal Payable: Rs. ${total.toLocaleString('en-IN')}.00\n\nCash on Delivery & Online UPI / Card options available.`);
     });
-  });
+  }
 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStoreCore);
+  } else {
+    initStoreCore();
+  }
 })();

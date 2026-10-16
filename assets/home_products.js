@@ -388,5 +388,9 @@
     }, true);
   }
 
-  document.addEventListener('DOMContentLoaded', initHomeProducts);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHomeProducts);
+  } else {
+    initHomeProducts();
+  }
 })();

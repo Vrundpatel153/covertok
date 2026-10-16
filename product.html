@@ -1729,33 +1729,63 @@
 
       /* Sticky Bottom Purchase Bar */
       .pdp-sticky-bar {
-        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+        gap: 12px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: 100vw !important;
       }
       .sticky-left {
-        max-width: calc(100% - 140px);
-        overflow: hidden;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 1 1 0% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        overflow: hidden !important;
       }
       .sticky-left div {
-        overflow: hidden;
+        overflow: hidden !important;
+        min-width: 0 !important;
+        flex: 1 1 0% !important;
+      }
+      .sticky-thumb {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        border-radius: 10px !important;
+        flex-shrink: 0 !important;
       }
       #stickyTitle {
-        font-size: 0.8rem !important;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 0.82rem !important;
+        font-weight: 800 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        line-height: 1.25 !important;
       }
       #stickySubtitle {
-        font-size: 0.7rem !important;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 0.72rem !important;
+        color: #0284c7 !important;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        line-height: 1.25 !important;
+        margin-top: 2px !important;
       }
       #stickyAddBtn {
         padding: 10px 16px !important;
-        font-size: 0.78rem !important;
+        font-size: 0.8rem !important;
+        font-weight: 800 !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
         border-radius: 999px !important;
+      }
+
+      /* Clear footer for floating sticky bar on mobile */
+      .site-footer {
+        padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)) !important;
       }
 
       /* Trust Matrix & Standard Bento */

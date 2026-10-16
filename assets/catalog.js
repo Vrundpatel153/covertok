@@ -312,8 +312,8 @@
       });
     });
 
-    // Quick View Trigger
-    card.querySelector('.qv-trigger').addEventListener('click', () => {
+    // Quick View Trigger (optional)
+    card.querySelector('.qv-trigger')?.addEventListener('click', () => {
       openQuickViewModal(product);
     });
 
@@ -551,5 +551,9 @@
     }
   }
 
-  document.addEventListener('DOMContentLoaded', initCatalog);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCatalog);
+  } else {
+    initCatalog();
+  }
 })();
