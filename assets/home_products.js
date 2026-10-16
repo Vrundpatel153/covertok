@@ -11,6 +11,8 @@
 
     setupCollectionsSection();
     setupFeaturedProductsSection();
+    setupSliderControls('colProductsGrid', 'colSliderPrev', 'colSliderNext');
+    setupSliderControls('productGrid', 'prodSliderPrev', 'prodSliderNext');
   }
 
   // 1. SECTION 5: "SHOP OUR COLLECTIONS" Dynamic Category Tabs & Grid
@@ -35,19 +37,24 @@
       let prods = [];
 
       if (targetCat === 'all') {
-        // Diverse curated selection (max 6 items for clean responsive landing page)
         const cats = ['iphone-cases', 'watchbands', 'airpod-covers', 'charger-and-cables', 'other-accessories', 'cover-charms'];
         cats.forEach(c => {
           const match = window.CovertokProducts.filter(p => p.category === c);
-          if (match.length && prods.length < 6) prods.push(match[0]);
+          if (match.length && prods.length < 8) prods.push(match[0]);
         });
+        if (prods.length < 8) {
+          const remaining = window.CovertokProducts.filter(p => !prods.some(ep => ep.id === p.id));
+          prods = prods.concat(remaining.slice(0, 8 - prods.length));
+        }
       } else {
-        prods = window.CovertokProducts.filter(p => p.category === targetCat || (p.collections && p.collections.includes(targetCat))).slice(0, 6);
+        prods = window.CovertokProducts.filter(p => p.category === targetCat || (p.collections && p.collections.includes(targetCat))).slice(0, 8);
       }
 
       if (prods.length === 0) {
-        prods = window.CovertokProducts.slice(0, 6);
+        prods = window.CovertokProducts.slice(0, 8);
       }
+
+      grid.scrollTo({ left: 0, behavior: 'smooth' });
 
       grid.innerHTML = prods.map(p => {
         const hasColors = p.colors && p.colors.length > 1;
@@ -187,8 +194,8 @@
     const grid = document.getElementById('productGrid');
     if (!grid) return;
 
-    // Pick top 6 curated bestsellers for landing page showcase
-    const prods = window.CovertokProducts.filter(p => p.is_bestseller || p.is_new).slice(0, 6);
+    // Pick top 8 curated bestsellers for landing page showcase
+    const prods = window.CovertokProducts.filter(p => p.is_bestseller || p.is_new).slice(0, 8);
 
     grid.innerHTML = prods.map(p => {
       const hasColors = p.colors && p.colors.length > 1;
@@ -284,6 +291,101 @@
         });
       });
     });
+  }
+
+  // 3. Precision Single-Row Slider Controls & Touch / Drag Mechanics
+  function setupSliderControls(gridId, prevBtnId, nextBtnId) {
+    const grid = document.getElementById(gridId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+    if (!grid) return;
+
+    function getScrollStep() {
+      const card = grid.querySelector('.col-prod-card, .product-card');
+      if (card) {
+        const style = window.getComputedStyle(grid);
+        const gap = parseFloat(style.gap) || 16;
+        return card.getBoundingClientRect().width + gap;
+      }
+      return 280;
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const step = getScrollStep();
+        const maxScroll = grid.scrollWidth - grid.clientWidth;
+        if (grid.scrollLeft >= maxScroll - 15) {
+          // Infinite wrap to start
+          grid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          grid.scrollBy({ left: step, behavior: 'smooth' });
+        }
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const step = getScrollStep();
+        const maxScroll = grid.scrollWidth - grid.clientWidth;
+        if (grid.scrollLeft <= 15) {
+          // Infinite wrap to end
+          grid.scrollTo({ left: maxScroll, behavior: 'smooth' });
+        } else {
+          grid.scrollBy({ left: -step, behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Precision desktop drag-to-scroll
+    let isDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let hasDragged = false;
+
+    grid.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      isDown = true;
+      hasDragged = false;
+      startX = e.pageX - grid.offsetLeft;
+      startScrollLeft = grid.scrollLeft;
+      grid.style.scrollBehavior = 'auto';
+      grid.style.scrollSnapType = 'none';
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      grid.style.scrollBehavior = 'smooth';
+      grid.style.scrollSnapType = 'x mandatory';
+    });
+
+    grid.addEventListener('mouseleave', () => {
+      if (!isDown) return;
+      isDown = false;
+      grid.style.scrollBehavior = 'smooth';
+      grid.style.scrollSnapType = 'x mandatory';
+    });
+
+    grid.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      const x = e.pageX - grid.offsetLeft;
+      const walk = (x - startX) * 1.4;
+      if (Math.abs(walk) > 6) {
+        hasDragged = true;
+      }
+      grid.scrollLeft = startScrollLeft - walk;
+    });
+
+    // Suppress card clicks if dragging
+    grid.addEventListener('click', (e) => {
+      if (hasDragged) {
+        e.preventDefault();
+        e.stopPropagation();
+        hasDragged = false;
+      }
+    }, true);
   }
 
   document.addEventListener('DOMContentLoaded', initHomeProducts);
