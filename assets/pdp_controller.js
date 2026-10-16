@@ -976,6 +976,22 @@
       }, 300);
     });
 
+    // Wishlist Toggle on PDP
+    const wishlistBtn = document.getElementById('pdpWishlistBtn');
+    if (wishlistBtn && currentProduct) {
+      wishlistBtn.setAttribute('data-wishlist-id', currentProduct.id);
+      if (window.isWishlisted && window.isWishlisted(currentProduct.id)) {
+        wishlistBtn.classList.add('active', 'liked');
+      }
+      wishlistBtn.addEventListener('click', () => {
+        if (window.toggleWishlist) {
+          const added = window.toggleWishlist(currentProduct.id, currentProduct.title);
+          wishlistBtn.classList.toggle('active', added);
+          wishlistBtn.classList.toggle('liked', added);
+        }
+      });
+    }
+
     // Pincode checker simulation
     const pinBtn = document.getElementById('checkPinBtn');
     const pinInput = document.getElementById('pinInput');
@@ -1040,9 +1056,11 @@
             <div class="card-price-row" style="margin-bottom: 10px;">
               <span class="card-price-now" style="font-weight: 900; color: #0F172A;">${p.price_formatted}</span>
             </div>
-            <a href="product.html?id=${p.id}" class="btn btn-pill-outline" style="text-align: center; font-size: 0.8rem; padding: 8px 12px; font-weight: 700; border-radius: 999px;">
-              VIEW OPTIONS &rarr;
-            </a>
+            <div style="display: flex; gap: 8px; margin-top: 8px;">
+              <button type="button" class="btn btn-pill-outline" onclick="window.location.href='product.html?id=${p.id}'" style="flex: 1; text-align: center; font-size: 0.8rem; padding: 8px 12px; font-weight: 700; border-radius: 999px; background: #0F172A; color: #FFFFFF; border: none; cursor: pointer;">
+                BUY NOW
+              </button>
+            </div>
           </div>
         </div>
       `;

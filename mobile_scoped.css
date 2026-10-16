@@ -1496,15 +1496,7 @@
   mix-blend-mode: multiply !important;
 }
 .mobile-view .product-arrow-btn {
-  width: 30px !important;
-    height: 30px !important;
-    top: 10px !important;
-    right: 10px !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
-}
-.mobile-view .product-arrow-btn svg {
-  width: 13px !important;
-    height: 13px !important;
+  display: none !important;
 }
 .mobile-view .product-info {
   padding: 10px 4px 0 !important;

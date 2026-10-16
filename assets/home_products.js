@@ -90,17 +90,17 @@
                 <span class="col-price-now" style="font-family: var(--font-heading); font-weight: 900; font-size: 1.1rem; color: #121316;">${p.price_formatted}</span>
                 ${p.original_price > p.price ? `<span class="col-price-was" style="font-size: 0.85rem; color: #94A3B8; text-decoration: line-through;">${p.original_price_formatted}</span>` : ''}
               </div>
-              <div style="display: flex; gap: 8px;">
-                <button class="col-add-cart-btn" type="button" data-id="${p.id}" style="flex: 1;">
+              <div style="display: flex; gap: 8px;" onclick="event.stopPropagation();">
+                <button class="col-add-cart-btn" type="button" data-id="${p.id}" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                     <circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle>
                     <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
                   </svg>
-                  <span>Add to Cart</span>
+                  <span>Add</span>
                 </button>
-                <a href="product.html?id=${p.id}" class="card-view-btn" style="width: 36px; height: 36px;" title="View options">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                </a>
+                <button type="button" class="col-buy-btn" onclick="window.location.href='product.html?id=${p.id}'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #0F172A; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                  Buy Now
+                </button>
               </div>
             </div>
           </div>
@@ -210,29 +210,36 @@
       }
 
       return `
-        <div class="product-card" data-id="${p.id}">
+        <div class="product-card" data-id="${p.id}" onclick="window.location.href='product.html?id=${p.id}'" style="cursor: pointer;">
           <div class="product-card-inner">
             <div class="product-image-box" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAECEF; display: flex; align-items: center; justify-content: center; padding: 20px; aspect-ratio: 1 / 1;">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2;">${p.discount_percent}% OFF</span>` : ''}
-              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;">
-              <button class="product-arrow-btn" data-product-id="${p.id}" aria-label="View product details" title="View details" onclick="window.location.href='product.html?id=${p.id}'">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
+              <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" data-product="${p.title}" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('${p.id}');" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                 </svg>
               </button>
-              <div class="quick-add-overlay">
-                <button class="btn btn-quick-add" data-id="${p.id}">
-                  + Add To Cart
-                </button>
-              </div>
+              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;">
             </div>
             <div class="product-info" style="padding-top: 12px; display: flex; flex-direction: column;">
-              ${swatchesHtml ? `<div class="home-swatches-wrap" style="margin-bottom: 6px;">${swatchesHtml}</div>` : ''}
+              ${swatchesHtml ? `<div class="home-swatches-wrap" style="margin-bottom: 6px;" onclick="event.stopPropagation();">${swatchesHtml}</div>` : ''}
               <div class="product-price" style="font-family: var(--font-heading); font-weight: 900; font-size: 1.25rem; color: #121316; margin-bottom: 2px;">${p.price_formatted}</div>
               <h3 class="product-name" style="font-size: 0.875rem; font-weight: 700; color: #121316; margin-top: 2px; line-height: 1.35;">
                 <a href="product.html?id=${p.id}" style="color: inherit; text-decoration: none;">${p.title}</a>
               </h3>
+              <div class="card-buttons-row" style="display: flex; gap: 8px; margin-top: 10px;" onclick="event.stopPropagation();">
+                <button type="button" class="btn btn-card-cart btn-quick-add" data-id="${p.id}" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                    <path d="M3 9l2.5-5h13L21 9v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
+                    <path d="M3 9h18"></path>
+                    <path d="M9 21V9"></path>
+                  </svg>
+                  <span>Add</span>
+                </button>
+                <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=${p.id}'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #0F172A; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                  Buy Now
+                </button>
+              </div>
             </div>
           </div>
         </div>

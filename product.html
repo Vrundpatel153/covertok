@@ -819,6 +819,42 @@
       color: #0F172A;
     }
 
+    .pdp-wishlist-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1.5px solid rgba(226, 232, 240, 0.9);
+      color: #0F172A;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.04);
+    }
+
+    .pdp-wishlist-action-btn:hover {
+      background: #FFF1F2;
+      border-color: #FECDD3;
+      color: #E11D48;
+      transform: translateY(-2px);
+    }
+
+    .pdp-wishlist-action-btn.active,
+    .pdp-wishlist-action-btn.liked {
+      background: #FFF1F2;
+      border-color: #E11D48;
+      color: #E11D48;
+    }
+
+    .pdp-wishlist-action-btn.active svg,
+    .pdp-wishlist-action-btn.liked svg {
+      fill: #E11D48;
+      stroke: #E11D48;
+    }
+
     .pdp-add-cart-btn {
       flex: 1;
       padding: 16px 28px;
@@ -1295,57 +1331,70 @@
         padding: 0 14px;
       }
 
-      /* Breadcrumbs & Catalog Switcher */
+      /* Breadcrumbs & Catalog Switcher - strictly hidden on mobile as requested */
       .pdp-breadcrumbs {
-        font-size: 0.75rem;
-        gap: 6px;
-        margin-bottom: 12px;
-        white-space: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        padding-bottom: 4px;
+        display: none !important;
       }
-      .pdp-breadcrumbs::-webkit-scrollbar { display: none; }
 
       .pdp-product-switcher {
-        margin-bottom: 16px;
-        padding-bottom: 8px;
-        gap: 8px;
-        -webkit-overflow-scrolling: touch;
-      }
-      .pdp-switch-pill {
-        padding: 6px 14px;
-        font-size: 0.75rem;
-        flex-shrink: 0;
+        display: none !important;
       }
 
       /* Visual Stage & Thumbnails */
-      .pdp-main-stage {
-        max-width: min(84vw, 300px);
-        max-height: min(84vw, 300px);
-        border-radius: 20px;
-        margin: 0 auto 12px;
+      .pdp-visual-sticky {
+        position: relative !important;
+        top: 0 !important;
+        max-width: 100% !important;
+        margin-top: 0 !important;
+        gap: 12px;
       }
+
+      .pdp-main-stage {
+        width: 100%;
+        max-width: min(88vw, 320px);
+        aspect-ratio: 1 / 1;
+        border-radius: 20px;
+        padding: 16px;
+        margin: 0 auto;
+        box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+      }
+
+      .pdp-thumbs-slider-wrap {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        gap: 0;
+      }
+
+      /* Hide clumsy arrow navigation buttons on mobile touch carousel */
+      .pdp-thumb-nav-btn {
+        display: none !important;
+      }
+
       .pdp-thumbnails-strip {
         gap: 8px;
-        padding: 4px 0;
+        padding: 4px 6px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
       }
+
       .pdp-thumb-btn {
-        width: 52px;
-        height: 52px;
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
         border-radius: 12px;
       }
 
       /* Product Info & Pricing */
       .pdp-brand-tag {
-        font-size: 0.7rem;
-        margin-bottom: 6px;
+        font-size: 0.72rem;
+        margin-bottom: 4px;
       }
       .pdp-title {
-        font-size: clamp(1.4rem, 5.5vw, 1.85rem);
-        line-height: 1.2;
-        margin-bottom: 10px;
+        font-size: clamp(1.25rem, 5vw, 1.55rem);
+        line-height: 1.25;
+        margin-bottom: 8px;
+        overflow-wrap: break-word;
         word-break: break-word;
       }
       .pdp-rating-row {
@@ -1402,7 +1451,7 @@
       /* Actions Row: Modern 2-Row Layout, Never Squashed or Circular */
       .pdp-actions-row {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto auto 1fr;
         gap: 10px;
         margin-bottom: 20px;
       }
@@ -1417,6 +1466,12 @@
         font-size: 0.95rem;
         min-width: 18px;
       }
+      .pdp-wishlist-action-btn {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 14px;
+      }
       .pdp-add-cart-btn {
         height: 48px;
         padding: 0 16px;
@@ -1430,7 +1485,7 @@
         gap: 6px;
       }
       .pdp-buy-now-btn {
-        grid-column: span 2;
+        grid-column: 1 / -1;
         width: 100%;
         height: 50px;
         padding: 0 20px;
@@ -1578,9 +1633,33 @@
           </svg>
           <span class="cart-badge" id="cartBadgeCount">0</span>
         </button>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation" title="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Overlay Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo" aria-label="Covertok Home">
+        <img src="assets/covertok-logo-transparent.png" alt="Covertok Logo" class="logo-img" style="height: 36px;">
+      </a>
+      <button class="close-btn" id="closeMobileDrawer" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="collections.html" class="mobile-link">ALL PRODUCTS</a></li>
+      <li><a href="collections.html?cat=iphone-cases" class="mobile-link">PHONE CASES</a></li>
+      <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS & COVERS</a></li>
+      <li><a href="collections.html?cat=airpod-covers" class="mobile-link">AIRPOD COVERS</a></li>
+      <li><a href="collections.html" class="mobile-link">COLLECTIONS</a></li>
+      <li><a href="index.html" class="mobile-link">HOME</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="collections.html" class="btn btn-dark full-width" style="padding: 12px 20px; font-weight: 700; border-radius: 999px; text-align: center; text-decoration: none; display: block; background: #0F172A; color: #FFFFFF;">EXPLORE ALL PRODUCTS</a>
+    </div>
+  </div>
 
   <!-- Product Page Main Content -->
   <main class="pdp-main-section">
@@ -1846,6 +1925,11 @@
               <span class="pdp-qty-val" id="qtyVal">1</span>
               <button class="pdp-qty-btn" id="qtyPlusBtn" aria-label="Increase quantity">+</button>
             </div>
+            <button class="pdp-wishlist-action-btn" id="pdpWishlistBtn" type="button" aria-label="Save to wishlist" title="Save to Wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </button>
             <button class="pdp-add-cart-btn" id="pdpAddToCartBtn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
                 <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>

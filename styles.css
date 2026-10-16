@@ -1212,26 +1212,55 @@ img {
 }
 
 .product-arrow-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  color: #121316;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all var(--transition-fast);
-  z-index: 5;
+  display: none !important;
 }
 
-.product-arrow-btn:hover {
-  background: #121316;
-  color: #FFFFFF;
-  transform: scale(1.1);
+.product-image-box,
+.col-prod-media,
+.card-media-stage,
+.card-img-wrap {
+  cursor: pointer;
+}
+
+.btn-card-buy,
+.col-buy-btn,
+.card-buy-btn {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  font-size: 0.8125rem !important;
+  border-radius: 999px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15) !important;
+  text-decoration: none !important;
+}
+
+.btn-card-buy:hover,
+.col-buy-btn:hover,
+.card-buy-btn:hover {
+  background: #000000 !important;
+  transform: translateY(-1px) scale(1.02) !important;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.22) !important;
+}
+
+.btn-card-cart {
+  background: #F8FAFC !important;
+  color: #0F172A !important;
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  font-size: 0.8125rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-card-cart:hover {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
 }
 
 .quick-add-overlay {
@@ -6394,15 +6423,7 @@ img {
     mix-blend-mode: multiply !important;
   }
   .product-arrow-btn {
-    width: 30px !important;
-    height: 30px !important;
-    top: 10px !important;
-    right: 10px !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
-  }
-  .product-arrow-btn svg {
-    width: 13px !important;
-    height: 13px !important;
+    display: none !important;
   }
   .product-info {
     padding: 10px 4px 0 !important;
