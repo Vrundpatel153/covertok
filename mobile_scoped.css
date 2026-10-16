@@ -254,18 +254,7 @@
   display: inline-block;
 }
 .mobile-view .hero-arrow-btn {
-  width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: #E0EBF7;
-    color: #0F172A;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin-bottom: 0;
+  display: none !important;
 }
 .mobile-view .hero-carousel-nav {
   position: absolute;
@@ -923,17 +912,7 @@
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25) !important;
 }
 .mobile-view .hero-arrow-btn {
-  width: 44px !important;
-    height: 44px !important;
-    border-radius: 50% !important;
-    background: #E0EBF7 !important;
-    color: #0F172A !important;
-    border: none !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-decoration: none !important;
+  display: none !important;
 }
 .mobile-view .hero-carousel-nav {
   position: absolute !important;
@@ -1416,11 +1395,7 @@
     gap: 6px !important;
 }
 .mobile-view .hero-arrow-btn {
-  width: 38px !important;
-    height: 38px !important;
-    border-radius: 50% !important;
-    flex-shrink: 0 !important;
-    margin-bottom: 0 !important;
+  display: none !important;
 }
 .mobile-view .hero-carousel-nav {
   right: 14px !important;

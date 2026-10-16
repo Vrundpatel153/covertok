@@ -159,15 +159,17 @@ img {
 }
 
 .logo-img {
-  height: 36px;
+  height: clamp(44px, 3.5vw, 50px);
   width: auto;
   max-width: 150px;
   object-fit: contain;
-  transition: transform var(--transition-fast);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .brand-logo:hover .logo-img {
-  transform: scale(1.04);
+  transform: scale(1.06);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
 }
 
 .logo-text {
@@ -883,15 +885,16 @@ img {
 }
 
 .hero-contact-btn {
-  width: auto;
-  min-width: clamp(168px, 13.8vw, 232px);
-  padding: 0 clamp(24px, 2.2vw, 36px);
+  width: clamp(170px, 13vw, 212px);
+  min-width: clamp(170px, 13vw, 212px);
+  max-width: clamp(170px, 13vw, 212px);
+  padding: 0 16px;
   height: clamp(54px, 4.64vw, 78px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(0.8125rem, 0.95vw, 1.0625rem);
+  font-size: clamp(0.8125rem, 0.92vw, 1.0rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   background: #18191c;
@@ -901,6 +904,9 @@ img {
   transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
   text-decoration: none;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .hero-contact-btn:hover {
@@ -1858,16 +1864,7 @@ img {
 }
 
 .webgl-hud-overlay {
-  position: absolute;
-  bottom: 12px;
-  left: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  pointer-events: none;
-  z-index: 5;
+  display: none !important;
 }
 
 .ugc-status-pill {
@@ -4154,17 +4151,16 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px 6px 10px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  padding: 7px 16px 7px 12px;
+  background: #FFFFFF;
   border-radius: 999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: #18181A;
+  border: 1.5px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #0F172A;
   cursor: pointer;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
   white-space: nowrap;
@@ -5935,21 +5931,7 @@ img {
     transform: scale(0.96) !important;
   }
   .hero-arrow-btn {
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.22) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.35) !important;
-    color: #FFFFFF !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
-    text-decoration: none !important;
-    margin: 0 !important;
+    display: none !important;
   }
   .hero-carousel-nav {
     position: static !important;
@@ -6661,19 +6643,7 @@ img {
     text-decoration: none !important;
   }
   .hero-arrow-btn {
-    width: 38px !important;
-    height: 38px !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.35) !important;
-    color: #FFFFFF !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    margin: 0 !important;
+    display: none !important;
   }
   .hero-carousel-nav {
     position: static !important;
@@ -6719,8 +6689,7 @@ img {
     padding: 0 10px !important;
   }
   .hero-arrow-btn {
-    width: 34px !important;
-    height: 34px !important;
+    display: none !important;
   }
   .hero-cta-group {
     max-width: calc(100% - 66px) !important;

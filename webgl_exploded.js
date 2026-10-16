@@ -120,7 +120,7 @@
         name: 'Frameless Bumper & 3D Lens Armor',
         path: 'assets/blue_protector_layer.png',
         key: 'protector',
-        exploded: { x: -35, y: 38, z: 70 },
+        exploded: { x: -30, y: 32, z: 65 },
         assembled: { x: 0, y: 0, z: 2 }
       }
     ];
@@ -159,23 +159,14 @@
     }
 
     layerConfigs.forEach((cfg, index) => {
-      // Use fallback base64 data URI if available for instant zero-latency loading
-      const fallbackData = window.CASE_LAYER_ASSETS && window.CASE_LAYER_ASSETS[cfg.key];
-      const primaryUrl = fallbackData || cfg.path;
-
       textureLoader.load(
-        primaryUrl,
+        cfg.path,
         function (texture) {
           applyTexture(texture, index, cfg);
         },
         undefined,
         function (err) {
-          console.warn('Initial texture load failed for ' + cfg.path + ', attempting fallback...', err);
-          if (cfg.path && primaryUrl !== cfg.path) {
-            textureLoader.load(cfg.path, function (fallbackTexture) {
-              applyTexture(fallbackTexture, index, cfg);
-            });
-          }
+          console.warn('Texture load failed for ' + cfg.path, err);
         }
       );
     });
