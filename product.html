@@ -40,15 +40,19 @@
     /* Dedicated Product Details Page (PDP) Premium Glassmorphism & Depth Styling */
     html {
       -webkit-text-size-adjust: 100%;
-      overflow-x: hidden;
-      width: 100%;
-      max-width: 100vw;
+      overflow-x: hidden !important;
+      max-width: 100% !important;
+      width: 100% !important;
     }
     body {
-      overflow-x: hidden;
-      width: 100%;
-      max-width: 100vw;
+      overflow-x: hidden !important;
+      max-width: 100% !important;
+      width: 100% !important;
       background-color: #F8FAFC;
+      position: relative !important;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box !important;
     }
 
     /* Ambient Dynamic Mesh & Micro-dot Background Texture Effect (No plain sterile white) */
@@ -1462,44 +1466,80 @@
 
     @media (max-width: 992px) {
       .pdp-grid-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 auto 28px !important;
+        gap: 24px !important;
       }
       .pdp-visual-sticky {
-        position: relative;
-        top: 0;
-        max-width: 100%;
-        align-items: center;
+        position: static !important;
+        top: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        align-items: center !important;
+        transform: none !important;
+        margin: 0 auto !important;
       }
       .pdp-main-stage {
-        max-width: min(82vw, 310px);
-        max-height: min(82vw, 310px);
-        margin: 0 auto;
+        width: 100% !important;
+        max-width: min(85vw, 340px) !important;
+        aspect-ratio: 1 / 1 !important;
+        margin: 0 auto !important;
+      }
+      .pdp-thumbs-slider-wrap {
+        width: 100% !important;
+        max-width: min(85vw, 340px) !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
       }
       .pdp-thumbnails-strip {
-        justify-content: center;
-        max-width: 100%;
+        justify-content: center !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+      .pdp-config-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
       }
       .pdp-finish-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
-      .standard-grid {
-        grid-template-columns: 1fr 1fr;
+      .promise-bento-grid {
+        grid-template-columns: 1fr !important;
       }
       .reviews-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
       .reviews-feed-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
     }
 
     @media (max-width: 768px) {
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
       .pdp-main-section {
-        padding-top: 14px;
+        padding: 14px 0 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
       }
       .section-container {
-        padding: 0 14px;
+        padding: 0 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 auto !important;
       }
 
       /* Breadcrumbs & Catalog Switcher - strictly hidden on mobile as requested */
@@ -1511,30 +1551,53 @@
         display: none !important;
       }
 
+      /* PDP 2-Column Symmetrical Layout becomes single column flex on mobile */
+      .pdp-grid-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 auto 20px !important;
+        gap: 16px !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+      }
+
       /* Visual Stage & Thumbnails */
       .pdp-visual-sticky {
-        position: relative !important;
+        position: static !important;
         top: 0 !important;
+        width: 100% !important;
         max-width: 100% !important;
-        margin-top: 0 !important;
-        gap: 12px;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        transform: none !important;
+        align-items: center !important;
+        gap: 12px !important;
+        box-sizing: border-box !important;
       }
 
       .pdp-main-stage {
-        width: 100%;
-        max-width: min(88vw, 320px);
-        aspect-ratio: 1 / 1;
-        border-radius: 20px;
-        padding: 16px;
-        margin: 0 auto;
-        box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+        width: 100% !important;
+        max-width: min(88vw, 320px) !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 20px !important;
+        padding: 16px !important;
+        margin: 0 auto !important;
+        box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.08) !important;
+        box-sizing: border-box !important;
       }
 
       .pdp-thumbs-slider-wrap {
-        width: 100%;
-        max-width: 100%;
-        justify-content: center;
-        gap: 0;
+        width: 100% !important;
+        max-width: min(88vw, 320px) !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+        gap: 0 !important;
+        box-sizing: border-box !important;
       }
 
       /* Hide clumsy arrow navigation buttons on mobile touch carousel */
@@ -1543,52 +1606,80 @@
       }
 
       .pdp-thumbnails-strip {
-        gap: 8px;
-        padding: 4px 6px;
-        justify-content: flex-start;
-        -webkit-overflow-scrolling: touch;
+        gap: 8px !important;
+        padding: 4px 2px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        box-sizing: border-box !important;
+      }
+
+      .pdp-thumbnails-strip::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
       }
 
       .pdp-thumb-btn {
-        width: 54px;
-        height: 54px;
-        min-width: 54px;
-        border-radius: 12px;
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        border-radius: 12px !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Right Configurator Column */
+      .pdp-config-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        margin: 0 !important;
       }
 
       /* Product Info & Pricing */
       .pdp-brand-tag {
-        font-size: 0.72rem;
-        margin-bottom: 4px;
+        font-size: 0.72rem !important;
+        margin-bottom: 4px !important;
       }
       .pdp-title {
-        font-size: clamp(1.25rem, 5vw, 1.55rem);
-        line-height: 1.25;
-        margin-bottom: 8px;
-        overflow-wrap: break-word;
-        word-break: break-word;
+        font-size: clamp(1.25rem, 5vw, 1.55rem) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       .pdp-rating-row {
-        margin-bottom: 12px;
-        gap: 8px;
+        margin-bottom: 12px !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
       }
       .pdp-price-wrap {
-        display: flex;
-        align-items: baseline;
-        flex-wrap: wrap;
-        gap: 8px 12px;
-        margin-bottom: 14px;
+        display: flex !important;
+        align-items: baseline !important;
+        flex-wrap: wrap !important;
+        gap: 8px 12px !important;
+        margin-bottom: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       .pdp-price-current {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
       }
       .pdp-price-original {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
       }
       .pdp-discount-tag {
-        font-size: 0.75rem;
-        padding: 3px 8px;
-        border-radius: 6px;
+        font-size: 0.75rem !important;
+        padding: 3px 8px !important;
+        border-radius: 6px !important;
       }
 
       /* Trust Inline Bar - Strictly 1 Row */
@@ -1599,13 +1690,47 @@
         padding: 8px 4px !important;
         font-size: clamp(0.66rem, 2.5vw, 0.72rem) !important;
         margin-bottom: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .pdp-trust-item {
         gap: 3px !important;
+        min-width: 0 !important;
+      }
+      .pdp-trust-item span {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
       }
       .pdp-trust-item svg {
         width: 12px !important;
         height: 12px !important;
+        flex-shrink: 0 !important;
+      }
+
+      /* Authentic Overview Box */
+      .pdp-overview-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 12px 14px !important;
+        border-radius: 14px !important;
+        margin-bottom: 16px !important;
+      }
+      .pdp-overview-text {
+        font-size: 0.825rem !important;
+        line-height: 1.55 !important;
+        word-break: break-word !important;
+      }
+
+      /* Option Groups */
+      .pdp-option-group {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        margin-bottom: 18px !important;
       }
 
       /* Option Header - No Text Collision or S Truncation */
@@ -1616,34 +1741,178 @@
         flex-wrap: wrap !important;
         gap: 4px 8px !important;
         font-size: 0.825rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .pdp-option-selected-label {
         font-size: 0.75rem !important;
         color: #2563EB !important;
         font-weight: 700 !important;
         text-align: right !important;
+        max-width: 50% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
       }
 
-      /* Finishes & Swatches */
-      .pdp-finish-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
+      /* 1. Phone Model Dropdown & Chips */
+      .pdp-model-select-wrap,
+      .pdp-custom-dropdown {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
-      .pdp-finish-card {
-        padding: 12px 14px;
-        border-radius: 14px;
+      .pdp-dropdown-trigger {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 11px 14px !important;
+        font-size: 0.85rem !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
       }
-      .pdp-finish-title {
-        font-size: 0.825rem;
+      .pdp-dropdown-menu {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
+      .pdp-chips-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        gap: 8px !important;
+        padding: 4px 2px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pdp-chips-grid::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+      .pdp-chip-btn {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 8px 14px !important;
+        font-size: 0.8rem !important;
+        border-radius: 999px !important;
+        box-sizing: border-box !important;
+      }
+
+      /* 2. Swatches */
       .pdp-color-swatches-grid {
-        gap: 10px;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .pdp-color-swatch {
-        width: 34px;
-        height: 34px;
+        width: 34px !important;
+        height: 34px !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      /* 3. Finishes */
+      .pdp-finish-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pdp-finish-card {
+        padding: 12px 14px !important;
+        border-radius: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pdp-finish-title {
+        font-size: 0.825rem !important;
+      }
+      .pdp-finish-desc {
+        font-size: 0.72rem !important;
+      }
+
+      /* 4. Complete Setup Addons */
+      .pdp-addons-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pdp-addon-item {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+        padding: 11px 14px !important;
+        border-radius: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pdp-addon-left {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+      }
+      .pdp-addon-checkbox {
+        flex-shrink: 0 !important;
+      }
+      .pdp-addon-info {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+      }
+      .pdp-addon-title {
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        word-break: break-word !important;
+        line-height: 1.3 !important;
+      }
+      .pdp-addon-desc {
+        font-size: 0.7rem !important;
+        color: #64748B !important;
+        word-break: break-word !important;
+        line-height: 1.3 !important;
+      }
+      .pdp-addon-price {
+        font-size: 0.82rem !important;
+        font-weight: 800 !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        margin-left: 6px !important;
+      }
+
+      /* Summary Box */
+      .pdp-summary-box {
+        padding: 14px 16px !important;
+        border-radius: 16px !important;
+        margin: 16px 0 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .pdp-summary-row {
+        font-size: 0.8125rem !important;
+      }
+      .pdp-summary-row.total {
+        font-size: 1.05rem !important;
       }
 
       /* Actions Row: Modern 3-tier spacious layout with zero overflow */
@@ -1752,27 +2021,35 @@
 
       /* Value Perks List */
       .pdp-perks-list {
-        grid-template-columns: 1fr;
-        padding: 16px;
-        gap: 10px;
-        border-radius: 18px;
-        margin-bottom: 20px;
+        grid-template-columns: 1fr !important;
+        padding: 14px !important;
+        gap: 10px !important;
+        border-radius: 16px !important;
+        margin-bottom: 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .pdp-perk-item {
-        font-size: 0.78rem;
+        font-size: 0.78rem !important;
       }
 
-      /* Summary Box */
-      .pdp-summary-box {
-        padding: 16px;
-        border-radius: 18px;
-        margin: 18px 0 20px;
+      /* Technical Accordions */
+      .pdp-spec-box {
+        border-radius: 14px !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
-      .pdp-summary-row {
-        font-size: 0.8125rem;
+      .pdp-spec-btn {
+        padding: 14px 16px !important;
+        font-size: 0.88rem !important;
       }
-      .pdp-summary-row.total {
-        font-size: 1.05rem;
+      .pdp-spec-inner {
+        padding: 0 16px 14px !important;
+        font-size: 0.82rem !important;
+        line-height: 1.55 !important;
       }
 
       /* Sticky Bottom Purchase Bar: ONLY Add to Cart and Buy Now, No image, No price */
@@ -1781,7 +2058,7 @@
         gap: 0 !important;
         box-sizing: border-box !important;
         width: 100% !important;
-        max-width: 100vw !important;
+        max-width: 100% !important;
       }
       .sticky-left {
         display: none !important;
@@ -1818,18 +2095,36 @@
       }
 
       /* Trust Matrix & Standard Bento */
+      .covertok-standard-section {
+        padding: 24px 0 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .standard-header {
+        margin: 0 auto 16px !important;
+      }
+      .standard-title {
+        font-size: 1.45rem !important;
+      }
       .promise-bento-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .promise-bento-media {
-        min-height: 250px;
-        padding: 24px 20px 68px 20px;
-        box-sizing: border-box;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        min-height: 250px !important;
+        padding: 24px 20px 68px 20px !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
       .promise-bento-img {
         max-width: 80% !important;
@@ -1838,25 +2133,104 @@
         margin-bottom: 8px !important;
       }
       .promise-media-overlay {
-        position: absolute;
-        bottom: 14px;
-        left: 14px;
-        right: 14px;
+        position: absolute !important;
+        bottom: 14px !important;
+        left: 14px !important;
+        right: 14px !important;
       }
       .promise-bento-perks {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .promise-perk-card {
-        flex-direction: row;
-        align-items: center;
-        padding: 14px 16px;
-        gap: 14px;
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 12px 14px !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
       }
       .promise-icon-wrap {
-        width: 38px;
-        height: 38px;
-        min-width: 38px;
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+      }
+
+      /* Reviews Section */
+      .pdp-reviews-section {
+        padding: 32px 0 24px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .reviews-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .reviews-summary-card {
+        padding: 18px 16px !important;
+        border-radius: 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .reviews-feed-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .review-item-card {
+        padding: 16px 14px !important;
+        border-radius: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Related Products Section */
+      .pdp-related-section {
+        padding: 28px 0 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .catalog-products-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .catalog-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .card-media-stage {
+        padding: 10px !important;
+        box-sizing: border-box !important;
+      }
+      .card-body-wrap {
+        padding: 10px 12px !important;
+        box-sizing: border-box !important;
+      }
+      .card-product-title {
+        font-size: 0.8rem !important;
+        line-height: 1.25 !important;
       }
     }
   </style>
@@ -2508,16 +2882,18 @@
   </section>
 
   <!-- Dynamic Related Products Section -->
-  <section class="section-container" style="padding: 64px 24px 40px; border-top: 1px solid #E2E8F0;">
-    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; flex-wrap: wrap; gap: 14px;">
-      <div>
-        <span style="font-size: 0.8rem; font-weight: 800; color: #1193FA; text-transform: uppercase; letter-spacing: 0.05em;">RECOMMENDED FOR YOU</span>
-        <h2 style="font-family: var(--font-heading, 'Outfit'); font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 900; color: #121316; margin-top: 4px;">Related Products</h2>
+  <section class="pdp-related-section" style="border-top: 1px solid #E2E8F0;">
+    <div class="section-container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span style="font-size: 0.8rem; font-weight: 800; color: #1193FA; text-transform: uppercase; letter-spacing: 0.05em;">RECOMMENDED FOR YOU</span>
+          <h2 style="font-family: var(--font-heading, 'Outfit'); font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 900; color: #121316; margin-top: 4px;">Related Products</h2>
+        </div>
+        <a href="collections.html" class="btn btn-pill-outline" style="padding: 8px 16px; font-size: 0.8rem; font-weight: 700;">EXPLORE ALL PRODUCTS &rarr;</a>
       </div>
-      <a href="collections.html" class="btn btn-pill-outline" style="padding: 8px 18px; font-size: 0.825rem; font-weight: 700;">EXPLORE ALL PRODUCTS &rarr;</a>
-    </div>
-    <div class="catalog-products-grid" id="pdpRelatedGrid" style="margin-bottom: 20px;">
-      <!-- Populated dynamically by pdp_controller.js -->
+      <div class="catalog-products-grid" id="pdpRelatedGrid" style="margin-bottom: 20px;">
+        <!-- Populated dynamically by pdp_controller.js -->
+      </div>
     </div>
   </section>
 
