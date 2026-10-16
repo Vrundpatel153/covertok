@@ -420,32 +420,49 @@
       if (e.target === overlay) closeCartDrawer();
     });
 
-    // Attach mobile navigation drawer toggle listeners
+    // Attach mobile navigation drawer toggle listeners with smooth backdrop
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileDrawer = document.getElementById('mobileDrawer');
     const closeMobileDrawer = document.getElementById('closeMobileDrawer');
 
-    if (mobileMenuBtn && mobileDrawer) {
-      mobileMenuBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        mobileDrawer.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
+    let mobileBackdrop = document.getElementById('mobileNavBackdrop');
+    if (!mobileBackdrop) {
+      mobileBackdrop = document.createElement('div');
+      mobileBackdrop.id = 'mobileNavBackdrop';
+      mobileBackdrop.className = 'mobile-nav-backdrop';
+      document.body.appendChild(mobileBackdrop);
     }
 
-    if (closeMobileDrawer && mobileDrawer) {
-      closeMobileDrawer.addEventListener('click', (e) => {
-        e.preventDefault();
-        mobileDrawer.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+    function openMobileNav() {
+      if (mobileDrawer) {
+        mobileDrawer.classList.add('open');
+        mobileBackdrop?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
     }
+
+    function closeMobileNav() {
+      if (mobileDrawer) {
+        mobileDrawer.classList.remove('open');
+        mobileBackdrop?.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    mobileMenuBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      openMobileNav();
+    });
+
+    closeMobileDrawer?.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMobileNav();
+    });
+
+    mobileBackdrop?.addEventListener('click', closeMobileNav);
 
     document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer?.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileNav);
     });
 
     const checkoutBtn = document.getElementById('checkoutBtn');

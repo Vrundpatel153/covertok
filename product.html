@@ -380,25 +380,37 @@
       align-items: center;
     }
 
-    /* Clean Authentic Trust Bar */
+    /* Optimized Single-Row Trust Bar */
     .pdp-trust-inline-bar {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 10px 0;
-      margin-bottom: 20px;
-      border-top: 1px solid rgba(226, 232, 240, 0.8);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-      font-size: 0.8125rem;
-      color: #475569;
-      font-weight: 500;
+      gap: 6px;
+      padding: 9px 8px;
+      margin-bottom: 18px;
+      background: rgba(248, 250, 252, 0.85);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: 12px;
+      font-size: 0.75rem;
+      color: #334155;
     }
 
     .pdp-trust-item {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
+      gap: 5px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pdp-trust-item span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .pdp-trust-item svg {
@@ -407,8 +419,39 @@
     }
 
     .pdp-trust-dot {
-      color: #CBD5E1;
-      font-weight: 700;
+      display: none;
+    }
+
+    /* Product Authentic Overview Box */
+    .pdp-overview-box {
+      margin-bottom: 20px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: 16px;
+    }
+
+    .pdp-overview-text {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #475569;
+      margin: 0;
+    }
+
+    .pdp-overview-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .pdp-bullet-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #1E293B;
     }
 
     /* Option Group */
@@ -419,7 +462,8 @@
     .pdp-option-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
+      gap: 8px;
       margin-bottom: 10px;
       font-size: 0.875rem;
       font-weight: 700;
@@ -427,8 +471,10 @@
     }
 
     .pdp-option-selected-label {
-      color: #64748B;
+      color: #2563EB;
       font-weight: 600;
+      font-size: 0.8125rem;
+      text-align: right;
     }
 
     /* Theme Custom Dropdown (Replaces native browser OS dropdown) */
@@ -1075,53 +1121,117 @@
       letter-spacing: -0.02em;
     }
 
-    .standard-grid {
+    /* The Covertok Standard Bento Grid */
+    .promise-bento-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1.25fr;
       gap: 20px;
+      align-items: stretch;
     }
 
-    .standard-card {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 28px 24px;
+    .promise-bento-media {
+      position: relative;
+      background: linear-gradient(135deg, #F8FAFC 0%, #EDF2F7 100%);
       border: 1.5px solid rgba(226, 232, 240, 0.9);
-      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 24px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 280px;
+    }
+
+    .promise-bento-img {
+      max-width: 80%;
+      max-height: 220px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .promise-bento-media:hover .promise-bento-img {
+      transform: scale(1.05) translateY(-4px);
+    }
+
+    .promise-media-overlay {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .promise-overlay-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0F172A;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      width: fit-content;
+    }
+
+    .promise-overlay-stat {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #64748B;
+      padding-left: 4px;
+    }
+
+    .promise-bento-perks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .promise-perk-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      border-radius: 20px;
+      padding: 20px 18px;
+      border: 1.5px solid rgba(226, 232, 240, 0.9);
       display: flex;
       flex-direction: column;
       gap: 12px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .standard-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
-      border-color: #CBD5E1;
+    .promise-perk-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -4px rgba(15, 23, 42, 0.08);
     }
 
-    .standard-icon-box {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: rgba(241, 245, 249, 0.9);
+    .promise-icon-wrap {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .standard-card-title {
+    .promise-perk-title {
       font-family: var(--font-heading);
+      font-size: 0.95rem;
       font-weight: 800;
-      font-size: 1.1rem;
       color: #0F172A;
+      margin-bottom: 4px;
     }
 
-    .standard-card-desc {
-      font-size: 0.85rem;
+    .promise-perk-desc {
+      font-size: 0.78rem;
       color: #64748B;
-      line-height: 1.5;
+      line-height: 1.45;
+      margin: 0;
     }
 
     /* Customer Reviews Section */
@@ -1420,12 +1530,40 @@
         border-radius: 6px;
       }
 
-      /* Trust Inline Bar */
+      /* Trust Inline Bar - Strictly 1 Row */
       .pdp-trust-inline-bar {
-        font-size: 0.75rem;
-        gap: 8px 10px;
-        padding: 8px 0;
-        margin-bottom: 18px;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 4px !important;
+        padding: 8px 4px !important;
+        font-size: clamp(0.66rem, 2.5vw, 0.72rem) !important;
+        margin-bottom: 16px !important;
+      }
+      .pdp-trust-item {
+        gap: 3px !important;
+      }
+      .pdp-trust-item svg {
+        width: 12px !important;
+        height: 12px !important;
+      }
+
+      /* Option Header - No Text Collision or S Truncation */
+      .pdp-option-header {
+        display: flex !important;
+        align-items: baseline !important;
+        justify-content: space-between !important;
+        gap: 6px !important;
+        font-size: 0.825rem !important;
+      }
+      .pdp-option-selected-label {
+        font-size: 0.75rem !important;
+        color: #2563EB !important;
+        font-weight: 600 !important;
+        text-align: right !important;
+        max-width: 45% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
       }
 
       /* Finishes & Swatches */
@@ -1574,13 +1712,29 @@
         border-radius: 999px !important;
       }
 
-      /* Trust Matrix & Standard */
-      .standard-grid {
+      /* Trust Matrix & Standard Bento */
+      .promise-bento-grid {
         grid-template-columns: 1fr;
         gap: 12px;
       }
-      .standard-card {
-        padding: 18px;
+      .promise-bento-media {
+        min-height: 200px;
+        padding: 16px;
+      }
+      .promise-bento-perks {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .promise-perk-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 14px 16px;
+        gap: 14px;
+      }
+      .promise-icon-wrap {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
       }
     }
   </style>
@@ -1760,22 +1914,26 @@
             <span class="pdp-discount-tag" id="pdpDiscountTag" style="display: none;"></span>
           </div>
 
-          <!-- Clean Authentic Trust Bar -->
+          <!-- Optimized Single-Row Trust Badges -->
           <div class="pdp-trust-inline-bar">
             <span class="pdp-trust-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-              Free Express Delivery
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Free Delivery</span>
             </span>
-            <span class="pdp-trust-dot">·</span>
             <span class="pdp-trust-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              Same-Day Dispatch
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Same-Day Dispatch</span>
             </span>
-            <span class="pdp-trust-dot">·</span>
             <span class="pdp-trust-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              Covertok Quality Guarantee
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <span>100% Guarantee</span>
             </span>
+          </div>
+
+          <!-- Authentic Product Overview & Description -->
+          <div class="pdp-overview-box" id="pdpOverviewBox">
+            <p class="pdp-overview-text" id="pdpOverviewText"></p>
+            <div class="pdp-overview-bullets" id="pdpOverviewBullets"></div>
           </div>
 
           <!-- 1. PHONE MODEL SELECTION (Dropdown & Quick Chips) -->
@@ -2022,6 +2180,7 @@
   <script src="assets/pdp_controller.js"></script>
 
   <!-- SECTION: THE COVERTOK STANDARD (Glassmorphic Trust Matrix) -->
+  <!-- SECTION: THE COVERTOK PROMISE (Modern Compact Bento Collage) -->
   <section class="covertok-standard-section" aria-label="The Covertok Standard">
     <div class="section-container">
       <div class="standard-header">
@@ -2029,59 +2188,60 @@
         <h2 class="standard-title">Engineered Without Compromise</h2>
       </div>
 
-      <div class="standard-grid">
-        <!-- Card 1: Lifetime Warranty -->
-        <div class="standard-card">
-          <div class="standard-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <path d="m9 12 2 2 4-4"></path>
-            </svg>
+      <div class="promise-bento-grid">
+        <!-- Bento 1: Visual Craftsmanship Showcase -->
+        <div class="promise-bento-media">
+          <img src="assets/glass_cutout_transparent.png" alt="Covertok Engineering Craftsmanship" class="promise-bento-img" loading="lazy">
+          <div class="promise-media-overlay">
+            <span class="promise-overlay-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              100% Anti-Yellowing & 10ft Drop Proof
+            </span>
+            <div class="promise-overlay-stat">0.05mm CNC Precision Mold · Apple Certified Feel</div>
           </div>
-          <h3 class="standard-card-title">Lifetime Guarantee</h3>
-          <p class="standard-card-desc">Zero yellowing, cracking, or peeling. If our craft fails under ordinary use, we send an immediate replacement free of charge.</p>
         </div>
 
-        <!-- Card 2: Precision Engineering -->
-        <div class="standard-card">
-          <div class="standard-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="2" x2="12" y2="6"></line>
-              <line x1="12" y1="18" x2="12" y2="22"></line>
-              <line x1="2" y1="12" x2="6" y2="12"></line>
-              <line x1="18" y1="12" x2="22" y2="12"></line>
-            </svg>
+        <!-- Bento 2: 4 Quick Perks Bento Grid -->
+        <div class="promise-bento-perks">
+          <div class="promise-perk-card">
+            <div class="promise-icon-wrap" style="color: #2563EB; background: #EFF6FF;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <div>
+              <h4 class="promise-perk-title">Lifetime Guarantee</h4>
+              <p class="promise-perk-desc">Zero yellowing or peeling. Free immediate replacement if it fails.</p>
+            </div>
           </div>
-          <h3 class="standard-card-title">0.05mm Precision</h3>
-          <p class="standard-card-desc">CNC precision-cut tolerances hug every curve and button of your device. Tactile responsiveness with naked phone ergonomics.</p>
-        </div>
 
-        <!-- Card 3: Free Express Courier -->
-        <div class="standard-card">
-          <div class="standard-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path>
-              <path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path>
-              <circle cx="7" cy="18" r="2"></circle>
-              <circle cx="17" cy="18" r="2"></circle>
-            </svg>
+          <div class="promise-perk-card">
+            <div class="promise-icon-wrap" style="color: #16A34A; background: #F0FDF4;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <h4 class="promise-perk-title">Same-Day Priority Dispatch</h4>
+              <p class="promise-perk-desc">Dispatched within 24 hours with express delivery tracking.</p>
+            </div>
           </div>
-          <h3 class="standard-card-title">Same-Day Priority Dispatch</h3>
-          <p class="standard-card-desc">Packed and shipped from our high-tech cleanroom facility within 24 hours. Free express domestic delivery on orders over Rs. 499.</p>
-        </div>
 
-        <!-- Card 4: 30-Day Hassle-Free Returns -->
-        <div class="standard-card">
-          <div class="standard-icon-box">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 4 23 10 17 10"></polyline>
-              <polyline points="1 20 1 14 7 14"></polyline>
-              <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
-            </svg>
+          <div class="promise-perk-card">
+            <div class="promise-icon-wrap" style="color: #7C3AED; background: #F5F3FF;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <h4 class="promise-perk-title">30-Day Hassle-Free Returns</h4>
+              <p class="promise-perk-desc">Doorstep pickup and zero restocking fees if not 100% happy.</p>
+            </div>
           </div>
-          <h3 class="standard-card-title">30-Day Money Back</h3>
-          <p class="standard-card-desc">Not 100% in love with your build? Enjoy 30-day effortless doorstep returns or instant exchange with zero restocking fees.</p>
+
+          <div class="promise-perk-card">
+            <div class="promise-icon-wrap" style="color: #EA580C; background: #FFF7ED;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <h4 class="promise-perk-title">Naked Phone Ergonomics</h4>
+              <p class="promise-perk-desc">Ultra-slim profile preserving authentic Apple hand-feel.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

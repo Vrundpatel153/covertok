@@ -118,6 +118,26 @@
       ratingCountEl.textContent = `${product.rating} / 5.0 (${product.reviews_count.toLocaleString()} Verified Reviews)`;
     }
 
+    // 2B. Authentic Product Description Overview
+    const overviewText = document.getElementById('pdpOverviewText');
+    const overviewBullets = document.getElementById('pdpOverviewBullets');
+    if (overviewText) {
+      overviewText.textContent = product.description || 'Premium engineered protection with precision tolerances, tactile button covers, and certified impact absorption.';
+    }
+    if (overviewBullets) {
+      if (product.bullets && product.bullets.length) {
+        overviewBullets.innerHTML = product.bullets.map(b => `
+          <div class="pdp-bullet-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>${b}</span>
+          </div>
+        `).join('');
+        overviewBullets.style.display = 'flex';
+      } else {
+        overviewBullets.style.display = 'none';
+      }
+    }
+
     // 3. Set Initial Color & Image
     const hasColors = product.colors && product.colors.length > 1;
     selectedColor = (hasColors && product.colors[0]) ? product.colors[0] : null;

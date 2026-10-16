@@ -35,15 +35,14 @@
       let prods = [];
 
       if (targetCat === 'all') {
-        // Diverse flagship selection (1-2 from each category)
+        // Diverse curated selection (max 6 items for clean responsive landing page)
         const cats = ['iphone-cases', 'watchbands', 'airpod-covers', 'charger-and-cables', 'other-accessories', 'cover-charms'];
         cats.forEach(c => {
           const match = window.CovertokProducts.filter(p => p.category === c);
-          if (match.length) prods.push(match[0]);
-          if (match.length > 1 && prods.length < 8) prods.push(match[1]);
+          if (match.length && prods.length < 6) prods.push(match[0]);
         });
       } else {
-        prods = window.CovertokProducts.filter(p => p.category === targetCat || (p.collections && p.collections.includes(targetCat))).slice(0, 8);
+        prods = window.CovertokProducts.filter(p => p.category === targetCat || (p.collections && p.collections.includes(targetCat))).slice(0, 6);
       }
 
       if (prods.length === 0) {
@@ -188,8 +187,8 @@
     const grid = document.getElementById('productGrid');
     if (!grid) return;
 
-    // Pick top 8 bestsellers or new arrivals
-    const prods = window.CovertokProducts.filter(p => p.is_bestseller || p.is_new).slice(0, 8);
+    // Pick top 6 curated bestsellers for landing page showcase
+    const prods = window.CovertokProducts.filter(p => p.is_bestseller || p.is_new).slice(0, 6);
 
     grid.innerHTML = prods.map(p => {
       const hasColors = p.colors && p.colors.length > 1;
