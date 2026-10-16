@@ -367,8 +367,12 @@
               <button type="button" class="btn btn-pill-dark" id="qvAddToCartBtn" style="flex: 1; padding: 14px 20px; font-weight: 800;">
                 ADD TO CART
               </button>
-              <a href="#" class="btn btn-pill-outline" id="qvFullDetailsLink" style="padding: 14px 20px; font-weight: 700; text-align: center;">
-                FULL DETAILS &rarr;
+              <a href="#" class="btn btn-pill-outline" id="qvFullDetailsLink" style="padding: 14px 20px; font-weight: 700; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                <span>FULL DETAILS</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
               </a>
             </div>
           </div>

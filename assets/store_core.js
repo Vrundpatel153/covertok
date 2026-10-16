@@ -370,7 +370,13 @@
           `).join('')}
         </div>
         <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #F1F5F9;">
-          <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" style="font-size: 0.85rem; font-weight: 700; color: #1193FA;">View All Products in Catalog &rarr;</a>
+          <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" style="font-size: 0.85rem; font-weight: 700; color: #1193FA; display: inline-flex; align-items: center; gap: 6px;">
+            <span>View All Products in Catalog</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       `;
     }
