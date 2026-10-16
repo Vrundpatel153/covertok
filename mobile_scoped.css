@@ -1055,35 +1055,43 @@
 }
 .mobile-view .fl-stage-media-wrap {
   position: relative !important;
-    width: 100% !important;
-    height: 280px !important;
-    order: 2 !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  order: 2 !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
 }
 .mobile-view .fl-stage-media-img {
+  width: 100% !important;
+  height: 100% !important;
   mask-image: none !important;
-    -webkit-mask-image: none !important;
-    object-fit: cover !important;
-    object-position: 70% center !important;
+  -webkit-mask-image: none !important;
+  object-fit: cover !important;
+  object-position: 55% center !important;
 }
 .mobile-view .fl-color-pill {
-  padding: 5px 12px 5px 8px !important;
-    font-size: 0.74rem !important;
+  padding: 5px 11px 5px 8px !important;
+  font-size: 0.72rem !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+  white-space: nowrap !important;
 }
 .mobile-view .fl-pill-orange {
-  top: 40% !important;
-  top: 48% !important;
-  left: 7% !important;
+  top: 44% !important;
+  left: 12% !important;
+  right: auto !important;
 }
 .mobile-view .fl-pill-black {
-  top: 10% !important;
-  left: 36% !important;
+  top: 22% !important;
+  left: 47% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
 }
 .mobile-view .fl-pill-silver {
-  top: 48% !important;
-  right: 7% !important;
-  left: auto !important;
+  top: 38% !important;
+  left: 70% !important;
+  right: auto !important;
 }
 .mobile-view .fl-stepper-rail {
   display: none !important;
