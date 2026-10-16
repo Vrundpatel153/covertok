@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="catalog.css">
+  <link rel="stylesheet" href="styles.css?v=20261016_mobile_hero_fix">
+  <link rel="stylesheet" href="catalog.css?v=20261016_mobile_hero_fix">
 </head>
 <body>
 
@@ -280,24 +280,27 @@
             </div>
           </div>
 
-          <!-- Bottom Left Notched CTA Pocket -->
-          <div class="hero-cta-group">
-            <a href="#faq" class="btn btn-pill-dark hero-contact-btn" id="heroDynamicCta">CONTACT US</a>
-            <a href="product.html" class="btn-circle-arrow hero-arrow-btn" id="heroExploreArrow" aria-label="Explore collection" title="Explore Products">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
-          </div>
+          <!-- Unified Bottom Bar: CTA Group + Arrow Button on Left, Pagination Dots on Right -->
+          <div class="hero-bottom-bar">
+            <!-- Bottom Left Notched CTA Pocket -->
+            <div class="hero-cta-group">
+              <a href="#faq" class="btn btn-pill-dark hero-contact-btn" id="heroDynamicCta">CONTACT US</a>
+              <a href="product.html" class="btn-circle-arrow hero-arrow-btn" id="heroExploreArrow" aria-label="Explore collection" title="Explore Products">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
 
-          <!-- Hero Carousel Navigation: Only Dots (No Text, No Buttons) -->
-          <div class="hero-carousel-nav" aria-label="Hero slider pagination">
-            <div class="hero-nav-dots" id="heroDotsWrap">
-              <button class="hero-dot active" data-index="0" aria-label="Slide 1: Trendy Covers" title="Slide 1"></button>
-              <button class="hero-dot" data-index="1" aria-label="Slide 2: Tempered Glass" title="Slide 2"></button>
-              <button class="hero-dot" data-index="2" aria-label="Slide 3: MagSafe Armor" title="Slide 3"></button>
-              <button class="hero-dot" data-index="3" aria-label="Slide 4: Bohemian Prints" title="Slide 4"></button>
+            <!-- Hero Carousel Navigation: Only Dots (No Text, No Buttons) -->
+            <div class="hero-carousel-nav" aria-label="Hero slider pagination">
+              <div class="hero-nav-dots" id="heroDotsWrap">
+                <button class="hero-dot active" data-index="0" aria-label="Slide 1: Trendy Covers" title="Slide 1"></button>
+                <button class="hero-dot" data-index="1" aria-label="Slide 2: Tempered Glass" title="Slide 2"></button>
+                <button class="hero-dot" data-index="2" aria-label="Slide 3: MagSafe Armor" title="Slide 3"></button>
+                <button class="hero-dot" data-index="3" aria-label="Slide 4: Bohemian Prints" title="Slide 4"></button>
+              </div>
             </div>
           </div>
         </div>
