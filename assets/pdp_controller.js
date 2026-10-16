@@ -882,18 +882,21 @@
 
     if (stickyAddBtn) {
       stickyAddBtn.innerHTML = `
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -2px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -2px;">
           <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
         </svg>
-        ADD TO CART · ${formattedTotal}
+        <span>ADD TO CART</span>
       `;
     }
 
-    const stickySubtitle = document.getElementById('stickySubtitle');
-    if (stickySubtitle) {
-      const colorStr = selectedColor ? selectedColor.name : 'Standard';
-      const modelStr = selectedModel ? `${selectedModel} · ` : '';
-      stickySubtitle.textContent = `${modelStr}${colorStr}`;
+    const stickyBuyBtn = document.getElementById('stickyBuyBtn');
+    if (stickyBuyBtn) {
+      stickyBuyBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -2px;">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+        <span>BUY NOW</span>
+      `;
     }
 
     // Summary Box
@@ -995,6 +998,12 @@
     document.getElementById('pdpAddToCartBtn')?.addEventListener('click', performAdd);
     document.getElementById('stickyAddBtn')?.addEventListener('click', performAdd);
     document.getElementById('pdpBuyNowBtn')?.addEventListener('click', () => {
+      performAdd();
+      setTimeout(() => {
+        document.getElementById('checkoutBtn')?.click();
+      }, 300);
+    });
+    document.getElementById('stickyBuyBtn')?.addEventListener('click', () => {
       performAdd();
       setTimeout(() => {
         document.getElementById('checkoutBtn')?.click();
