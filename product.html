@@ -142,53 +142,64 @@
     /* PDP 2-Column Symmetrical Layout */
     .pdp-grid-layout {
       display: grid;
-      grid-template-columns: 350px 1fr;
-      max-width: 1080px;
-      margin: 0 auto 24px;
-      gap: clamp(24px, 3vw, 42px);
+      grid-template-columns: 440px 1fr;
+      max-width: 1180px;
+      margin: 0 auto 36px;
+      gap: clamp(28px, 3.5vw, 48px);
       align-items: start;
     }
 
-    /* Left: Visual Showcase (Sticky until Lifetime Warranty Section ends) */
+    /* Left: Visual Showcase (Sticky with clean 28px margin below header) */
     .pdp-visual-sticky {
       position: -webkit-sticky;
       position: sticky;
-      top: 84px;
+      top: 86px;
       align-self: start;
       width: 100%;
-      max-width: 350px;
+      max-width: 440px;
       height: fit-content;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 16px;
       will-change: transform;
       transform: translateZ(0);
+      margin-top: 4px;
     }
 
     .pdp-main-stage {
       background: #FFFFFF;
-      border-radius: 16px;
-      padding: 0;
+      border-radius: 24px;
+      padding: 24px;
       width: 100%;
-      max-width: 350px;
+      max-width: 440px;
       aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
       box-shadow: 
-        0 8px 20px -4px rgba(15, 23, 42, 0.05),
-        0 0 0 1px rgba(226, 232, 240, 0.8) inset,
-        0 1px 3px rgba(15, 23, 42, 0.03);
+        0 14px 34px -4px rgba(15, 23, 42, 0.07),
+        0 2px 8px -2px rgba(15, 23, 42, 0.04);
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(226, 232, 240, 0.8);
+      border: 1px solid #E2E8F0;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .pdp-main-stage:hover {
+      border-color: #CBD5E1;
+      box-shadow: 
+        0 20px 42px -6px rgba(15, 23, 42, 0.11),
+        0 4px 12px -2px rgba(15, 23, 42, 0.06);
     }
 
     .pdp-main-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
       object-position: center;
+      mix-blend-mode: multiply;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
       cursor: zoom-in;
       position: relative;
@@ -197,17 +208,54 @@
     }
 
     .pdp-main-img:hover {
-      transform: scale(1.04);
+      transform: scale(1.05);
+    }
+
+    /* Thumbnail Carousel Slider Below Product Window */
+    .pdp-thumbs-slider-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 440px;
+      gap: 8px;
+    }
+
+    .pdp-thumb-nav-btn {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      transition: all var(--transition-fast);
+      z-index: 3;
+      flex-shrink: 0;
+    }
+
+    .pdp-thumb-nav-btn:hover {
+      background: #0F172A;
+      color: #FFFFFF;
+      border-color: #0F172A;
+      transform: scale(1.08);
     }
 
     .pdp-thumbnails-strip {
+      flex: 1;
       display: flex;
-      gap: 8px;
+      align-items: center;
+      gap: 10px;
       overflow-x: auto;
+      scroll-behavior: smooth;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      padding: 2px 2px;
-      margin-top: 0;
+      padding: 4px 2px;
     }
 
     .pdp-thumbnails-strip::-webkit-scrollbar {
@@ -217,42 +265,42 @@
     }
 
     .pdp-thumb-btn {
-      width: 58px;
-      height: 58px;
-      border-radius: 12px;
+      width: 62px;
+      height: 62px;
+      min-width: 62px;
+      border-radius: 14px;
       background: #FFFFFF;
-      border: 1.5px solid rgba(226, 232, 240, 0.9);
-      padding: 0;
+      border: 1.5px solid #E2E8F0;
+      padding: 4px;
       overflow: hidden;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
       flex-shrink: 0;
-      box-shadow: 0 2px 6px -1px rgba(15, 23, 42, 0.04);
-    }
-
-    .pdp-thumb-btn:hover {
-      border-color: #94A3B8;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px -2px rgba(15, 23, 42, 0.08);
-    }
-
-    .pdp-thumb-btn.active {
-      border-color: #0F172A;
-      box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.16);
-      transform: translateY(-1px);
-      background: #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     }
 
     .pdp-thumb-btn img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      border-radius: 10px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    .pdp-thumb-btn:hover {
+      border-color: #94A3B8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px -2px rgba(15, 23, 42, 0.08);
+    }
+
+    .pdp-thumb-btn.active {
+      border-color: #0F172A;
+      border-width: 2px;
+      box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-1px) scale(1.02);
     }
 
     /* Right: Product Options & Configurator */
@@ -1572,8 +1620,16 @@
             </script>
           </div>
 
-          <!-- Thumbnails Strip -->
-          <div class="pdp-thumbnails-strip" id="pdpThumbnails"></div>
+          <!-- 1 Slider of images below product image window -->
+          <div class="pdp-thumbs-slider-wrap">
+            <button type="button" class="pdp-thumb-nav-btn prev" id="pdpThumbPrev" aria-label="Previous image" title="Previous image">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="pdp-thumbnails-strip" id="pdpThumbnails"></div>
+            <button type="button" class="pdp-thumb-nav-btn next" id="pdpThumbNext" aria-label="Next image" title="Next image">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
         </div>
 
         <!-- Right: Configurator Controls -->

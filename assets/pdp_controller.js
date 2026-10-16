@@ -174,78 +174,121 @@
     }
   }
 
-  // Render Thumbnails: Strictly shows ONLY the selected color's images
-  // All other colors' images are kept HIDDEN!
+  // Render Thumbnails Slider: Shows an interactive horizontal slider of product images below the showcase window
   function renderThumbnails(product, activeSrc) {
     const strip = document.getElementById('pdpThumbnails');
+    const wrap = document.querySelector('.pdp-thumbs-slider-wrap');
+    const prevBtn = document.getElementById('pdpThumbPrev');
+    const nextBtn = document.getElementById('pdpThumbNext');
     if (!strip) return;
 
+    // Collect all available images for this product (primary, gallery, and variant images)
     let displayImgs = [];
 
-    const hasColors = product.colors && product.colors.length > 1;
-    if (hasColors && selectedColor) {
-      // Find full color object in product.colors
-      const colorObj = product.colors.find(c => c.name === selectedColor.name) || selectedColor;
+    if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+      displayImgs = [...product.images];
+    } else if (product.primary_image) {
+      displayImgs = [product.primary_image];
+    }
 
-      // 1. Gather this color's specific array of images
-      if (colorObj.images && Array.isArray(colorObj.images) && colorObj.images.length > 0) {
-        displayImgs = [...colorObj.images];
-      } else if (colorObj.image) {
-        displayImgs = [colorObj.image];
-      }
-
-      // 2. Identify all other colors' images to guarantee they stay 100% hidden
-      const otherColorImages = new Set();
+    if (product.colors && Array.isArray(product.colors)) {
       product.colors.forEach(c => {
-        if (c.name !== colorObj.name) {
-          if (c.image) otherColorImages.add(c.image);
-          if (c.images && Array.isArray(c.images)) {
-            c.images.forEach(img => otherColorImages.add(img));
-          }
+        if (c.image && !displayImgs.includes(c.image)) displayImgs.push(c.image);
+        if (c.images && Array.isArray(c.images)) {
+          c.images.forEach(img => {
+            if (img && !displayImgs.includes(img)) displayImgs.push(img);
+          });
         }
       });
-
-      // Filter out any other color's images
-      displayImgs = displayImgs.filter(src => !otherColorImages.has(src));
-    } else {
-      // Single color product: display all angles for this product
-      if (product.images && product.images.length > 0) {
-        displayImgs = [...product.images];
-      } else if (product.primary_image) {
-        displayImgs = [product.primary_image];
-      }
     }
 
     if (!displayImgs.length && product.primary_image) {
       displayImgs = [product.primary_image];
     }
 
-    if (!displayImgs.includes(activeSrc)) {
-      activeSrc = displayImgs[0];
-    }
+    // Filter duplicates and invalid entries
+    const uniqueImgs = Array.from(new Set(displayImgs.filter(Boolean)));
 
-    const visibleImgs = displayImgs;
-
-    if (visibleImgs.length <= 1) {
+    if (uniqueImgs.length <= 1) {
+      if (wrap) wrap.style.display = 'none';
       strip.style.display = 'none';
       return;
     }
+
+    if (wrap) wrap.style.display = 'flex';
     strip.style.display = 'flex';
 
-    strip.innerHTML = visibleImgs.map(src => `
-      <button type="button" class="pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product angle">
-        <img src="${src}" alt="Product angle" loading="lazy">
-      </button>
-    `).join('');
+    if (!activeSrc || !uniqueImgs.includes(activeSrc)) {
+      activeSrc = uniqueImgs[0];
+    }
 
-    strip.querySelectorAll('.pdp-thumb-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        strip.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const img = btn.getAttribute('data-img');
-        updateMainImage(img);
+    // If already populated with the exact same items, just update active state and scroll into view
+    const currentImgs = Array.from(strip.querySelectorAll('.pdp-thumb-btn')).map(b => b.getAttribute('data-img'));
+    const isSameList = currentImgs.length === uniqueImgs.length && currentImgs.every((img, i) => img === uniqueImgs[i]);
+
+    if (!isSameList) {
+      strip.innerHTML = uniqueImgs.map((src, idx) => `
+        <button type="button" class="pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
+          <img src="${src}" alt="Product image ${idx + 1}" loading="lazy">
+        </button>
+      `).join('');
+
+      // Attach click events
+      strip.querySelectorAll('.pdp-thumb-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          strip.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const img = btn.getAttribute('data-img');
+          updateMainImage(img);
+
+          // Synchronize with color swatches if this thumbnail corresponds to a specific color
+          if (product.colors && product.colors.length > 1) {
+            const matchedColor = product.colors.find(c => {
+              if (c.image === img) return true;
+              if (c.images && Array.isArray(c.images) && c.images.includes(img)) return true;
+              return false;
+            });
+            if (matchedColor) {
+              selectedColor = matchedColor;
+              const colorLabel = document.getElementById('selectedColorLabel');
+              if (colorLabel) colorLabel.textContent = matchedColor.name;
+              const colorGrid = document.getElementById('colorSwatchesGrid');
+              if (colorGrid) {
+                colorGrid.querySelectorAll('.pdp-color-swatch').forEach(s => {
+                  s.classList.toggle('active', s.getAttribute('data-color') === matchedColor.name);
+                });
+              }
+              recalculatePrice();
+            }
+          }
+
+          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
       });
-    });
+
+      // Hook navigation arrows
+      if (prevBtn) {
+        prevBtn.onclick = () => {
+          strip.scrollBy({ left: -150, behavior: 'smooth' });
+        };
+      }
+      if (nextBtn) {
+        nextBtn.onclick = () => {
+          strip.scrollBy({ left: 150, behavior: 'smooth' });
+        };
+      }
+    } else {
+      // Just update active button class
+      let activeBtn = null;
+      strip.querySelectorAll('.pdp-thumb-btn').forEach(b => {
+        const matches = b.getAttribute('data-img') === activeSrc;
+        b.classList.toggle('active', matches);
+        if (matches) activeBtn = b;
+      });
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
   }
 
   // Render Color Options & Swatches
@@ -282,9 +325,6 @@
 
           if (colorLabel) colorLabel.textContent = cName;
 
-          // STRICT REQUIREMENT:
-          // Keep all other colored images hidden until color is selected.
-          // If selected, show that color's array only!
           const firstImg = (selectedColor.images && selectedColor.images.length > 0) ? selectedColor.images[0] : (selectedColor.image || cImg);
           
           updateMainImage(firstImg);
