@@ -273,7 +273,7 @@ window.CovertokProducts = [
     "colors": [
       {
         "name": "Raspberry",
-        "hex": "#BE185D",
+        "hex": "#9D174D",
         "price": 649.0,
         "image": "assets/products/9875589628202/1_49939894698282.jpg",
         "images": [
@@ -286,7 +286,7 @@ window.CovertokProducts = [
       },
       {
         "name": "Salty Tan",
-        "hex": "#D2B48C",
+        "hex": "#B8977E",
         "price": 649.0,
         "image": "assets/products/9875589628202/6_49939859046698.jpg",
         "images": [
@@ -295,7 +295,7 @@ window.CovertokProducts = [
       },
       {
         "name": "Unscented",
-        "hex": "#E2E8F0",
+        "hex": "#CBD5E1",
         "price": 649.0,
         "image": "assets/products/9875589628202/8_49939858948394.jpg",
         "images": [
@@ -304,7 +304,7 @@ window.CovertokProducts = [
       },
       {
         "name": "Shortcake",
-        "hex": "#FDA4AF",
+        "hex": "#F2C4CE",
         "price": 649.0,
         "image": "assets/products/9875589628202/5_49939797279018.jpg",
         "images": [
@@ -312,48 +312,12 @@ window.CovertokProducts = [
         ]
       },
       {
-        "name": "Perch Pit",
+        "name": "Peach Pit",
         "hex": "#FDBA74",
         "price": 649.0,
         "image": "assets/products/9875589628202/7_49939800129834.jpg",
         "images": [
           "assets/products/9875589628202/7_49939800129834.jpg"
-        ]
-      },
-      {
-        "name": "Espresso",
-        "hex": "#451A03",
-        "price": 649.0,
-        "image": "assets/products/9875589628202/9_49939800490282.jpg",
-        "images": [
-          "assets/products/9875589628202/9_49939800490282.jpg"
-        ]
-      },
-      {
-        "name": "Toast",
-        "hex": "#B45309",
-        "price": 649.0,
-        "image": "assets/products/9875589628202/3_49939638649130.jpg",
-        "images": [
-          "assets/products/9875589628202/3_49939638649130.jpg"
-        ]
-      },
-      {
-        "name": "Ribbon",
-        "hex": "#E879F9",
-        "price": 649.0,
-        "image": "assets/products/9875589628202/2_49939794690346.jpg",
-        "images": [
-          "assets/products/9875589628202/2_49939794690346.jpg"
-        ]
-      },
-      {
-        "name": "Guava Spritz",
-        "hex": "#FB7185",
-        "price": 649.0,
-        "image": "assets/products/9875589628202/4_49887303663914.png",
-        "images": [
-          "assets/products/9875589628202/4_49887303663914.png"
         ]
       }
     ],

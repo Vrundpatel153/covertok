@@ -118,24 +118,51 @@
       ratingCountEl.textContent = `${product.rating} / 5.0 (${product.reviews_count.toLocaleString()} Verified Reviews)`;
     }
 
-    // 2B. Authentic Product Description Overview
+    // 2B. Compact Authentic Product Description Overview with See More / See Less
     const overviewText = document.getElementById('pdpOverviewText');
-    const overviewBullets = document.getElementById('pdpOverviewBullets');
+    const overviewWrap = document.getElementById('pdpOverviewContentWrap');
+    const overviewBox = document.getElementById('pdpOverviewBox');
+    const seeMoreBtn = document.getElementById('pdpSeeMoreBtn');
+    const seeMoreText = document.getElementById('pdpSeeMoreText');
+
     if (overviewText) {
-      overviewText.textContent = product.description || 'Premium engineered protection with precision tolerances, tactile button covers, and certified impact absorption.';
-    }
-    if (overviewBullets) {
-      if (product.bullets && product.bullets.length) {
-        overviewBullets.innerHTML = product.bullets.map(b => `
-          <div class="pdp-bullet-pill">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>${b}</span>
-          </div>
-        `).join('');
-        overviewBullets.style.display = 'flex';
-      } else {
-        overviewBullets.style.display = 'none';
+      overviewText.textContent = product.description || 'The Rhode Lip Case is a stylish and functional phone cover designed with a built-in slot for your favorite lip balm. Crafted with silky soft silicone and elevated camera bumpers to keep your phone protected while your lip balm is always within reach.';
+      
+      // Reset collapsed state on product load
+      if (overviewWrap) {
+        overviewWrap.classList.remove('expanded');
+        overviewWrap.classList.add('collapsed');
       }
+      if (overviewBox) {
+        overviewBox.classList.remove('open');
+      }
+      if (seeMoreText) {
+        seeMoreText.textContent = 'See more';
+      }
+      if (seeMoreBtn) {
+        seeMoreBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if (seeMoreBtn && !seeMoreBtn.hasSeeMoreBound) {
+      seeMoreBtn.hasSeeMoreBound = true;
+      seeMoreBtn.addEventListener('click', () => {
+        if (!overviewWrap) return;
+        const isCollapsed = overviewWrap.classList.contains('collapsed');
+        if (isCollapsed) {
+          overviewWrap.classList.remove('collapsed');
+          overviewWrap.classList.add('expanded');
+          overviewBox?.classList.add('open');
+          if (seeMoreText) seeMoreText.textContent = 'See less';
+          seeMoreBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          overviewWrap.classList.remove('expanded');
+          overviewWrap.classList.add('collapsed');
+          overviewBox?.classList.remove('open');
+          if (seeMoreText) seeMoreText.textContent = 'See more';
+          seeMoreBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
     }
 
     // 3. Set Initial Color & Image
