@@ -664,6 +664,11 @@
 
     <!-- SECTION 2: OUR PRODUCTS (Matching exact mockup geometry and cards) -->
     <section class="products-section" id="products" aria-label="Our Products">
+      <!-- Exact Liquid Notch SVG for Products Section Header matching Mockup -->
+      <svg class="products-mobile-curve-svg" viewBox="0 0 390 60" preserveAspectRatio="none" aria-hidden="true" fill="none">
+        <path d="M 0 0 L 186 0 C 215 0, 225 48, 255 48 L 390 48 L 390 0 Z" fill="#FFFFFF"/>
+      </svg>
+
       <div class="products-glass-plates" aria-hidden="true">
         <div class="prod-glass-plate prod-plate-tr"></div>
         <div class="prod-glass-plate prod-plate-bl"></div>
@@ -671,9 +676,10 @@
       </div>
 
       <div class="section-container products-section-container">
-        <!-- Mobile Specific Products Header matching media_1792203592226.png -->
+        <!-- Mobile Specific Products Header matching media_1792208131975.png -->
         <div class="products-header-wrap">
           <div class="products-header-text">
+            <span class="products-kicker">FEATURED COLLECTION</span>
             <h2 class="products-section-title">
               <span class="title-our">OUR</span>
               <span class="title-products">PRODUCTS</span>
@@ -717,16 +723,16 @@
                 <div class="product-image-box">
                   <span class="prod-discount-pill">50% OFF</span>
                   <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('1');">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                     </svg>
                   </button>
-                  <img src="assets/prod_lipbalm_clean.png" alt="Soft Silicone Cover With-Lip Balm" class="product-img">
+                  <img src="assets/prod_rhode_photo.jpg" alt="Soft Silicone Cover With-Lip Balm" class="product-img">
                 </div>
                 <div class="product-info">
                   <!-- 5 Color Swatches matching mockup -->
                   <div class="prod-card-swatches" aria-label="Color options" onclick="event.stopPropagation();">
-                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #9D174D;" aria-label="Berry"></button>
+                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #BE185D;" aria-label="Berry"></button>
                     <button type="button" class="prod-swatch-dot" style="--swatch-color: #D4A373;" aria-label="Tan"></button>
                     <button type="button" class="prod-swatch-dot" style="--swatch-color: #C5D8EA;" aria-label="Blue"></button>
                     <button type="button" class="prod-swatch-dot" style="--swatch-color: #F4B8C5;" aria-label="Blush"></button>
@@ -735,17 +741,20 @@
                   <div class="product-price">Rs. 649.00</div>
                   <h3 class="product-name"><a href="product.html?id=1">SOFT SILICONE COVER<br>WITH-LIP BALM</a></h3>
                   <div class="card-buttons-row" onclick="event.stopPropagation();">
-                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="1" data-name="Soft Silicone Cover With-Lip Balm" data-price="649" data-img="assets/prod_lipbalm_clean.png">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="1" data-name="Soft Silicone Cover With-Lip Balm" data-price="649" data-img="assets/prod_rhode_photo.jpg">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 8V6a5 5 0 0 1 10 0v2"></path>
+                        <rect x="4" y="8" width="16" height="13" rx="3"></rect>
+                        <circle cx="12" cy="14.5" r="1.5" fill="currentColor"></circle>
                       </svg>
                       <span>Add</span>
                     </button>
                     <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=1'">
                       <span>Buy Now</span>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
                     </button>
                   </div>
                 </div>
@@ -758,16 +767,16 @@
                 <div class="product-image-box">
                   <span class="prod-discount-pill">27% OFF</span>
                   <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('2');">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                     </svg>
                   </button>
-                  <img src="assets/prod_crystal_orange_clean.png" alt="Crystal Studded L Case - Orange" class="product-img">
+                  <img src="assets/prod_crystal_photo.jpg" alt="Crystal Studded L Case - Orange" class="product-img">
                 </div>
                 <div class="product-info">
                   <!-- 5 Color Swatches matching mockup -->
                   <div class="prod-card-swatches" aria-label="Color options" onclick="event.stopPropagation();">
-                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #E07A5F;" aria-label="Orange"></button>
+                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #EA580C;" aria-label="Orange"></button>
                     <button type="button" class="prod-swatch-dot" style="--swatch-color: #F4C2C2;" aria-label="Pink"></button>
                     <button type="button" class="prod-swatch-dot" style="--swatch-color: #F1E9DB;" aria-label="Cream"></button>
                     <button type="button" class="prod-swatch-dot" style="--swatch-color: #3D405B;" aria-label="Grey"></button>
@@ -776,17 +785,20 @@
                   <div class="product-price">Rs. 949.00</div>
                   <h3 class="product-name"><a href="product.html?id=2">CRYSTAL STUDDED L<br>CASE – ORANGE</a></h3>
                   <div class="card-buttons-row" onclick="event.stopPropagation();">
-                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="2" data-name="Crystal Studded L Case - Orange" data-price="949" data-img="assets/prod_crystal_orange_clean.png">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="2" data-name="Crystal Studded L Case - Orange" data-price="949" data-img="assets/prod_crystal_photo.jpg">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 8V6a5 5 0 0 1 10 0v2"></path>
+                        <rect x="4" y="8" width="16" height="13" rx="3"></rect>
+                        <circle cx="12" cy="14.5" r="1.5" fill="currentColor"></circle>
                       </svg>
                       <span>Add</span>
                     </button>
                     <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=2'">
                       <span>Buy Now</span>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
                     </button>
                   </div>
                 </div>
