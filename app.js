@@ -718,6 +718,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startHeroAutoPlay = () => {
       stopHeroAutoPlay();
+      if (window.innerWidth <= 768) return; // Keep hero static on mobile matching exact mockup
       heroAutoPlayTimer = setInterval(() => {
         switchHeroSlide(currentHeroIndex + 1);
       }, AUTO_PLAY_DELAY);

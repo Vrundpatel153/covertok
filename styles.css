@@ -5714,7 +5714,7 @@ img {
   }
 
   /* ==========================================================================
-     EXACT MOBILE HEADER (Matching Reference Mockup Liquid Notch & Glass Icons)
+     EXACT MOBILE HEADER & HERO SECTION (Strictly matching Reference Mockup)
      ========================================================================== */
   .site-header {
     position: relative !important;
@@ -5723,12 +5723,12 @@ img {
     width: 100% !important;
     height: 68px !important;
     padding: 0 !important;
-    background: linear-gradient(135deg, #CFE1FD 0%, #DCE8FD 60%, #E8E4FD 100%) !important;
+    background: #DCE8FA !important;
     border-bottom: none !important;
     z-index: 100 !important;
     overflow: hidden !important;
-    border-radius: 28px 28px 0 0 !important;
-    margin-bottom: -1px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
   }
 
   .mobile-header-notch-svg {
@@ -5757,7 +5757,7 @@ img {
   .header-left {
     display: flex !important;
     align-items: center !important;
-    padding-left: 6px !important;
+    padding-left: 2px !important;
   }
 
   .site-header .main-nav {
@@ -5765,17 +5765,18 @@ img {
   }
 
   .brand-logo .logo-img {
-    height: 38px !important;
-    max-height: 38px !important;
+    height: 42px !important;
+    max-height: 42px !important;
     width: auto !important;
     object-fit: contain !important;
+    display: block !important;
   }
 
   .header-right {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    padding-right: 2px !important;
+    gap: 10px !important;
+    padding-right: 0 !important;
   }
 
   #userBtn {
@@ -5787,19 +5788,17 @@ img {
     width: 38px !important;
     height: 38px !important;
     border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 4px 14px rgba(100, 140, 200, 0.12) !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    color: #0A0F1D !important;
+    color: #111827 !important;
     padding: 0 !important;
     cursor: pointer !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     flex-shrink: 0 !important;
+    transition: transform 0.2s ease !important;
   }
 
   .icon-btn:active,
@@ -5817,84 +5816,49 @@ img {
     display: block !important;
   }
 
-  /* ==========================================================================
-     EXACT MOBILE HERO (Matching Reference Mockup media_1792201583368.png)
-     ========================================================================== */
+  /* Exact Mobile Hero Section */
   .hero-section {
-    padding: 0 14px 20px 14px !important;
-    background: transparent !important;
+    padding: 8px 12px 20px 12px !important;
+    background: #FFFFFF !important;
   }
+
   .hero-container {
     padding: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
+
   .hero-card {
-    min-height: 640px !important;
-    height: clamp(640px, 86vh, 740px) !important;
-    border-radius: 0 0 28px 28px !important;
+    min-height: 610px !important;
+    height: clamp(610px, 78vh, 680px) !important;
+    border-radius: 28px !important;
     overflow: hidden !important;
     position: relative !important;
-    background: linear-gradient(145deg, #CFE1FD 0%, #DCE8FD 28%, #E4EAFE 58%, #EFE8FE 85%, #E2EDFD 100%) !important;
-    box-shadow: 0 16px 40px rgba(100, 140, 220, 0.16) !important;
-    border: none !important;
+    background: linear-gradient(180deg, #9DB4D0 0%, #7E97B5 25%, #4B607B 52%, #223247 74%, #111B29 100%) !important;
+    box-shadow: 0 10px 30px rgba(17, 27, 41, 0.14) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
   }
 
-  /* 3D Floating Glass Plates in Hero Background */
-  .hero-glass-plates {
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    pointer-events: none !important;
-    z-index: 2 !important;
-  }
-  .glass-plate {
-    position: absolute !important;
-    background: rgba(255, 255, 255, 0.45) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.85) !important;
-    box-shadow: 0 10px 28px rgba(100, 140, 220, 0.12) !important;
-    border-radius: 28px !important;
-  }
-  .plate-tr {
-    top: 14% !important;
-    right: 4% !important;
-    width: 90px !important;
-    height: 90px !important;
-    border-radius: 26px !important;
-  }
-  .plate-mr {
-    top: 26% !important;
-    right: 0 !important;
-    width: 160px !important;
-    height: 290px !important;
-    border-radius: 40px 0 0 40px !important;
-    background: rgba(255, 255, 255, 0.38) !important;
-    border-right: none !important;
-  }
-  .plate-bl {
-    bottom: 12% !important;
-    left: 0 !important;
-    width: 135px !important;
-    height: 135px !important;
-    border-radius: 0 34px 34px 0 !important;
-    background: rgba(255, 255, 255, 0.32) !important;
-    border-left: none !important;
-  }
-
+  /* Hide obsolete clutter on mobile */
   .hero-bg-svg,
-  .hero-mobile-bgs {
+  .hero-mobile-bgs,
+  .hero-glass-plates,
+  .hero-mobile-bottom-wrap,
+  .hero-subtext,
+  .hero-specs-row,
+  .hero-feature-badges,
+  .hero-arrow-btn {
     display: none !important;
   }
 
   .hero-slider-wrap {
-    min-height: 100% !important;
+    width: 100% !important;
     height: 100% !important;
     position: relative !important;
-    z-index: 4 !important;
+    z-index: 3 !important;
   }
+
   .hero-slide {
     position: absolute !important;
     inset: 0 !important;
@@ -5903,274 +5867,207 @@ img {
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    transition: opacity 0.4s ease, transform 0.4s ease !important;
+    transition: opacity 0.35s ease !important;
   }
+
   .hero-slide.active {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: auto !important;
-    transform: none !important;
   }
 
-  /* Slide 0 Left Content */
-  .hero-content {
-    position: absolute !important;
-    top: 28px !important;
-    bottom: auto !important;
-    left: 20px !important;
-    right: auto !important;
-    width: 60% !important;
-    max-width: 250px !important;
-    z-index: 6 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    pointer-events: auto !important;
-    padding: 0 !important;
-  }
-
-  /* Eyebrow: 01 • SIGNATURE COLLECTION • 2026 */
-  .hero-kicker {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 7px !important;
-    background: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin-bottom: 12px !important;
-    box-shadow: none !important;
-    font-size: 0.72rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.12em !important;
-    text-transform: uppercase !important;
-    color: #1463FF !important;
-  }
-  .hero-kicker-num {
-    color: #1463FF !important;
-    font-weight: 800 !important;
-  }
-  .hero-kicker-dot {
-    width: 4px !important;
-    height: 4px !important;
-    border-radius: 50% !important;
-    background: #1463FF !important;
-  }
-
-  /* Headline */
-  .hero-headline {
-    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: clamp(1.85rem, 7.6vw, 2.35rem) !important;
-    font-weight: 900 !important;
-    line-height: 1.05 !important;
-    letter-spacing: -0.035em !important;
-    color: #0F172A !important;
-    -webkit-text-fill-color: #0F172A !important;
-    text-transform: uppercase !important;
-    margin: 0 0 10px 0 !important;
-    text-shadow: none !important;
-  }
-  .hero-text-accent {
-    color: #1463FF !important;
-    -webkit-text-fill-color: #1463FF !important;
-    background: none !important;
-    display: inline !important;
-  }
-  .hero-text-sub {
-    color: #0F172A !important;
-    -webkit-text-fill-color: #0F172A !important;
-  }
-
-  .hero-subtext {
-    display: block !important;
-    font-size: 0.8rem !important;
-    font-weight: 500 !important;
-    line-height: 1.4 !important;
-    color: #475569 !important;
-    margin: 0 0 14px 0 !important;
-    max-width: 220px !important;
-  }
-
-  .hero-specs-row {
-    display: none !important;
-  }
-
-  /* 3 Feature Badges Stack */
-  .hero-feature-badges {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 8px !important;
-    margin-top: 2px !important;
-    width: 100% !important;
-  }
-  .hero-badge-pill {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 9px !important;
-    background: rgba(255, 255, 255, 0.72) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.95) !important;
-    border-radius: 999px !important;
-    padding: 5px 14px 5px 6px !important;
-    box-shadow: 0 4px 14px rgba(100, 140, 220, 0.1) !important;
-    width: fit-content !important;
-  }
-  .badge-icon-wrap {
-    width: 30px !important;
-    height: 30px !important;
-    border-radius: 50% !important;
-    background: #FFFFFF !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-    box-shadow: 0 2px 6px rgba(20, 99, 255, 0.08) !important;
-  }
-  .badge-label-col {
-    display: flex !important;
-    flex-direction: column !important;
-    line-height: 1.15 !important;
-  }
-  .badge-label-col span {
-    font-size: 0.64rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.02em !important;
-    color: #0F172A !important;
-    text-transform: uppercase !important;
-    white-space: nowrap !important;
-  }
-
-  /* Right Visual: Hand with wavy blue case */
+  /* Centered Hand with Phone Case */
   .hero-visual {
     position: absolute !important;
-    top: 40px !important;
-    right: -4% !important;
-    left: auto !important;
-    bottom: 20px !important;
-    width: 58% !important;
-    max-width: 250px !important;
-    height: auto !important;
-    z-index: 5 !important;
+    top: 8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 82% !important;
+    max-width: 310px !important;
+    height: 418px !important;
+    z-index: 2 !important;
     pointer-events: none !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     justify-content: center !important;
   }
+
   .hero-phone-wrap-hand {
     width: 100% !important;
     height: 100% !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-start !important;
     justify-content: center !important;
   }
+
   .banner-img-hand {
-    max-height: 92% !important;
-    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 100% !important;
     object-fit: contain !important;
-    filter: drop-shadow(0 16px 32px rgba(15, 23, 42, 0.18)) !important;
-    margin: 0 !important;
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.22)) !important;
+    -webkit-mask-image: linear-gradient(to bottom, #000000 66%, rgba(0, 0, 0, 0) 97%) !important;
+    mask-image: linear-gradient(to bottom, #000000 66%, rgba(0, 0, 0, 0) 97%) !important;
   }
 
-  /* Bottom Swatches Card & Asymmetric Liquid Floor */
-  .hero-mobile-bottom-wrap {
-    display: block !important;
+  /* Content: Frosted Kicker + 3-line Headline */
+  .hero-content {
     position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 8 !important;
-    pointer-events: none !important;
-  }
-  .hero-mobile-bottom-wrap > * {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 84px !important;
+    top: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    z-index: 6 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
     pointer-events: auto !important;
   }
 
-  .hero-swatches-card {
-    position: absolute !important;
-    bottom: 54px !important;
-    left: 18px !important;
-    background: rgba(255, 255, 255, 0.65) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    border-radius: 20px !important;
-    padding: 6px 8px !important;
+  /* Frosted Eyebrow Pill */
+  .hero-kicker {
     display: inline-flex !important;
     align-items: center !important;
     gap: 7px !important;
-    box-shadow: 0 6px 20px rgba(100, 140, 220, 0.12) !important;
-    z-index: 9 !important;
-  }
-  .swatch-btn {
-    width: 36px !important;
-    height: 46px !important;
-    border-radius: 12px !important;
-    background: rgba(255, 255, 255, 0.75) !important;
-    border: 1.5px solid transparent !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 2px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-  }
-  .swatch-btn img {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: contain !important;
-  }
-  .swatch-btn.active {
-    border-color: #1463FF !important;
-    background: #FFFFFF !important;
-    box-shadow: 0 0 0 2px rgba(20, 99, 255, 0.22) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    border-radius: 999px !important;
+    padding: 5px 14px !important;
+    margin-bottom: 12px !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14) !important;
   }
 
-  .hero-mobile-footer-floor {
-    position: relative !important;
-    width: 100% !important;
-    height: 48px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  .hero-kicker-num {
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
   }
-  .hero-floor-curve-svg {
+
+  .hero-kicker-dot {
+    width: 4px !important;
+    height: 4px !important;
+    border-radius: 50% !important;
+    background: #38BDF8 !important;
+  }
+
+  /* Bold 3-line Headline */
+  .hero-headline {
+    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
+    font-size: clamp(2rem, 8.2vw, 2.45rem) !important;
+    font-weight: 900 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.035em !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .hero-text-accent {
+    color: #38BDF8 !important;
+    -webkit-text-fill-color: #38BDF8 !important;
+    display: inline !important;
+  }
+
+  .hero-text-sub {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    display: block !important;
+  }
+
+  /* Unified Bottom Controls Bar */
+  .hero-bottom-bar {
     position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
-  }
-  .hero-floor-dots {
-    position: relative !important;
-    z-index: 2 !important;
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 22px !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: space-between !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .hero-cta-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+  }
+
+  .hero-contact-btn {
+    display: inline-flex !important;
+    align-items: center !important;
     justify-content: center !important;
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    font-size: 0.76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    padding: 12px 24px !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+    border: none !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  .hero-contact-btn:active {
+    transform: scale(0.96) !important;
+  }
+
+  /* Frosted Pill Carousel Navigation */
+  .hero-carousel-nav {
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.32) !important;
+    border-radius: 999px !important;
+    padding: 7px 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16) !important;
+  }
+
+  .hero-nav-dots {
+    display: flex !important;
+    align-items: center !important;
     gap: 6px !important;
   }
-  .floor-dot {
-    width: 6px !important;
-    height: 6px !important;
+
+  .hero-dot {
+    width: 5px !important;
+    height: 5px !important;
     border-radius: 50% !important;
-    background: #B9CFFE !important;
+    background: rgba(255, 255, 255, 0.45) !important;
     border: none !important;
     padding: 0 !important;
     cursor: pointer !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
-  .floor-dot.active {
-    width: 24px !important;
-    height: 6px !important;
-    border-radius: 999px !important;
-    background: #1463FF !important;
-  }
 
-  /* Hide old desktop bottom bar on mobile */
-  .hero-bottom-bar {
-    display: none !important;
+  .hero-dot.active {
+    width: 22px !important;
+    height: 5px !important;
+    border-radius: 999px !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.5) !important;
   }
 
 
