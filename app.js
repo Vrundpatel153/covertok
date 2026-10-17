@@ -787,6 +787,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Expose hero controls globally for testing and interactive switching
+    window.covertokHero = {
+      switchSlide: switchHeroSlide,
+      stopAutoPlay: stopHeroAutoPlay,
+      startAutoPlay: startHeroAutoPlay,
+      getCurrentIndex: () => currentHeroIndex
+    };
+
     // Initialize auto play
     startHeroAutoPlay();
   }

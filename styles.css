@@ -596,17 +596,23 @@ img {
   pointer-events: auto;
 }
 
-/* Hero Kicker (Refined typographic label replacing puffy pill badges) */
+/* Hero Kicker (Liquid Glass Editorial Capsule) */
 .hero-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(0.72rem, 0.78vw, 0.82rem);
+  font-size: clamp(0.68rem, 0.74vw, 0.78rem);
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #475569;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.62) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  padding: 4px 12px 4px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05), inset 0 1px 1.5px rgba(255, 255, 255, 1);
   margin-bottom: clamp(10px, 1.2vw, 16px);
 }
 
@@ -709,10 +715,12 @@ img {
 }
 .hero-slide[data-theme="sky"] .hero-spec-tag,
 .mobile-view .hero-slide[data-theme="sky"] .hero-spec-tag {
-  background: rgba(255, 255, 255, 0.88);
-  border-color: rgba(186, 230, 253, 0.9);
-  color: #0C4A6E;
-  box-shadow: 0 2px 8px rgba(14, 116, 144, 0.08);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(235, 246, 255, 0.65) 100%);
+  border: 1px solid rgba(186, 230, 253, 0.95);
+  color: #0369A1;
+  box-shadow: 0 3px 12px rgba(14, 116, 144, 0.10), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
 }
 .hero-slide[data-theme="sky"] .hero-spec-sep,
 .mobile-view .hero-slide[data-theme="sky"] .hero-spec-sep {
@@ -753,10 +761,12 @@ img {
 }
 .hero-slide[data-theme="magsafe"] .hero-spec-tag,
 .mobile-view .hero-slide[data-theme="magsafe"] .hero-spec-tag {
-  background: rgba(255, 253, 250, 0.92);
-  border-color: rgba(245, 158, 11, 0.4);
-  color: #78350F;
-  box-shadow: 0 2px 8px rgba(120, 53, 15, 0.08);
+  background: linear-gradient(135deg, rgba(255, 253, 248, 0.92) 0%, rgba(254, 243, 199, 0.62) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #9A3412;
+  box-shadow: 0 3px 12px rgba(194, 65, 12, 0.10), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
 }
 .hero-slide[data-theme="magsafe"] .hero-spec-sep,
 .mobile-view .hero-slide[data-theme="magsafe"] .hero-spec-sep {
@@ -797,10 +807,12 @@ img {
 }
 .hero-slide[data-theme="glass"] .hero-spec-tag,
 .mobile-view .hero-slide[data-theme="glass"] .hero-spec-tag {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(14, 165, 233, 0.35);
-  color: #075985;
-  box-shadow: 0 2px 8px rgba(3, 105, 161, 0.08);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(240, 249, 255, 0.68) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #0284C7;
+  box-shadow: 0 3px 12px rgba(2, 132, 199, 0.12), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
 }
 .hero-slide[data-theme="glass"] .hero-spec-sep,
 .mobile-view .hero-slide[data-theme="glass"] .hero-spec-sep {
@@ -841,10 +853,12 @@ img {
 }
 .hero-slide[data-theme="boho"] .hero-spec-tag,
 .mobile-view .hero-slide[data-theme="boho"] .hero-spec-tag {
-  background: rgba(255, 250, 252, 0.92);
-  border-color: rgba(244, 63, 94, 0.35);
-  color: #881337;
-  box-shadow: 0 2px 8px rgba(159, 18, 57, 0.08);
+  background: linear-gradient(135deg, rgba(255, 250, 252, 0.92) 0%, rgba(255, 228, 238, 0.68) 100%);
+  border: 1px solid rgba(244, 63, 94, 0.45);
+  color: #BE123C;
+  box-shadow: 0 3px 12px rgba(190, 18, 60, 0.10), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
 }
 .hero-slide[data-theme="boho"] .hero-spec-sep,
 .mobile-view .hero-slide[data-theme="boho"] .hero-spec-sep {
@@ -868,14 +882,14 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 5px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(226, 232, 240, 0.85);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.65) 100%);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
   color: #1E293B;
-  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1);
 }
 
 .hero-spec-sep {
@@ -951,20 +965,24 @@ img {
   width: clamp(60px, 5.12vw, 86px);
   height: clamp(60px, 5.12vw, 86px);
   border-radius: 50%;
-  background: #D5E5F3;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(213, 229, 243, 0.82) 100%);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
   color: #18191c;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: clamp(10px, 1.07vw, 18px);
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08), inset 0 1px 2px rgba(255, 255, 255, 1);
 }
 
 .hero-arrow-btn:hover {
-  background: #C4DCF0;
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(196, 220, 240, 0.95) 100%);
   transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14), inset 0 1px 2px rgba(255, 255, 255, 1);
 }
 
 /* Right Hero Visual Showcase */
@@ -1059,13 +1077,13 @@ img {
   align-items: center;
   justify-content: center;
   z-index: 12;
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  padding: 8px 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.65) 100%);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 16px rgba(18, 30, 48, 0.08);
+  box-shadow: 0 8px 24px rgba(18, 30, 48, 0.10), inset 0 1px 1.5px rgba(255, 255, 255, 1);
 }
 
 .hero-nav-dots {
@@ -5850,8 +5868,8 @@ img {
     overflow: hidden !important;
     position: relative !important;
     background: #0B132B !important;
-    box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.12) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.18), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.85), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.08) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
   }
 
   /* Hide obsolete desktop/mockup elements on mobile */
@@ -5905,19 +5923,19 @@ img {
     object-position: center center !important;
   }
   .hero-mob-img-1 {
-    object-position: 72% center !important;
+    object-position: 76% center !important;
   }
   .hero-mob-img-2 {
-    object-position: 86% center !important;
+    object-position: 84% center !important;
   }
   .hero-mob-img-3 {
-    object-position: 82% center !important;
+    object-position: 74% center !important;
   }
 
   .hero-mob-scrim {
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.68) 46%, rgba(255, 255, 255, 0.10) 80%, transparent 100%) !important;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.46) 34%, rgba(255, 255, 255, 0.08) 60%, transparent 74%) !important;
     pointer-events: none !important;
     z-index: 2 !important;
   }
@@ -5952,12 +5970,12 @@ img {
   /* Left Hero Content: Kicker + Headline + Subtitle + Feature/Spec Badges */
   .hero-content {
     position: absolute !important;
-    top: 24px !important;
+    top: 26px !important;
     left: 20px !important;
     right: auto !important;
     bottom: auto !important;
-    width: 65% !important;
-    max-width: 240px !important;
+    width: 72% !important;
+    max-width: 270px !important;
     z-index: 5 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -5966,22 +5984,24 @@ img {
     pointer-events: auto !important;
   }
 
-  /* Kicker */
+  /* Kicker: Liquid Glass Micro-Capsule */
   .hero-kicker {
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px !important;
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin-bottom: 6px !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.70) 100%) !important;
+    backdrop-filter: blur(14px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(190%) !important;
+    padding: 3.5px 10px 3.5px 8px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
+    margin-bottom: 8px !important;
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 0.62rem !important;
-    font-weight: 700 !important;
+    font-size: 0.58rem !important;
+    font-weight: 800 !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
-    color: #1463FF !important;
   }
 
   .hero-kicker-num {
@@ -5997,111 +6017,70 @@ img {
     display: inline-block !important;
   }
 
-  /* Headline */
+  /* Headline: High-End Fashion Editorial Proportions */
   .hero-headline {
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: clamp(1.65rem, 6.6vw, 2.05rem) !important;
-    font-weight: 900 !important;
-    line-height: 0.96 !important;
-    letter-spacing: -0.04em !important;
+    font-size: clamp(1.48rem, 5.8vw, 1.82rem) !important;
+    font-weight: 850 !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.025em !important;
     text-transform: uppercase !important;
     margin: 0 0 8px 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 2px !important;
+    gap: 1px !important;
   }
 
   .hero-text-accent {
     display: block !important;
-    line-height: 0.96 !important;
+    line-height: 1.06 !important;
   }
 
   .hero-text-sub {
     display: block !important;
-    line-height: 0.96 !important;
+    line-height: 1.06 !important;
   }
 
   /* Subtitle */
   .hero-subtext {
     display: block !important;
-    font-size: 0.72rem !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
+    font-size: 0.73rem !important;
     font-weight: 500 !important;
-    line-height: 1.35 !important;
-    margin: 0 0 10px 0 !important;
-    max-width: 190px !important;
+    line-height: 1.4 !important;
+    margin: 0 0 12px 0 !important;
+    max-width: 230px !important;
   }
 
-  /* Hide bulky vertical icon badges on mobile; use clean spec pills matching PC layout */
+  /* Hide bulky vertical icon badges on mobile */
   .hero-feature-badges {
     display: none !important;
   }
 
-  .hero-badge-pill {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 7px !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06) !important;
-    border-radius: 999px !important;
-    padding: 4px 10px 4px 5px !important;
-    width: fit-content !important;
-  }
-
-  .badge-icon-wrap {
-    width: 24px !important;
-    height: 24px !important;
-    border-radius: 50% !important;
-    background: #E1EDFD !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-  }
-
-  .badge-icon-wrap svg {
-    width: 12px !important;
-    height: 12px !important;
-    stroke: #1463FF !important;
-  }
-
-  .badge-label-col {
-    display: flex !important;
-    flex-direction: column !important;
-    line-height: 1.15 !important;
-  }
-
-  .badge-label-col span {
-    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 0.55rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.02em !important;
-    text-transform: uppercase !important;
-  }
-
-  /* Specification tags on Slides 2, 3, 4 */
+  /* Specification tags: Sleek inline horizontal wrapped liquid glass micro-pills */
   .hero-specs-row {
     display: flex !important;
-    flex-direction: column !important;
-    gap: 5px !important;
-    margin: 0 0 12px 0 !important;
-    width: fit-content !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 5px 6px !important;
+    margin: 0 0 14px 0 !important;
+    max-width: 250px !important;
   }
 
   .hero-spec-tag {
     display: inline-flex !important;
     align-items: center !important;
-    font-size: 0.58rem !important;
+    font-size: 0.54rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.035em !important;
     text-transform: uppercase !important;
-    padding: 4px 10px !important;
+    padding: 3.5px 8px !important;
     border-radius: 999px !important;
-    width: fit-content !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
+    backdrop-filter: blur(14px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
+    white-space: nowrap !important;
   }
 
   .hero-spec-sep {
@@ -6177,6 +6156,7 @@ img {
     z-index: 31 !important;
   }
 
+  /* Liquid Glass Obsidian CTA Pill */
   .hero-contact-btn {
     height: 38px !important;
     min-width: 0 !important;
@@ -6187,32 +6167,46 @@ img {
     font-weight: 800 !important;
     letter-spacing: 0.05em !important;
     border-radius: 999px !important;
-    background: #0F172A !important;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(30, 41, 59, 0.92) 100%) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22) !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-decoration: none !important;
     text-transform: uppercase !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
+  .hero-contact-btn:active {
+    transform: scale(0.96) !important;
+  }
+
+  /* Circular Liquid Glass Arrow Button */
   .hero-arrow-btn {
     width: 38px !important;
     height: 38px !important;
     border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.92) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.72) 100%) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
     color: #0F172A !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
     margin-bottom: 0 !important;
     text-decoration: none !important;
     flex-shrink: 0 !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .hero-arrow-btn:active {
+    transform: scale(0.92) !important;
   }
 
   .hero-arrow-btn svg {
@@ -6220,6 +6214,7 @@ img {
     height: 15px !important;
   }
 
+  /* Liquid Glass Floating Navigation Dock */
   .hero-carousel-nav {
     display: flex !important;
     position: static !important;
@@ -6228,13 +6223,13 @@ img {
     align-items: center !important;
     justify-content: center !important;
     pointer-events: auto !important;
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    padding: 5px 10px !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.65) 100%) !important;
+    backdrop-filter: blur(20px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
+    padding: 6px 11px !important;
     border-radius: 999px !important;
-    border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.10), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
     z-index: 31 !important;
   }
 
@@ -6249,19 +6244,20 @@ img {
     width: 6px !important;
     height: 6px !important;
     border-radius: 50% !important;
-    background: #CBD5E1 !important;
+    background: rgba(15, 23, 42, 0.22) !important;
     border: none !important;
     padding: 0 !important;
     cursor: pointer !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.12) !important;
   }
 
   .hero-dot.active {
-    width: 20px !important;
+    width: 22px !important;
     height: 6px !important;
     border-radius: 999px !important;
-    background: #1463FF !important;
-    box-shadow: 0 2px 8px rgba(20, 99, 255, 0.35) !important;
+    background: #0F172A !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
   }
 
 
