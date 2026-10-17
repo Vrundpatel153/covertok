@@ -207,19 +207,20 @@
 
     if (product.images && Array.isArray(product.images) && product.images.length > 0) {
       displayImgs = [...product.images];
-    } else if (product.primary_image) {
-      displayImgs = [product.primary_image];
-    }
-
-    if (product.colors && Array.isArray(product.colors)) {
-      product.colors.forEach(c => {
-        if (c.image && !displayImgs.includes(c.image)) displayImgs.push(c.image);
-        if (c.images && Array.isArray(c.images)) {
-          c.images.forEach(img => {
-            if (img && !displayImgs.includes(img)) displayImgs.push(img);
-          });
-        }
-      });
+    } else {
+      if (product.primary_image) {
+        displayImgs = [product.primary_image];
+      }
+      if (product.colors && Array.isArray(product.colors)) {
+        product.colors.forEach(c => {
+          if (c.image && !displayImgs.includes(c.image)) displayImgs.push(c.image);
+          if (c.images && Array.isArray(c.images)) {
+            c.images.forEach(img => {
+              if (img && !displayImgs.includes(img)) displayImgs.push(img);
+            });
+          }
+        });
+      }
     }
 
     if (!displayImgs.length && product.primary_image) {
@@ -242,6 +243,13 @@
       activeSrc = uniqueImgs[0];
     }
 
+    function updateGalleryCounter(currentIdx, total) {
+      const counter = document.getElementById('galleryCounter');
+      if (counter) {
+        counter.textContent = `${currentIdx + 1} / ${total}`;
+      }
+    }
+
     // If already populated with the exact same items, just update active state and scroll into view
     const currentImgs = Array.from(strip.querySelectorAll('.pdp-thumb-btn')).map(b => b.getAttribute('data-img'));
     const isSameList = currentImgs.length === uniqueImgs.length && currentImgs.every((img, i) => img === uniqueImgs[i]);
@@ -253,13 +261,18 @@
         </button>
       `).join('');
 
+      let activeIdx = uniqueImgs.indexOf(activeSrc);
+      if (activeIdx === -1) activeIdx = 0;
+      updateGalleryCounter(activeIdx, uniqueImgs.length);
+
       // Attach click events
-      strip.querySelectorAll('.pdp-thumb-btn').forEach(btn => {
+      strip.querySelectorAll('.pdp-thumb-btn').forEach((btn, idx) => {
         btn.addEventListener('click', () => {
           strip.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           const img = btn.getAttribute('data-img');
           updateMainImage(img);
+          updateGalleryCounter(idx, uniqueImgs.length);
 
           // Synchronize with color swatches if this thumbnail corresponds to a specific color
           if (product.colors && product.colors.length > 1) {
@@ -272,6 +285,8 @@
               selectedColor = matchedColor;
               const colorLabel = document.getElementById('selectedColorLabel');
               if (colorLabel) colorLabel.textContent = matchedColor.name;
+              const stickyColor = document.getElementById('stickyColorName');
+              if (stickyColor) stickyColor.textContent = matchedColor.name;
               const colorGrid = document.getElementById('colorSwatchesGrid');
               if (colorGrid) {
                 colorGrid.querySelectorAll('.pdp-color-swatch').forEach(s => {
@@ -285,6 +300,46 @@
           btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         });
       });
+
+      // Hook floating gallery navigation arrows & wishlist
+      const galleryPrev = document.getElementById('galleryPrevBtn');
+      const galleryNext = document.getElementById('galleryNextBtn');
+      const galleryWishlist = document.getElementById('galleryWishlistBtn');
+
+      if (galleryPrev) {
+        galleryPrev.onclick = () => {
+          const thumbs = strip.querySelectorAll('.pdp-thumb-btn');
+          if (!thumbs.length) return;
+          let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
+          let prevIdx = (currentActive <= 0) ? thumbs.length - 1 : currentActive - 1;
+          thumbs[prevIdx].click();
+        };
+      }
+
+      if (galleryNext) {
+        galleryNext.onclick = () => {
+          const thumbs = strip.querySelectorAll('.pdp-thumb-btn');
+          if (!thumbs.length) return;
+          let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
+          let nextIdx = (currentActive >= thumbs.length - 1 || currentActive < 0) ? 0 : currentActive + 1;
+          thumbs[nextIdx].click();
+        };
+      }
+
+      if (galleryWishlist && currentProduct) {
+        galleryWishlist.onclick = () => {
+          if (window.toggleWishlist) {
+            const added = window.toggleWishlist(currentProduct.id, currentProduct.title);
+            galleryWishlist.classList.toggle('active', added);
+            galleryWishlist.classList.toggle('liked', added);
+            const pdpWish = document.getElementById('pdpWishlistBtn');
+            if (pdpWish) {
+              pdpWish.classList.toggle('active', added);
+              pdpWish.classList.toggle('liked', added);
+            }
+          }
+        };
+      }
 
       // Hook navigation arrows
       if (prevBtn) {
@@ -300,11 +355,16 @@
     } else {
       // Just update active button class
       let activeBtn = null;
-      strip.querySelectorAll('.pdp-thumb-btn').forEach(b => {
+      let activeIdx = 0;
+      strip.querySelectorAll('.pdp-thumb-btn').forEach((b, idx) => {
         const matches = b.getAttribute('data-img') === activeSrc;
         b.classList.toggle('active', matches);
-        if (matches) activeBtn = b;
+        if (matches) {
+          activeBtn = b;
+          activeIdx = idx;
+        }
       });
+      updateGalleryCounter(activeIdx, uniqueImgs.length);
       if (activeBtn) {
         activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       }
@@ -316,12 +376,15 @@
     const colorGroup = document.querySelector('.pdp-option-group:has(#colorSwatchesGrid)') || document.getElementById('colorSwatchesGrid')?.parentElement;
     const colorGrid = document.getElementById('colorSwatchesGrid');
     const colorLabel = document.getElementById('selectedColorLabel');
+    const stickyColor = document.getElementById('stickyColorName');
 
     if (!colorGrid) return;
 
     if (product.colors && product.colors.length > 1) {
       if (colorGroup) colorGroup.style.display = 'block';
-      if (colorLabel) colorLabel.textContent = selectedColor ? selectedColor.name : product.colors[0].name;
+      const initialColorName = selectedColor ? selectedColor.name : product.colors[0].name;
+      if (colorLabel) colorLabel.textContent = initialColorName;
+      if (stickyColor) stickyColor.textContent = initialColorName;
 
       colorGrid.innerHTML = product.colors.map((c, idx) => `
         <button type="button" 
@@ -344,6 +407,7 @@
           selectedColor = product.colors.find(c => c.name === cName) || { name: cName, image: cImg };
 
           if (colorLabel) colorLabel.textContent = cName;
+          if (stickyColor) stickyColor.textContent = cName;
 
           const firstImg = (selectedColor.images && selectedColor.images.length > 0) ? selectedColor.images[0] : (selectedColor.image || cImg);
           
@@ -457,6 +521,17 @@
         });
       });
     }
+
+    // Synchronize 2-column mobile models grid
+    const mobileGrid = document.getElementById('pdpMobileModelsGrid');
+    if (mobileGrid) {
+      mobileGrid.querySelectorAll('.pdp-m-model-btn').forEach(btn => {
+        btn.onclick = () => {
+          const m = btn.getAttribute('data-model');
+          applyModelSelection(m);
+        };
+      });
+    }
   }
 
   function applyModelSelection(m) {
@@ -465,10 +540,12 @@
     const deviceLabel = document.getElementById('selectedDeviceLabel');
     const dropdownSelectedText = document.getElementById('pdpDropdownSelectedText');
     const dropdownMenu = document.getElementById('pdpDropdownMenu');
+    const stickyModel = document.getElementById('stickyModelName');
 
     if (select) select.value = m;
     if (deviceLabel) deviceLabel.textContent = `${m} · In Stock`;
     if (dropdownSelectedText) dropdownSelectedText.textContent = m;
+    if (stickyModel) stickyModel.textContent = m;
 
     if (dropdownMenu) {
       dropdownMenu.querySelectorAll('.pdp-dropdown-item').forEach(item => {
@@ -484,6 +561,12 @@
     document.querySelectorAll('.pdp-chip-btn').forEach(b => {
       b.classList.toggle('active', b.getAttribute('data-model') === m);
     });
+    const mobileGrid = document.getElementById('pdpMobileModelsGrid');
+    if (mobileGrid) {
+      mobileGrid.querySelectorAll('.pdp-m-model-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-model') === m);
+      });
+    }
   }
 
   // Setup Case Finish visibility (Only for phone cases)
@@ -804,9 +887,14 @@
 
     // Technical Accordions
     document.querySelectorAll('.pdp-spec-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.parentElement.classList.toggle('open');
-      });
+      btn.onclick = () => {
+        const box = btn.parentElement;
+        box.classList.toggle('open');
+        const icon = btn.querySelector('.pdp-spec-icon-toggle');
+        if (icon) {
+          icon.textContent = box.classList.contains('open') ? '−' : '+';
+        }
+      };
     });
 
     // Quantity stepper
@@ -872,11 +960,13 @@
     }
 
     if (mainAddBtn) {
+      const isMobile = window.innerWidth <= 768;
+      const text = isMobile ? 'ADD TO CART' : `ADD TO CART · ${formattedTotal}`;
       mainAddBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
           <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
         </svg>
-        ADD TO CART · ${formattedTotal}
+        <span>${text}</span>
       `;
     }
 
@@ -885,7 +975,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -2px;">
           <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
         </svg>
-        <span>ADD TO CART</span>
+        <span id="stickyBtnText">ADD TO CART · ${formattedTotal}</span>
       `;
     }
 
@@ -956,11 +1046,11 @@
         `;
       }
 
-      // Accordion 3: Lifetime Warranty
+      // Accordion 3: Returns & Warranty
       const acc3Title = accordions[2].querySelector('.pdp-spec-btn span');
       const acc3Content = accordions[2].querySelector('.pdp-spec-content');
       if (acc3Title) {
-        acc3Title.textContent = 'Lifetime Warranty Guarantee';
+        acc3Title.textContent = (product.category === 'iphone-cases') ? 'Returns & Warranty' : 'Lifetime Warranty Guarantee';
       }
       if (acc3Content) {
         const warrantyHtml = (product.category === 'iphone-cases') ?

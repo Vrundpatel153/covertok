@@ -269,29 +269,25 @@ window.CovertokProducts = [
     "images": [
       "assets/products/9875589628202/1_49939894698282.jpg",
       "assets/products/9875589628202/2_49939794690346.jpg",
-      "assets/products/9875589628202/3_49939638649130.jpg",
+      "assets/products/9875589628202/6_49939859046698.jpg",
       "assets/products/9875589628202/4_49887303663914.png",
       "assets/products/9875589628202/5_49939797279018.jpg",
-      "assets/products/9875589628202/6_49939859046698.jpg",
-      "assets/products/9875589628202/7_49939800129834.jpg",
-      "assets/products/9875589628202/8_49939858948394.jpg",
-      "assets/products/9875589628202/9_49939800490282.jpg",
-      "assets/products/9875589628202/10_49887280070954.jpg"
+      "assets/products/9875589628202/7_49939800129834.jpg"
     ],
     "has_colors": true,
     "colors": [
       {
-        "name": "Guava Spritz",
-        "hex": "#FB7185",
+        "name": "Raspberry",
+        "hex": "#9D174D",
         "price": 649.0,
-        "image": "assets/products/9875589628202/4_49887303663914.png",
+        "image": "assets/products/9875589628202/1_49939894698282.jpg",
         "images": [
-          "assets/products/9875589628202/4_49887303663914.png"
+          "assets/products/9875589628202/1_49939894698282.jpg"
         ]
       },
       {
         "name": "Salty Tan",
-        "hex": "#D2B48C",
+        "hex": "#B8977E",
         "price": 649.0,
         "image": "assets/products/9875589628202/6_49939859046698.jpg",
         "images": [
@@ -300,7 +296,7 @@ window.CovertokProducts = [
       },
       {
         "name": "Unscented",
-        "hex": "#E2E8F0",
+        "hex": "#CBD5E1",
         "price": 649.0,
         "image": "assets/products/9875589628202/8_49939858948394.jpg",
         "images": [
@@ -308,16 +304,16 @@ window.CovertokProducts = [
         ]
       },
       {
-        "name": "Raspberry",
-        "hex": "#BE185D",
+        "name": "Shortcake",
+        "hex": "#F2C4CE",
         "price": 649.0,
-        "image": "assets/products/9875589628202/1_49939894698282.jpg",
+        "image": "assets/products/9875589628202/5_49939797279018.jpg",
         "images": [
-          "assets/products/9875589628202/1_49939894698282.jpg"
+          "assets/products/9875589628202/5_49939797279018.jpg"
         ]
       },
       {
-        "name": "Perch Pit",
+        "name": "Peach Pit",
         "hex": "#FDBA74",
         "price": 649.0,
         "image": "assets/products/9875589628202/7_49939800129834.jpg",
@@ -326,39 +322,30 @@ window.CovertokProducts = [
         ]
       },
       {
-        "name": "Shortcake",
-        "hex": "#FDA4AF",
+        "name": "Crimson",
+        "hex": "#E11D48",
         "price": 649.0,
-        "image": "assets/products/9875589628202/5_49939797279018.jpg",
+        "image": "assets/products/9875589628202/4_49887303663914.png",
         "images": [
-          "assets/products/9875589628202/5_49939797279018.jpg"
-        ]
-      },
-      {
-        "name": "Espresso",
-        "hex": "#451A03",
-        "price": 649.0,
-        "image": "assets/products/9875589628202/9_49939800490282.jpg",
-        "images": [
-          "assets/products/9875589628202/9_49939800490282.jpg"
-        ]
-      },
-      {
-        "name": "Toast",
-        "hex": "#B45309",
-        "price": 649.0,
-        "image": "assets/products/9875589628202/3_49939638649130.jpg",
-        "images": [
-          "assets/products/9875589628202/3_49939638649130.jpg"
+          "assets/products/9875589628202/4_49887303663914.png"
         ]
       },
       {
         "name": "Ribbon",
-        "hex": "#E879F9",
+        "hex": "#E9D5FF",
         "price": 649.0,
         "image": "assets/products/9875589628202/2_49939794690346.jpg",
         "images": [
           "assets/products/9875589628202/2_49939794690346.jpg"
+        ]
+      },
+      {
+        "name": "Espresso",
+        "hex": "#334155",
+        "price": 649.0,
+        "image": "assets/products/9875589628202/9_49939800490282.jpg",
+        "images": [
+          "assets/products/9875589628202/9_49939800490282.jpg"
         ]
       }
     ],
@@ -384,9 +371,9 @@ window.CovertokProducts = [
       "iPhone 17 Pro Max"
     ],
     "model_label": "Select iPhone Model",
-    "description": "The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.",
+    "description": "The Rhode Lip Case is the ultimate blend of style and functionality. A phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.",
     "bullets": [],
-    "raw_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> • Slim, protective cover for everyday use</span></div>\n<div><span> • Available in multiple colors to match your vibe</span></div>\n<div><span> • Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.</div>",
+    "raw_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and functionality. A phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> • Slim, protective cover for everyday use</span></div>\n<div><span> • Available in multiple colors to match your vibe</span></div>\n<div><span> • Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.</div>",
     "in_stock": true
   },
   {
