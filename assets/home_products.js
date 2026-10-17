@@ -194,6 +194,11 @@
     const grid = document.getElementById('productGrid');
     if (!grid) return;
 
+    // Preserve exact mobile mockup cards on mobile view
+    if (window.innerWidth <= 768 && grid.children.length > 0) {
+      return;
+    }
+
     // Pick top 8 curated bestsellers for landing page showcase
     const prods = window.CovertokProducts.filter(p => p.is_bestseller || p.is_new).slice(0, 8);
 

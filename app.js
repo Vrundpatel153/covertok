@@ -697,6 +697,12 @@ document.addEventListener('DOMContentLoaded', () => {
         activeDot.classList.add('active');
       }
 
+      // Sync Mobile Mockup Floor Dots
+      const floorDots = document.querySelectorAll('#heroFloorDots .floor-dot');
+      floorDots.forEach((fd, idx) => {
+        fd.classList.toggle('active', idx === currentHeroIndex);
+      });
+
       // Sync SVG background slides (Desktop)
       const svgBgSlides = document.querySelectorAll('.hero-svg-bg-slide');
       svgBgSlides.forEach((bg, idx) => {
@@ -741,6 +747,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dot controls
     heroDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        switchHeroSlide(idx);
+        startHeroAutoPlay();
+      });
+    });
+
+    const floorDots = document.querySelectorAll('#heroFloorDots .floor-dot');
+    floorDots.forEach((dot, idx) => {
       dot.addEventListener('click', () => {
         switchHeroSlide(idx);
         startHeroAutoPlay();
@@ -937,7 +951,87 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Mobile Mockup Hero Swatches & Floor Dots
+  const heroSwatches = document.querySelectorAll('#heroSwatchesCard .swatch-btn');
+  const heroHandImg = document.getElementById('heroMobileHandImg');
+  const heroFloorDots = document.querySelectorAll('#heroFloorDots .floor-dot');
+
+  if (heroSwatches.length > 0) {
+    heroSwatches.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        heroSwatches.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const swatch = btn.getAttribute('data-swatch');
+        if (heroHandImg) {
+          if (swatch === 'blue') {
+            heroHandImg.src = 'assets/banner_1_hand_blue_wave_clean.png';
+          }
+        }
+        if (typeof showToast === 'function') {
+          const names = { blue: 'Signature Blue Wave', pink: 'Blush Pink Wave', beige: 'Alabaster Beige Wave' };
+          showToast(`Selected: ${names[swatch] || swatch}`, 'sparkle');
+        }
+      });
+    });
+  }
+
+
+
+  // Mobile Mockup Products Section Slider & Controls
+  const prodGrid = document.getElementById('productGrid');
+  const prodPrev = document.getElementById('prodSliderPrev');
+  const prodNext = document.getElementById('prodSliderNext');
+  const prodDots = document.querySelectorAll('#productsDots .prod-page-dot');
+  const prodSwatches = document.querySelectorAll('.prod-card-swatches .prod-swatch-dot');
+
+  if (prodPrev && prodGrid) {
+    prodPrev.addEventListener('click', (e) => {
+      e.preventDefault();
+      prodGrid.scrollBy({ left: -190, behavior: 'smooth' });
+    });
+  }
+  if (prodNext && prodGrid) {
+    prodNext.addEventListener('click', (e) => {
+      e.preventDefault();
+      prodGrid.scrollBy({ left: 190, behavior: 'smooth' });
+    });
+  }
+
+  if (prodDots.length > 0 && prodGrid) {
+    prodDots.forEach((dot, idx) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        prodDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+        prodGrid.scrollTo({ left: idx * 190, behavior: 'smooth' });
+      });
+    });
+
+    prodGrid.addEventListener('scroll', () => {
+      const idx = Math.round(prodGrid.scrollLeft / 190);
+      prodDots.forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+      });
+    }, { passive: true });
+  }
+
+  if (prodSwatches.length > 0) {
+    prodSwatches.forEach(swatch => {
+      swatch.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const parent = swatch.closest('.prod-card-swatches');
+        if (parent) {
+          parent.querySelectorAll('.prod-swatch-dot').forEach(s => s.classList.remove('active'));
+          swatch.classList.add('active');
+        }
+      });
+    });
+  }
+
   // Initialize cart display
   renderCart();
-  console.log('Covertok App Loaded successfully with 4-Banner Hero & UGC 3D Animation!');
+  console.log('Covertok App Loaded successfully with exact mobile glassmorphic mockup layout!');
 });

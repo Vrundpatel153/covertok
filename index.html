@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261016_mobile_hero_fix">
-  <link rel="stylesheet" href="catalog.css?v=20261016_mobile_hero_fix">
+  <link rel="stylesheet" href="styles.css?v=20261017_glassmorphic_mockups_exact">
+  <link rel="stylesheet" href="catalog.css?v=20261017_glassmorphic_mockups_exact">
 </head>
 <body>
 
@@ -69,9 +69,10 @@
       </div>
 
       <!-- Right: Utility Icons matching hero.png -->
+      <!-- Right: Utility Icons matching hero.png -->
       <div class="header-right">
         <button class="icon-btn" id="searchBtn" aria-label="Search products" title="Search">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
@@ -83,17 +84,31 @@
           </svg>
         </button>
         <button class="icon-btn store-btn" id="cartBtn" aria-label="Store" title="Store">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="cart-icon-desktop" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 9l2.5-5h13L21 9v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
             <path d="M3 9h18"></path>
             <path d="M9 21V9"></path>
           </svg>
+          <svg class="cart-icon-mobile" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
         </button>
         <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
+          <span class="desktop-bars-span"></span><span class="desktop-bars-span"></span><span class="desktop-bars-span"></span>
+          <svg class="mobile-menu-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
         </button>
       </div>
     </div>
+    <!-- Exact Asymmetric Liquid Notch SVG for Mobile Header -->
+    <svg class="mobile-header-notch-svg" viewBox="0 0 400 68" preserveAspectRatio="none" aria-hidden="true" fill="none">
+      <path d="M 0 0 L 0 68 L 195 68 C 225 68, 235 0, 265 0 L 0 0 Z" fill="#FFFFFF"/>
+    </svg>
   </header>
 
   <!-- Mobile Nav Overlay -->
@@ -205,10 +220,49 @@
                   <span class="hero-spec-sep">/</span>
                   <span class="hero-spec-tag">Camera Bezel Lift</span>
                 </div>
+                <!-- Mobile Exact 3 Feature Badges -->
+                <div class="hero-feature-badges" aria-label="Key features">
+                  <div class="hero-badge-pill">
+                    <div class="badge-icon-wrap">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1463FF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 7.5 0"></path>
+                        <path d="M2 17c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 7.5 0"></path>
+                      </svg>
+                    </div>
+                    <div class="badge-label-col">
+                      <span>SIGNATURE WAVE</span>
+                      <span>CONTOUR</span>
+                    </div>
+                  </div>
+                  <div class="hero-badge-pill">
+                    <div class="badge-icon-wrap">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1463FF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                      </svg>
+                    </div>
+                    <div class="badge-label-col">
+                      <span>ANTI-YELLOW</span>
+                      <span>POLYCARBONATE</span>
+                    </div>
+                  </div>
+                  <div class="hero-badge-pill">
+                    <div class="badge-icon-wrap">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1463FF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div class="badge-label-col">
+                      <span>CAMERA</span>
+                      <span>BEZEL LIFT</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="hero-visual">
                 <div class="hero-phone-wrap hero-phone-wrap-hand">
-                  <img src="assets/banner_1_hand_blue_wave_clean.png" alt="Hand holding colorful pastel wave swirl designer mobile cover" class="hero-phone-img banner-img-hand">
+                  <img src="assets/banner_1_hand_blue_wave_clean.png" alt="Hand holding colorful pastel wave swirl designer mobile cover" class="hero-phone-img banner-img-hand" id="heroMobileHandImg">
                 </div>
               </div>
             </div>
@@ -282,6 +336,39 @@
                   <span class="hero-spec-sep">/</span>
                   <span class="hero-spec-tag">Universal Tether Anchor</span>
                 </div>
+              </div>
+          </div>
+
+          <!-- 3D Floating Frosted Glass Plates (Mobile & Visual Depth Matching Mockup) -->
+          <div class="hero-glass-plates" aria-hidden="true">
+            <div class="glass-plate plate-tr"></div>
+            <div class="glass-plate plate-mr"></div>
+            <div class="glass-plate plate-bl"></div>
+          </div>
+
+          <!-- Mobile Exact Swatches Widget & Bottom Asymmetric Curve Floor Matching Mockup -->
+          <div class="hero-mobile-bottom-wrap">
+            <div class="hero-swatches-card" id="heroSwatchesCard" aria-label="Color options">
+              <button type="button" class="swatch-btn active" data-swatch="blue" aria-label="Blue Wave Cover" title="Blue Wave">
+                <img src="assets/swatch_case_blue.png" alt="Blue Wave Cover">
+              </button>
+              <button type="button" class="swatch-btn" data-swatch="pink" aria-label="Pink Wave Cover" title="Pink Wave">
+                <img src="assets/swatch_case_pink.png" alt="Pink Wave Cover">
+              </button>
+              <button type="button" class="swatch-btn" data-swatch="beige" aria-label="Beige Wave Cover" title="Beige Wave">
+                <img src="assets/swatch_case_beige.png" alt="Beige Wave Cover">
+              </button>
+            </div>
+
+            <div class="hero-mobile-footer-floor">
+              <svg class="hero-floor-curve-svg" viewBox="0 0 400 84" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M 0 0 L 195 0 C 220 0, 230 42, 255 42 L 400 42 L 400 84 L 0 84 Z" fill="#FFFFFF"/>
+              </svg>
+              <div class="hero-floor-dots" id="heroFloorDots" aria-label="Slide indicators">
+                <button class="floor-dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="floor-dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="floor-dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="floor-dot" data-index="3" aria-label="Slide 4"></button>
               </div>
             </div>
           </div>
@@ -575,9 +662,34 @@
     </section>
 
 
-    <!-- SECTION 2: OUR PRODUCTS (From image.png) -->
-    <section class="products-section" id="products">
-      <div class="section-container">
+    <!-- SECTION 2: OUR PRODUCTS (Matching exact mockup geometry and cards) -->
+    <section class="products-section" id="products" aria-label="Our Products">
+      <div class="products-glass-plates" aria-hidden="true">
+        <div class="prod-glass-plate prod-plate-tr"></div>
+        <div class="prod-glass-plate prod-plate-bl"></div>
+        <div class="prod-glass-plate prod-plate-br"></div>
+      </div>
+
+      <div class="section-container products-section-container">
+        <!-- Mobile Specific Products Header matching media_1792203592226.png -->
+        <div class="products-header-wrap">
+          <div class="products-header-text">
+            <h2 class="products-section-title">
+              <span class="title-our">OUR</span>
+              <span class="title-products">PRODUCTS</span>
+            </h2>
+            <p class="products-section-subtitle">Trendy, durable and stylish phone cases crafted for everyday expression.</p>
+          </div>
+          <a href="collections.html" class="products-view-catalog-btn" aria-label="View All Catalog">
+            <span>VIEW ALL CATALOG</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Desktop Centered Header -->
         <div class="section-header-center">
           <h2 class="section-title">OUR PRODUCTS</h2>
           <div class="products-action-bar">
@@ -592,107 +704,148 @@
         </div>
 
         <div class="product-slider-wrapper">
-          <button type="button" class="slider-nav-btn prev" id="prodSliderPrev" aria-label="Previous products" title="Previous products">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          <button type="button" class="prod-slider-nav-btn prod-prev-btn" id="prodSliderPrev" aria-label="Previous products" title="Previous products">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
           </button>
+
           <div class="product-grid product-slider-track" id="productGrid">
-          <!-- Product Card 1 -->
-          <div class="product-card" data-category="iphone15 trending" onclick="window.location.href='product.html?id=1'" style="cursor: pointer;">
-            <div class="product-card-inner">
-              <div class="product-image-box" style="position: relative;">
-                <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('1');" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                  </svg>
-                </button>
-                <img src="assets/phone_cream_transparent.png" alt="iPhone 15 Cream Color Men Design Mobile Cover" class="product-img">
-              </div>
-              <div class="product-info">
-                <div class="product-price">₹399</div>
-                <h3 class="product-name"><a href="product.html?id=1" style="color: inherit; text-decoration: none;">IPHONE 15 CREAM COLOR MEN DESIGN MOBILE COVER</a></h3>
-                <div class="card-buttons-row" style="display: flex; gap: 8px; margin-top: 10px;" onclick="event.stopPropagation();">
-                  <button type="button" class="btn btn-card-cart btn-quick-add" data-id="1" data-name="iPhone 15 Cream Color Men Design" data-price="399" data-img="assets/phone_cream_transparent.png" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-                      <path d="M3 9l2.5-5h13L21 9v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
-                      <path d="M3 9h18"></path>
-                      <path d="M9 21V9"></path>
+            <!-- Product Card 1: Soft Silicone Cover With-Lip Balm (Mockup Left Card) -->
+            <div class="product-card" data-category="iphone15 trending" onclick="window.location.href='product.html?id=1'" style="cursor: pointer;">
+              <div class="product-card-inner">
+                <div class="product-image-box">
+                  <span class="prod-discount-pill">50% OFF</span>
+                  <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('1');">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
                     </svg>
-                    <span>Add</span>
                   </button>
-                  <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=1'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #0F172A; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
-                    Buy Now
+                  <img src="assets/prod_lipbalm_clean.png" alt="Soft Silicone Cover With-Lip Balm" class="product-img">
+                </div>
+                <div class="product-info">
+                  <!-- 5 Color Swatches matching mockup -->
+                  <div class="prod-card-swatches" aria-label="Color options" onclick="event.stopPropagation();">
+                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #9D174D;" aria-label="Berry"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #D4A373;" aria-label="Tan"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #C5D8EA;" aria-label="Blue"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #F4B8C5;" aria-label="Blush"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #E9C46A;" aria-label="Yellow"></button>
+                  </div>
+                  <div class="product-price">Rs. 649.00</div>
+                  <h3 class="product-name"><a href="product.html?id=1">SOFT SILICONE COVER<br>WITH-LIP BALM</a></h3>
+                  <div class="card-buttons-row" onclick="event.stopPropagation();">
+                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="1" data-name="Soft Silicone Cover With-Lip Balm" data-price="649" data-img="assets/prod_lipbalm_clean.png">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      </svg>
+                      <span>Add</span>
+                    </button>
+                    <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=1'">
+                      <span>Buy Now</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 2: Crystal Studded L Case - Orange (Mockup Right Card) -->
+            <div class="product-card" data-category="iphone15 trending pop" onclick="window.location.href='product.html?id=2'" style="cursor: pointer;">
+              <div class="product-card-inner">
+                <div class="product-image-box">
+                  <span class="prod-discount-pill">27% OFF</span>
+                  <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('2');">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    </svg>
                   </button>
+                  <img src="assets/prod_crystal_orange_clean.png" alt="Crystal Studded L Case - Orange" class="product-img">
+                </div>
+                <div class="product-info">
+                  <!-- 5 Color Swatches matching mockup -->
+                  <div class="prod-card-swatches" aria-label="Color options" onclick="event.stopPropagation();">
+                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #E07A5F;" aria-label="Orange"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #F4C2C2;" aria-label="Pink"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #F1E9DB;" aria-label="Cream"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #3D405B;" aria-label="Grey"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #DDA0DD;" aria-label="Lilac"></button>
+                  </div>
+                  <div class="product-price">Rs. 949.00</div>
+                  <h3 class="product-name"><a href="product.html?id=2">CRYSTAL STUDDED L<br>CASE – ORANGE</a></h3>
+                  <div class="card-buttons-row" onclick="event.stopPropagation();">
+                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="2" data-name="Crystal Studded L Case - Orange" data-price="949" data-img="assets/prod_crystal_orange_clean.png">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      </svg>
+                      <span>Add</span>
+                    </button>
+                    <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=2'">
+                      <span>Buy Now</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3: Spiderman Edition -->
+            <div class="product-card" data-category="iphone15 pop" onclick="window.location.href='product.html?id=3'" style="cursor: pointer;">
+              <div class="product-card-inner">
+                <div class="product-image-box">
+                  <span class="prod-discount-pill">30% OFF</span>
+                  <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('3');">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                    </svg>
+                  </button>
+                  <img src="assets/phone_spiderman_transparent.png" alt="iPhone 15 Spiderman Edition Mobile Cover" class="product-img">
+                </div>
+                <div class="product-info">
+                  <div class="prod-card-swatches" aria-label="Color options" onclick="event.stopPropagation();">
+                    <button type="button" class="prod-swatch-dot active" style="--swatch-color: #EF4444;" aria-label="Red"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #1E3A8A;" aria-label="Blue"></button>
+                    <button type="button" class="prod-swatch-dot" style="--swatch-color: #18181B;" aria-label="Black"></button>
+                  </div>
+                  <div class="product-price">Rs. 499.00</div>
+                  <h3 class="product-name"><a href="product.html?id=3">IPHONE 15 SPIDERMAN<br>EDITION MOBILE COVER</a></h3>
+                  <div class="card-buttons-row" onclick="event.stopPropagation();">
+                    <button type="button" class="btn btn-card-cart btn-quick-add" data-id="3" data-name="iPhone 15 Spiderman Edition" data-price="499" data-img="assets/phone_spiderman_transparent.png">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                      </svg>
+                      <span>Add</span>
+                    </button>
+                    <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=3'">
+                      <span>Buy Now</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Product Card 2 -->
-          <div class="product-card" data-category="iphone15 trending pop" onclick="window.location.href='product.html?id=2'" style="cursor: pointer;">
-            <div class="product-card-inner">
-              <div class="product-image-box" style="position: relative;">
-                <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('2');" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                  </svg>
-                </button>
-                <img src="assets/phone_fire_blue_transparent.png" alt="iPhone 15 Fire Blue Color New Addition Cover" class="product-img">
-              </div>
-              <div class="product-info">
-                <div class="product-price">₹799</div>
-                <h3 class="product-name"><a href="product.html?id=2" style="color: inherit; text-decoration: none;">IPHONE 15 FIRE BLUE COLOR NEW ADDITION COVER</a></h3>
-                <div class="card-buttons-row" style="display: flex; gap: 8px; margin-top: 10px;" onclick="event.stopPropagation();">
-                  <button type="button" class="btn btn-card-cart btn-quick-add" data-id="2" data-name="iPhone 15 Fire Blue Color New Addition" data-price="799" data-img="assets/phone_fire_blue_transparent.png" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-                      <path d="M3 9l2.5-5h13L21 9v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
-                      <path d="M3 9h18"></path>
-                      <path d="M9 21V9"></path>
-                    </svg>
-                    <span>Add</span>
-                  </button>
-                  <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=2'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #0F172A; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
-                    Buy Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product Card 3 -->
-          <div class="product-card" data-category="iphone15 pop" onclick="window.location.href='product.html?id=3'" style="cursor: pointer;">
-            <div class="product-card-inner">
-              <div class="product-image-box" style="position: relative;">
-                <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('3');" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                  </svg>
-                </button>
-                <img src="assets/phone_spiderman_transparent.png" alt="iPhone 15 Spiderman Edition Mobile Cover" class="product-img">
-              </div>
-              <div class="product-info">
-                <div class="product-price">₹499</div>
-                <h3 class="product-name"><a href="product.html?id=3" style="color: inherit; text-decoration: none;">IPHONE 15 SPIDERMAN EDITION MOBILE COVER</a></h3>
-                <div class="card-buttons-row" style="display: flex; gap: 8px; margin-top: 10px;" onclick="event.stopPropagation();">
-                  <button type="button" class="btn btn-card-cart btn-quick-add" data-id="3" data-name="iPhone 15 Spiderman Edition" data-price="499" data-img="assets/phone_spiderman_transparent.png" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #F1F5F9; border: 1px solid #CBD5E1; color: #0F172A; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-                      <path d="M3 9l2.5-5h13L21 9v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
-                      <path d="M3 9h18"></path>
-                      <path d="M9 21V9"></path>
-                    </svg>
-                    <span>Add</span>
-                  </button>
-                  <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=3'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #0F172A; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
-                    Buy Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button type="button" class="prod-slider-nav-btn prod-next-btn" id="prodSliderNext" aria-label="Next products" title="Next products">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
         </div>
-        <button type="button" class="slider-nav-btn next" id="prodSliderNext" aria-label="Next products" title="Next products">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
+
+        <!-- Mobile Centered 4 Pagination Dots -->
+        <div class="products-pagination-dots" id="productsDots" aria-label="Product pages">
+          <button class="prod-page-dot active" data-index="0" aria-label="Page 1"></button>
+          <button class="prod-page-dot" data-index="1" aria-label="Page 2"></button>
+          <button class="prod-page-dot" data-index="2" aria-label="Page 3"></button>
+          <button class="prod-page-dot" data-index="3" aria-label="Page 4"></button>
+        </div>
       </div>
     </section>
 
