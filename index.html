@@ -191,10 +191,19 @@
 
           <!-- Mobile Dynamic Slide Backgrounds (Active on Tablet & Mobile screens) -->
           <div class="hero-mobile-bgs" id="heroMobileBgs" aria-hidden="true">
-            <div class="hero-mob-bg active" style="background-image: url('assets/hero_bg_blue_clean.jpg');"></div>
-            <div class="hero-mob-bg" style="background-image: url('assets/hero_banner_3_magsafe_wallet.jpg');"></div>
-            <div class="hero-mob-bg" style="background-image: url('assets/hero_banner_2_luxury_glass.jpg');"></div>
-            <div class="hero-mob-bg" style="background-image: url('assets/hero_banner_4_boho_charms.jpg');"></div>
+            <div class="hero-mob-bg active" data-bg-index="0">
+              <img src="assets/hero_bg_blue_clean.jpg" alt="" class="hero-mob-img hero-mob-img-0">
+            </div>
+            <div class="hero-mob-bg" data-bg-index="1">
+              <img src="assets/hero_banner_3_magsafe_wallet.jpg" alt="" class="hero-mob-img hero-mob-img-1">
+            </div>
+            <div class="hero-mob-bg" data-bg-index="2">
+              <img src="assets/hero_banner_2_luxury_glass.jpg" alt="" class="hero-mob-img hero-mob-img-2">
+            </div>
+            <div class="hero-mob-bg" data-bg-index="3">
+              <img src="assets/hero_banner_4_boho_charms.jpg" alt="" class="hero-mob-img hero-mob-img-3">
+            </div>
+            <div class="hero-mob-scrim"></div>
           </div>
 
           <!-- 3D Floating Frosted Glass Plates (Rendered in Background Behind Phone) -->
@@ -343,32 +352,6 @@
                   <span class="hero-spec-sep">/</span>
                   <span class="hero-spec-tag">Universal Tether Anchor</span>
                 </div>
-              </div>
-          </div>
-
-          <!-- Mobile Exact Swatches Widget & Bottom Asymmetric Curve Floor Matching Mockup -->
-          <div class="hero-mobile-bottom-wrap">
-            <div class="hero-swatches-card" id="heroSwatchesCard" aria-label="Color options">
-              <button type="button" class="swatch-btn active" data-swatch="blue" aria-label="Blue Wave Cover" title="Blue Wave">
-                <img src="assets/swatch_case_blue.png" alt="Blue Wave Cover">
-              </button>
-              <button type="button" class="swatch-btn" data-swatch="pink" aria-label="Pink Wave Cover" title="Pink Wave">
-                <img src="assets/swatch_case_pink.png" alt="Pink Wave Cover">
-              </button>
-              <button type="button" class="swatch-btn" data-swatch="beige" aria-label="Beige Wave Cover" title="Beige Wave">
-                <img src="assets/swatch_case_beige.png" alt="Beige Wave Cover">
-              </button>
-            </div>
-
-            <div class="hero-mobile-footer-floor">
-              <svg class="hero-floor-curve-svg" viewBox="0 0 400 84" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M 0 0 L 195 0 C 220 0, 230 42, 255 42 L 400 42 L 400 84 L 0 84 Z" fill="#FFFFFF"/>
-              </svg>
-              <div class="hero-floor-dots" id="heroFloorDots" aria-label="Slide indicators">
-                <button class="floor-dot active" data-index="0" aria-label="Slide 1"></button>
-                <button class="floor-dot" data-index="1" aria-label="Slide 2"></button>
-                <button class="floor-dot" data-index="2" aria-label="Slide 3"></button>
-                <button class="floor-dot" data-index="3" aria-label="Slide 4"></button>
               </div>
             </div>
           </div>

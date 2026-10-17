@@ -5844,67 +5844,82 @@ img {
   }
 
   .hero-card {
-    min-height: 620px !important;
-    height: clamp(620px, 80vh, 680px) !important;
-    border-radius: 32px !important;
+    min-height: 520px !important;
+    height: clamp(520px, 72vh, 600px) !important;
+    border-radius: 28px !important;
     overflow: hidden !important;
     position: relative !important;
-    background: linear-gradient(150deg, #E6EFFC 0%, #EFF4FE 30%, #EAE6FD 68%, #F5F0FE 100%) !important;
-    box-shadow: 0 12px 36px rgba(100, 140, 220, 0.14) !important;
+    background: #0B132B !important;
+    box-shadow: 0 16px 40px -8px rgba(15, 23, 42, 0.12) !important;
     border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
   }
 
-  /* 3D Floating Frosted Glass Plates matching Mockup (Positioned Behind Phone) */
-  .hero-glass-plates {
+  /* Hide obsolete desktop/mockup elements on mobile */
+  .hero-glass-plates,
+  .hero-bg-svg,
+  .hero-mobile-bottom-wrap,
+  .hero-swatches-card,
+  .hero-mobile-footer-floor {
+    display: none !important;
+  }
+
+  /* Full-bleed Dynamic Slide Backgrounds on Mobile */
+  .hero-mobile-bgs {
     display: block !important;
     position: absolute !important;
     inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
     pointer-events: none !important;
+    overflow: hidden !important;
+    border-radius: inherit !important;
+  }
+
+  .hero-mob-bg {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.5s ease !important;
     z-index: 1 !important;
   }
 
-  .glass-plate {
+  .hero-mob-bg.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .hero-mob-img {
     position: absolute !important;
-    background: rgba(255, 255, 255, 0.45) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
-    box-shadow: 0 10px 28px rgba(100, 140, 220, 0.12) !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 
-  .plate-tr {
-    top: 15% !important;
-    right: -24px !important;
-    width: 140px !important;
-    height: 160px !important;
-    border-radius: 36px !important;
+  .hero-mob-img-0 {
+    object-position: center center !important;
+  }
+  .hero-mob-img-1 {
+    object-position: 72% center !important;
+  }
+  .hero-mob-img-2 {
+    object-position: 86% center !important;
+  }
+  .hero-mob-img-3 {
+    object-position: 82% center !important;
   }
 
-  .plate-mr {
-    top: 32% !important;
-    right: -30px !important;
-    width: 150px !important;
-    height: 180px !important;
-    border-radius: 40px !important;
-    background: rgba(255, 255, 255, 0.38) !important;
-  }
-
-  .plate-bl {
-    bottom: 8% !important;
-    left: -25px !important;
-    width: 165px !important;
-    height: 165px !important;
-    border-radius: 44px !important;
-    background: rgba(255, 255, 255, 0.4) !important;
-  }
-
-  /* Hide obsolete desktop elements on mobile */
-  .hero-bg-svg,
-  .hero-mobile-bgs,
-  .hero-specs-row,
-  .hero-cta-group,
-  .hero-mobile-footer-floor {
-    display: none !important;
+  .hero-mob-scrim {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.68) 46%, rgba(255, 255, 255, 0.10) 80%, transparent 100%) !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
   }
 
   .hero-slider-wrap {
@@ -5922,7 +5937,7 @@ img {
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    transition: opacity 0.35s ease !important;
+    transition: opacity 0.4s ease !important;
     padding: 24px 20px !important;
     box-sizing: border-box !important;
     z-index: 3 !important;
@@ -5934,15 +5949,15 @@ img {
     pointer-events: auto !important;
   }
 
-  /* Left Hero Content: Kicker + Headline + Subtitle + 3 Feature Badges */
+  /* Left Hero Content: Kicker + Headline + Subtitle + Feature/Spec Badges */
   .hero-content {
     position: absolute !important;
     top: 24px !important;
     left: 20px !important;
     right: auto !important;
     bottom: auto !important;
-    width: 62% !important;
-    max-width: 235px !important;
+    width: 65% !important;
+    max-width: 240px !important;
     z-index: 5 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -5960,19 +5975,17 @@ img {
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 0.64rem !important;
+    font-size: 0.62rem !important;
     font-weight: 700 !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
     color: #1463FF !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
   }
 
   .hero-kicker-num {
-    color: #1463FF !important;
+    color: inherit !important;
     font-weight: 800 !important;
   }
 
@@ -5980,39 +5993,32 @@ img {
     width: 3.5px !important;
     height: 3.5px !important;
     border-radius: 50% !important;
-    background: #1463FF !important;
+    background: currentColor !important;
     display: inline-block !important;
   }
 
   /* Headline */
   .hero-headline {
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: clamp(1.85rem, 7.8vw, 2.25rem) !important;
+    font-size: clamp(1.65rem, 6.6vw, 2.05rem) !important;
     font-weight: 900 !important;
-    line-height: 0.94 !important;
+    line-height: 0.96 !important;
     letter-spacing: -0.04em !important;
-    color: #0A1128 !important;
-    -webkit-text-fill-color: #0A1128 !important;
     text-transform: uppercase !important;
-    margin: 0 0 10px 0 !important;
-    text-shadow: none !important;
+    margin: 0 0 8px 0 !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 2px !important;
   }
 
   .hero-text-accent {
-    color: #1463FF !important;
-    -webkit-text-fill-color: #1463FF !important;
     display: block !important;
-    line-height: 0.94 !important;
+    line-height: 0.96 !important;
   }
 
   .hero-text-sub {
-    color: #0A1128 !important;
-    -webkit-text-fill-color: #0A1128 !important;
     display: block !important;
-    line-height: 0.94 !important;
+    line-height: 0.96 !important;
   }
 
   /* Subtitle */
@@ -6020,38 +6026,33 @@ img {
     display: block !important;
     font-size: 0.72rem !important;
     font-weight: 500 !important;
-    color: #475569 !important;
     line-height: 1.35 !important;
-    margin: 0 0 14px 0 !important;
-    max-width: 195px !important;
+    margin: 0 0 10px 0 !important;
+    max-width: 190px !important;
   }
 
-  /* 3 Feature Badges Stacked Vertically */
+  /* Hide bulky vertical icon badges on mobile; use clean spec pills matching PC layout */
   .hero-feature-badges {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 7px !important;
-    margin: 0 !important;
-    width: fit-content !important;
+    display: none !important;
   }
 
   .hero-badge-pill {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    background: rgba(255, 255, 255, 0.88) !important;
+    gap: 7px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 3px 12px rgba(100, 140, 220, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06) !important;
     border-radius: 999px !important;
-    padding: 5px 12px 5px 6px !important;
+    padding: 4px 10px 4px 5px !important;
     width: fit-content !important;
   }
 
   .badge-icon-wrap {
-    width: 28px !important;
-    height: 28px !important;
+    width: 24px !important;
+    height: 24px !important;
     border-radius: 50% !important;
     background: #E1EDFD !important;
     display: flex !important;
@@ -6061,8 +6062,8 @@ img {
   }
 
   .badge-icon-wrap svg {
-    width: 14px !important;
-    height: 14px !important;
+    width: 12px !important;
+    height: 12px !important;
     stroke: #1463FF !important;
   }
 
@@ -6074,14 +6075,40 @@ img {
 
   .badge-label-col span {
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 0.58rem !important;
+    font-size: 0.55rem !important;
     font-weight: 800 !important;
-    color: #0F172A !important;
     letter-spacing: 0.02em !important;
     text-transform: uppercase !important;
   }
 
-  /* Right-Aligned Hand with Phone Case */
+  /* Specification tags on Slides 2, 3, 4 */
+  .hero-specs-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    margin: 0 0 12px 0 !important;
+    width: fit-content !important;
+  }
+
+  .hero-spec-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 0.58rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    padding: 4px 10px !important;
+    border-radius: 999px !important;
+    width: fit-content !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+
+  .hero-spec-sep {
+    display: none !important;
+  }
+
+  /* Right-Aligned Hand with Phone Case (Only for Slide 0) */
   .hero-visual {
     position: absolute !important;
     right: -10px !important;
@@ -6089,15 +6116,19 @@ img {
     top: auto !important;
     left: auto !important;
     transform: none !important;
-    width: 72% !important;
-    max-width: 310px !important;
-    height: 80% !important;
-    max-height: 530px !important;
+    width: 70% !important;
+    max-width: 300px !important;
+    height: 76% !important;
+    max-height: 480px !important;
     z-index: 4 !important;
     pointer-events: none !important;
     display: flex !important;
     align-items: flex-end !important;
     justify-content: flex-end !important;
+  }
+
+  .hero-slide:not([data-slide="0"]) .hero-visual {
+    display: none !important;
   }
 
   .hero-phone-wrap-hand {
@@ -6113,85 +6144,98 @@ img {
     height: 100% !important;
     object-fit: contain !important;
     object-position: right bottom !important;
-    filter: drop-shadow(0 18px 36px rgba(100, 140, 220, 0.22)) !important;
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
+    filter: drop-shadow(0 16px 32px rgba(100, 140, 220, 0.22)) !important;
   }
 
-  /* Bottom-Left Frosted Swatches Tray */
-  .hero-mobile-bottom-wrap {
-    display: block !important;
-    position: absolute !important;
-    left: 16px !important;
-    bottom: 16px !important;
-    z-index: 6 !important;
-    width: auto !important;
-    pointer-events: auto !important;
-  }
-
-  .hero-swatches-card {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    background: rgba(255, 255, 255, 0.65) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
-    border-radius: 18px !important;
-    padding: 5px 6px !important;
-    box-shadow: 0 6px 18px rgba(100, 140, 220, 0.12) !important;
-  }
-
-  .hero-swatches-card .swatch-btn {
-    width: 34px !important;
-    height: 42px !important;
-    border-radius: 9px !important;
-    border: 1.5px solid transparent !important;
-    background: #FFFFFF !important;
-    overflow: hidden !important;
-    padding: 2px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-  }
-
-  .hero-swatches-card .swatch-btn img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 7px !important;
-    display: block !important;
-  }
-
-  .hero-swatches-card .swatch-btn.active {
-    border-color: #1463FF !important;
-    box-shadow: 0 0 0 1.5px #1463FF !important;
-    transform: scale(1.05) !important;
-  }
-
-  /* Centered Pagination Dots Below Hero Card */
+  /* Bottom Pinned Bar: CTA Buttons on Left, Dots on Right */
   .hero-bottom-bar {
-    position: relative !important;
-    inset: auto !important;
-    margin: 14px auto 18px auto !important;
+    position: absolute !important;
+    bottom: 18px !important;
+    left: 18px !important;
+    right: 18px !important;
+    top: auto !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    z-index: 5 !important;
-    width: 100% !important;
-    padding: 0 !important;
+    justify-content: space-between !important;
+    z-index: 30 !important;
+    width: calc(100% - 36px) !important;
+    pointer-events: none !important;
     background: transparent !important;
     border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hero-cta-group {
+    display: flex !important;
+    position: static !important;
+    bottom: auto !important;
+    left: auto !important;
+    align-items: center !important;
+    gap: 8px !important;
+    pointer-events: auto !important;
+    z-index: 31 !important;
+  }
+
+  .hero-contact-btn {
+    height: 38px !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    width: auto !important;
+    padding: 0 18px !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    border-radius: 999px !important;
+    background: #0F172A !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.22) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+  }
+
+  .hero-arrow-btn {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    color: #0F172A !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    margin-bottom: 0 !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hero-arrow-btn svg {
+    width: 15px !important;
+    height: 15px !important;
   }
 
   .hero-carousel-nav {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
+    display: flex !important;
+    position: static !important;
+    bottom: auto !important;
+    right: auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    pointer-events: auto !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 5px 10px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    z-index: 31 !important;
   }
 
   .hero-nav-dots {
@@ -6202,22 +6246,22 @@ img {
   }
 
   .hero-dot {
-    width: 5px !important;
-    height: 5px !important;
+    width: 6px !important;
+    height: 6px !important;
     border-radius: 50% !important;
-    background: #BFDBFE !important;
+    background: #CBD5E1 !important;
     border: none !important;
     padding: 0 !important;
     cursor: pointer !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
   .hero-dot.active {
-    width: 24px !important;
-    height: 5px !important;
+    width: 20px !important;
+    height: 6px !important;
     border-radius: 999px !important;
-    background: #2563EB !important;
-    box-shadow: none !important;
+    background: #1463FF !important;
+    box-shadow: 0 2px 8px rgba(20, 99, 255, 0.35) !important;
   }
 
 
@@ -7186,105 +7230,6 @@ img {
     margin: 0 !important;
   }
 
-  /* Bottom Swatches Card & Asymmetric Liquid Floor */
-  .hero-mobile-bottom-wrap {
-    display: block !important;
-    position: absolute !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    z-index: 8 !important;
-    pointer-events: none !important;
-  }
-  .hero-mobile-bottom-wrap > * {
-    pointer-events: auto !important;
-  }
-
-  .hero-swatches-card {
-    position: absolute !important;
-    bottom: 54px !important;
-    left: 18px !important;
-    background: rgba(255, 255, 255, 0.65) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.9) !important;
-    border-radius: 20px !important;
-    padding: 6px 8px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 7px !important;
-    box-shadow: 0 6px 20px rgba(100, 140, 220, 0.12) !important;
-    z-index: 9 !important;
-  }
-  .swatch-btn {
-    width: 36px !important;
-    height: 46px !important;
-    border-radius: 12px !important;
-    background: rgba(255, 255, 255, 0.75) !important;
-    border: 1.5px solid transparent !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 2px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-  }
-  .swatch-btn img {
-    max-width: 100% !important;
-    max-height: 100% !important;
-    object-fit: contain !important;
-  }
-  .swatch-btn.active {
-    border-color: #1463FF !important;
-    background: #FFFFFF !important;
-    box-shadow: 0 0 0 2px rgba(20, 99, 255, 0.22) !important;
-  }
-
-  .hero-mobile-footer-floor {
-    position: relative !important;
-    width: 100% !important;
-    height: 48px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .hero-floor-curve-svg {
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
-  }
-  .hero-floor-dots {
-    position: relative !important;
-    z-index: 2 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-  }
-  .floor-dot {
-    width: 6px !important;
-    height: 6px !important;
-    border-radius: 50% !important;
-    background: #B9CFFE !important;
-    border: none !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-  .floor-dot.active {
-    width: 24px !important;
-    height: 6px !important;
-    border-radius: 999px !important;
-    background: #1463FF !important;
-  }
-
-  /* Hide old desktop bottom bar on mobile */
-  .hero-bottom-bar {
-    display: none !important;
-  }
 
 
   /* ==========================================================================

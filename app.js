@@ -697,12 +697,6 @@ document.addEventListener('DOMContentLoaded', () => {
         activeDot.classList.add('active');
       }
 
-      // Sync Mobile Mockup Floor Dots
-      const floorDots = document.querySelectorAll('#heroFloorDots .floor-dot');
-      floorDots.forEach((fd, idx) => {
-        fd.classList.toggle('active', idx === currentHeroIndex);
-      });
-
       // Sync SVG background slides (Desktop)
       const svgBgSlides = document.querySelectorAll('.hero-svg-bg-slide');
       svgBgSlides.forEach((bg, idx) => {
@@ -718,7 +712,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startHeroAutoPlay = () => {
       stopHeroAutoPlay();
-      if (window.innerWidth <= 768) return; // Keep hero static on mobile matching exact mockup
       heroAutoPlayTimer = setInterval(() => {
         switchHeroSlide(currentHeroIndex + 1);
       }, AUTO_PLAY_DELAY);
@@ -748,14 +741,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dot controls
     heroDots.forEach((dot, idx) => {
-      dot.addEventListener('click', () => {
-        switchHeroSlide(idx);
-        startHeroAutoPlay();
-      });
-    });
-
-    const floorDots = document.querySelectorAll('#heroFloorDots .floor-dot');
-    floorDots.forEach((dot, idx) => {
       dot.addEventListener('click', () => {
         switchHeroSlide(idx);
         startHeroAutoPlay();
@@ -952,31 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Mobile Mockup Hero Swatches & Floor Dots
-  const heroSwatches = document.querySelectorAll('#heroSwatchesCard .swatch-btn');
-  const heroHandImg = document.getElementById('heroMobileHandImg');
-  const heroFloorDots = document.querySelectorAll('#heroFloorDots .floor-dot');
 
-  if (heroSwatches.length > 0) {
-    heroSwatches.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        heroSwatches.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const swatch = btn.getAttribute('data-swatch');
-        if (heroHandImg) {
-          if (swatch === 'blue') {
-            heroHandImg.src = 'assets/banner_1_hand_blue_wave_clean.png';
-          }
-        }
-        if (typeof showToast === 'function') {
-          const names = { blue: 'Signature Blue Wave', pink: 'Blush Pink Wave', beige: 'Alabaster Beige Wave' };
-          showToast(`Selected: ${names[swatch] || swatch}`, 'sparkle');
-        }
-      });
-    });
-  }
 
 
 
