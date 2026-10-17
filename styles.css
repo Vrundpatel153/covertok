@@ -5723,7 +5723,7 @@ img {
     width: 100% !important;
     height: 68px !important;
     padding: 0 !important;
-    background: #DCE8FA !important;
+    background: linear-gradient(180deg, #E2EDFA 0%, #EBF2FC 100%) !important;
     border-bottom: none !important;
     z-index: 100 !important;
     overflow: hidden !important;
@@ -5745,7 +5745,7 @@ img {
   .header-inner {
     position: relative !important;
     z-index: 2 !important;
-    padding: 0 16px !important;
+    padding: 0 14px !important;
     height: 100% !important;
     display: flex !important;
     align-items: center !important;
@@ -5765,18 +5765,25 @@ img {
   }
 
   .brand-logo .logo-img {
-    height: 42px !important;
-    max-height: 42px !important;
+    height: 38px !important;
+    max-height: 38px !important;
     width: auto !important;
     object-fit: contain !important;
     display: block !important;
   }
 
   .header-right {
-    display: flex !important;
+    display: inline-flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    padding-right: 0 !important;
+    gap: 6px !important;
+    background: rgba(255, 255, 255, 0.45) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: 999px !important;
+    padding: 3px 5px !important;
+    box-shadow: 0 4px 16px rgba(100, 140, 220, 0.08) !important;
+    flex-shrink: 0 !important;
   }
 
   #userBtn {
@@ -5785,20 +5792,27 @@ img {
 
   .icon-btn,
   .mobile-toggle-btn {
-    width: 38px !important;
-    height: 38px !important;
+    width: 34px !important;
+    height: 34px !important;
     border-radius: 50% !important;
     background: #FFFFFF !important;
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 2px 6px rgba(100, 140, 220, 0.12) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    color: #111827 !important;
+    color: #0F172A !important;
     padding: 0 !important;
     cursor: pointer !important;
     flex-shrink: 0 !important;
-    transition: transform 0.2s ease !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .header-right .icon-btn svg,
+  .header-right .mobile-toggle-btn svg {
+    width: 17px !important;
+    height: 17px !important;
+    stroke: #0F172A !important;
   }
 
   .icon-btn:active,
@@ -5818,8 +5832,8 @@ img {
 
   /* Exact Mobile Hero Section */
   .hero-section {
-    padding: 8px 12px 20px 12px !important;
-    background: #FFFFFF !important;
+    padding: 6px 12px 20px 12px !important;
+    background: linear-gradient(180deg, #EBF2FC 0%, #F5F9FE 45%, #FFFFFF 100%) !important;
   }
 
   .hero-container {
