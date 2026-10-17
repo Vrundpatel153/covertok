@@ -5863,13 +5863,13 @@ img {
 
   .hero-card {
     min-height: 520px !important;
-    height: clamp(520px, 72vh, 600px) !important;
+    height: clamp(540px, 76vh, 620px) !important;
     border-radius: 28px !important;
     overflow: hidden !important;
     position: relative !important;
     background: #0B132B !important;
-    box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.18), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.85), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.08) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.16), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.08) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
   }
 
   /* Hide obsolete desktop/mockup elements on mobile */
@@ -5923,19 +5923,20 @@ img {
     object-position: center center !important;
   }
   .hero-mob-img-1 {
-    object-position: 76% center !important;
+    object-position: 78% center !important;
   }
   .hero-mob-img-2 {
-    object-position: 84% center !important;
+    object-position: 86% center !important;
   }
   .hero-mob-img-3 {
-    object-position: 74% center !important;
+    object-position: 72% center !important;
   }
 
+  /* Subtle Liquid Light Scrim: Crystal readability without obscuring photography */
   .hero-mob-scrim {
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(115deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.46) 34%, rgba(255, 255, 255, 0.08) 60%, transparent 74%) !important;
+    background: linear-gradient(115deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.32) 42%, transparent 68%) !important;
     pointer-events: none !important;
     z-index: 2 !important;
   }
@@ -5967,15 +5968,15 @@ img {
     pointer-events: auto !important;
   }
 
-  /* Left Hero Content: Kicker + Headline + Subtitle + Feature/Spec Badges */
+  /* Left Hero Content: Editorial Headline, Kicker & Subtitle */
   .hero-content {
     position: absolute !important;
-    top: 26px !important;
+    top: 24px !important;
     left: 20px !important;
-    right: auto !important;
+    right: 20px !important;
     bottom: auto !important;
-    width: 72% !important;
-    max-width: 270px !important;
+    width: auto !important;
+    max-width: 320px !important;
     z-index: 5 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -5996,11 +5997,11 @@ img {
     border-radius: 999px !important;
     border: 1px solid rgba(255, 255, 255, 0.95) !important;
     box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 10px !important;
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
     font-size: 0.58rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.08em !important;
+    letter-spacing: 0.10em !important;
     text-transform: uppercase !important;
   }
 
@@ -6017,88 +6018,62 @@ img {
     display: inline-block !important;
   }
 
-  /* Headline: High-End Fashion Editorial Proportions */
+  /* Headline: High-End Fashion Editorial Proportions (2 Balanced Lines) */
   .hero-headline {
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: clamp(1.48rem, 5.8vw, 1.82rem) !important;
-    font-weight: 850 !important;
-    line-height: 1.06 !important;
-    letter-spacing: -0.025em !important;
+    font-size: clamp(1.68rem, 6.8vw, 2.15rem) !important;
+    font-weight: 900 !important;
+    line-height: 1.03 !important;
+    letter-spacing: -0.035em !important;
     text-transform: uppercase !important;
-    margin: 0 0 8px 0 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 1px !important;
+    margin: 0 0 10px 0 !important;
+    display: block !important;
+  }
+
+  .hero-headline br {
+    display: none !important;
   }
 
   .hero-text-accent {
-    display: block !important;
-    line-height: 1.06 !important;
+    display: inline !important;
+    line-height: inherit !important;
   }
 
   .hero-text-sub {
     display: block !important;
-    line-height: 1.06 !important;
+    line-height: inherit !important;
   }
 
-  /* Subtitle */
+  /* Subtitle: High-Fashion Minimalist Lead */
   .hero-subtext {
     display: block !important;
     font-family: var(--font-body, 'Inter', sans-serif) !important;
-    font-size: 0.73rem !important;
+    font-size: 0.78rem !important;
     font-weight: 500 !important;
-    line-height: 1.4 !important;
-    margin: 0 0 12px 0 !important;
-    max-width: 230px !important;
+    line-height: 1.38 !important;
+    margin: 0 0 0 0 !important;
+    max-width: 250px !important;
+    opacity: 0.9 !important;
   }
 
-  /* Hide bulky vertical icon badges on mobile */
+  /* Hide cluttered technical spec pills and feature badges on mobile to allow breathing room */
+  .hero-specs-row,
   .hero-feature-badges {
     display: none !important;
   }
 
-  /* Specification tags: Sleek inline horizontal wrapped liquid glass micro-pills */
-  .hero-specs-row {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    gap: 5px 6px !important;
-    margin: 0 0 14px 0 !important;
-    max-width: 250px !important;
-  }
-
-  .hero-spec-tag {
-    display: inline-flex !important;
-    align-items: center !important;
-    font-size: 0.54rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.035em !important;
-    text-transform: uppercase !important;
-    padding: 3.5px 8px !important;
-    border-radius: 999px !important;
-    backdrop-filter: blur(14px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
-    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
-    white-space: nowrap !important;
-  }
-
-  .hero-spec-sep {
-    display: none !important;
-  }
-
-  /* Right-Aligned Hand with Phone Case (Only for Slide 0) */
+  /* Right-Aligned Hand with Phone Case (Only for Slide 0) - Bold, Prominent, Editorial Scale */
   .hero-visual {
     position: absolute !important;
-    right: -10px !important;
-    bottom: 0 !important;
+    right: -24px !important;
+    bottom: -18px !important;
     top: auto !important;
     left: auto !important;
     transform: none !important;
-    width: 70% !important;
-    max-width: 300px !important;
-    height: 76% !important;
-    max-height: 480px !important;
+    width: 95% !important;
+    max-width: 390px !important;
+    height: 90% !important;
+    max-height: 550px !important;
     z-index: 4 !important;
     pointer-events: none !important;
     display: flex !important;
@@ -6119,25 +6094,27 @@ img {
   }
 
   .banner-img-hand {
-    width: 100% !important;
+    width: auto !important;
     height: 100% !important;
+    max-height: 100% !important;
+    max-width: 100% !important;
     object-fit: contain !important;
     object-position: right bottom !important;
-    filter: drop-shadow(0 16px 32px rgba(100, 140, 220, 0.22)) !important;
+    filter: drop-shadow(0 26px 52px rgba(15, 35, 60, 0.35)) drop-shadow(0 6px 14px rgba(15, 35, 60, 0.18)) !important;
   }
 
   /* Bottom Pinned Bar: CTA Buttons on Left, Dots on Right */
   .hero-bottom-bar {
     position: absolute !important;
-    bottom: 18px !important;
-    left: 18px !important;
-    right: 18px !important;
+    bottom: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
     top: auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     z-index: 30 !important;
-    width: calc(100% - 36px) !important;
+    width: calc(100% - 32px) !important;
     pointer-events: none !important;
     background: transparent !important;
     border: none !important;
@@ -6158,21 +6135,19 @@ img {
 
   /* Liquid Glass Obsidian CTA Pill */
   .hero-contact-btn {
-    height: 38px !important;
+    height: 40px !important;
     min-width: 0 !important;
     max-width: none !important;
     width: auto !important;
-    padding: 0 18px !important;
-    font-size: 0.72rem !important;
+    padding: 0 20px !important;
+    font-size: 0.74rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.06em !important;
     border-radius: 999px !important;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(30, 41, 59, 0.92) 100%) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
+    background: #0F172A !important;
     border: 1px solid rgba(255, 255, 255, 0.22) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -6187,10 +6162,10 @@ img {
 
   /* Circular Liquid Glass Arrow Button */
   .hero-arrow-btn {
-    width: 38px !important;
-    height: 38px !important;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50% !important;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.72) 100%) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1px solid rgba(255, 255, 255, 0.95) !important;
@@ -6210,8 +6185,8 @@ img {
   }
 
   .hero-arrow-btn svg {
-    width: 15px !important;
-    height: 15px !important;
+    width: 16px !important;
+    height: 16px !important;
   }
 
   /* Liquid Glass Floating Navigation Dock */
@@ -6223,10 +6198,11 @@ img {
     align-items: center !important;
     justify-content: center !important;
     pointer-events: auto !important;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.65) 100%) !important;
+    background: rgba(255, 255, 255, 0.88) !important;
     backdrop-filter: blur(20px) saturate(190%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(190%) !important;
-    padding: 6px 11px !important;
+    height: 40px !important;
+    padding: 0 12px !important;
     border-radius: 999px !important;
     border: 1px solid rgba(255, 255, 255, 0.95) !important;
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.10), inset 0 1px 1.5px rgba(255, 255, 255, 1) !important;
@@ -7193,39 +7169,8 @@ img {
 }
 
 @media (max-width: 360px) {
-  /* Hero and products handled by exact mobile mockup rules */
-
-  /* Right Visual: Hand with wavy blue case */
-  .hero-visual {
-    position: absolute !important;
-    top: 40px !important;
-    right: -4% !important;
-    left: auto !important;
-    bottom: 20px !important;
-    width: 58% !important;
-    max-width: 250px !important;
-    height: auto !important;
-    z-index: 5 !important;
-    pointer-events: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .hero-phone-wrap-hand {
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  .banner-img-hand {
-    max-height: 92% !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    filter: drop-shadow(0 16px 32px rgba(15, 23, 42, 0.18)) !important;
-    margin: 0 !important;
-  }
-
+  /* Hero and products handled by unified mobile mockup rules */
+}
 
 
   /* ==========================================================================
@@ -8179,22 +8124,6 @@ img {
 }
 
 @media (max-width: 360px) {
-  .hero-contact-btn {
-    font-size: 0.68rem !important;
-    padding: 0 10px !important;
-  }
-  .hero-arrow-btn {
-    display: none !important;
-  }
-  .hero-cta-group {
-    max-width: calc(100% - 66px) !important;
-    gap: 4px !important;
-  }
-  .hero-nav-dots {
-    padding: 4px 6px !important;
-    gap: 3px !important;
-  }
-
   /* Products Grid & Cards: Proportional, Beautiful, Compact Mobile Height */
   .products-section {
     padding: 40px 0 36px !important;
