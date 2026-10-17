@@ -120,8 +120,8 @@
         name: 'Frameless Bumper & 3D Lens Armor',
         path: 'assets/blue_protector_layer.png',
         key: 'protector',
-        exploded: { x: -30, y: 32, z: 65 },
-        assembled: { x: 0, y: 0, z: 2 }
+        exploded: { x: -35, y: 38, z: 75 },
+        assembled: { x: 0, y: 0, z: 4 }
       }
     ];
 
@@ -129,9 +129,12 @@
     let loadedCount = 0;
 
     function applyTexture(texture, index, cfg) {
+      if (meshes[index]) return;
+
       texture.generateMipmaps = true;
       texture.minFilter = THREE.LinearMipmapLinearFilter;
       texture.magFilter = THREE.LinearFilter;
+      texture.needsUpdate = true;
 
       const mat = new THREE.MeshBasicMaterial({
         map: texture,
@@ -158,17 +161,40 @@
       renderer.render(scene, camera);
     }
 
+    function loadLayerTexture(cfg, index) {
+      const base64Data = (window.CASE_LAYER_ASSETS && window.CASE_LAYER_ASSETS[cfg.key])
+        ? window.CASE_LAYER_ASSETS[cfg.key]
+        : null;
+      const targetSrc = base64Data || cfg.path;
+
+      const img = new Image();
+      if (!targetSrc.startsWith('data:')) {
+        img.crossOrigin = 'anonymous';
+      }
+
+      function handleLoaded() {
+        if (meshes[index]) return;
+        const texture = new THREE.Texture(img);
+        applyTexture(texture, index, cfg);
+      }
+
+      img.onload = handleLoaded;
+      img.onerror = function (err) {
+        console.warn('Image load error for ' + cfg.name + ', trying TextureLoader fallback...', err);
+        const tl = new THREE.TextureLoader();
+        tl.load(cfg.path, function (tex) {
+          applyTexture(tex, index, cfg);
+        });
+      };
+
+      img.src = targetSrc;
+      if (img.complete && img.naturalWidth > 0) {
+        handleLoaded();
+      }
+    }
+
     layerConfigs.forEach((cfg, index) => {
-      textureLoader.load(
-        cfg.path,
-        function (texture) {
-          applyTexture(texture, index, cfg);
-        },
-        undefined,
-        function (err) {
-          console.warn('Texture load failed for ' + cfg.path, err);
-        }
-      );
+      loadLayerTexture(cfg, index);
     });
 
     // Animation & State Variables
@@ -349,9 +375,11 @@
         mesh.position.set(curX, curY + breath, curZ);
       });
 
-      // Smooth mouse parallax rotation
-      rootGroup.rotation.x += (targetRotX - rootGroup.rotation.x) * 0.08;
-      rootGroup.rotation.y += (targetRotY - rootGroup.rotation.y) * 0.08;
+      // Smooth ambient studio sway + mouse/touch parallax
+      const ambientRotX = Math.cos(animTime * 0.75) * 0.035;
+      const ambientRotY = Math.sin(animTime * 0.9) * 0.055;
+      rootGroup.rotation.x += ((targetRotX + ambientRotX) - rootGroup.rotation.x) * 0.08;
+      rootGroup.rotation.y += ((targetRotY + ambientRotY) - rootGroup.rotation.y) * 0.08;
 
       renderer.render(scene, camera);
     }
