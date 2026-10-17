@@ -194,48 +194,57 @@
     }
   }
 
-  // Render Thumbnails Slider: Shows an interactive horizontal slider of product images below the showcase window
+  // Render Thumbnails Slider: Shows an interactive horizontal slider of product images strictly for the chosen color
   function renderThumbnails(product, activeSrc) {
     const strip = document.getElementById('pdpThumbnails');
     const wrap = document.querySelector('.pdp-thumbs-slider-wrap');
     const prevBtn = document.getElementById('pdpThumbPrev');
     const nextBtn = document.getElementById('pdpThumbNext');
+    const galleryPrev = document.getElementById('galleryPrevBtn');
+    const galleryNext = document.getElementById('galleryNextBtn');
+    const galleryWishlist = document.getElementById('galleryWishlistBtn');
     if (!strip) return;
 
-    // Collect all available images for this product (primary, gallery, and variant images)
+    // Strict Requirement:
+    // If a color is chosen, ONLY that color's product images are visible in the slider.
+    // If one image, then only one thumbnail is shown in the slider; no other colored product images are pooled!
     let displayImgs = [];
 
-    if (product.images && Array.isArray(product.images) && product.images.length > 0) {
-      displayImgs = [...product.images];
-    } else {
-      if (product.primary_image) {
-        displayImgs = [product.primary_image];
-      }
-      if (product.colors && Array.isArray(product.colors)) {
-        product.colors.forEach(c => {
-          if (c.image && !displayImgs.includes(c.image)) displayImgs.push(c.image);
-          if (c.images && Array.isArray(c.images)) {
-            c.images.forEach(img => {
-              if (img && !displayImgs.includes(img)) displayImgs.push(img);
-            });
-          }
-        });
+    if (selectedColor) {
+      if (selectedColor.images && Array.isArray(selectedColor.images) && selectedColor.images.length > 0) {
+        displayImgs = [...selectedColor.images];
+      } else if (selectedColor.image) {
+        displayImgs = [selectedColor.image];
       }
     }
 
-    if (!displayImgs.length && product.primary_image) {
-      displayImgs = [product.primary_image];
+    if (!displayImgs.length && product.colors && Array.isArray(product.colors) && product.colors.length > 0) {
+      const c0 = product.colors[0];
+      if (c0.images && Array.isArray(c0.images) && c0.images.length > 0) {
+        displayImgs = [...c0.images];
+      } else if (c0.image) {
+        displayImgs = [c0.image];
+      }
+    }
+
+    if (!displayImgs.length) {
+      if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+        displayImgs = [...product.images];
+      } else if (product.primary_image) {
+        displayImgs = [product.primary_image];
+      }
     }
 
     // Filter duplicates and invalid entries
     const uniqueImgs = Array.from(new Set(displayImgs.filter(Boolean)));
 
-    if (uniqueImgs.length <= 1) {
+    if (!uniqueImgs.length) {
       if (wrap) wrap.style.display = 'none';
       strip.style.display = 'none';
       return;
     }
 
+    // Always keep slider wrap and strip visible so user sees the thumbnail(s) of the chosen color
     if (wrap) wrap.style.display = 'flex';
     strip.style.display = 'flex';
 
@@ -249,6 +258,13 @@
         counter.textContent = `${currentIdx + 1} / ${total}`;
       }
     }
+
+    // Only show navigation arrows when multiple images exist for this color
+    const hasMultiple = uniqueImgs.length > 1;
+    if (prevBtn) prevBtn.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
+    if (nextBtn) nextBtn.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
+    if (galleryPrev) galleryPrev.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
+    if (galleryNext) galleryNext.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
 
     // If already populated with the exact same items, just update active state and scroll into view
     const currentImgs = Array.from(strip.querySelectorAll('.pdp-thumb-btn')).map(b => b.getAttribute('data-img'));
@@ -265,7 +281,7 @@
       if (activeIdx === -1) activeIdx = 0;
       updateGalleryCounter(activeIdx, uniqueImgs.length);
 
-      // Attach click events
+      // Attach click events: strictly switches angle/image of this chosen color
       strip.querySelectorAll('.pdp-thumb-btn').forEach((btn, idx) => {
         btn.addEventListener('click', () => {
           strip.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('active'));
@@ -273,39 +289,11 @@
           const img = btn.getAttribute('data-img');
           updateMainImage(img);
           updateGalleryCounter(idx, uniqueImgs.length);
-
-          // Synchronize with color swatches if this thumbnail corresponds to a specific color
-          if (product.colors && product.colors.length > 1) {
-            const matchedColor = product.colors.find(c => {
-              if (c.image === img) return true;
-              if (c.images && Array.isArray(c.images) && c.images.includes(img)) return true;
-              return false;
-            });
-            if (matchedColor) {
-              selectedColor = matchedColor;
-              const colorLabel = document.getElementById('selectedColorLabel');
-              if (colorLabel) colorLabel.textContent = matchedColor.name;
-              const stickyColor = document.getElementById('stickyColorName');
-              if (stickyColor) stickyColor.textContent = matchedColor.name;
-              const colorGrid = document.getElementById('colorSwatchesGrid');
-              if (colorGrid) {
-                colorGrid.querySelectorAll('.pdp-color-swatch').forEach(s => {
-                  s.classList.toggle('active', s.getAttribute('data-color') === matchedColor.name);
-                });
-              }
-              recalculatePrice();
-            }
-          }
-
           btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         });
       });
 
       // Hook floating gallery navigation arrows & wishlist
-      const galleryPrev = document.getElementById('galleryPrevBtn');
-      const galleryNext = document.getElementById('galleryNextBtn');
-      const galleryWishlist = document.getElementById('galleryWishlistBtn');
-
       if (galleryPrev) {
         galleryPrev.onclick = () => {
           const thumbs = strip.querySelectorAll('.pdp-thumb-btn');
@@ -341,7 +329,7 @@
         };
       }
 
-      // Hook navigation arrows
+      // Hook thumbnail strip navigation arrows
       if (prevBtn) {
         prevBtn.onclick = () => {
           strip.scrollBy({ left: -150, behavior: 'smooth' });
