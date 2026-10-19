@@ -202,15 +202,15 @@
       if (cart.length === 0) {
         container.innerHTML = `
           <div class="empty-cart-state" style="text-align: center; padding: 48px 20px; color: #94A3B8;">
-            <div style="display:flex; justify-content:center; margin-bottom: 14px; color: #CBD5E1;">
+            <div style="display:flex; justify-content:center; margin-bottom: 14px; color: #D9CFBE;">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <path d="M16 10a4 4 0 0 1-8 0"></path>
               </svg>
             </div>
-            <p style="font-weight: 800; font-size: 1.05rem; color: #121316; margin-bottom: 6px;">Your cart is empty</p>
-            <p style="font-size: 0.875rem; color: #64748B;">Explore our trendy cases and accessories to start shopping.</p>
+            <p style="font-weight: 800; font-size: 1.05rem; color: #171513; margin-bottom: 6px;">Your cart is empty</p>
+            <p style="font-size: 0.875rem; color: #735238;">Explore our trendy cases and accessories to start shopping.</p>
             <a href="collections.html" class="btn btn-pill-dark" style="margin-top: 20px; display: inline-block; padding: 10px 24px; font-size: 0.85rem; border-radius: 999px;">EXPLORE PRODUCTS</a>
           </div>
         `;
@@ -220,21 +220,21 @@
       cart.forEach((item, idx) => {
         const row = document.createElement('div');
         row.className = 'cart-item-row';
-        row.style.cssText = 'display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid #F1F5F9; align-items: center; position: relative;';
+        row.style.cssText = 'display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid #F3EFE6; align-items: center; position: relative;';
         
         const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
 
         row.innerHTML = `
-          <img src="${item.img}" alt="${item.title}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; padding: 4px; flex-shrink: 0;">
+          <img src="${item.img}" alt="${item.title}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background: #F8FAFC; border: 1px solid #EAE5DB; padding: 4px; flex-shrink: 0;">
           <div style="flex: 1; min-width: 0;">
-            <div style="font-weight: 800; font-size: 0.875rem; color: #121316; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.title}</div>
-            ${variantMeta ? `<div style="font-size: 0.775rem; color: #64748B; margin-top: 2px;">${variantMeta}</div>` : ''}
+            <div style="font-weight: 800; font-size: 0.875rem; color: #171513; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.title}</div>
+            ${variantMeta ? `<div style="font-size: 0.775rem; color: #735238; margin-top: 2px;">${variantMeta}</div>` : ''}
             <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-              <div style="font-weight: 800; font-size: 0.925rem; color: #121316;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</div>
-              <div style="display: flex; align-items: center; border: 1px solid #E2E8F0; border-radius: 999px; overflow: hidden; background: #F8FAFC;">
-                <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #475569;">−</button>
+              <div style="font-weight: 800; font-size: 0.925rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</div>
+              <div style="display: flex; align-items: center; border: 1px solid #EAE5DB; border-radius: 999px; overflow: hidden; background: #F8FAFC;">
+                <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #735238;">−</button>
                 <span style="font-size: 0.825rem; font-weight: 700; padding: 0 4px; min-width: 20px; text-align: center;">${item.qty}</span>
-                <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #475569;">+</button>
+                <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #735238;">+</button>
               </div>
             </div>
           </div>
@@ -294,7 +294,7 @@
         <div class="search-modal-content">
           <div class="search-modal-header">
             <div class="search-input-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#735238" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
               <input type="text" id="globalSearchInput" placeholder="Search 75+ phone covers, watch bands, charms..." autocomplete="off">
@@ -346,7 +346,7 @@
       if (filtered.length === 0) {
         resultsContainer.innerHTML = `
           <div style="text-align: center; padding: 40px 20px; color: #94A3B8;">
-            <p style="font-weight: 700; color: #121316;">No products found for "${query}"</p>
+            <p style="font-weight: 700; color: #171513;">No products found for "${query}"</p>
             <p style="font-size: 0.85rem; margin-top: 4px;">Try searching for iPhone, Watch, AirPods, or MagSafe.</p>
           </div>
         `;
@@ -354,7 +354,7 @@
       }
 
       resultsContainer.innerHTML = `
-        <div style="padding: 10px 0; font-size: 0.8rem; font-weight: 700; color: #64748B; text-transform: uppercase; letter-spacing: 0.04em;">
+        <div style="padding: 10px 0; font-size: 0.8rem; font-weight: 700; color: #735238; text-transform: uppercase; letter-spacing: 0.04em;">
           ${q ? `Results (${filtered.length})` : 'Featured Products'}
         </div>
         <div class="search-results-list">
@@ -369,7 +369,7 @@
             </a>
           `).join('')}
         </div>
-        <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #F1F5F9;">
+        <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #F3EFE6;">
           <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" style="font-size: 0.85rem; font-weight: 700; color: #1193FA; display: inline-flex; align-items: center; gap: 6px;">
             <span>View All Products in Catalog</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">

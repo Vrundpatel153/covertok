@@ -56,7 +56,7 @@
     padding: 0 !important;
 }
 .mobile-view .mobile-toggle-btn span {
-  background-color: #0F172A !important;
+  background-color: #171513 !important;
     width: 22px !important;
     height: 2px !important;
 }
@@ -78,7 +78,7 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    color: #0F172A !important;
+    color: #171513 !important;
 }
 .mobile-view /* HERO SECTION ON MOBILE (Exact Match to Reference Mockup) */
   .hero-section {
@@ -94,7 +94,7 @@
   border-radius: 36px;
   overflow: hidden;
   position: relative;
-  background: #18191C;
+  background: #171513;
 }
 .mobile-view .hero-bg-svg {
   display: none;
@@ -153,7 +153,7 @@
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #475569;
+  color: #735238;
   margin-bottom: 8px;
 }
 .mobile-view .hero-kicker-dot {
@@ -161,7 +161,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0F172A;
+  background: #171513;
 }
 .mobile-view .hero-headline {
   font-family: var(--font-heading, 'Outfit', sans-serif);
@@ -170,11 +170,11 @@
     line-height: 1.05;
     letter-spacing: -0.03em;
     margin-bottom: 10px;
-    color: #0F172A;
+    color: #171513;
     text-transform: uppercase;
 }
 .mobile-view .hero-word-accent {
-  color: #1D4ED8;
+  color: #A98135;
     font-weight: 900;
 }
 .mobile-view .hero-subtext {
@@ -182,7 +182,7 @@
     font-family: var(--font-body, 'Inter', sans-serif);
     font-size: 0.8125rem;
     line-height: 1.45;
-    color: #475569;
+    color: #735238;
     max-width: 195px;
     margin-bottom: 0;
 }
@@ -237,7 +237,7 @@
     font-weight: 800;
     letter-spacing: 0.04em;
     border-radius: 999px;
-    background: #0F172A;
+    background: #171513;
     color: #FFFFFF;
     display: inline-flex;
     align-items: center;
@@ -813,7 +813,7 @@
     border-radius: 36px !important;
     overflow: hidden !important;
     position: relative !important;
-    background: #C4D9ED url('assets/hero_bg_abstract_waves.jpg') no-repeat center bottom / cover !important;
+    background: #F8F5ED url('assets/hero_bg_abstract_waves.jpg') no-repeat center bottom / cover !important;
     box-shadow: 0 12px 36px rgba(18, 30, 48, 0.08) !important;
 }
 .mobile-view .hero-bg-svg {
@@ -845,11 +845,11 @@
     line-height: 1.05 !important;
     letter-spacing: -0.03em !important;
     margin-bottom: 10px !important;
-    color: #0F172A !important;
+    color: #171513 !important;
     text-transform: uppercase !important;
 }
 .mobile-view .hero-word-accent {
-  color: #1D4ED8 !important;
+  color: #A98135 !important;
     font-weight: 900 !important;
 }
 .mobile-view .hero-subtext {
@@ -857,7 +857,7 @@
     font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 0.8125rem !important;
     line-height: 1.45 !important;
-    color: #475569 !important;
+    color: #735238 !important;
     max-width: 195px !important;
     margin-bottom: 0 !important;
 }
@@ -903,7 +903,7 @@
     font-weight: 800 !important;
     letter-spacing: 0.04em !important;
     border-radius: 999px !important;
-    background: #0F172A !important;
+    background: #171513 !important;
     color: #FFFFFF !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -947,7 +947,7 @@
   width: 24px !important;
     height: 8px !important;
     border-radius: 999px !important;
-    background: #0F172A !important;
+    background: #171513 !important;
     opacity: 1 !important;
 }
 .mobile-view /* Collections Section */
@@ -1354,7 +1354,7 @@
   font-size: 0.74rem !important;
     line-height: 1.4 !important;
     max-width: 165px !important;
-    color: #1E293B !important;
+    color: #171513 !important;
 }
 .mobile-view .hero-visual {
   width: 48% !important;
@@ -1458,7 +1458,7 @@
   padding: 16px 10px !important;
   border-radius: 18px !important;
   background: #FFFFFF !important;
-  border: 1px solid #EAECEF !important;
+  border: 1px solid #EAE5DB !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -1479,7 +1479,7 @@
 .mobile-view .product-price {
   font-size: 1.15rem !important;
     font-weight: 900 !important;
-    color: #121316 !important;
+    color: #171513 !important;
     margin-bottom: 4px !important;
 }
 .mobile-view .product-name {
