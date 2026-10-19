@@ -75,15 +75,17 @@
     const textureLoader = new THREE.TextureLoader();
     textureLoader.setCrossOrigin('');
 
-    // 3D Multi-Layer Architecture: Base Sierra Blue Phone + 3D Camera Lens Armor + Corner Bumper Guard
+    // 3D Multi-Layer Architecture: Base Sierra Blue Phone + 3D Camera Lens Armor & Top Bumper + Bottom Bumper Guard
     // Docked coordinates are natively (0, 0, 4) with zero offset error, zero gap, and 100% sub-pixel alignment!
-    // 3D Multi-Layer Architecture: Base Sierra Blue Phone + 3D Camera Lens Armor + Corner Bumper Guard
-    // The phone is 100% solid, intact, and complete underneath (zero cuts, zero peeling effect).
-    // The top and bottom layers are the protective guards that lift off in 3D exploded view!
+    // 3D Multi-Layer Architecture: Base Sierra Blue Phone + Unified Frameless Bumper & 3D Lens Armor Guard
+    // Docked coordinates are natively (0, 0, 4) with zero offset error, zero gap, and 100% sub-pixel alignment!
+    // The cover guard is ONE unified layer containing both upper armor body and lower shock bumper.
+    // ZERO side frame or volume button frame (100% frameless sides).
+    // In exploded view, the guard lifts intact as ONE whole unit above the phone!
     const layerConfigs = [
       {
         id: 1,
-        name: 'Titanium Blue Mobile Body',
+        name: 'iPhone 16 Pro Body',
         path: 'assets/blue_phone_body.png',
         key: 'phone',
         exploded: { x: 0, y: 0, z: 0 },
@@ -91,10 +93,10 @@
       },
       {
         id: 2,
-        name: 'Precision Bumper & 3D Lens Armor Guard',
+        name: 'Frameless Bumper & 3D Lens Armor',
         path: 'assets/blue_protector_cover.png',
         key: 'cover_guard',
-        exploded: { x: -80, y: 48, z: 90 },
+        exploded: { x: -55, y: 45, z: 85 },
         assembled: { x: 0, y: 0, z: 4 }
       }
     ];
@@ -304,7 +306,7 @@
 
         if (cycle < 2.5) {
           targetProgress = 1.0;
-          if (statusPill) statusPill.textContent = '3D LENS ARMOR EXPLODED';
+          if (statusPill) statusPill.textContent = '3D LENS ARMOR & BUMPER EXPLODED';
           if (snapBtnText) snapBtnText.textContent = 'ASSEMBLE';
         } else if (cycle < 4.5) {
           const t = (cycle - 2.5) / 2.0;
@@ -317,7 +319,7 @@
         } else if (cycle < 9.0) {
           const t = (cycle - 7.0) / 2.0;
           targetProgress = easeInOutCubic(t);
-          if (statusPill) statusPill.textContent = 'DETACHING LENS ARMOR...';
+          if (statusPill) statusPill.textContent = 'DETACHING LENS ARMOR & BUMPER...';
         }
       }
 
@@ -330,9 +332,9 @@
           animProgress = targetProgress;
         }
         if (statusPill) {
-          if (animProgress > 0.8) statusPill.textContent = '3D LENS ARMOR EXPLODED';
+          if (animProgress > 0.8) statusPill.textContent = '3D LENS ARMOR & BUMPER EXPLODED';
           else if (animProgress < 0.2) statusPill.textContent = 'PRECISION ARMOR ASSEMBLED';
-          else statusPill.textContent = targetProgress === 0.0 ? 'DOCKING LENS ARMOR & BUMPER...' : 'DETACHING LENS ARMOR...';
+          else statusPill.textContent = targetProgress === 0.0 ? 'DOCKING LENS ARMOR & BUMPER...' : 'DETACHING LENS ARMOR & BUMPER...';
         }
       }
 
