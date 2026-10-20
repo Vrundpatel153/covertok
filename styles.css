@@ -3,11 +3,27 @@
    ========================================================================== */
 
 :root {
-  /* Brand Palette: 03 - MIDNIGHT GOLD (Bold. Distinctive. Sophisticated.) */
-  --gold-antique: #A98135;
+  /* --------------------------------------------------------------------------
+     SHOPIFY THEME TOKENS (settings_schema.json mapping)
+     -------------------------------------------------------------------------- */
+  --color-primary: #171513;              /* Primary dark obsidian */
+  --color-accent: #A98135;               /* Luxury warm gold */
+  --color-accent-hover: #8D6A28;
+  --color-accent-subtle: rgba(169, 129, 53, 0.12);
+  --color-bg-main: #F8F5ED;              /* Pearl canvas background */
+  --color-bg-card: #FFFFFF;              /* Pure white surface */
+  --color-bg-cream: #FAF8F2;             /* Soft cream card bg */
+  --color-text-main: #171513;            /* High-contrast body text */
+  --color-text-body: #423830;
+  --color-text-muted: #7A7067;
+  --color-border: #EAE5DB;
+  --color-border-light: rgba(234, 229, 219, 0.95);
+
+  /* Brand Palette Legacy Aliases */
+  --gold-antique: var(--color-accent);
   --gold-pale: #E7D5A4;
-  --pearl-ivory: #F8F5ED;
-  --espresso-black: #171513;
+  --pearl-ivory: var(--color-bg-main);
+  --espresso-black: var(--color-primary);
   --bronze-brown: #735238;
   --bronze-deep: #4A392D;
 
@@ -19,20 +35,20 @@
   /* Semantic Theme Mappings */
   --hero-blue: #E7D5A4;
   --hero-blue-dark: #A98135;
-  --bg-primary: #F8F5ED; /* Pearl for surfaces */
-  --bg-secondary: #F3EFE6; /* Warm soft neutral */
-  --bg-card: #FFFFFF;
+  --bg-primary: var(--color-bg-main);
+  --bg-secondary: #F3EFE6;
+  --bg-card: var(--color-bg-card);
   --card-light-gray: #FAF7F2;
-  --card-border: #EAE5DB;
+  --card-border: var(--color-border);
   
-  --text-dark: #171513; /* High-contrast text */
-  --text-body: #423830;
-  --text-muted: #7A7067;
+  --text-dark: var(--color-primary);
+  --text-body: var(--color-text-body);
+  --text-muted: var(--color-text-muted);
   --text-light: #F8F5ED;
 
-  --accent-blue: #A98135; /* Gold for accents */
-  --accent-gold: #A98135;
-  --primary-cta: #171513; /* Espresso for primary CTAs */
+  --accent-blue: var(--color-accent);
+  --accent-gold: var(--color-accent);
+  --primary-cta: var(--color-primary);
   --primary-cta-hover: #26211C;
 
   --glass-navy: #171513;
@@ -46,8 +62,11 @@
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Geometry & Shadows */
+  --container-max-width: 1440px;
+  --container-padding: clamp(16px, 3vw, 40px);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -58,6 +77,12 @@
   --shadow-md: 0 8px 24px rgba(23, 21, 19, 0.08);
   --shadow-lg: 0 16px 40px rgba(23, 21, 19, 0.12);
   --shadow-hover: 0 20px 48px rgba(169, 129, 53, 0.18);
+
+  /* Transitions & Layering */
+  --z-header: 1000;
+  --z-drawer: 2000;
+  --z-modal: 2500;
+  --z-toast: 3000;
 
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -662,7 +687,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 1: HERO SECTION (From hero.png)
+   SECTION: HERO BANNER (Shopify: sections/hero-banner.liquid)
    ========================================================================== */
 .hero-section {
   position: relative;
@@ -1051,249 +1076,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 2: OUR PRODUCTS (From image.png)
-   ========================================================================== */
-.products-section {
-  padding: 80px 0 60px;
-  background: #FFFFFF;
-}
-
-.section-header-center {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.section-title {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 3rem;
-  letter-spacing: -0.03em;
-  color: var(--text-dark);
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-
-.products-action-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.category-tabs {
-  display: flex;
-  gap: 10px;
-  background: #F4F4F6;
-  padding: 6px;
-  border-radius: var(--radius-pill);
-}
-
-.cat-pill {
-  padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  transition: all var(--transition-fast);
-}
-
-.cat-pill:hover {
-  color: var(--text-dark);
-}
-
-.cat-pill.active {
-  background: #FFFFFF;
-  color: var(--text-dark);
-  box-shadow: var(--shadow-sm);
-}
-
-.view-all-btn {
-  padding: 10px 22px;
-  font-size: 0.875rem;
-}
-
-/* Product Cards Slider (Single-Row Rail) */
-.product-grid {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  gap: 20px !important;
-  scroll-behavior: smooth !important;
-  -webkit-overflow-scrolling: touch !important;
-  scroll-snap-type: x mandatory !important;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-  padding: 8px 4px 18px 4px !important;
-  width: 100% !important;
-}
-.product-grid::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-.product-card {
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-smooth);
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-}
-
-.product-card-inner {
-  display: flex;
-  flex-direction: column;
-}
-
-.product-image-box {
-  position: relative;
-  background-color: #FFFFFF !important;
-  border: 1px solid var(--card-border, #EAE5DB);
-  border-radius: 24px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(23, 21, 19, 0.02);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.product-card:hover .product-image-box {
-  border-color: var(--gold-antique, #A98135);
-  box-shadow: 0 12px 28px rgba(169, 129, 53, 0.12);
-}
-
-.product-img {
-  max-width: 88%;
-  max-height: 88%;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  transition: transform var(--transition-smooth);
-}
-
-.product-card:hover .product-img {
-  transform: scale(1.05);
-}
-
-.product-arrow-btn {
-  display: none !important;
-}
-
-.product-image-box,
-.col-prod-media,
-.card-media-stage,
-.card-img-wrap {
-  cursor: pointer;
-}
-
-.btn-card-buy,
-.col-buy-btn,
-.card-buy-btn {
-  background: var(--espresso-black, #171513) !important;
-  color: #FFFFFF !important;
-  font-family: var(--font-body) !important;
-  font-weight: 700 !important;
-  font-size: 0.8125rem !important;
-  border-radius: 999px !important;
-  border: none !important;
-  cursor: pointer !important;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 4px 12px rgba(23, 21, 19, 0.18) !important;
-  text-decoration: none !important;
-}
-
-.btn-card-buy:hover,
-.col-buy-btn:hover,
-.card-buy-btn:hover {
-  background: #26211C !important;
-  transform: translateY(-1px) scale(1.02) !important;
-  box-shadow: 0 6px 18px rgba(169, 129, 53, 0.25) !important;
-}
-
-.btn-card-cart {
-  background: var(--gold-antique, #A98135) !important;
-  color: #FFFFFF !important;
-  border: 1.5px solid var(--gold-antique, #A98135) !important;
-  border-radius: 999px !important;
-  font-weight: 700 !important;
-  font-size: 0.8125rem !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
-  box-shadow: 0 2px 8px rgba(169, 129, 53, 0.2) !important;
-}
-
-.btn-card-cart:hover {
-  background: #8F6C2A !important;
-  color: #FFFFFF !important;
-  border-color: #8F6C2A !important;
-  transform: translateY(-1px) !important;
-}
-
-.quick-add-overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(14px);
-  transition: all var(--transition-smooth);
-}
-
-.product-card:hover .quick-add-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.btn-quick-add {
-  background: var(--espresso-black, #171513);
-  color: #FFFFFF;
-  padding: 10px 22px;
-  border-radius: var(--radius-pill);
-  font-weight: 700;
-  font-size: 0.8125rem;
-  box-shadow: 0 6px 16px rgba(23, 21, 19, 0.2);
-  transition: var(--transition-fast);
-}
-
-.btn-quick-add:hover {
-  background: #26211C;
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(169, 129, 53, 0.25);
-}
-
-.product-info {
-  padding: 20px 8px 0;
-}
-
-.product-price {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.625rem;
-  color: var(--espresso-black, #171513);
-  margin-bottom: 6px;
-}
-
-.product-name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.4;
-  color: #8C8C8C;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-/* ==========================================================================
-   SECTION: STYLE MEETS PROTECTION (Exact Bento Grid from Reference Image)
+   SECTION: STYLE MEETS PROTECTION (Shopify: sections/style-showcase.liquid)
    ========================================================================== */
 .style-section {
   padding: 50px 20px 80px;
@@ -1502,7 +1285,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 4: POPULAR BRANDS / SIRPHIRE COLLECTIONS (From image copy 3.png)
+   SECTION: BRANDS GRID (Shopify: sections/brands-grid.liquid)
    ========================================================================== */
 .brands-section {
   padding: 70px 0 80px;
@@ -1645,7 +1428,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 5: TEMPERED GLASS BACK COVERS (From image copy 4.png)
+   SECTION: TEMPERED GLASS (Shopify: sections/tempered-glass.liquid)
    ========================================================================== */
 .glass-section {
   padding: 40px 0 60px;
@@ -1975,7 +1758,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 6: IPHONE COVER ARTISTIC SHOWCASE (From image copy 5.png)
+   SECTION: ARTISTIC SHOWCASE (Shopify: sections/artistic-showcase.liquid)
    ========================================================================== */
 .iphone-cover-showcase {
   padding: 80px 0;
@@ -2153,7 +1936,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 7: SHOP OUR PRODUCT & DUAL PROMO (From image copy 6.png Top)
+   SECTION: DUAL PROMO BANNERS (Shopify: sections/dual-promo.liquid)
    ========================================================================== */
 .shop-dual-section {
   padding: 60px 0 80px;
@@ -2330,7 +2113,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 8: FAQ & CUSTOMER SUPPORT (From image copy 6.png Bottom)
+   SECTION: FAQ & SUPPORT (Shopify: sections/faq.liquid)
    ========================================================================== */
 .support-faq-section {
   background: var(--dark-section-bg);
@@ -2601,7 +2384,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION 9: TRUST BANNER
+   SECTION: TRUST GUARANTEES (Shopify: sections/trust-banner.liquid)
    ========================================================================== */
 .trust-banner-section {
   padding: 48px 0;
@@ -2650,7 +2433,7 @@ img {
 }
 
 /* ==========================================================================
-   SITE FOOTER
+   SITE FOOTER (Shopify: sections/footer.liquid)
    ========================================================================== */
 .site-footer {
   background: var(--espresso-black, #171513);
@@ -4121,7 +3904,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION: GO ULTRA. GO FRAMELESS. (Matching Reference Image 2)
+   SECTION: FRAMELESS SERIES (Shopify: sections/frameless-series.liquid)
    ========================================================================== */
 /* ==========================================================================
    SECTION 3: GO ULTRA. GO FRAMELESS (100% Coded Component Architecture)
@@ -4682,7 +4465,7 @@ img {
 }
 
 /* ==========================================================================
-   SECTION: BUILD YOUR OWN COMBO (100% Coded Elements, Pure Visual Background)
+   SECTION: COMBO BUILDER (Shopify: sections/combo-deals.liquid)
    ========================================================================== */
 .combo-section {
   position: relative;
@@ -5534,7 +5317,7 @@ img {
 
 
 /* ==========================================================================
-   SECTION: SHOP OUR COLLECTIONS (Cloned Exactly from Reference Image)
+   SECTION: BENTO COLLECTIONS (Shopify: sections/bento-collections.liquid)
    ========================================================================== */
 .collections-section {
   padding: 80px 0 90px;
@@ -7750,1274 +7533,8 @@ img {
 }
 
 
-@media (max-width: 768px) {
-  /* ==========================================================================
-     EXACT MOBILE PRODUCTS SECTION (Matching media_1792203592226.png)
-     ========================================================================== */
-  .products-section {
-    padding: 36px 0 40px !important;
-    background: linear-gradient(165deg, #F8F5ED 0%, #F3EFE6 35%, #EDE6D8 70%, #F8F5ED 100%) !important;
-    position: relative !important;
-    overflow: hidden !important;
-  }
-
-  .products-glass-plates {
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    pointer-events: none !important;
-    z-index: 1 !important;
-  }
-  .prod-glass-plate {
-    position: absolute !important;
-    background: rgba(255, 255, 255, 0.45) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
-    box-shadow: 0 12px 32px rgba(169, 129, 53, 0.12) !important;
-  }
-  .prod-plate-tr {
-    top: 10px !important;
-    right: -24px !important;
-    width: 140px !important;
-    height: 140px !important;
-    border-radius: 40px !important;
-  }
-  .prod-plate-bl {
-    bottom: 30px !important;
-    left: -35px !important;
-    width: 165px !important;
-    height: 165px !important;
-    border-radius: 50px !important;
-    background: rgba(255, 255, 255, 0.4) !important;
-  }
-  .prod-plate-br {
-    bottom: -25px !important;
-    right: -30px !important;
-    width: 180px !important;
-    height: 180px !important;
-    border-radius: 50px !important;
-    background: rgba(255, 255, 255, 0.38) !important;
-  }
-
-  .products-section-container {
-    padding: 0 !important;
-    max-width: 100% !important;
-    position: relative !important;
-    z-index: 2 !important;
-  }
-
-  /* Top Section Header */
-  .section-header-center {
-    display: none !important;
-  }
-
-  .products-header-wrap {
-    display: flex !important;
-    align-items: flex-end !important;
-    justify-content: space-between !important;
-    padding: 0 16px 20px 16px !important;
-    position: relative !important;
-    z-index: 3 !important;
-    gap: 12px !important;
-  }
-  .products-header-text {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  .products-section-title {
-    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    margin: 0 0 6px 0 !important;
-    line-height: 1.02 !important;
-    letter-spacing: -0.035em !important;
-    font-weight: 900 !important;
-  }
-  .title-our {
-    font-size: clamp(2rem, 8vw, 2.45rem) !important;
-    color: var(--espresso-black, #171513) !important;
-    -webkit-text-fill-color: var(--espresso-black, #171513) !important;
-    font-weight: 900 !important;
-    display: block !important;
-  }
-  .title-products {
-    font-size: clamp(2rem, 8vw, 2.45rem) !important;
-    color: var(--gold-antique, #A98135) !important;
-    -webkit-text-fill-color: var(--gold-antique, #A98135) !important;
-    font-weight: 900 !important;
-    display: block !important;
-  }
-  .products-section-subtitle {
-    font-size: 0.8125rem !important;
-    font-weight: 500 !important;
-    color: var(--text-muted, #7A7067) !important;
-    line-height: 1.35 !important;
-    margin: 0 !important;
-    max-width: 215px !important;
-  }
-
-  .products-view-catalog-btn {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    background: var(--bg-primary, #F8F5ED) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1.5px solid var(--gold-antique, #A98135) !important;
-    padding: 9px 15px !important;
-    border-radius: 999px !important;
-    font-size: 0.7rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
-    color: var(--bronze-brown, #735238) !important;
-    text-decoration: none !important;
-    box-shadow: 0 4px 16px rgba(169, 129, 53, 0.15) !important;
-    flex-shrink: 0 !important;
-    margin-bottom: 4px !important;
-    white-space: nowrap !important;
-  }
-  .products-view-catalog-btn:active {
-    transform: scale(0.96) !important;
-  }
-
-  /* Product Slider Track & Cards */
-  .product-slider-wrapper {
-    position: relative !important;
-    width: 100% !important;
-    z-index: 3 !important;
-    display: block !important;
-  }
-  .product-slider-track {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    gap: 10px !important;
-    padding: 8px 16px 14px 16px !important;
-    scrollbar-width: none !important;
-    -webkit-overflow-scrolling: touch !important;
-    box-sizing: border-box !important;
-  }
-  .product-slider-track::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  /* Circular Floating Navigation Arrows */
-  .prod-slider-nav-btn {
-    position: absolute !important;
-    top: 38% !important;
-    z-index: 10 !important;
-    width: 32px !important;
-    height: 32px !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.92) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-    border: 1px solid var(--card-border, #EAE5DB) !important;
-    box-shadow: 0 4px 14px rgba(23, 21, 19, 0.14) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    cursor: pointer !important;
-    color: var(--espresso-black, #171513) !important;
-    padding: 0 !important;
-    transition: transform 0.2s ease !important;
-  }
-  .prod-slider-nav-btn:active {
-    transform: scale(0.92) !important;
-  }
-  .prod-prev-btn {
-    left: 6px !important;
-  }
-  .prod-next-btn {
-    right: 6px !important;
-  }
-
-  /* Product Cards (Exactly 2 visible in viewport) */
-  .product-card {
-    flex: 0 0 calc(50% - 5px) !important;
-    width: calc(50% - 5px) !important;
-    min-width: 165px !important;
-    max-width: calc(50% - 5px) !important;
-    scroll-snap-align: start !important;
-    background: #FFFFFF !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1.5px solid var(--card-border, #EAE5DB) !important;
-    border-radius: 24px !important;
-    padding: 8px 8px 12px 8px !important;
-    box-shadow: 0 8px 24px rgba(23, 21, 19, 0.06) !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    display: flex !important;
-    flex-direction: column !important;
-    overflow: visible !important;
-  }
-  .product-card-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    width: 100% !important;
-  }
-
-  /* Product Image Box */
-  .product-image-box {
-    position: relative !important;
-    width: 100% !important;
-    aspect-ratio: 1 / 1.05 !important;
-    height: auto !important;
-    min-height: 0 !important;
-    border-radius: 18px !important;
-    overflow: hidden !important;
-    background: #FFFFFF !important;
-    border: 1px solid var(--card-border, #EAE5DB) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-  }
-  .product-img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    display: block !important;
-  }
-
-  /* Luxury Gold Discount Badge */
-  .prod-discount-pill {
-    display: block !important;
-    position: absolute !important;
-    top: 8px !important;
-    left: 8px !important;
-    z-index: 4 !important;
-    background: rgba(231, 213, 164, 0.45) !important;
-    color: var(--bronze-brown, #735238) !important;
-    font-size: 0.62rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.02em !important;
-    text-transform: uppercase !important;
-    padding: 4px 8px !important;
-    border-radius: 999px !important;
-    border: 1px solid rgba(169, 129, 53, 0.3) !important;
-    box-shadow: 0 2px 8px rgba(169, 129, 53, 0.15) !important;
-    line-height: 1 !important;
-  }
-
-  /* Wishlist Heart Button */
-  .card-wishlist-btn {
-    position: absolute !important;
-    top: 8px !important;
-    right: 8px !important;
-    z-index: 4 !important;
-    width: 28px !important;
-    height: 28px !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
-    border: 1px solid var(--card-border, #EAE5DB) !important;
-    box-shadow: 0 2px 8px rgba(23, 21, 19, 0.08) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    color: var(--espresso-black, #171513) !important;
-  }
-
-  /* 5 Color Swatches */
-  .prod-card-swatches {
-    display: flex !important;
-    align-items: center !important;
-    gap: 5px !important;
-    margin: 9px 0 5px 0 !important;
-    padding: 0 2px !important;
-  }
-  .prod-swatch-dot {
-    width: 15px !important;
-    height: 15px !important;
-    border-radius: 50% !important;
-    background-color: var(--swatch-color) !important;
-    border: 1.5px solid transparent !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    transition: transform 0.2s ease !important;
-    flex-shrink: 0 !important;
-  }
-  .prod-swatch-dot.active {
-    border-color: #FFFFFF !important;
-    box-shadow: 0 0 0 1.5px var(--gold-antique, #A98135) !important;
-    transform: scale(1.1) !important;
-  }
-
-  /* Price */
-  .product-price {
-    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 1.05rem !important;
-    font-weight: 900 !important;
-    color: var(--espresso-black, #171513) !important;
-    margin: 2px 0 2px 0 !important;
-    letter-spacing: -0.02em !important;
-    padding: 0 2px !important;
-  }
-
-  /* Title */
-  .product-name {
-    font-size: 0.68rem !important;
-    font-weight: 800 !important;
-    line-height: 1.25 !important;
-    color: var(--espresso-black, #171513) !important;
-    text-transform: uppercase !important;
-    margin: 0 0 9px 0 !important;
-    padding: 0 2px !important;
-    min-height: 2.5em !important;
-  }
-  .product-name a {
-    color: inherit !important;
-    text-decoration: none !important;
-  }
-
-  /* Dual Action Buttons Row */
-  .card-buttons-row {
-    display: flex !important;
-    align-items: center !important;
-    gap: 6px !important;
-    margin-top: auto !important;
-    width: 100% !important;
-  }
-  .btn-card-cart {
-    flex: 0.9 !important;
-    height: 32px !important;
-    border-radius: 999px !important;
-    background: var(--gold-antique, #A98135) !important;
-    border: 1.5px solid var(--gold-antique, #A98135) !important;
-    color: #FFFFFF !important;
-    font-size: 0.72rem !important;
-    font-weight: 800 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 4px !important;
-    padding: 0 8px !important;
-    cursor: pointer !important;
-    box-shadow: 0 2px 6px rgba(169, 129, 53, 0.25) !important;
-  }
-  .btn-card-buy {
-    flex: 1.1 !important;
-    height: 32px !important;
-    border-radius: 999px !important;
-    background: var(--espresso-black, #171513) !important;
-    border: none !important;
-    color: #FFFFFF !important;
-    font-size: 0.72rem !important;
-    font-weight: 800 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 4px !important;
-    padding: 0 10px !important;
-    cursor: pointer !important;
-    box-shadow: 0 3px 10px rgba(23, 21, 19, 0.25) !important;
-    white-space: nowrap !important;
-  }
-
-  /* Bottom 4 Pagination Dots */
-  .products-pagination-dots {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-    margin-top: 14px !important;
-    position: relative !important;
-    z-index: 3 !important;
-  }
-  .prod-page-dot {
-    width: 6px !important;
-    height: 6px !important;
-    border-radius: 50% !important;
-    background: var(--gold-pale, #E7D5A4) !important;
-    border: none !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
-  }
-  .prod-page-dot.active {
-    width: 24px !important;
-    height: 5px !important;
-    border-radius: 999px !important;
-    background: var(--espresso-black, #171513) !important;
-  }
-
-  /* Collections Section */
-  .collections-section {
-    padding: 36px 0 48px !important;
-  }
-  .collections-header {
-    margin-bottom: 20px !important;
-  }
-  .collections-pills-bar {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    justify-content: flex-start !important;
-    padding: 4px 16px !important;
-    gap: 8px !important;
-    margin-bottom: 18px !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-  .col-pill-btn {
-    padding: 7px 14px !important;
-    font-size: 0.78rem !important;
-    flex-shrink: 0 !important;
-  }
-  .col-banners-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    padding: 0 16px !important;
-    margin-bottom: 18px !important;
-  }
-  .col-products-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 12px !important;
-    padding: 6px 14px 18px !important;
-  }
-
-  /* Our Products Section */
-  .products-section {
-    padding: 36px 0 48px !important;
-  }
-  .filter-tags-row {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    justify-content: flex-start !important;
-    padding: 4px 16px !important;
-    gap: 8px !important;
-    margin-bottom: 18px !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-  .tag-btn {
-    padding: 7px 16px !important;
-    font-size: 0.78rem !important;
-    flex-shrink: 0 !important;
-    white-space: nowrap !important;
-  }
-  .product-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 12px !important;
-    padding: 6px 14px 18px !important;
-  }
-  .product-card {
-    border-radius: 16px !important;
-    padding: 12px !important;
-  }
-  .product-img-box {
-    height: 160px !important;
-  }
-
-  /* Go Ultra Go Frameless (100% Coded Component Architecture - Mobile) */
-  .frameless-section {
-    padding: 36px 0 44px !important;
-    background-color: #FAF9F7 !important;
-  }
-  .frameless-showcase-container {
-    padding: 0 14px !important;
-  }
-  .frameless-stage-card {
-    display: flex !important;
-    flex-direction: column !important;
-    min-height: auto !important;
-    border-radius: 26px !important;
-    background: #ECEAE4 !important;
-    padding: 24px 16px 20px !important;
-    gap: 18px !important;
-  }
-  .fl-stage-media-wrap {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 10 !important;
-    order: 2 !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
-  }
-  .fl-stage-media-img {
-    width: 100% !important;
-    height: 100% !important;
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
-    object-fit: cover !important;
-    object-position: 55% center !important;
-  }
-  .fl-color-pill {
-    padding: 5px 11px 5px 8px !important;
-    font-size: 0.72rem !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
-    white-space: nowrap !important;
-  }
-  .fl-pill-orange {
-    top: 44% !important;
-    left: 12% !important;
-    right: auto !important;
-  }
-  .fl-pill-black {
-    top: 22% !important;
-    left: 47% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-  }
-  .fl-pill-silver {
-    top: 38% !important;
-    left: 70% !important;
-    right: auto !important;
-  }
-  .fl-stepper-rail {
-    display: none !important;
-  }
-
-  @media (max-width: 400px) {
-    .fl-color-pill {
-      padding: 4px 9px 4px 6px !important;
-      font-size: 0.68rem !important;
-      gap: 5px !important;
-    }
-    .fl-pill-orange {
-      top: 44% !important;
-      left: 10% !important;
-    }
-    .fl-pill-black {
-      top: 22% !important;
-      left: 47% !important;
-    }
-    .fl-pill-silver {
-      top: 38% !important;
-      left: 68% !important;
-    }
-  }
-  .fl-stage-content {
-    display: contents !important;
-  }
-  .fl-header-group {
-    order: 1 !important;
-    margin-bottom: 0 !important;
-  }
-  .fl-headline {
-    font-size: 2.1rem !important;
-    margin-bottom: 10px !important;
-  }
-  .fl-subtext {
-    font-size: 0.88rem !important;
-    margin-bottom: 0 !important;
-    max-width: 100% !important;
-  }
-  .fl-features-list {
-    order: 3 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
-    margin-bottom: 0 !important;
-  }
-  .fl-feat-item {
-    gap: 12px !important;
-  }
-  .fl-feat-icon {
-    width: 34px !important;
-    height: 34px !important;
-  }
-  .fl-feat-title {
-    font-size: 0.88rem !important;
-  }
-  .fl-feat-desc {
-    font-size: 0.74rem !important;
-  }
-  .fl-offer-card {
-    order: 4 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 16px 18px !important;
-    border-radius: 20px !important;
-  }
-  .fl-offer-top {
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 12px !important;
-  }
-  .fl-offer-price {
-    font-size: 2.1rem !important;
-  }
-  .fl-offer-shop-btn {
-    padding: 10px 18px !important;
-    font-size: 0.84rem !important;
-    min-height: 44px !important;
-  }
-  .frameless-bottom-cards {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    margin-top: 16px !important;
-  }
-  .fl-bottom-card {
-    padding: 10px 14px 10px 10px !important;
-    border-radius: 18px !important;
-    background: #EAE7E1 !important;
-  }
-  .fl-card-media {
-    width: 100px !important;
-    height: 58px !important;
-    border-radius: 12px !important;
-  }
-  .fl-card-title {
-    font-size: 0.88rem !important;
-  }
-  .fl-card-sub {
-    font-size: 0.72rem !important;
-  }
-
-  /* Style Meets Protection Bento */
-  .style-section {
-    padding: 36px 0 48px !important;
-  }
-  .bento-protection-header {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    margin-bottom: 16px !important;
-  }
-  .bento-pills-container {
-    width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-  .bento-pills-row {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 6px !important;
-  }
-  .bento-filter-pill {
-    padding: 6px 14px !important;
-    font-size: 0.78rem !important;
-    flex-shrink: 0 !important;
-  }
-  .bento-protection-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-  .bento-item-drop {
-    width: 100% !important;
-    max-height: 380px !important;
-  }
-  .bento-item-drop .bento-item-img {
-    object-fit: cover !important;
-    max-height: 380px !important;
-  }
-  .bento-mosaic-row-1 {
-    display: grid !important;
-    grid-template-columns: 1.35fr 1fr !important;
-    gap: 8px !important;
-  }
-  .bento-mosaic-row-2 {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 6px !important;
-  }
-  .bento-grid-item {
-    width: 100% !important;
-    min-height: 0 !important;
-    height: auto !important;
-  }
-  .bento-item-img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-
-  /* Tempered Glass 3D Stage (Clean Studio Lighting - Responsive Mobile) */
-  .glass-section {
-    padding: 36px 0 44px !important;
-  }
-  .glass-banner {
-    padding: 32px 18px 28px !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-  }
-  .glass-watermark {
-    display: none !important;
-  }
-  .glass-banner-content {
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 24px !important;
-  }
-  .glass-graphic-wrap {
-    width: 100% !important;
-    min-height: 270px !important;
-    height: 270px !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-  }
-  .webgl-stage-wrap {
-    width: 100% !important;
-    height: 270px !important;
-    max-width: 100% !important;
-  }
-  .webgl-fallback-backdrop {
-    max-height: 250px !important;
-    max-width: 85% !important;
-    width: auto !important;
-  }
-  .exploded-case-canvas {
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 260px !important;
-  }
-  .stage-core-spotlight {
-    width: 260px !important;
-    height: 260px !important;
-    filter: blur(28px) !important;
-  }
-  .stage-pedestal-platform {
-    width: 220px !important;
-    height: 36px !important;
-    bottom: 8px !important;
-  }
-  .pedestal-disc-base {
-    width: 200px !important;
-    height: 28px !important;
-    filter: blur(10px) !important;
-  }
-  .glass-title {
-    font-size: clamp(1.8rem, 6.5vw, 2.3rem) !important;
-    margin-bottom: 18px !important;
-  }
-  .glass-specs-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8px !important;
-    padding-bottom: 16px !important;
-    margin-bottom: 18px !important;
-  }
-  .spec-col {
-    padding: 10px 4px !important;
-    border-radius: 12px !important;
-    text-align: center !important;
-  }
-  .spec-heading {
-    font-size: 0.62rem !important;
-    letter-spacing: 0.05em !important;
-    margin-bottom: 3px !important;
-  }
-  .spec-val {
-    font-size: 0.76rem !important;
-    line-height: 1.25 !important;
-    font-weight: 700 !important;
-  }
-  .glass-action-row {
-    justify-content: flex-start !important;
-    gap: 18px !important;
-  }
-  .glass-price {
-    font-size: 2rem !important;
-  }
-  .glass-cta-btn {
-    padding: 10px 22px !important;
-    font-size: 0.82rem !important;
-  }
-
-  /* SECTION 6: MANDALA ARTISTIC DECK (Zero Bleed, Perfectly Centered on Mobile) */
-  .mandala-deck-section {
-    padding: 36px 0 44px !important;
-    overflow-x: clip !important;
-  }
-  .mandala-main-title {
-    font-size: clamp(1.8rem, 6vw, 2.4rem) !important;
-    line-height: 1.15 !important;
-    margin-bottom: 8px !important;
-  }
-  .mandala-subtext {
-    font-size: 0.85rem !important;
-    max-width: 320px !important;
-    margin: 0 auto 20px !important;
-  }
-  .mandala-stage, .deck-animated-stage {
-    max-width: 100% !important;
-    width: 100% !important;
-    height: 320px !important;
-    margin: 0 auto !important;
-    position: relative !important;
-    overflow: hidden !important;
-  }
-  .deck-card {
-    width: 210px !important;
-    height: 280px !important;
-    left: 50% !important;
-    top: 20px !important;
-    margin-left: -105px !important;
-    border-radius: 20px !important;
-  }
-  .deck-card-img {
-    border-radius: 20px !important;
-  }
-  .deck-card-1 { animation: deckMobileCard1 8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important; }
-  .deck-card-2 { animation: deckMobileCard2 8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important; }
-  .deck-card-3 { animation: deckMobileCard3 8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important; }
-  .deck-card-4 { animation: deckMobileCard4 8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important; }
-  .deck-card-5 { animation: deckMobileCard5 8s cubic-bezier(0.4, 0, 0.2, 1) infinite !important; }
-
-  /* SECTION 7: SHOP DUAL & SHOWCASE (Responsive Stack on Mobile) */
-  .shop-dual-section {
-    padding: 36px 0 44px !important;
-    overflow: hidden !important;
-  }
-  .shop-dual-header {
-    margin-bottom: 24px !important;
-  }
-  .dual-main-title {
-    font-size: clamp(1.75rem, 6vw, 2.2rem) !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.02em !important;
-    margin-bottom: 8px !important;
-  }
-  .dual-subtext {
-    font-size: 0.85rem !important;
-    line-height: 1.45 !important;
-    max-width: 100% !important;
-  }
-  .dual-cards-row {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-  .promo-card {
-    border-radius: 20px !important;
-  }
-  .promo-card-body {
-    padding: 22px 18px !important;
-  }
-  .promo-discount-badge {
-    font-size: 0.78rem !important;
-    padding: 4px 10px !important;
-  }
-  .promo-copy {
-    font-size: 0.85rem !important;
-    margin: 8px 0 16px !important;
-  }
-  .promo-media-box {
-    min-height: 180px !important;
-    height: 180px !important;
-  }
-  .promo-case-img {
-    max-height: 160px !important;
-  }
-  .showcase-photo-box {
-    min-height: 280px !important;
-    height: 300px !important;
-    border-radius: 20px !important;
-    overflow: hidden !important;
-  }
-  .showcase-photo-img {
-    border-radius: 20px !important;
-  }
-  .showcase-photo-actions {
-    top: 14px !important;
-    left: 14px !important;
-    gap: 8px !important;
-  }
-  .showcase-action-btn {
-    padding: 8px 15px !important;
-    font-size: 0.75rem !important;
-  }
-
-  /* Swatches and Quick-Add Zero Collision on Mobile */
-  .product-image-box .quick-add-overlay {
-    display: none !important;
-  }
-  .home-swatches-wrap .card-color-swatches {
-    position: static !important;
-    transform: none !important;
-    display: inline-flex !important;
-    padding: 3px 8px !important;
-    background: rgba(241, 245, 249, 0.95) !important;
-    box-shadow: none !important;
-    border: 1px solid rgba(226, 232, 240, 0.9) !important;
-    margin: 0 !important;
-  }
-
-  /* Social Proof Toast: Hide on Mobile to avoid blocking user interactions */
-  .social-proof-toast {
-    display: none !important;
-  }
-}
-
-/* Mobile Mandala Deck Card Keyframes */
-@keyframes deckMobileCard1 {
-  0%, 12% { transform: translateY(20px) rotate(-2deg) scale(0.95); }
-  38%, 66% { transform: translateY(0) rotate(0deg) scale(1); }
-  88%, 100% { transform: translateY(20px) rotate(-2deg) scale(0.95); }
-}
-@keyframes deckMobileCard2 {
-  0%, 12% { transform: translate(30px, -10px) rotate(10deg) scale(0.92); }
-  38%, 66% { transform: translate(20px, -6px) rotate(8deg) scale(0.96); }
-  88%, 100% { transform: translate(30px, -10px) rotate(10deg) scale(0.92); }
-}
-@keyframes deckMobileCard3 {
-  0%, 12% { transform: translate(-10px, -24px) rotate(-6deg) scale(0.92); }
-  38%, 66% { transform: translate(-6px, -14px) rotate(-4deg) scale(0.96); }
-  88%, 100% { transform: translate(-10px, -24px) rotate(-6deg) scale(0.92); }
-}
-@keyframes deckMobileCard4 {
-  0%, 12% { transform: translate(-30px, 8px) rotate(-10deg) scale(0.9); }
-  38%, 66% { transform: translate(-18px, 4px) rotate(-7deg) scale(0.95); }
-  88%, 100% { transform: translate(-30px, 8px) rotate(-10deg) scale(0.9); }
-}
-@keyframes deckMobileCard5 {
-  0%, 12% { transform: translate(-25px, 25px) rotate(-14deg) scale(0.88); }
-  38%, 66% { transform: translate(-16px, 14px) rotate(-10deg) scale(0.92); }
-  88%, 100% { transform: translate(-25px, 25px) rotate(-14deg) scale(0.88); }
-}
-
-@media (max-width: 480px) {
-  /* Hero section handled by exact mobile mockup rules */
-}
-
-@media (max-width: 360px) {
-  /* Products Grid & Cards: Proportional, Beautiful, Compact Mobile Height */
-  .products-section {
-    padding: 40px 0 36px !important;
-  }
-  .section-title {
-    font-size: 1.85rem !important;
-    margin-bottom: 16px !important;
-  }
-  .products-action-bar {
-    margin-bottom: 24px !important;
-  }
-  .view-all-btn {
-    padding: 8px 18px !important;
-    font-size: 0.78rem !important;
-  }
-  .product-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 12px !important;
-    padding: 6px 14px 18px !important;
-  }
-  .product-card {
-    border-radius: 16px !important;
-    background: #FFFFFF !important;
-    border: 1px solid #EAECEF !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-  }
-  .product-card-inner {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  .product-image-box,
-  .col-prod-media {
-    min-height: 0 !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    padding: 12px !important;
-    border-radius: 14px !important;
-    background: #FFFFFF !important;
-    border: 1px solid #F1F5F9 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-  }
-  .product-img,
-  .col-prod-img {
-    max-height: 88% !important;
-    max-width: 88% !important;
-    object-fit: contain !important;
-    mix-blend-mode: multiply !important;
-  }
-  .product-arrow-btn {
-    display: none !important;
-  }
-  .product-info,
-  .col-prod-info {
-    padding: 8px 10px 12px !important;
-  }
-  .product-price,
-  .col-price-now {
-    font-size: 0.95rem !important;
-    font-weight: 800 !important;
-    color: #121316 !important;
-    margin-bottom: 4px !important;
-  }
-  .product-name,
-  .col-prod-title {
-    font-size: 0.8125rem !important;
-    font-weight: 600 !important;
-    line-height: 1.3 !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-    color: #1E293B !important;
-    min-height: 2.2em !important;
-    margin: 2px 0 6px !important;
-  }
-  .card-buttons-row {
-    display: flex !important;
-    gap: 6px !important;
-    align-items: center !important;
-    margin-top: 8px !important;
-  }
-  .btn-card-cart,
-  .col-add-cart-btn {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    padding: 0 !important;
-    border-radius: 999px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #A98135 !important;
-    border: 1px solid #8E6B2A !important;
-    color: #FFFFFF !important;
-  }
-  .btn-card-cart span,
-  .col-add-cart-btn span {
-    display: none !important;
-  }
-  .btn-card-buy,
-  .col-buy-btn {
-    flex: 1 !important;
-    height: 36px !important;
-    padding: 0 10px !important;
-    font-size: 0.78rem !important;
-    font-weight: 700 !important;
-    border-radius: 999px !important;
-    background: #171513 !important;
-    border: none !important;
-    color: #FFFFFF !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    white-space: nowrap !important;
-  }
-
-  /* Bento Grid Mobile */
-  .bento-grid {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
-  .bento-card-tall {
-    min-height: 320px !important;
-    height: 320px !important;
-  }
-  .bento-card-square {
-    height: 200px !important;
-  }
-  .bento-col-mid,
-  .bento-col-right {
-    gap: 14px !important;
-  }
-  .bento-card-footer {
-    bottom: 14px !important;
-    left: 14px !important;
-    padding: 6px 12px !important;
-  }
-  .bento-brand-name {
-    font-size: 0.82rem !important;
-  }
-}
-
-/* Universal Covertok Theme Dropdown Styling */
-select, .custom-select, .catalog-select {
-  color-scheme: light;
-  accent-color: #0F172A;
-  border-radius: 14px;
-  background-color: #FFFFFF;
-  color: #0F172A;
-  font-family: inherit;
-  font-weight: 600;
-}
-
-select option, optgroup {
-  background-color: #FFFFFF;
-  color: #0F172A;
-  font-size: 0.9rem;
-  padding: 10px 14px;
-}
-
 /* ==========================================================================
-   HOMEPAGE SINGLE-ROW INFINITE PRODUCT SLIDERS (STRICT 1-ROW GUARANTEE)
-   ========================================================================== */
-.product-slider-wrapper {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.slider-nav-btn {
-  position: absolute;
-  top: 48%;
-  transform: translateY(-50%);
-  z-index: 15;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #0F172A;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.slider-nav-btn:hover {
-  background: #0F172A;
-  color: #FFFFFF;
-  border-color: #0F172A;
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.24);
-}
-
-.slider-nav-btn:active {
-  transform: translateY(-50%) scale(0.94);
-}
-
-.slider-nav-btn.prev {
-  left: -20px;
-}
-
-.slider-nav-btn.next {
-  right: -20px;
-}
-
-.product-slider-track,
-.col-products-grid,
-.product-grid {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  scroll-behavior: smooth !important;
-  -webkit-overflow-scrolling: touch !important;
-  scroll-snap-type: x mandatory !important;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-  gap: 20px !important;
-  padding: 10px 4px 20px 4px !important;
-  width: 100% !important;
-  cursor: grab;
-}
-
-.product-slider-track:active,
-.col-products-grid:active,
-.product-grid:active {
-  cursor: grabbing;
-}
-
-.product-slider-track::-webkit-scrollbar,
-.col-products-grid::-webkit-scrollbar,
-.product-grid::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
-.product-slider-track .product-card,
-.col-products-grid .product-card,
-.product-grid .product-card,
-.col-prod-card {
-  flex: 0 0 270px !important;
-  width: 270px !important;
-  min-width: 270px !important;
-  max-width: 270px !important;
-  scroll-snap-align: start !important;
-  display: flex !important;
-  flex-direction: column !important;
-  box-sizing: border-box !important;
-}
-
-@media (max-width: 1024px) {
-  .slider-nav-btn.prev {
-    left: 4px;
-  }
-  .slider-nav-btn.next {
-    right: 4px;
-  }
-  .product-slider-track .product-card,
-  .col-products-grid .product-card,
-  .product-grid .product-card,
-  .col-prod-card {
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    min-width: 240px !important;
-    max-width: 240px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .slider-nav-btn {
-    width: 36px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  }
-  .slider-nav-btn.prev {
-    left: 4px;
-  }
-  .slider-nav-btn.next {
-    right: 4px;
-  }
-  .product-slider-track:not(#productGrid),
-  .col-products-grid {
-    gap: 12px !important;
-    padding: 6px 14px 18px 14px !important;
-  }
-  .product-slider-track:not(#productGrid) .product-card,
-  .col-products-grid .product-card,
-  .col-prod-card {
-    flex: 0 0 215px !important;
-    width: 215px !important;
-    min-width: 215px !important;
-    max-width: 215px !important;
-    scroll-snap-align: start !important;
-  }
-}
-
-
-
-/* ==========================================================================
-   SECTION 2: OUR BESTSELLER (Exact 100% Pixel-Perfect Clone)
-   ========================================================================== */
-.bestseller-section {
-  position: relative;
-  width: 100%;
-  background-color: #F8F5EE;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Master Desktop Container (Exact 1672px x 941px Canvas matching mockup) */
-/* ==========================================================================
-   SECTION: OUR BESTSELLER (Exact 100% Coded Clone from Reference Mockup)
+   SECTION: OUR BESTSELLER (Shopify: sections/bestsellers.liquid)
    ========================================================================== */
 .bestseller-section {
   position: relative;
@@ -9876,7 +8393,7 @@ select option, optgroup {
 
 
 /* ==========================================================================
-   SECTION: POPULAR CHOICES (Exact 100% Coded Bento Product Grid)
+   SECTION: POPULAR CHOICES BENTO (Shopify: sections/popular-choices.liquid)
    ========================================================================== */
 .popular-choices-section {
   position: relative;
@@ -10528,7 +9045,7 @@ select option, optgroup {
 }
 
 /* ==========================================================================
-   OUR STORY SECTION (Exact 100% Clone from Covetok Story_ More Than a Case.png)
+   SECTION: BRAND STORY (Shopify: sections/story.liquid)
    ========================================================================== */
 .story-section {
   position: relative;
@@ -10889,7 +9406,7 @@ select option, optgroup {
 }
 
 /* ==========================================================================
-   SECTION: INSTAGRAM COMMUNITY / SEEN OUT THERE (Exact 100% Coded Clone)
+   SECTION: INSTAGRAM SHOP (Shopify: sections/instagram-community.liquid)
    ========================================================================== */
 .instagram-community-section {
   background-color: #F6F4EF;
@@ -11516,7 +10033,7 @@ select option, optgroup {
 }
 
 /* ==========================================================================
-   COVERTOK COMMUNITY VIDEOS & CUSTOMER REVIEWS (Luxury Social Proof)
+   SECTION: VIDEO REELS & CUSTOMER REVIEWS (Shopify: sections/community-reviews.liquid)
    ========================================================================== */
 
 .community-videos-section {
