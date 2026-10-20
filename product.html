@@ -183,11 +183,6 @@
           <h1 class="pdp-product-title" id="pdpProductTitle">Magnetic Wireless Power Bank</h1>
           <h2 class="pdp-product-subtitle" id="pdpProductSubtitle">Ultra Sleek 5000mAh/10000 mAh</h2>
 
-          <!-- Description -->
-          <p class="pdp-hero-desc" id="pdpHeroDesc">
-            Stay charged in style with Covertok. This ultra-slim 5000mAh/10000 mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery level.
-          </p>
-
           <!-- Rating & Verified Choice Badge -->
           <div class="pdp-rating-row">
             <div class="pdp-stars">★★★★★</div>
@@ -199,6 +194,16 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               Verified Buyer Choice
             </span>
+          </div>
+
+          <!-- Price Block (Kept at top right below rating & title) -->
+          <div class="pdp-price-card">
+            <div class="pdp-price-row">
+              <span class="pdp-price-current" id="pdpPriceDisplay">Rs. 2,099.00</span>
+              <span class="pdp-price-original" id="pdpOriginalPrice">Rs. 3,249.00</span>
+              <span class="pdp-save-badge" id="pdpDiscountTag">Save Rs. 500.00 (33% OFF)</span>
+            </div>
+            <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
           </div>
 
           <!-- Capacity Selector -->
@@ -230,17 +235,7 @@
             </div>
           </div>
 
-          <!-- Price Block -->
-          <div class="pdp-price-card">
-            <div class="pdp-price-row">
-              <span class="pdp-price-current" id="pdpPriceDisplay">Rs. 2,099.00</span>
-              <span class="pdp-price-original" id="pdpOriginalPrice">Rs. 3,249.00</span>
-              <span class="pdp-save-badge" id="pdpDiscountTag">Save Rs. 500.00 (33% OFF)</span>
-            </div>
-            <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
-          </div>
-
-          <!-- Actions CTA Row: Qty Stepper, Add to Cart, Wishlist, Buy It Now -->
+          <!-- Actions CTA Row: Qty Stepper, Add to Cart, Buy It Now -->
           <div class="pdp-actions-row">
             <div class="pdp-actions-top-row">
               <!-- Qty Stepper -->
@@ -293,7 +288,38 @@
     </div>
   </section>
 
-  <!-- 6. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) -->
+  <!-- 6. PRODUCT OVERVIEW & DESCRIPTION (With Read More / See Less Toggle) -->
+  <section class="pdp-description-section" id="productDescriptionSection">
+    <div class="pdp-container">
+      <div class="pdp-description-card" id="pdpOverviewBox">
+        <div class="pdp-description-header">
+          <h3 class="pdp-description-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A98135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Product Description &amp; Overview</span>
+          </h3>
+        </div>
+        <div class="pdp-description-wrap collapsed" id="pdpOverviewContentWrap">
+          <div class="pdp-description-body" id="pdpOverviewText">
+            <p>Stay charged in style with Covertok. This ultra-slim 5000mAh/10000 mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your exact battery percentage at a single glance.</p>
+            <p>Engineered with high-grade magnetic alignment, it snaps firmly to any MagSafe-compatible iPhone for rapid, cable-free power wherever your day takes you. Perfectly pocket-sized, it slips effortlessly into your jeans, blazer pocket, or bag without any awkward weight.</p>
+            <div class="pdp-description-highlights">
+              <div class="desc-highlight-item">✅ <strong>High Capacity Battery:</strong> Keep your iPhone powered through work, travel, and commutes.</div>
+              <div class="desc-highlight-item">✅ <strong>Ultra-Slim Aerospace Design:</strong> Fits naturally in one hand while using your phone.</div>
+              <div class="desc-highlight-item">✅ <strong>Digital LED Display:</strong> Clear numeric readout of remaining battery life.</div>
+              <div class="desc-highlight-item">✅ <strong>Dual Mode Charging:</strong> Supports magnetic wireless output plus bi-directional USB-C fast charging.</div>
+              <div class="desc-highlight-item">✅ <strong>6-Month Warranty:</strong> Covered against internal battery defects and malfunctions.</div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="pdp-readmore-btn" id="pdpSeeMoreBtn" aria-expanded="false" aria-controls="pdpOverviewContentWrap">
+          <span id="pdpSeeMoreText">Read more</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) -->
   <section class="pdp-bundle-section" id="bundleSection">
     <div class="pdp-container">
       <div class="pdp-bundle-header">
@@ -815,17 +841,18 @@
   <div id="storeSharedModalsMount"></div>
 
   <!-- Scripts -->
-  <script src="assets/pdp_controller.js"></script>
-  <script src="assets/community_reviews_controller.js"></script>
   <script src="assets/store_core.js"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
+  <script src="assets/pdp_controller.js"></script>
+  <script src="assets/community_reviews_controller.js"></script>
 
   <script>
     // Accordion Toggle Logic
     document.querySelectorAll('.pdp-accordion-trigger').forEach(trigger => {
       trigger.addEventListener('click', () => {
-        const item = trigger.closest('.pdp-accordion-item');
+        const item = trigger.closest('.pdp-accordion-card') || trigger.closest('.pdp-accordion-item');
+        if (!item) return;
         const isOpen = item.classList.contains('open');
         item.classList.toggle('open', !isOpen);
         trigger.setAttribute('aria-expanded', !isOpen);

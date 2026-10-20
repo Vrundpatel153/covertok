@@ -243,7 +243,7 @@
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
             <span>Add to Cart</span>
           </button>
-          <button type="button" class="card-buy-btn" onclick="window.location.href='product.html?id=${product.id}'" style="display: inline-flex; align-items: center; justify-content: center; padding: 9px 18px; border-radius: 999px; background: #0F172A; border: none; color: #FFFFFF; font-size: 0.825rem; font-weight: 700; cursor: pointer;">
+          <button type="button" class="card-buy-btn" onclick="window.location.href='product.html?id=${product.id}'">
             <span>Buy Now</span>
           </button>
         </div>

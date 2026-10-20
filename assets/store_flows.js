@@ -69,7 +69,9 @@
   }
 
   // Global Drawer & Modal Triggers
+  window.renderCartUI = renderCartUI;
   window.CovertokFlows = {
+    renderCartUI: renderCartUI,
     openCart: function() {
       openOverlay('cartDrawerOverlay', 'cartDrawerSheet');
       renderCartUI();

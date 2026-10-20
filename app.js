@@ -406,15 +406,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Feature tags in Style Meets Protection
-  document.querySelectorAll('.feature-tag').forEach(tag => {
-    tag.addEventListener('click', function() {
-      document.querySelectorAll('.feature-tag').forEach(t => t.classList.remove('active'));
-      this.classList.add('active');
-      showToast(`Selected attribute: ${this.textContent}`, 'check');
-    });
-  });
-
   // ==========================================
   // 7. FAQ ACCORDION INTERACTIVITY
   // ==========================================
@@ -825,29 +816,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         socialProofToast.style.display = 'none';
       }, 300);
-    });
-  }
-
-  // Style Meets Protection Bento Filter Pills Handler
-  const bentoPills = document.querySelectorAll('.bento-filter-pill');
-  const bentoCards = document.querySelectorAll('.bento-grid-item');
-  if (bentoPills.length > 0) {
-    bentoPills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        bentoPills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        const filterKey = pill.getAttribute('data-bento-filter');
-        
-        bentoCards.forEach(card => {
-          const target = card.getAttribute('data-bento-target');
-          if (target === filterKey) {
-            card.classList.add('highlighted');
-            setTimeout(() => card.classList.remove('highlighted'), 2000);
-          } else {
-            card.classList.remove('highlighted');
-          }
-        });
-      });
     });
   }
 

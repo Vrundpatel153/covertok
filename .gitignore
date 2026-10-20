@@ -38,3 +38,5 @@ case_repair_comparison_walkthrough.png
 test_*.py
 audit_*.py
 used_assets_list.txt
+test_*.png
+cutout_*.png

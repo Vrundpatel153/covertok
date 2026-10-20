@@ -141,7 +141,14 @@
     const seeMoreText = document.getElementById('pdpSeeMoreText');
 
     if (overviewText) {
-      overviewText.textContent = product.description || 'The Rhode Lip Case is a stylish and functional phone cover designed with a built-in slot for your favorite lip balm. Crafted with silky soft silicone and elevated camera bumpers to keep your phone protected while your lip balm is always within reach.';
+      if (product.raw_html && product.raw_html.trim().length > 20) {
+        overviewText.innerHTML = product.raw_html;
+      } else if (product.description) {
+        const paras = product.description.split(/\n\n+/);
+        overviewText.innerHTML = paras.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+      } else {
+        overviewText.innerHTML = '<p>Stay charged in style with Covertok. Designed for modern lifestyles – lightweight, sleek, and durable.</p>';
+      }
       
       // Reset collapsed state on product load
       if (overviewWrap) {
@@ -152,7 +159,7 @@
         overviewBox.classList.remove('open');
       }
       if (seeMoreText) {
-        seeMoreText.textContent = 'See more';
+        seeMoreText.textContent = 'Read more';
       }
       if (seeMoreBtn) {
         seeMoreBtn.setAttribute('aria-expanded', 'false');
@@ -174,7 +181,7 @@
           overviewWrap.classList.remove('expanded');
           overviewWrap.classList.add('collapsed');
           overviewBox?.classList.remove('open');
-          if (seeMoreText) seeMoreText.textContent = 'See more';
+          if (seeMoreText) seeMoreText.textContent = 'Read more';
           seeMoreBtn.setAttribute('aria-expanded', 'false');
         }
       });
@@ -1206,38 +1213,67 @@
   // Setup Add To Cart & Sticky Actions
   function setupCartActions() {
     function performAdd() {
-      if (!currentProduct) return;
-      const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price);
-      const addonsSum = selectedAddons.reduce((s, a) => s + a.price, 0);
-      const chosenImg = document.getElementById('pdpMainImg')?.src || (selectedColor ? selectedColor.image : currentProduct.primary_image);
+      const prod = currentProduct || (window.CovertokProducts ? (window.CovertokProducts.find(p => String(p.id) === '9888955924778') || window.CovertokProducts[0]) : null) || {
+        id: '9888955924778',
+        title: 'Magnetic Wireless Power Bank',
+        price: 2099,
+        primary_image: 'assets/products/9888955924778/1_50035509362986.png'
+      };
+
+      const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : prod.price);
+      const addonsSum = (selectedAddons || []).reduce((s, a) => s + a.price, 0);
+      const chosenImg = document.getElementById('pdpMainImg')?.getAttribute('src') || (selectedColor ? selectedColor.image : prod.primary_image);
+
+      const cartItem = {
+        id: String(prod.id),
+        title: `${prod.title}${selectedCapacity ? ' (' + selectedCapacity + ')' : ''}`,
+        price: Number(basePrice + addonsSum) || 2099,
+        qty: Number(currentQty) || 1,
+        img: chosenImg,
+        color: selectedColor ? selectedColor.name : 'Black',
+        model: selectedCapacity || selectedModel || '5000 mAh',
+        addons: selectedAddons || []
+      };
 
       if (window.CovertokStore && window.CovertokStore.addToCart) {
-        window.CovertokStore.addToCart({
-          id: currentProduct.id,
-          title: `${currentProduct.title}${selectedCapacity ? ' (' + selectedCapacity + ')' : ''}`,
-          price: basePrice + addonsSum,
-          qty: currentQty,
-          img: chosenImg,
-          color: selectedColor ? selectedColor.name : 'Black',
-          model: selectedCapacity || selectedModel || '',
-          addons: selectedAddons
-        });
+        window.CovertokStore.addToCart(cartItem);
+      } else {
+        try {
+          const CART_KEY = 'covertok_cart_items_v2';
+          const raw = localStorage.getItem(CART_KEY);
+          const cart = raw ? JSON.parse(raw) : [];
+          const existingIdx = cart.findIndex(i => i.id === cartItem.id && i.color === cartItem.color && i.model === cartItem.model);
+          if (existingIdx > -1) {
+            cart[existingIdx].qty += cartItem.qty;
+          } else {
+            cart.push(cartItem);
+          }
+          localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        } catch(e) {}
+      }
 
-        // Add any selected bundle items
-        if (selectedBundleItems && selectedBundleItems.length > 0) {
-          selectedBundleItems.forEach(bundle => {
-            const bImg = bundle.name.includes('Case') ? 'assets/bundle_clear_case.jpg' : (bundle.name.includes('Cable') ? 'assets/bundle_usbc_cable.jpg' : 'assets/bundle_lens_protector.jpg');
+      // Add any selected bundle items
+      if (selectedBundleItems && selectedBundleItems.length > 0) {
+        selectedBundleItems.forEach(bundle => {
+          const bImg = bundle.name.includes('Case') ? 'assets/bundle_clear_case.jpg' : (bundle.name.includes('Cable') ? 'assets/bundle_usbc_cable.jpg' : 'assets/bundle_lens_protector.jpg');
+          if (window.CovertokStore && window.CovertokStore.addToCart) {
             window.CovertokStore.addToCart({
               id: 'bundle-' + bundle.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
               title: bundle.name,
-              price: bundle.price,
+              price: Number(bundle.price) || 299,
               qty: 1,
               img: bImg,
               color: '',
               model: ''
             });
-          });
-        }
+          }
+        });
+      }
+
+      // Ensure drawer is open and rendered with latest items
+      if (window.renderCartUI) window.renderCartUI();
+      if (window.CovertokFlows && window.CovertokFlows.openCart) {
+        window.CovertokFlows.openCart();
       }
     }
 
@@ -1264,7 +1300,6 @@
       }, 300);
     });
 
-
     // Pincode checker simulation
     const pinBtn = document.getElementById('checkPinBtn');
     const pinInput = document.getElementById('pinInput');
@@ -1284,6 +1319,7 @@
   // Setup Sticky Bar on scroll (Passive, requestAnimationFrame throttled)
   function setupStickyBar() {
     const bar = document.getElementById('pdpStickyBar');
+    const wa = document.getElementById('floatingWhatsAppBtn');
     if (!bar) return;
 
     let ticking = false;
@@ -1292,8 +1328,12 @@
         window.requestAnimationFrame(() => {
           if (window.scrollY > 480) {
             bar.classList.add('visible');
+            document.body.classList.add('sticky-bar-visible');
+            if (wa) wa.classList.add('elevated');
           } else {
             bar.classList.remove('visible');
+            document.body.classList.remove('sticky-bar-visible');
+            if (wa) wa.classList.remove('elevated');
           }
           ticking = false;
         });

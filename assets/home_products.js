@@ -77,7 +77,7 @@
         return `
           <div class="col-prod-card" data-id="${p.id}" style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAE5DB; overflow: hidden; position: relative;">
             <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 20px; cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
-              ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(231, 213, 164, 0.45); color: #735238; border: 1px solid rgba(169, 129, 53, 0.35); font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
+              ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #F5E8C7; color: #63431D; border: 1px solid #D4B982; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
               <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;" loading="lazy">
               ${swatchesHtml}
             </div>
@@ -204,7 +204,7 @@
         <div class="product-card" data-id="${p.id}" onclick="window.location.href='product.html?id=${p.id}'" style="cursor: pointer;">
           <div class="product-card-inner">
             <div class="product-image-box" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAE5DB; display: flex; align-items: center; justify-content: center; padding: 20px; aspect-ratio: 1 / 1;">
-              ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(231, 213, 164, 0.45); color: #735238; border: 1px solid rgba(169, 129, 53, 0.35); font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
+              ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #F5E8C7; color: #63431D; border: 1px solid #D4B982; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
               <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;">
             </div>
             <div class="product-info" style="padding-top: 12px; display: flex; flex-direction: column;">

@@ -1404,9 +1404,136 @@ html, body {
   margin: 0;
 }
 
-/* 6. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) */
+/* 6. PRODUCT OVERVIEW & DESCRIPTION (Luxury Card With Read More / See Less Toggle) */
+.pdp-description-section {
+  padding: 16px 0 24px;
+}
+
+.pdp-description-card {
+  background: #FFFFFF;
+  border: 1px solid #EAE5DB;
+  border-radius: 14px;
+  padding: 30px 36px;
+  box-shadow: var(--pdp-shadow-sm);
+  transition: border-color 0.2s ease;
+}
+
+.pdp-description-card:hover {
+  border-color: #D5CEBE;
+}
+
+.pdp-description-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #F1EFEA;
+}
+
+.pdp-description-title {
+  font-family: var(--pdp-font-head);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #171513;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdp-description-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdp-description-wrap.collapsed {
+  max-height: 95px;
+}
+
+.pdp-description-wrap.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 75%, #FFFFFF 100%);
+  pointer-events: none;
+}
+
+.pdp-description-wrap.expanded {
+  max-height: 900px;
+}
+
+.pdp-description-body p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #4B4742;
+  margin: 0 0 12px 0;
+}
+
+.pdp-description-body ul {
+  margin: 8px 0 12px 20px;
+  padding: 0;
+}
+
+.pdp-description-body li {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #4B4742;
+  margin-bottom: 6px;
+}
+
+.pdp-description-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 16px;
+  background: #FAF8F5;
+  border-radius: 10px;
+  border: 1px solid #EAE5DB;
+}
+
+.desc-highlight-item {
+  font-size: 0.85rem;
+  color: #2D2721;
+  line-height: 1.45;
+}
+
+.pdp-readmore-btn {
+  background: none;
+  border: none;
+  color: #A98135;
+  font-family: var(--pdp-font-head);
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0 2px;
+  margin-top: 6px;
+  transition: color 0.2s ease;
+}
+
+.pdp-readmore-btn:hover {
+  color: #171513;
+}
+
+.pdp-readmore-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.pdp-readmore-btn[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* 7. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) */
 .pdp-bundle-section {
-  padding: 28px 0 36px;
+  padding: 24px 0 32px;
 }
 
 .pdp-bundle-header {
@@ -2496,7 +2623,7 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* 13. RESPONSIVE BREAKPOINTS */
+/* 13. RESPONSIVE BREAKPOINTS & MOBILE ARCHITECTURE */
 @media (max-width: 1024px) {
   .pdp-hero-grid {
     grid-template-columns: 1fr;
@@ -2504,12 +2631,20 @@ html, body {
   }
   .pdp-gallery-col {
     position: static;
-    max-width: 600px;
+    max-width: 580px;
     margin: 0 auto;
     width: 100%;
   }
-  .pdp-reels-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .pdp-details-specs-card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 28px 24px;
+  }
+  .pdp-specs-col-left {
+    border-right: none;
+    border-bottom: 1px solid #EAE5DB;
+    padding-right: 0;
+    padding-bottom: 28px;
   }
   .pdp-reviews-layout {
     grid-template-columns: 1fr;
@@ -2522,52 +2657,555 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  /* Prevent Any Horizontal Viewport Shift */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  .pdp-main-section {
+    padding: 12px 0 40px;
+    overflow-x: hidden;
+  }
+
+  .pdp-container {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  /* 1. HIDE BREADCRUMBS ON MOBILE PER USER REQUEST */
+  .pdp-breadcrumbs-strip {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Header adjustments */
+  .pdp-header-container {
+    padding: 12px 16px;
+  }
   .pdp-nav-links {
     display: none;
   }
-  .pdp-reels-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .pdp-brand-logo-img {
+    height: 32px;
   }
-  .pdp-reviews-feed-grid {
+
+  /* 2. MEDIA GALLERY MOBILE REDESIGN - PERFECT CENTERING & RATIO */
+  .pdp-hero-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .pdp-promise-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .pdp-gallery-col {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
-  .pdp-related-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .pdp-gallery-wrap {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+    width: 100% !important;
+    align-items: center !important;
   }
-  .pdp-floating-whatsapp {
-    bottom: 80px;
-    right: 16px;
-    padding: 9px 14px;
-    font-size: 0.775rem;
+
+  .pdp-main-stage {
+    width: 100% !important;
+    max-width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    background: #F6F4EE !important;
+    border-radius: 18px !important;
+    border: 1px solid rgba(0, 0, 0, 0.07) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px !important;
   }
-  .pdp-m-sticky-left {
-    max-width: 40%;
+
+  .pdp-main-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 12px !important;
   }
-  .pdp-m-sticky-add-btn {
-    flex: 1;
-    padding: 12px 16px;
+
+  .pdp-zoom-btn {
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .pdp-vertical-thumbs {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    padding: 4px 4px 8px !important;
+    scrollbar-width: none !important;
+  }
+
+  .pdp-vertical-thumbs::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .pdp-vthumb {
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    border-radius: 12px !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid rgba(0, 0, 0, 0.09) !important;
+    padding: 4px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .pdp-vthumb.active {
+    border-color: #171513 !important;
+    box-shadow: 0 0 0 2px #171513, 0 4px 10px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  .pdp-vthumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+  }
+
+  /* 3. PRODUCT HERO HEADINGS & CTA */
+  .pdp-config-col {
+    width: 100%;
+  }
+
+  .pdp-product-title {
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .pdp-product-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .pdp-hero-desc {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .pdp-price-current {
+    font-size: 1.65rem;
+  }
+
+  .pdp-actions-top-row {
+    gap: 10px;
+  }
+
+  .pdp-qty-picker {
+    height: 48px;
+    min-width: 100px;
+    padding: 0 12px;
+  }
+
+  .btn-pdp-cart {
+    height: 48px;
+    font-size: 0.85rem;
+  }
+
+  .btn-pdp-buynow {
+    height: 48px;
+    font-size: 0.85rem;
+  }
+
+  /* 4. TRUST BADGES STRIP (2x2 Balanced Luxury Grid) */
+  .pdp-trust-bar-section {
+    padding: 16px 0 12px;
+  }
+
+  .pdp-trust-bar-card {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px 10px !important;
+    padding: 18px 14px !important;
+    border-radius: 14px !important;
+  }
+
+  .pdp-trust-bar-col {
+    padding: 6px 8px !important;
+    border-right: none !important;
+  }
+
+  .pdp-trust-bar-col:nth-child(odd) {
+    border-right: 1px solid #EAE5DB !important;
+  }
+
+  .pdp-trust-bar-col:nth-child(1),
+  .pdp-trust-bar-col:nth-child(2) {
+    border-bottom: 1px solid #EAE5DB !important;
+    padding-bottom: 14px !important;
+  }
+
+  .pdp-trust-bar-col:nth-child(3),
+  .pdp-trust-bar-col:nth-child(4) {
+    padding-top: 6px !important;
+  }
+
+  .pdp-trust-title {
     font-size: 0.825rem;
+    margin-bottom: 2px;
+  }
+
+  .pdp-trust-sub {
+    font-size: 0.725rem;
+  }
+
+  /* 4B. PRODUCT DESCRIPTION BLOCK (Mobile Optimized Card with Read More / See Less) */
+  .pdp-description-section {
+    padding: 12px 0 16px;
+  }
+
+  .pdp-description-card {
+    padding: 20px 18px !important;
+    border-radius: 14px !important;
+    background: #FFFFFF;
+    box-shadow: var(--pdp-shadow-sm) !important;
+  }
+
+  .pdp-description-header {
+    margin-bottom: 12px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .pdp-description-title {
+    font-size: 1.15rem !important;
+  }
+
+  .pdp-description-wrap.collapsed {
+    max-height: 85px !important;
+  }
+
+  .pdp-description-wrap.collapsed::after {
+    height: 48px !important;
+  }
+
+  .pdp-description-wrap.expanded {
+    max-height: 1200px !important;
+  }
+
+  .pdp-description-body p {
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .pdp-description-body ul {
+    margin: 6px 0 10px 18px !important;
+    padding: 0 !important;
+  }
+
+  .pdp-description-body li {
+    font-size: 0.825rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .pdp-description-highlights {
+    padding: 14px 12px !important;
+    gap: 8px !important;
+    margin-top: 10px !important;
+    border-radius: 10px !important;
+  }
+
+  .desc-highlight-item {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .pdp-readmore-btn {
+    font-size: 0.85rem !important;
+    padding: 6px 0 2px !important;
+    margin-top: 4px !important;
+  }
+
+  /* 5. COMPLETE YOUR SETUP (Smooth Horizontal Touch Carousel) */
+  .pdp-bundle-section {
+    padding: 20px 0 24px;
+  }
+
+  .pdp-bundle-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 14px;
+  }
+
+  .pdp-bundle-title {
+    font-size: 1.35rem;
+  }
+
+  .pdp-bundle-selected-total {
+    font-size: 0.85rem;
+    color: var(--pdp-gold);
+    font-weight: 800;
+  }
+
+  .pdp-bundle-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 12px !important;
+    padding: 4px 2px 14px !important;
+    scrollbar-width: none !important;
+  }
+
+  .pdp-bundle-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .pdp-bundle-card {
+    flex: 0 0 160px !important;
+    min-width: 160px !important;
+    max-width: 160px !important;
+    scroll-snap-align: start !important;
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .pdp-bundle-card-img-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bundle-card-title-label {
+    font-size: 0.775rem;
+    line-height: 1.3;
+  }
+
+  .bundle-current-price {
+    font-size: 0.825rem;
+  }
+
+  /* 6. DETAILS & TECHNICAL SPECIFICATIONS (Single Column Luxury Card) */
+  .pdp-details-specs-section {
+    padding: 12px 0 20px;
+  }
+
+  .pdp-details-specs-card {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 22px 18px !important;
+    border-radius: 14px !important;
+  }
+
+  .pdp-specs-col-left {
+    border-right: none !important;
+    border-bottom: 1px solid #EAE5DB !important;
+    padding-right: 0 !important;
+    padding-bottom: 24px !important;
+  }
+
+  .pdp-subheading {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .pdp-details-paragraph {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .pdp-feature-item {
+    gap: 12px;
+  }
+
+  .pdp-feature-circle-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .pdp-feature-title {
+    font-size: 0.9rem;
+  }
+
+  .pdp-feature-sub {
+    font-size: 0.8rem;
+  }
+
+  .pdp-specs-table {
+    width: 100%;
+  }
+
+  .specs-label {
+    width: 38%;
+    min-width: 90px;
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+
+  .specs-value {
+    width: 62%;
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+
+  /* 7. ACCORDION CARDS */
+  .pdp-accordions-section {
+    padding: 8px 0 20px;
+  }
+
+  .pdp-accordion-trigger {
+    padding: 15px 18px;
+    font-size: 0.95rem;
+  }
+
+  .pdp-accordion-panel {
+    padding: 0 18px;
+  }
+
+  .pdp-accordion-card.open .pdp-accordion-panel {
+    padding: 0 18px 18px;
+  }
+
+  .pdp-accordion-panel p {
+    font-size: 0.825rem;
+    line-height: 1.5;
+  }
+
+  /* 8. CUSTOMER REVIEWS */
+  .pdp-reviews-box-section {
+    padding: 12px 0 40px;
+  }
+
+  .pdp-reviews-outer-card {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .pdp-reviews-box-title {
+    font-size: 1.25rem;
+  }
+
+  .pdp-reviews-box-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .pdp-rating-summary-col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .pdp-rating-big-number {
+    font-size: 2.8rem;
+  }
+
+  .pdp-reviews-cards-feed {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .pdp-user-card {
+    padding: 14px;
+  }
+
+  /* 9. FLOATING WHATSAPP BUTTON (Compact Mobile FAB - NEVER Obstructs Content or CTA) */
+  .pdp-floating-whatsapp {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 998 !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45) !important;
+    transition: bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease !important;
+  }
+
+  .pdp-floating-whatsapp span {
+    display: none !important;
+  }
+
+  .pdp-floating-whatsapp svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  /* Elevate WhatsApp FAB when mobile sticky bottom buy bar is active */
+  .pdp-floating-whatsapp.elevated,
+  body.sticky-bar-visible .pdp-floating-whatsapp {
+    bottom: 84px !important;
+  }
+
+  /* 10. MOBILE STICKY BOTTOM BUY BAR */
+  .pdp-mobile-sticky-bar {
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+    gap: 12px !important;
+    z-index: 999 !important;
+  }
+
+  .pdp-m-sticky-left {
+    max-width: 46% !important;
+    gap: 10px !important;
+  }
+
+  .pdp-m-sticky-thumb {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 8px !important;
+  }
+
+  .pdp-m-sticky-title {
+    font-size: 0.8rem !important;
+  }
+
+  .pdp-m-sticky-price {
+    font-size: 0.85rem !important;
+  }
+
+  .pdp-m-sticky-add-btn {
+    flex: 1 !important;
+    min-width: 120px !important;
+    padding: 12px 14px !important;
+    font-size: 0.825rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .pdp-promise-grid {
-    grid-template-columns: 1fr;
+  .pdp-product-title {
+    font-size: 1.4rem;
   }
-  .pdp-trust-grid {
-    grid-template-columns: 1fr;
-  }
-  .pdp-finish-grid {
-    grid-template-columns: 1fr;
-  }
-  .pdp-footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .pdp-certification-banner {
-    flex-direction: column;
-    align-items: flex-start;
+  .pdp-m-sticky-left {
+    max-width: 42% !important;
   }
 }

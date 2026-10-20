@@ -154,7 +154,7 @@
     });
 
     // Render items list
-    const containers = document.querySelectorAll('#cartItemsContainer, #cartItemsList');
+    const containers = document.querySelectorAll('#cartItemsContainer, #cartItemsList, #cartDrawerItemsList');
     containers.forEach(container => {
       if (!container) return;
       container.innerHTML = '';
