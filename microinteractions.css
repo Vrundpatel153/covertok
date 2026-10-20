@@ -3,7 +3,7 @@
    Ultra-smooth in-and-out transitions, physics-based springs,
    hover elevations, drawers, modals, checkout, user profile, wishlist,
    tracking, coupons, and interactive feedback.
-   Theme: #F8F5ED Canvas, #171513 Obsidian, #A98135 Warm Artisan Gold
+   Theme: #FFFFFF Canvas, #0A0A0A Obsidian, #C5A059 Warm Artisan Gold
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -144,7 +144,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   background: #FFFFFF;
   border-radius: 24px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   transform: translateY(20px) scale(0.96);
   opacity: 0;
   transition: transform var(--dur-med) var(--ease-spring),
@@ -164,8 +164,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 /* Drawer / Modal Header */
 .app-sheet-header {
   padding: 20px 24px;
-  background: #FAF8F2;
-  border-bottom: 1px solid #EAE5DB;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -183,7 +183,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   height: 38px;
   border-radius: 12px;
   background: rgba(169, 129, 53, 0.12);
-  color: #A98135;
+  color: #C5A059;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +193,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
-  color: #171513;
+  color: #0A0A0A;
   margin: 0;
   line-height: 1.2;
 }
@@ -209,7 +209,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   height: 36px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   color: #475569;
   display: flex;
   align-items: center;
@@ -221,9 +221,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .app-sheet-close-btn:hover {
-  background: #171513;
+  background: #0A0A0A;
   color: #FFFFFF;
-  border-color: #171513;
+  border-color: #0A0A0A;
   transform: rotate(90deg);
 }
 
@@ -236,8 +236,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .app-sheet-footer {
   padding: 18px 24px;
-  background: #FAF8F2;
-  border-top: 1px solid #EAE5DB;
+  background: #FFFFFF;
+  border-top: 1px solid #E2E8F0;
   flex-shrink: 0;
 }
 
@@ -247,7 +247,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 /* Free Shipping Progress Indicator */
 .cart-free-shipping-bar {
   background: #FFFDF9;
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   padding: 14px 18px;
   margin-bottom: 18px;
@@ -259,21 +259,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   justify-content: space-between;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #171513;
+  color: #0A0A0A;
   margin-bottom: 8px;
 }
 
 .cart-progress-track {
   width: 100%;
   height: 6px;
-  background: #EAE5DB;
+  background: #E2E8F0;
   border-radius: 999px;
   overflow: hidden;
 }
 
 .cart-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #A98135 0%, #10B981 100%);
+  background: linear-gradient(90deg, #C5A059 0%, #10B981 100%);
   border-radius: 999px;
   transition: width 0.4s var(--ease-spring);
 }
@@ -288,7 +288,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cart-promo-input {
   flex: 1;
   padding: 10px 14px;
-  border: 1.5px solid #EAE5DB;
+  border: 1.5px solid #E2E8F0;
   border-radius: 12px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.85rem;
@@ -300,12 +300,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .cart-promo-input:focus {
-  border-color: #A98135;
+  border-color: #C5A059;
 }
 
 .cart-promo-btn {
   padding: 10px 18px;
-  background: #171513;
+  background: #0A0A0A;
   color: #FFFFFF;
   border: none;
   border-radius: 12px;
@@ -318,7 +318,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .cart-promo-btn:hover {
-  background: #A98135;
+  background: #C5A059;
 }
 
 .cart-discount-badge-line {
@@ -337,7 +337,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 /* Cart Upsell Carousel */
 .cart-upsell-section {
-  border-top: 1px solid #EAE5DB;
+  border-top: 1px solid #E2E8F0;
   padding-top: 16px;
   margin-top: 16px;
 }
@@ -346,7 +346,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-size: 0.85rem;
   font-weight: 800;
-  color: #171513;
+  color: #0A0A0A;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -357,8 +357,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #FAF8F2;
-  border: 1px solid #EAE5DB;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 12px;
   padding: 10px 12px;
   gap: 10px;
@@ -382,32 +382,32 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cart-upsell-name {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #171513;
+  color: #0A0A0A;
   line-height: 1.2;
 }
 
 .cart-upsell-price {
   font-size: 0.775rem;
   font-weight: 800;
-  color: #A98135;
+  color: #C5A059;
 }
 
 .cart-upsell-add-btn {
   padding: 6px 12px;
   background: #FFFFFF;
-  border: 1.5px solid #171513;
+  border: 1.5px solid #0A0A0A;
   border-radius: 999px;
   font-family: 'Outfit', sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
-  color: #171513;
+  color: #0A0A0A;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .cart-upsell-add-btn:hover {
-  background: #171513;
+  background: #0A0A0A;
   color: #FFFFFF;
 }
 
@@ -429,7 +429,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   left: 20px;
   right: 20px;
   height: 2px;
-  background: #EAE5DB;
+  background: #E2E8F0;
   z-index: 0;
 }
 
@@ -465,14 +465,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .checkout-step-pill.active .checkout-step-circle {
-  background: #171513;
-  border-color: #171513;
+  background: #0A0A0A;
+  border-color: #0A0A0A;
   color: #FFFFFF;
   box-shadow: 0 4px 12px rgba(23, 21, 19, 0.25);
 }
 
 .checkout-step-pill.active .checkout-step-label {
-  color: #171513;
+  color: #0A0A0A;
 }
 
 .checkout-step-pill.completed .checkout-step-circle {
@@ -505,24 +505,24 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .checkout-label {
   font-size: 0.8rem;
   font-weight: 700;
-  color: #171513;
+  color: #0A0A0A;
 }
 
 .checkout-input {
   width: 100%;
   padding: 12px 16px;
-  border: 1.5px solid #EAE5DB;
+  border: 1.5px solid #E2E8F0;
   border-radius: 12px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.875rem;
-  background: #FAF8F2;
+  background: #FFFFFF;
   transition: all 0.2s ease;
   box-sizing: border-box;
 }
 
 .checkout-input:focus {
   background: #FFFFFF;
-  border-color: #A98135;
+  border-color: #C5A059;
   box-shadow: var(--gold-glow);
 }
 
@@ -532,7 +532,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   align-items: center;
   justify-content: space-between;
   padding: 14px 16px;
-  border: 1.5px solid #EAE5DB;
+  border: 1.5px solid #E2E8F0;
   border-radius: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -545,7 +545,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .checkout-option-card.selected {
-  border-color: #A98135;
+  border-color: #C5A059;
   background: #FFFDF9;
   box-shadow: var(--gold-glow);
 }
@@ -559,7 +559,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .checkout-option-title {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #171513;
+  color: #0A0A0A;
 }
 
 .checkout-option-sub {
@@ -571,7 +571,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
   font-weight: 800;
-  color: #A98135;
+  color: #C5A059;
 }
 
 /* Order Success Celebration View */
@@ -595,8 +595,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .checkout-order-number-box {
-  background: #FAF8F2;
-  border: 1px dashed #A98135;
+  background: #FFFFFF;
+  border: 1px dashed #C5A059;
   border-radius: 14px;
   padding: 14px;
   margin: 18px 0;
@@ -618,8 +618,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   align-items: center;
   gap: 14px;
   padding: 14px;
-  background: #FAF8F2;
-  border: 1px solid #EAE5DB;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   transition: var(--dur-med) var(--ease-spring);
 }
@@ -637,7 +637,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   border-radius: 10px;
   background: #FFFFFF;
   padding: 4px;
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   flex-shrink: 0;
 }
 
@@ -650,7 +650,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
   font-weight: 800;
-  color: #171513;
+  color: #0A0A0A;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -660,7 +660,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .wishlist-item-price {
   font-size: 0.85rem;
   font-weight: 800;
-  color: #A98135;
+  color: #C5A059;
 }
 
 .wishlist-item-actions {
@@ -671,7 +671,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .wishlist-move-cart-btn {
   padding: 8px 14px;
-  background: #171513;
+  background: #0A0A0A;
   color: #FFFFFF;
   border: none;
   border-radius: 999px;
@@ -684,14 +684,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .wishlist-move-cart-btn:hover {
-  background: #A98135;
+  background: #C5A059;
 }
 
 .wishlist-remove-btn {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   background: #FFFFFF;
   color: #94A3B8;
   display: flex;
@@ -710,7 +710,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
    6. USER PROFILE & RECENT ORDERS DRAWER
    -------------------------------------------------------------------------- */
 .profile-member-card {
-  background: linear-gradient(135deg, #171513 0%, #2B2520 100%);
+  background: linear-gradient(135deg, #0A0A0A 0%, #2B2520 100%);
   color: #FFFFFF;
   border-radius: 18px;
   padding: 20px;
@@ -725,7 +725,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 2px solid #A98135;
+  border: 2px solid #C5A059;
   object-fit: cover;
 }
 
@@ -742,7 +742,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .profile-member-tier {
   font-size: 0.75rem;
-  color: #E7D5A4;
+  color: #E5C07B;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -756,14 +756,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   border-radius: 999px;
   font-size: 0.7rem;
   font-weight: 800;
-  color: #E7D5A4;
+  color: #E5C07B;
   margin-top: 4px;
   align-self: flex-start;
 }
 
 .profile-nav-tabs {
   display: flex;
-  border-bottom: 1.5px solid #EAE5DB;
+  border-bottom: 1.5px solid #E2E8F0;
   margin-bottom: 16px;
   gap: 8px;
 }
@@ -782,13 +782,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .profile-tab-btn.active {
-  color: #171513;
-  border-bottom-color: #A98135;
+  color: #0A0A0A;
+  border-bottom-color: #C5A059;
 }
 
 .profile-order-card {
-  background: #FAF8F2;
-  border: 1px solid #EAE5DB;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   padding: 16px;
   margin-bottom: 12px;
@@ -805,7 +805,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
   font-size: 0.875rem;
-  color: #171513;
+  color: #0A0A0A;
 }
 
 .profile-order-status-badge {
@@ -838,7 +838,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   bottom: 14px;
   left: 9px;
   width: 2px;
-  background: #EAE5DB;
+  background: #E2E8F0;
 }
 
 .track-step-node {
@@ -869,8 +869,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .track-step-node.current .track-step-bullet {
-  background: #A98135;
-  border-color: #A98135;
+  background: #C5A059;
+  border-color: #C5A059;
   color: #FFFFFF;
   box-shadow: 0 0 0 4px rgba(169, 129, 53, 0.25);
 }
@@ -879,7 +879,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
   font-weight: 800;
-  color: #171513;
+  color: #0A0A0A;
   margin: 0 0 2px;
 }
 
@@ -891,7 +891,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .track-step-time {
   font-size: 0.725rem;
-  color: #A98135;
+  color: #C5A059;
   font-weight: 700;
 }
 
@@ -909,8 +909,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background: #FAF8F2;
-  border: 1.5px dashed #A98135;
+  background: #FFFFFF;
+  border: 1.5px dashed #C5A059;
   border-radius: 16px;
   gap: 14px;
   transition: all 0.2s ease;
@@ -927,8 +927,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  background: #171513;
-  color: #E7D5A4;
+  background: #0A0A0A;
+  color: #E5C07B;
   padding: 6px 14px;
   border-radius: 8px;
   display: inline-block;
@@ -944,7 +944,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .offer-apply-btn {
   padding: 8px 16px;
-  background: #A98135;
+  background: #C5A059;
   color: #FFFFFF;
   border: none;
   border-radius: 999px;
@@ -957,7 +957,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .offer-apply-btn:hover {
-  background: #171513;
+  background: #0A0A0A;
 }
 
 /* --------------------------------------------------------------------------
@@ -969,7 +969,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -979,9 +979,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   display: flex;
   align-items: center;
   padding: 18px 24px;
-  border-bottom: 1px solid #EAE5DB;
+  border-bottom: 1px solid #E2E8F0;
   gap: 14px;
-  background: #FAF8F2;
+  background: #FFFFFF;
 }
 
 .search-input-box {
@@ -991,7 +991,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #171513;
+  color: #0A0A0A;
   outline: none;
 }
 
@@ -1011,12 +1011,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   padding: 10px 14px;
   border-radius: 12px;
   text-decoration: none;
-  color: #171513;
+  color: #0A0A0A;
   transition: background 0.15s ease;
 }
 
 .search-result-item:hover {
-  background: #F4EFE6;
+  background: #F8FAFC;
 }
 
 .search-result-thumb {
@@ -1025,7 +1025,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   object-fit: contain;
   border-radius: 8px;
   background: #FFFFFF;
-  border: 1px solid #EAE5DB;
+  border: 1px solid #E2E8F0;
   padding: 2px;
 }
 
@@ -1038,5 +1038,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .search-result-price {
   font-size: 0.8rem;
   font-weight: 800;
-  color: #A98135;
+  color: #C5A059;
 }

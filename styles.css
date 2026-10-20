@@ -6,58 +6,58 @@
   /* --------------------------------------------------------------------------
      SHOPIFY THEME TOKENS (settings_schema.json mapping)
      -------------------------------------------------------------------------- */
-  --color-primary: #171513;              /* Primary dark obsidian */
-  --color-accent: #A98135;               /* Luxury warm gold */
-  --color-accent-hover: #8D6A28;
-  --color-accent-subtle: rgba(169, 129, 53, 0.12);
-  --color-bg-main: #F8F5ED;              /* Pearl canvas background */
-  --color-bg-card: #FFFFFF;              /* Pure white surface */
-  --color-bg-cream: #FAF8F2;             /* Soft cream card bg */
-  --color-text-main: #171513;            /* High-contrast body text */
-  --color-text-body: #423830;
-  --color-text-muted: #7A7067;
-  --color-border: #EAE5DB;
-  --color-border-light: rgba(234, 229, 219, 0.95);
+  --color-primary: #0A0A0A;              /* High-contrast Jet Black */
+  --color-accent: #C5A059;               /* Authentic Covertok Metallic Gold */
+  --color-accent-hover: #A98135;
+  --color-accent-subtle: rgba(197, 160, 89, 0.14);
+  --color-bg-main: #FFFFFF;              /* Pure Crisp White Canvas */
+  --color-bg-card: #FFFFFF;              /* Pure White Surface */
+  --color-bg-cream: #F8FAFC;             /* Ultra-clean Slate Light Surface */
+  --color-text-main: #0A0A0A;            /* Deep Jet Black Heading & Title */
+  --color-text-body: #1E293B;            /* Crisp Dark Charcoal Body Text */
+  --color-text-muted: #64748B;           /* Modern Clean Slate Muted */
+  --color-border: #E2E8F0;               /* Crisp High-Contrast Border */
+  --color-border-light: rgba(226, 232, 240, 0.85);
 
   /* Brand Palette Legacy Aliases */
   --gold-antique: var(--color-accent);
-  --gold-pale: #E7D5A4;
-  --pearl-ivory: var(--color-bg-main);
-  --espresso-black: var(--color-primary);
-  --bronze-brown: #735238;
-  --bronze-deep: #4A392D;
+  --gold-pale: #E5C07B;
+  --pearl-ivory: #FFFFFF;
+  --espresso-black: #0A0A0A;
+  --bronze-brown: #C5A059;
+  --bronze-deep: #171513;
 
   /* Gradients */
-  --gold-gradient: linear-gradient(135deg, #E7D5A4 0%, #A98135 50%, #4A392D 100%);
-  --gold-gradient-horizontal: linear-gradient(90deg, #E7D5A4 0%, #A98135 50%, #4A392D 100%);
-  --gold-glow: rgba(169, 129, 53, 0.24);
+  --gold-gradient: linear-gradient(135deg, #F3E2B8 0%, #C5A059 50%, #8D6B28 100%);
+  --gold-gradient-horizontal: linear-gradient(90deg, #F3E2B8 0%, #C5A059 50%, #8D6B28 100%);
+  --gold-glow: rgba(197, 160, 89, 0.28);
 
   /* Semantic Theme Mappings */
-  --hero-blue: #E7D5A4;
+  --hero-blue: #C5A059;
   --hero-blue-dark: #A98135;
-  --bg-primary: var(--color-bg-main);
-  --bg-secondary: #F3EFE6;
-  --bg-card: var(--color-bg-card);
-  --card-light-gray: #FAF7F2;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --card-light-gray: #F8FAFC;
   --card-border: var(--color-border);
   
-  --text-dark: var(--color-primary);
-  --text-body: var(--color-text-body);
-  --text-muted: var(--color-text-muted);
-  --text-light: #F8F5ED;
+  --text-dark: #0A0A0A;
+  --text-body: #1E293B;
+  --text-muted: #64748B;
+  --text-light: #FFFFFF;
 
   --accent-blue: var(--color-accent);
   --accent-gold: var(--color-accent);
-  --primary-cta: var(--color-primary);
-  --primary-cta-hover: #26211C;
+  --primary-cta: #0A0A0A;
+  --primary-cta-hover: #262626;
 
-  --glass-navy: #171513;
-  --glass-sapphire: #A98135;
-  --glass-glow: rgba(169, 129, 53, 0.22);
+  --glass-navy: #0A0A0A;
+  --glass-sapphire: #C5A059;
+  --glass-glow: rgba(197, 160, 89, 0.22);
 
-  --dark-section-bg: #171513;
-  --dark-card-bg: #221F1C;
-  --dark-border: #38322B;
+  --dark-section-bg: #0A0A0A;
+  --dark-card-bg: #141414;
+  --dark-border: #262626;
 
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -148,7 +148,7 @@ img {
    ========================================================================== */
 .announcement-bar {
   background: var(--espresso-black, #171513);
-  color: var(--pearl-ivory, #F8F5ED);
+  color: var(--pearl-ivory, #FFFFFF);
   padding: 8px 16px;
   text-align: center;
   font-size: 0.8125rem;
@@ -341,7 +341,7 @@ img {
   background: #FFFFFF;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--card-border, #EAE5DB);
+  border: 1px solid var(--card-border, #E2E8F0);
   padding: 10px 0;
   opacity: 0;
   visibility: hidden;
@@ -360,7 +360,7 @@ img {
 }
 
 .dropdown-item:hover {
-  background: var(--bg-primary, #F8F5ED);
+  background: var(--bg-primary, #FFFFFF);
   color: var(--gold-antique, #A98135);
   padding-left: 24px;
 }
@@ -389,9 +389,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-dark, #171513);
-  background: #FAF8F2;
-  border: 1px solid rgba(234, 229, 219, 0.95);
+  color: var(--text-dark, #0A0A0A);
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -401,11 +401,11 @@ img {
 }
 
 .icon-btn:hover {
-  background-color: #FFFFFF;
-  border-color: var(--gold-antique, #A98135);
-  color: var(--gold-antique, #A98135);
+  background-color: #0A0A0A;
+  border-color: #0A0A0A;
+  color: #C5A059;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(169, 129, 53, 0.16);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .cart-badge {
@@ -417,7 +417,7 @@ img {
   height: 18px;
   padding: 0 4px;
   border-radius: 999px;
-  background: #171513;
+  background: #0A0A0A;
   color: #FFFFFF;
   font-size: 10px;
   font-weight: 800;
@@ -435,9 +435,9 @@ img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  color: var(--text-dark, #171513);
-  background: #FAF8F2;
-  border: 1px solid rgba(234, 229, 219, 0.95);
+  color: var(--text-dark, #0A0A0A);
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
@@ -615,8 +615,8 @@ img {
 }
 
 .btn-pill-outline {
-  background: var(--bg-primary, #F8F5ED);
-  color: var(--bronze-brown, #735238);
+  background: var(--bg-primary, #FFFFFF);
+  color: var(--bronze-brown, #C5A059);
   border: 1.5px solid var(--gold-antique, #A98135);
   padding: 12px 24px;
   font-size: 0.9375rem;
@@ -634,7 +634,7 @@ img {
 .btn-pill-white-sm {
   background: #FFFFFF;
   color: var(--text-dark, #171513);
-  border: 1px solid var(--card-border, #EAE5DB);
+  border: 1px solid var(--card-border, #E2E8F0);
   padding: 8px 18px;
   font-size: 0.8125rem;
   font-weight: 700;
@@ -643,7 +643,7 @@ img {
 }
 
 .btn-pill-white-sm:hover {
-  background: var(--bg-primary, #F8F5ED);
+  background: var(--bg-primary, #FFFFFF);
   color: var(--gold-antique, #A98135);
   transform: translateY(-1px);
 }
@@ -695,7 +695,7 @@ img {
   padding: 0;
   margin: 0;
   display: block;
-  background: var(--bg-primary, #F8F5ED);
+  background: var(--bg-primary, #FFFFFF);
   overflow: visible;
   box-sizing: border-box;
 }
@@ -2413,8 +2413,8 @@ img {
 .trust-banner-section {
   padding: 48px 0;
   background: var(--bg-secondary, #F3EFE6);
-  border-top: 1px solid var(--card-border, #EAE5DB);
-  border-bottom: 1px solid var(--card-border, #EAE5DB);
+  border-top: 1px solid var(--card-border, #E2E8F0);
+  border-bottom: 1px solid var(--card-border, #E2E8F0);
 }
 
 .trust-grid {
@@ -2433,7 +2433,7 @@ img {
   font-size: 2.2rem;
   background: #FFFFFF;
   color: var(--gold-antique, #A98135);
-  border: 1px solid var(--card-border, #EAE5DB);
+  border: 1px solid var(--card-border, #E2E8F0);
   width: 58px;
   height: 58px;
   border-radius: 18px;
@@ -5748,7 +5748,7 @@ a.footer-contact-main:hover {
    SECTION 5: EVERYDAY ESSENTIALS, REDEFINED (Exact 100% Clone from Everyday Accessories, Redefined.png)
    ========================================================================== */
 .bento-collections-section {
-  background: #F8F5F0;
+  background: #FFFFFF;
   padding: 10px 0 36px 0;
   position: relative;
   overflow: hidden;
@@ -5779,17 +5779,17 @@ a.footer-contact-main:hover {
 .bento-kicker {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #A3856E;
+  color: #C5A059;
 }
 
 .bento-kicker-line {
   display: inline-block;
   width: 58px;
-  height: 1px;
-  background: #C5B7A9;
+  height: 1.5px;
+  background: #C5A059;
 }
 
 .bento-view-all-btn {
@@ -5801,7 +5801,7 @@ a.footer-contact-main:hover {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #121316;
+  color: #0A0A0A;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -5810,19 +5810,19 @@ a.footer-contact-main:hover {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid #B0A69C;
+  border: 1.5px solid #0A0A0A;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #121316;
+  color: #0A0A0A;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
 }
 
 .bento-view-all-btn:hover .bento-view-all-circle {
-  background: #121316;
+  background: #0A0A0A;
   color: #FFFFFF;
-  border-color: #121316;
+  border-color: #0A0A0A;
   transform: translateX(4px);
 }
 
@@ -5855,7 +5855,7 @@ a.footer-contact-main:hover {
 }
 
 .bento-heading-accent {
-  color: #A3856E;
+  color: #C5A059;
   display: inline;
 }
 
@@ -5864,7 +5864,7 @@ a.footer-contact-main:hover {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.48;
-  color: #635D56;
+  color: #475569;
   max-width: 440px;
   margin: 0;
   letter-spacing: -0.01em;
@@ -5879,15 +5879,17 @@ a.footer-contact-main:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #EBE2D9;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
   box-sizing: border-box;
 }
 
 .bento-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: #C5A059;
+  box-shadow: 0 16px 36px rgba(197, 160, 89, 0.12);
 }
 
 .bento-card-bg {
@@ -5937,31 +5939,31 @@ a.footer-contact-main:hover {
 .bento-card-num {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.02em;
-  color: #7E7770;
+  color: #C5A059;
 }
 
 .bento-num-rule {
   display: inline-block;
   width: 26px;
-  height: 1px;
-  background: #B0A89F;
+  height: 1.5px;
+  background: #C5A059;
 }
 
 .bento-card-title {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.1;
-  color: #121316;
+  color: #0A0A0A;
   margin: 0 0 8px 0;
   letter-spacing: -0.025em;
 }
 
 .bento-card-desc {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-weight: 400;
-  color: #635D56;
+  font-weight: 500;
+  color: #475569;
   line-height: 1.36;
   margin: 0;
   letter-spacing: -0.01em;
@@ -5969,19 +5971,20 @@ a.footer-contact-main:hover {
 
 .bento-card-btn {
   border-radius: 50%;
-  border: 1px solid rgba(20, 20, 20, 0.4);
+  border: 1.5px solid #0A0A0A;
+  background: #FFFFFF;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #121316;
+  color: #0A0A0A;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
 }
 
 .bento-card:hover .bento-card-btn {
-  background: #121316;
+  background: #0A0A0A;
   color: #FFFFFF;
-  border-color: #121316;
+  border-color: #0A0A0A;
   transform: scale(1.08) translateX(2px);
 }
 
@@ -6992,7 +6995,7 @@ a.footer-contact-main:hover {
      ========================================================================== */
   .products-section {
     padding: 26px 0 34px !important;
-    background: linear-gradient(180deg, #F8F5ED 0%, #F3EFE6 40%, #FFFFFF 100%) !important;
+    background: #FFFFFF !important;
     position: relative !important;
     overflow: hidden !important;
   }
@@ -7075,7 +7078,7 @@ a.footer-contact-main:hover {
   .products-section-subtitle {
     font-size: 0.76rem !important;
     font-weight: 500 !important;
-    color: var(--bronze-brown, #735238) !important;
+    color: var(--bronze-brown, #C5A059) !important;
     line-height: 1.35 !important;
     margin: 0 !important;
     max-width: 200px !important;
@@ -7212,7 +7215,7 @@ a.footer-contact-main:hover {
     left: 7px !important;
     z-index: 4 !important;
     background: rgba(231, 213, 164, 0.45) !important;
-    color: var(--bronze-brown, #735238) !important;
+    color: var(--bronze-brown, #C5A059) !important;
     border: 1px solid rgba(169, 129, 53, 0.3) !important;
     font-size: 0.6rem !important;
     font-weight: 800 !important;
@@ -7234,7 +7237,7 @@ a.footer-contact-main:hover {
     height: 28px !important;
     border-radius: 50% !important;
     background: #FFFFFF !important;
-    border: 1px solid var(--card-border, #EAE5DB) !important;
+    border: 1px solid var(--card-border, #E2E8F0) !important;
     box-shadow: 0 2px 6px rgba(23, 21, 19, 0.08) !important;
     display: flex !important;
     align-items: center !important;
@@ -10089,7 +10092,7 @@ a.footer-contact-main:hover {
 
 .instagram-tag-btn:hover {
   transform: scale(1.18);
-  background: #F8F5EE;
+  background: #FFFFFF;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.38);
 }
 
@@ -10149,7 +10152,7 @@ a.footer-contact-main:hover {
   width: 92%;
   max-width: 960px;
   max-height: 88vh;
-  background: #FAF7F2;
+  background: #FFFFFF;
   border-radius: 28px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
   overflow: hidden;
@@ -11066,8 +11069,8 @@ a.footer-contact-main:hover {
   aspect-ratio: 1 / 1;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #ECE4DA;
-  background: #F8F5ED;
+  border: 1.5px solid #E2E8F0;
+  background: #FFFFFF;
   position: relative;
 }
 
