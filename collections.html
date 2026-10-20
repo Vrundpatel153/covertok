@@ -269,67 +269,195 @@
 
   <!-- ========================================================================= -->
 
-  <footer class="site-footer" style="background: #111215; color: #FFFFFF; padding: 64px 0 32px; border-top: 1px solid rgba(255,255,255,0.08);">
-    <div class="section-container">
-      <div class="footer-grid">
-        <div class="footer-col brand-col">
-          <div class="brand-logo" style="margin-bottom: 16px;">
-            <img src="assets/covertok-logo-transparent.png" alt="Covertok" class="logo-img" style="filter: brightness(0) invert(1);">
-          </div>
-          <p class="footer-tagline" style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6; max-width: 320px;">
-            Engineered for life in motion. Discover premium cases, watch bands, and charging accessories crafted with high-precision protection.
-          </p>
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-inner-wrap">
+
+      <!-- 1. TOP LUXURY HERO WORDMARK: COVERTOK WITH CASE IMAGES MASKED IN LETTERS -->
+      <div class="footer-hero-brand-wrap">
+        <div class="footer-hero-wordmark" aria-label="COVERTOK">
+          <span class="wordmark-letter letter-c" title="Covertok - C">C</span>
+          <span class="wordmark-letter letter-o1" title="Covertok - O">O</span>
+          <span class="wordmark-letter letter-v" title="Covertok - V">V</span>
+          <span class="wordmark-letter letter-e" title="Covertok - E">E</span>
+          <span class="wordmark-letter letter-r" title="Covertok - R">R</span>
+          <span class="wordmark-letter letter-t" title="Covertok - T">T</span>
+          <span class="wordmark-letter letter-o2" title="Covertok - O">O</span>
+          <span class="wordmark-letter letter-k" title="Covertok - K">K</span>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-col-title">Categories</h4>
-          <ul class="footer-links">
-            <li><a href="collections.html?cat=iphone-cases">iPhone Covers</a></li>
-            <li><a href="collections.html?cat=watchbands">Apple Watch Bands & Armor</a></li>
-            <li><a href="collections.html?cat=airpod-covers">AirPods Cases</a></li>
-            <li><a href="collections.html?cat=charger-covers">Charger Cases</a></li>
-            <li><a href="collections.html?cat=charger-and-cables">Fast Charging Cables</a></li>
-            <li><a href="collections.html?cat=cover-charms">Phone Charms & Wristlets</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Shop Series</h4>
-          <ul class="footer-links">
-            <li><a href="collections.html?cat=our-bestsellers">Best Sellers 2026</a></li>
-            <li><a href="collections.html?cat=new-arrivals">New Arrivals</a></li>
-            <li><a href="product.html">Frameless Ultra-Thin Series</a></li>
-            <li><a href="collections.html?cat=iphone-cases">MagSafe Shockproof Armor</a></li>
-            <li><a href="collections.html?cat=other-accessories">Suction Grips & Holders</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Customer Care</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#faq">Order Tracking</a></li>
-            <li><a href="index.html#faq">Shipping Policy</a></li>
-            <li><a href="index.html#faq">7-Day Easy Returns</a></li>
-            <li><a href="index.html#faq">Warranty Registration</a></li>
-            <li><a href="index.html#faq">Contact Support</a></li>
-          </ul>
+        <div class="footer-hero-subtag">
+          <span class="subtag-line"></span>
+          <span class="subtag-text">STYLE &nbsp; PROTECTS &nbsp; YOUR &nbsp; WORLD</span>
+          <span class="subtag-line"></span>
         </div>
       </div>
 
-      <div class="footer-bottom-row" style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <div class="copyright-text" style="color: #64748B; font-size: 0.85rem;">
-          © 2026 Covertok Official. All rights reserved.
+      <div class="footer-divider-rule"></div>
+
+      <!-- 2. MAIN 4-COLUMN CONTENT GRID -->
+      <div class="footer-main-grid">
+
+        <!-- Column 1: Brand & Newsletter -->
+        <div class="footer-col col-brand-newsletter">
+          <h3 class="footer-col-heading footer-brand-title">COVERTOK</h3>
+          <p class="footer-brand-desc">
+            Crafting vibrant, shockproof, and stylish smartphone accessories that let you express your personality without compromising device safety.
+          </p>
+          <form class="footer-newsletter-row" onsubmit="event.preventDefault(); window.showToast('Thank you for subscribing! VIP offer code sent.', 'check');">
+            <input type="email" class="footer-newsletter-input" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+            <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe to newsletter">
+              <span>SUBSCRIBE</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+          <span class="footer-newsletter-micro">Get exclusive offers, new arrivals and updates.</span>
+
+          <!-- Social Media Icon Buttons -->
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/covertokofficial/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/people/CoverTok/61579019515289/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.youtube.com/@covertokofficial" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg>
+            </a>
+            <a href="mailto:Covertok.official@gmail.com" class="footer-social-btn" aria-label="Email Us">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
         </div>
-        <div class="payment-methods" style="display: flex; gap: 8px;">
-          <span class="pay-badge" style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #94A3B8;">UPI</span>
-          <span class="pay-badge" style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #94A3B8;">Apple Pay</span>
-          <span class="pay-badge" style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #94A3B8;">Visa</span>
-          <span class="pay-badge" style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #94A3B8;">Mastercard</span>
-          <span class="pay-badge" style="background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: #94A3B8;">Cash On Delivery</span>
+
+        <!-- Column 2: Shop Collections -->
+        <div class="footer-col col-collections">
+          <h4 class="footer-col-heading">SHOP COLLECTIONS</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="collections.html" class="footer-nav-link"><span>All Collections</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=iphone-cases" class="footer-nav-link"><span>iPhone Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=airpod-covers" class="footer-nav-link"><span>AirPod Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=iwatch-bands" class="footer-nav-link"><span>iWatch Bands</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=cables-chargers" class="footer-nav-link"><span>Charger Cases & Cables</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=power-accessories" class="footer-nav-link"><span>Other Accessories & Power</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="#search" onclick="event.preventDefault(); window.CovertokFlows.openSearch();" class="footer-nav-link"><span>Search Products</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Policies & Info -->
+        <div class="footer-col col-policies">
+          <h4 class="footer-col-heading">POLICIES & INFO</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="index.html#story" class="footer-nav-link"><span>About Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="index.html#faq" class="footer-nav-link"><span>Contact Information</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="index.html#faq" class="footer-nav-link"><span>Privacy Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="index.html#faq" class="footer-nav-link"><span>Refund Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="index.html#faq" class="footer-nav-link"><span>Shipping Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="index.html#faq" class="footer-nav-link"><span>Terms of Service</span><span class="nav-arrow">&rsaquo;</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col col-contact">
+          <h4 class="footer-col-heading">CONTACT US</h4>
+          <ul class="footer-contact-list">
+            <!-- WhatsApp -->
+            <li class="footer-contact-item">
+              <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-contact-badge" aria-label="WhatsApp Support">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+            </a>
+            <div class="footer-contact-text-wrap">
+              <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-contact-main">+91 98386 88544</a>
+              <span class="footer-contact-sub">WhatsApp (Quick Support)</span>
+            </div>
+          </li>
+
+          <!-- Phone Support -->
+          <li class="footer-contact-item">
+            <a href="tel:+917408221919" class="footer-contact-badge" aria-label="Phone Support">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+            <div class="footer-contact-text-wrap">
+              <a href="tel:+917408221919" class="footer-contact-main">+91 74082 21919</a>
+              <span class="footer-contact-sub">Phone Support</span>
+            </div>
+          </li>
+
+          <!-- Email Us -->
+          <li class="footer-contact-item">
+            <a href="mailto:Covertok.official@gmail.com" class="footer-contact-badge" aria-label="Email Covertok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <div class="footer-contact-text-wrap">
+              <a href="mailto:Covertok.official@gmail.com" class="footer-contact-main">Covertok.official@gmail.com</a>
+              <span class="footer-contact-sub">Email Us</span>
+            </div>
+          </li>
+
+          <!-- Support Hours -->
+          <li class="footer-contact-item">
+            <div class="footer-contact-badge" aria-label="Support Hours">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="footer-contact-text-wrap">
+              <span class="footer-contact-main">Mon &ndash; Sat: 10:00 AM &ndash; 7:00 PM IST</span>
+              <span class="footer-contact-sub">Our Support Hours</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- 3. BOTTOM LEGAL, BACK TO TOP, & PAYMENT BADGES ROW -->
+    <div class="footer-bottom-wrap">
+      <div class="footer-bottom-inner">
+        <!-- Left: Copyright -->
+        <div class="footer-legal-block">
+          <p>&copy; 2026 COVERTOK. All rights reserved. Trade Name: COVERTOK.</p>
+          <p>Designed for lovers of art &amp; tech.</p>
+        </div>
+
+        <!-- Center: Back to Top Pill Button -->
+        <button type="button" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to top of page">
+          <span class="top-arrow-circle" aria-hidden="true">&uarr;</span>
+          <span>BACK TO TOP</span>
+        </button>
+
+        <!-- Right: Payment Methods matching mockup exactly -->
+        <div class="footer-payment-badges" aria-label="Accepted payment methods">
+          <!-- UPI -->
+          <span class="pay-badge-pill" title="UPI Instant Payments">
+            <svg width="28" height="16" viewBox="0 0 60 24" fill="currentColor"><text x="4" y="18" font-family="'Outfit', sans-serif" font-weight="900" font-size="18" fill="#10B981" letter-spacing="1">UPI</text></svg>
+          </span>
+          <!-- Apple Pay -->
+          <span class="pay-badge-pill" title="Apple Pay">
+            <svg width="38" height="16" viewBox="0 0 44 18" fill="currentColor"><path d="M8.2 9.1c0-1.8 1.4-2.8 1.5-2.8-.8-1.2-2.1-1.4-2.6-1.4-1.1-.1-2.1.7-2.7.7-.6 0-1.4-.7-2.3-.7C1 4.9 0 5.8 0 7.7c0 2.7 2.3 6.6 4.6 6.6.6 0 1.2-.4 1.9-.4.7 0 1.2.4 1.9.4 2.3 0 3.7-3.2 3.7-3.2-.8-.4-1.3-1.2-1.3-2zM6.9 3.9c.5-.6.8-1.4.8-2.2 0-.1 0-.3 0-.4-.7 0-1.5.5-2 1.1-.4.5-.8 1.3-.8 2.1 0 .1 0 .2.1.3.8.1 1.4-.4 1.9-.9z"/><text x="14" y="13" font-family="-apple-system, sans-serif" font-weight="700" font-size="14" fill="#FFFFFF">Pay</text></svg>
+          </span>
+          <!-- Google Pay -->
+          <span class="pay-badge-pill" title="Google Pay">
+            <svg width="40" height="16" viewBox="0 0 46 18" fill="currentColor"><text x="2" y="14" font-family="'Outfit', sans-serif" font-weight="800" font-size="14" fill="#4285F4">G</text><text x="16" y="14" font-family="'Outfit', sans-serif" font-weight="700" font-size="13" fill="#FFFFFF">Pay</text></svg>
+          </span>
+          <!-- VISA -->
+          <span class="pay-badge-pill" title="Visa">
+            <svg width="34" height="14" viewBox="0 0 40 16" fill="currentColor"><text x="2" y="13" font-family="'Outfit', sans-serif" font-weight="900" font-style="italic" font-size="15" fill="#3B82F6" letter-spacing="1">VISA</text></svg>
+          </span>
+          <!-- Mastercard -->
+          <span class="pay-badge-pill" title="Mastercard">
+            <svg width="24" height="16" viewBox="0 0 32 20"><circle cx="11" cy="10" r="9" fill="#EB001B"/><circle cx="21" cy="10" r="9" fill="#F79E1B" fill-opacity="0.88"/></svg>
+          </span>
+          <!-- RuPay -->
+          <span class="pay-badge-pill" title="RuPay">
+            <svg width="42" height="16" viewBox="0 0 54 18"><text x="2" y="14" font-family="'Outfit', sans-serif" font-weight="800" font-size="14" fill="#FFFFFF">RuPay</text><polygon points="46,6 52,10 46,14" fill="#10B981"/></svg>
+          </span>
         </div>
       </div>
     </div>
-  </footer>
+
+  </div>
+</footer>
 
   <!-- Scripts -->
   <script src="assets/products_data.js"></script>
