@@ -1,0 +1,1042 @@
+/* ==========================================================================
+   COVERTOK MASTER MICROINTERACTIONS & FLOWS DESIGN SYSTEM (microinteractions.css)
+   Ultra-smooth in-and-out transitions, physics-based springs,
+   hover elevations, drawers, modals, checkout, user profile, wishlist,
+   tracking, coupons, and interactive feedback.
+   Theme: #F8F5ED Canvas, #171513 Obsidian, #A98135 Warm Artisan Gold
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL MOTION EASINGS & MICRO-EFFECTS
+   -------------------------------------------------------------------------- */
+:root {
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-fast: 0.18s;
+  --dur-med: 0.28s;
+  --dur-slow: 0.42s;
+  --gold-glow: 0 0 0 3px rgba(169, 129, 53, 0.22);
+  --shadow-float: 0 16px 36px -6px rgba(23, 21, 19, 0.12), 0 4px 12px rgba(23, 21, 19, 0.04);
+}
+
+/* Universal Button & Link Hover Lift */
+button, .btn, .pdp-switch-pill, .bestseller-card, .review-item-card, .pdp-product-card {
+  transition: transform var(--dur-med) var(--ease-spring), 
+              box-shadow var(--dur-med) var(--ease-spring), 
+              background-color var(--dur-fast) ease, 
+              border-color var(--dur-fast) ease,
+              color var(--dur-fast) ease;
+}
+
+button:active:not(:disabled), .btn:active:not(:disabled) {
+  transform: scale(0.97) !important;
+}
+
+/* Subtle Card Hover Floating */
+.bestseller-card:hover, .pdp-product-card:hover, .review-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-float);
+}
+
+/* Radiant Focus Rings for Accessibility */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: none;
+  box-shadow: var(--gold-glow) !important;
+}
+
+/* Wishlist Heart Pop Animation */
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.35); }
+  65% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.heart-animated {
+  animation: heartPop 0.45s var(--ease-bounce) forwards;
+}
+
+/* Button Shine Sweep Effect */
+.btn-shine-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine-sweep::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: transform 0.65s ease;
+}
+
+.btn-shine-sweep:hover::after {
+  transform: rotate(25deg) translateX(360%);
+}
+
+/* --------------------------------------------------------------------------
+   2. MASTER OVERLAYS & SLIDE-IN DRAWERS (IN-AND-OUT SMOOTH TRANSITIONS)
+   -------------------------------------------------------------------------- */
+.app-modal-overlay,
+.app-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(18, 17, 15, 0.65);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-med) var(--ease-spring),
+              backdrop-filter var(--dur-med) var(--ease-spring),
+              visibility var(--dur-med) var(--ease-spring);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app-modal-overlay.active,
+.app-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Slide-In Sidebars / Drawers (Right side) */
+.app-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+  background: #FFFFFF;
+  z-index: 10001;
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.16);
+  transform: translateX(100%);
+  transition: transform var(--dur-slow) var(--ease-spring);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-drawer.active {
+  transform: translateX(0);
+}
+
+/* Center Popup Modals */
+.app-modal-card {
+  width: 100%;
+  max-width: 580px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  border: 1px solid #EAE5DB;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+  transition: transform var(--dur-med) var(--ease-spring),
+              opacity var(--dur-med) var(--ease-spring);
+  overflow: hidden;
+  position: relative;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-modal-overlay.active .app-modal-card {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Drawer / Modal Header */
+.app-sheet-header {
+  padding: 20px 24px;
+  background: #FAF8F2;
+  border-bottom: 1px solid #EAE5DB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.app-sheet-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-sheet-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(169, 129, 53, 0.12);
+  color: #A98135;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-sheet-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #171513;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.app-sheet-subtitle {
+  font-size: 0.775rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.app-sheet-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #EAE5DB;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.app-sheet-close-btn:hover {
+  background: #171513;
+  color: #FFFFFF;
+  border-color: #171513;
+  transform: rotate(90deg);
+}
+
+.app-sheet-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-sheet-footer {
+  padding: 18px 24px;
+  background: #FAF8F2;
+  border-top: 1px solid #EAE5DB;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. RICH CART DRAWER ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+/* Free Shipping Progress Indicator */
+.cart-free-shipping-bar {
+  background: #FFFDF9;
+  border: 1px solid #EAE5DB;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+}
+
+.cart-free-shipping-msg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #171513;
+  margin-bottom: 8px;
+}
+
+.cart-progress-track {
+  width: 100%;
+  height: 6px;
+  background: #EAE5DB;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.cart-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #A98135 0%, #10B981 100%);
+  border-radius: 999px;
+  transition: width 0.4s var(--ease-spring);
+}
+
+/* Promo Voucher Code Box inside Cart */
+.cart-promo-box {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.cart-promo-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #EAE5DB;
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.cart-promo-input:focus {
+  border-color: #A98135;
+}
+
+.cart-promo-btn {
+  padding: 10px 18px;
+  background: #171513;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.825rem;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+}
+
+.cart-promo-btn:hover {
+  background: #A98135;
+}
+
+.cart-discount-badge-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ECFDF5;
+  border: 1px dashed #10B981;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: #065F46;
+  margin-bottom: 12px;
+}
+
+/* Cart Upsell Carousel */
+.cart-upsell-section {
+  border-top: 1px solid #EAE5DB;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.cart-upsell-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #171513;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-upsell-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FAF8F2;
+  border: 1px solid #EAE5DB;
+  border-radius: 12px;
+  padding: 10px 12px;
+  gap: 10px;
+}
+
+.cart-upsell-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-upsell-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #FFFFFF;
+  padding: 2px;
+}
+
+.cart-upsell-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #171513;
+  line-height: 1.2;
+}
+
+.cart-upsell-price {
+  font-size: 0.775rem;
+  font-weight: 800;
+  color: #A98135;
+}
+
+.cart-upsell-add-btn {
+  padding: 6px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #171513;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #171513;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.cart-upsell-add-btn:hover {
+  background: #171513;
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   4. CHECKOUT MODAL FLOW (MULTI-STEP HIGH CONVERTING)
+   -------------------------------------------------------------------------- */
+.checkout-steps-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.checkout-steps-bar::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: #EAE5DB;
+  z-index: 0;
+}
+
+.checkout-step-pill {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.checkout-step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  color: #64748B;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.checkout-step-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748B;
+}
+
+.checkout-step-pill.active .checkout-step-circle {
+  background: #171513;
+  border-color: #171513;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(23, 21, 19, 0.25);
+}
+
+.checkout-step-pill.active .checkout-step-label {
+  color: #171513;
+}
+
+.checkout-step-pill.completed .checkout-step-circle {
+  background: #10B981;
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+/* Form Fields */
+.checkout-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.checkout-form-grid.full {
+  grid-column: span 2;
+}
+
+.checkout-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.checkout-input-group.full-width {
+  grid-column: span 2;
+}
+
+.checkout-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #171513;
+}
+
+.checkout-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #EAE5DB;
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.875rem;
+  background: #FAF8F2;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.checkout-input:focus {
+  background: #FFFFFF;
+  border-color: #A98135;
+  box-shadow: var(--gold-glow);
+}
+
+/* Shipping / Payment Options Cards */
+.checkout-option-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1.5px solid #EAE5DB;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+}
+
+.checkout-option-card:hover {
+  border-color: #CBD5E1;
+}
+
+.checkout-option-card.selected {
+  border-color: #A98135;
+  background: #FFFDF9;
+  box-shadow: var(--gold-glow);
+}
+
+.checkout-option-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkout-option-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #171513;
+}
+
+.checkout-option-sub {
+  font-size: 0.725rem;
+  color: #64748B;
+}
+
+.checkout-option-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #A98135;
+}
+
+/* Order Success Celebration View */
+.checkout-success-view {
+  text-align: center;
+  padding: 24px 10px;
+}
+
+.checkout-success-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ECFDF5;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 16px;
+  animation: heartPop 0.6s var(--ease-bounce) forwards;
+}
+
+.checkout-order-number-box {
+  background: #FAF8F2;
+  border: 1px dashed #A98135;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 18px 0;
+  display: inline-block;
+  min-width: 260px;
+}
+
+/* --------------------------------------------------------------------------
+   5. WISHLIST DRAWER
+   -------------------------------------------------------------------------- */
+.wishlist-items-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wishlist-item-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: #FAF8F2;
+  border: 1px solid #EAE5DB;
+  border-radius: 14px;
+  transition: var(--dur-med) var(--ease-spring);
+}
+
+.wishlist-item-card:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: var(--shadow-float);
+}
+
+.wishlist-item-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 4px;
+  border: 1px solid #EAE5DB;
+  flex-shrink: 0;
+}
+
+.wishlist-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wishlist-item-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #171513;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.wishlist-item-price {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #A98135;
+}
+
+.wishlist-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wishlist-move-cart-btn {
+  padding: 8px 14px;
+  background: #171513;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.775rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.wishlist-move-cart-btn:hover {
+  background: #A98135;
+}
+
+.wishlist-remove-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #EAE5DB;
+  background: #FFFFFF;
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wishlist-remove-btn:hover {
+  color: #EF4444;
+  border-color: #FCA5A5;
+}
+
+/* --------------------------------------------------------------------------
+   6. USER PROFILE & RECENT ORDERS DRAWER
+   -------------------------------------------------------------------------- */
+.profile-member-card {
+  background: linear-gradient(135deg, #171513 0%, #2B2520 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 24px rgba(23, 21, 19, 0.2);
+}
+
+.profile-avatar-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid #A98135;
+  object-fit: cover;
+}
+
+.profile-member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-member-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.profile-member-tier {
+  font-size: 0.75rem;
+  color: #E7D5A4;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.profile-points-badge {
+  background: rgba(231, 213, 164, 0.18);
+  border: 1px solid rgba(231, 213, 164, 0.4);
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #E7D5A4;
+  margin-top: 4px;
+  align-self: flex-start;
+}
+
+.profile-nav-tabs {
+  display: flex;
+  border-bottom: 1.5px solid #EAE5DB;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.profile-tab-btn {
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-tab-btn.active {
+  color: #171513;
+  border-bottom-color: #A98135;
+}
+
+.profile-order-card {
+  background: #FAF8F2;
+  border: 1px solid #EAE5DB;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.profile-order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.profile-order-id {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: #171513;
+}
+
+.profile-order-status-badge {
+  font-size: 0.725rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #ECFDF5;
+  color: #065F46;
+}
+
+/* --------------------------------------------------------------------------
+   7. ORDER TRACKING TIMELINE MODAL
+   -------------------------------------------------------------------------- */
+.track-search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.track-timeline-wrap {
+  position: relative;
+  padding-left: 28px;
+}
+
+.track-timeline-wrap::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 9px;
+  width: 2px;
+  background: #EAE5DB;
+}
+
+.track-step-node {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.track-step-bullet {
+  position: absolute;
+  left: -28px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: #CBD5E1;
+}
+
+.track-step-node.completed .track-step-bullet {
+  background: #10B981;
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+.track-step-node.current .track-step-bullet {
+  background: #A98135;
+  border-color: #A98135;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(169, 129, 53, 0.25);
+}
+
+.track-step-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #171513;
+  margin: 0 0 2px;
+}
+
+.track-step-desc {
+  font-size: 0.775rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.track-step-time {
+  font-size: 0.725rem;
+  color: #A98135;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   8. OFFERS & PROMO CODES MODAL
+   -------------------------------------------------------------------------- */
+.offers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.offer-voucher-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #FAF8F2;
+  border: 1.5px dashed #A98135;
+  border-radius: 16px;
+  gap: 14px;
+  transition: all 0.2s ease;
+}
+
+.offer-voucher-card:hover {
+  background: #FFFDF9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(169, 129, 53, 0.12);
+}
+
+.offer-code-pill {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: #171513;
+  color: #E7D5A4;
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.offer-desc {
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.offer-apply-btn {
+  padding: 8px 16px;
+  background: #A98135;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.775rem;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.offer-apply-btn:hover {
+  background: #171513;
+}
+
+/* --------------------------------------------------------------------------
+   9. SEARCH MODAL REFINED
+   -------------------------------------------------------------------------- */
+.search-modal-box {
+  width: 100%;
+  max-width: 680px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  border: 1px solid #EAE5DB;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input-header {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #EAE5DB;
+  gap: 14px;
+  background: #FAF8F2;
+}
+
+.search-input-box {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #171513;
+  outline: none;
+}
+
+.search-results-list {
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #171513;
+  transition: background 0.15s ease;
+}
+
+.search-result-item:hover {
+  background: #F4EFE6;
+}
+
+.search-result-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #EAE5DB;
+  padding: 2px;
+}
+
+.search-result-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.search-result-price {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #A98135;
+}

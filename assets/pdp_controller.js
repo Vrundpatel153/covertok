@@ -1105,13 +1105,21 @@
     document.getElementById('pdpBuyNowBtn')?.addEventListener('click', () => {
       performAdd();
       setTimeout(() => {
-        document.getElementById('checkoutBtn')?.click();
+        if (window.CovertokFlows && window.CovertokFlows.openCheckout) {
+          window.CovertokFlows.openCheckout();
+        } else {
+          document.getElementById('checkoutBtn')?.click();
+        }
       }, 300);
     });
     document.getElementById('stickyBuyBtn')?.addEventListener('click', () => {
       performAdd();
       setTimeout(() => {
-        document.getElementById('checkoutBtn')?.click();
+        if (window.CovertokFlows && window.CovertokFlows.openCheckout) {
+          window.CovertokFlows.openCheckout();
+        } else {
+          document.getElementById('checkoutBtn')?.click();
+        }
       }, 300);
     });
 

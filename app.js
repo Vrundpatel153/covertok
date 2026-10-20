@@ -636,6 +636,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
   const heroDots = Array.from(document.querySelectorAll('.hero-dot'));
+  const heroMobDots = Array.from(document.querySelectorAll('.hero-mob-dot'));
   const heroPrevBtn = document.getElementById('heroPrevBtn');
   const heroNextBtn = document.getElementById('heroNextBtn');
   const heroDynamicCta = document.getElementById('heroDynamicCta');
@@ -663,6 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
       currentHeroIndex = initialSlide;
       heroSlides.forEach((s, idx) => s.classList.toggle('active', idx === currentHeroIndex));
       heroDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
+      heroMobDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
       const initSvgBgs = document.querySelectorAll('.hero-svg-bg-slide');
       initSvgBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
       const initMobBgs = document.querySelectorAll('.hero-mob-bg');
@@ -678,6 +680,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Deactivate current
       heroSlides[currentHeroIndex]?.classList.remove('active');
       heroDots[currentHeroIndex]?.classList.remove('active');
+      heroMobDots[currentHeroIndex]?.classList.remove('active');
 
       // Update index
       currentHeroIndex = (newIndex + heroSlides.length) % heroSlides.length;
@@ -685,6 +688,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Activate new
       const activeSlide = heroSlides[currentHeroIndex];
       const activeDot = heroDots[currentHeroIndex];
+      const activeMobDot = heroMobDots[currentHeroIndex];
 
       if (activeSlide) {
         activeSlide.classList.add('active');
@@ -695,6 +699,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (activeDot) {
         activeDot.classList.add('active');
+      }
+
+      if (activeMobDot) {
+        activeMobDot.classList.add('active');
       }
 
       // Sync SVG background slides (Desktop)
@@ -741,6 +749,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dot controls
     heroDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        switchHeroSlide(idx);
+        startHeroAutoPlay();
+      });
+    });
+
+    heroMobDots.forEach((dot, idx) => {
       dot.addEventListener('click', () => {
         switchHeroSlide(idx);
         startHeroAutoPlay();

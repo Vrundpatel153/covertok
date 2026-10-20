@@ -50,6 +50,7 @@
     try {
       localStorage.setItem(CART_KEY, JSON.stringify(cart));
       updateCartUI();
+      if (window.renderCartUI) window.renderCartUI();
     } catch (e) {
       console.error('Error saving cart:', e);
     }
@@ -68,6 +69,7 @@
   function saveWishlist(list) {
     try {
       localStorage.setItem(WISHLIST_KEY, JSON.stringify(list));
+      if (window.renderWishlistUI) window.renderWishlistUI();
     } catch (e) {}
   }
   window.toggleWishlist = function(productId, productTitle) {
@@ -260,6 +262,10 @@
 
   // 5. DRAWER TOGGLES
   function openCartDrawer() {
+    if (window.CovertokFlows && window.CovertokFlows.openCart) {
+      window.CovertokFlows.openCart();
+      return;
+    }
     const drawer = document.getElementById('cartDrawer');
     const overlay = document.getElementById('cartOverlay');
     if (drawer && overlay) {
@@ -271,6 +277,10 @@
   }
 
   function closeCartDrawer() {
+    if (window.CovertokFlows && window.CovertokFlows.closeCart) {
+      window.CovertokFlows.closeCart();
+      return;
+    }
     const drawer = document.getElementById('cartDrawer');
     const overlay = document.getElementById('cartOverlay');
     if (drawer && overlay) {
