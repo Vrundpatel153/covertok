@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aluminium Frame Transparent Case | Covertok Official</title>
-  <meta name="description" content="Shop the Aluminium Frame Transparent Case at Covertok. Aviation-grade metallic bezels, 10ft drop protection, seamless MagSafe snap, and 100% precision fit.">
+  <title>Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/10000 mAh | Covertok Official</title>
+  <meta name="description" content="Shop the Magnetic Wireless Power Bank at Covertok. Ultra-sleek 5000mAh/10000mAh, strong magnetic hold, digital LED display, and fast charging output.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,7 @@
             p = window.CovertokProducts.find(function(x) { return x.handle === prodHandle; });
           }
           if (!p) {
-            p = window.CovertokProducts.find(function(x) { return x.has_colors && x.category === 'iphone-cases'; }) || window.CovertokProducts[0];
+            p = window.CovertokProducts.find(function(x) { return String(x.id) === '9888955924778'; }) || window.CovertokProducts[0];
           }
         }
         window.__PDP_INITIAL_PRODUCT__ = p;
@@ -83,12 +83,11 @@
         <nav class="pdp-nav" aria-label="Main Navigation">
           <ul class="pdp-nav-links">
             <li><a href="collections.html" class="pdp-nav-link">All Products</a></li>
-            <li><a href="collections.html?category=iphone-cases" class="pdp-nav-link active">Phone Cases</a></li>
+            <li><a href="collections.html?category=iphone-cases" class="pdp-nav-link">Phone Cases</a></li>
             <li><a href="collections.html?category=watch-bands" class="pdp-nav-link">Watch Bands</a></li>
             <li><a href="collections.html?category=airpod-covers" class="pdp-nav-link">AirPod Covers</a></li>
+            <li><a href="collections.html?category=other-accessories" class="pdp-nav-link active">Accessories</a></li>
             <li><a href="index.html#story" class="pdp-nav-link">Our Story</a></li>
-            <li><a href="#customerReviews" class="pdp-nav-link">Reviews</a></li>
-            <li><a href="https://covertok.com/pages/contact-information" target="_blank" rel="noopener noreferrer" class="pdp-nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -123,20 +122,15 @@
     </div>
   </header>
 
-  <!-- 3. BREADCRUMBS & PRODUCT SWITCHER STRIP -->
+  <!-- 3. BREADCRUMBS -->
   <div class="pdp-breadcrumbs-strip">
     <nav class="pdp-breadcrumbs" aria-label="Breadcrumbs">
       <a href="index.html">Home</a>
       <span>/</span>
       <a href="collections.html">Products</a>
       <span>/</span>
-      <span class="active" id="breadcrumbTitle">Aluminium Frame Transparent Case</span>
+      <span class="active" id="breadcrumbTitle">Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/10000 mAh</span>
     </nav>
-
-    <!-- Quick Switcher Lineup -->
-    <div class="pdp-lineup-switcher" id="pdpProductSwitcher">
-      <!-- Populated dynamically by pdp_controller.js -->
-    </div>
   </div>
 
   <!-- 4. MAIN PRODUCT HERO SECTION -->
@@ -145,251 +139,113 @@
       <div class="pdp-hero-grid">
         
         <!-- LEFT: MEDIA GALLERY (Sticky on Desktop) -->
-        <div class="pdp-gallery-col">
-          <div class="pdp-main-stage" id="pdpMainStage">
-            <!-- Badges -->
-            <div class="pdp-stage-badge-top-left">
-              <span class="pdp-badge-bestseller">BESTSELLER</span>
-              <span class="pdp-badge-discount" id="pdpDiscountTag">35% OFF</span>
+        <div class="pdp-gallery-col" id="pdpGalleryCol">
+          <div class="pdp-gallery-wrap">
+            <!-- Vertical Thumbnails Rail (5 Thumbnails) -->
+            <div class="pdp-vertical-thumbs" id="pdpThumbnails" role="tablist" aria-label="Product thumbnails">
+              <button type="button" class="pdp-vthumb active" data-img="assets/products/9888955924778/1_50035509362986.png" aria-label="Thumbnail 1">
+                <img src="assets/products/9888955924778/1_50035509362986.png" alt="Front view with LED display" loading="lazy">
+              </button>
+              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/2_50035509330218.png" aria-label="Thumbnail 2">
+                <img src="assets/products/9888955924778/2_50035509330218.png" alt="Angled standing view" loading="lazy">
+              </button>
+              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/3_50035509297450.png" aria-label="Thumbnail 3">
+                <img src="assets/products/9888955924778/3_50035509297450.png" alt="Side slim profile view" loading="lazy">
+              </button>
+              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/4_50035509264682.png" aria-label="Thumbnail 4">
+                <img src="assets/products/9888955924778/4_50035509264682.png" alt="Tilted angle view" loading="lazy">
+              </button>
+              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/5_50035509231914.png" aria-label="Thumbnail 5">
+                <img src="assets/products/9888955924778/5_50035509231914.png" alt="Bottom port and edge view" loading="lazy">
+              </button>
             </div>
 
-            <!-- Floating Wishlist Heart -->
-            <button type="button" class="pdp-gallery-wishlist-btn" id="galleryWishlistBtn" aria-label="Add to wishlist">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
-
-            <!-- Counter Pill -->
-            <div class="pdp-stage-counter" id="galleryCounter">1 / 5</div>
-
-            <!-- Stage Navigation Arrows -->
-            <button type="button" class="pdp-stage-nav-btn prev" id="galleryPrevBtn" aria-label="Previous image">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button type="button" class="pdp-stage-nav-btn next" id="galleryNextBtn" aria-label="Next image">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-
-            <!-- Active Hero Image -->
-            <img id="pdpMainImg" src="assets/products/9979941159210/1_51573025472810.png" alt="Product Showcase" class="pdp-main-img">
-          </div>
-
-          <!-- Thumbnail Strip with Arrows -->
-          <div class="pdp-thumbnails-rail pdp-thumbs-slider-wrap">
-            <button type="button" class="pdp-thumb-arrow-btn" id="pdpThumbPrev" aria-label="Previous thumbnails">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-
-            <div class="pdp-thumbnails-scroll" id="pdpThumbnails" role="tablist" aria-label="Image thumbnails">
-              <!-- Dynamically populated by controller -->
+            <!-- Main Showcase Stage -->
+            <div class="pdp-main-stage" id="pdpMainStage">
+              <img id="pdpMainImg" src="assets/products/9888955924778/1_50035509362986.png" alt="Magnetic Wireless Power Bank" class="pdp-main-img">
+              
+              <!-- Zoom Button (Circle with magnifying glass) -->
+              <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Zoom image" title="Zoom">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#171513" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
             </div>
-
-            <button type="button" class="pdp-thumb-arrow-btn" id="pdpThumbNext" aria-label="Next thumbnails">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
           </div>
         </div>
 
-        <!-- RIGHT: BUY BOX & PRODUCT CONFIGURATOR -->
+        <!-- RIGHT: PRODUCT CONFIGURATOR & BUY BOX -->
         <div class="pdp-config-col">
-          
-          <!-- Category Eyebrow & Title -->
+          <!-- Kicker Tag -->
           <div class="pdp-eyebrow-row">
-            <span class="pdp-category-eyebrow pdp-brand-tag" id="pdpBrandTag">COVERTOK ORIGINAL · TITANIUM & GLASS HYBRID</span>
+            <span class="pdp-brand-tag" id="pdpBrandTag">COVERTOK ORIGINAL</span>
           </div>
-          
-          <h1 class="pdp-product-title" id="pdpProductTitle">Aluminium Frame Transparent Case</h1>
 
-          <!-- Reviews Row -->
+          <!-- Product Title & Subtitle -->
+          <h1 class="pdp-product-title" id="pdpProductTitle">Magnetic Wireless Power Bank</h1>
+          <h2 class="pdp-product-subtitle" id="pdpProductSubtitle">Ultra Sleek 5000mAh/10000 mAh</h2>
+
+          <!-- Description -->
+          <p class="pdp-hero-desc" id="pdpHeroDesc">
+            Stay charged in style with Covertok. This ultra-slim 5000mAh/10000 mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery level.
+          </p>
+
+          <!-- Rating & Verified Choice Badge -->
           <div class="pdp-rating-row">
             <div class="pdp-stars">★★★★★</div>
             <span class="pdp-rating-score" id="reviewBigScore">4.8</span>
             <a href="#customerReviews" class="pdp-reviews-count-link">
-              <span class="pdp-review-count">183 Verified Customer Reviews</span>
+              <span class="pdp-review-count">(183 Verified Reviews)</span>
             </a>
             <span class="pdp-verified-badge">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               Verified Buyer Choice
             </span>
           </div>
 
-          <!-- Price Card -->
+          <!-- Capacity Selector -->
+          <div class="pdp-option-group" id="capacityGroup">
+            <div class="pdp-option-header">
+              <span class="pdp-option-title">Capacity</span>
+            </div>
+            <div class="pdp-capacity-pills" id="pdpCapacityPills">
+              <button type="button" class="pdp-capacity-pill active" data-capacity="5000 mAh" data-price="2099" data-orig="3249">5000 mAh</button>
+              <button type="button" class="pdp-capacity-pill" data-capacity="10000 mAh" data-price="2599" data-orig="3999">10000 mAh</button>
+            </div>
+          </div>
+
+          <!-- Color Swatches -->
+          <div class="pdp-option-group" id="colorGroup">
+            <div class="pdp-option-header">
+              <span class="pdp-option-title">Color: <strong id="selectedColorLabel">Black</strong></span>
+            </div>
+            <div class="pdp-color-swatches" id="colorSwatchesGrid">
+              <button type="button" class="pdp-color-swatch active" data-color="Black" data-img="assets/products/9888955924778/1_50035509362986.png" title="Black" aria-label="Black">
+                <span class="swatch-circle" style="background: #18181B;"></span>
+              </button>
+              <button type="button" class="pdp-color-swatch" data-color="Rose Gold" data-img="assets/products/9888955924778/3_50035509297450.png" title="Rose Gold" aria-label="Rose Gold">
+                <span class="swatch-circle" style="background: #F8B5C4;"></span>
+              </button>
+              <button type="button" class="pdp-color-swatch" data-color="Grey" data-img="assets/products/9888955924778/4_50035509264682.png" title="Grey" aria-label="Grey">
+                <span class="swatch-circle" style="background: #9CA3AF;"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Price Block -->
           <div class="pdp-price-card">
             <div class="pdp-price-row">
-              <span class="pdp-price-current" id="pdpPriceDisplay">Rs. 999.00</span>
-              <span class="pdp-price-original" id="pdpOriginalPrice">Rs. 1,499.00</span>
-              <span class="pdp-save-badge">Save Rs. 500.00 (33% OFF)</span>
+              <span class="pdp-price-current" id="pdpPriceDisplay">Rs. 2,099.00</span>
+              <span class="pdp-price-original" id="pdpOriginalPrice">Rs. 3,249.00</span>
+              <span class="pdp-save-badge" id="pdpDiscountTag">Save Rs. 500.00 (33% OFF)</span>
             </div>
-            <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on all orders across India.</p>
+            <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
           </div>
 
-          <!-- 4 Trust Highlights Micro-Cards -->
-          <div class="pdp-trust-grid">
-            <div class="pdp-trust-chip">
-              <span class="pdp-trust-chip-icon">⚡</span>
-              <div class="pdp-trust-chip-text">
-                <span class="pdp-trust-chip-title">Prepaid Ships in 2 Hrs</span>
-                <span class="pdp-trust-chip-sub">Superfast dispatch</span>
-              </div>
-            </div>
-            <div class="pdp-trust-chip">
-              <span class="pdp-trust-chip-icon">✅</span>
-              <div class="pdp-trust-chip-text">
-                <span class="pdp-trust-chip-title">Cash on Delivery</span>
-                <span class="pdp-trust-chip-sub">Pay at your doorstep</span>
-              </div>
-            </div>
-            <div class="pdp-trust-chip">
-              <span class="pdp-trust-chip-icon">🛡️</span>
-              <div class="pdp-trust-chip-text">
-                <span class="pdp-trust-chip-title">10ft Drop Certified</span>
-                <span class="pdp-trust-chip-sub">Military standard impact</span>
-              </div>
-            </div>
-            <div class="pdp-trust-chip">
-              <span class="pdp-trust-chip-icon">🔄</span>
-              <div class="pdp-trust-chip-text">
-                <span class="pdp-trust-chip-title">30-Day Free Exchange</span>
-                <span class="pdp-trust-chip-sub">Hassle-free guarantee</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Option 1: Select iPhone Model -->
-          <div class="pdp-option-group pdp-model-group">
-            <div class="pdp-option-header">
-              <span class="pdp-option-title">Select iPhone Model</span>
-              <span class="pdp-option-selected-label" id="selectedDeviceLabel">iPhone 17 Pro · In Stock</span>
-            </div>
-            <div class="pdp-model-select-wrap">
-              <div class="pdp-custom-dropdown" id="pdpCustomDropdown">
-                <button type="button" class="pdp-dropdown-trigger" id="pdpDropdownTrigger" aria-haspopup="listbox" aria-expanded="false">
-                  <span class="pdp-dropdown-selected-text" id="pdpDropdownSelectedText">iPhone 17 Pro</span>
-                  <svg class="pdp-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
-                <div class="pdp-dropdown-menu" id="pdpDropdownMenu" role="listbox">
-                  <!-- Populated dynamically by controller -->
-                </div>
-              </div>
-              <select class="pdp-model-select" id="pdpModelSelect" aria-label="Select device model" style="display: none;"></select>
-            </div>
-          </div>
-
-          <!-- Option 2: Select Color Swatches -->
-          <div class="pdp-option-group pdp-color-group">
-            <div class="pdp-option-header">
-              <span class="pdp-option-title">Select Color</span>
-              <span class="pdp-option-selected-label" id="selectedColorLabel">Cosmic Orange</span>
-            </div>
-            <div class="pdp-color-swatches-grid" id="colorSwatchesGrid">
-              <!-- Swatches generated by controller -->
-            </div>
-          </div>
-
-          <!-- Overview Expandable Box -->
-          <div class="pdp-overview-box" id="pdpOverviewBox">
-            <div class="pdp-overview-content-wrap collapsed" id="pdpOverviewContentWrap">
-              <p class="pdp-overview-text" id="pdpOverviewText">
-                Protect your phone without hiding its original beauty. Engineered with aviation-grade electroplated titanium bezels and anti-yellowing optical clarity back, giving your iPhone military-certified drop protection with a lightweight, luxurious hand-feel.
-              </p>
-            </div>
-            <button type="button" class="pdp-see-more-toggle" id="pdpSeeMoreBtn" aria-expanded="false">
-              <span id="pdpSeeMoreText">See more details</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-          </div>
-
-          <!-- Option 3: Finish Tiers -->
-          <div class="pdp-option-group pdp-desktop-only">
-            <div class="pdp-option-header">
-              <span class="pdp-option-title">Protection Style & Finish</span>
-              <span class="pdp-option-selected-label" id="selectedFinishLabel">Frameless Ultra-Thin Bumper</span>
-            </div>
-            <div class="pdp-finish-grid" id="finishCards">
-              <div class="pdp-finish-card active" data-finish="Frameless Ultra-Thin Bumper" data-price="0">
-                <span class="pdp-finish-title">Frameless Bumper</span>
-                <span class="pdp-finish-desc">Naked phone feel, floating camera rim</span>
-              </div>
-              <div class="pdp-finish-card" data-finish="9H Diamond Glass Shield" data-price="0">
-                <span class="pdp-finish-title">9H Diamond Glass</span>
-                <span class="pdp-finish-desc">Ultra-scratchproof, Apple logo shine</span>
-              </div>
-              <div class="pdp-finish-card" data-finish="MagSafe Impact Armor" data-price="0">
-                <span class="pdp-finish-title">MagSafe Armor</span>
-                <span class="pdp-finish-desc">10ft drop certified, N52 snap ring</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Option 4: Complete Your Setup (Add-on Accessories) -->
-          <div class="pdp-option-group pdp-desktop-only">
-            <div class="pdp-option-header">
-              <span class="pdp-option-title">Complete Your Setup (Frequently Bought Together)</span>
-              <span class="pdp-option-selected-label" id="selectedAddonsCount">0 selected (+Rs. 0.00)</span>
-            </div>
-            <div class="pdp-addons-list" id="pdpAddonsList">
-              <label class="pdp-addon-item">
-                <div class="pdp-addon-left">
-                  <input type="checkbox" class="pdp-addon-checkbox" data-name="2x 9H Camera Lens Protectors" data-price="299">
-                  <div class="pdp-addon-info">
-                    <span class="pdp-addon-title">2x 9H Diamond Camera Lens Protectors</span>
-                    <span class="pdp-addon-desc">Ultra-clear sapphire glass with anti-reflective night flash ring</span>
-                  </div>
-                </div>
-                <span class="pdp-addon-price">+Rs. 299.00</span>
-              </label>
-
-              <label class="pdp-addon-item">
-                <div class="pdp-addon-left">
-                  <input type="checkbox" class="pdp-addon-checkbox" data-name="MagSafe Leather Card Wallet" data-price="499">
-                  <div class="pdp-addon-info">
-                    <span class="pdp-addon-title">MagSafe Leather Snap-On Card Wallet</span>
-                    <span class="pdp-addon-desc">RFID shielding with strong neodymium magnetic attachment</span>
-                  </div>
-                </div>
-                <span class="pdp-addon-price">+Rs. 499.00</span>
-              </label>
-
-              <label class="pdp-addon-item">
-                <div class="pdp-addon-left">
-                  <input type="checkbox" class="pdp-addon-checkbox" data-name="60W Braided USB-C Fast Cable" data-price="399">
-                  <div class="pdp-addon-info">
-                    <span class="pdp-addon-title">60W Braided Ultra-Fast USB-C Cable (1.5m)</span>
-                    <span class="pdp-addon-desc">Military-grade nylon braiding with 10,000+ bend lifespan</span>
-                  </div>
-                </div>
-                <span class="pdp-addon-price">+Rs. 399.00</span>
-              </label>
-
-              <label class="pdp-addon-item">
-                <div class="pdp-addon-left">
-                  <input type="checkbox" class="pdp-addon-checkbox" data-name="AirPods Pro Matching Silicone Case" data-price="349">
-                  <div class="pdp-addon-info">
-                    <span class="pdp-addon-title">Matching AirPods Pro Silicone Protective Case</span>
-                    <span class="pdp-addon-desc">Color-matched with carabiner clip and dust cap port</span>
-                  </div>
-                </div>
-                <span class="pdp-addon-price">+Rs. 349.00</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Total Summary Box -->
-          <div class="pdp-summary-box pdp-desktop-only">
-            <div class="pdp-summary-row">
-              <span id="summaryCaseTitle">Aluminium Frame Transparent Case</span>
-              <span id="summaryCasePrice">Rs. 999.00</span>
-            </div>
-            <div class="pdp-summary-row" id="summaryAddonsRow" style="display: none;">
-              <span>Selected Add-ons</span>
-              <span id="summaryAddonsPrice">+Rs. 0.00</span>
-            </div>
-            <div class="pdp-summary-row total">
-              <span>Total Price:</span>
-              <span id="summaryTotalPrice">Rs. 999.00</span>
-            </div>
-          </div>
-
-          <!-- Actions CTA Buttons -->
+          <!-- Actions CTA Row: Qty Stepper, Add to Cart, Wishlist, Buy It Now -->
           <div class="pdp-actions-row">
             <div class="pdp-actions-top-row">
               <!-- Qty Stepper -->
@@ -399,83 +255,22 @@
                 <button type="button" class="pdp-qty-btn" id="pdpQtyPlus" aria-label="Increase quantity">+</button>
               </div>
 
-              <!-- Wishlist Toggle -->
-              <button type="button" class="pdp-wishlist-action-btn" id="pdpWishlistBtn" aria-label="Save to Wishlist">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </button>
-
               <!-- Add to Cart CTA -->
               <button type="button" class="btn-pdp-cart" id="pdpAddToCartBtn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                <span>ADD TO CART · Rs. 999.00</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span>ADD TO CART</span>
+              </button>
+
+              <!-- Wishlist Toggle -->
+              <button type="button" class="pdp-wishlist-action-btn" id="pdpWishlistBtn" aria-label="Save to Wishlist">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
               </button>
             </div>
 
-            <!-- Instant Buy Now CTA -->
+            <!-- Instant Buy It Now CTA -->
             <button type="button" class="btn-pdp-buynow" id="pdpBuyNowBtn">
-              <span>BUY NOW ⚡ FAST CHECKOUT</span>
+              <span>BUY IT NOW</span>
             </button>
-          </div>
-
-          <!-- Pincode Estimator Card -->
-          <div class="pdp-pincode-card">
-            <span class="pdp-option-title">Estimated Express Delivery</span>
-            <div class="pdp-pincode-row">
-              <input type="text" class="pdp-pincode-input" id="pinInput" placeholder="Enter Delivery Pincode (e.g. 110001)" maxlength="6">
-              <button type="button" class="pdp-pincode-btn" id="checkPinBtn">Check</button>
-            </div>
-            <span class="pdp-pincode-result" id="pinResult"></span>
-          </div>
-
-          <!-- Certification Banner -->
-          <div class="pdp-certification-banner">
-            <div class="pdp-cert-item">
-              <div class="pdp-cert-text">
-                <span class="pdp-cert-title">Google Customer Reviews</span>
-                <span class="pdp-cert-stars">★★★★★ 4.8 / 5.0 Rating</span>
-              </div>
-            </div>
-            <div class="pdp-cert-item">
-              <div class="pdp-cert-text">
-                <span class="pdp-cert-title">Trustpilot Certified</span>
-                <span class="pdp-cert-stars">★★★★☆ 4.4 Stars</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Collapsible Accordion Tabs -->
-          <div class="pdp-accordions-group">
-            
-            <div class="pdp-accordion-item open">
-              <button type="button" class="pdp-accordion-trigger" aria-expanded="true">
-                <span>Engineering & Materials Protection</span>
-                <span class="pdp-accordion-icon">+</span>
-              </button>
-              <div class="pdp-accordion-body">
-                Crafted with an aviation-grade aluminum outer bumper engineered to disperse 99% of drop shocks. Features a 1.5mm raised screen bezel, 2.0mm raised camera guard ring, and tactile responsive metal buttons providing authentic Apple click-feel.
-              </div>
-            </div>
-
-            <div class="pdp-accordion-item">
-              <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-                <span>Shipping, Dispatch & Cash on Delivery</span>
-                <span class="pdp-accordion-icon">+</span>
-              </button>
-              <div class="pdp-accordion-body">
-                Prepaid orders dispatch within 2 business hours with priority air shipping (2-4 business days). Cash on Delivery is available across 19,000+ Indian postal codes. Express live SMS & WhatsApp tracking is sent upon dispatch.
-              </div>
-            </div>
-
-            <div class="pdp-accordion-item">
-              <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-                <span>30-Day Hassle-Free Exchange & Warranty</span>
-                <span class="pdp-accordion-icon">+</span>
-              </button>
-              <div class="pdp-accordion-body">
-                Enjoy complete peace of mind with our 30-day exchange guarantee. If you received the wrong model or are not 100% satisfied, simply contact our WhatsApp support team (+91 98386 88544) for doorstep replacement with zero return pickup fee.
-              </div>
-            </div>
-
           </div>
 
         </div>
@@ -483,381 +278,323 @@
     </div>
   </main>
 
-  <!-- 5. COVERTOK PROMISE SECTION -->
-
-  <!-- ========================================================================= -->
-
-  <!-- SECTION: BRAND PROMISES & BADGES (Shopify: snippets/product-promises.liquid) -->
-
-  <!-- ========================================================================= -->
-
-  <section class="pdp-promise-section">
+  <!-- 5. TRUST BADGES STRIP (DIRECTLY BELOW HERO & BUYING OPTIONS) -->
+  <section class="pdp-trust-bar-section">
     <div class="pdp-container">
-      <div class="pdp-section-header">
-        <span class="pdp-section-kicker">THE COVERTOK PROMISE</span>
-        <h2 class="pdp-section-title">Engineered Without Compromise</h2>
-      </div>
-
-      <div class="pdp-promise-grid">
-        <div class="pdp-promise-card">
-          <div class="pdp-promise-icon-wrap">🛡️</div>
-          <h3 class="pdp-promise-card-title">10ft Military Drop Certified</h3>
-          <p class="pdp-promise-card-desc">Multi-layered shock absorbent corners protecting your phone from accidental everyday drops.</p>
+      <div class="pdp-trust-bar-card">
+        <div class="pdp-trust-bar-col">
+          <h4 class="pdp-trust-title">Express Delivery</h4>
+          <p class="pdp-trust-sub">Ships in 1–2 Days</p>
         </div>
-
-        <div class="pdp-promise-card">
-          <div class="pdp-promise-icon-wrap">⚡</div>
-          <h3 class="pdp-promise-card-title">Same-Day Priority Dispatch</h3>
-          <p class="pdp-promise-card-desc">Orders placed before 2 PM dispatch same-day with priority air couriers and express tracking.</p>
+        <div class="pdp-trust-bar-col">
+          <h4 class="pdp-trust-title">Cash on Delivery</h4>
+          <p class="pdp-trust-sub">Available at Checkout</p>
         </div>
-
-        <div class="pdp-promise-card">
-          <div class="pdp-promise-icon-wrap">🔄</div>
-          <h3 class="pdp-promise-card-title">30-Day Hassle-Free Returns</h3>
-          <p class="pdp-promise-card-desc">Doorstep reverse pickup with instant exchange or full refund if you are not 100% in love.</p>
+        <div class="pdp-trust-bar-col">
+          <h4 class="pdp-trust-title">30-Day Free Exchange</h4>
+          <p class="pdp-trust-sub">Hassle-Free Returns</p>
         </div>
-
-        <div class="pdp-promise-card">
-          <div class="pdp-promise-icon-wrap">✨</div>
-          <h3 class="pdp-promise-card-title">Naked Phone Ergonomics</h3>
-          <p class="pdp-promise-card-desc">Ultra-slim frameless profile preserving authentic Apple titanium hand-feel and cooling.</p>
+        <div class="pdp-trust-bar-col">
+          <h4 class="pdp-trust-title">100% Secure Payment</h4>
+          <p class="pdp-trust-sub">PCI Compliant</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. COMMUNITY VIDEO REELS SECTION (On PDP) -->
-
-  <!-- ========================================================================= -->
-
-  <!-- SECTION: VIDEO REELS (Shopify: sections/community-videos.liquid)        -->
-
-  <!-- ========================================================================= -->
-
-  <section class="pdp-reels-section" id="communityVideosSection" aria-label="Community Video Reels">
+  <!-- 6. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) -->
+  <section class="pdp-bundle-section" id="bundleSection">
     <div class="pdp-container">
-      <div class="pdp-section-header">
-        <span class="pdp-section-kicker">REAL PEOPLE, REAL STYLE</span>
-        <h2 class="pdp-section-title">Covertok In Real Life</h2>
+      <div class="pdp-bundle-header">
+        <div>
+          <h2 class="pdp-bundle-title">Complete Your Setup</h2>
+          <p class="pdp-bundle-subtitle">Frequently bought together</p>
+        </div>
+        <div class="pdp-bundle-selected-total" id="bundleSelectedCount">0 selected (+ Rs. 0.00)</div>
       </div>
 
-      <div class="pdp-reels-grid">
-        <!-- Reel 1 -->
-        <article class="pdp-reel-card video-reel-card" data-video-index="0" data-video-id="77302">
-          <img src="assets/community_videos/thumb_video_77302.jpg" alt="Luxury Leather Magnetic Armor Reel" loading="lazy">
-          <div class="pdp-reel-card-gradient"></div>
-          <span class="pdp-reel-badge-duration">00:53</span>
-          <div class="pdp-reel-play-icon">▶</div>
-          <div class="pdp-reel-caption">Luxury Leather Magnetic Armor - Drop Test & Snap</div>
+      <div class="pdp-bundle-grid">
+        <!-- Card 1: Power Bank -->
+        <article class="pdp-bundle-card" data-bundle-id="power-bank" data-bundle-price="2099">
+          <label class="pdp-bundle-checkbox-label">
+            <input type="checkbox" class="bundle-check" data-name="Magnetic Wireless Power Bank" data-price="2099" id="bundleCheck1">
+            <span class="bundle-checkbox-custom"></span>
+          </label>
+          <div class="pdp-bundle-card-img-wrap">
+            <img src="assets/products/9888955924778/1_50035509362986.png" alt="Magnetic Wireless Power Bank" loading="lazy">
+          </div>
+          <div class="pdp-bundle-card-footer">
+            <label for="bundleCheck1" class="bundle-card-title-label">
+              <span class="bundle-mini-check"></span>
+              <span class="bundle-prod-title">Magnetic Wireless Power Bank</span>
+            </label>
+            <div class="bundle-price-row">
+              <span class="bundle-current-price">Rs. 2,099.00</span>
+            </div>
+          </div>
         </article>
 
-        <!-- Reel 2 -->
-        <article class="pdp-reel-card video-reel-card" data-video-index="1" data-video-id="77301">
-          <img src="assets/community_videos/thumb_video_77301.jpg" alt="Titanium Edge Case Reel" loading="lazy">
-          <div class="pdp-reel-card-gradient"></div>
-          <span class="pdp-reel-badge-duration">00:25</span>
-          <div class="pdp-reel-play-icon">▶</div>
-          <div class="pdp-reel-caption">Electroplated Titanium Edge Case</div>
+        <!-- Card 2: MagSafe Clear Case -->
+        <article class="pdp-bundle-card" data-bundle-id="clear-case" data-bundle-price="499">
+          <label class="pdp-bundle-checkbox-label">
+            <input type="checkbox" class="bundle-check" data-name="MagSafe Clear Case" data-price="499" id="bundleCheck2">
+            <span class="bundle-checkbox-custom"></span>
+          </label>
+          <div class="pdp-bundle-card-img-wrap">
+            <img src="assets/bundle_clear_case.jpg" alt="MagSafe Clear Case" loading="lazy">
+          </div>
+          <div class="pdp-bundle-card-footer">
+            <label for="bundleCheck2" class="bundle-card-title-label">
+              <span class="bundle-mini-check"></span>
+              <span class="bundle-prod-title">MagSafe Clear Case</span>
+            </label>
+            <div class="bundle-price-row">
+              <span class="bundle-current-price">Rs. 499.00</span>
+              <span class="bundle-compare-price">Rs. 999.00</span>
+            </div>
+          </div>
         </article>
 
-        <!-- Reel 3 -->
-        <article class="pdp-reel-card video-reel-card" data-video-index="2" data-video-id="77299">
-          <img src="assets/community_videos/thumb_video_77299.jpg" alt="Gradient Wave Reel" loading="lazy">
-          <div class="pdp-reel-card-gradient"></div>
-          <span class="pdp-reel-badge-duration">00:09</span>
-          <div class="pdp-reel-play-icon">▶</div>
-          <div class="pdp-reel-caption">Aesthetic Gradient Wave Case</div>
+        <!-- Card 3: 60W Braided Cable -->
+        <article class="pdp-bundle-card" data-bundle-id="cable" data-bundle-price="399">
+          <label class="pdp-bundle-checkbox-label">
+            <input type="checkbox" class="bundle-check" data-name="60W Braided USB-C Cable" data-price="399" id="bundleCheck3">
+            <span class="bundle-checkbox-custom"></span>
+          </label>
+          <div class="pdp-bundle-card-img-wrap">
+            <img src="assets/bundle_usbc_cable.jpg" alt="60W Braided USB-C Cable" loading="lazy">
+          </div>
+          <div class="pdp-bundle-card-footer">
+            <label for="bundleCheck3" class="bundle-card-title-label">
+              <span class="bundle-mini-check"></span>
+              <span class="bundle-prod-title">60W Braided USB-C Cable</span>
+            </label>
+            <div class="bundle-price-row">
+              <span class="bundle-current-price">Rs. 399.00</span>
+              <span class="bundle-compare-price">Rs. 799.00</span>
+            </div>
+          </div>
         </article>
 
-        <!-- Reel 4 -->
-        <article class="pdp-reel-card video-reel-card" data-video-index="3" data-video-id="77305">
-          <img src="assets/community_videos/thumb_video_77305.jpg" alt="Clear MagSafe Case Reel" loading="lazy">
-          <div class="pdp-reel-card-gradient"></div>
-          <span class="pdp-reel-badge-duration">00:13</span>
-          <div class="pdp-reel-play-icon">▶</div>
-          <div class="pdp-reel-caption">Transparent Shockproof MagSafe Armor Case</div>
-        </article>
-
-        <!-- Reel 5 -->
-        <article class="pdp-reel-card video-reel-card" data-video-index="4" data-video-id="77298">
-          <img src="assets/community_videos/thumb_video_77298.jpg" alt="Power Bank Reel" loading="lazy">
-          <div class="pdp-reel-card-gradient"></div>
-          <span class="pdp-reel-badge-duration">00:59</span>
-          <div class="pdp-reel-play-icon">▶</div>
-          <div class="pdp-reel-caption">Charges like a beast 🔋⚡ Slim Power Bank</div>
-        </article>
-
-        <!-- Reel 6 -->
-        <article class="pdp-reel-card video-reel-card" data-video-index="5" data-video-id="77297">
-          <img src="assets/community_videos/thumb_video_77297.jpg" alt="Match Your Vibe Reel" loading="lazy">
-          <div class="pdp-reel-card-gradient"></div>
-          <span class="pdp-reel-badge-duration">00:16</span>
-          <div class="pdp-reel-play-icon">▶</div>
-          <div class="pdp-reel-caption">✨ Match your vibe 💄✨ Stylish covers</div>
+        <!-- Card 4: Camera Lens Protectors -->
+        <article class="pdp-bundle-card" data-bundle-id="lens-protectors" data-bundle-price="299">
+          <label class="pdp-bundle-checkbox-label">
+            <input type="checkbox" class="bundle-check" data-name="Camera Lens Protectors" data-price="299" id="bundleCheck4">
+            <span class="bundle-checkbox-custom"></span>
+          </label>
+          <div class="pdp-bundle-card-img-wrap">
+            <img src="assets/bundle_lens_protector.jpg" alt="Camera Lens Protectors" loading="lazy">
+          </div>
+          <div class="pdp-bundle-card-footer">
+            <label for="bundleCheck4" class="bundle-card-title-label">
+              <span class="bundle-mini-check"></span>
+              <span class="bundle-prod-title">Camera Lens Protectors</span>
+            </label>
+            <div class="bundle-price-row">
+              <span class="bundle-current-price">Rs. 299.00</span>
+              <span class="bundle-compare-price">Rs. 599.00</span>
+            </div>
+          </div>
         </article>
       </div>
+    </div>
+  </section>
 
-      <!-- Video Reel Lightbox Modal -->
-      <div class="community-reel-modal" id="communityReelModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Covertok Video Reel">
-        <div class="community-reel-backdrop" id="communityReelBackdrop"></div>
-        <button type="button" class="community-reel-modal-nav community-reel-modal-prev" id="communityReelPrevBtn" aria-label="Previous Video">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-        <button type="button" class="community-reel-modal-nav community-reel-modal-next" id="communityReelNextBtn" aria-label="Next Video">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
-        <div class="community-reel-dialog">
-          <div class="community-reel-top-bar">
-            <div class="community-reel-creator">
-              <img src="assets/covertok-crest-logo.png" alt="@covertokofficial" class="community-reel-creator-avatar">
-              <span class="community-reel-creator-handle">@covertokofficial</span>
+  <!-- 7. PRODUCT DETAILS & TECHNICAL SPECIFICATIONS (2-COLUMN CARD) -->
+  <section class="pdp-details-specs-section">
+    <div class="pdp-container">
+      <div class="pdp-details-specs-card">
+        <!-- Left: Product Details & Features -->
+        <div class="pdp-specs-col-left">
+          <h3 class="pdp-subheading">Product Details</h3>
+          <p class="pdp-details-paragraph">
+            The Covertok Magnetic Wireless Power Bank is crafted for those who want reliable power in a sleek, compact form. Its strong magnetic hold snaps securely to your iPhone with MagSafe, keeping you charged on the go.
+          </p>
+
+          <div class="pdp-feature-callouts-list">
+            <!-- Feature 1 -->
+            <div class="pdp-feature-item">
+              <div class="pdp-feature-circle-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3v7a6 6 0 0 0 12 0V3"></path>
+                  <line x1="4" y1="3" x2="8" y2="3"></line>
+                  <line x1="16" y1="3" x2="20" y2="3"></line>
+                  <line x1="4" y1="8" x2="8" y2="8"></line>
+                  <line x1="16" y1="8" x2="20" y2="8"></line>
+                </svg>
+              </div>
+              <div class="pdp-feature-text">
+                <h4 class="pdp-feature-title">Strong Magnetic Hold</h4>
+                <p class="pdp-feature-sub">Snaps securely to your iPhone with MagSafe.</p>
+              </div>
             </div>
-            <button type="button" class="community-reel-close-btn" id="communityReelCloseBtn" aria-label="Close video player">&times;</button>
-          </div>
-          <div class="community-reel-player-wrap">
-            <video class="community-reel-player" id="communityReelPlayer" controls preload="metadata" playsinline loop></video>
-          </div>
-          <div class="community-reel-bottom-bar">
-            <h3 class="community-reel-title" id="communityReelTitle">Video Title</h3>
-            <div class="community-reel-meta-row">
-              <span class="community-reel-product" id="communityReelProduct">Covertok Product (<span id="communityReelDuration">00:00</span>)</span>
-              <a href="https://covertok.com/collections" target="_blank" rel="noopener noreferrer" class="community-reel-shop-btn" id="communityReelShopBtn">
-                <span>Shop Now</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
+
+            <!-- Feature 2 -->
+            <div class="pdp-feature-item">
+              <div class="pdp-feature-circle-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="7" y="2" width="10" height="20" rx="3" ry="3"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div class="pdp-feature-text">
+                <h4 class="pdp-feature-title">Compact & Lightweight</h4>
+                <p class="pdp-feature-sub">Slim profile, easy to carry anywhere.</p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="pdp-feature-item">
+              <div class="pdp-feature-circle-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="3" ry="3"></rect>
+                  <polyline points="9 10 12 12 9 14"></polyline>
+                  <line x1="15" y1="14" x2="15.01" y2="14"></line>
+                </svg>
+              </div>
+              <div class="pdp-feature-text">
+                <h4 class="pdp-feature-title">Digital LED Display</h4>
+                <p class="pdp-feature-sub">Shows exact battery percentage.</p>
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- Right: Technical Specifications -->
+        <div class="pdp-specs-col-right">
+          <h3 class="pdp-subheading">Technical Specifications</h3>
+          <table class="pdp-specs-table">
+            <tbody>
+              <tr>
+                <td class="specs-label">Capacity</td>
+                <td class="specs-value">5000 mAh / 10000 mAh</td>
+              </tr>
+              <tr>
+                <td class="specs-label">Charging</td>
+                <td class="specs-value">Magnetic wireless charging<br>USB-C input/output</td>
+              </tr>
+              <tr>
+                <td class="specs-label">Compatibility</td>
+                <td class="specs-value">MagSafe compatible iPhones<br>iPhone 12 and later</td>
+              </tr>
+              <tr>
+                <td class="specs-label">Color</td>
+                <td class="specs-value" id="specsColorValue">Black</td>
+              </tr>
+              <tr>
+                <td class="specs-label">Display</td>
+                <td class="specs-value">Digital LED battery percentage</td>
+              </tr>
+              <tr>
+                <td class="specs-label">Material</td>
+                <td class="specs-value">Premium ABS with matte finish</td>
+              </tr>
+              <tr>
+                <td class="specs-label">Dimensions</td>
+                <td class="specs-value">5000 mAh: 96 × 64 × 9 mm<br>10000 mAh: 96 × 64 × 15 mm</td>
+              </tr>
+              <tr>
+                <td class="specs-label">In the Box</td>
+                <td class="specs-value">Power bank, USB-C cable, user guide</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. AUTHENTIC CUSTOMER REVIEWS (Trustoo) -->
-
-  <!-- ========================================================================= -->
-
-  <!-- SECTION: CUSTOMER REVIEWS (Shopify: sections/product-reviews.liquid)    -->
-
-  <!-- ========================================================================= -->
-
-  <section class="pdp-reviews-section" id="customerReviews" aria-label="Customer Reviews">
+  <!-- 8. ACCORDION CARDS (Materials & Care, Delivery & Returns, Warranty) -->
+  <section class="pdp-accordions-section">
     <div class="pdp-container">
-      <div class="pdp-section-header">
-        <span class="pdp-section-kicker">VERIFIED BUYER FEEDBACK</span>
-        <h2 class="pdp-section-title">Real Reviews. Real People.</h2>
-      </div>
-
-      <div class="pdp-reviews-layout">
-        <!-- Summary Left -->
-        <div class="pdp-reviews-summary-card">
-          <div class="pdp-reviews-big-score">4.8</div>
-          <div class="pdp-stars">★★★★★</div>
-          <span style="font-size: 0.85rem; color: #64748B; font-weight: 600;" id="reviewTotalSub">Based on 183 verified customer ratings</span>
-          
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <div class="pdp-review-bar-row">
-              <span>5★</span>
-              <div class="pdp-review-bar-track"><div class="pdp-review-bar-fill" style="width: 82%;"></div></div>
-              <span>82%</span>
-            </div>
-            <div class="pdp-review-bar-row">
-              <span>4★</span>
-              <div class="pdp-review-bar-track"><div class="pdp-review-bar-fill" style="width: 12%;"></div></div>
-              <span>12%</span>
-            </div>
-            <div class="pdp-review-bar-row">
-              <span>3★</span>
-              <div class="pdp-review-bar-track"><div class="pdp-review-bar-fill" style="width: 4%;"></div></div>
-              <span>4%</span>
-            </div>
-            <div class="pdp-review-bar-row">
-              <span>2★</span>
-              <div class="pdp-review-bar-track"><div class="pdp-review-bar-fill" style="width: 1%;"></div></div>
-              <span>1%</span>
-            </div>
-            <div class="pdp-review-bar-row">
-              <span>1★</span>
-              <div class="pdp-review-bar-track"><div class="pdp-review-bar-fill" style="width: 1%;"></div></div>
-              <span>1%</span>
-            </div>
-          </div>
-
-          <a href="https://covertok.com/pages/contact-information" target="_blank" rel="noopener noreferrer" class="btn btn-pill-outline" style="text-align: center; justify-content: center; margin-top: 8px;">
-            Write a Review
-          </a>
-        </div>
-
-        <!-- Reviews Feed Grid -->
-        <div class="pdp-reviews-feed-grid" id="pdpReviewsFeed">
-          
-          <div class="pdp-review-item-card">
-            <div class="pdp-review-header">
-              <span class="pdp-review-author">Harshit P.</span>
-              <span class="pdp-verified-badge">Verified Buyer</span>
-            </div>
-            <div class="pdp-stars">★★★★★</div>
-            <p class="pdp-review-text">"Solid build and reliable output. Definitely worth buying. The case feels incredibly sturdy yet lightweight on my iPhone 17 Pro."</p>
-            <span class="pdp-review-product-tag">Purchased: Aluminium Frame Case</span>
-            <span class="pdp-review-date">Reviewed Nov 2025</span>
-          </div>
-
-          <div class="pdp-review-item-card">
-            <div class="pdp-review-header">
-              <span class="pdp-review-author">Aarav K.</span>
-              <span class="pdp-verified-badge">Verified Buyer</span>
-            </div>
-            <div class="pdp-stars">★★★★★</div>
-            <p class="pdp-review-text">"Loved the iPhone cover! The material feels premium and fits perfectly. The titanium metallic edge finish matches my natural titanium phone seamlessly."</p>
-            <span class="pdp-review-product-tag">Purchased: Titanium Frameless Case</span>
-            <span class="pdp-review-date">Reviewed Nov 2025</span>
-          </div>
-
-          <div class="pdp-review-item-card">
-            <div class="pdp-review-header">
-              <span class="pdp-review-author">Kabir A.</span>
-              <span class="pdp-verified-badge">Verified Buyer</span>
-            </div>
-            <div class="pdp-stars">★★★★★</div>
-            <p class="pdp-review-text">"The case and matching iWatch band feel super premium and comfortable for daily wear. MagSafe magnets are ultra strong on car mounts."</p>
-            <span class="pdp-review-product-tag">Purchased: MagSafe Armor Case</span>
-            <span class="pdp-review-date">Reviewed Nov 2025</span>
-          </div>
-
-          <div class="pdp-review-item-card">
-            <div class="pdp-review-header">
-              <span class="pdp-review-author">Shalini R.</span>
-              <span class="pdp-verified-badge">Verified Buyer</span>
-            </div>
-            <div class="pdp-stars">★★★★★</div>
-            <p class="pdp-review-text">"I ordered an iPhone cover from Covertok and I’m genuinely impressed. The print quality is vibrant, the fit is perfect, and it feels super sturdy. Loved the packaging too!"</p>
-            <span class="pdp-review-product-tag">Purchased: Aesthetic Wave Case</span>
-            <span class="pdp-review-date">Reviewed Nov 2025</span>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. FREQUENTLY ASKED QUESTIONS (FAQ) -->
-
-  <!-- ========================================================================= -->
-
-  <!-- SECTION: PRODUCT SPECIFICATIONS & FAQ (Shopify: sections/product-faq.liquid) -->
-
-  <!-- ========================================================================= -->
-
-  <section class="pdp-faq-section" id="faq">
-    <div class="pdp-container">
-      <div class="pdp-section-header">
-        <span class="pdp-section-kicker">HAVE QUESTIONS?</span>
-        <h2 class="pdp-section-title">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="pdp-faq-list">
-        <div class="pdp-accordion-item open">
-          <button type="button" class="pdp-accordion-trigger" aria-expanded="true">
-            <span>Does this case support wireless MagSafe charging?</span>
-            <span class="pdp-accordion-icon">+</span>
-          </button>
-          <div class="pdp-accordion-body">
-            Yes, absolutely! The case features a built-in N52 neodymium magnetic array perfectly aligned with Apple MagSafe chargers, battery packs, and magnetic car mounts.
-          </div>
-        </div>
-
-        <div class="pdp-accordion-item">
+      <div class="pdp-accordions-cards-wrap">
+        <!-- Accordion 1 -->
+        <div class="pdp-accordion-card">
           <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-            <span>Will the clear transparent back turn yellow over time?</span>
-            <span class="pdp-accordion-icon">+</span>
+            <span class="pdp-accordion-trigger-text">Materials & Care</span>
+            <span class="pdp-accordion-plus">+</span>
           </button>
-          <div class="pdp-accordion-body">
-            No. We use German Bayer anti-yellowing optical polycarbonate coated with an anti-oxidation layer that resists UV light, sweat, and oils, maintaining crystal transparency.
+          <div class="pdp-accordion-panel">
+            <p>Constructed with flame-retardant ABS and smooth matte finish. Clean with a dry microfiber cloth. Avoid exposure to high moisture or extreme heat sources.</p>
           </div>
         </div>
 
-        <div class="pdp-accordion-item">
+        <!-- Accordion 2 -->
+        <div class="pdp-accordion-card">
           <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-            <span>Is Cash on Delivery (COD) available for my pincode?</span>
-            <span class="pdp-accordion-icon">+</span>
+            <span class="pdp-accordion-trigger-text">Delivery & Returns</span>
+            <span class="pdp-accordion-plus">+</span>
           </button>
-          <div class="pdp-accordion-body">
-            Yes, Cash on Delivery is available across 19,000+ pincodes in India. You can enter your 6-digit postal pincode above to check delivery dates and COD availability instantly.
+          <div class="pdp-accordion-panel">
+            <p>Orders dispatch within 1–2 business days via express air courier across India. Cash on Delivery is available at checkout. 30-Day Hassle-Free Exchange guarantee on all orders.</p>
           </div>
         </div>
 
-        <div class="pdp-accordion-item">
+        <!-- Accordion 3 -->
+        <div class="pdp-accordion-card">
           <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-            <span>What is the return and exchange policy?</span>
-            <span class="pdp-accordion-icon">+</span>
+            <span class="pdp-accordion-trigger-text">Warranty</span>
+            <span class="pdp-accordion-plus">+</span>
           </button>
-          <div class="pdp-accordion-body">
-            We offer a 30-day hassle-free doorstep exchange and returns guarantee. If you received the wrong model or need an exchange, message us on WhatsApp (+91 98386 88544) and we arrange pickup!
+          <div class="pdp-accordion-panel">
+            <p>Comes with a 6-Month Manufacturer Warranty against internal circuitry defects and battery malfunction. Reach our WhatsApp support anytime for rapid assistance.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 9. YOU MAY ALSO LIKE (RELATED PRODUCTS) -->
-
-  <!-- ========================================================================= -->
-
-  <!-- SECTION: RELATED PRODUCTS (Shopify: sections/related-products.liquid)   -->
-
-  <!-- ========================================================================= -->
-
-  <section class="pdp-related-section">
+  <!-- 9. CUSTOMER REVIEWS SECTION -->
+  <section class="pdp-reviews-box-section" id="customerReviews">
     <div class="pdp-container">
-      <div class="pdp-section-header">
-        <span class="pdp-section-kicker">CURATED RECOMMENDATIONS</span>
-        <h2 class="pdp-section-title">You May Also Like</h2>
-      </div>
+      <div class="pdp-reviews-outer-card">
+        <div class="pdp-reviews-box-header">
+          <h2 class="pdp-reviews-box-title">Customer Reviews</h2>
+          <div class="pdp-reviews-arrows">
+            <button type="button" class="pdp-rev-arrow-btn" id="revPrevBtn" aria-label="Previous review">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="pdp-rev-arrow-btn" id="revNextBtn" aria-label="Next review">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
 
-      <div class="pdp-related-grid" id="pdpRelatedGrid">
-        <!-- Dynamically populated by controller, with fallback cards -->
-        <a href="product.html?id=9875589628202" class="pdp-product-card">
-          <div class="pdp-card-img-wrap">
-            <img src="assets/products/9875589628202/1_49939894698282.jpg" alt="Soft Silicone Cover With Lip Balm" loading="lazy">
+        <div class="pdp-reviews-box-content">
+          <!-- Big Rating Summary -->
+          <div class="pdp-rating-summary-col">
+            <div class="pdp-rating-big-number">4.8</div>
+            <div class="pdp-stars-gold">★★★★★</div>
+            <div class="pdp-rating-verified-text">Based on 183 verified reviews</div>
           </div>
-          <h3 class="pdp-card-title">Soft Silicone Cover With Built-In Lip Balm Holder</h3>
-          <div class="pdp-card-price-row">
-            <span class="pdp-card-price">Rs. 649.00</span>
-            <span class="pdp-card-orig-price">Rs. 999.00</span>
-          </div>
-        </a>
 
-        <a href="product.html?id=10005871362346" class="pdp-product-card">
-          <div class="pdp-card-img-wrap">
-            <img src="assets/products/10005871362346/1_51573024883050.png" alt="Ribbed Knit Phone Sling Pouch" loading="lazy">
-          </div>
-          <h3 class="pdp-card-title">Ribbed Knit Crossbody Phone Sling Pouch</h3>
-          <div class="pdp-card-price-row">
-            <span class="pdp-card-price">Rs. 899.00</span>
-            <span class="pdp-card-orig-price">Rs. 1,499.00</span>
-          </div>
-        </a>
+          <!-- Review Cards Feed -->
+          <div class="pdp-reviews-cards-feed" id="pdpReviewCardsFeed">
+            <!-- Review Card 1 -->
+            <div class="pdp-user-card">
+              <div class="pdp-user-card-header">
+                <span class="pdp-user-card-name">Dr. M. S.</span>
+                <span class="pdp-stars-gold">★★★★★</span>
+                <span class="pdp-user-card-date">2 weeks ago</span>
+              </div>
+              <p class="pdp-user-card-text">
+                One of the best power banks I've used. The magnetic hold is strong and the build quality feels premium.
+              </p>
+            </div>
 
-        <a href="product.html?id=10017625375018" class="pdp-product-card">
-          <div class="pdp-card-img-wrap">
-            <img src="assets/products/10017625375018/1_51573025472810.png" alt="Magnetic Phone Holder" loading="lazy">
+            <!-- Review Card 2 -->
+            <div class="pdp-user-card">
+              <div class="pdp-user-card-header">
+                <span class="pdp-user-card-name">Aarav K.</span>
+                <span class="pdp-stars-gold">★★★★★</span>
+                <span class="pdp-user-card-date">1 month ago</span>
+              </div>
+              <p class="pdp-user-card-text">
+                Very slim and lightweight. The digital display is super helpful. Charges my iPhone perfectly.
+              </p>
+            </div>
           </div>
-          <h3 class="pdp-card-title">Magnetic Phone Holder with 360° Rotation Mount</h3>
-          <div class="pdp-card-price-row">
-            <span class="pdp-card-price">Rs. 699.00</span>
-            <span class="pdp-card-orig-price">Rs. 1,499.00</span>
-          </div>
-        </a>
-
-        <a href="product.html?id=9981786390826" class="pdp-product-card">
-          <div class="pdp-card-img-wrap">
-            <img src="assets/products/9981786390826/1_51573025538346.jpg" alt="Ultra Clear Sideless Anti-Yellow Case" loading="lazy">
-          </div>
-          <h3 class="pdp-card-title">Ultra Clear Sideless Anti-Yellow Back Case</h3>
-          <div class="pdp-card-price-row">
-            <span class="pdp-card-price">Rs. 799.00</span>
-            <span class="pdp-card-orig-price">Rs. 1,299.00</span>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1069,10 +806,10 @@
   <!-- 12. MOBILE STICKY BOTTOM BUY BAR -->
   <aside class="pdp-mobile-sticky-bar pdp-sticky-bar" id="pdpStickyBar" aria-label="Mobile quick purchase">
     <div class="pdp-m-sticky-left sticky-left" id="stickyLeft">
-      <img src="assets/products/9979941159210/1_51573025472810.png" alt="Thumbnail" class="pdp-m-sticky-thumb sticky-thumb" id="stickyThumb">
+      <img src="assets/products/9888955924778/1_50035509362986.png" alt="Thumbnail" class="pdp-m-sticky-thumb sticky-thumb" id="stickyThumb">
       <div class="pdp-m-sticky-info sticky-info-wrap">
-        <span class="pdp-m-sticky-title sticky-product-name" id="stickyTitle">Aluminium Frame Case</span>
-        <span class="pdp-m-sticky-price" id="stickyBtnText">Rs. 999.00</span>
+        <span class="pdp-m-sticky-title sticky-product-name" id="stickyTitle">Magnetic Wireless Power Bank</span>
+        <span class="pdp-m-sticky-price" id="stickyBtnText">Rs. 2,099.00</span>
       </div>
     </div>
     <button type="button" class="pdp-m-sticky-add-btn pdp-sticky-single-add-btn" id="stickyAddBtn">

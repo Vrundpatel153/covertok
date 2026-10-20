@@ -11,6 +11,10 @@
   let selectedFinishPrice = 0;
   let selectedAddons = [];
   let currentQty = 1;
+  let selectedCapacity = '5000 mAh';
+  let selectedCapacityPrice = 2099;
+  let selectedCapacityOrig = 3249;
+  let selectedBundleItems = [];
 
   function initPDP() {
     if (!window.CovertokProducts || !window.CovertokProducts.length) {
@@ -32,9 +36,9 @@
         currentProduct = window.CovertokProducts.find(p => p.handle === prodHandle);
       }
 
-      // Fallback: pick a flagship multi-color iPhone case or first product
+      // Fallback: pick Magnetic Wireless Power Bank (9888955924778)
       if (!currentProduct) {
-        currentProduct = window.CovertokProducts.find(p => p.has_colors && p.category === 'iphone-cases') || window.CovertokProducts[0];
+        currentProduct = window.CovertokProducts.find(p => String(p.id) === '9888955924778') || window.CovertokProducts[0];
       }
     }
 
@@ -104,13 +108,24 @@
     // 1. Breadcrumbs & Titles (Remain constant on color change)
     const breadcrumbTitle = document.getElementById('breadcrumbTitle');
     const pdpTitle = document.getElementById('pdpProductTitle');
+    const pdpSubtitle = document.getElementById('pdpProductSubtitle');
     const brandTag = document.getElementById('pdpBrandTag');
     const stickyTitle = document.getElementById('stickyTitle');
+    const heroDesc = document.getElementById('pdpHeroDesc');
 
     if (breadcrumbTitle) breadcrumbTitle.textContent = product.title;
-    if (pdpTitle) pdpTitle.textContent = product.title;
+    if (String(product.id) === '9888955924778') {
+      if (pdpTitle) pdpTitle.textContent = 'Magnetic Wireless Power Bank';
+      if (pdpSubtitle) pdpSubtitle.textContent = 'Ultra Sleek 5000mAh/10000 mAh';
+      if (brandTag) brandTag.textContent = 'COVERTOK ORIGINAL';
+      if (heroDesc) {
+        heroDesc.textContent = 'Stay charged in style with Covertok. This ultra-slim 5000mAh/10000 mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery level.';
+      }
+    } else {
+      if (pdpTitle) pdpTitle.textContent = product.title;
+      if (brandTag) brandTag.textContent = `${product.category_name.toUpperCase()} · COVERTOK ORIGINAL`;
+    }
     if (stickyTitle) stickyTitle.textContent = product.title;
-    if (brandTag) brandTag.textContent = `${product.category_name.toUpperCase()} · COVERTOK ORIGINAL`;
 
     // 2. Rating & Review Count
     const ratingCountEl = document.querySelector('.pdp-review-count');
@@ -230,7 +245,18 @@
     const galleryPrev = document.getElementById('galleryPrevBtn');
     const galleryNext = document.getElementById('galleryNextBtn');
     const galleryWishlist = document.getElementById('galleryWishlistBtn');
-    if (!strip) return;
+    // If vertical thumbnails already present in DOM (e.g. 5 angle thumbnails), bind click events directly
+    if (strip.classList.contains('pdp-vertical-thumbs') && strip.querySelectorAll('.pdp-vthumb').length > 0) {
+      strip.querySelectorAll('.pdp-vthumb').forEach(btn => {
+        btn.onclick = () => {
+          strip.querySelectorAll('.pdp-vthumb').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const img = btn.getAttribute('data-img');
+          if (img) updateMainImage(img);
+        };
+      });
+      return;
+    }
 
     // Strict Requirement:
     // If a color is chosen, ONLY that color's product images are visible in the slider.
@@ -392,6 +418,7 @@
     const colorGrid = document.getElementById('colorSwatchesGrid');
     const colorLabel = document.getElementById('selectedColorLabel');
     const stickyColor = document.getElementById('stickyColorName');
+    const specsColor = document.getElementById('specsColorValue');
 
     if (!colorGrid) return;
 
@@ -400,15 +427,36 @@
       const initialColorName = selectedColor ? selectedColor.name : product.colors[0].name;
       if (colorLabel) colorLabel.textContent = initialColorName;
       if (stickyColor) stickyColor.textContent = initialColorName;
+      if (specsColor) specsColor.textContent = initialColorName;
+
+      // If swatches already rendered in DOM with .swatch-circle, just bind clicks
+      const existingSwatches = colorGrid.querySelectorAll('.pdp-color-swatch');
+      if (existingSwatches.length > 0 && String(product.id) === '9888955924778') {
+        existingSwatches.forEach(swatch => {
+          swatch.onclick = () => {
+            colorGrid.querySelectorAll('.pdp-color-swatch').forEach(s => s.classList.remove('active'));
+            swatch.classList.add('active');
+            const cName = swatch.getAttribute('data-color');
+            const cImg = swatch.getAttribute('data-img');
+            selectedColor = product.colors.find(c => c.name === cName) || { name: cName, image: cImg };
+            if (colorLabel) colorLabel.textContent = cName;
+            if (stickyColor) stickyColor.textContent = cName;
+            if (specsColor) specsColor.textContent = cName;
+            if (cImg) updateMainImage(cImg);
+            recalculatePrice();
+          };
+        });
+        return;
+      }
 
       colorGrid.innerHTML = product.colors.map((c, idx) => `
         <button type="button" 
           class="pdp-color-swatch ${(selectedColor ? c.name === selectedColor.name : idx === 0) ? 'active' : ''}" 
           data-color="${c.name}" 
           data-img="${c.image}"
-          style="background: ${c.hex};" 
           title="${c.name}"
           aria-label="${c.name}">
+          <span class="swatch-circle" style="background: ${c.hex};"></span>
         </button>
       `).join('');
 
@@ -423,6 +471,7 @@
 
           if (colorLabel) colorLabel.textContent = cName;
           if (stickyColor) stickyColor.textContent = cName;
+          if (specsColor) specsColor.textContent = cName;
 
           const firstImg = (selectedColor.images && selectedColor.images.length > 0) ? selectedColor.images[0] : (selectedColor.image || cImg);
           
@@ -854,7 +903,94 @@
 
   // Setup Addons & Finishes
   function setupAddonsAndFinishes() {
-    // Finish Cards
+    // 1. Capacity Pills Selector (5000 mAh vs 10000 mAh)
+    document.querySelectorAll('.pdp-capacity-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.pdp-capacity-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        selectedCapacity = pill.getAttribute('data-capacity') || '5000 mAh';
+        selectedCapacityPrice = Number(pill.getAttribute('data-price')) || 2099;
+        selectedCapacityOrig = Number(pill.getAttribute('data-orig')) || 3249;
+        recalculatePrice();
+      });
+    });
+
+    // 2. Bundle Checkboxes ("Complete Your Setup" Frequently Bought Together)
+    document.querySelectorAll('.bundle-check').forEach(cb => {
+      cb.addEventListener('change', () => {
+        selectedBundleItems = [];
+        let bundlePriceSum = 0;
+        document.querySelectorAll('.bundle-check:checked').forEach(checked => {
+          const card = checked.closest('.pdp-bundle-card');
+          if (card) card.classList.add('selected');
+          const name = checked.getAttribute('data-name');
+          const price = Number(checked.getAttribute('data-price')) || 0;
+          selectedBundleItems.push({ name, price });
+          bundlePriceSum += price;
+        });
+        document.querySelectorAll('.bundle-check:not(:checked)').forEach(unchecked => {
+          const card = unchecked.closest('.pdp-bundle-card');
+          if (card) card.classList.remove('selected');
+        });
+
+        const countEl = document.getElementById('bundleSelectedCount');
+        if (countEl) {
+          if (selectedBundleItems.length === 0) {
+            countEl.textContent = '0 selected (+ Rs. 0.00)';
+          } else {
+            countEl.textContent = `${selectedBundleItems.length} selected (+ Rs. ${bundlePriceSum.toLocaleString('en-IN')}.00)`;
+          }
+        }
+      });
+    });
+
+    // 3. Luxury Accordion Cards (Materials & Care, Delivery & Returns, Warranty)
+    document.querySelectorAll('.pdp-accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const card = trigger.closest('.pdp-accordion-card');
+        if (!card) return;
+        const isOpen = card.classList.contains('open');
+        card.classList.toggle('open', !isOpen);
+        trigger.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    // 4. Customer Review Feed Scroll Chevrons
+    const revFeed = document.getElementById('pdpReviewCardsFeed');
+    document.getElementById('revPrevBtn')?.addEventListener('click', () => {
+      revFeed?.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+    document.getElementById('revNextBtn')?.addEventListener('click', () => {
+      revFeed?.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
+    // 5. Image Showcase Zoom Button
+    const zoomBtn = document.getElementById('pdpZoomBtn');
+    const mainImg = document.getElementById('pdpMainImg');
+    if (zoomBtn && mainImg) {
+      let isZoomed = false;
+      zoomBtn.addEventListener('click', () => {
+        isZoomed = !isZoomed;
+        if (isZoomed) {
+          mainImg.style.transform = 'scale(1.35)';
+          mainImg.style.cursor = 'zoom-out';
+          zoomBtn.style.background = '#171513';
+          const svg = zoomBtn.querySelector('svg');
+          if (svg) svg.style.stroke = '#FFFFFF';
+        } else {
+          mainImg.style.transform = 'scale(1)';
+          mainImg.style.cursor = 'default';
+          zoomBtn.style.background = '#FFFFFF';
+          const svg = zoomBtn.querySelector('svg');
+          if (svg) svg.style.stroke = '#171513';
+        }
+      });
+      mainImg.addEventListener('click', () => {
+        if (isZoomed) zoomBtn.click();
+      });
+    }
+
+    // 6. Finish Cards
     document.querySelectorAll('.pdp-finish-card').forEach(card => {
       card.addEventListener('click', () => {
         document.querySelectorAll('.pdp-finish-card').forEach(c => c.classList.remove('active'));
@@ -866,7 +1002,7 @@
       });
     });
 
-    // Checkboxes for Addons
+    // 7. Checkboxes for Addons
     document.querySelectorAll('.pdp-addon-checkbox').forEach(cb => {
       cb.addEventListener('change', () => {
         selectedAddons = [];
@@ -886,7 +1022,7 @@
       });
     });
 
-    // Special Combo Offer Button Handler
+    // 8. Special Combo Offer Button Handler
     document.getElementById('claimComboBtn')?.addEventListener('click', () => {
       const cbs = document.querySelectorAll('.pdp-addon-checkbox');
       cbs.forEach((cb, idx) => {
@@ -900,7 +1036,7 @@
       }
     });
 
-    // Technical Accordions
+    // 9. Technical Accordions (Legacy fallback)
     document.querySelectorAll('.pdp-spec-btn').forEach(btn => {
       btn.onclick = () => {
         const box = btn.parentElement;
@@ -912,7 +1048,7 @@
       };
     });
 
-    // Quantity stepper
+    // 10. Quantity stepper
     const qtyMinus = document.getElementById('qtyMinusBtn') || document.getElementById('pdpQtyMinus');
     const qtyPlus = document.getElementById('qtyPlusBtn') || document.getElementById('pdpQtyPlus');
     const qtyVal = document.getElementById('qtyVal') || document.getElementById('pdpQtyVal');
@@ -938,8 +1074,8 @@
   function recalculatePrice() {
     if (!currentProduct) return;
 
-    const basePrice = (selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price;
-    const origBasePrice = currentProduct.original_price;
+    const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price);
+    const origBasePrice = selectedCapacityOrig || currentProduct.original_price;
 
     const addonsSum = selectedAddons.reduce((s, a) => s + a.price, 0);
     const unitPrice = basePrice + addonsSum;
@@ -966,22 +1102,24 @@
     }
 
     if (discountTag) {
-      if (currentProduct.discount_percent > 0) {
-        discountTag.textContent = `${currentProduct.discount_percent}% OFF`;
-        discountTag.style.display = 'inline-flex';
+      const diff = totalOriginal - totalCurrent;
+      if (diff > 0) {
+        const pct = Math.round((diff / totalOriginal) * 100);
+        discountTag.textContent = `Save Rs. ${diff.toLocaleString('en-IN')}.00 (${pct}% OFF)`;
+        discountTag.style.display = 'inline-block';
       } else {
         discountTag.style.display = 'none';
       }
     }
 
     if (mainAddBtn) {
-      const isMobile = window.innerWidth <= 768;
-      const text = isMobile ? 'ADD TO CART' : `ADD TO CART · ${formattedTotal}`;
       mainAddBtn.innerHTML = `
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
-          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
         </svg>
-        <span>${text}</span>
+        <span>ADD TO CART</span>
       `;
     }
 
@@ -1084,20 +1222,38 @@
   function setupCartActions() {
     function performAdd() {
       if (!currentProduct) return;
-      const basePrice = (selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price;
+      const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price);
       const addonsSum = selectedAddons.reduce((s, a) => s + a.price, 0);
-      const chosenImg = selectedColor ? selectedColor.image : currentProduct.primary_image;
+      const chosenImg = document.getElementById('pdpMainImg')?.src || (selectedColor ? selectedColor.image : currentProduct.primary_image);
 
-      window.CovertokStore.addToCart({
-        id: currentProduct.id,
-        title: currentProduct.title,
-        price: basePrice + addonsSum,
-        qty: currentQty,
-        img: chosenImg,
-        color: selectedColor ? selectedColor.name : '',
-        model: selectedModel || '',
-        addons: selectedAddons
-      });
+      if (window.CovertokStore && window.CovertokStore.addToCart) {
+        window.CovertokStore.addToCart({
+          id: currentProduct.id,
+          title: `${currentProduct.title}${selectedCapacity ? ' (' + selectedCapacity + ')' : ''}`,
+          price: basePrice + addonsSum,
+          qty: currentQty,
+          img: chosenImg,
+          color: selectedColor ? selectedColor.name : 'Black',
+          model: selectedCapacity || selectedModel || '',
+          addons: selectedAddons
+        });
+
+        // Add any selected bundle items
+        if (selectedBundleItems && selectedBundleItems.length > 0) {
+          selectedBundleItems.forEach(bundle => {
+            const bImg = bundle.name.includes('Case') ? 'assets/bundle_clear_case.jpg' : (bundle.name.includes('Cable') ? 'assets/bundle_usbc_cable.jpg' : 'assets/bundle_lens_protector.jpg');
+            window.CovertokStore.addToCart({
+              id: 'bundle-' + bundle.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+              title: bundle.name,
+              price: bundle.price,
+              qty: 1,
+              img: bImg,
+              color: '',
+              model: ''
+            });
+          });
+        }
+      }
     }
 
     document.getElementById('pdpAddToCartBtn')?.addEventListener('click', performAdd);
