@@ -447,36 +447,9 @@ html, body {
 }
 
 .pdp-gallery-wishlist-btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--pdp-border);
-  color: #475569;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: var(--pdp-transition);
-  box-shadow: var(--pdp-shadow-sm);
-}
-
-.pdp-gallery-wishlist-btn:hover {
-  transform: scale(1.08);
-  border-color: #E11D48;
-  color: #E11D48;
-  background: #FFFFFF;
-}
-
-.pdp-gallery-wishlist-btn.active {
-  color: #E11D48;
-  background: #FFE4E6;
-  border-color: #FDA4AF;
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .pdp-stage-counter {
@@ -893,31 +866,9 @@ html, body {
 }
 
 .pdp-wishlist-action-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1.5px solid #EAE5DB;
-  background: #FFFFFF;
-  color: #171513;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-}
-
-.pdp-wishlist-action-btn:hover {
-  border-color: #E11D48;
-  color: #E11D48;
-  transform: scale(1.05);
-}
-
-.pdp-wishlist-action-btn.active,
-.pdp-wishlist-action-btn.liked {
-  border-color: #E11D48;
-  background: #FFE4E6;
-  color: #E11D48;
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .btn-pdp-buynow {

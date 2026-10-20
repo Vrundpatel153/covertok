@@ -244,7 +244,6 @@
     const nextBtn = document.getElementById('pdpThumbNext');
     const galleryPrev = document.getElementById('galleryPrevBtn');
     const galleryNext = document.getElementById('galleryNextBtn');
-    const galleryWishlist = document.getElementById('galleryWishlistBtn');
     // If vertical thumbnails already present in DOM (e.g. 5 angle thumbnails), bind click events directly
     if (strip.classList.contains('pdp-vertical-thumbs') && strip.querySelectorAll('.pdp-vthumb').length > 0) {
       strip.querySelectorAll('.pdp-vthumb').forEach(btn => {
@@ -346,7 +345,7 @@
         });
       });
 
-      // Hook floating gallery navigation arrows & wishlist
+      // Hook floating gallery navigation arrows
       if (galleryPrev) {
         galleryPrev.onclick = () => {
           const thumbs = strip.querySelectorAll('.pdp-thumb-btn');
@@ -367,20 +366,6 @@
         };
       }
 
-      if (galleryWishlist && currentProduct) {
-        galleryWishlist.onclick = () => {
-          if (window.toggleWishlist) {
-            const added = window.toggleWishlist(currentProduct.id, currentProduct.title);
-            galleryWishlist.classList.toggle('active', added);
-            galleryWishlist.classList.toggle('liked', added);
-            const pdpWish = document.getElementById('pdpWishlistBtn');
-            if (pdpWish) {
-              pdpWish.classList.toggle('active', added);
-              pdpWish.classList.toggle('liked', added);
-            }
-          }
-        };
-      }
 
       // Hook thumbnail strip navigation arrows
       if (prevBtn) {
@@ -1279,21 +1264,6 @@
       }, 300);
     });
 
-    // Wishlist Toggle on PDP
-    const wishlistBtn = document.getElementById('pdpWishlistBtn');
-    if (wishlistBtn && currentProduct) {
-      wishlistBtn.setAttribute('data-wishlist-id', currentProduct.id);
-      if (window.isWishlisted && window.isWishlisted(currentProduct.id)) {
-        wishlistBtn.classList.add('active', 'liked');
-      }
-      wishlistBtn.addEventListener('click', () => {
-        if (window.toggleWishlist) {
-          const added = window.toggleWishlist(currentProduct.id, currentProduct.title);
-          wishlistBtn.classList.toggle('active', added);
-          wishlistBtn.classList.toggle('liked', added);
-        }
-      });
-    }
 
     // Pincode checker simulation
     const pinBtn = document.getElementById('checkPinBtn');

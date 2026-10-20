@@ -266,33 +266,6 @@
     </div>
   </div>
 
-  <!-- 3. WISHLIST DRAWER -->
-  <div class="app-drawer-overlay" id="wishlistDrawerOverlay" aria-hidden="true">
-    <aside class="app-drawer" id="wishlistDrawerSheet" aria-label="Saved Wishlist Drawer">
-      <div class="app-sheet-header">
-        <div class="app-sheet-title-group">
-          <div class="app-sheet-icon">❤️</div>
-          <div>
-            <h3 class="app-sheet-title">My Wishlist</h3>
-            <p class="app-sheet-subtitle"><span id="wishlistCount">0</span> items saved</p>
-          </div>
-        </div>
-        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeWishlist();">&times;</button>
-      </div>
-
-      <div class="app-sheet-body">
-        <div class="wishlist-items-grid" id="wishlistItemsContainer">
-          <!-- Populated dynamically by store_flows.js -->
-        </div>
-      </div>
-
-      <div class="app-sheet-footer">
-        <button type="button" class="btn btn-pill-dark full-width" onclick="window.CovertokFlows.closeWishlist(); window.CovertokFlows.openCart();" style="width: 100%; border-radius: 999px; padding: 12px;">
-          View Shopping Cart &rarr;
-        </button>
-      </div>
-    </aside>
-  </div>
 
   <!-- 4. USER PROFILE / ACCOUNT DRAWER -->
   <div class="app-drawer-overlay" id="accountDrawerOverlay" aria-hidden="true">

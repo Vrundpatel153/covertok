@@ -78,11 +78,6 @@
           <div class="col-prod-card" data-id="${p.id}" style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAE5DB; overflow: hidden; position: relative;">
             <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 20px; cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(231, 213, 164, 0.45); color: #735238; border: 1px solid rgba(169, 129, 53, 0.35); font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
-              <button class="col-prod-wishlist-btn" type="button" aria-label="Save to wishlist" data-product="${p.title}" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                </svg>
-              </button>
               <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;" loading="lazy">
               ${swatchesHtml}
             </div>
@@ -153,21 +148,6 @@
           });
         });
 
-        // Wishlist
-        card.querySelector('.col-prod-wishlist-btn')?.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const btn = card.querySelector('.col-prod-wishlist-btn');
-          btn.classList.toggle('liked');
-          const svg = btn.querySelector('svg');
-          if (btn.classList.contains('liked')) {
-            svg.setAttribute('fill', '#EF4444');
-            svg.setAttribute('stroke', '#EF4444');
-            window.showToast('Added to wishlist', 'heart');
-          } else {
-            svg.setAttribute('fill', 'none');
-            svg.setAttribute('stroke', 'currentColor');
-          }
-        });
       });
     }
 
@@ -225,11 +205,6 @@
           <div class="product-card-inner">
             <div class="product-image-box" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAE5DB; display: flex; align-items: center; justify-content: center; padding: 20px; aspect-ratio: 1 / 1;">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: rgba(231, 213, 164, 0.45); color: #735238; border: 1px solid rgba(169, 129, 53, 0.35); font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
-              <button class="col-prod-wishlist-btn card-wishlist-btn" type="button" aria-label="Save to wishlist" data-product="${p.title}" onclick="event.stopPropagation(); window.toggleWishlist && window.toggleWishlist('${p.id}');" style="position: absolute; top: 12px; right: 12px; z-index: 3;">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                </svg>
-              </button>
               <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;">
             </div>
             <div class="product-info" style="padding-top: 12px; display: flex; flex-direction: column;">

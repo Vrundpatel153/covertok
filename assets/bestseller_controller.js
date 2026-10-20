@@ -1,7 +1,7 @@
 /**
  * Covertok Bestseller Section Controller
- * Provides interactive slider navigation, touch swipe, hotspot linking,
- * pagination indicators, wishlist toggles, and cart integration.
+ * Provides interactive slider navigation, infinite looping scroll, touch swipe,
+ * hotspot linking, pagination indicators, and cart integration.
  */
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('bestsellerTrack');
@@ -9,28 +9,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('bestsellerNext');
   const dotsContainer = document.getElementById('bestsellerDots');
   const dots = dotsContainer ? dotsContainer.querySelectorAll('.bestseller-dot') : [];
-  const cards = track ? track.querySelectorAll('.bestseller-prod-card') : [];
   const hotspots = document.querySelectorAll('.bestseller-hotspot');
   const tooltips = document.querySelectorAll('.bestseller-tooltip');
 
-  if (!track || cards.length === 0) return;
+  if (!track) return;
 
   const getCardWidth = () => {
-    if (cards[0]) {
-      const style = window.getComputedStyle(cards[0]);
-      const width = cards[0].offsetWidth;
-      const margin = parseInt(style.marginRight) || 20; // 20px gap
-      return width + margin;
+    const cards = track.querySelectorAll('.bestseller-prod-card');
+    if (cards.length > 0) {
+      const cardRect = cards[0].getBoundingClientRect();
+      let gap = 18;
+      if (cards.length > 1) {
+        const nextRect = cards[1].getBoundingClientRect();
+        gap = nextRect.left - cardRect.right;
+      }
+      return cardRect.width + (gap > 0 ? gap : 18);
     }
-    return 242;
+    return 233;
   };
 
-  // Slider Arrow Navigation
+  // Slider Arrow Navigation with Seamless Looping (Infinite side scroll)
   if (nextBtn) {
     nextBtn.addEventListener('click', (e) => {
       e.preventDefault();
       const cardWidth = getCardWidth();
-      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 15) {
+        // Loop back smoothly to the beginning
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
     });
   }
 
@@ -38,7 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.addEventListener('click', (e) => {
       e.preventDefault();
       const cardWidth = getCardWidth();
-      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft <= 15) {
+        // Loop to the end smoothly
+        track.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      }
     });
   }
 
@@ -46,8 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateDots = () => {
     if (!dots.length) return;
     const cardWidth = getCardWidth();
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    if (maxScroll <= 0) return;
+
     const scrollPos = track.scrollLeft;
-    const activeIndex = Math.min(Math.round(scrollPos / cardWidth), dots.length - 1);
+    let activeIndex = Math.round(scrollPos / cardWidth);
+    if (scrollPos >= maxScroll - 20) {
+      activeIndex = dots.length - 1;
+    } else if (scrollPos <= 20) {
+      activeIndex = 0;
+    }
+    activeIndex = Math.max(0, Math.min(activeIndex, dots.length - 1));
 
     dots.forEach((dot, idx) => {
       dot.classList.toggle('active', idx === activeIndex);
@@ -57,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let scrollTimeout;
   track.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(updateDots, 50);
+    scrollTimeout = setTimeout(updateDots, 40);
   }, { passive: true });
 
   // Dot Click Navigation
@@ -65,16 +89,21 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.addEventListener('click', () => {
       const idx = parseInt(dot.getAttribute('data-index')) || 0;
       const cardWidth = getCardWidth();
-      track.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      const target = Math.min(idx * cardWidth, maxScroll);
+      track.scrollTo({ left: target, behavior: 'smooth' });
     });
   });
 
   // Hotspot and Tooltip Linking to Slider Cards
   const focusCard = (index) => {
     const cardWidth = getCardWidth();
-    track.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const target = Math.min(index * cardWidth, maxScroll);
+    track.scrollTo({ left: target, behavior: 'smooth' });
     
     // Highlight effect on selected card
+    const cards = track.querySelectorAll('.bestseller-prod-card');
     if (cards[index]) {
       cards[index].style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
       cards[index].style.transform = 'translateY(-6px)';
@@ -84,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Phone zones (hover and click interactions on 3 phones)
+  // Phone zones (hover and click interactions on 3 showcase phones)
   const phoneZones = document.querySelectorAll('.bestseller-phone-zone');
   const pinItems = document.querySelectorAll('.bestseller-pin-item');
 
@@ -121,8 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    zone.addEventListener('click', (e) => {
-      // Allow navigation or card focusing
+    zone.addEventListener('click', () => {
       focusCard(idx);
     });
   });
@@ -136,31 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   tooltips.forEach((tt) => {
-    tt.addEventListener('click', (e) => {
+    tt.addEventListener('click', () => {
       const idx = parseInt(tt.getAttribute('data-index'));
       if (!isNaN(idx)) {
         focusCard(idx);
-      }
-    });
-  });
-
-  // Wishlist Button Handlers
-  document.querySelectorAll('.bestseller-wishlist-btn').forEach((btn) => {
-    const prodId = btn.getAttribute('data-prod-id');
-    if (window.isWishlisted && window.isWishlisted(prodId)) {
-      btn.classList.add('active');
-    }
-
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const card = btn.closest('.bestseller-prod-card');
-      const title = card ? card.querySelector('.bestseller-prod-title a')?.textContent.trim() : 'Phone Case';
-      if (window.toggleWishlist) {
-        const added = window.toggleWishlist(prodId, title);
-        btn.classList.toggle('active', added);
-      } else {
-        btn.classList.toggle('active');
       }
     });
   });
@@ -172,8 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const prodName = btn.getAttribute('data-prod-name') || 'Covertok Bestseller Case';
       const prodPrice = parseFloat(btn.getAttribute('data-prod-price')) || 499;
       const prodImg = btn.getAttribute('data-prod-img') || '';
-      const card = btn.closest('.bestseller-prod-card');
-      const prodId = card?.querySelector('.bestseller-wishlist-btn')?.getAttribute('data-prod-id') || 'bestseller-' + Date.now();
+      const prodId = btn.getAttribute('data-prod-id') || 'bestseller-' + Date.now();
 
       if (window.CovertokStore && window.CovertokStore.addToCart) {
         window.CovertokStore.addToCart({

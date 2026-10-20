@@ -56,55 +56,13 @@
     }
   }
 
-  // 3B. WISHLIST STATE
-  const WISHLIST_KEY = 'covertok_wishlist_items_v1';
-  function getWishlist() {
-    try {
-      const data = localStorage.getItem(WISHLIST_KEY);
-      return data ? JSON.parse(data) : [];
-    } catch (e) {
-      return [];
-    }
-  }
-  function saveWishlist(list) {
-    try {
-      localStorage.setItem(WISHLIST_KEY, JSON.stringify(list));
-      if (window.renderWishlistUI) window.renderWishlistUI();
-    } catch (e) {}
-  }
-  window.toggleWishlist = function(productId, productTitle) {
-    const list = getWishlist();
-    const strId = String(productId);
-    const idx = list.indexOf(strId);
-    let added = false;
-    if (idx > -1) {
-      list.splice(idx, 1);
-      added = false;
-    } else {
-      list.push(strId);
-      added = true;
-    }
-    saveWishlist(list);
-    const p = window.CovertokProducts ? window.CovertokProducts.find(x => String(x.id) === strId) : null;
-    const title = productTitle || p?.title || 'Product';
-    if (added) {
-      window.showToast(`Saved "${title}" to wishlist!`, 'heart');
-    } else {
-      window.showToast(`Removed "${title}" from wishlist`, 'bag');
-    }
-    document.querySelectorAll(`[data-wishlist-id="${strId}"]`).forEach(btn => {
-      btn.classList.toggle('active', added);
-      btn.classList.toggle('liked', added);
-    });
-    return added;
-  };
-  window.isWishlisted = function(productId) {
-    return getWishlist().includes(String(productId));
-  };
+  // Wishlist functionality removed (not supported natively in Shopify)
+  window.toggleWishlist = function() { return false; };
+  window.isWishlisted = function() { return false; };
 
   window.CovertokStore = {
     getCart: getCart,
-    getWishlist: getWishlist,
+    getWishlist: function() { return []; },
     
     addToCart: function(item) {
       const cart = getCart();

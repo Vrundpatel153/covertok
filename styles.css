@@ -8068,8 +8068,11 @@ a.footer-contact-main:hover {
     z-index: 14;
     cursor: pointer;
     border-radius: 42px;
-    border: 2px solid transparent;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    transition: transform 0.3s ease;
   }
 
   .bestseller-phone-zone.zone-clear {
@@ -8097,8 +8100,10 @@ a.footer-contact-main:hover {
   }
 
   .bestseller-phone-zone:hover {
-    border-color: rgba(184, 137, 98, 0.45);
-    box-shadow: 0 0 28px rgba(184, 137, 98, 0.22);
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
   }
 
   /* Full SVG Connecting Lines Overlay */
@@ -8358,38 +8363,19 @@ a.footer-contact-main:hover {
   letter-spacing: 0.3px;
 }
 
-/* Wishlist Button */
-.bestseller-wishlist-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #18181A;
-  z-index: 4;
-  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.bestseller-wishlist-btn:hover {
-  background: #FFFFFF;
-  transform: scale(1.08);
-}
-
-.bestseller-wishlist-btn.active {
-  background: #FFFFFF;
-  color: #E02424;
-}
-
-.bestseller-wishlist-btn.active svg {
-  fill: #E02424;
+/* Wishlist Elements Removed Globally across Store */
+.bestseller-wishlist-btn,
+.card-wishlist-btn,
+.col-prod-wishlist-btn,
+.pdp-wishlist-action-btn,
+.pdp-gallery-wishlist-btn,
+#wishlistHeaderBtn,
+#wishlistDrawerOverlay,
+#wishlistDrawerSheet,
+[data-trigger="wishlist"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /* Card Info */

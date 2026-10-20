@@ -10,7 +10,6 @@
   // 1. STATE & STORAGE
   // --------------------------------------------------------------------------
   const CART_KEY = 'covertok_cart_items_v2';
-  const WISHLIST_KEY = 'covertok_wishlist_items_v1';
   const PROMO_KEY = 'covertok_active_promo_v1';
   const FREE_SHIPPING_THRESHOLD = 999;
 
@@ -32,22 +31,6 @@
     } catch (e) {
       console.error(e);
     }
-  }
-
-  function getWishlist() {
-    try {
-      const data = localStorage.getItem(WISHLIST_KEY);
-      return data ? JSON.parse(data) : [];
-    } catch (e) {
-      return [];
-    }
-  }
-
-  function saveWishlist(list) {
-    try {
-      localStorage.setItem(WISHLIST_KEY, JSON.stringify(list));
-      renderWishlistUI();
-    } catch (e) {}
   }
 
   // --------------------------------------------------------------------------
@@ -95,13 +78,8 @@
       closeOverlay('cartDrawerOverlay', 'cartDrawerSheet');
     },
 
-    openWishlist: function() {
-      openOverlay('wishlistDrawerOverlay', 'wishlistDrawerSheet');
-      renderWishlistUI();
-    },
-    closeWishlist: function() {
-      closeOverlay('wishlistDrawerOverlay', 'wishlistDrawerSheet');
-    },
+    openWishlist: function() {},
+    closeWishlist: function() {},
 
     openAccount: function() {
       openOverlay('accountDrawerOverlay', 'accountDrawerSheet');
@@ -280,78 +258,9 @@
   };
   window.renderCartUI = renderCartUI;
 
-  // --------------------------------------------------------------------------
-  // 4. WISHLIST UI & BATCH ACTIONS
-  // --------------------------------------------------------------------------
-  function renderWishlistUI() {
-    const list = getWishlist();
-    const count = list.length;
-
-    // Header badge
-    document.querySelectorAll('#wishlistCount, .wishlist-badge-count').forEach(el => {
-      el.textContent = count;
-      el.style.display = count > 0 ? 'inline-flex' : 'none';
-    });
-
-    const container = document.getElementById('wishlistItemsContainer');
-    if (!container) return;
-
-    if (count === 0) {
-      container.innerHTML = `
-        <div style="text-align: center; padding: 48px 20px; color: #64748B;">
-          <div style="font-size: 3rem; margin-bottom: 12px;">🤍</div>
-          <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; color: #171513; margin-bottom: 6px;">Your Wishlist is Empty</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 18px;">Tap the heart icon on any product to save your favorites here.</p>
-          <a href="collections.html" class="btn btn-pill-dark" onclick="window.CovertokFlows.closeWishlist();" style="display: inline-block; padding: 10px 24px; border-radius: 999px;">
-            START SHOPPING
-          </a>
-        </div>
-      `;
-      return;
-    }
-
-    container.innerHTML = list.map(id => {
-      const p = window.CovertokProducts ? window.CovertokProducts.find(x => String(x.id) === String(id)) : null;
-      if (!p) return '';
-      return `
-        <div class="wishlist-item-card">
-          <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.png'}" alt="${p.title}" class="wishlist-item-thumb">
-          <div class="wishlist-item-info">
-            <div class="wishlist-item-title">${p.title}</div>
-            <div class="wishlist-item-price">Rs. ${p.price}.00</div>
-          </div>
-          <div class="wishlist-item-actions">
-            <button type="button" class="wishlist-move-cart-btn" onclick="window.moveWishlistToCart('${p.id}')">
-              Move to Cart
-            </button>
-            <button type="button" class="wishlist-remove-btn" onclick="window.toggleWishlist('${p.id}')" title="Remove">
-              &times;
-            </button>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-  window.renderWishlistUI = renderWishlistUI;
-
-  window.moveWishlistToCart = function(productId) {
-    const p = window.CovertokProducts ? window.CovertokProducts.find(x => String(x.id) === String(productId)) : null;
-    if (p) {
-      window.CovertokStore.addToCart({
-        id: p.id,
-        title: p.title,
-        price: p.price,
-        img: p.primary_image || (p.images && p.images[0]),
-        color: (p.colors && p.colors[0]?.name) || '',
-        model: 'iPhone 17 Pro',
-        qty: 1
-      });
-      // Remove from wishlist
-      window.toggleWishlist(p.id);
-      window.CovertokFlows.closeWishlist();
-      setTimeout(() => window.CovertokFlows.openCart(), 300);
-    }
-  };
+  // Wishlist functionality removed (Shopify backend theme compatibility)
+  window.renderWishlistUI = function() {};
+  window.moveWishlistToCart = function() {};
 
   // --------------------------------------------------------------------------
   // 5. MULTI-STEP CHECKOUT FLOW
@@ -492,7 +401,6 @@
   // --------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
     renderCartUI();
-    renderWishlistUI();
     setupSearch();
 
     // Close on backdrop click
@@ -564,12 +472,6 @@
       });
     });
 
-    document.querySelectorAll('#wishlistHeaderBtn, [data-trigger="wishlist"]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.CovertokFlows.openWishlist();
-      });
-    });
 
     document.querySelectorAll('#searchTriggerBtn, #openSearchModal, [data-trigger="search"]').forEach(btn => {
       btn.addEventListener('click', (e) => {
