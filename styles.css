@@ -9027,13 +9027,15 @@ select option, optgroup {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  scroll-margin-top: 80px;
 }
 
 /* Master Desktop Container (Exact 1672px x 941px Canvas matching mockup) */
 @media (min-width: 1201px) {
   .bestseller-section {
-    min-height: 941px;
-    height: 941px;
+    min-height: 980px;
+    height: auto;
+    padding-bottom: 45px;
   }
 
   .bestseller-container {
@@ -9044,18 +9046,18 @@ select option, optgroup {
     margin: 0 auto;
     position: relative;
     background: #F8F5EE;
-    overflow: hidden;
+    overflow: visible;
     box-sizing: border-box;
     padding: 0 clamp(20px, 2.5vw, 45px);
   }
 
   /* Header Centered at top */
   .bestseller-header {
-    position: absolute;
-    top: 57px;
-    left: 0;
+    position: relative;
     width: 100%;
     text-align: center;
+    padding-top: 50px;
+    margin-bottom: 24px;
     z-index: 10;
   }
 
@@ -9091,11 +9093,11 @@ select option, optgroup {
     letter-spacing: 0.1px;
   }
 
-  /* View All Button at exact top-right */
+  /* View All Button at exact bottom-right of header bar above right slider card */
   .bestseller-view-all-btn {
     position: absolute;
-    top: 172px;
-    right: 80px;
+    right: 0;
+    bottom: 0;
     display: inline-flex;
     align-items: center;
     gap: 16px;
@@ -9133,7 +9135,7 @@ select option, optgroup {
     justify-content: space-between;
     gap: clamp(24px, 3.2vw, 56px);
     width: 100%;
-    margin-top: 135px;
+    margin-top: 10px;
     margin-bottom: 45px;
     box-sizing: border-box;
     position: relative;
@@ -9301,7 +9303,7 @@ select option, optgroup {
   }
 
   .tooltip-01 {
-    left: 2.5%;
+    left: 4.5%;
     top: 21%;
   }
 
@@ -9703,6 +9705,21 @@ select option, optgroup {
     aspect-ratio: 800 / 750;
     border-radius: 24px;
     overflow: visible !important;
+  }
+
+  .bestseller-left-stage .tooltip-01 {
+    left: 4% !important;
+    top: 20% !important;
+  }
+
+  .bestseller-left-stage .tooltip-02 {
+    left: 38% !important;
+    top: 8% !important;
+  }
+
+  .bestseller-left-stage .tooltip-03 {
+    left: 68% !important;
+    top: 20% !important;
   }
 
   .bestseller-stage-visual {

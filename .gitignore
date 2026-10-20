@@ -17,33 +17,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Temporary test profiles and browser scrap
+# Temporary test profiles, browser CDP dumps & scratch scrap
 scratch/
-server.js
-
 .temp_cdp*/
-.temp_edge_profile/
+.temp_edge_profile*/
 .tempmediaStorage/
 .system_generated/
-scratch_*
-verify_*
-test_*
-thumb_*
-!assets/community_videos/thumb_video_*.jpg
-user_img*
 *.log
-temp_crop_*
-snapshot_*
-
-# Raw design mockups & reference folders (not required for production)
-best seller-section/
-collection-section/
-combo section/
-hero banner-new/
-instagram-sectoin/
-our story section/
-popular choice section/
-story section/
 
 # Automated test screenshots and visual comparison artifacts
 browser_*.png
@@ -55,4 +35,6 @@ hero_bl_exact_crop.png
 hero_btn_only.png
 hero_notch_comparison_collage.png
 case_repair_comparison_walkthrough.png
-
+test_*.py
+audit_*.py
+used_assets_list.txt
