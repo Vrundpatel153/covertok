@@ -179,10 +179,10 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(248, 245, 237, 0.97);
+  background: #FFFFFF;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(234, 229, 219, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: all var(--transition-fast);
 }
