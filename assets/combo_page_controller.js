@@ -1,7 +1,6 @@
 /**
  * Covertok 3-Piece Luxury Combo Studio Controller
- * Handles filtering (5 eligible categories only), 3-slot custom bundling,
- * persistent localStorage state, real-time pricing, and unified cart drawer dispatch.
+ * Clean Plain White Catalog UI with Direct Checkmark Checkbox Selection (Zero Modals)
  */
 
 (function() {
@@ -11,61 +10,41 @@
   const BUNDLE_PRICE = 1199;
 
   // 1. Identify and categorize eligible products only
-  // Allowed: mobile covers, bands, watch cover, charger cover, airpod cover only
-  // Modern SVG Icons for Categories (Zero Emojis)
-  function getCategorySvg(key) {
-    switch (key) {
-      case 'mobile-cover':
-        return `<svg class="cat-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>`;
-      case 'watch-band':
-        return `<svg class="cat-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="7" width="12" height="10" rx="3"></rect><path d="M9 7V3h6v4"></path><path d="M9 17v4h6v-4"></path></svg>`;
-      case 'watch-cover':
-        return `<svg class="cat-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`;
-      case 'charger-cover':
-        return `<svg class="cat-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`;
-      case 'airpod-cover':
-        return `<svg class="cat-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>`;
-      default:
-        return `<svg class="cat-svg-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
-    }
-  }
-
   function classifyProduct(p) {
     if (!p) return null;
     const cat = p.category || '';
     const title = (p.title || '').toLowerCase();
 
     if (cat === 'iphone-cases') {
-      return { key: 'mobile-cover', label: 'Mobile Cover', icon: getCategorySvg('mobile-cover') };
+      return { key: 'mobile-cover', label: 'Phone Case' };
     }
     if (cat === 'watchbands') {
       if (title.includes('case') || title.includes('armor') || title.includes('protective')) {
-        return { key: 'watch-cover', label: 'Watch Armor / Cover', icon: getCategorySvg('watch-cover') };
+        return { key: 'watch-cover', label: 'Watch Cover' };
       }
-      return { key: 'watch-band', label: 'Watch Band', icon: getCategorySvg('watch-band') };
+      return { key: 'watch-band', label: 'Watch Band' };
     }
     if (cat === 'charger-covers') {
-      return { key: 'charger-cover', label: 'Charger Case', icon: getCategorySvg('charger-cover') };
+      return { key: 'charger-cover', label: 'Charger Case' };
     }
     if (cat === 'airpod-covers') {
-      return { key: 'airpod-cover', label: 'AirPod Case', icon: getCategorySvg('airpod-cover') };
+      return { key: 'airpod-cover', label: 'AirPod Case' };
     }
     return null;
   }
 
-  // 2. State management with localStorage persistence
+  // 2. Persistent State
   function normalizeSlotItem(item) {
     if (!item) return null;
-    const key = item.category_key || item.category || 'mobile-cover';
-    const label = item.category_label || (key === 'mobile-cover' ? 'Mobile Cover' : key === 'watch-band' ? 'Watch Band' : key === 'watch-cover' ? 'Watch Armor' : key === 'charger-cover' ? 'Charger Case' : 'AirPod Case');
     return {
       id: item.id,
+      handle: item.handle || item.id,
       title: item.title,
       price: item.price,
       original_price: item.original_price || item.price,
       image: item.image || item.primary_image || 'assets/phone_cream.png',
-      category_key: key,
-      category_label: label
+      category_key: item.category_key || 'mobile-cover',
+      category_label: item.category_label || 'Accessory'
     };
   }
 
@@ -80,7 +59,7 @@
           3: normalizeSlotItem(parsed[3])
         };
       }
-    } catch(e) {
+    } catch (e) {
       console.warn('Error reading combo slots from storage', e);
     }
     return { 1: null, 2: null, 3: null };
@@ -89,7 +68,7 @@
   function saveSlots(slots) {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(slots));
-    } catch(e) {
+    } catch (e) {
       console.warn('Error saving combo slots', e);
     }
   }
@@ -103,13 +82,13 @@
     slots: loadSavedSlots()
   };
 
-  // 3. Main Init on DOMContentLoaded
+  // 3. Init on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', initComboStudio);
 
   function initComboStudio() {
     const rawCatalog = window.CovertokProducts || [];
     
-    // Filter and enrich eligible items only
+    // Enrich eligible items only
     state.allEligibleProducts = rawCatalog
       .map(p => {
         const meta = classifyProduct(p);
@@ -117,23 +96,22 @@
         return {
           ...p,
           combo_category: meta.key,
-          combo_label: meta.label,
-          combo_icon: meta.icon
+          combo_label: meta.label
         };
       })
       .filter(Boolean);
 
     state.filteredProducts = [...state.allEligibleProducts];
 
-    // Bind event listeners
+    // Setup listeners
     bindFilterTabs();
     bindSearchAndSort();
-    bindDockActions();
+    bindBottomBarActions();
 
     // Initial render
-    renderDockUI();
-    renderProductsGrid();
     updateCategoryCounts();
+    renderProductsGrid();
+    renderStickyBarUI();
   }
 
   // 4. Category Tabs & Counts
@@ -153,20 +131,24 @@
       }
     });
 
-    document.querySelectorAll('.combo-filter-btn').forEach(btn => {
-      const cat = btn.getAttribute('data-category');
-      const countEl = btn.querySelector('.combo-filter-count');
-      if (countEl && counts[cat] !== undefined) {
-        countEl.textContent = `(${counts[cat]})`;
-      }
+    Object.keys(counts).forEach(key => {
+      const el = document.getElementById(`count-${key}`);
+      if (el) el.textContent = counts[key];
     });
+
+    const totalLabel = document.getElementById('comboCountLabel');
+    if (totalLabel) {
+      totalLabel.textContent = `Showing ${state.filteredProducts.length} Eligible Products`;
+    }
   }
 
   function bindFilterTabs() {
-    const tabBtns = document.querySelectorAll('.combo-filter-btn');
-    tabBtns.forEach(btn => {
+    const navBar = document.getElementById('comboNavBar');
+    if (!navBar) return;
+
+    navBar.querySelectorAll('.catalog-nav-pill').forEach(btn => {
       btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
+        navBar.querySelectorAll('.catalog-nav-pill').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         state.activeCategory = btn.getAttribute('data-category') || 'all';
         applyFiltersAndSort();
@@ -177,28 +159,12 @@
   // 5. Search & Sort
   function bindSearchAndSort() {
     const searchInput = document.getElementById('comboSearchInput');
-    const clearBtn = document.getElementById('comboSearchClear');
     const sortSelect = document.getElementById('comboSortSelect');
 
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
         state.searchQuery = (e.target.value || '').trim().toLowerCase();
-        if (clearBtn) {
-          clearBtn.style.display = state.searchQuery ? 'block' : 'none';
-        }
         applyFiltersAndSort();
-      });
-    }
-
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        if (searchInput) {
-          searchInput.value = '';
-          state.searchQuery = '';
-          clearBtn.style.display = 'none';
-          applyFiltersAndSort();
-          searchInput.focus();
-        }
       });
     }
 
@@ -223,7 +189,8 @@
       list = list.filter(p => {
         const titleMatch = (p.title || '').toLowerCase().includes(state.searchQuery);
         const tagMatch = (p.combo_label || '').toLowerCase().includes(state.searchQuery);
-        return titleMatch || tagMatch;
+        const catMatch = (p.category_name || '').toLowerCase().includes(state.searchQuery);
+        return titleMatch || tagMatch || catMatch;
       });
     }
 
@@ -234,6 +201,8 @@
       list.sort((a, b) => b.price - a.price);
     } else if (state.sortBy === 'rating') {
       list.sort((a, b) => (b.rating || 4.5) - (a.rating || 4.5));
+    } else if (state.sortBy === 'title-az') {
+      list.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
     } else {
       // Featured / Bestseller
       list.sort((a, b) => (b.is_bestseller ? 1 : 0) - (a.is_bestseller ? 1 : 0));
@@ -241,128 +210,15 @@
 
     state.filteredProducts = list;
 
-    // Update count label
-    const resultsCountEl = document.getElementById('comboResultsCount');
-    if (resultsCountEl) {
-      resultsCountEl.textContent = `Showing ${list.length} eligible products`;
+    const totalLabel = document.getElementById('comboCountLabel');
+    if (totalLabel) {
+      totalLabel.textContent = `Showing ${list.length} of ${state.allEligibleProducts.length} Eligible Products`;
     }
 
     renderProductsGrid();
   }
 
-  // 6. Products Grid Rendering
-  function renderProductsGrid() {
-    const grid = document.getElementById('comboProductsGrid');
-    if (!grid) return;
-
-    if (state.filteredProducts.length === 0) {
-      grid.innerHTML = `
-        <div class="combo-empty-state">
-          <div class="combo-empty-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </div>
-          <h3 class="combo-empty-title">No matching accessories found</h3>
-          <p class="combo-empty-text">Try clearing your search query or switching categories to explore eligible phone cases, watch bands, and covers.</p>
-          <button type="button" class="btn btn-pill-dark" onclick="window.clearComboSearch()" style="padding: 10px 24px; border-radius: 999px;">
-            View All 53 Eligible Products
-          </button>
-        </div>
-      `;
-      return;
-    }
-
-    grid.innerHTML = state.filteredProducts.map(prod => {
-      const selectedSlot = getSlotForProduct(prod.id);
-      const isSelected = selectedSlot !== null;
-      const img = prod.primary_image || (prod.images && prod.images[0]) || 'assets/phone_cream.png';
-      const colors = prod.colors || [];
-
-      return `
-        <article class="combo-product-card ${isSelected ? 'selected' : ''}" data-id="${prod.id}" id="card-prod-${prod.id}">
-          <div class="combo-card-image-wrap">
-            <span class="combo-card-cat-pill">${prod.combo_icon} <span>${prod.combo_label}</span></span>
-            ${prod.discount_percent ? `<span class="combo-card-badge">${prod.discount_percent}% OFF</span>` : ''}
-            
-            <img src="${img}" alt="${prod.title}" class="combo-card-img" loading="lazy" onerror="this.onerror=null; this.src='assets/phone_cream.png';">
-            
-            <div class="combo-selected-badge">
-              <span class="combo-selected-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: -1px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Slot ${selectedSlot} Selected
-              </span>
-            </div>
-          </div>
-
-          <div class="combo-card-body">
-            <div class="combo-card-rating">
-              <span class="combo-rating-stars">
-                <svg class="star-svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg class="star-svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg class="star-svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg class="star-svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg class="star-svg-icon" width="11" height="11" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </span>
-              <span class="combo-rating-count">${prod.rating || 4.8} (${prod.reviews_count || 120})</span>
-            </div>
-
-            <h3 class="combo-card-title">
-              <a href="product.html?id=${prod.id}&from=combo" title="View ${prod.title}">
-                ${prod.title}
-              </a>
-            </h3>
-
-            <div class="combo-swatches-rail">
-              ${colors.slice(0, 5).map(c => `
-                <span class="combo-swatch-dot" style="background-color: ${c.hex || '#E2E8F0'};" title="${c.name || 'Color'}"></span>
-              `).join('')}
-              ${colors.length > 5 ? `<span class="combo-swatch-more">+${colors.length - 5}</span>` : ''}
-            </div>
-
-            <div class="combo-card-prices">
-              <span class="combo-card-regular">Rs. ${prod.price}</span>
-              ${prod.original_price ? `<span class="combo-card-mrp">Rs. ${prod.original_price}</span>` : ''}
-              <span class="combo-card-discount">Save with Combo</span>
-            </div>
-
-            <div class="combo-card-actions">
-              <a href="product.html?id=${prod.id}&from=combo" class="combo-view-pdp-btn" title="View full product page">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                <span style="margin-left: 5px; font-weight: 700;">Details</span>
-              </a>
-
-              <button type="button" class="combo-select-toggle-btn" onclick="window.toggleComboProduct('${prod.id}')" aria-label="${isSelected ? 'Remove from combo' : 'Select for combo'}">
-                ${isSelected 
-                  ? `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: -1px;"><polyline points="20 6 9 17 4 12"></polyline></svg>In Slot ${selectedSlot}</span>` 
-                  : `<span>+ Select Item</span>`
-                }
-              </button>
-            </div>
-          </div>
-        </article>
-      `;
-    }).join('');
-  }
-
-  window.clearComboSearch = function() {
-    const searchInput = document.getElementById('comboSearchInput');
-    const clearBtn = document.getElementById('comboSearchClear');
-    if (searchInput) searchInput.value = '';
-    if (clearBtn) clearBtn.style.display = 'none';
-    state.searchQuery = '';
-    state.activeCategory = 'all';
-    document.querySelectorAll('.combo-filter-btn').forEach(b => {
-      b.classList.toggle('active', b.getAttribute('data-category') === 'all');
-    });
-    applyFiltersAndSort();
-  };
-
-  // 7. Slot Selection & Toggle Logic
+  // 6. Slot Query Helpers
   function getSlotForProduct(prodId) {
     const sId = String(prodId);
     if (state.slots[1] && String(state.slots[1].id) === sId) return 1;
@@ -371,35 +227,39 @@
     return null;
   }
 
+  function getFilledCount() {
+    return [state.slots[1], state.slots[2], state.slots[3]].filter(Boolean).length;
+  }
+
+  // 7. Checkbox Toggle Logic (Direct, Zero Modals)
   window.toggleComboProduct = function(prodId) {
     const sId = String(prodId);
     const existingSlot = getSlotForProduct(sId);
 
     if (existingSlot !== null) {
-      // Remove from slot
-      const removedTitle = state.slots[existingSlot].title;
+      // Uncheck / Remove from slot
       state.slots[existingSlot] = null;
       saveSlots(state.slots);
-      renderDockUI();
-      renderProductsGrid();
+      renderStickyBarUI();
+      updateCardUI(sId);
       if (window.showToast) {
-        window.showToast(`Removed from Slot ${existingSlot}`, 'trash');
+        window.showToast(`Unchecked item from Slot ${existingSlot}`, 'trash');
       }
       return;
     }
 
-    // Add to next available slot
+    // Check / Add to next free slot
     let emptySlot = null;
     if (!state.slots[1]) emptySlot = 1;
     else if (!state.slots[2]) emptySlot = 2;
     else if (!state.slots[3]) emptySlot = 3;
 
     if (emptySlot === null) {
-      // All 3 slots full
+      // All 3 filled
       if (window.showToast) {
-        window.showToast('All 3 slots are filled! Remove an item from the dock to swap.', 'trash');
+        window.showToast('All 3 combo slots are filled! Tap any checked item to uncheck and swap.', 'trash');
       } else {
-        alert('All 3 combo slots are filled! Tap ✕ on any item in the dock above to swap.');
+        alert('All 3 items are selected! Tap any checked item to uncheck it.');
       }
       return;
     }
@@ -409,6 +269,7 @@
 
     state.slots[emptySlot] = {
       id: prod.id,
+      handle: prod.handle || prod.id,
       title: prod.title,
       price: prod.price,
       original_price: prod.original_price || prod.price,
@@ -418,22 +279,15 @@
     };
 
     saveSlots(state.slots);
-    renderDockUI();
-    renderProductsGrid();
+    renderStickyBarUI();
+    updateCardUI(sId);
 
+    const filled = getFilledCount();
     if (window.showToast) {
-      window.showToast(`Added to Slot ${emptySlot}! (${getFilledCount()}/3 Selected)`, 'bag');
-    }
-  };
-
-  window.removeComboSlot = function(slotNum) {
-    if (state.slots[slotNum]) {
-      state.slots[slotNum] = null;
-      saveSlots(state.slots);
-      renderDockUI();
-      renderProductsGrid();
-      if (window.showToast) {
-        window.showToast(`Slot ${slotNum} cleared`, 'trash');
+      if (filled === 3) {
+        window.showToast('🎉 All 3 items selected! Flat ₹1,199 Combo Deal Activated!', 'bag');
+      } else {
+        window.showToast(`Checked! (${filled}/3 items selected)`, 'bag');
       }
     }
   };
@@ -441,232 +295,358 @@
   window.resetComboSlots = function() {
     state.slots = { 1: null, 2: null, 3: null };
     saveSlots(state.slots);
-    renderDockUI();
+    renderStickyBarUI();
     renderProductsGrid();
     if (window.showToast) {
-      window.showToast('All combo slots cleared', 'trash');
+      window.showToast('All combo selections reset', 'trash');
     }
   };
 
-  function getFilledCount() {
-    return [state.slots[1], state.slots[2], state.slots[3]].filter(Boolean).length;
-  }
-
-  // 8. Render Dock UI & Pricing
-  function renderDockUI() {
-    const dockCard = document.getElementById('comboDockCard');
-    const filledCount = getFilledCount();
-    const isAllFilled = filledCount === 3;
-
-    if (dockCard) {
-      dockCard.classList.toggle('all-filled', isAllFilled);
+  // Efficient targeted DOM update for single card
+  function updateCardUI(prodId) {
+    const card = document.getElementById(`comboCard_${prodId}`);
+    if (!card) {
+      renderProductsGrid();
+      return;
     }
 
-    // Slots Rendering
-    [1, 2, 3].forEach(slotNum => {
-      const slotEl = document.getElementById(`comboDockSlot${slotNum}`);
-      if (!slotEl) return;
+    const selectedSlot = getSlotForProduct(prodId);
+    const isSelected = selectedSlot !== null;
 
-      const item = state.slots[slotNum];
-      if (item) {
-        slotEl.classList.add('filled');
-        const thumb = slotEl.querySelector('.combo-slot-thumb');
-        const tag = slotEl.querySelector('.combo-slot-tag');
-        const name = slotEl.querySelector('.combo-slot-name');
-        const priceSub = slotEl.querySelector('.combo-slot-price-sub');
+    card.classList.toggle('is-selected', isSelected);
 
-        if (thumb) {
-          thumb.src = item.image;
-          thumb.alt = item.title;
-        }
-        if (tag) tag.innerHTML = `${getCategorySvg(item.category_key || 'mobile-cover')} <span>${item.category_label || 'Accessory'}</span>`;
-        if (name) name.textContent = item.title;
-        if (priceSub) priceSub.textContent = `Reg: Rs. ${item.price}`;
+    // Update Checkbox Badge
+    const checkboxBtn = card.querySelector('.combo-card-checkbox');
+    if (checkboxBtn) {
+      checkboxBtn.classList.toggle('checked', isSelected);
+      checkboxBtn.setAttribute('title', isSelected ? 'Click to uncheck' : 'Click to select');
+      checkboxBtn.innerHTML = `
+        <span class="combo-check-circle">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </span>
+        <span class="combo-checkbox-text">${isSelected ? `✓ Selected (${selectedSlot}/3)` : '+ Select'}</span>
+      `;
+    }
+
+    // Update Action Button
+    const toggleBtn = card.querySelector('.combo-toggle-btn');
+    if (toggleBtn) {
+      toggleBtn.classList.toggle('btn-checked', isSelected);
+      if (isSelected) {
+        toggleBtn.innerHTML = `
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Selected (${selectedSlot}/3)</span>
+        `;
       } else {
-        slotEl.classList.remove('filled');
+        toggleBtn.innerHTML = `
+          <span class="combo-mini-box"></span>
+          <span>Select for Combo</span>
+        `;
       }
+    }
+  }
+
+  // 8. Render Products Grid (Matching collections.html layout)
+  function renderProductsGrid() {
+    const grid = document.getElementById('comboProductsGrid');
+    if (!grid) return;
+
+    if (state.filteredProducts.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 24px; border: 1.5px dashed #CBD5E1;">
+          <div style="display:flex; justify-content:center; margin-bottom: 12px; color: #94A3B8;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #171513; margin-bottom: 6px;">No products match your search</h3>
+          <p style="color: #64748B; font-size: 0.9rem;">Try switching categories or clearing search keywords.</p>
+          <button type="button" class="btn btn-pill-dark" onclick="window.clearComboFilters()" style="margin-top: 16px; padding: 10px 24px; cursor: pointer; border-radius: 999px; background: #171513; color: #FFFFFF; font-weight: 800;">View All Products</button>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = '';
+    state.filteredProducts.forEach(prod => {
+      const card = createComboProductCard(prod);
+      grid.appendChild(card);
+    });
+  }
+
+  window.clearComboFilters = function() {
+    const searchInput = document.getElementById('comboSearchInput');
+    if (searchInput) searchInput.value = '';
+    state.searchQuery = '';
+    state.activeCategory = 'all';
+
+    const navBar = document.getElementById('comboNavBar');
+    if (navBar) {
+      navBar.querySelectorAll('.catalog-nav-pill').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-category') === 'all');
+      });
+    }
+    applyFiltersAndSort();
+  };
+
+  // Create single product card identical to collections.html with checkmark checkbox
+  function createComboProductCard(product) {
+    const card = document.createElement('div');
+    card.className = `catalog-card combo-catalog-card`;
+    card.id = `comboCard_${product.id}`;
+    card.setAttribute('data-id', product.id);
+
+    const selectedSlot = getSlotForProduct(product.id);
+    const isSelected = selectedSlot !== null;
+    if (isSelected) {
+      card.classList.add('is-selected');
+    }
+
+    const hasColors = product.colors && product.colors.length > 1;
+    const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : 'assets/phone_cream.png');
+
+    // Badges HTML
+    let badgeHtml = '';
+    if (product.discount_percent > 0) {
+      badgeHtml += `<span class="card-badge card-badge-discount">${product.discount_percent}% OFF</span>`;
+    }
+    if (product.is_bestseller) {
+      badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
+    }
+
+    // Color Swatches HTML
+    let swatchesHtml = '';
+    if (hasColors) {
+      const swatches = product.colors.slice(0, 5).map((c) => `
+        <button type="button" 
+          class="card-color-dot ${c.image === initialImg ? 'active' : ''}" 
+          data-img="${c.image}" 
+          data-color="${c.name}"
+          style="background: ${c.hex || '#E2E8F0'};" 
+          title="${c.name}">
+        </button>
+      `).join('');
+      const moreCount = product.colors.length > 5 ? `<span style="font-size: 0.65rem; font-weight: 700; color: #64748B;">+${product.colors.length - 5}</span>` : '';
+      swatchesHtml = `
+        <div class="card-color-swatches" aria-label="Available Colors">
+          ${swatches}
+          ${moreCount}
+        </div>
+      `;
+    }
+
+    card.innerHTML = `
+      <div class="card-media-stage">
+        <div class="card-badges-row">${badgeHtml}</div>
+
+        <!-- Prominent Checkmark Checkbox Badge (Top-Right) -->
+        <button type="button" 
+          class="combo-card-checkbox ${isSelected ? 'checked' : ''}" 
+          aria-label="${isSelected ? 'Uncheck item' : 'Select item for combo'}"
+          title="${isSelected ? 'Click to uncheck' : 'Click to select'}">
+          <span class="combo-check-circle">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="combo-checkbox-text">${isSelected ? `✓ Selected (${selectedSlot}/3)` : '+ Select'}</span>
+        </button>
+
+        <div class="card-img-wrap">
+          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
+        </div>
+
+        ${swatchesHtml}
+      </div>
+
+      <div class="card-body-wrap">
+        <div class="card-cat-rating">
+          <span class="card-cat-tag">${product.combo_label || product.category_name}</span>
+          <span class="card-rating-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ${product.rating || 4.8} (${product.reviews_count || 120})
+          </span>
+        </div>
+
+        <a href="product?handle=${product.handle || product.id}" class="card-product-title" title="${product.title}">
+          ${product.title}
+        </a>
+
+        <div class="card-price-row">
+          <span class="card-price-now">₹${product.price}</span>
+          ${product.original_price > product.price ? `<span class="card-price-was">₹${product.original_price}</span>` : ''}
+          <span class="card-save-label" style="color: #C5A059; font-weight: 800;">Combo Eligible</span>
+        </div>
+
+        <div class="card-actions-row">
+          <button type="button" class="combo-toggle-btn ${isSelected ? 'btn-checked' : ''}" aria-label="Toggle combo item">
+            ${isSelected 
+              ? `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Selected (${selectedSlot}/3)</span>` 
+              : `<span class="combo-mini-box"></span><span>Select for Combo</span>`
+            }
+          </button>
+          <a href="product?handle=${product.handle || product.id}" class="card-buy-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;" title="View Details">
+            <span>Details</span>
+          </a>
+        </div>
+      </div>
+    `;
+
+    // Bind checkbox click
+    const checkboxBtn = card.querySelector('.combo-card-checkbox');
+    checkboxBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.toggleComboProduct(product.id);
     });
 
-    // Update Dock Hint & Badge
-    const badgeEl = document.getElementById('comboDockCountBadge');
-    const hintEl = document.getElementById('comboDockHint');
+    // Bind action toggle button click
+    const toggleBtn = card.querySelector('.combo-toggle-btn');
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.toggleComboProduct(product.id);
+    });
+
+    // Clicking image area toggles checkbox for ultra-easy mobile usability
+    const imgWrap = card.querySelector('.card-img-wrap');
+    imgWrap.addEventListener('click', () => {
+      window.toggleComboProduct(product.id);
+    });
+
+    // Color Swatches interaction
+    const imgEl = card.querySelector(`#cardImg_${product.id}`);
+    const colorDots = card.querySelectorAll('.card-color-dot');
+    colorDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        colorDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+
+        const newSrc = dot.getAttribute('data-img');
+        if (newSrc && imgEl) {
+          imgEl.style.opacity = '0.4';
+          imgEl.style.transform = 'scale(0.96)';
+          setTimeout(() => {
+            imgEl.src = newSrc;
+            imgEl.style.opacity = '1';
+            imgEl.style.transform = 'scale(1)';
+          }, 120);
+        }
+      });
+    });
+
+    return card;
+  }
+
+  // 9. Sticky Bottom Bar UI & Pricing
+  function renderStickyBarUI() {
+    const filledCount = getFilledCount();
+    const isReady = filledCount === 3;
+
+    // Update Badge
+    const badgeEl = document.getElementById('comboStickyBadge');
     if (badgeEl) {
-      if (filledCount === 3) {
-        badgeEl.textContent = '3 of 3 Selected • Combo Unlocked! ★';
+      if (isReady) {
+        badgeEl.textContent = '3 of 3 Selected • Deal Ready! ★';
       } else {
         badgeEl.textContent = `${filledCount} of 3 Selected`;
       }
     }
-    if (hintEl) {
-      if (filledCount === 0) {
-        hintEl.textContent = 'Select up to 3 accessories below. Complete all 3 for the flat ₹1,199 combo deal!';
-      } else if (filledCount === 1) {
-        hintEl.textContent = '1 item selected. Pick 2 more accessories to unlock flat ₹1,199 combo deal (Save up to 60%)!';
-      } else if (filledCount === 2) {
-        hintEl.textContent = '🔥 Almost there! Pick 1 more accessory to get ALL 3 for flat ₹1,199!';
-      } else {
-        hintEl.textContent = '🎉 3-Piece Luxury Combo Deal Activated! Flat ₹1,199 bundle rate applied.';
-      }
-    }
 
-    // Pricing Calculation
-    let totalRegular = 0;
-    [state.slots[1], state.slots[2], state.slots[3]].forEach(item => {
-      if (item) {
-        totalRegular += Number(item.price || 0);
+    // Update Dots Indicator
+    [1, 2, 3].forEach(num => {
+      const dot = document.querySelector(`.combo-dot[data-dot="${num}"]`);
+      if (dot) {
+        dot.classList.toggle('filled', Boolean(state.slots[num]));
       }
     });
 
-    const priceLabelEl = document.querySelector('.combo-price-label');
-    const mainPriceEl = document.querySelector('.combo-main-deal-price');
-    const regPriceEl = document.getElementById('comboTotalRegularPrice');
-    const savingsEl = document.getElementById('comboTotalSavingsPill');
-    const addBagBtn = document.getElementById('comboAddBagCta');
+    // Calculate regular total price
+    let totalRegular = 0;
+    [state.slots[1], state.slots[2], state.slots[3]].forEach(item => {
+      if (item) totalRegular += Number(item.price || 0);
+    });
 
-    if (filledCount === 3) {
-      if (priceLabelEl) priceLabelEl.textContent = 'Bundle Flat Deal:';
-      if (mainPriceEl) mainPriceEl.textContent = '₹1,199';
-      if (regPriceEl) {
-        regPriceEl.textContent = `Rs. ${totalRegular.toLocaleString('en-IN')}`;
-        regPriceEl.style.display = 'inline-block';
-      }
-      if (savingsEl) {
+    const mrpEl = document.getElementById('comboStickyMrp');
+    const saveEl = document.getElementById('comboStickySave');
+    const addBtn = document.getElementById('comboStickyAddBtn');
+
+    if (mrpEl) {
+      mrpEl.textContent = totalRegular > 0 ? `₹${totalRegular.toLocaleString('en-IN')}` : '₹2,799';
+    }
+
+    if (saveEl) {
+      if (isReady) {
         const savings = Math.max(0, totalRegular - BUNDLE_PRICE);
-        savingsEl.textContent = `Save Rs. ${savings.toLocaleString('en-IN')} (Combo Special)`;
-        savingsEl.style.display = 'inline-block';
+        saveEl.textContent = `Save ₹${savings.toLocaleString('en-IN')}`;
+      } else {
+        saveEl.textContent = 'Save ~60%';
       }
-      if (addBagBtn) {
-        addBagBtn.disabled = false;
-        addBagBtn.innerHTML = `
-          <span>Add 3-Piece Combo to Bag • ₹1,199</span>
+    }
+
+    if (addBtn) {
+      if (isReady) {
+        addBtn.disabled = false;
+        addBtn.innerHTML = `
+          <span>Add 3-Piece Combo to Cart • ₹1,199</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         `;
-      }
-    } else if (filledCount === 2) {
-      if (priceLabelEl) priceLabelEl.textContent = 'Selected 2 Items:';
-      if (mainPriceEl) mainPriceEl.textContent = `Rs. ${totalRegular.toLocaleString('en-IN')}`;
-      if (regPriceEl) {
-        regPriceEl.style.display = 'none';
-      }
-      if (savingsEl) {
-        savingsEl.textContent = 'Add 1 more to unlock ₹1,199 deal!';
-        savingsEl.style.display = 'inline-block';
-      }
-      if (addBagBtn) {
-        addBagBtn.disabled = false;
-        addBagBtn.innerHTML = `
-          <span>Add 2 Items to Bag • Rs. ${totalRegular.toLocaleString('en-IN')}</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        `;
-      }
-    } else if (filledCount === 1) {
-      if (priceLabelEl) priceLabelEl.textContent = 'Selected 1 Item:';
-      if (mainPriceEl) mainPriceEl.textContent = `Rs. ${totalRegular.toLocaleString('en-IN')}`;
-      if (regPriceEl) {
-        regPriceEl.style.display = 'none';
-      }
-      if (savingsEl) {
-        savingsEl.textContent = 'Add 2 more for ₹1,199 deal';
-        savingsEl.style.display = 'inline-block';
-      }
-      if (addBagBtn) {
-        addBagBtn.disabled = false;
-        addBagBtn.innerHTML = `
-          <span>Add 1 Item to Bag • Rs. ${totalRegular.toLocaleString('en-IN')}</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        `;
-      }
-    } else {
-      // 0 selected
-      if (priceLabelEl) priceLabelEl.textContent = 'Bundle Flat Price:';
-      if (mainPriceEl) mainPriceEl.textContent = '₹1,199';
-      if (regPriceEl) {
-        regPriceEl.textContent = `Rs. 2,799`;
-        regPriceEl.style.display = 'inline-block';
-      }
-      if (savingsEl) {
-        savingsEl.textContent = 'Save up to 60%';
-        savingsEl.style.display = 'inline-block';
-      }
-      if (addBagBtn) {
-        addBagBtn.disabled = true;
-        addBagBtn.innerHTML = `
-          <span>Select Items Below to Begin</span>
+      } else {
+        addBtn.disabled = true;
+        addBtn.innerHTML = `
+          <span>Select ${3 - filledCount} More ${filledCount === 2 ? 'Item' : 'Items'} for Combo (${filledCount}/3)</span>
         `;
       }
     }
   }
 
-  // 9. Add Combo to Cart Integration
-  function bindDockActions() {
-    const addBagBtn = document.getElementById('comboAddBagCta');
-    if (addBagBtn) {
-      addBagBtn.addEventListener('click', () => {
-        const selectedItems = [state.slots[1], state.slots[2], state.slots[3]].filter(Boolean);
+  // 10. Add Combo to Cart Integration
+  function bindBottomBarActions() {
+    const addBtn = document.getElementById('comboStickyAddBtn');
+    if (!addBtn) return;
 
-        if (selectedItems.length === 0) {
-          if (window.showToast) {
-            window.showToast('Please select at least 1 item from below', 'trash');
-          }
-          return;
+    addBtn.addEventListener('click', () => {
+      const selectedItems = [state.slots[1], state.slots[2], state.slots[3]].filter(Boolean);
+
+      if (selectedItems.length < 3) {
+        if (window.showToast) {
+          window.showToast(`Please check ${3 - selectedItems.length} more item to complete your combo!`, 'bag');
         }
+        return;
+      }
 
-        if (selectedItems.length === 3) {
-          const [s1, s2, s3] = selectedItems;
-          const totalOriginal = (Number(s1.original_price || s1.price) + Number(s2.original_price || s2.price) + Number(s3.original_price || s3.price));
+      const [s1, s2, s3] = selectedItems;
+      const totalOriginal = (Number(s1.original_price || s1.price) + Number(s2.original_price || s2.price) + Number(s3.original_price || s3.price));
 
-          const comboBundle = {
-            id: `combo-3in1-${s1.id}-${s2.id}-${s3.id}`,
-            is_combo: true,
-            title: `3-Piece Luxury Combo Deal`,
-            price: BUNDLE_PRICE,
-            original_price: totalOriginal,
-            img: s1.image || 'assets/combo/combo_master_stage.webp',
-            qty: 1,
-            bundle_items: [
-              { id: s1.id, title: s1.title, image: s1.image, price: s1.price, category: s1.category_label },
-              { id: s2.id, title: s2.title, image: s2.image, price: s2.price, category: s2.category_label },
-              { id: s3.id, title: s3.title, image: s3.image, price: s3.price, category: s3.category_label }
-            ],
-            color: '3 Items Bundle',
-            model: `${s1.category_label} + ${s2.category_label} + ${s3.category_label}`
-          };
+      const comboBundle = {
+        id: `combo-3in1-${s1.id}-${s2.id}-${s3.id}`,
+        is_combo: true,
+        title: `3-Piece Luxury Combo Deal`,
+        price: BUNDLE_PRICE,
+        original_price: totalOriginal,
+        img: s1.image || 'assets/phone_cream.png',
+        qty: 1,
+        bundle_items: [
+          { id: s1.id, title: s1.title, image: s1.image, price: s1.price, category: s1.category_label },
+          { id: s2.id, title: s2.title, image: s2.image, price: s2.price, category: s2.category_label },
+          { id: s3.id, title: s3.title, image: s3.image, price: s3.price, category: s3.category_label }
+        ],
+        color: '3 Items Bundle',
+        model: `${s1.category_label} + ${s2.category_label} + ${s3.category_label}`
+      };
 
-          if (window.CovertokStore && window.CovertokStore.addToCart) {
-            window.CovertokStore.addToCart(comboBundle);
-          } else if (window.showToast) {
-            window.showToast('Added 3-Piece Combo to Cart for ₹1,199!', 'bag');
-          }
-        } else {
-          // 1 or 2 items selected: add each selected item cleanly at regular price
-          selectedItems.forEach(item => {
-            if (window.CovertokStore && window.CovertokStore.addToCart) {
-              window.CovertokStore.addToCart({
-                id: item.id,
-                title: item.title,
-                price: Number(item.price),
-                original_price: Number(item.original_price || item.price),
-                img: item.image,
-                qty: 1,
-                color: '',
-                model: item.category_label || ''
-              });
-            }
-          });
-        }
+      if (window.CovertokStore && window.CovertokStore.addToCart) {
+        window.CovertokStore.addToCart(comboBundle);
+      } else if (window.showToast) {
+        window.showToast('Added 3-Piece Combo to Cart for ₹1,199!', 'bag');
+      }
 
-        if (window.renderCartUI) window.renderCartUI();
-        if (window.CovertokFlows && window.CovertokFlows.openCart) {
-          window.CovertokFlows.openCart();
-        }
-      });
-    }
+      if (window.renderCartUI) window.renderCartUI();
+      if (window.CovertokFlows && window.CovertokFlows.openCart) {
+        window.CovertokFlows.openCart();
+      }
+    });
   }
 
 })();
