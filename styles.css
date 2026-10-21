@@ -9040,16 +9040,44 @@ a.footer-contact-main:hover {
   color: #555558;
 }
 
+.pop-card-overlay-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: pointer;
+  display: block;
+}
+
 .pop-card-pricing {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.pop-starting-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.pop-card-content.theme-light .pop-starting-label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.pop-card-content.theme-dark .pop-starting-label {
+  color: #64748B;
 }
 
 .pop-price-current {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
+  line-height: 1.1;
 }
 
 .pop-card-content.theme-light .pop-price-current {
@@ -9058,20 +9086,6 @@ a.footer-contact-main:hover {
 
 .pop-card-content.theme-dark .pop-price-current {
   color: #111113;
-}
-
-.pop-price-old {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 15px;
-  text-decoration: line-through;
-}
-
-.pop-card-content.theme-light .pop-price-old {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.pop-card-content.theme-dark .pop-price-old {
-  color: #8C8884;
 }
 
 /* Swatches */
@@ -9278,16 +9292,19 @@ a.footer-contact-main:hover {
 
 .pop-slider-bottom {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin-top: auto;
   padding-top: 6px;
+  gap: 6px;
 }
 
 .pop-slider-price {
   display: flex;
-  align-items: baseline;
-  gap: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  line-height: 1.15;
 }
 
 .pop-price-now {
@@ -9295,13 +9312,15 @@ a.footer-contact-main:hover {
   font-size: 0.95rem;
   font-weight: 800;
   color: #0A0A0A;
+  white-space: nowrap;
 }
 
 .pop-price-was {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   color: #94A3B8;
   text-decoration: line-through;
+  white-space: nowrap;
 }
 
 .pop-quick-add-btn {
