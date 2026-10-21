@@ -9265,6 +9265,7 @@ a.footer-contact-main:hover {
   flex-direction: column;
   flex: 1;
   justify-content: space-between;
+  min-width: 0;
 }
 
 .pop-slider-tag {
@@ -9274,6 +9275,7 @@ a.footer-contact-main:hover {
   color: #C5A059;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  display: block;
 }
 
 .pop-slider-title {
@@ -9282,12 +9284,14 @@ a.footer-contact-main:hover {
   font-weight: 700;
   color: #0A0A0A;
   line-height: 1.35;
-  margin: 3px 0 8px;
+  margin: 2px 0 8px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  height: 2.3em;
+  height: 2.75em;
+  min-height: 2.75em;
 }
 
 .pop-slider-bottom {
@@ -9295,16 +9299,19 @@ a.footer-contact-main:hover {
   align-items: flex-end;
   justify-content: space-between;
   margin-top: auto;
-  padding-top: 6px;
-  gap: 6px;
+  padding-top: 4px;
+  gap: 8px;
 }
 
 .pop-slider-price {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1px;
+  justify-content: flex-end;
+  gap: 2px;
   line-height: 1.15;
+  min-width: 0;
+  flex: 1;
 }
 
 .pop-price-now {
@@ -9313,6 +9320,8 @@ a.footer-contact-main:hover {
   font-weight: 800;
   color: #0A0A0A;
   white-space: nowrap;
+  letter-spacing: -0.01em;
+  display: block;
 }
 
 .pop-price-was {
@@ -9321,11 +9330,12 @@ a.footer-contact-main:hover {
   color: #94A3B8;
   text-decoration: line-through;
   white-space: nowrap;
+  display: block;
 }
 
 .pop-quick-add-btn {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   background: #0A0A0A;
   color: #FFFFFF;
@@ -9334,14 +9344,29 @@ a.footer-contact-main:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   flex-shrink: 0;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.pop-quick-add-btn svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+  transform: translateX(-0.5px);
+  transition: transform 0.2s ease;
 }
 
 .pop-quick-add-btn:hover {
   background: linear-gradient(135deg, #F5DFB8 0%, #D8AE66 50%, #B88937 100%);
   color: #0A0A0A;
-  transform: scale(1.15);
+  transform: scale(1.12);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.4);
+}
+
+.pop-quick-add-btn:hover svg {
+  transform: translateX(-0.5px) scale(1.08);
 }
 
 .pop-quick-add-btn:active {
@@ -9400,18 +9425,60 @@ a.footer-contact-main:hover {
   }
 
   .popular-slider-wrap {
-    height: 320px;
+    height: 330px;
     border-radius: 20px;
   }
 
   .pop-slider-item {
-    flex: 0 0 180px;
-    width: 180px;
-    height: 300px;
+    flex: 0 0 185px;
+    width: 185px;
+    height: 312px;
+  }
+
+  .pop-slider-card {
+    padding: 12px;
   }
 
   .pop-slider-img-wrap {
-    height: 150px;
+    height: 152px;
+    border-radius: 13px;
+    margin-bottom: 8px;
+  }
+
+  .pop-slider-tag {
+    font-size: 0.60rem;
+    margin-bottom: 2px;
+  }
+
+  .pop-slider-title {
+    font-size: 0.77rem;
+    line-height: 1.32;
+    height: 2.65em;
+    min-height: 2.65em;
+    margin: 2px 0 6px;
+  }
+
+  .pop-slider-bottom {
+    padding-top: 2px;
+    gap: 6px;
+  }
+
+  .pop-price-now {
+    font-size: 0.88rem;
+  }
+
+  .pop-price-was {
+    font-size: 0.70rem;
+  }
+
+  .pop-quick-add-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .pop-quick-add-btn svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
