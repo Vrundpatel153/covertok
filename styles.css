@@ -7184,11 +7184,14 @@ a.footer-contact-main:hover {
   }
 
   .hero-slide.active .hero-kicker {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
     animation: heroKickerEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both !important;
   }
 
   .hero-kicker-highlight {
     display: inline-block !important;
+    color: #C5A059 !important;
     background: linear-gradient(
       90deg,
       #C5A059 0%,
@@ -7235,10 +7238,14 @@ a.footer-contact-main:hover {
   }
 
   .hero-slide.active .hero-headline-line-1 {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
     animation: heroLine1Entrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s both !important;
   }
 
   .hero-slide.active .hero-headline-line-2 {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
     animation: heroLine2Entrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both !important;
   }
 
