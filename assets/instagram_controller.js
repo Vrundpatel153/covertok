@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Shock-absorbing transparent case with scratch resistance and a premium grip.',
       priceCurrent: 'Rs. 499.00',
       priceOld: 'Rs. 999.00',
-      productUrl: 'https://covertok.com/products/aluminium-frame-transparent-case',
+      productUrl: 'collections.html?cat=iphone-cases',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/modal/view_01_lifestyle.webp',
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Top-grain textured vegan leather case with magnetic folding kickstand and MagSafe card pocket.',
       priceCurrent: 'Rs. 1,099.00',
       priceOld: 'Rs. 1,699.00',
-      productUrl: 'https://covertok.com/collections',
+      productUrl: 'collections.html',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_02_leather_wallets.webp',
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Dual-layer shockproof armor with raised camera lip and high-gloss scratch-resistant clear coating.',
       priceCurrent: 'Rs. 699.00',
       priceOld: 'Rs. 1,299.00',
-      productUrl: 'https://covertok.com/collections',
+      productUrl: 'collections.html',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_03_leopard_case.webp',
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Handcrafted chrome alloy spherical beads with an elegant sculpted metallic bow and reinforced tether.',
       priceCurrent: 'Rs. 399.00',
       priceOld: 'Rs. 699.00',
-      productUrl: 'https://covertok.com/collections',
+      productUrl: 'collections.html',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_04_silver_bow_charm.webp',
@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (priceOldEl) priceOldEl.textContent = post.priceOld;
     if (ctaBtn) {
       ctaBtn.setAttribute('href', post.productUrl);
-      ctaBtn.setAttribute('target', '_blank');
-      ctaBtn.setAttribute('rel', 'noopener noreferrer');
+      ctaBtn.removeAttribute('target');
+      ctaBtn.removeAttribute('rel');
     }
     if (instaLink) {
       instaLink.setAttribute('href', post.instaUrl);

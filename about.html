@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Covertok — Luxury Phone Cases & Tech Accessories</title>
+  <meta name="description" content="Discover the story behind Covertok. Where art meets engineering in premium iPhone covers, Apple Watch bands, and designer accessories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261021_v1">
+  <link rel="stylesheet" href="pages.css?v=20261021_v1">
+  <link rel="stylesheet" href="microinteractions.css?v=20261021_v1">
+</head>
+<body class="page-canvas">
+
+  <!-- Top Luxury Announcement Marquee -->
+  <aside class="site-announcement-bar" aria-label="Announcement">
+    <div class="site-announcement-track">
+      <span>PREPAID ORDER SHIPS WITHIN 2 HRS ⚡</span>
+      <span class="sep">•</span>
+      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA ✅</span>
+      <span class="sep">•</span>
+      <span>PAY DAY SALE IS LIVE 🔥 EXTRA 15% OFF WITH CODE: COVERTOK15</span>
+      <span class="sep">•</span>
+      <span>FREE EXPRESS SHIPPING ON ALL ORDERS 📦</span>
+      <span class="sep">•</span>
+      <span>100% PRECISION FIT GUARANTEE 🛡️</span>
+      <span class="sep">•</span>
+      <span>PREPAID ORDER SHIPS WITHIN 2 HRS ⚡</span>
+      <span class="sep">•</span>
+      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA ✅</span>
+    </div>
+  </aside>
+
+  <!-- Global Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand-logo" aria-label="Covertok Home">
+          <img src="assets/covertok_luxury_logo.png" alt="Covertok" class="logo-img">
+        </a>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="collections.html" class="nav-link">ALL COLLECTIONS</a>
+            </li>
+            <li class="nav-item">
+              <a href="collections.html?cat=iphone-cases" class="nav-link">PHONE CASES</a>
+            </li>
+            <li class="nav-item">
+              <a href="collections.html?cat=watchbands" class="nav-link">WATCH BANDS</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link active">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn" id="searchBtn" aria-label="Search products" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="icon-btn" id="userBtn" aria-label="My Account" title="Account">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping Cart" title="Cart">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </button>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <svg class="mobile-menu-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <img src="assets/covertok_luxury_logo.png" alt="Covertok" class="logo-img">
+      </div>
+      <button class="close-btn" id="closeMobileDrawer">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-link">HOME</a></li>
+      <li><a href="collections.html" class="mobile-link">ALL COLLECTIONS</a></li>
+      <li><a href="collections.html?cat=iphone-cases" class="mobile-link">PHONE CASES</a></li>
+      <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
+      <li><a href="about.html" class="mobile-link active">ABOUT US</a></li>
+      <li><a href="contact.html" class="mobile-link">CONTACT US</a></li>
+      <li><a href="privacy-policy.html" class="mobile-link">PRIVACY POLICY</a></li>
+      <li><a href="refund-policy.html" class="mobile-link">REFUND POLICY</a></li>
+      <li><a href="shipping-policy.html" class="mobile-link">SHIPPING POLICY</a></li>
+      <li><a href="terms-of-service.html" class="mobile-link">TERMS OF SERVICE</a></li>
+    </ul>
+    <div class="mobile-drawer-footer" style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="contact.html" class="btn btn-dark full-width">CONTACT US</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-section">
+      <div class="page-hero-container">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-current">About Us</span>
+        </nav>
+
+        <div class="page-hero-badge">
+          <span class="status-dot"></span>
+          <span>OUR STORY & PHILOSOPHY</span>
+        </div>
+
+        <h1 class="page-hero-title">Crafted for Elegance. <span class="text-gold">Engineered for Life.</span></h1>
+        <p class="page-hero-desc">Covertok was founded on a simple conviction: the device you touch hundreds of times a day should feel like a piece of art, never compromise on safety, and express your genuine identity.</p>
+
+        <div class="page-hero-meta">
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>Military-Grade Impact Testing</span>
+          </div>
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Prepaid Dispatched in 2 Hours</span>
+          </div>
+          <div class="meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"></path></svg>
+            <span>50,000+ Verified Customers Across India</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <div class="page-main-layout">
+      <!-- Sticky Sidebar -->
+      <aside class="page-sidebar">
+        <div class="toc-card">
+          <h2 class="toc-card-title">EXPLORE OUR STORY</h2>
+          <ul class="toc-nav-list">
+            <li class="toc-nav-item"><a href="#origin" class="toc-nav-link active">1. The Covertok Origin</a></li>
+            <li class="toc-nav-item"><a href="#craft" class="toc-nav-link">2. Our Design Pillars</a></li>
+            <li class="toc-nav-item"><a href="#materials" class="toc-nav-link">3. Premium Materials</a></li>
+            <li class="toc-nav-item"><a href="#community" class="toc-nav-link">4. The Community</a></li>
+            <li class="toc-nav-item"><a href="#promise" class="toc-nav-link">5. The Covertok Pledge</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-help-card">
+          <h3 class="sidebar-help-title">Need Styling Advice?</h3>
+          <p class="sidebar-help-desc">Our dedicated style specialists are available daily to help you pick the perfect match for your iPhone model.</p>
+          <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="sidebar-help-btn btn-whatsapp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+            <span>Chat on WhatsApp</span>
+          </a>
+          <a href="contact.html" class="sidebar-help-btn btn-outline">
+            <span>Contact Help Center</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Card -->
+      <article class="page-content-card">
+        <!-- Section 1 -->
+        <section id="origin" class="legal-section">
+          <span class="section-num-tag">CHAPTER 01</span>
+          <h2 class="legal-heading">The Covertok Origin</h2>
+          <p class="legal-text">Born from an obsession with industrial design and expressive fashion, Covertok started with a straightforward realization: smartphone owners had to choose between bulky, ugly armor cases or flimsy, cheap aesthetic covers that shattered on first impact.</p>
+          <p class="legal-text">We set out to eliminate that compromise. By combining aerospace-grade CNC aluminium frames, optical clarity Bayer polycarbonates, and tactile vegan leathers, we built a luxury lifestyle brand tailored for contemporary creators and modern tastemakers across India.</p>
+
+          <div class="legal-callout">
+            <h4 class="legal-callout-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <span>Our Core Philosophy</span>
+            </h4>
+            <p class="legal-callout-text">Your phone is your constant companion. It records your memories, runs your business, and reflects your personality. It deserves protection that feels as luxurious as the device itself.</p>
+          </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <div class="about-stats-row">
+          <div class="stat-box">
+            <div class="stat-value">50K+</div>
+            <div class="stat-label">Happy Owners</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value">100+</div>
+            <div class="stat-label">Original Designs</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value">2 Hrs</div>
+            <div class="stat-label">Priority Dispatch</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value">4.9 ★</div>
+            <div class="stat-label">Customer Rating</div>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <section id="craft" class="legal-section">
+          <span class="section-num-tag">CHAPTER 02</span>
+          <h2 class="legal-heading">Our Three Design Pillars</h2>
+          <p class="legal-text">Every cover and strap in our catalog passes rigorous design prototyping before it earns the Covertok insignia.</p>
+
+          <div class="about-pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-num">01</div>
+              <h3 class="pillar-title">Uncompromising Drop Defense</h3>
+              <p class="pillar-desc">Multi-layered air-cushion corner bumpers and raised 1.2mm camera lips protect delicate sapphire camera lenses from everyday accidents.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-num">02</div>
+              <h3 class="pillar-title">Tactile Luxury & Ergonomics</h3>
+              <p class="pillar-desc">Custom-machined metallic buttons deliver that crisp, satisfying click. Contoured edges provide secure, comfortable one-handed grip.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-num">03</div>
+              <h3 class="pillar-title">Seamless MagSafe Power</h3>
+              <p class="pillar-desc">Embedded 38-magnet neodymium arrays guarantee rock-solid alignment with MagSafe chargers, wallets, and in-car mounts.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quote Banner -->
+        <div class="about-quote-banner">
+          <p class="about-quote-text">“Style isn’t about following trends. It’s about elevating the everyday objects you interact with into something that brings joy every time you look at them.”</p>
+          <span class="about-quote-author">Covertok Design Studio</span>
+        </div>
+
+        <!-- Section 3 -->
+        <section id="materials" class="legal-section">
+          <span class="section-num-tag">CHAPTER 03</span>
+          <h2 class="legal-heading">Craftsmanship & Materials</h2>
+          <p class="legal-text">We source raw materials from globally certified suppliers:</p>
+          <ul class="legal-list">
+            <li class="legal-list-item">
+              <span class="legal-list-bullet"></span>
+              <span><strong>Optical Clear Polycarbonate (Anti-Yellowing):</strong> Treated with UV-stabilizer technology to resist discoloration and oil accumulation over time.</span>
+            </li>
+            <li class="legal-list-item">
+              <span class="legal-list-bullet"></span>
+              <span><strong>Anodized Aircraft Aluminium:</strong> Precision CNC-cut camera bezels and tactile button plates that prevent scratches on delicate optical glass.</span>
+            </li>
+            <li class="legal-list-item">
+              <span class="legal-list-bullet"></span>
+              <span><strong>Textured Eco-Leather & Ribbed Silicone:</strong> Water-resistant, hypoallergenic, and formulated to resist skin oils and cosmetic transfer.</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="community" class="legal-section">
+          <span class="section-num-tag">CHAPTER 04</span>
+          <h2 class="legal-heading">The Covertok Community</h2>
+          <p class="legal-text">From Mumbai to Delhi, Bangalore to Kolkata, the Covertok community is comprised of fashion influencers, creative directors, college students, and tech purists. You’ll find our covers featured in thousands of real Instagram reels, mirror selfies, and unboxings.</p>
+          <p class="legal-text">We actively incorporate community feedback into our iterative product drops—refining button clickability, testing lanyard compatibility, and creating colorways that match each Apple season release.</p>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="promise" class="legal-section">
+          <span class="section-num-tag">CHAPTER 05</span>
+          <h2 class="legal-heading">The Covertok Pledge</h2>
+          <p class="legal-text">When you order from Covertok, our relationship does not end at checkout. We stand behind every product with our verified customer guarantees:</p>
+          
+          <div class="process-steps-row">
+            <div class="step-card">
+              <div class="step-num">01</div>
+              <h4 class="step-title">5-Day Hassle-Free Replacement</h4>
+              <p class="step-desc">If your case arrives with any transit damage or fitment issue, we replace it promptly.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">02</div>
+              <h4 class="step-title">Prepaid 2-Hour Dispatch</h4>
+              <p class="step-desc">Prepaid orders are prioritized and packed in our fulfillment center within 2 business hours.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-num">03</div>
+              <h4 class="step-title">Real Human WhatsApp Support</h4>
+              <p class="step-desc">Speak directly with our team in India from Monday to Saturday for instant resolution.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="collections.html" class="btn btn-dark" style="padding: 14px 28px; border-radius: 12px; font-weight: 800; text-decoration: none;">EXPLORE ALL COLLECTIONS &rarr;</a>
+            <a href="contact.html" class="btn btn-outline" style="padding: 14px 28px; border-radius: 12px; font-weight: 700; text-decoration: none; border: 1.5px solid #0A0A0A; color: #0A0A0A;">CONTACT SUPPORT</a>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- Complete Premium E-Commerce Footer -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-inner-wrap">
+      <div class="footer-hero-brand-wrap">
+        <div class="footer-hero-wordmark" aria-label="COVERTOK">COVERTOK</div>
+        <div class="footer-hero-subtag">
+          <span class="subtag-bullet">•</span>
+          <span>EST. 2026</span>
+          <span class="subtag-bullet">•</span>
+          <span>LUXURY MOBILE APPAREL</span>
+          <span class="subtag-bullet">•</span>
+          <span>DESIGNED FOR PERFECTION</span>
+        </div>
+      </div>
+
+      <div class="footer-divider-rule"></div>
+
+      <div class="footer-main-grid">
+        <!-- Col 1 -->
+        <div class="footer-col col-brand-newsletter">
+          <h3 class="footer-col-heading footer-brand-title">COVERTOK</h3>
+          <p class="footer-brand-desc">Engineered luxury cases and Apple Watch apparel crafted for perfectionists who demand world-class protection with runway aesthetics.</p>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/covertokofficial/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+            </a>
+            <a href="mailto:Covertok.official@gmail.com" class="footer-social-btn" aria-label="Email Us">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop Collections -->
+        <div class="footer-col col-collections">
+          <h4 class="footer-col-heading">SHOP COLLECTIONS</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="collections.html" class="footer-nav-link"><span>All Collections</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=iphone-cases" class="footer-nav-link"><span>iPhone Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=airpod-covers" class="footer-nav-link"><span>AirPod Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=watchbands" class="footer-nav-link"><span>iWatch Bands</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=charger-and-cables" class="footer-nav-link"><span>Charger Cases & Cables</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="search.html" class="footer-nav-link"><span>Search Products</span><span class="nav-arrow">&rsaquo;</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Policies & Info -->
+        <div class="footer-col col-policies">
+          <h4 class="footer-col-heading">POLICIES & INFO</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="about.html" class="footer-nav-link"><span>About Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link"><span>Contact Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="privacy-policy.html" class="footer-nav-link"><span>Privacy Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="refund-policy.html" class="footer-nav-link"><span>Refund Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="shipping-policy.html" class="footer-nav-link"><span>Shipping Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="terms-of-service.html" class="footer-nav-link"><span>Terms of Service</span><span class="nav-arrow">&rsaquo;</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div class="footer-col col-contact">
+          <h4 class="footer-col-heading">CONTACT US</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-contact-badge" aria-label="WhatsApp Support">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+              </a>
+              <div class="footer-contact-text-wrap">
+                <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-contact-main">+91 98386 88544</a>
+                <span class="footer-contact-sub">WhatsApp (Quick Support)</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <a href="tel:+917408221919" class="footer-contact-badge" aria-label="Phone Support">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </a>
+              <div class="footer-contact-text-wrap">
+                <a href="tel:+917408221919" class="footer-contact-main">+91 74082 21919</a>
+                <span class="footer-contact-sub">Phone Support</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <a href="mailto:Covertok.official@gmail.com" class="footer-contact-badge" aria-label="Email Covertok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <div class="footer-contact-text-wrap">
+                <a href="mailto:Covertok.official@gmail.com" class="footer-contact-main">Covertok.official@gmail.com</a>
+                <span class="footer-contact-sub">Email Support</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-badge" aria-label="Support Hours">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="footer-contact-text-wrap">
+                <span class="footer-contact-main">Mon &ndash; Sat: 10:00 AM &ndash; 7:00 PM IST</span>
+                <span class="footer-contact-sub">Support Hours</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom-wrap">
+        <div class="footer-bottom-inner">
+          <div class="footer-legal-block">
+            <p>&copy; 2026 COVERTOK. All rights reserved. Trade Name: COVERTOK.</p>
+            <p>Designed for lovers of art &amp; tech.</p>
+          </div>
+          <button type="button" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to top">
+            <span class="top-arrow-circle">&uarr;</span>
+            <span>BACK TO TOP</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=20261021_v1"></script>
+</body>
+</html>

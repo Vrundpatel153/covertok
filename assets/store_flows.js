@@ -109,6 +109,11 @@
     },
 
     openSearch: function() {
+      const overlay = document.getElementById('searchModalOverlay');
+      if (!overlay) {
+        window.location.href = 'search.html';
+        return;
+      }
       openOverlay('searchModalOverlay', 'searchModalCard');
       setTimeout(() => {
         document.getElementById('storeSearchInput')?.focus();

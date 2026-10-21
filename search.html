@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Products | Covertok — Luxury Phone Cases & Tech Accessories</title>
+  <meta name="description" content="Search Covertok's catalog of premium luxury iPhone covers, Apple Watch armor bands, AirPods designer cases, and tech accessories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261021_v1">
+  <link rel="stylesheet" href="catalog.css?v=20261021_v1">
+  <link rel="stylesheet" href="pages.css?v=20261021_v1">
+  <link rel="stylesheet" href="microinteractions.css?v=20261021_v1">
+</head>
+<body class="page-canvas">
+
+  <!-- Top Luxury Announcement Marquee -->
+  <aside class="site-announcement-bar" aria-label="Announcement">
+    <div class="site-announcement-track">
+      <span>PREPAID ORDER SHIPS WITHIN 2 HRS ⚡</span>
+      <span class="sep">•</span>
+      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA ✅</span>
+      <span class="sep">•</span>
+      <span>PAY DAY SALE IS LIVE 🔥 EXTRA 15% OFF WITH CODE: COVERTOK15</span>
+      <span class="sep">•</span>
+      <span>FREE EXPRESS SHIPPING ON ALL ORDERS 📦</span>
+      <span class="sep">•</span>
+      <span>100% PRECISION FIT GUARANTEE 🛡️</span>
+      <span class="sep">•</span>
+      <span>PREPAID ORDER SHIPS WITHIN 2 HRS ⚡</span>
+      <span class="sep">•</span>
+      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA ✅</span>
+    </div>
+  </aside>
+
+  <!-- Global Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand-logo" aria-label="Covertok Home">
+          <img src="assets/covertok_luxury_logo.png" alt="Covertok" class="logo-img">
+        </a>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="collections.html" class="nav-link">ALL COLLECTIONS</a></li>
+            <li class="nav-item"><a href="collections.html?cat=iphone-cases" class="nav-link">PHONE CASES</a></li>
+            <li class="nav-item"><a href="collections.html?cat=watchbands" class="nav-link">WATCH BANDS</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <a href="search.html" class="icon-btn" id="searchBtn" aria-label="Search products" title="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <button class="icon-btn" id="userBtn" aria-label="My Account" title="Account">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping Cart" title="Cart">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </button>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+          <svg class="mobile-menu-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <img src="assets/covertok_luxury_logo.png" alt="Covertok" class="logo-img">
+      </div>
+      <button class="close-btn" id="closeMobileDrawer">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-link">HOME</a></li>
+      <li><a href="collections.html" class="mobile-link">ALL COLLECTIONS</a></li>
+      <li><a href="collections.html?cat=iphone-cases" class="mobile-link">PHONE CASES</a></li>
+      <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
+      <li><a href="about.html" class="mobile-link">ABOUT US</a></li>
+      <li><a href="contact.html" class="mobile-link">CONTACT US</a></li>
+      <li><a href="search.html" class="mobile-link active">SEARCH PRODUCTS</a></li>
+      <li><a href="privacy-policy.html" class="mobile-link">PRIVACY POLICY</a></li>
+      <li><a href="refund-policy.html" class="mobile-link">REFUND POLICY</a></li>
+      <li><a href="shipping-policy.html" class="mobile-link">SHIPPING POLICY</a></li>
+      <li><a href="terms-of-service.html" class="mobile-link">TERMS OF SERVICE</a></li>
+    </ul>
+    <div class="mobile-drawer-footer" style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="contact.html" class="btn btn-dark full-width">CONTACT US</a>
+      <a href="collections.html" class="btn btn-outline full-width">SHOP CATALOG</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Breadcrumb -->
+    <nav class="page-breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="page-container">
+        <ol class="page-breadcrumb-list">
+          <li class="page-breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="page-breadcrumb-separator">/</li>
+          <li class="page-breadcrumb-item current" aria-current="page">Search Products</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Hero with Interactive Search Bar -->
+    <section class="page-hero-section" style="padding-bottom: 28px;">
+      <div class="page-container">
+        <div class="page-hero-inner" style="max-width: 820px; margin: 0 auto; text-align: center;">
+          <span class="page-hero-pill">COVERTOK PRODUCT DISCOVERY</span>
+          <h1 class="page-hero-title">Search Our Catalog</h1>
+          <p class="page-hero-desc">
+            Explore 75+ precision-engineered iPhone cases, aerospace titanium watch bands, AirPods covers, and fast chargers.
+          </p>
+
+          <!-- Large Search Input Bar -->
+          <div style="position: relative; max-width: 680px; margin: 32px auto 0;">
+            <div class="search-input-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              id="pageSearchInput" 
+              class="search-page-input" 
+              placeholder="Search by model, case type, color, or accessory (e.g., iPhone 15, Titanium, Magnetic)..." 
+              autocomplete="off" 
+              spellcheck="false"
+              aria-label="Search catalog"
+            >
+            <button type="button" id="clearSearchBtn" class="search-clear-btn" aria-label="Clear search input">&times;</button>
+          </div>
+
+          <!-- Quick Filter Pills -->
+          <div class="search-filter-pills" id="searchFilterPills" style="justify-content: center; margin-top: 22px;">
+            <button type="button" class="filter-pill active" data-filter="all">All Items</button>
+            <button type="button" class="filter-pill" data-filter="iphone-cases">iPhone Covers</button>
+            <button type="button" class="filter-pill" data-filter="watchbands">Watch Bands</button>
+            <button type="button" class="filter-pill" data-filter="airpod-covers">AirPods Covers</button>
+            <button type="button" class="filter-pill" data-filter="charger-and-cables">Cables & Chargers</button>
+            <button type="button" class="filter-pill" data-filter="other-accessories">Accessories</button>
+            <button type="button" class="filter-pill" data-filter="bestseller">⭐ Bestsellers</button>
+            <button type="button" class="filter-pill" data-filter="under-999">Under ₹999</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="section-container" style="padding-top: 24px; padding-bottom: 72px;">
+      <div class="page-container">
+        <!-- Search Meta Toolbar -->
+        <div class="search-meta-bar">
+          <div class="search-count-text" id="searchResultCount">
+            Showing <strong id="countNumber">0</strong> luxury products
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <label for="searchSortSelect" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #475569;">Sort By:</label>
+            <select id="searchSortSelect" class="catalog-select" style="min-width: 170px;">
+              <option value="featured">Featured / Relevance</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+              <option value="newest">New Arrivals</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="search-results-grid" id="searchResultsGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+          <!-- Rendered dynamically by javascript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Badges Banner -->
+    <section class="trust-banner-section" aria-label="Trust Badges">
+      <div class="page-container">
+        <div class="trust-badges-grid">
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4 class="trust-badge-title">100% Genuine Quality</h4>
+            <p class="trust-badge-desc">Authentic Covertok materials & finish</p>
+          </div>
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h4 class="trust-badge-title">2-Hr Priority Dispatch</h4>
+            <p class="trust-badge-desc">Fast dispatch on prepaid UPI orders</p>
+          </div>
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <h4 class="trust-badge-title">5-Day Easy Replacement</h4>
+            <p class="trust-badge-desc">Prompt replacement for transit defects</p>
+          </div>
+          <div class="trust-badge-item">
+            <div class="trust-badge-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h4 class="trust-badge-title">COD &amp; Secure UPI</h4>
+            <p class="trust-badge-desc">256-bit encrypted checkout across India</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Slide-out Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay">
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h3 class="cart-title">Your Cart (<span id="cartDrawerCount">0</span>)</h3>
+        <button class="close-btn" id="closeCartBtn">&times;</button>
+      </div>
+      <div class="cart-body" id="cartItemsList"></div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Total:</span>
+          <span class="cart-total-price" id="cartTotalPrice">Rs. 0.00</span>
+        </div>
+        <p class="cart-note">Taxes and shipping calculated at checkout</p>
+        <button class="btn btn-primary full-width" id="checkoutBtn">PROCEED TO CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col col-brand">
+          <div class="footer-brand-header">
+            <img src="assets/covertok_luxury_logo.png" alt="Covertok" class="footer-logo-img">
+          </div>
+          <p class="footer-brand-desc">
+            Luxury phone cases, aerospace watch bands, and precision lifestyle tech engineered to elevate your daily devices.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/covertokofficial/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+            </a>
+            <a href="mailto:Covertok.official@gmail.com" class="footer-social-btn" aria-label="Email Us">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop Collections -->
+        <div class="footer-col col-collections">
+          <h4 class="footer-col-heading">SHOP COLLECTIONS</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="collections.html" class="footer-nav-link"><span>All Collections</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=iphone-cases" class="footer-nav-link"><span>iPhone Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=airpod-covers" class="footer-nav-link"><span>AirPod Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=watchbands" class="footer-nav-link"><span>iWatch Bands</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=charger-and-cables" class="footer-nav-link"><span>Charger Cases & Cables</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="search.html" class="footer-nav-link"><span>Search Products</span><span class="nav-arrow">&rsaquo;</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Policies & Info -->
+        <div class="footer-col col-policies">
+          <h4 class="footer-col-heading">POLICIES & INFO</h4>
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="about.html" class="footer-nav-link"><span>About Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link"><span>Contact Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="privacy-policy.html" class="footer-nav-link"><span>Privacy Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="refund-policy.html" class="footer-nav-link"><span>Refund Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="shipping-policy.html" class="footer-nav-link"><span>Shipping Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="terms-of-service.html" class="footer-nav-link"><span>Terms of Service</span><span class="nav-arrow">&rsaquo;</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Us -->
+        <div class="footer-col col-contact">
+          <h4 class="footer-col-heading">CONTACT US</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-contact-badge" aria-label="WhatsApp Support">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.44 19.65L5.27 16.61L5.07 16.3C4.24 14.98 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.82 7.5C8.61 7.5 8.27 7.58 7.98 7.9C7.69 8.21 6.87 8.98 6.87 10.55C6.87 12.12 8.01 13.64 8.17 13.85C8.33 14.06 10.38 17.22 13.51 18.57C14.25 18.89 14.83 19.08 15.28 19.23C16.03 19.47 16.71 19.43 17.25 19.35C17.85 19.26 19.1 18.59 19.36 17.86C19.62 17.13 19.62 16.51 19.54 16.38C19.46 16.25 19.25 16.17 18.93 16.01C18.62 15.85 17.07 15.09 16.78 14.99C16.49 14.89 16.28 14.84 16.07 15.15C15.86 15.46 15.25 16.17 15.07 16.38C14.88 16.59 14.7 16.61 14.39 16.45C14.07 16.29 13.06 15.96 11.86 14.89C10.92 14.05 10.28 13.01 10.1 12.7C9.91 12.39 10.08 12.22 10.24 12.06C10.38 11.92 10.55 11.69 10.71 11.51C10.87 11.33 10.92 11.2 11.02 10.99C11.12 10.78 11.07 10.6 10.99 10.44C10.91 10.28 10.29 8.76 10.03 8.14C9.78 7.53 9.53 7.61 9.34 7.6C9.17 7.59 8.96 7.5 8.82 7.5Z"/></svg>
+              </a>
+              <div class="footer-contact-text-wrap">
+                <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="footer-contact-main">+91 98386 88544</a>
+                <span class="footer-contact-sub">WhatsApp (Quick Support)</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <a href="tel:+917408221919" class="footer-contact-badge" aria-label="Phone Support">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </a>
+              <div class="footer-contact-text-wrap">
+                <a href="tel:+917408221919" class="footer-contact-main">+91 74082 21919</a>
+                <span class="footer-contact-sub">Phone Support</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <a href="mailto:Covertok.official@gmail.com" class="footer-contact-badge" aria-label="Email Covertok">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <div class="footer-contact-text-wrap">
+                <a href="mailto:Covertok.official@gmail.com" class="footer-contact-main">Covertok.official@gmail.com</a>
+                <span class="footer-contact-sub">Email Support</span>
+              </div>
+            </li>
+            <li class="footer-contact-item">
+              <div class="footer-contact-badge" aria-label="Support Hours">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div class="footer-contact-text-wrap">
+                <span class="footer-contact-main">Mon &ndash; Sat: 10:00 AM &ndash; 7:00 PM IST</span>
+                <span class="footer-contact-sub">Support Hours</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="footer-bottom-wrap">
+        <div class="footer-bottom-inner">
+          <div class="footer-legal-block">
+            <p>&copy; 2026 COVERTOK. All rights reserved. Trade Name: COVERTOK.</p>
+            <p>Designed for lovers of art &amp; tech.</p>
+          </div>
+          <button type="button" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to top">
+            <span class="top-arrow-circle">&uarr;</span>
+            <span>BACK TO TOP</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/products_data.js"></script>
+  <script src="assets/store_core.js"></script>
+  <script src="assets/store_modals.js"></script>
+  <script src="assets/store_flows.js"></script>
+  <script>
+    (function() {
+      let products = window.CovertokProducts || [];
+      let activeFilter = 'all';
+      let activeQuery = '';
+      let activeSort = 'featured';
+
+      const input = document.getElementById('pageSearchInput');
+      const clearBtn = document.getElementById('clearSearchBtn');
+      const pills = document.querySelectorAll('.filter-pill');
+      const grid = document.getElementById('searchResultsGrid');
+      const countEl = document.getElementById('countNumber');
+      const sortSelect = document.getElementById('searchSortSelect');
+
+      // Initialize from URL query parameters (e.g., search.html?q=iphone)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('q')) {
+        activeQuery = urlParams.get('q').trim();
+        if (input) input.value = activeQuery;
+        if (clearBtn && activeQuery) clearBtn.classList.add('visible');
+      }
+      if (urlParams.has('filter')) {
+        activeFilter = urlParams.get('filter');
+        pills.forEach(p => {
+          if (p.getAttribute('data-filter') === activeFilter) {
+            pills.forEach(el => el.classList.remove('active'));
+            p.classList.add('active');
+          }
+        });
+      }
+      if (urlParams.has('sort') && sortSelect) {
+        activeSort = urlParams.get('sort');
+        sortSelect.value = activeSort;
+      }
+
+      function filterAndRender() {
+        if (!products || !products.length) {
+          products = window.CovertokProducts || [];
+        }
+        let list = products.slice();
+
+        // 1. Filter by Category / Pill
+        if (activeFilter !== 'all') {
+          if (activeFilter === 'bestseller') {
+            list = list.filter(p => p.is_bestseller);
+          } else if (activeFilter === 'under-999') {
+            list = list.filter(p => p.price <= 999);
+          } else {
+            list = list.filter(p => p.category === activeFilter || (p.collections && p.collections.includes(activeFilter)));
+          }
+        }
+
+        // 2. Filter by search query
+        const q = activeQuery.toLowerCase().trim();
+        if (q) {
+          const terms = q.split(/\s+/);
+          list = list.filter(p => {
+            const titleMatch = terms.every(t => p.title.toLowerCase().includes(t));
+            const catMatch = p.category_name && p.category_name.toLowerCase().includes(q);
+            const tagMatch = p.tags && p.tags.some(t => t.toLowerCase().includes(q));
+            const descMatch = p.description && p.description.toLowerCase().includes(q);
+            return titleMatch || catMatch || tagMatch || descMatch;
+          });
+        }
+
+        // 3. Sort
+        if (activeSort === 'price-low') {
+          list.sort((a, b) => a.price - b.price);
+        } else if (activeSort === 'price-high') {
+          list.sort((a, b) => b.price - a.price);
+        } else if (activeSort === 'rating') {
+          list.sort((a, b) => b.rating - a.rating);
+        } else if (activeSort === 'newest') {
+          list.sort((a, b) => (b.is_new ? 1 : 0) - (a.is_new ? 1 : 0));
+        }
+
+        // 4. Render Count
+        if (countEl) countEl.textContent = list.length;
+
+        // 5. Render Products or Empty State
+        if (list.length === 0) {
+          grid.innerHTML = `
+            <div class="search-empty-state">
+              <div class="empty-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <h3 class="empty-title">No matching products found</h3>
+              <p class="empty-desc">
+                We couldn't find any items matching "${activeQuery || activeFilter}". Try checking your spelling or explore these popular searches:
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px;">
+                <button type="button" class="filter-pill" onclick="quickSearch('iPhone 15')">iPhone 15</button>
+                <button type="button" class="filter-pill" onclick="quickSearch('Titanium')">Titanium Bands</button>
+                <button type="button" class="filter-pill" onclick="quickSearch('Magnetic')">Magnetic Holder</button>
+                <button type="button" class="filter-pill" onclick="quickSearch('AirPods')">AirPods Covers</button>
+                <button type="button" class="filter-pill" onclick="quickSearch('Transparent')">Transparent Cases</button>
+                <button type="button" class="filter-pill" onclick="resetSearch()">Browse All Products</button>
+              </div>
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = list.map(product => {
+          let badgeHtml = '';
+          if (product.discount_percent > 0) {
+            badgeHtml = `<span class="card-badge badge-sale">-${product.discount_percent}%</span>`;
+          } else if (product.is_bestseller) {
+            badgeHtml = `<span class="card-badge badge-bestseller">BESTSELLER</span>`;
+          } else if (product.is_new) {
+            badgeHtml = `<span class="card-badge badge-new">NEW</span>`;
+          }
+
+          let swatchesHtml = '';
+          if (product.has_colors && product.colors && product.colors.length > 0) {
+            const swatches = product.colors.slice(0, 5).map((c, i) => `
+              <button type="button" 
+                class="card-color-dot ${i === 0 ? 'active' : ''}" 
+                data-img="${c.image || product.primary_image}" 
+                style="background: ${c.hex};" 
+                title="${c.name}">
+              </button>
+            `).join('');
+            const more = product.colors.length > 5 ? `<span style="font-size: 0.65rem; font-weight: 700; color: #64748B;">+${product.colors.length - 5}</span>` : '';
+            swatchesHtml = `<div class="card-color-swatches" aria-label="Available Colors">${swatches}${more}</div>`;
+          }
+
+          const originalPriceHtml = product.original_price > product.price 
+            ? `<span class="card-price-was">${product.original_price_formatted}</span>` 
+            : '';
+
+          return `
+            <div class="catalog-product-card" data-product-id="${product.id}">
+              <div class="card-media-stage">
+                <div class="card-badges-row">${badgeHtml}</div>
+                <div class="card-img-wrap" onclick="window.location.href='product.html?id=${product.id}'" style="cursor: pointer;">
+                  <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
+                </div>
+                ${swatchesHtml}
+              </div>
+
+              <div class="card-body-wrap">
+                <div class="card-cat-rating">
+                  <span class="card-cat-tag">${product.category_name || 'Accessories'}</span>
+                  <span class="card-rating-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    ${product.rating || '4.8'} (${product.reviews_count || '120'})
+                  </span>
+                </div>
+
+                <a href="product.html?id=${product.id}" class="card-product-title" title="${product.title}">
+                  ${product.title}
+                </a>
+
+                <div class="card-price-row">
+                  <span class="card-price-now">${product.price_formatted}</span>
+                  ${originalPriceHtml}
+                  ${product.discount_percent > 0 ? `<span class="card-save-label">Save Rs. ${(product.original_price - product.price).toLocaleString('en-IN')}</span>` : ''}
+                </div>
+
+                <div class="card-actions-row">
+                  <button type="button" class="card-add-btn" data-id="${product.id}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span>Add to Cart</span>
+                  </button>
+                  <button type="button" class="card-buy-btn" onclick="window.location.href='product.html?id=${product.id}'">
+                    <span>View</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        // Attach color switcher handlers
+        grid.querySelectorAll('.card-color-dot').forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const parent = dot.closest('.catalog-product-card');
+            const cardImg = parent.querySelector('.card-main-img');
+            parent.querySelectorAll('.card-color-dot').forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+            const newSrc = dot.getAttribute('data-img');
+            if (newSrc && cardImg) cardImg.src = newSrc;
+          });
+        });
+
+        // Attach Add to Cart handlers
+        grid.querySelectorAll('.card-add-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.getAttribute('data-id');
+            const p = products.find(item => String(item.id) === String(id));
+            if (!p) return;
+
+            if (window.CovertokStore && typeof window.CovertokStore.addToCart === 'function') {
+              window.CovertokStore.addToCart({
+                id: p.id,
+                title: p.title,
+                price: p.price,
+                price_formatted: p.price_formatted,
+                image: p.primary_image,
+                quantity: 1
+              });
+            } else if (window.CovertokFlows && typeof window.CovertokFlows.addToCart === 'function') {
+              window.CovertokFlows.addToCart(p.id);
+            }
+          });
+        });
+      }
+
+      // Event Listeners
+      let debounceTimeout = null;
+      if (input) {
+        input.addEventListener('input', (e) => {
+          activeQuery = e.target.value;
+          if (clearBtn) {
+            if (activeQuery.length > 0) clearBtn.classList.add('visible');
+            else clearBtn.classList.remove('visible');
+          }
+          clearTimeout(debounceTimeout);
+          debounceTimeout = setTimeout(() => {
+            updateUrlParams();
+            filterAndRender();
+          }, 120);
+        });
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          if (input) {
+            input.value = '';
+            input.focus();
+          }
+          activeQuery = '';
+          clearBtn.classList.remove('visible');
+          updateUrlParams();
+          filterAndRender();
+        });
+      }
+
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeFilter = pill.getAttribute('data-filter');
+          updateUrlParams();
+          filterAndRender();
+        });
+      });
+
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          activeSort = e.target.value;
+          updateUrlParams();
+          filterAndRender();
+        });
+      }
+
+      function updateUrlParams() {
+        const url = new URL(window.location);
+        if (activeQuery) url.searchParams.set('q', activeQuery);
+        else url.searchParams.delete('q');
+
+        if (activeFilter && activeFilter !== 'all') url.searchParams.set('filter', activeFilter);
+        else url.searchParams.delete('filter');
+
+        if (activeSort && activeSort !== 'featured') url.searchParams.set('sort', activeSort);
+        else url.searchParams.delete('sort');
+
+        window.history.replaceState({}, '', url);
+      }
+
+      window.quickSearch = function(query) {
+        if (input) input.value = query;
+        if (clearBtn) clearBtn.classList.add('visible');
+        activeQuery = query;
+        updateUrlParams();
+        filterAndRender();
+      };
+
+      window.resetSearch = function() {
+        if (input) input.value = '';
+        if (clearBtn) clearBtn.classList.remove('visible');
+        activeQuery = '';
+        activeFilter = 'all';
+        pills.forEach(p => p.classList.remove('active'));
+        const allPill = document.querySelector('.filter-pill[data-filter="all"]');
+        if (allPill) allPill.classList.add('active');
+        updateUrlParams();
+        filterAndRender();
+      };
+
+      // Initial execution
+      filterAndRender();
+    })();
+  </script>
+</body>
+</html>

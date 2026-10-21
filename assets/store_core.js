@@ -290,6 +290,10 @@
     const closeBtn = document.getElementById('closeSearchModalBtn');
 
     function openSearch() {
+      if (!searchModal) {
+        window.location.href = 'search.html';
+        return;
+      }
       searchModal.classList.add('show', 'active');
       document.body.style.overflow = 'hidden';
       setTimeout(() => input?.focus(), 150);
