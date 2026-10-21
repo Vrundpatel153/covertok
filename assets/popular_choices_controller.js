@@ -64,4 +64,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 150);
     });
   });
+
+  // 3. Quick Add buttons on Infinite Product Sliders
+  const quickAddBtns = document.querySelectorAll('.pop-quick-add-btn');
+  quickAddBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const prodId = btn.getAttribute('data-prod-id') || 'slider-prod';
+      const prodName = btn.getAttribute('data-prod-name') || 'Covertok Luxury Product';
+      const prodPrice = parseFloat(btn.getAttribute('data-prod-price')) || 699;
+      const prodImg = btn.getAttribute('data-prod-img') || '';
+
+      if (window.CovertokStore && window.CovertokStore.addToCart) {
+        window.CovertokStore.addToCart({
+          id: prodId,
+          title: prodName,
+          price: prodPrice,
+          image: prodImg,
+          qty: 1
+        });
+      } else if (window.showToast) {
+        window.showToast(`Added ${prodName} to cart!`, 'bag');
+      }
+
+      // Visual click feedback
+      btn.style.transform = 'scale(0.82)';
+      setTimeout(() => {
+        btn.style.transform = 'scale(1.2)';
+        setTimeout(() => {
+          btn.style.transform = '';
+        }, 180);
+      }, 120);
+    });
+  });
 });
