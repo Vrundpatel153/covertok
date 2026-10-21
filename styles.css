@@ -6750,13 +6750,22 @@ a.footer-contact-main:hover {
     visibility: visible !important;
   }
 
+  .hero-mob-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 8, 10, 0.65) 0%, rgba(8, 8, 10, 0.3) 32%, rgba(8, 8, 10, 0) 55%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
   .hero-mob-img {
     position: absolute !important;
     inset: 0 !important;
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center bottom !important;
+    object-position: center top !important;
     display: block !important;
   }
 
