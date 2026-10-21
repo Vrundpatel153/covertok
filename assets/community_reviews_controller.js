@@ -5,6 +5,25 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Ensure all inline card videos play continuously without pause
+  const inlineCardVideos = document.querySelectorAll('.video-card-inline-player');
+  inlineCardVideos.forEach(v => {
+    v.muted = true;
+    v.setAttribute('muted', '');
+    v.setAttribute('playsinline', '');
+    const tryPlay = () => {
+      const p = v.play();
+      if (p !== undefined) {
+        p.catch(() => {
+          // Fallback if browser requires interaction
+          window.addEventListener('click', () => v.play(), { once: true });
+          window.addEventListener('touchstart', () => v.play(), { once: true });
+        });
+      }
+    };
+    tryPlay();
+  });
+
   // --------------------------------------------------------------------------
   // 1. Genuine Covertok Video Reels Data
   // --------------------------------------------------------------------------

@@ -11518,3 +11518,82 @@ a.footer-contact-main:hover {
 
 
 
+
+
+/* --------------------------------------------------------------------------
+   COVERTOK CONTINUOUS VIDEO REELS & INFINITE LEFT-TO-RIGHT MARQUEE
+   -------------------------------------------------------------------------- */
+.videos-slider-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 16px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+}
+
+.videos-track {
+  display: flex !important;
+  gap: 18px !important;
+  width: max-content !important;
+  overflow: visible !important;
+  scroll-snap-type: none !important;
+  animation: videosMarqueeLTR 40s linear infinite !important;
+  will-change: transform;
+}
+
+@keyframes videosMarqueeLTR {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.videos-slider-wrapper:hover .videos-track {
+  animation-play-state: paused !important;
+}
+
+.video-reel-card {
+  flex: 0 0 216px !important;
+  width: 216px !important;
+  aspect-ratio: 9 / 15.6 !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: #171513 !important;
+  box-shadow: 0 8px 26px rgba(23, 21, 19, 0.12) !important;
+  cursor: pointer !important;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease !important;
+}
+
+.video-reel-card:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 0 16px 36px rgba(23, 21, 19, 0.22) !important;
+}
+
+/* Hide play button completely as requested */
+.video-play-btn {
+  display: none !important;
+}
+
+/* Hide arrow nav buttons since auto marquee is infinite */
+.video-nav-btn {
+  display: none !important;
+}
+
+/* Continuously playing inline video */
+.video-card-inline-player {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  background: #12100E;
+  transition: transform 0.4s ease;
+}
+
+.video-reel-card:hover .video-card-inline-player {
+  transform: scale(1.04);
+}
