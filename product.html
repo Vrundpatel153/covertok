@@ -20,28 +20,69 @@
   <!-- Products Catalog Script -->
   <script src="assets/products_data.js"></script>
   <script>
-    // Synchronous Pre-Bootstrap: Resolve product and meta before layout
+    // Synchronous Pre-Bootstrap: Universal Product Resolver supporting paths, handles, slugs, and IDs
     (function() {
       try {
-        var params = new URLSearchParams(window.location.search);
-        var prodId = params.get('id');
-        var prodHandle = params.get('handle');
-        var p = null;
-        if (window.CovertokProducts && window.CovertokProducts.length) {
-          if (prodId) {
-            p = window.CovertokProducts.find(function(x) { return String(x.id) === String(prodId); });
-          } else if (prodHandle) {
-            p = window.CovertokProducts.find(function(x) { return x.handle === prodHandle; });
+        function resolveProduct() {
+          if (!window.CovertokProducts || !window.CovertokProducts.length) return null;
+          var params = new URLSearchParams(window.location.search);
+          var handleParam = params.get('handle');
+          var idParam = params.get('id') || params.get('prodId');
+          var qParam = params.get('q') || params.get('p') || params.get('product');
+
+          // Extract candidate from URL path (e.g. /products/some-handle or /product/some-handle)
+          var pathParts = window.location.pathname.split('/').filter(Boolean);
+          var pathCandidate = null;
+          if (pathParts.length > 0) {
+            var last = pathParts[pathParts.length - 1].replace(/\.html$/i, '');
+            if (last !== 'product' && last !== 'products' && last !== 'collections' && last !== 'index') {
+              pathCandidate = last;
+            }
           }
-          if (!p) {
-            p = window.CovertokProducts.find(function(x) { return String(x.id) === '9888955924778'; }) || window.CovertokProducts[0];
+
+          var candidates = [handleParam, idParam, pathCandidate, qParam].filter(Boolean);
+          for (var i = 0; i < candidates.length; i++) {
+            var c = String(candidates[i]).trim();
+            if (!c) continue;
+
+            // Direct ID match
+            var found = window.CovertokProducts.find(function(p) { return String(p.id) === c; });
+            if (found) return found;
+
+            // Direct handle match
+            found = window.CovertokProducts.find(function(p) { return p.handle === c; });
+            if (found) return found;
+
+            // Normalized slug match
+            var norm = c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+            found = window.CovertokProducts.find(function(p) { return p.handle === norm; });
+            if (found) return found;
+
+            // Fuzzy handle match (prefix or substring)
+            found = window.CovertokProducts.find(function(p) {
+              return p.handle.indexOf(norm) !== -1 || norm.indexOf(p.handle) !== -1;
+            });
+            if (found) return found;
+
+            // Title fuzzy match
+            found = window.CovertokProducts.find(function(p) {
+              return p.title.toLowerCase().indexOf(norm.replace(/-/g, ' ')) !== -1;
+            });
+            if (found) return found;
           }
+
+          // Fallback
+          return window.CovertokProducts.find(function(p) { return String(p.id) === '9888955924778'; }) || window.CovertokProducts[0];
         }
+
+        var p = resolveProduct();
         window.__PDP_INITIAL_PRODUCT__ = p;
         if (p && p.title) {
           document.title = p.title + " | Covertok";
         }
-      } catch(e) {}
+      } catch(e) {
+        console.error('Error pre-resolving PDP product:', e);
+      }
     })();
   </script>
 </head>
@@ -50,25 +91,25 @@
   <!-- 1. TOP ANNOUNCEMENT MARQUEE -->
   <aside class="pdp-announcement-bar" aria-label="Announcement">
     <div class="pdp-announcement-track">
-      <span>PREPAID ORDER SHIPS WITHIN 2 HRS ⚡</span>
+      <span>PREPAID ORDER SHIPS WITHIN 2 HRS <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
       <span class="sep">•</span>
-      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA ✅</span>
+      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
       <span class="sep">•</span>
-      <span>PAY DAY SALE IS LIVE 🔥 EXTRA 15% OFF AT CHECKOUT</span>
+      <span>PAY DAY SALE IS LIVE <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> EXTRA 15% OFF AT CHECKOUT</span>
       <span class="sep">•</span>
-      <span>FREE EXPRESS SHIPPING ON ALL ORDERS 📦</span>
+      <span>FREE EXPRESS SHIPPING ON ALL ORDERS <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></span>
       <span class="sep">•</span>
-      <span>100% PRECISION FIT GUARANTEE 🛡️</span>
+      <span>100% PRECISION FIT GUARANTEE <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
       <span class="sep">•</span>
-      <span>PREPAID ORDER SHIPS WITHIN 2 HRS ⚡</span>
+      <span>PREPAID ORDER SHIPS WITHIN 2 HRS <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
       <span class="sep">•</span>
-      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA ✅</span>
+      <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
       <span class="sep">•</span>
-      <span>PAY DAY SALE IS LIVE 🔥 EXTRA 15% OFF AT CHECKOUT</span>
+      <span>PAY DAY SALE IS LIVE <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg> EXTRA 15% OFF AT CHECKOUT</span>
       <span class="sep">•</span>
-      <span>FREE EXPRESS SHIPPING ON ALL ORDERS 📦</span>
+      <span>FREE EXPRESS SHIPPING ON ALL ORDERS <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></span>
       <span class="sep">•</span>
-      <span>100% PRECISION FIT GUARANTEE 🛡️</span>
+      <span>100% PRECISION FIT GUARANTEE <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
     </div>
   </aside>
 
@@ -82,12 +123,45 @@
 
         <nav class="pdp-nav" aria-label="Main Navigation">
           <ul class="pdp-nav-links">
-            <li><a href="collections.html" class="pdp-nav-link">All Products</a></li>
-            <li><a href="collections.html?category=iphone-cases" class="pdp-nav-link">Phone Cases</a></li>
-            <li><a href="collections.html?category=watch-bands" class="pdp-nav-link">Watch Bands</a></li>
-            <li><a href="collections.html?category=airpod-covers" class="pdp-nav-link">AirPod Covers</a></li>
-            <li><a href="collections.html?category=other-accessories" class="pdp-nav-link active">Accessories</a></li>
-            <li><a href="about.html" class="pdp-nav-link">Our Story</a></li>
+            <li><a href="index.html" class="pdp-nav-link">Home</a></li>
+            <li class="has-dropdown has-mega-menu">
+              <a href="collections.html" class="pdp-nav-link active">
+                All Products
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <div class="mega-dropdown-menu">
+                <div class="mega-dropdown-grid">
+                  <div class="mega-dropdown-col">
+                    <a href="collections.html?cat=iphone-cases" class="mega-link">IPHONE COVERS</a>
+                    <a href="collections.html?cat=watchbands" class="mega-link">IWATCH BANDS</a>
+                    <a href="collections.html?cat=mens-cover" class="mega-link">MEN'S COVER</a>
+                    <a href="collections.html?cat=charger-covers" class="mega-link">CHARGER CASES</a>
+                    <a href="collections.html?cat=cover-charms" class="mega-link">COVER CHARMS</a>
+                    <a href="combo.html" class="mega-link">BUY THREE</a>
+                  </div>
+                  <div class="mega-dropdown-col">
+                    <a href="collections.html?cat=covers" class="mega-link">COVERS</a>
+                    <a href="collections.html?cat=womens-cover" class="mega-link">WOMEN'S COVER</a>
+                    <a href="collections.html?cat=charger-and-cables" class="mega-link">CHARGER AND CABLES</a>
+                    <a href="collections.html?cat=airpod-covers" class="mega-link">AIRPOD COVERS</a>
+                    <a href="collections.html?cat=other-accessories" class="mega-link">OTHER ACCESSORIES</a>
+                  </div>
+                  <a href="collections.html" class="mega-showcase-card">
+                    <div class="mega-showcase-img-wrap">
+                      <img src="assets/brand_iphone16_pro.jpg" alt="Featured Cover" class="mega-showcase-img">
+                    </div>
+                    <div class="mega-showcase-body">
+                      <span class="mega-showcase-tag">TRENDING COVERS</span>
+                      <strong class="mega-showcase-title">Explore 75+ Luxury Armor Cases</strong>
+                      <span class="mega-showcase-cta">Shop All &rarr;</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a href="combo.html" class="pdp-nav-link" style="color: #C5A059; font-weight: 800;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-Piece Combo</a></li>
+            <li><a href="about.html" class="pdp-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="pdp-nav-link">Contact Us</a></li>
           </ul>
         </nav>
       </div>
@@ -116,6 +190,24 @@
       </div>
     </div>
   </header>
+
+  <!-- 2.5 COMBO BUILDER CONTEXT BAR -->
+  <aside class="combo-pdp-sticky-bar" id="comboPdpStickyBar" style="display: none; background: #0E1013; border-bottom: 1.5px solid rgba(197, 160, 89, 0.4); padding: 10px 24px; position: sticky; top: 0; z-index: 999; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="background: #C5A059; color: #090A0C; font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 900; padding: 2px 8px; border-radius: 999px; text-transform: uppercase;">3-Piece Combo</span>
+        <span style="font-size: 0.85rem; color: #E2E8F0; font-weight: 600;" id="comboPdpBannerText">Your custom bundle is in progress (0/3 selected)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button type="button" id="pdpAddThisToComboBtn" style="display: none; background: rgba(197, 160, 89, 0.16); border: 1.5px solid #C5A059; color: #EACAA6; font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 999px; cursor: pointer; transition: all 0.2s;">
+          + Add to 3-Piece Combo
+        </button>
+        <a href="combo.html" style="color: #C5A059; font-size: 0.85rem; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+          <span>&larr; Return to Combo Studio</span>
+        </a>
+      </div>
+    </div>
+  </aside>
 
   <!-- 3. BREADCRUMBS -->
   <div class="pdp-breadcrumbs-strip">
@@ -217,6 +309,23 @@
             </div>
           </div>
 
+          <!-- Device / Model Selector (Auto-populated for Phone Cases & Watch Bands) -->
+          <div class="pdp-option-group" id="modelGroup" style="display: none;">
+            <div class="pdp-option-header">
+              <span class="pdp-option-title">Select Model: <strong id="selectedDeviceLabel"></strong></span>
+            </div>
+            <div class="pdp-model-select-wrap">
+              <div class="pdp-custom-dropdown" id="pdpCustomDropdown">
+                <button type="button" class="pdp-dropdown-trigger" id="pdpDropdownTrigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span id="pdpDropdownSelectedText">Select Model</span>
+                  <svg class="pdp-dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="pdp-dropdown-menu" id="pdpDropdownMenu" role="listbox"></div>
+              </div>
+              <select id="pdpModelSelect" style="display: none;" aria-label="Device Model"></select>
+            </div>
+          </div>
+
           <!-- Color Swatches -->
           <div class="pdp-option-group" id="colorGroup">
             <div class="pdp-option-header">
@@ -257,6 +366,45 @@
             <button type="button" class="btn-pdp-buynow" id="pdpBuyNowBtn">
               <span>BUY IT NOW</span>
             </button>
+
+            <!-- 3-Piece Combo Studio Add Button (Dynamic for eligible products) -->
+            <button type="button" class="btn-pdp-combo-add" id="pdpActionAddToComboBtn" style="display: none; width: 100%; margin-top: 10px; background: rgba(197, 160, 89, 0.12); border: 1.5px solid #C5A059; color: #EACAA6; font-family: 'Outfit', sans-serif; font-size: 0.925rem; font-weight: 800; padding: 12px 20px; border-radius: 999px; cursor: pointer; transition: all 0.2s;">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Add to 3-Piece Combo (₹1,199 Flat Deal)</span>
+            </button>
+
+            <!-- Authentic Covertok Live Trust Badges (Exact from covertok.com) -->
+            <div class="covertok-live-trust-badges" id="pdpTrustBadgesStrip">
+              <div class="covertok-trust-item">
+                <div class="covertok-trust-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085" alt="Premium Quality">
+                </div>
+                <span>Premium Quality</span>
+              </div>
+              <div class="covertok-trust-item">
+                <div class="covertok-trust-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084" alt="Warranty">
+                </div>
+                <span>1 Year Warranty</span>
+              </div>
+              <div class="covertok-trust-item">
+                <div class="covertok-trust-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085" alt="Return">
+                </div>
+                <span>2 Days Return</span>
+              </div>
+              <div class="covertok-trust-item">
+                <div class="covertok-trust-icon">
+                  <img src="https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342" alt="10k+ Happy Customer">
+                </div>
+                <span>10k+ Happy Customer</span>
+              </div>
+            </div>
+
+            <!-- Authentic Social Proof Banner -->
+            <div class="covertok-social-proof" id="pdpSocialProof">
+              <div class="covertok-sold-text"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.2" style="vertical-align:-2px; margin-right:4px;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg><span id="pdpSoldNumber">842</span> sold in last <span id="pdpSoldHours">6</span> hours</div>
+              <div class="covertok-stock-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2" style="vertical-align:-2px; margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Only <span id="pdpStockNumber">12</span> left in stock!</div>
+            </div>
           </div>
 
         </div>
@@ -264,25 +412,43 @@
     </div>
   </main>
 
-  <!-- 5. TRUST BADGES STRIP (DIRECTLY BELOW HERO & BUYING OPTIONS) -->
-  <section class="pdp-trust-bar-section">
-    <div class="pdp-container">
-      <div class="pdp-trust-bar-card">
-        <div class="pdp-trust-bar-col">
-          <h4 class="pdp-trust-title">Express Delivery</h4>
-          <p class="pdp-trust-sub">Ships in 1–2 Days</p>
+  <!-- 5. STORE FEATURES LUXURY STRIP (COVERS ALL CRITICAL VALUE PROPOSITIONS) -->
+  <section class="covertok-store-features-strip" aria-label="Covertok Store Features">
+    <div class="covertok-features-grid">
+      <div class="covertok-feature-col">
+        <div class="covertok-feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
         </div>
-        <div class="pdp-trust-bar-col">
-          <h4 class="pdp-trust-title">Cash on Delivery</h4>
-          <p class="pdp-trust-sub">Available at Checkout</p>
+        <div class="covertok-feature-content">
+          <h4>10,000+ Happy Customers</h4>
+          <p>Trusted by phone enthusiasts across India</p>
         </div>
-        <div class="pdp-trust-bar-col">
-          <h4 class="pdp-trust-title">30-Day Free Exchange</h4>
-          <p class="pdp-trust-sub">Hassle-Free Returns</p>
+      </div>
+      <div class="covertok-feature-col">
+        <div class="covertok-feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         </div>
-        <div class="pdp-trust-bar-col">
-          <h4 class="pdp-trust-title">100% Secure Payment</h4>
-          <p class="pdp-trust-sub">PCI Compliant</p>
+        <div class="covertok-feature-content">
+          <h4>24/7 Priority Support</h4>
+          <p>Real-time WhatsApp &amp; fast email assistance</p>
+        </div>
+      </div>
+      <div class="covertok-feature-col">
+        <div class="covertok-feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <div class="covertok-feature-content">
+          <h4>Free Express Shipping</h4>
+          <p>2-hour dispatch on all prepaid orders</p>
+        </div>
+      </div>
+      <div class="covertok-feature-col">
+        <div class="covertok-feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        </div>
+        <div class="covertok-feature-content">
+          <h4>100% Secure Checkout</h4>
+          <p>UPI, Cards, NetBanking &amp; Cash on Delivery</p>
         </div>
       </div>
     </div>
@@ -303,11 +469,11 @@
             <p>Stay charged in style with Covertok. This ultra-slim 5000mAh/10000 mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your exact battery percentage at a single glance.</p>
             <p>Engineered with high-grade magnetic alignment, it snaps firmly to any MagSafe-compatible iPhone for rapid, cable-free power wherever your day takes you. Perfectly pocket-sized, it slips effortlessly into your jeans, blazer pocket, or bag without any awkward weight.</p>
             <div class="pdp-description-highlights">
-              <div class="desc-highlight-item">✅ <strong>High Capacity Battery:</strong> Keep your iPhone powered through work, travel, and commutes.</div>
-              <div class="desc-highlight-item">✅ <strong>Ultra-Slim Aerospace Design:</strong> Fits naturally in one hand while using your phone.</div>
-              <div class="desc-highlight-item">✅ <strong>Digital LED Display:</strong> Clear numeric readout of remaining battery life.</div>
-              <div class="desc-highlight-item">✅ <strong>Dual Mode Charging:</strong> Supports magnetic wireless output plus bi-directional USB-C fast charging.</div>
-              <div class="desc-highlight-item">✅ <strong>6-Month Warranty:</strong> Covered against internal battery defects and malfunctions.</div>
+              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>High Capacity Battery:</strong> Keep your iPhone powered through work, travel, and commutes.</div>
+              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Ultra-Slim Aerospace Design:</strong> Fits naturally in one hand while using your phone.</div>
+              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Digital LED Display:</strong> Clear numeric readout of remaining battery life.</div>
+              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Dual Mode Charging:</strong> Supports magnetic wireless output plus bi-directional USB-C fast charging.</div>
+              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>6-Month Warranty:</strong> Covered against internal battery defects and malfunctions.</div>
             </div>
           </div>
         </div>
@@ -424,56 +590,12 @@
         <!-- Left: Product Details & Features -->
         <div class="pdp-specs-col-left">
           <h3 class="pdp-subheading">Product Details</h3>
-          <p class="pdp-details-paragraph">
-            The Covertok Magnetic Wireless Power Bank is crafted for those who want reliable power in a sleek, compact form. Its strong magnetic hold snaps securely to your iPhone with MagSafe, keeping you charged on the go.
+          <p class="pdp-details-paragraph" id="pdpDetailsParagraph">
+            Experience premium engineering and precision fit with Covertok.
           </p>
 
-          <div class="pdp-feature-callouts-list">
-            <!-- Feature 1 -->
-            <div class="pdp-feature-item">
-              <div class="pdp-feature-circle-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M6 3v7a6 6 0 0 0 12 0V3"></path>
-                  <line x1="4" y1="3" x2="8" y2="3"></line>
-                  <line x1="16" y1="3" x2="20" y2="3"></line>
-                  <line x1="4" y1="8" x2="8" y2="8"></line>
-                  <line x1="16" y1="8" x2="20" y2="8"></line>
-                </svg>
-              </div>
-              <div class="pdp-feature-text">
-                <h4 class="pdp-feature-title">Strong Magnetic Hold</h4>
-                <p class="pdp-feature-sub">Snaps securely to your iPhone with MagSafe.</p>
-              </div>
-            </div>
-
-            <!-- Feature 2 -->
-            <div class="pdp-feature-item">
-              <div class="pdp-feature-circle-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="7" y="2" width="10" height="20" rx="3" ry="3"></rect>
-                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                </svg>
-              </div>
-              <div class="pdp-feature-text">
-                <h4 class="pdp-feature-title">Compact & Lightweight</h4>
-                <p class="pdp-feature-sub">Slim profile, easy to carry anywhere.</p>
-              </div>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="pdp-feature-item">
-              <div class="pdp-feature-circle-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="4" width="20" height="16" rx="3" ry="3"></rect>
-                  <polyline points="9 10 12 12 9 14"></polyline>
-                  <line x1="15" y1="14" x2="15.01" y2="14"></line>
-                </svg>
-              </div>
-              <div class="pdp-feature-text">
-                <h4 class="pdp-feature-title">Digital LED Display</h4>
-                <p class="pdp-feature-sub">Shows exact battery percentage.</p>
-              </div>
-            </div>
+          <div class="pdp-feature-callouts-list" id="pdpFeatureCalloutsList">
+            <!-- Dynamically populated from product.features by pdp_controller.js -->
           </div>
         </div>
 
@@ -481,39 +603,8 @@
         <div class="pdp-specs-col-right">
           <h3 class="pdp-subheading">Technical Specifications</h3>
           <table class="pdp-specs-table">
-            <tbody>
-              <tr>
-                <td class="specs-label">Capacity</td>
-                <td class="specs-value">5000 mAh / 10000 mAh</td>
-              </tr>
-              <tr>
-                <td class="specs-label">Charging</td>
-                <td class="specs-value">Magnetic wireless charging<br>USB-C input/output</td>
-              </tr>
-              <tr>
-                <td class="specs-label">Compatibility</td>
-                <td class="specs-value">MagSafe compatible iPhones<br>iPhone 12 and later</td>
-              </tr>
-              <tr>
-                <td class="specs-label">Color</td>
-                <td class="specs-value" id="specsColorValue">Black</td>
-              </tr>
-              <tr>
-                <td class="specs-label">Display</td>
-                <td class="specs-value">Digital LED battery percentage</td>
-              </tr>
-              <tr>
-                <td class="specs-label">Material</td>
-                <td class="specs-value">Premium ABS with matte finish</td>
-              </tr>
-              <tr>
-                <td class="specs-label">Dimensions</td>
-                <td class="specs-value">5000 mAh: 96 × 64 × 9 mm<br>10000 mAh: 96 × 64 × 15 mm</td>
-              </tr>
-              <tr>
-                <td class="specs-label">In the Box</td>
-                <td class="specs-value">Power bank, USB-C cable, user guide</td>
-              </tr>
+            <tbody id="pdpSpecsTableBody">
+              <!-- Dynamically populated from product.specs by pdp_controller.js -->
             </tbody>
           </table>
         </div>
@@ -814,24 +905,44 @@
     </div>
   </footer>
 
-  <!-- 11. FLOATING STICKY WHATSAPP BUTTON -->
+  <!-- 11. FLOATING STICKY WHATSAPP BUTTON (Compact Luxury FAB - Left Docked) -->
   <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="pdp-floating-whatsapp" id="floatingWhatsAppBtn" aria-label="Chat on WhatsApp">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.54 1.771.82 2.791.82 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.806-5.77-5.806zm3.385 8.163c-.145.411-.747.761-1.03.789-.282.027-.611.129-1.994-.442-1.769-.731-2.903-2.529-2.991-2.646-.088-.117-.723-.961-.723-1.832 0-.871.458-1.3.621-1.476.164-.176.357-.221.477-.221.12 0 .24 0 .346.006.111.006.26-.042.406.311.15.361.512 1.248.556 1.338.045.09.075.195.015.313-.06.118-.09.192-.178.297-.089.105-.187.234-.267.315-.089.09-.182.188-.078.367.104.179.463.764.993 1.236.684.609 1.26.797 1.439.887.179.089.284.075.39-.045.105-.12.45-.526.57-.706.12-.18.24-.15.405-.09.165.06 1.045.493 1.225.583.18.09.3.135.345.21.045.075.045.435-.1 1.046z"/></svg>
-    <span>Chat on WhatsApp</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF">
+      <path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.25-4.37c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.69 8.22-8.23 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.98-.15.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.17 1.74 2.66 4.21 3.73.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29z"/>
+    </svg>
+    <span class="pdp-wa-tooltip">Need Help? Chat on WhatsApp</span>
   </a>
 
-  <!-- 12. MOBILE STICKY BOTTOM BUY BAR -->
-  <aside class="pdp-mobile-sticky-bar pdp-sticky-bar" id="pdpStickyBar" aria-label="Mobile quick purchase">
-    <div class="pdp-m-sticky-left sticky-left" id="stickyLeft">
-      <img src="assets/products/9888955924778/1_50035509362986.png" alt="Thumbnail" class="pdp-m-sticky-thumb sticky-thumb" id="stickyThumb">
-      <div class="pdp-m-sticky-info sticky-info-wrap">
-        <span class="pdp-m-sticky-title sticky-product-name" id="stickyTitle">Magnetic Wireless Power Bank</span>
-        <span class="pdp-m-sticky-price" id="stickyBtnText">Rs. 2,099.00</span>
+  <!-- 12. DUAL-ACTION STICKY BOTTOM BUY BAR (ADD TO CART + BUY NOW) -->
+  <aside class="pdp-sticky-bar" id="pdpStickyBar" aria-label="Quick purchase actions">
+    <div class="pdp-sticky-container">
+      <div class="pdp-sticky-left" id="stickyLeft">
+        <img src="assets/products/9888955924778/1_50035509362986.png" alt="Thumbnail" class="pdp-sticky-thumb" id="stickyThumb">
+        <div class="pdp-sticky-info">
+          <span class="pdp-sticky-title" id="stickyTitle">Magnetic Wireless Power Bank</span>
+          <div class="pdp-sticky-price-row">
+            <span class="pdp-sticky-price" id="stickyPrice">Rs. 2,099.00</span>
+            <span class="pdp-sticky-tag">In Stock • Fast Dispatch</span>
+          </div>
+        </div>
+      </div>
+      <div class="pdp-sticky-actions">
+        <button type="button" class="pdp-sticky-btn pdp-sticky-btn-cart" id="stickyAddBtn" aria-label="Add to Cart">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span id="stickyBtnText">ADD TO CART</span>
+        </button>
+        <button type="button" class="pdp-sticky-btn pdp-sticky-btn-buy" id="stickyBuyBtn" aria-label="Buy Now">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <span>BUY NOW</span>
+        </button>
       </div>
     </div>
-    <button type="button" class="pdp-m-sticky-add-btn pdp-sticky-single-add-btn" id="stickyAddBtn">
-      ADD TO CART
-    </button>
   </aside>
 
   <!-- ========================================================================= -->
@@ -869,7 +980,7 @@
         if (val.length === 6 && /^\d+$/.test(val)) {
           pinResult.style.display = 'block';
           pinResult.style.color = '#10B981';
-          pinResult.innerHTML = '⚡ Express Delivery by <strong>Tomorrow, 6 PM</strong> (COD Available)';
+          pinResult.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px; margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Express Delivery by <strong>Tomorrow, 6 PM</strong> (COD Available)';
         } else {
           pinResult.style.display = 'block';
           pinResult.style.color = '#EF4444';

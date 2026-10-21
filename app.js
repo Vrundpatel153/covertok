@@ -632,9 +632,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroNextBtn = document.getElementById('heroNextBtn');
   const heroDynamicCta = document.getElementById('heroDynamicCta');
   const heroExploreArrow = document.getElementById('heroExploreArrow');
+  const heroSlideCounter = document.getElementById('heroSlideCounter');
   const heroCarousel = document.getElementById('heroCarousel');
 
-  const syncHeroCta = (btnText, btnLink) => {
+  let currentHeroIndex = 0;
+
+  const syncHeroCta = (btnText, btnLink, idx = currentHeroIndex) => {
     if (heroDynamicCta && btnText) {
       heroDynamicCta.textContent = btnText;
       if (btnLink) heroDynamicCta.setAttribute('href', btnLink);
@@ -642,10 +645,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroExploreArrow && btnLink) {
       heroExploreArrow.setAttribute('href', btnLink);
     }
+    if (heroSlideCounter) {
+      heroSlideCounter.textContent = `0${idx + 1} / 0${heroSlides.length}`;
+    }
   };
 
   if (heroSlides.length > 0) {
-    let currentHeroIndex = 0;
     let heroAutoPlayTimer = null;
     const AUTO_PLAY_DELAY = 5500;
 
@@ -653,17 +658,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialSlide = parseInt(urlParams.get('slide'), 10);
     if (!isNaN(initialSlide) && initialSlide >= 0 && initialSlide < heroSlides.length) {
       currentHeroIndex = initialSlide;
-      heroSlides.forEach((s, idx) => s.classList.toggle('active', idx === currentHeroIndex));
-      heroDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
-      heroMobDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
-      const initSvgBgs = document.querySelectorAll('.hero-svg-bg-slide');
-      initSvgBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
-      const initMobBgs = document.querySelectorAll('.hero-mob-bg');
-      initMobBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
-      const initBtnText = heroSlides[currentHeroIndex].getAttribute('data-btn-text');
-      const initBtnLink = heroSlides[currentHeroIndex].getAttribute('data-btn-link');
-      syncHeroCta(initBtnText, initBtnLink);
     }
+    heroSlides.forEach((s, idx) => s.classList.toggle('active', idx === currentHeroIndex));
+    heroDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
+    heroMobDots.forEach((d, idx) => d.classList.toggle('active', idx === currentHeroIndex));
+    const initDesktopBgs = document.querySelectorAll('.hero-slide-bg, .hero-svg-bg-slide');
+    initDesktopBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
+    const initMobBgs = document.querySelectorAll('.hero-mob-bg');
+    initMobBgs.forEach((bg, idx) => bg.classList.toggle('active', idx === currentHeroIndex));
+    const initBtnText = heroSlides[currentHeroIndex].getAttribute('data-btn-text');
+    const initBtnLink = heroSlides[currentHeroIndex].getAttribute('data-btn-link');
+    syncHeroCta(initBtnText, initBtnLink, currentHeroIndex);
 
     const switchHeroSlide = (newIndex) => {
       if (newIndex === currentHeroIndex && heroSlides[currentHeroIndex].classList.contains('active')) return;
@@ -682,10 +687,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const activeMobDot = heroMobDots[currentHeroIndex];
 
       if (activeSlide) {
+        void activeSlide.offsetWidth; // Force CSS animation restart for staggered text entrance
         activeSlide.classList.add('active');
         const btnText = activeSlide.getAttribute('data-btn-text');
         const btnLink = activeSlide.getAttribute('data-btn-link');
-        syncHeroCta(btnText, btnLink);
+        syncHeroCta(btnText, btnLink, currentHeroIndex);
       }
 
       if (activeDot) {
@@ -696,9 +702,9 @@ document.addEventListener('DOMContentLoaded', () => {
         activeMobDot.classList.add('active');
       }
 
-      // Sync SVG background slides (Desktop)
-      const svgBgSlides = document.querySelectorAll('.hero-svg-bg-slide');
-      svgBgSlides.forEach((bg, idx) => {
+      // Sync Desktop background slides
+      const desktopBgs = document.querySelectorAll('.hero-slide-bg, .hero-svg-bg-slide');
+      desktopBgs.forEach((bg, idx) => {
         bg.classList.toggle('active', idx === currentHeroIndex);
       });
 
@@ -986,5 +992,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize cart display
   renderCart();
+
+  // Initialize automatic infinite loop for footer wordmark
+  if (typeof window.initWordmarkAutoLoop === 'function') {
+    window.initWordmarkAutoLoop();
+  }
+
   console.log('Covertok App Loaded successfully with exact mobile glassmorphic mockup layout!');
 });

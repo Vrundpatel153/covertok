@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "77298",
-      title: "Looks like a card, charges like a beast 🔋⚡ Slim Power Bank",
+      title: "Looks like a card, charges like a beast • Slim Power Bank",
       product: "Card-Sized Magnetic Power Bank",
       handle: "@covertokofficial",
       duration: "00:59",
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: "77297",
-      title: "✨ Match your vibe 💄✨ Stylish covers for every mood 💕",
+      title: "Match your vibe • Stylish luxury covers for every mood",
       product: "Trendsetting Aesthetic Covers",
       handle: "@covertokofficial",
       duration: "00:16",

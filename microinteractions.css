@@ -33,10 +33,42 @@ button:active:not(:disabled), .btn:active:not(:disabled) {
   transform: scale(0.97) !important;
 }
 
-/* Subtle Card Hover Floating */
+/* Subtle Card Hover Floating with Gold Glow */
 .bestseller-card:hover, .pdp-product-card:hover, .review-item-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-float);
+  transform: translateY(-6px) scale(1.008);
+  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 20px rgba(197, 160, 89, 0.2);
+  border-color: rgba(197, 160, 89, 0.45);
+}
+
+/* Specular Card Light-Sweep Shine Animation */
+.bestseller-card, .pdp-product-card, .review-item-card, .shine-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.bestseller-card::before, .pdp-product-card::before, .shine-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(197, 160, 89, 0.22) 50%,
+    rgba(255, 255, 255, 0.35) 75%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 5;
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bestseller-card:hover::before, .pdp-product-card:hover::before, .shine-card:hover::before {
+  left: 170%;
 }
 
 /* Radiant Focus Rings for Accessibility */

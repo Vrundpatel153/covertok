@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/combo", "destination": "/combo.html" },
+    { "source": "/products/:handle", "destination": "/product.html" },
+    { "source": "/product/:handle", "destination": "/product.html" },
+    { "source": "/products", "destination": "/collections.html" },
+    { "source": "/product", "destination": "/product.html" },
+    { "source": "/collections/:category", "destination": "/collections.html" },
+    { "source": "/collections", "destination": "/collections.html" },
+    { "source": "/index", "destination": "/index.html" },
+    { "source": "/", "destination": "/index.html" }
+  ]
+}

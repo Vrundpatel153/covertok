@@ -2499,128 +2499,226 @@ html, body {
 
 
 
-/* 11. FLOATING STICKY WHATSAPP BUTTON */
+/* 11. FLOATING STICKY WHATSAPP BUTTON (Compact Sleek Luxury FAB - Left Docked) */
 .pdp-floating-whatsapp {
   position: fixed;
   bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  background: #25D366;
+  left: 24px;
+  right: auto;
+  z-index: 9990;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
   color: #FFFFFF;
-  border-radius: var(--pdp-radius-pill);
-  padding: 12px 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  padding: 0;
   text-decoration: none;
-  font-family: var(--pdp-font-head);
-  font-size: 0.875rem;
-  font-weight: 800;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
-  transition: var(--pdp-transition);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, bottom 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .pdp-floating-whatsapp:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* 12. FLOATING STICKY BOTTOM BUY BAR */
-.pdp-mobile-sticky-bar {
+.pdp-floating-whatsapp svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  fill: #FFFFFF;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+.pdp-wa-tooltip {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) scale(0.92);
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  font-family: var(--pdp-font-head);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 6px 14px;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdp-floating-whatsapp:hover .pdp-wa-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* Elevate WhatsApp FAB when sticky bar is active on desktop so it floats cleanly above it */
+.pdp-floating-whatsapp.elevated,
+body.sticky-bar-visible .pdp-floating-whatsapp {
+  bottom: 88px;
+}
+
+/* 12. DUAL-ACTION STICKY BOTTOM BUY BAR (ADD TO CART + BUY NOW) */
+.pdp-sticky-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid var(--pdp-border);
-  padding: 10px 20px;
+  z-index: 9980;
+  background: rgba(14, 16, 20, 0.96);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-top: 1.5px solid rgba(197, 160, 89, 0.38);
+  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.35);
+  padding: 12px 32px;
+  display: block;
+  transform: translateY(115%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  box-sizing: border-box;
+}
+
+.pdp-sticky-bar.visible {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.pdp-sticky-container {
+  max-width: 1360px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
-  transform: translateY(100%);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
-.pdp-mobile-sticky-bar.visible {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-@media (min-width: 1025px) {
-  .pdp-mobile-sticky-bar {
-    display: none !important;
-  }
-}
-
-.pdp-m-sticky-left {
+.pdp-sticky-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   overflow: hidden;
-  max-width: 45%;
+  max-width: 55%;
 }
 
-.pdp-m-sticky-thumb {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 10px;
-  background: #F8FAFC;
+.pdp-sticky-thumb {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  background: #18191E;
   object-fit: contain;
   flex-shrink: 0;
-  border: 1px solid var(--pdp-border);
+  border: 1.5px solid rgba(197, 160, 89, 0.3);
+  padding: 3px;
 }
 
-.pdp-m-sticky-info {
+.pdp-sticky-info {
   display: flex;
   flex-direction: column;
+  gap: 2px;
   overflow: hidden;
 }
 
-.pdp-m-sticky-title {
+.pdp-sticky-title {
   font-family: var(--pdp-font-head);
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  color: var(--pdp-text);
+  color: #FFFFFF;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  letter-spacing: -0.01em;
 }
 
-.pdp-m-sticky-price {
-  font-family: var(--pdp-font-head);
-  font-size: 0.9rem;
-  font-weight: 800;
-  color: var(--pdp-gold);
+.pdp-sticky-price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.pdp-m-sticky-add-btn {
-  flex-shrink: 0;
-  padding: 12px 28px;
-  background: #0A0A0A;
-  color: #FFFFFF;
-  border: none;
-  border-radius: var(--pdp-radius-pill);
+.pdp-sticky-price {
   font-family: var(--pdp-font-head);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  cursor: pointer;
+  color: #E2BC7A;
+}
+
+.pdp-sticky-tag {
+  font-family: var(--pdp-font-head);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 2px 8px;
+  border-radius: 999px;
   letter-spacing: 0.04em;
-  box-shadow: 0 4px 14px rgba(23, 21, 19, 0.25);
-  transition: var(--pdp-transition);
+  white-space: nowrap;
 }
 
-.pdp-m-sticky-add-btn:hover {
-  background: #000000;
+.pdp-sticky-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.pdp-sticky-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--pdp-font-head);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.pdp-sticky-btn-cart {
+  background: #101114;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.pdp-sticky-btn-cart:hover {
+  background: #1C1E24;
+  border-color: #C5A059;
   transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.pdp-sticky-btn-buy {
+  background: linear-gradient(135deg, #F5DFB8 0%, #D8AE66 50%, #B88937 100%);
+  color: #0A0A0C;
+  border: none;
+  box-shadow: 0 4px 18px rgba(216, 174, 102, 0.35);
+}
+
+.pdp-sticky-btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(216, 174, 102, 0.5);
+  filter: brightness(1.05);
 }
 
 /* 13. RESPONSIVE BREAKPOINTS & MOBILE ARCHITECTURE */
@@ -3133,11 +3231,12 @@ html, body {
     padding: 14px;
   }
 
-  /* 9. FLOATING WHATSAPP BUTTON (Compact Mobile FAB - NEVER Obstructs Content or CTA) */
+  /* 9. FLOATING WHATSAPP BUTTON (Compact Mobile FAB) */
   .pdp-floating-whatsapp {
     position: fixed !important;
     bottom: 20px !important;
     right: 16px !important;
+    left: auto !important;
     width: 48px !important;
     height: 48px !important;
     min-width: 48px !important;
@@ -3146,12 +3245,12 @@ html, body {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    z-index: 998 !important;
+    z-index: 9990 !important;
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45) !important;
     transition: bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease !important;
   }
 
-  .pdp-floating-whatsapp span {
+  .pdp-floating-whatsapp .pdp-wa-tooltip {
     display: none !important;
   }
 
@@ -3160,44 +3259,67 @@ html, body {
     height: 26px !important;
   }
 
-  /* Elevate WhatsApp FAB when mobile sticky bottom buy bar is active */
+  /* Elevate WhatsApp FAB cleanly above mobile sticky bottom buy bar */
   .pdp-floating-whatsapp.elevated,
   body.sticky-bar-visible .pdp-floating-whatsapp {
-    bottom: 84px !important;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+    left: auto !important;
   }
 
-  /* 10. MOBILE STICKY BOTTOM BUY BAR */
-  .pdp-mobile-sticky-bar {
-    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
-    gap: 12px !important;
-    z-index: 999 !important;
+  /* 10. STICKY BOTTOM BUY BAR (MOBILE OPTIMIZED) */
+  .pdp-sticky-bar {
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  .pdp-m-sticky-left {
-    max-width: 46% !important;
-    gap: 10px !important;
+  .pdp-sticky-container {
+    gap: 8px !important;
   }
 
-  .pdp-m-sticky-thumb {
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
+  .pdp-sticky-left {
+    max-width: 32% !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .pdp-sticky-thumb {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
     border-radius: 8px !important;
   }
 
-  .pdp-m-sticky-title {
-    font-size: 0.8rem !important;
+  .pdp-sticky-title {
+    font-size: 0.74rem !important;
   }
 
-  .pdp-m-sticky-price {
-    font-size: 0.85rem !important;
+  .pdp-sticky-price {
+    font-size: 0.78rem !important;
   }
 
-  .pdp-m-sticky-add-btn {
+  .pdp-sticky-tag {
+    display: none !important;
+  }
+
+  .pdp-sticky-actions {
     flex: 1 !important;
-    min-width: 120px !important;
-    padding: 12px 14px !important;
-    font-size: 0.825rem !important;
+    gap: 6px !important;
+    justify-content: flex-end !important;
+    min-width: 0 !important;
+  }
+
+  .pdp-sticky-btn {
+    padding: 10px 8px !important;
+    font-size: 0.74rem !important;
+    font-weight: 800 !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+  }
+
+  .pdp-sticky-btn svg {
+    display: none !important;
   }
 }
 
@@ -3205,7 +3327,182 @@ html, body {
   .pdp-product-title {
     font-size: 1.4rem;
   }
-  .pdp-m-sticky-left {
-    max-width: 42% !important;
+  .pdp-sticky-left {
+    max-width: 30% !important;
+  }
+  .pdp-sticky-btn {
+    padding: 10px 6px !important;
+    font-size: 0.71rem !important;
+    letter-spacing: 0.01em !important;
   }
 }
+
+/* ========================================================================= */
+/* COVERTOK AUTHENTIC LIVE TRUST BADGES & SOCIAL PROOF                       */
+/* ========================================================================= */
+.covertok-live-trust-badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0 14px;
+  padding: 16px 18px;
+  background: #FAF8F5;
+  border: 1px solid #EFEAE1;
+  border-radius: 14px;
+  flex-wrap: wrap;
+}
+
+.covertok-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 130px;
+}
+
+.covertok-trust-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border: 1px solid #E5DFD3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.covertok-trust-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.covertok-trust-item span {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.815rem;
+  color: #171513;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Social Proof Banner */
+.covertok-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.825rem;
+  margin: 10px 0 16px;
+  flex-wrap: wrap;
+}
+
+.covertok-sold-text {
+  color: #E11D48;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.covertok-sold-text span {
+  font-weight: 800;
+}
+
+.covertok-stock-badge {
+  background: #FEF3C7;
+  color: #B45309;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.775rem;
+  font-weight: 700;
+  border: 1px solid #FDE68A;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Store Features Luxury Strip (Directly Below Hero) */
+.covertok-store-features-strip {
+  background: #111111;
+  color: #FFFFFF;
+  padding: 24px 0;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+}
+
+.covertok-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.covertok-feature-col {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.covertok-feature-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: rgba(197, 160, 89, 0.15);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  color: #C5A059;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.covertok-feature-content h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 2px;
+}
+
+.covertok-feature-content p {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .covertok-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .covertok-live-trust-badges {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 12px 14px;
+    scroll-snap-type: x mandatory;
+  }
+  .covertok-live-trust-badges::-webkit-scrollbar {
+    display: none;
+  }
+  .covertok-trust-item {
+    flex: 0 0 auto;
+    min-width: max-content;
+    scroll-snap-align: start;
+  }
+  .covertok-features-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+

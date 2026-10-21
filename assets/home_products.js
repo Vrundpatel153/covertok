@@ -75,8 +75,7 @@
         }
 
         return `
-          <div class="col-prod-card" data-id="${p.id}" style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAE5DB; overflow: hidden; position: relative;">
-            <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 20px; cursor: pointer;" onclick="window.location.href='product.html?id=${p.id}'">
+            <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; padding: 20px; cursor: pointer;" onclick="window.location.href='product?handle=${p.handle}'">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #F5E8C7; color: #63431D; border: 1px solid #D4B982; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
               <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="max-height: 88%; max-width: 88%; object-fit: contain; mix-blend-mode: multiply;" loading="lazy">
               ${swatchesHtml}
@@ -84,7 +83,7 @@
 
             <div class="col-prod-info" style="padding: 16px; display: flex; flex-direction: column; flex: 1;">
               <span style="font-size: 0.725rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin-bottom: 4px;">${p.category_name}</span>
-              <a href="product.html?id=${p.id}" style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 800; color: #171513; text-decoration: none; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px;">
+              <a href="product?handle=${p.handle}" style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 800; color: #171513; text-decoration: none; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px;">
                 ${p.title}
               </a>
               <div class="col-prod-price-box" style="display: flex; align-items: baseline; gap: 8px; margin-top: auto; margin-bottom: 12px;">
@@ -99,7 +98,7 @@
                   </svg>
                   <span>Add</span>
                 </button>
-                <button type="button" class="col-buy-btn" onclick="window.location.href='product.html?id=${p.id}'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #171513; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                <button type="button" class="col-buy-btn" onclick="window.location.href='product?handle=${p.handle}'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #171513; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
                   Buy Now
                 </button>
               </div>
@@ -201,7 +200,7 @@
       }
 
       return `
-        <div class="product-card" data-id="${p.id}" onclick="window.location.href='product.html?id=${p.id}'" style="cursor: pointer;">
+        <div class="product-card" data-id="${p.id}" onclick="window.location.href='product?handle=${p.handle}'" style="cursor: pointer;">
           <div class="product-card-inner">
             <div class="product-image-box" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 20px; border: 1px solid #EAE5DB; display: flex; align-items: center; justify-content: center; padding: 20px; aspect-ratio: 1 / 1;">
               ${p.discount_percent > 0 ? `<span class="card-badge card-badge-discount" style="position: absolute; top: 12px; left: 12px; z-index: 2; background: #F5E8C7; color: #63431D; border: 1px solid #D4B982; font-weight: 800; font-size: 0.72rem; padding: 4px 10px; border-radius: 999px;">${p.discount_percent}% OFF</span>` : ''}
@@ -211,7 +210,7 @@
               ${swatchesHtml ? `<div class="home-swatches-wrap" style="margin-bottom: 6px;" onclick="event.stopPropagation();">${swatchesHtml}</div>` : ''}
               <div class="product-price" style="font-family: var(--font-heading); font-weight: 900; font-size: 1.25rem; color: #171513; margin-bottom: 2px;">${p.price_formatted}</div>
               <h3 class="product-name" style="font-size: 0.875rem; font-weight: 700; color: #171513; margin-top: 2px; line-height: 1.35;">
-                <a href="product.html?id=${p.id}" style="color: inherit; text-decoration: none;">${p.title}</a>
+                <a href="product?handle=${p.handle}" style="color: inherit; text-decoration: none;">${p.title}</a>
               </h3>
               <div class="card-buttons-row" style="display: flex; gap: 8px; margin-top: 10px;" onclick="event.stopPropagation();">
                 <button type="button" class="btn btn-card-cart btn-quick-add" data-id="${p.id}" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #A98135; border: 1px solid #8E6B2A; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
@@ -222,7 +221,7 @@
                   </svg>
                   <span>Add</span>
                 </button>
-                <button type="button" class="btn btn-card-buy" onclick="window.location.href='product.html?id=${p.id}'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #171513; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
+                <button type="button" class="btn btn-card-buy" onclick="window.location.href='product?handle=${p.handle}'" style="flex: 1.2; display: inline-flex; align-items: center; justify-content: center; padding: 8px 14px; border-radius: 999px; background: #171513; border: none; color: #FFFFFF; font-size: 0.8rem; font-weight: 700; cursor: pointer;">
                   Buy Now
                 </button>
               </div>

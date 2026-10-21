@@ -156,7 +156,7 @@
     if (progressFill && progressMsg) {
       if (subtotal >= FREE_SHIPPING_THRESHOLD) {
         progressFill.style.width = '100%';
-        progressMsg.innerHTML = '🎉 You unlocked <strong>FREE Express Air Shipping</strong>!';
+        progressMsg.innerHTML = '<svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>You unlocked <strong>FREE Express Air Shipping</strong>!';
       } else {
         const remaining = FREE_SHIPPING_THRESHOLD - subtotal;
         const pct = Math.min(100, Math.round((subtotal / FREE_SHIPPING_THRESHOLD) * 100));
@@ -205,7 +205,9 @@
     if (cart.length === 0) {
       container.innerHTML = `
         <div style="text-align: center; padding: 48px 20px; color: #64748B;">
-          <div style="font-size: 3rem; margin-bottom: 12px;">🛍️</div>
+          <div style="margin-bottom: 14px;">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
           <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; color: #171513; margin-bottom: 6px;">Your cart is empty</h4>
           <p style="font-size: 0.85rem; margin-bottom: 18px;">Discover our colorful and trendy phone cases & accessories.</p>
           <a href="collections.html" class="btn btn-pill-dark" onclick="window.CovertokFlows.closeCart();" style="display: inline-block; padding: 10px 24px; border-radius: 999px;">
@@ -221,26 +223,74 @@
     const footer = document.getElementById('cartDrawerFooter');
     if (footer) footer.style.display = 'block';
 
-    container.innerHTML = cart.map((item, idx) => `
-      <div class="cart-item-row" style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #EAE5DB; align-items: center;">
-        <img src="${item.img || 'assets/phone_cream.png'}" onerror="this.onerror=null; this.src='assets/phone_cream.png';" alt="${item.title}" style="width: 58px; height: 58px; object-fit: contain; border-radius: 10px; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 3px; flex-shrink: 0;">
-        <div style="flex: 1; min-width: 0;">
-          <div style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.875rem; color: #171513; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</div>
-          <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-            <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.925rem; color: #A98135;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-            <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
-              <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">−</button>
-              <span style="font-size: 0.8rem; font-weight: 800; padding: 0 4px; min-width: 18px; text-align: center;">${item.qty}</span>
-              <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">+</button>
+    container.innerHTML = cart.map((item, idx) => {
+      if (item.is_combo) {
+        const bundleList = Array.isArray(item.bundle_items) ? item.bundle_items : [];
+        return `
+          <div class="cart-item-row cart-combo-item-row" style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #EAE5DB; align-items: flex-start;">
+            <div style="position: relative; flex-shrink: 0;">
+              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" style="width: 62px; height: 62px; object-fit: contain; border-radius: 10px; background: #121316; border: 1.5px solid #C5A059; padding: 4px;">
+              <span style="position: absolute; bottom: -5px; right: -5px; background: #C5A059; color: #000; font-size: 10px; font-weight: 900; padding: 1px 5px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">3-IN-1</span>
+            </div>
+            <div style="flex: 1; min-width: 0;">
+              <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px;">
+                <span style="font-size: 0.65rem; font-weight: 800; background: rgba(197, 160, 89, 0.16); color: #8D6B28; border: 1px solid rgba(197, 160, 89, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-Piece Combo</span>
+                <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.885rem; color: #171513;">${item.title}</span>
+              </div>
+              ${bundleList.length ? `
+                <div style="font-size: 0.72rem; color: #475569; margin: 4px 0 6px 0; background: #FAF8F2; padding: 6px 8px; border-radius: 8px; border: 1px solid #EAE5DB;">
+                  ${bundleList.map((b, bIdx) => `
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
+                      <img src="${b.image || 'assets/phone_cream.png'}" alt="${b.title}" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.png';">
+                      <div style="flex: 1; min-width: 0;">
+                        <div style="font-size: 0.65rem; font-weight: 800; color: #8D6B28; text-transform: uppercase;">${b.category || 'Accessory'}</div>
+                        <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              ` : `
+                <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
+              `}
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
+                <div>
+                  <span style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 0.95rem; color: #A98135;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+                  ${item.original_price ? `<span style="text-decoration: line-through; font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
+                </div>
+                <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
+                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">−</button>
+                  <span style="font-size: 0.8rem; font-weight: 800; padding: 0 4px; min-width: 18px; text-align: center;">${item.qty}</span>
+                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">+</button>
+                </div>
+              </div>
+            </div>
+            <button type="button" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove combo" style="background: none; border: none; color: #94A3B8; cursor: pointer; padding: 6px; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            </button>
+          </div>
+        `;
+      }
+      return `
+        <div class="cart-item-row" style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #EAE5DB; align-items: center;">
+          <img src="${item.img || 'assets/phone_cream.png'}" onerror="this.onerror=null; this.src='assets/phone_cream.png';" alt="${item.title}" style="width: 58px; height: 58px; object-fit: contain; border-radius: 10px; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 3px; flex-shrink: 0;">
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.875rem; color: #171513; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</div>
+            <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
+              <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.925rem; color: #A98135;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+              <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
+                <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">−</button>
+                <span style="font-size: 0.8rem; font-weight: 800; padding: 0 4px; min-width: 18px; text-align: center;">${item.qty}</span>
+                <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">+</button>
+              </div>
             </div>
           </div>
+          <button type="button" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" style="background: none; border: none; color: #94A3B8; cursor: pointer; padding: 6px; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          </button>
         </div>
-        <button type="button" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" style="background: none; border: none; color: #94A3B8; cursor: pointer; padding: 6px; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-        </button>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   // Promo Code Handler
@@ -250,13 +300,13 @@
 
     if (c === 'COVERTOK15') {
       activeDiscount = { code: 'COVERTOK15', percent: 15 };
-      window.showToast('🎉 Promo code COVERTOK15 applied! (15% OFF)');
+      window.showToast('Promo code COVERTOK15 applied! (15% OFF)', 'check');
     } else if (c === 'PAYDAY200' || c === 'PAYDAY') {
       activeDiscount = { code: 'PAYDAY200', flat: 200 };
-      window.showToast('🎉 Flat Rs. 200 discount applied!');
+      window.showToast('Flat Rs. 200 discount applied!', 'check');
     } else if (c === 'FREESHIP') {
       activeDiscount = { code: 'FREESHIP', flat: 0 };
-      window.showToast('🎉 Free Express Shipping code unlocked!');
+      window.showToast('Free Express Shipping code unlocked!', 'check');
     } else {
       window.showToast('Invalid coupon code. Try COVERTOK15', 'trash');
       return;
@@ -354,7 +404,7 @@
 
     // Show celebration view
     initCheckoutStep(4);
-    window.showToast('🎉 Order placed successfully!', 'check');
+    window.showToast('Order placed successfully!', 'check');
   }
 
   // --------------------------------------------------------------------------
@@ -391,7 +441,7 @@
       }
 
       resultsContainer.innerHTML = matches.map(p => `
-        <a href="product.html?id=${p.id}" class="search-result-item" onclick="window.CovertokFlows.closeSearch();">
+        <a href="product?handle=${p.handle}" class="search-result-item" onclick="window.CovertokFlows.closeSearch();">
           <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.png'}" alt="${p.title}" class="search-result-thumb">
           <div style="flex: 1; min-width: 0;">
             <div class="search-result-title">${p.title}</div>

@@ -5,6 +5,10 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('comboBuilderModal');
+  if (!modal) {
+    // Modal removed, all combo cards & CTA link directly to combo.html
+    return;
+  }
   const closeBtn = document.getElementById('comboModalClose');
   const backdrop = document.getElementById('comboModalBackdrop');
   const openBtns = document.querySelectorAll('.combo-card, #openComboBuilderBtn, .combo-bottom-pill');
@@ -118,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="combo-item-price">Regular: ₹${item.regPrice}</span>
         </div>
         <button type="button" class="combo-item-select-btn" aria-label="Select ${item.title}">
-          ${isSelected ? 'Selected ✓' : '+ Select for Slot ' + item.slot}
+          ${isSelected ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px; margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg>Selected' : '+ Select for Slot ' + item.slot}
         </button>
       `;
 

@@ -26,20 +26,18 @@
     if (window.__PDP_INITIAL_PRODUCT__) {
       currentProduct = window.__PDP_INITIAL_PRODUCT__;
     } else {
-      const params = new URLSearchParams(window.location.search);
-      const prodId = params.get('id');
-      const prodHandle = params.get('handle');
+      currentProduct = resolvePDPProduct();
+    }
 
-      if (prodId) {
-        currentProduct = window.CovertokProducts.find(p => String(p.id) === String(prodId));
-      } else if (prodHandle) {
-        currentProduct = window.CovertokProducts.find(p => p.handle === prodHandle);
-      }
-
-      // Fallback: pick Magnetic Wireless Power Bank (9888955924778)
-      if (!currentProduct) {
-        currentProduct = window.CovertokProducts.find(p => String(p.id) === '9888955924778') || window.CovertokProducts[0];
-      }
+    // Ensure address bar reflects clean product URL (/product?handle=<handle> or /products/<handle>)
+    if (currentProduct && currentProduct.handle && window.history && window.history.replaceState) {
+      try {
+        const isPathStyle = window.location.pathname.startsWith('/products/');
+        const cleanUrl = isPathStyle 
+          ? `/products/${currentProduct.handle}`
+          : `/product?handle=${currentProduct.handle}`;
+        window.history.replaceState({ id: currentProduct.id, handle: currentProduct.handle }, '', cleanUrl);
+      } catch(e) {}
     }
 
     renderTopProductSwitcher();
@@ -48,6 +46,49 @@
     setupCartActions();
     setupStickyBar();
     renderRelatedProducts();
+    setupComboSync(currentProduct);
+  }
+
+  // Universal Product Resolver supporting paths, handles, slugs, and numeric IDs
+  function resolvePDPProduct() {
+    if (!window.CovertokProducts || !window.CovertokProducts.length) return null;
+    const params = new URLSearchParams(window.location.search);
+    const handleParam = params.get('handle');
+    const idParam = params.get('id') || params.get('prodId');
+    const qParam = params.get('q') || params.get('p') || params.get('product');
+
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    let pathCandidate = null;
+    if (pathParts.length > 0) {
+      const last = pathParts[pathParts.length - 1].replace(/\.html$/i, '');
+      if (last !== 'product' && last !== 'products' && last !== 'collections' && last !== 'index') {
+        pathCandidate = last;
+      }
+    }
+
+    const candidates = [handleParam, idParam, pathCandidate, qParam].filter(Boolean);
+    for (const c of candidates) {
+      const str = String(c).trim();
+      if (!str) continue;
+
+      let found = window.CovertokProducts.find(p => String(p.id) === str);
+      if (found) return found;
+
+      found = window.CovertokProducts.find(p => p.handle === str);
+      if (found) return found;
+
+      const norm = str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      found = window.CovertokProducts.find(p => p.handle === norm);
+      if (found) return found;
+
+      found = window.CovertokProducts.find(p => p.handle.includes(norm) || norm.includes(p.handle));
+      if (found) return found;
+
+      found = window.CovertokProducts.find(p => p.title.toLowerCase().includes(norm.replace(/-/g, ' ')));
+      if (found) return found;
+    }
+
+    return window.CovertokProducts.find(p => String(p.id) === '9888955924778') || window.CovertokProducts[0];
   }
 
   // Top Lineup Quick Switcher Bar
@@ -88,9 +129,12 @@
           btn.classList.add('active');
           
           // Update URL
-          const newUrl = new URL(window.location);
-          newUrl.searchParams.set('id', targetProd.id);
-          window.history.pushState({}, '', newUrl);
+          const isPathStyle = window.location.pathname.startsWith('/products/');
+          const cleanUrl = isPathStyle 
+            ? `/products/${targetProd.handle}`
+            : `/product?handle=${targetProd.handle}`;
+          window.history.pushState({ id: targetProd.id, handle: targetProd.handle }, '', cleanUrl);
+          document.title = `${targetProd.title} | Covertok`;
 
           loadProductData(targetProd);
           renderRelatedProducts();
@@ -123,9 +167,25 @@
       }
     } else {
       if (pdpTitle) pdpTitle.textContent = product.title;
-      if (brandTag) brandTag.textContent = `${product.category_name.toUpperCase()} · COVERTOK ORIGINAL`;
+      if (pdpSubtitle) {
+        pdpSubtitle.textContent = product.category_name || '';
+        pdpSubtitle.style.display = product.category_name ? 'block' : 'none';
+      }
+      if (brandTag) brandTag.textContent = `${(product.category_name || 'COVERTOK').toUpperCase()} · COVERTOK ORIGINAL`;
     }
     if (stickyTitle) stickyTitle.textContent = product.title;
+
+    // Toggle Capacity Group (Power Bank only)
+    const capGroup = document.getElementById('capacityGroup');
+    if (String(product.id) === '9888955924778') {
+      selectedCapacityPrice = 2099;
+      selectedCapacityOrig = 3249;
+      if (capGroup) capGroup.style.display = 'block';
+    } else {
+      selectedCapacityPrice = 0;
+      selectedCapacityOrig = 0;
+      if (capGroup) capGroup.style.display = 'none';
+    }
 
     // 2. Rating & Review Count
     const ratingCountEl = document.querySelector('.pdp-review-count');
@@ -142,12 +202,16 @@
 
     if (overviewText) {
       if (product.raw_html && product.raw_html.trim().length > 20) {
-        overviewText.innerHTML = product.raw_html;
+        let cleanHtml = product.raw_html
+          .replace(/<p>\s*(&nbsp;|\u00a0|\s)*<\/p>/gi, '')
+          .replace(/<p>\s*<br\s*\/?>\s*<\/p>/gi, '')
+          .replace(/(<br\s*\/?>\s*){3,}/gi, '<br><br>');
+        overviewText.innerHTML = cleanHtml;
       } else if (product.description) {
         const paras = product.description.split(/\n\n+/);
         overviewText.innerHTML = paras.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
       } else {
-        overviewText.innerHTML = '<p>Stay charged in style with Covertok. Designed for modern lifestyles – lightweight, sleek, and durable.</p>';
+        overviewText.innerHTML = '<p>Stay protected in style with Covertok. Designed for modern lifestyles – lightweight, sleek, and durable.</p>';
       }
       
       // Reset collapsed state on product load
@@ -243,30 +307,11 @@
     }
   }
 
-  // Render Thumbnails Slider: Shows an interactive horizontal slider of product images strictly for the chosen color
+  // Render Thumbnails Rail: Shows real images of product
   function renderThumbnails(product, activeSrc) {
     const strip = document.getElementById('pdpThumbnails');
-    const wrap = document.querySelector('.pdp-thumbs-slider-wrap');
-    const prevBtn = document.getElementById('pdpThumbPrev');
-    const nextBtn = document.getElementById('pdpThumbNext');
-    const galleryPrev = document.getElementById('galleryPrevBtn');
-    const galleryNext = document.getElementById('galleryNextBtn');
-    // If vertical thumbnails already present in DOM (e.g. 5 angle thumbnails), bind click events directly
-    if (strip.classList.contains('pdp-vertical-thumbs') && strip.querySelectorAll('.pdp-vthumb').length > 0) {
-      strip.querySelectorAll('.pdp-vthumb').forEach(btn => {
-        btn.onclick = () => {
-          strip.querySelectorAll('.pdp-vthumb').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const img = btn.getAttribute('data-img');
-          if (img) updateMainImage(img);
-        };
-      });
-      return;
-    }
+    if (!strip) return;
 
-    // Strict Requirement:
-    // If a color is chosen, ONLY that color's product images are visible in the slider.
-    // If one image, then only one thumbnail is shown in the slider; no other colored product images are pooled!
     let displayImgs = [];
 
     if (selectedColor) {
@@ -294,18 +339,14 @@
       }
     }
 
-    // Filter duplicates and invalid entries
     const uniqueImgs = Array.from(new Set(displayImgs.filter(Boolean)));
-
     if (!uniqueImgs.length) {
-      if (wrap) wrap.style.display = 'none';
       strip.style.display = 'none';
       return;
     }
 
-    // Always keep slider wrap and strip visible so user sees the thumbnail(s) of the chosen color
-    if (wrap) wrap.style.display = 'flex';
     strip.style.display = 'flex';
+    strip.classList.add('pdp-vertical-thumbs');
 
     if (!activeSrc || !uniqueImgs.includes(activeSrc)) {
       activeSrc = uniqueImgs[0];
@@ -318,95 +359,51 @@
       }
     }
 
-    // Only show navigation arrows when multiple images exist for this color
-    const hasMultiple = uniqueImgs.length > 1;
-    if (prevBtn) prevBtn.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
-    if (nextBtn) nextBtn.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
-    if (galleryPrev) galleryPrev.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
-    if (galleryNext) galleryNext.style.setProperty('display', hasMultiple ? 'flex' : 'none', 'important');
+    strip.innerHTML = uniqueImgs.map((src, idx) => `
+      <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
+        <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy">
+      </button>
+    `).join('');
 
-    // If already populated with the exact same items, just update active state and scroll into view
-    const currentImgs = Array.from(strip.querySelectorAll('.pdp-thumb-btn')).map(b => b.getAttribute('data-img'));
-    const isSameList = currentImgs.length === uniqueImgs.length && currentImgs.every((img, i) => img === uniqueImgs[i]);
+    let activeIdx = uniqueImgs.indexOf(activeSrc);
+    if (activeIdx === -1) activeIdx = 0;
+    updateGalleryCounter(activeIdx, uniqueImgs.length);
 
-    if (!isSameList) {
-      strip.innerHTML = uniqueImgs.map((src, idx) => `
-        <button type="button" class="pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-          <img src="${src}" alt="Product image ${idx + 1}" loading="lazy">
-        </button>
-      `).join('');
-
-      let activeIdx = uniqueImgs.indexOf(activeSrc);
-      if (activeIdx === -1) activeIdx = 0;
-      updateGalleryCounter(activeIdx, uniqueImgs.length);
-
-      // Attach click events: strictly switches angle/image of this chosen color
-      strip.querySelectorAll('.pdp-thumb-btn').forEach((btn, idx) => {
-        btn.addEventListener('click', () => {
-          strip.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const img = btn.getAttribute('data-img');
-          updateMainImage(img);
-          updateGalleryCounter(idx, uniqueImgs.length);
-          btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        });
+    strip.querySelectorAll('.pdp-vthumb').forEach((btn, idx) => {
+      btn.addEventListener('click', () => {
+        strip.querySelectorAll('.pdp-vthumb').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const img = btn.getAttribute('data-img');
+        if (img) updateMainImage(img);
+        updateGalleryCounter(idx, uniqueImgs.length);
       });
+    });
 
-      // Hook floating gallery navigation arrows
-      if (galleryPrev) {
-        galleryPrev.onclick = () => {
-          const thumbs = strip.querySelectorAll('.pdp-thumb-btn');
-          if (!thumbs.length) return;
-          let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
-          let prevIdx = (currentActive <= 0) ? thumbs.length - 1 : currentActive - 1;
-          thumbs[prevIdx].click();
-        };
-      }
-
-      if (galleryNext) {
-        galleryNext.onclick = () => {
-          const thumbs = strip.querySelectorAll('.pdp-thumb-btn');
-          if (!thumbs.length) return;
-          let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
-          let nextIdx = (currentActive >= thumbs.length - 1 || currentActive < 0) ? 0 : currentActive + 1;
-          thumbs[nextIdx].click();
-        };
-      }
-
-
-      // Hook thumbnail strip navigation arrows
-      if (prevBtn) {
-        prevBtn.onclick = () => {
-          strip.scrollBy({ left: -150, behavior: 'smooth' });
-        };
-      }
-      if (nextBtn) {
-        nextBtn.onclick = () => {
-          strip.scrollBy({ left: 150, behavior: 'smooth' });
-        };
-      }
-    } else {
-      // Just update active button class
-      let activeBtn = null;
-      let activeIdx = 0;
-      strip.querySelectorAll('.pdp-thumb-btn').forEach((b, idx) => {
-        const matches = b.getAttribute('data-img') === activeSrc;
-        b.classList.toggle('active', matches);
-        if (matches) {
-          activeBtn = b;
-          activeIdx = idx;
-        }
-      });
-      updateGalleryCounter(activeIdx, uniqueImgs.length);
-      if (activeBtn) {
-        activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
+    const galleryPrev = document.getElementById('galleryPrevBtn');
+    const galleryNext = document.getElementById('galleryNextBtn');
+    if (galleryPrev) {
+      galleryPrev.onclick = () => {
+        const thumbs = strip.querySelectorAll('.pdp-vthumb');
+        if (!thumbs.length) return;
+        let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
+        let prevIdx = (currentActive <= 0) ? thumbs.length - 1 : currentActive - 1;
+        thumbs[prevIdx].click();
+      };
+    }
+    if (galleryNext) {
+      galleryNext.onclick = () => {
+        const thumbs = strip.querySelectorAll('.pdp-vthumb');
+        if (!thumbs.length) return;
+        let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
+        let nextIdx = (currentActive >= thumbs.length - 1 || currentActive < 0) ? 0 : currentActive + 1;
+        thumbs[nextIdx].click();
+      };
     }
   }
 
   // Render Color Options & Swatches
   function renderColorOptions(product) {
-    const colorGroup = document.querySelector('.pdp-option-group:has(#colorSwatchesGrid)') || document.getElementById('colorSwatchesGrid')?.parentElement;
+    const colorGroup = document.getElementById('colorGroup') || document.getElementById('colorSwatchesGrid')?.closest('.pdp-option-group');
     const colorGrid = document.getElementById('colorSwatchesGrid');
     const colorLabel = document.getElementById('selectedColorLabel');
     const stickyColor = document.getElementById('stickyColorName');
@@ -421,34 +418,14 @@
       if (stickyColor) stickyColor.textContent = initialColorName;
       if (specsColor) specsColor.textContent = initialColorName;
 
-      // If swatches already rendered in DOM with .swatch-circle, just bind clicks
-      const existingSwatches = colorGrid.querySelectorAll('.pdp-color-swatch');
-      if (existingSwatches.length > 0 && String(product.id) === '9888955924778') {
-        existingSwatches.forEach(swatch => {
-          swatch.onclick = () => {
-            colorGrid.querySelectorAll('.pdp-color-swatch').forEach(s => s.classList.remove('active'));
-            swatch.classList.add('active');
-            const cName = swatch.getAttribute('data-color');
-            const cImg = swatch.getAttribute('data-img');
-            selectedColor = product.colors.find(c => c.name === cName) || { name: cName, image: cImg };
-            if (colorLabel) colorLabel.textContent = cName;
-            if (stickyColor) stickyColor.textContent = cName;
-            if (specsColor) specsColor.textContent = cName;
-            if (cImg) updateMainImage(cImg);
-            recalculatePrice();
-          };
-        });
-        return;
-      }
-
       colorGrid.innerHTML = product.colors.map((c, idx) => `
         <button type="button" 
           class="pdp-color-swatch ${(selectedColor ? c.name === selectedColor.name : idx === 0) ? 'active' : ''}" 
           data-color="${c.name}" 
-          data-img="${c.image}"
+          data-img="${c.image || (c.images && c.images[0])}"
           title="${c.name}"
           aria-label="${c.name}">
-          <span class="swatch-circle" style="background: ${c.hex};"></span>
+          <span class="swatch-circle" style="background: ${c.hex || '#18181B'};"></span>
         </button>
       `).join('');
 
@@ -474,7 +451,6 @@
         });
       });
     } else {
-      // Single color product: hide color section cleanly
       if (colorGroup) colorGroup.style.display = 'none';
       selectedColor = null;
     }
@@ -489,10 +465,10 @@
     const dropdownMenu = document.getElementById('pdpDropdownMenu');
     const chipsGrid = document.querySelector('.pdp-chips-grid');
     const deviceLabel = document.getElementById('selectedDeviceLabel');
-    const modelGroup = select?.closest('.pdp-option-group');
+    const modelGroup = document.getElementById('modelGroup') || (select ? select.closest('.pdp-option-group') : null);
 
-    // If product is NOT an iphone-case or has no models, hide the selector group
-    if (product.category !== 'iphone-cases' || !product.models || product.models.length === 0) {
+    // If product has no models, hide the selector group
+    if (!product.models || product.models.length === 0) {
       if (modelGroup) modelGroup.style.display = 'none';
       selectedModel = '';
       return;
@@ -500,9 +476,9 @@
 
     if (modelGroup) modelGroup.style.display = 'block';
 
-    const optionHeader = modelGroup.querySelector('.pdp-option-header span:first-child');
+    const optionHeader = modelGroup ? modelGroup.querySelector('.pdp-option-header span:first-child') : null;
     if (optionHeader) {
-      optionHeader.textContent = product.model_label || '1. Select Device Model';
+      optionHeader.textContent = product.model_label || 'Select Model:';
     }
 
     const models = product.models;
@@ -520,7 +496,7 @@
     // Populate Custom Luxury Dropdown
     if (dropdownMenu) {
       dropdownMenu.innerHTML = models.map(m => `
-        <div class="pdp-dropdown-item ${m === selectedModel ? 'active' : ''}" data-value="${m}">
+        <div class="pdp-dropdown-item ${m === selectedModel ? 'selected' : ''}" data-value="${m}">
           <span class="pdp-dropdown-item-text">${m}</span>
           <svg class="pdp-dropdown-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
@@ -534,6 +510,7 @@
           const val = item.getAttribute('data-value');
           applyModelSelection(val);
           customDropdown?.classList.remove('open');
+          if (dropdownTrigger) dropdownTrigger.setAttribute('aria-expanded', 'false');
         });
       });
     }
@@ -543,7 +520,8 @@
       dropdownTrigger.hasDropdownBound = true;
       dropdownTrigger.addEventListener('click', (e) => {
         e.stopPropagation();
-        customDropdown?.classList.toggle('open');
+        const isOpen = customDropdown?.classList.toggle('open');
+        dropdownTrigger.setAttribute('aria-expanded', !!isOpen);
       });
     }
 
@@ -553,11 +531,13 @@
       document.addEventListener('click', (e) => {
         if (!e.target.closest('#pdpCustomDropdown')) {
           document.getElementById('pdpCustomDropdown')?.classList.remove('open');
+          dropdownTrigger?.setAttribute('aria-expanded', 'false');
         }
       });
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           document.getElementById('pdpCustomDropdown')?.classList.remove('open');
+          dropdownTrigger?.setAttribute('aria-expanded', 'false');
         }
       });
     }
@@ -1066,8 +1046,12 @@
   function recalculatePrice() {
     if (!currentProduct) return;
 
-    const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price);
-    const origBasePrice = selectedCapacityOrig || currentProduct.original_price;
+    const basePrice = (String(currentProduct.id) === '9888955924778' && selectedCapacityPrice) 
+      ? selectedCapacityPrice 
+      : ((selectedColor && selectedColor.price) ? selectedColor.price : currentProduct.price);
+    const origBasePrice = (String(currentProduct.id) === '9888955924778' && selectedCapacityOrig)
+      ? selectedCapacityOrig 
+      : (currentProduct.original_price || currentProduct.price);
 
     const addonsSum = selectedAddons.reduce((s, a) => s + a.price, 0);
     const unitPrice = basePrice + addonsSum;
@@ -1120,7 +1104,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: -2px;">
           <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
         </svg>
-        <span id="stickyBtnText">ADD TO CART · ${formattedTotal}</span>
+        <span id="stickyBtnText">${window.innerWidth <= 768 ? 'ADD TO CART' : `ADD TO CART · ${formattedTotal}`}</span>
       `;
     }
 
@@ -1132,6 +1116,11 @@
         </svg>
         <span>BUY NOW</span>
       `;
+    }
+
+    const stickyPriceEl = document.getElementById('stickyPrice');
+    if (stickyPriceEl) {
+      stickyPriceEl.textContent = formattedTotal;
     }
 
     // Summary Box
@@ -1154,59 +1143,91 @@
     if (summaryTotalPrice) summaryTotalPrice.textContent = formattedTotal;
   }
 
-  // Render Real Descriptions & Specs
+  // Render Real Dynamic Descriptions, Features & Tech Specs
   function renderDescriptions(product) {
-    const accordions = document.querySelectorAll('.pdp-spec-box');
-    if (accordions.length >= 3) {
-      // Accordion 1: Engineering & Materials / Product Specs
-      const acc1Title = accordions[0].querySelector('.pdp-spec-btn span');
-      const acc1Content = accordions[0].querySelector('.pdp-spec-content');
-      if (acc1Title) {
-        acc1Title.textContent = (product.category === 'iphone-cases') ? 'Engineering & Materials' : 'Features & Specifications';
-      }
-      if (acc1Content) {
-        let bulletsHtml = '';
-        if (product.bullets && product.bullets.length > 0) {
-          bulletsHtml = `
-            <ul style="margin: 12px 0 0 18px; line-height: 1.8; color: #475569;">
-              ${product.bullets.map(b => `<li>${b}</li>`).join('')}
-            </ul>
-          `;
+    if (!product) return;
+
+    // 1. Product Details Paragraph
+    const detailsParagraph = document.getElementById('pdpDetailsParagraph');
+    if (detailsParagraph) {
+      detailsParagraph.textContent = product.description || `The Covertok ${product.title} is crafted with precision-engineered materials for uncompromising protection and daily luxury.`;
+    }
+
+    // 2. Feature Callouts List (3-4 Features with Icons)
+    const featList = document.getElementById('pdpFeatureCalloutsList');
+    if (featList && product.features && product.features.length) {
+      const getIconSvg = (icon) => {
+        if (icon === 'magnet') {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 0 0 12 0V3"></path><line x1="4" y1="3" x2="8" y2="3"></line><line x1="16" y1="3" x2="20" y2="3"></line><line x1="4" y1="8" x2="8" y2="8"></line><line x1="16" y1="8" x2="20" y2="8"></line></svg>`;
         }
-        acc1Content.innerHTML = `
-          <div class="pdp-spec-inner">
-            <p style="font-size: 0.925rem; line-height: 1.6; color: #475569;">${product.description}</p>
-            ${bulletsHtml}
-          </div>
-        `;
-      }
+        if (icon === 'feather') {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>`;
+        }
+        if (icon === 'sparkles') {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>`;
+        }
+        if (icon === 'battery') {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect><line x1="22" y1="11" x2="22" y2="13"></line></svg>`;
+        }
+        if (icon === 'refresh') {
+          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>`;
+        }
+        return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`;
+      };
 
-      // Accordion 2: Shipping & Delivery
-      const acc2Content = accordions[1].querySelector('.pdp-spec-content');
-      if (acc2Content) {
-        acc2Content.innerHTML = `
-          <div class="pdp-spec-inner">
-            Orders placed before 2 PM are fulfilled same-day with tracked express courier. Standard delivery takes 2–3 business days. 100% insured transit with zero delivery charges.
+      featList.innerHTML = product.features.map(f => `
+        <div class="pdp-feature-item">
+          <div class="pdp-feature-circle-icon">
+            ${getIconSvg(f.icon)}
           </div>
-        `;
-      }
+          <div class="pdp-feature-text">
+            <h4 class="pdp-feature-title">${f.title}</h4>
+            <p class="pdp-feature-sub">${f.subtitle}</p>
+          </div>
+        </div>
+      `).join('');
+    }
 
-      // Accordion 3: Returns & Warranty
-      const acc3Title = accordions[2].querySelector('.pdp-spec-btn span');
-      const acc3Content = accordions[2].querySelector('.pdp-spec-content');
-      if (acc3Title) {
-        acc3Title.textContent = (product.category === 'iphone-cases') ? 'Returns & Warranty' : 'Lifetime Warranty Guarantee';
-      }
-      if (acc3Content) {
-        const warrantyHtml = (product.category === 'iphone-cases') ?
-          'Every Covertok phone case includes our 1-year anti-yellowing and drop defect warranty. If your case breaks, cracks, or peels under ordinary use, we send a brand new one free of charge.' :
-          'Every Covertok accessory includes our authentic guarantee and 1-year hardware replacement warranty against manufacturing defects, loose joints, or magnetic degradation.';
-        acc3Content.innerHTML = `
-          <div class="pdp-spec-inner">
-            ${warrantyHtml}
-          </div>
-        `;
-      }
+    // 3. Technical Specifications Table
+    const specsTable = document.getElementById('pdpSpecsTableBody');
+    if (specsTable && product.specs && product.specs.length) {
+      specsTable.innerHTML = product.specs.map(s => `
+        <tr>
+          <td class="specs-label">${s.label}</td>
+          <td class="specs-value">${s.value}</td>
+        </tr>
+      `).join('');
+    }
+
+    // 4. Update Social Proof and Live Stats
+    if (product.social_proof) {
+      const soldEl = document.getElementById('pdpSoldNumber');
+      const hoursEl = document.getElementById('pdpSoldHours');
+      const stockEl = document.getElementById('pdpStockNumber');
+      if (soldEl) soldEl.textContent = (product.social_proof.sold_count || 842).toLocaleString('en-IN');
+      if (hoursEl) hoursEl.textContent = product.social_proof.sold_hours || 6;
+      if (stockEl) stockEl.textContent = product.social_proof.stock_left || 12;
+    }
+
+    // 5. Frequently Bought Together Bundle: Update Card 1 to Current Product
+    const bundleCard1 = document.getElementById('bundleCard1');
+    const bundleImg1 = document.getElementById('bundleCardImg1');
+    const bundleTitle1 = document.getElementById('bundleProdTitle1');
+    const bundlePriceDisplay1 = document.getElementById('bundlePriceDisplay1');
+    const bundleCheck1 = document.getElementById('bundleCheck1');
+
+    if (bundleTitle1) bundleTitle1.textContent = product.title;
+    if (bundlePriceDisplay1) bundlePriceDisplay1.textContent = product.price_formatted || `Rs. ${product.price}.00`;
+    if (bundleImg1) {
+      bundleImg1.src = product.primary_image;
+      bundleImg1.alt = product.title;
+    }
+    if (bundleCheck1) {
+      bundleCheck1.setAttribute('data-name', product.title);
+      bundleCheck1.setAttribute('data-price', product.price);
+    }
+    if (bundleCard1) {
+      bundleCard1.setAttribute('data-bundle-price', product.price);
     }
   }
 
@@ -1317,29 +1338,52 @@
   }
 
   // Setup Sticky Bar on scroll (Passive, requestAnimationFrame throttled)
+  // Appears when scrolling down just a little past the product heading
   function setupStickyBar() {
     const bar = document.getElementById('pdpStickyBar');
     const wa = document.getElementById('floatingWhatsAppBtn');
     if (!bar) return;
 
+    const getTriggerScrollY = () => {
+      const heading = document.getElementById('pdpProductTitle');
+      if (heading) {
+        const rect = heading.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const headingTop = rect.top + scrollTop;
+        // On mobile, trigger as soon as user scrolls past 280px (into the heading)
+        if (window.innerWidth <= 768) {
+          return Math.min(280, headingTop - 40);
+        }
+        // On desktop, trigger right below heading (~120px)
+        return Math.max(60, headingTop - 40);
+      }
+      return 120;
+    };
+
     let ticking = false;
+    const checkScroll = () => {
+      const threshold = getTriggerScrollY();
+      if (window.scrollY > threshold) {
+        bar.classList.add('visible');
+        document.body.classList.add('sticky-bar-visible');
+        if (wa) wa.classList.add('elevated');
+      } else {
+        bar.classList.remove('visible');
+        document.body.classList.remove('sticky-bar-visible');
+        if (wa) wa.classList.remove('elevated');
+      }
+      ticking = false;
+    };
+
     window.addEventListener('scroll', () => {
       if (!ticking) {
-        window.requestAnimationFrame(() => {
-          if (window.scrollY > 480) {
-            bar.classList.add('visible');
-            document.body.classList.add('sticky-bar-visible');
-            if (wa) wa.classList.add('elevated');
-          } else {
-            bar.classList.remove('visible');
-            document.body.classList.remove('sticky-bar-visible');
-            if (wa) wa.classList.remove('elevated');
-          }
-          ticking = false;
-        });
+        window.requestAnimationFrame(checkScroll);
         ticking = true;
       }
     }, { passive: true });
+
+    // Initial check in case user loaded the page already scrolled
+    setTimeout(checkScroll, 250);
   }
 
   // Render Related Products Carousel / Grid
@@ -1355,7 +1399,7 @@
       const img = p.primary_image || (hasC ? p.colors[0].image : '');
       return `
         <div class="catalog-card" style="border-radius: 20px; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(14px); border: 1.5px solid rgba(226, 232, 240, 0.9); box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05); transition: all 0.25s ease;">
-          <div class="card-media-stage" style="padding: 16px; background: #FFFFFF;" onclick="window.location.href='product.html?id=${p.id}'">
+          <div class="card-media-stage" style="padding: 16px; background: #FFFFFF; cursor: pointer;" onclick="window.location.href='product?handle=${p.handle}'">
             <img src="${img}" alt="${p.title}" class="card-main-img" style="max-height: 180px; mix-blend-mode: multiply; filter: drop-shadow(0 12px 20px rgba(15, 23, 42, 0.06));">
           </div>
           <div class="card-body-wrap" style="padding: 14px 16px;">
@@ -1363,14 +1407,14 @@
               <span class="card-cat-tag">${p.category_name}</span>
               <span class="card-rating-badge">${p.rating} ★</span>
             </div>
-            <a href="product.html?id=${p.id}" class="card-product-title" style="font-size: 0.9rem; font-weight: 800; color: #0F172A;">
+            <a href="product?handle=${p.handle}" class="card-product-title" style="font-size: 0.9rem; font-weight: 800; color: #0F172A; text-decoration: none;">
               ${p.title}
             </a>
             <div class="card-price-row" style="margin-bottom: 10px;">
               <span class="card-price-now" style="font-weight: 900; color: #0F172A;">${p.price_formatted}</span>
             </div>
             <div style="display: flex; gap: 8px; margin-top: 8px;">
-              <button type="button" class="btn btn-pill-outline" onclick="window.location.href='product.html?id=${p.id}'" style="flex: 1; text-align: center; font-size: 0.8rem; padding: 8px 12px; font-weight: 700; border-radius: 999px; background: #0F172A; color: #FFFFFF; border: none; cursor: pointer;">
+              <button type="button" class="btn btn-pill-outline" onclick="window.location.href='product?handle=${p.handle}'" style="flex: 1; text-align: center; font-size: 0.8rem; padding: 8px 12px; font-weight: 700; border-radius: 999px; background: #0F172A; color: #FFFFFF; border: none; cursor: pointer;">
                 BUY NOW
               </button>
             </div>
@@ -1378,6 +1422,159 @@
         </div>
       `;
     }).join('');
+  }
+
+  // 3-Piece Combo Synchronization & Return Controller
+  function setupComboSync(prod) {
+    if (!prod) return;
+
+    const STORAGE_KEY = 'covertok_custom_combo_slots';
+    function getSlots() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          return {
+            1: parsed[1] || null,
+            2: parsed[2] || null,
+            3: parsed[3] || null
+          };
+        }
+      } catch(e) {}
+      return { 1: null, 2: null, 3: null };
+    }
+
+    function saveSlots(slots) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(slots));
+      } catch(e) {}
+    }
+
+    // Determine if product is eligible for 3-piece combo (5 allowed categories)
+    const cat = prod.category || '';
+    const title = (prod.title || '').toLowerCase();
+    let isEligible = false;
+    let comboCatLabel = 'Accessory';
+    let comboIcon = '✨';
+
+    if (cat === 'iphone-cases') {
+      isEligible = true;
+      comboCatLabel = 'Mobile Cover';
+    } else if (cat === 'watchbands') {
+      isEligible = true;
+      if (title.includes('case') || title.includes('armor') || title.includes('protective')) {
+        comboCatLabel = 'Watch Armor';
+      } else {
+        comboCatLabel = 'Watch Band';
+      }
+    } else if (cat === 'charger-covers') {
+      isEligible = true;
+      comboCatLabel = 'Charger Case';
+    } else if (cat === 'airpod-covers') {
+      isEligible = true;
+      comboCatLabel = 'AirPod Case';
+    }
+
+    const stickyBar = document.getElementById('comboPdpStickyBar');
+    const bannerText = document.getElementById('comboPdpBannerText');
+    const topAddBtn = document.getElementById('pdpAddThisToComboBtn');
+    const actionAddBtn = document.getElementById('pdpActionAddToComboBtn');
+
+    const params = new URLSearchParams(window.location.search);
+    const cameFromCombo = params.get('from') === 'combo';
+
+    function updateComboPdpUI() {
+      const slots = getSlots();
+      const filledCount = [slots[1], slots[2], slots[3]].filter(Boolean).length;
+      const inSlotKey = Object.keys(slots).find(k => slots[k] && String(slots[k].id) === String(prod.id));
+
+      if (cameFromCombo || filledCount > 0) {
+        if (stickyBar) stickyBar.style.display = 'block';
+        if (bannerText) {
+          bannerText.textContent = `Custom 3-Piece Combo in progress: ${filledCount} of 3 items chosen (Flat ₹1,199 deal)`;
+        }
+      }
+
+      if (isEligible) {
+        if (actionAddBtn) actionAddBtn.style.display = 'block';
+        if (topAddBtn) topAddBtn.style.display = 'inline-block';
+
+        if (inSlotKey) {
+          if (actionAddBtn) {
+            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
+            actionAddBtn.style.background = '#C5A059';
+            actionAddBtn.style.color = '#090A0C';
+            actionAddBtn.style.borderColor = '#C5A059';
+          }
+          if (topAddBtn) {
+            topAddBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px; margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg>In Slot ${inSlotKey}`;
+            topAddBtn.style.background = '#C5A059';
+            topAddBtn.style.color = '#090A0C';
+          }
+        } else {
+          if (actionAddBtn) {
+            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
+            actionAddBtn.style.background = 'rgba(197, 160, 89, 0.12)';
+            actionAddBtn.style.color = '#EACAA6';
+            actionAddBtn.style.borderColor = '#C5A059';
+          }
+          if (topAddBtn) {
+            topAddBtn.textContent = `+ Add to Combo`;
+            topAddBtn.style.background = 'rgba(197, 160, 89, 0.16)';
+            topAddBtn.style.color = '#EACAA6';
+          }
+        }
+      }
+    }
+
+    function toggleComboSelection() {
+      const slots = getSlots();
+      const inSlotKey = Object.keys(slots).find(k => slots[k] && String(slots[k].id) === String(prod.id));
+
+      if (inSlotKey) {
+        slots[inSlotKey] = null;
+        saveSlots(slots);
+        updateComboPdpUI();
+        if (window.showToast) window.showToast(`Removed from Combo Slot ${inSlotKey}`, 'trash');
+        return;
+      }
+
+      let emptySlot = null;
+      if (!slots[1]) emptySlot = 1;
+      else if (!slots[2]) emptySlot = 2;
+      else if (!slots[3]) emptySlot = 3;
+
+      if (!emptySlot) {
+        if (window.showToast) {
+          window.showToast('All 3 combo slots are filled! Visit Combo Studio to swap.', 'trash');
+        } else {
+          alert('All 3 combo slots are filled! Go back to Combo Studio to remove an item first.');
+        }
+        return;
+      }
+
+      slots[emptySlot] = {
+        id: prod.id,
+        title: prod.title,
+        price: prod.price,
+        original_price: prod.original_price || prod.price,
+        image: prod.primary_image || (prod.images && prod.images[0]) || 'assets/phone_cream.png',
+        category: prod.category,
+        category_label: comboCatLabel,
+        category_icon: comboIcon
+      };
+
+      saveSlots(slots);
+      updateComboPdpUI();
+      if (window.showToast) {
+        window.showToast(`Added "${prod.title.slice(0, 24)}..." to Slot ${emptySlot}!`, 'bag');
+      }
+    }
+
+    if (actionAddBtn) actionAddBtn.addEventListener('click', toggleComboSelection);
+    if (topAddBtn) topAddBtn.addEventListener('click', toggleComboSelection);
+
+    updateComboPdpUI();
   }
 
   window.initPDP = initPDP;
