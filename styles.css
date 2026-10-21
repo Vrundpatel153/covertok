@@ -11238,18 +11238,20 @@ a.footer-contact-main:hover {
 .community-reel-modal {
   position: fixed;
   inset: 0;
-  z-index: 99999;
+  z-index: 9999999;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
 }
 
 .community-reel-modal.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .community-reel-backdrop {
