@@ -93,27 +93,26 @@
 
     // 3. Root Group for 3D Interactive Tilt & Visual Centering
     const rootGroup = new THREE.Group();
-    // Slight offset visually balances the exploded offset vector
-    rootGroup.position.set(12, -8, 0);
+    rootGroup.position.set(0, -6, 0);
     scene.add(rootGroup);
 
-    // 4. Studio Ambience Backlight (Soft radial glow)
+    // 4. Studio Ambience Backlight (Luminous warm champagne radial glow)
     function createBacklightTexture() {
       const c = document.createElement('canvas');
       c.width = 512;
       c.height = 512;
       const ctx = c.getContext('2d');
       const grad = ctx.createRadialGradient(256, 256, 20, 256, 256, 240);
-      grad.addColorStop(0, 'rgba(56, 189, 248, 0.42)');
-      grad.addColorStop(0.35, 'rgba(37, 99, 235, 0.20)');
-      grad.addColorStop(0.70, 'rgba(14, 165, 233, 0.05)');
-      grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      grad.addColorStop(0, 'rgba(255, 255, 255, 0.90)');
+      grad.addColorStop(0.35, 'rgba(243, 232, 210, 0.50)');
+      grad.addColorStop(0.70, 'rgba(197, 160, 89, 0.15)');
+      grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 512, 512);
       return new THREE.CanvasTexture(c);
     }
 
-    const backlightGeom = new THREE.PlaneGeometry(620, 620);
+    const backlightGeom = new THREE.PlaneGeometry(640, 640);
     const backlightMat = new THREE.MeshBasicMaterial({
       map: createBacklightTexture(),
       transparent: true,
@@ -121,7 +120,7 @@
       depthTest: false
     });
     const backlightMesh = new THREE.Mesh(backlightGeom, backlightMat);
-    backlightMesh.position.set(0, 20, -40);
+    backlightMesh.position.set(0, 16, -40);
     backlightMesh.renderOrder = 0;
     rootGroup.add(backlightMesh);
 
@@ -130,9 +129,9 @@
     const geom = new THREE.PlaneGeometry(planeSize, planeSize);
 
     // Exact layer configuration:
-    // Both textures are registered in the identical 1254x1254 viewport.
-    // Assembled: (0, 0, 4) -> 100% exact alignment, ZERO gap, ZERO mismatch at top or bottom!
-    // Exploded: (-48, 40, 80) -> lifts along the 3D surface normal vector!
+    // Both textures are registered in identical 1254x1254 viewport.
+    // Assembled: (0, 0, 4) with scale 1.0 and rotZ 0.0 -> 100% exact alignment, ZERO gap, ZERO mismatch!
+    // Exploded: (-105, 88, 95) with scale 1.065 and rotZ 0.032 -> clearly floats detached in 3D space!
     const layerConfigs = [
       {
         id: 1,
@@ -140,8 +139,8 @@
         webpPath: 'assets/blue_phone_body.webp',
         pngPath: 'assets/blue_phone_body.png',
         key: 'phone',
-        exploded: { x: 0, y: 0, z: 0 },
-        assembled: { x: 0, y: 0, z: 0 }
+        exploded: { x: 0, y: 0, z: 0, scale: 1.0, rotZ: 0.0 },
+        assembled: { x: 0, y: 0, z: 0, scale: 1.0, rotZ: 0.0 }
       },
       {
         id: 2,
@@ -149,8 +148,8 @@
         webpPath: 'assets/blue_protector_cover.webp',
         pngPath: 'assets/blue_protector_cover.png',
         key: 'cover_guard',
-        exploded: { x: -48, y: 40, z: 80 },
-        assembled: { x: 0, y: 0, z: 4 }
+        exploded: { x: -105, y: 88, z: 95, scale: 1.065, rotZ: 0.032 },
+        assembled: { x: 0, y: 0, z: 4, scale: 1.0, rotZ: 0.0 }
       }
     ];
 
@@ -177,6 +176,8 @@
 
       const mesh = new THREE.Mesh(geom, mat);
       mesh.position.set(cfg.exploded.x, cfg.exploded.y, cfg.exploded.z);
+      mesh.scale.set(cfg.exploded.scale || 1.0, cfg.exploded.scale || 1.0, 1.0);
+      mesh.rotation.z = cfg.exploded.rotZ || 0.0;
       mesh.renderOrder = index + 1;
       mesh.userData = cfg;
 
@@ -217,7 +218,7 @@
     // 6. Animation State & Variables
     let isAutoLoop = true;
     let manualAssembled = false;
-    let animProgress = 1.0; // 0.0 = fully assembled (docked), 1.0 = fully exploded (floating)
+    let animProgress = 1.0; // 0.0 = fully assembled (docked on phone), 1.0 = fully exploded (floating detached)
     let targetProgress = 1.0;
     let animTime = 0;
     let isVisible = true;
@@ -292,12 +293,16 @@
       });
     }
 
-    function easeInOutCubic(t) {
-      t = Math.max(0, Math.min(1, t));
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - Math.max(0, Math.min(1, t)), 3);
     }
 
-    // 8. Main 60 FPS Render Loop
+    function easeInOutQuad(t) {
+      t = Math.max(0, Math.min(1, t));
+      return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    }
+
+    // 8. Main 60 FPS Render Loop: Dynamic "Combine and Go" Animation
     const clock = new THREE.Clock();
 
     function animate() {
@@ -309,50 +314,56 @@
 
       if (isAutoLoop) {
         animTime += delta;
-        // Commercial 3D cycle: 7.6 seconds
-        // 0.0s - 2.0s: Exploded hold (floating detached armor)
-        // 2.0s - 3.8s: Precision glide docking (glides down and locks onto phone)
-        // 3.8s - 5.8s: Assembled hold (100% attached, zero gap, zero mismatch)
-        // 5.8s - 7.6s: Precision detaching (lifts back off along 3D normal)
-        const cycle = animTime % 7.6;
+        // Continuous, rhythmic "Combine and Go" cycle: 5.2 seconds
+        // 0.0s - 0.8s: Detached floating hover
+        // 0.8s - 2.1s: The "COMBINE" glide: smooth precision docking directly onto the phone
+        // 2.1s - 3.4s: Locked assembled hold on the phone (zero gap, flush fit)
+        // 3.4s - 4.6s: The "GO" lift: smooth detachment lifting up into 3D space
+        // 4.6s - 5.2s: Gentle deceleration into hovering float
+        const cycleDuration = 5.2;
+        const cycle = animTime % cycleDuration;
 
-        if (cycle < 2.0) {
+        if (cycle < 0.8) {
           targetProgress = 1.0;
-          if (statusText) statusText.textContent = '3D LENS ARMOR & BUMPER EXPLODED';
+          if (statusText) statusText.textContent = '3D FRAMELESS ARMOR DETACHED • HOVER VIEW';
           if (snapBtnText) snapBtnText.textContent = 'ASSEMBLE';
-        } else if (cycle < 3.8) {
-          const t = (cycle - 2.0) / 1.8;
-          targetProgress = 1.0 - easeInOutCubic(t);
-          if (statusText) statusText.textContent = 'PRECISION DOCKING ONTO PHONE...';
-        } else if (cycle < 5.8) {
+        } else if (cycle < 2.1) {
+          const t = (cycle - 0.8) / 1.3;
+          targetProgress = 1.0 - easeOutCubic(t);
+          if (statusText) statusText.textContent = 'COMBINING: PRECISION DOCKING ONTO PHONE...';
+        } else if (cycle < 3.4) {
           targetProgress = 0.0;
-          if (statusText) statusText.textContent = 'FRAMELESS BUMPER & ARMOR ASSEMBLED';
+          if (statusText) statusText.textContent = 'COVER LOCKED ON PHONE • 100% PRECISE FIT';
           if (snapBtnText) snapBtnText.textContent = 'EXPLODE';
-        } else if (cycle < 7.6) {
-          const t = (cycle - 5.8) / 1.8;
-          targetProgress = easeInOutCubic(t);
-          if (statusText) statusText.textContent = 'DETACHING INTO 3D EXPLODED VIEW...';
+        } else if (cycle < 4.6) {
+          const t = (cycle - 3.4) / 1.2;
+          targetProgress = easeInOutQuad(t);
+          if (statusText) statusText.textContent = 'DETACHING COVER FROM PHONE...';
+        } else {
+          targetProgress = 1.0;
+          if (statusText) statusText.textContent = '3D FRAMELESS ARMOR DETACHED • HOVER VIEW';
+          if (snapBtnText) snapBtnText.textContent = 'ASSEMBLE';
         }
       }
 
       if (isAutoLoop) {
         animProgress = targetProgress;
       } else {
-        // Smooth interpolation for manual toggle
-        animProgress += (targetProgress - animProgress) * 0.15;
-        if (Math.abs(targetProgress - animProgress) < 0.002) {
+        // Ultra-smooth interpolation for manual toggle button
+        animProgress += (targetProgress - animProgress) * 0.14;
+        if (Math.abs(targetProgress - animProgress) < 0.001) {
           animProgress = targetProgress;
         }
         if (statusText) {
-          if (animProgress > 0.8) statusText.textContent = '3D LENS ARMOR & BUMPER EXPLODED';
-          else if (animProgress < 0.2) statusText.textContent = 'FRAMELESS BUMPER & ARMOR ASSEMBLED';
-          else statusText.textContent = targetProgress === 0.0 ? 'PRECISION DOCKING ONTO PHONE...' : 'DETACHING INTO 3D EXPLODED VIEW...';
+          if (animProgress > 0.85) statusText.textContent = '3D FRAMELESS ARMOR DETACHED • HOVER VIEW';
+          else if (animProgress < 0.15) statusText.textContent = 'COVER LOCKED ON PHONE • 100% PRECISE FIT';
+          else statusText.textContent = targetProgress === 0.0 ? 'COMBINING: PRECISION DOCKING ONTO PHONE...' : 'DETACHING COVER FROM PHONE...';
         }
       }
 
-      // Update Mesh positions:
-      // When animProgress = 0: exactly assembled at (0, 0, 4) with zero offset!
-      // When animProgress = 1: floating exploded at (-48, 40, 80)!
+      // Update Mesh positions, scales and rotations:
+      // When animProgress = 0: strictly locked at (0, 0, 4) with scale 1.0 and rotZ 0.0 (sub-pixel exact fit)!
+      // When animProgress = 1: floating exploded at (-105, 88, 95) with scale 1.065 and rotZ 0.032!
       layerConfigs.forEach((cfg, i) => {
         const mesh = meshes[i];
         if (!mesh) return;
@@ -361,14 +372,19 @@
         const curY = cfg.assembled.y + (cfg.exploded.y - cfg.assembled.y) * animProgress;
         const curZ = cfg.assembled.z + (cfg.exploded.z - cfg.assembled.z) * animProgress;
 
+        const curScale = (cfg.assembled.scale || 1.0) + ((cfg.exploded.scale || 1.0) - (cfg.assembled.scale || 1.0)) * animProgress;
+        const curRotZ = (cfg.assembled.rotZ || 0.0) + ((cfg.exploded.rotZ || 0.0) - (cfg.assembled.rotZ || 0.0)) * animProgress;
+
         // Subtle floating breath ONLY when exploded (drops strictly to 0 when assembled):
-        const breath = animProgress * Math.sin(animTime * 2.2 + i * 0.8) * 2.5;
+        const breath = animProgress * Math.sin(animTime * 2.4 + i * 0.9) * 3.0;
 
         mesh.position.set(curX, curY + breath, curZ);
+        mesh.scale.set(curScale, curScale, 1.0);
+        mesh.rotation.z = curRotZ;
         mesh.visible = true;
       });
 
-      // Smooth ambient studio sway + interactive mouse parallax
+      // Smooth ambient studio sway + interactive mouse/touch parallax
       const ambientRotX = Math.cos(animTime * 0.75) * 0.035;
       const ambientRotY = Math.sin(animTime * 0.90) * 0.050;
       rootGroup.rotation.x += ((targetRotX + ambientRotX) - rootGroup.rotation.x) * 0.08;

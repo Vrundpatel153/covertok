@@ -1756,15 +1756,13 @@ img {
 
 .glass-banner {
   position: relative;
-  background: radial-gradient(circle at 32% 48%, rgba(231, 213, 164, 0.28) 0%, rgba(169, 129, 53, 0.35) 22%, rgba(23, 21, 19, 0.72) 55%, transparent 72%),
-              radial-gradient(circle at 75% 20%, rgba(169, 129, 53, 0.2) 0%, transparent 50%),
-              linear-gradient(135deg, #171513 0%, #2A231C 48%, #171513 100%);
+  background: radial-gradient(ellipse at 50% 30%, #FFFFFF 0%, #F9F7F3 45%, #EFEBE3 100%);
   border-radius: 36px;
   overflow: hidden;
   padding: 64px 80px;
-  color: #FFFFFF;
-  border: 1px solid rgba(231, 213, 164, 0.35);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 50px rgba(169, 129, 53, 0.25);
+  color: #171513;
+  border: 1.5px solid rgba(169, 129, 53, 0.22);
+  box-shadow: 0 20px 60px rgba(17, 17, 19, 0.06), 0 2px 14px rgba(169, 129, 53, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .glass-watermark {
@@ -1774,7 +1772,7 @@ img {
   font-family: var(--font-heading);
   font-size: 11rem;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.04);
+  color: rgba(169, 129, 53, 0.04);
   user-select: none;
   pointer-events: none;
   line-height: 1;
@@ -1829,8 +1827,8 @@ img {
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(231, 213, 164, 0.28) 0%, rgba(169, 129, 53, 0.15) 40%, transparent 70%);
-  filter: blur(40px);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(243, 232, 210, 0.45) 40%, rgba(197, 160, 89, 0.12) 65%, transparent 80%);
+  filter: blur(36px);
   pointer-events: none;
 }
 
@@ -1852,7 +1850,7 @@ img {
   width: 320px;
   height: 44px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(15, 23, 42, 0.3) 50%, transparent 75%);
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.22) 0%, rgba(15, 23, 42, 0.08) 50%, transparent 75%);
   filter: blur(14px);
 }
 
@@ -1917,19 +1915,19 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(231, 213, 164, 0.12);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(231, 213, 164, 0.35);
-  color: var(--gold-pale, #E7D5A4);
-  padding: 6px 20px;
+  border: 1px solid rgba(169, 129, 53, 0.35);
+  color: #171513;
+  padding: 7px 22px;
   border-radius: 9999px;
   font-family: 'Space Grotesk', 'Outfit', sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .demo-live-dot {
@@ -2041,32 +2039,34 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 999px;
-  background: rgba(18, 19, 22, 0.82);
+  background: #111113;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(231, 213, 164, 0.28);
-  color: #E7D5A4;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  color: #FAF8F5;
   font-family: 'Outfit', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   user-select: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .webgl-hud-btn:hover {
-  background: rgba(231, 213, 164, 0.22);
-  border-color: #E7D5A4;
+  background: #1F1F24;
+  border-color: #C5A059;
   color: #FFFFFF;
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
 }
 
 .webgl-hud-btn.active {
-  background: rgba(60, 208, 112, 0.15);
-  border-color: rgba(60, 208, 112, 0.5);
+  background: #111113;
+  border-color: rgba(60, 208, 112, 0.65);
   color: #4ADE80;
 }
 
@@ -2075,13 +2075,15 @@ img {
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: rgba(231, 213, 164, 0.75);
+  color: #1A1A1E;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 3px 12px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 4px 14px;
   border-radius: 999px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(169, 129, 53, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .stage-core-spotlight {
@@ -8190,6 +8192,9 @@ a.footer-contact-main:hover {
     padding: 24px 14px 28px !important;
     border-radius: 24px !important;
     overflow: hidden !important;
+    background: radial-gradient(ellipse at 50% 25%, #FFFFFF 0%, #F9F7F3 50%, #EFEBE3 100%) !important;
+    border: 1.5px solid rgba(169, 129, 53, 0.22) !important;
+    box-shadow: 0 16px 40px rgba(17, 17, 19, 0.06), 0 2px 10px rgba(169, 129, 53, 0.06) !important;
   }
   .glass-watermark {
     display: none !important;
@@ -8202,8 +8207,11 @@ a.footer-contact-main:hover {
     margin-bottom: 12px !important;
   }
   .glass-demo-tag {
-    font-size: 0.8125rem !important;
+    font-size: 0.75rem !important;
     padding: 6px 16px !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(169, 129, 53, 0.35) !important;
+    color: #171513 !important;
   }
   .glass-graphic-wrap {
     width: 100% !important;
@@ -8226,18 +8234,29 @@ a.footer-contact-main:hover {
     gap: 6px !important;
   }
   .webgl-hud-btn {
-    padding: 5px 12px !important;
+    padding: 6px 14px !important;
     font-size: 0.6875rem !important;
+    background: #111113 !important;
+    border: 1px solid rgba(197, 160, 89, 0.45) !important;
+    color: #FAF8F5 !important;
+  }
+  .webgl-hud-btn.active {
+    border-color: rgba(60, 208, 112, 0.65) !important;
+    color: #4ADE80 !important;
   }
   .webgl-hud-status {
     font-size: 0.625rem !important;
     padding: 3px 10px !important;
     letter-spacing: 0.05em !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(169, 129, 53, 0.28) !important;
+    color: #1A1A1E !important;
   }
   .stage-core-spotlight {
     width: 250px !important;
     height: 250px !important;
     filter: blur(28px) !important;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(243, 232, 210, 0.45) 40%, rgba(197, 160, 89, 0.12) 65%, transparent 80%) !important;
   }
   .stage-pedestal-platform {
     width: 200px !important;
@@ -8248,6 +8267,7 @@ a.footer-contact-main:hover {
     width: 180px !important;
     height: 24px !important;
     filter: blur(10px) !important;
+    background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.20) 0%, rgba(15, 23, 42, 0.06) 50%, transparent 75%) !important;
   }
 
   /* SECTION 6: MANDALA ARTISTIC DECK (Zero Bleed, Perfectly Centered on Mobile) */
