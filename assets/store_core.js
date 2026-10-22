@@ -203,7 +203,7 @@
                 <div style="font-size: 0.72rem; color: #475569; margin: 4px 0 6px 0; background: #FAF8F2; padding: 6px 8px; border-radius: 8px; border: 1px solid #EAE5DB;">
                   ${bundleList.map((b, bIdx) => `
                     <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
-                      <img src="${b.image || 'assets/phone_cream.png'}" alt="${b.title}" style="width: 26px; height: 26px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.png';">
+                      <img src="${b.image || 'assets/phone_cream.webp'}" alt="${b.title}" style="width: 26px; height: 26px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.webp';">
                       <div style="flex: 1; min-width: 0;">
                         <div style="font-size: 0.65rem; font-weight: 800; color: #8D6B28; text-transform: uppercase;">${b.category || 'Accessory'}</div>
                         <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>

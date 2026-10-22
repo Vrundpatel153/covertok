@@ -2902,14 +2902,14 @@ img {
   z-index: 5;
 }
 
-.wordmark-letter.letter-c  { background-image: url('assets/brand_iphone15_pro.jpg'); background-position: 35% 22%; background-size: 155%; }
-.wordmark-letter.letter-o1 { background-image: url('assets/brand_iphone15.jpg'); background-position: 42% 24%; background-size: 165%; }
-.wordmark-letter.letter-v  { background-image: url('assets/deck_card_5.png'); background-position: 86% 18%; background-size: 175%; }
-.wordmark-letter.letter-e  { background-image: url('assets/products/9982201299242/1_51142359679274.png'); background-position: 50% 35%; background-size: 155%; }
-.wordmark-letter.letter-r  { background-image: url('assets/brand_iphone16_pro.jpg'); background-position: 42% 68%; background-size: 165%; }
-.wordmark-letter.letter-t  { background-image: url('assets/brand_iphone16.jpg'); background-position: 42% 24%; background-size: 165%; }
-.wordmark-letter.letter-o2 { background-image: url('assets/products/9875589628202/1_49939894698282.jpg'); background-position: 50% 40%; background-size: 155%; }
-.wordmark-letter.letter-k  { background-image: url('assets/brand_iphone16_promax.jpg'); background-position: 28% 22%; background-size: 165%; }
+.wordmark-letter.letter-c  { background-image: url('assets/brand_iphone15_pro.webp'); background-position: 35% 22%; background-size: 155%; }
+.wordmark-letter.letter-o1 { background-image: url('assets/brand_iphone15.webp'); background-position: 42% 24%; background-size: 165%; }
+.wordmark-letter.letter-v  { background-image: url('assets/deck_card_5.webp'); background-position: 86% 18%; background-size: 175%; }
+.wordmark-letter.letter-e  { background-image: url('assets/products/9982201299242/1_51142359679274.webp'); background-position: 50% 35%; background-size: 155%; }
+.wordmark-letter.letter-r  { background-image: url('assets/brand_iphone16_pro.webp'); background-position: 42% 68%; background-size: 165%; }
+.wordmark-letter.letter-t  { background-image: url('assets/brand_iphone16.webp'); background-position: 42% 24%; background-size: 165%; }
+.wordmark-letter.letter-o2 { background-image: url('assets/products/9875589628202/1_49939894698282.webp'); background-position: 50% 40%; background-size: 155%; }
+.wordmark-letter.letter-k  { background-image: url('assets/brand_iphone16_promax.webp'); background-position: 28% 22%; background-size: 165%; }
 
 /* Subtitle with Flanking Gold Gradient Dividers */
 .footer-hero-subtag {

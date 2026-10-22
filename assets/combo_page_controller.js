@@ -42,7 +42,7 @@
       title: item.title,
       price: item.price,
       original_price: item.original_price || item.price,
-      image: item.image || item.primary_image || 'assets/phone_cream.png',
+      image: item.image || item.primary_image || 'assets/phone_cream.webp',
       category_key: item.category_key || 'mobile-cover',
       category_label: item.category_label || 'Accessory'
     };
@@ -273,7 +273,7 @@
       title: prod.title,
       price: prod.price,
       original_price: prod.original_price || prod.price,
-      image: prod.primary_image || (prod.images && prod.images[0]) || 'assets/phone_cream.png',
+      image: prod.primary_image || (prod.images && prod.images[0]) || 'assets/phone_cream.webp',
       category_key: prod.combo_category,
       category_label: prod.combo_label
     };
@@ -386,7 +386,7 @@
     }
 
     const hasColors = product.colors && product.colors.length > 1;
-    const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : 'assets/phone_cream.png');
+    const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : 'assets/phone_cream.webp');
 
     // Badges HTML
     let badgeHtml = '';
@@ -595,7 +595,7 @@
         title: `3-Piece Luxury Combo Deal`,
         price: BUNDLE_PRICE,
         original_price: totalOriginal,
-        img: s1.image || 'assets/phone_cream.png',
+        img: s1.image || 'assets/phone_cream.webp',
         qty: 1,
         bundle_items: [
           { id: s1.id, title: s1.title, image: s1.image, price: s1.price, category: s1.category_label },

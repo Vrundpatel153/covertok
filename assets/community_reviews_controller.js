@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "00:53",
       src: "assets/community_videos/video_77302.mp4",
       cdnSrc: "https://cdn.shopify.com/videos/c/vp/1c275748de1342ee95c39867196e9b27/1c275748de1342ee95c39867196e9b27.HD-1080p-2.5Mbps-63469372.mp4",
-      poster: "assets/community_videos/thumb_video_77302.jpg",
+      poster: "assets/community_videos/thumb_video_77302.webp",
       productUrl: "product.html?id=9980484157738"
     },
     {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "00:25",
       src: "assets/community_videos/video_77301.mp4",
       cdnSrc: "https://cdn.shopify.com/videos/c/vp/fffbe5cddc7d4f23b0722d92ab301dcf/fffbe5cddc7d4f23b0722d92ab301dcf.HD-1080p-2.5Mbps-63469369.mp4",
-      poster: "assets/community_videos/thumb_video_77301.jpg",
+      poster: "assets/community_videos/thumb_video_77301.webp",
       productUrl: "product.html?id=9827998794026"
     },
     {
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "00:09",
       src: "assets/community_videos/video_77299.mp4",
       cdnSrc: "https://cdn.shopify.com/videos/c/vp/fb315e0413a44983ae5f20c7a1341ea1/fb315e0413a44983ae5f20c7a1341ea1.HD-1080p-2.5Mbps-62729025.mp4",
-      poster: "assets/community_videos/thumb_video_77299.jpg",
+      poster: "assets/community_videos/thumb_video_77299.webp",
       productUrl: "product.html?id=9893318426922"
     },
     {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "00:13",
       src: "assets/community_videos/video_77305.mp4",
       cdnSrc: "https://cdn.shopify.com/videos/c/vp/8d01538af6f34dafb3c3606647d00edb/8d01538af6f34dafb3c3606647d00edb.HD-1080p-2.5Mbps-63470474.mp4",
-      poster: "assets/community_videos/thumb_video_77305.jpg",
+      poster: "assets/community_videos/thumb_video_77305.webp",
       productUrl: "product.html?id=9979941159210"
     },
     {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "00:59",
       src: "assets/community_videos/video_77298.mp4",
       cdnSrc: "https://cdn.shopify.com/videos/c/vp/b81c49f94f304310923c3f0f32e58738/b81c49f94f304310923c3f0f32e58738.HD-1080p-2.5Mbps-62729027.mp4",
-      poster: "assets/community_videos/thumb_video_77298.jpg",
+      poster: "assets/community_videos/thumb_video_77298.webp",
       productUrl: "product.html?id=9888955924778"
     },
     {
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       duration: "00:16",
       src: "assets/community_videos/video_77297.mp4",
       cdnSrc: "https://cdn.shopify.com/videos/c/vp/e6886932cfc64a35a1437b0e4aec463e/e6886932cfc64a35a1437b0e4aec463e.HD-1080p-2.5Mbps-62729026.mp4",
-      poster: "assets/community_videos/thumb_video_77297.jpg",
+      poster: "assets/community_videos/thumb_video_77297.webp",
       productUrl: "product.html?id=9869730382122"
     }
   ];

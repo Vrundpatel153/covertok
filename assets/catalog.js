@@ -15,15 +15,15 @@
 
   // Category display names & definitions with authentic preview thumbnails matching mockup
   const CATEGORIES = [
-    { id: 'all', title: 'All Products', thumb: 'assets/cat_thumb_cases.png' },
-    { id: 'iphone-cases', title: 'Cases & Covers', thumb: 'assets/cat_thumb_cases.png' },
-    { id: 'airpod-covers', title: 'AirPods Covers', thumb: 'assets/cat_thumb_airpods.png' },
-    { id: 'charger-and-cables', title: 'Charger & Cables', thumb: 'assets/cat_thumb_cables.png' },
-    { id: 'charger-covers', title: 'Charger Cases', thumb: 'assets/cat_thumb_chargers.png' },
-    { id: 'cover-charms', title: 'Cover Charms', thumb: 'assets/cat_thumb_charms.png' },
-    { id: 'other-accessories', title: 'Accessories', thumb: 'assets/cat_thumb_accessories.png' },
-    { id: 'watchbands', title: 'Iwatch Bands', thumb: 'assets/cat_thumb_accessories.png' },
-    { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/phone_cream.png', isCombo: true }
+    { id: 'all', title: 'All Products', thumb: 'assets/cat_thumb_cases.webp' },
+    { id: 'iphone-cases', title: 'Cases & Covers', thumb: 'assets/cat_thumb_cases.webp' },
+    { id: 'airpod-covers', title: 'AirPods Covers', thumb: 'assets/cat_thumb_airpods.webp' },
+    { id: 'charger-and-cables', title: 'Charger & Cables', thumb: 'assets/cat_thumb_cables.webp' },
+    { id: 'charger-covers', title: 'Charger Cases', thumb: 'assets/cat_thumb_chargers.webp' },
+    { id: 'cover-charms', title: 'Cover Charms', thumb: 'assets/cat_thumb_charms.webp' },
+    { id: 'other-accessories', title: 'Accessories', thumb: 'assets/cat_thumb_accessories.webp' },
+    { id: 'watchbands', title: 'Iwatch Bands', thumb: 'assets/cat_thumb_accessories.webp' },
+    { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/phone_cream.webp', isCombo: true }
   ];
 
   function initCatalog() {
@@ -82,7 +82,7 @@
           <span class="cat-card-meta">${isComboPill ? 'Flat ₹1,199' : `${count} Products`} <span class="cat-card-arrow">→</span></span>
         </div>
         <div class="cat-card-img-wrap">
-          <img src="${cat.thumb || 'assets/cat_thumb_cases.png'}" alt="${cat.title}" class="cat-card-img" loading="lazy">
+          <img src="${cat.thumb || 'assets/cat_thumb_cases.webp'}" alt="${cat.title}" class="cat-card-img" loading="lazy">
         </div>
       `;
 

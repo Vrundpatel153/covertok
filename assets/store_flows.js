@@ -241,7 +241,7 @@
                 <div style="font-size: 0.72rem; color: #475569; margin: 4px 0 6px 0; background: #FAF8F2; padding: 6px 8px; border-radius: 8px; border: 1px solid #EAE5DB;">
                   ${bundleList.map((b, bIdx) => `
                     <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
-                      <img src="${b.image || 'assets/phone_cream.png'}" alt="${b.title}" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.png';">
+                      <img src="${b.image || 'assets/phone_cream.webp'}" alt="${b.title}" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.webp';">
                       <div style="flex: 1; min-width: 0;">
                         <div style="font-size: 0.65rem; font-weight: 800; color: #8D6B28; text-transform: uppercase;">${b.category || 'Accessory'}</div>
                         <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>
@@ -272,7 +272,7 @@
       }
       return `
         <div class="cart-item-row" style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #EAE5DB; align-items: center;">
-          <img src="${item.img || 'assets/phone_cream.png'}" onerror="this.onerror=null; this.src='assets/phone_cream.png';" alt="${item.title}" style="width: 58px; height: 58px; object-fit: contain; border-radius: 10px; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 3px; flex-shrink: 0;">
+          <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" style="width: 58px; height: 58px; object-fit: contain; border-radius: 10px; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 3px; flex-shrink: 0;">
           <div style="flex: 1; min-width: 0;">
             <div style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.875rem; color: #171513; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</div>
             <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
@@ -442,7 +442,7 @@
 
       resultsContainer.innerHTML = matches.map(p => `
         <a href="product?handle=${p.handle}" class="search-result-item" onclick="window.CovertokFlows.closeSearch();">
-          <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.png'}" alt="${p.title}" class="search-result-thumb">
+          <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.webp'}" alt="${p.title}" class="search-result-thumb">
           <div style="flex: 1; min-width: 0;">
             <div class="search-result-title">${p.title}</div>
             <div style="font-size: 0.725rem; color: #64748B;">${p.category_name || 'Accessories'}</div>

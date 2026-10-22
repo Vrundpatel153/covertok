@@ -13,35 +13,35 @@ document.addEventListener('DOMContentLoaded', () => {
       id: '1',
       name: 'iPhone 15 Cream Color Men Design Mobile Cover',
       price: 399,
-      img: 'assets/phone_cream.png',
+      img: 'assets/phone_cream.webp',
       desc: 'Minimalist editorial line-art aesthetic printed on dual-layer shock dispersal polycarbonate. Featuring tactile responsive buttons, precision speaker cutouts, and 1.8mm elevated screen bumper lip.'
     },
     '2': {
       id: '2',
       name: 'iPhone 15 Fire Blue Color New Addition Cover',
       price: 799,
-      img: 'assets/phone_fire_blue.png',
+      img: 'assets/phone_fire_blue.webp',
       desc: 'Neon flame cyan graphics engineered with vibrant high-density UV ink. Matte anti-fingerprint coating with reinforced airbag impact corners that withstand drops up to 10 feet.'
     },
     '3': {
       id: '3',
       name: 'iPhone 15 Spiderman Edition Mobile Cover',
       price: 499,
-      img: 'assets/phone_spiderman.png',
+      img: 'assets/phone_spiderman.webp',
       desc: 'Official comic web pattern on deep midnight chassis with neon magenta accents. Crafted with flexible thermoplastic polyurethane with anti-scratch coating and full wireless charging support.'
     },
     'glass16': {
       id: 'glass16',
       name: 'Tempered Glass Mobile Back Cover',
       price: 499,
-      img: 'assets/exact_exploded_glass.png',
+      img: 'assets/exact_exploded_glass.webp',
       desc: 'Laminated 9H diamond tempered glass over high-density polycarbonate with honeycomb shock absorber and soft silicone TPU grip frame.'
     },
     '4': {
       id: '4',
       name: 'Bohemian Mandala Series iPhone Cover',
       price: 599,
-      img: 'assets/mandala_phone_top.png',
+      img: 'assets/mandala_phone_top.webp',
       desc: 'Intricate ethnic bohemian mandala artwork bonded onto luxury textured leather finish. High tactile grip with aerospace grade shock protection.'
     }
   };
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: 'glass16',
         name: 'Tempered Glass Mobile Back Cover',
         price: 16,
-        img: 'assets/exploded_glass_case.png'
+        img: 'assets/exploded_glass_case.webp'
       };
       addToCart(item, 1);
     });
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: '4',
         name: 'Bohemian Mandala Series iPhone Cover',
         price: 24,
-        img: 'assets/cover_stack.png'
+        img: 'assets/cover_stack.webp'
       };
       addToCart(item, 1);
     });
@@ -369,14 +369,14 @@ document.addEventListener('DOMContentLoaded', () => {
           id: 'promo-mint',
           name: '20% OFF Mint Green Silicone Shock Case',
           price: 14.40,
-          img: 'assets/promo_mint_case.png'
+          img: 'assets/promo_mint_case.webp'
         }, 1);
       } else {
         addToCart({
           id: 'promo-blue',
           name: 'Superior Protect Slate Blue Impact Case',
           price: 18.00,
-          img: 'assets/promo_blue_case.png'
+          img: 'assets/promo_blue_case.webp'
         }, 1);
       }
     });

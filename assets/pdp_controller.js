@@ -1238,7 +1238,7 @@
         id: '9888955924778',
         title: 'Magnetic Wireless Power Bank',
         price: 2099,
-        primary_image: 'assets/products/9888955924778/1_50035509362986.png'
+        primary_image: 'assets/products/9888955924778/1_50035509362986.webp'
       };
 
       const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : prod.price);
@@ -1276,7 +1276,7 @@
       // Add any selected bundle items
       if (selectedBundleItems && selectedBundleItems.length > 0) {
         selectedBundleItems.forEach(bundle => {
-          const bImg = bundle.name.includes('Case') ? 'assets/bundle_clear_case.jpg' : (bundle.name.includes('Cable') ? 'assets/bundle_usbc_cable.jpg' : 'assets/bundle_lens_protector.jpg');
+          const bImg = bundle.name.includes('Case') ? 'assets/bundle_clear_case.webp' : (bundle.name.includes('Cable') ? 'assets/bundle_usbc_cable.webp' : 'assets/bundle_lens_protector.webp');
           if (window.CovertokStore && window.CovertokStore.addToCart) {
             window.CovertokStore.addToCart({
               id: 'bundle-' + bundle.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
@@ -1574,7 +1574,7 @@
         title: prod.title,
         price: prod.price,
         original_price: prod.original_price || prod.price,
-        image: prod.primary_image || (prod.images && prod.images[0]) || 'assets/phone_cream.png',
+        image: prod.primary_image || (prod.images && prod.images[0]) || 'assets/phone_cream.webp',
         category: prod.category,
         category_label: comboCatLabel,
         category_icon: comboIcon
