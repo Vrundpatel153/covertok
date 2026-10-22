@@ -251,10 +251,11 @@
       });
     }
 
-    // 3. Set Initial Color & Image
-    const hasColors = product.colors && product.colors.length > 1;
-    selectedColor = (hasColors && product.colors[0]) ? product.colors[0] : null;
-    const initialImg = selectedColor ? (selectedColor.images && selectedColor.images.length > 0 ? selectedColor.images[0] : selectedColor.image) : product.primary_image;
+    // 3. Set Initial Color & Image (Default chosen color)
+    const hasColors = product.colors && product.colors.length > 0;
+    selectedColor = hasColors ? product.colors[0] : null;
+    const initialGallery = getColorGallery(product, selectedColor);
+    const initialImg = (initialGallery && initialGallery.length > 0) ? initialGallery[0] : (selectedColor ? selectedColor.image : product.primary_image);
 
     updateMainImage(initialImg, true);
     renderThumbnails(product, initialImg);
@@ -307,39 +308,70 @@
     }
   }
 
-  // Render Thumbnails Rail: Shows real images of product
+  // Universal isolated gallery extractor: guarantees strictly only chosen color's images are in gallery
+  function getColorGallery(product, color) {
+    if (!product) return [];
+
+    // If product has no colors or only 1 color variant
+    if (!product.colors || product.colors.length <= 1) {
+      if (color && color.images && color.images.length > 0) return [...color.images];
+      if (color && color.image) return [color.image];
+      if (product.images && product.images.length > 0) return [...product.images];
+      return product.primary_image ? [product.primary_image] : [];
+    }
+
+    // Identify ALL images that belong to OTHER colors
+    const otherColorImages = new Set();
+    product.colors.forEach(c => {
+      if (color && c.name !== color.name) {
+        if (c.image) otherColorImages.add(c.image);
+        if (Array.isArray(c.images)) {
+          c.images.forEach(img => otherColorImages.add(img));
+        }
+      }
+    });
+
+    let gallery = [];
+
+    // 1. Color's explicit primary and angle images
+    if (color) {
+      if (color.image && !gallery.includes(color.image)) {
+        gallery.push(color.image);
+      }
+      if (color.images && Array.isArray(color.images)) {
+        color.images.forEach(img => {
+          if (img && !gallery.includes(img)) gallery.push(img);
+        });
+      }
+    }
+
+    // 2. Any shared / detail images in product.images that do NOT belong to any OTHER color variant
+    if (product.images && Array.isArray(product.images)) {
+      product.images.forEach(img => {
+        if (img && !otherColorImages.has(img) && !gallery.includes(img)) {
+          gallery.push(img);
+        }
+      });
+    }
+
+    if (!gallery.length) {
+      if (color && color.image) gallery.push(color.image);
+      else if (product.primary_image) gallery.push(product.primary_image);
+    }
+
+    return Array.from(new Set(gallery.filter(Boolean)));
+  }
+
+  // Render Thumbnails Rail: Strictly shows ONLY the chosen color's image gallery below/beside the window
   function renderThumbnails(product, activeSrc) {
     const strip = document.getElementById('pdpThumbnails');
     if (!strip) return;
 
-    let displayImgs = [];
+    // Strict Requirement:
+    // Separate product image gallery per product color!
+    // When a color is chosen or a default is chosen, ONLY that color's images are in the gallery!
+    const uniqueImgs = getColorGallery(product, selectedColor);
 
-    if (selectedColor) {
-      if (selectedColor.images && Array.isArray(selectedColor.images) && selectedColor.images.length > 0) {
-        displayImgs = [...selectedColor.images];
-      } else if (selectedColor.image) {
-        displayImgs = [selectedColor.image];
-      }
-    }
-
-    if (!displayImgs.length && product.colors && Array.isArray(product.colors) && product.colors.length > 0) {
-      const c0 = product.colors[0];
-      if (c0.images && Array.isArray(c0.images) && c0.images.length > 0) {
-        displayImgs = [...c0.images];
-      } else if (c0.image) {
-        displayImgs = [c0.image];
-      }
-    }
-
-    if (!displayImgs.length) {
-      if (product.images && Array.isArray(product.images) && product.images.length > 0) {
-        displayImgs = [...product.images];
-      } else if (product.primary_image) {
-        displayImgs = [product.primary_image];
-      }
-    }
-
-    const uniqueImgs = Array.from(new Set(displayImgs.filter(Boolean)));
     if (!uniqueImgs.length) {
       strip.style.display = 'none';
       return;
@@ -359,6 +391,7 @@
       }
     }
 
+    // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
         <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy">
@@ -382,6 +415,7 @@
     const galleryPrev = document.getElementById('galleryPrevBtn');
     const galleryNext = document.getElementById('galleryNextBtn');
     if (galleryPrev) {
+      galleryPrev.style.display = uniqueImgs.length > 1 ? 'flex' : 'none';
       galleryPrev.onclick = () => {
         const thumbs = strip.querySelectorAll('.pdp-vthumb');
         if (!thumbs.length) return;
@@ -391,6 +425,7 @@
       };
     }
     if (galleryNext) {
+      galleryNext.style.display = uniqueImgs.length > 1 ? 'flex' : 'none';
       galleryNext.onclick = () => {
         const thumbs = strip.querySelectorAll('.pdp-vthumb');
         if (!thumbs.length) return;
@@ -442,7 +477,9 @@
           if (stickyColor) stickyColor.textContent = cName;
           if (specsColor) specsColor.textContent = cName;
 
-          const firstImg = (selectedColor.images && selectedColor.images.length > 0) ? selectedColor.images[0] : (selectedColor.image || cImg);
+          // Strictly isolate gallery to ONLY this chosen color's images
+          const colorGallery = getColorGallery(product, selectedColor);
+          const firstImg = (colorGallery && colorGallery.length > 0) ? colorGallery[0] : (selectedColor.image || cImg);
           
           updateMainImage(firstImg);
           renderThumbnails(product, firstImg);
