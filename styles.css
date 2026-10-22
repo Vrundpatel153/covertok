@@ -4725,7 +4725,8 @@ a.footer-contact-main:hover {
 
 .fl-pill-silver {
   top: 29%;
-  left: 78%;
+  right: 5%;
+  left: auto;
   background: rgba(245, 245, 247, 0.92);
   color: #171513;
   border: 1.5px solid rgba(255, 255, 255, 0.9);
@@ -4739,18 +4740,30 @@ a.footer-contact-main:hover {
   box-shadow: 0 8px 24px rgba(113, 113, 122, 0.25);
 }
 
+.fl-pill-full {
+  display: inline;
+}
+
+.fl-pill-short {
+  display: none;
+}
+
 @media (max-width: 1180px) and (min-width: 769px) {
   .fl-pill-orange {
     top: 31%;
     left: 4%;
+    right: auto;
   }
   .fl-pill-black {
     top: 14%;
-    left: 43%;
+    left: 48%;
+    right: auto;
+    transform: translateX(-50%);
   }
   .fl-pill-silver {
     top: 29%;
-    left: 76%;
+    right: 4%;
+    left: auto;
   }
 }
 
@@ -7958,48 +7971,72 @@ a.footer-contact-main:hover {
     object-position: 55% center !important;
   }
   .fl-color-pill {
-    padding: 5px 11px 5px 8px !important;
+    padding: 5px 12px 5px 8px !important;
     font-size: 0.72rem !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16) !important;
     white-space: nowrap !important;
   }
   .fl-pill-orange {
     top: 31% !important;
-    left: 8% !important;
+    left: 10px !important;
     right: auto !important;
   }
   .fl-pill-black {
     top: 14% !important;
-    left: 48% !important;
+    left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
   }
   .fl-pill-silver {
     top: 28% !important;
-    left: 78% !important;
-    right: auto !important;
+    right: 10px !important;
+    left: auto !important;
   }
   .fl-stepper-rail {
     display: none !important;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     .fl-color-pill {
-      padding: 4px 9px 4px 6px !important;
+      padding: 4px 10px 4px 6px !important;
       font-size: 0.68rem !important;
       gap: 5px !important;
     }
     .fl-pill-orange {
       top: 31% !important;
-      left: 6% !important;
+      left: 6px !important;
+      right: auto !important;
     }
     .fl-pill-black {
       top: 14% !important;
-      left: 48% !important;
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%) !important;
     }
     .fl-pill-silver {
       top: 28% !important;
-      left: 76% !important;
+      right: 6px !important;
+      left: auto !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .fl-color-pill {
+      padding: 3.5px 8px 3.5px 5px !important;
+      font-size: 0.64rem !important;
+      gap: 4px !important;
+    }
+    .fl-pill-full {
+      display: none !important;
+    }
+    .fl-pill-short {
+      display: inline !important;
+    }
+    .fl-pill-orange {
+      left: 4px !important;
+    }
+    .fl-pill-silver {
+      right: 4px !important;
     }
   }
   .fl-stage-content {
