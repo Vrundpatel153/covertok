@@ -13,22 +13,17 @@
   let maxCustomPrice = null;
   let inStockOnly = false;
 
-  // Category display names & definitions (Exact matching Covertok)
+  // Category display names & definitions with authentic preview thumbnails matching mockup
   const CATEGORIES = [
-    { id: 'all', title: 'All Products' },
-    { id: 'iphone-cases', title: 'iPhone Covers' },
-    { id: 'watchbands', title: 'Iwatch Bands' },
-    { id: 'mens-cover', title: "Men's Cover" },
-    { id: 'charger-covers', title: 'Charger Cases' },
-    { id: 'cover-charms', title: 'Cover Charms' },
-    { id: 'buy-three', title: 'Buy Three' },
-    { id: 'covers', title: 'Covers' },
-    { id: 'womens-cover', title: "Women's Cover" },
-    { id: 'charger-and-cables', title: 'Charger & Cables' },
-    { id: 'airpod-covers', title: 'AirPod Covers' },
-    { id: 'other-accessories', title: 'Other Accessories' },
-    { id: 'our-bestsellers', title: 'Best Sellers' },
-    { id: 'new-arrivals', title: 'New Arrivals' }
+    { id: 'all', title: 'All Products', thumb: 'assets/cat_thumb_cases.png' },
+    { id: 'iphone-cases', title: 'Cases & Covers', thumb: 'assets/cat_thumb_cases.png' },
+    { id: 'airpod-covers', title: 'AirPods Covers', thumb: 'assets/cat_thumb_airpods.png' },
+    { id: 'charger-and-cables', title: 'Charger & Cables', thumb: 'assets/cat_thumb_cables.png' },
+    { id: 'charger-covers', title: 'Charger Cases', thumb: 'assets/cat_thumb_chargers.png' },
+    { id: 'cover-charms', title: 'Cover Charms', thumb: 'assets/cat_thumb_charms.png' },
+    { id: 'other-accessories', title: 'Accessories', thumb: 'assets/cat_thumb_accessories.png' },
+    { id: 'watchbands', title: 'Iwatch Bands', thumb: 'assets/cat_thumb_accessories.png' },
+    { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/phone_cream.png', isCombo: true }
   ];
 
   function initCatalog() {
@@ -56,7 +51,7 @@
     filterAndRenderProducts();
   }
 
-  // Render top category switcher pills
+  // Render top category cards track (Rectangular cards with product thumbnails)
   function renderCategoryTabs() {
     const navBar = document.getElementById('catalogNavBar');
     if (!navBar) return;
@@ -75,29 +70,34 @@
       }
 
       const isComboPill = cat.id === 'buy-three';
-      const pill = document.createElement('button');
-      pill.type = 'button';
-      pill.className = `catalog-nav-pill ${currentCategory === cat.id ? 'active' : ''} ${isComboPill ? 'catalog-nav-pill-combo' : ''}`;
-      pill.setAttribute('data-cat', cat.id);
-      if (isComboPill) {
-        pill.style.borderColor = '#C5A059';
-        pill.style.background = 'rgba(197, 160, 89, 0.12)';
-        pill.style.color = '#8D6B28';
-        pill.style.fontWeight = '800';
-      }
-      pill.innerHTML = `
-        <span>${isComboPill ? '★ 3-Piece Combo (₹1,199)' : cat.title}</span>
-        <span class="catalog-pill-count">${count}</span>
+      const card = document.createElement('div');
+      card.className = `catalog-cat-card ${currentCategory === cat.id ? 'active' : ''}`;
+      card.setAttribute('data-cat', cat.id);
+      card.setAttribute('role', 'tab');
+      card.setAttribute('aria-selected', currentCategory === cat.id ? 'true' : 'false');
+
+      card.innerHTML = `
+        <div class="cat-card-text">
+          <span class="cat-card-title">${isComboPill ? '★ 3-Piece Combo' : cat.title}</span>
+          <span class="cat-card-meta">${isComboPill ? 'Flat ₹1,199' : `${count} Products`} <span class="cat-card-arrow">→</span></span>
+        </div>
+        <div class="cat-card-img-wrap">
+          <img src="${cat.thumb || 'assets/cat_thumb_cases.png'}" alt="${cat.title}" class="cat-card-img" loading="lazy">
+        </div>
       `;
 
-      pill.addEventListener('click', () => {
+      card.addEventListener('click', () => {
         if (cat.id === 'buy-three') {
           window.location.href = 'combo.html';
           return;
         }
         currentCategory = cat.id;
-        document.querySelectorAll('.catalog-nav-pill').forEach(el => el.classList.remove('active'));
-        pill.classList.add('active');
+        document.querySelectorAll('.catalog-cat-card').forEach(el => {
+          el.classList.remove('active');
+          el.setAttribute('aria-selected', 'false');
+        });
+        card.classList.add('active');
+        card.setAttribute('aria-selected', 'true');
         
         // Update URL query without page reload
         const newUrl = new URL(window.location);
@@ -107,7 +107,7 @@
         filterAndRenderProducts();
       });
 
-      navBar.appendChild(pill);
+      navBar.appendChild(card);
     });
   }
 
@@ -189,10 +189,20 @@
     // Update Category Headings
     const activeCatObj = CATEGORIES.find(c => c.id === currentCategory) || CATEGORIES[0];
     if (currentHeading) {
-      currentHeading.textContent = activeCatObj.title.toUpperCase();
+      currentHeading.textContent = activeCatObj.title;
     }
     if (countEl) {
-      countEl.textContent = `Showing ${filtered.length} of ${allProducts.length} Products`;
+      countEl.innerHTML = `Showing <span class="catalog-count-num">${filtered.length}</span> Products`;
+    }
+
+    // Bind filters panel toggle button
+    const filtersBtn = document.getElementById('catalogFiltersToggleBtn');
+    const filtersPanel = document.getElementById('catalogFiltersPanel');
+    if (filtersBtn && filtersPanel && !filtersBtn.__hasBoundToggle) {
+      filtersBtn.__hasBoundToggle = true;
+      filtersBtn.addEventListener('click', () => {
+        filtersPanel.classList.toggle('show');
+      });
     }
 
     // Update Active Filter Chips
@@ -403,9 +413,20 @@
       `;
     }
 
+    // Format Prices cleanly matching "Rs. 1,299.00  Rs. 520.00"
+    const priceFormatted = `Rs. ${Number(product.price).toLocaleString('en-IN')}.00`;
+    const origPriceFormatted = product.original_price && product.original_price > product.price 
+      ? `Rs. ${Number(product.original_price).toLocaleString('en-IN')}.00`
+      : '';
+
     card.innerHTML = `
       <div class="card-media-stage">
         <div class="card-badges-row">${badgeHtml}</div>
+        <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
         <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product?handle=${product.handle}'">
           <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
         </div>
@@ -413,35 +434,31 @@
       </div>
 
       <div class="card-body-wrap">
-        <div class="card-cat-rating">
-          <span class="card-cat-tag">${product.category_name}</span>
-          <span class="card-rating-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            ${product.rating} (${product.reviews_count})
-          </span>
-        </div>
-
         <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
           ${product.title}
         </a>
 
         <div class="card-price-row">
-          <span class="card-price-now">${product.price_formatted}</span>
-          ${product.original_price > product.price ? `<span class="card-price-was">${product.original_price_formatted}</span>` : ''}
-          ${product.discount_percent > 0 ? `<span class="card-save-label">Save Rs. ${(product.original_price - product.price).toLocaleString('en-IN')}</span>` : ''}
-        </div>
-
-        <div class="card-actions-row">
-          <button type="button" class="card-add-btn" data-id="${product.id}">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            <span>Add to Cart</span>
-          </button>
-          <button type="button" class="card-buy-btn" onclick="window.location.href='product?handle=${product.handle}'">
-            <span>Buy Now</span>
-          </button>
+          ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
+          <span class="card-price-now">${priceFormatted}</span>
         </div>
       </div>
     `;
+
+    // Wishlist Toggle
+    const wishBtn = card.querySelector('.card-wishlist-btn');
+    if (wishBtn) {
+      wishBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        wishBtn.classList.toggle('liked');
+        const isLiked = wishBtn.classList.contains('liked');
+        wishBtn.querySelector('svg').setAttribute('fill', isLiked ? '#EF4444' : 'none');
+        wishBtn.querySelector('svg').setAttribute('stroke', isLiked ? '#EF4444' : 'currentColor');
+        if (window.showToast) {
+          window.showToast(isLiked ? 'Added to your Wishlist!' : 'Removed from Wishlist', 'heart');
+        }
+      });
+    }
 
     // Interactive Color Switcher on Card:
     // "we will keep the color change option but it will change whole the product image window, while keeping the descriptoin , even the product name will be stay same."

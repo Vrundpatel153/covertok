@@ -176,70 +176,67 @@
     <!-- Catalog Hero Section -->
     <section class="catalog-hero-section">
       <div class="section-container">
-        <div class="catalog-breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <a href="collections.html">Collections</a>
-          <span>/</span>
-          <span style="font-weight: 700; color: #171513;" id="catalogCategoryTitle">ALL PRODUCTS</span>
-        </div>
-
-        <div class="catalog-header-wrap">
-          <div>
-            <span class="catalog-badge-pill">COVERTOK CURATED CATALOG</span>
-            <h1 class="catalog-headline" id="catalogMainHeading">All Products & Collections</h1>
+        
+        <!-- Curated Lifestyle Hero Banner Matching Mockup -->
+        <div class="catalog-curated-banner">
+          <div class="catalog-curated-content">
+            <div class="catalog-breadcrumb">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <a href="collections.html">Collections</a>
+              <span>/</span>
+              <span class="catalog-breadcrumb-active" id="catalogCategoryTitle">Accessories</span>
+            </div>
+            <span class="catalog-curated-eyebrow">COVERTOK CURATED COLLECTION</span>
+            <h1 class="catalog-headline" id="catalogMainHeading">All Products &amp; <span class="copper-accent">Collections</span></h1>
             <p class="catalog-subtext" id="catalogCategoryDesc">
-              Explore 75+ authentic Covertok cases, Apple Watch protective armor bands, AirPods luxury shells, and everyday charging essentials.
+              Explore 75+ authentic Covertok cases, Apple Watch bands, AirPods essentials and everyday charging accessories — designed to match your style.
             </p>
           </div>
-          <div class="catalog-count-label" id="catalogCount">Showing 75 Products</div>
-        </div>
-
-        <!-- 3-Piece Combo Studio Banner -->
-        <div class="collections-combo-banner" style="background: linear-gradient(135deg, #171513 0%, #2A241C 100%); border: 1.5px solid #C5A059; border-radius: 16px; padding: 16px 22px; margin-bottom: 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; box-shadow: 0 8px 24px -4px rgba(197, 160, 89, 0.22);">
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(197, 160, 89, 0.16); border: 1px solid rgba(197, 160, 89, 0.45); display: flex; align-items: center; justify-content: center; color: #C5A059; flex-shrink: 0;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <div style="font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 800; color: #FFFFFF; display: flex; align-items: center; gap: 8px;">
-                <span>Custom 3-Piece Luxury Combo Deal</span>
-                <span style="font-size: 0.725rem; background: #C5A059; color: #090A0C; font-weight: 900; padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;">FLAT ₹1,199</span>
-              </div>
-              <div style="font-size: 0.825rem; color: #E2E8F0; margin-top: 2px;">
-                Choose any 3 items from Phone Cases, Watch Bands, Watch Covers, and Chargers for flat ₹1,199 — Save up to 60%!
-              </div>
-            </div>
+          <div class="catalog-curated-media">
+            <img src="assets/collections_hero_lifestyle.png" alt="Covertok Curated Lifestyle Accessories" class="catalog-curated-img">
           </div>
-          <a href="combo.html" class="btn btn-pill-dark" style="background: linear-gradient(135deg, #EACAA6 0%, #C5A059 100%); color: #090A0C; font-weight: 800; font-size: 0.85rem; padding: 10px 24px; border-radius: 999px; text-decoration: none; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);">
-            <span>Open Combo Studio &rarr;</span>
-          </a>
         </div>
 
-        <!-- 10-Category Switcher Pills Bar -->
-        <div class="catalog-nav-bar" id="catalogNavBar" role="tablist" aria-label="Collections Filter">
+        <!-- Category Preview Cards Navigation Track (6 Cards with Thumbnails) -->
+        <div class="catalog-cat-cards-track" id="catalogNavBar" role="tablist" aria-label="Collections Filter">
           <!-- Rendered dynamically by catalog.js -->
         </div>
 
-        <!-- Filter & Search Toolbar -->
+        <!-- Filter & Search Toolbar Matching Mockup -->
         <div class="catalog-toolbar">
-          <div class="catalog-search-inline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A98135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="catalog-search-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#786B61" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="catalogSearchInput" placeholder="Filter by product name, model, tag..." autocomplete="off">
+            <input type="text" id="catalogSearchInput" placeholder="Search for cases, chargers, bands..." autocomplete="off">
           </div>
 
-          <div class="catalog-sort-group">
-            <label for="catalogSortSelect" style="font-size: 0.825rem; font-weight: 700; color: #735238;">Sort By:</label>
-            <select class="catalog-select" id="catalogSortSelect">
-              <option value="featured">Featured / Best Sellers</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="rating">Customer Rating</option>
-              <option value="newest">New Arrivals</option>
-              <option value="title-az">Name: A to Z</option>
-            </select>
+          <div class="catalog-toolbar-right">
+            <div class="catalog-sort-group">
+              <span class="catalog-sort-label">Sort By:</span>
+              <select class="catalog-select" id="catalogSortSelect">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Customer Rating</option>
+                <option value="newest">New Arrivals</option>
+                <option value="title-az">Name: A to Z</option>
+              </select>
+            </div>
+
+            <button type="button" class="catalog-filters-btn" id="catalogFiltersToggleBtn" aria-label="Toggle Filters">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+              </svg>
+              <span>Filters</span>
+            </button>
+
+            <div class="catalog-count-label" id="catalogCount">Showing <span class="catalog-count-num">16</span> Products</div>
           </div>
         </div>
 

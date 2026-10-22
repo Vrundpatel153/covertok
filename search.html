@@ -223,24 +223,27 @@
     <section class="section-container" style="padding-top: 24px; padding-bottom: 72px;">
       <div class="page-container">
         <!-- Search Meta Toolbar -->
-        <div class="search-meta-bar">
-          <div class="search-count-text" id="searchResultCount">
-            Showing <strong id="countNumber">0</strong> luxury products
+        <div class="catalog-toolbar" style="margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <label for="searchSortSelect" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #735238;">Sort By:</label>
+            <div class="catalog-sort-select-wrap">
+              <select id="searchSortSelect" class="catalog-sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Customer Rating</option>
+                <option value="newest">New Arrivals</option>
+              </select>
+              <svg class="sort-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
           </div>
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <label for="searchSortSelect" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #475569;">Sort By:</label>
-            <select id="searchSortSelect" class="catalog-select" style="min-width: 170px;">
-              <option value="featured">Featured / Relevance</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="rating">Customer Rating</option>
-              <option value="newest">New Arrivals</option>
-            </select>
+          <div class="catalog-count-label" id="searchResultCount">
+            Showing <span class="catalog-count-num" id="countNumber">0</span> Products
           </div>
         </div>
 
         <!-- Products Grid Container -->
-        <div class="search-results-grid" id="searchResultsGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+        <div class="catalog-products-grid" id="searchResultsGrid">
           <!-- Rendered dynamically by javascript -->
         </div>
       </div>
@@ -526,11 +529,12 @@
         grid.innerHTML = list.map(product => {
           let badgeHtml = '';
           if (product.discount_percent > 0) {
-            badgeHtml = `<span class="card-badge badge-sale">-${product.discount_percent}%</span>`;
-          } else if (product.is_bestseller) {
-            badgeHtml = `<span class="card-badge badge-bestseller">BESTSELLER</span>`;
+            badgeHtml += `<span class="card-badge card-badge-discount">${product.discount_percent}% OFF</span>`;
+          }
+          if (product.is_bestseller) {
+            badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
           } else if (product.is_new) {
-            badgeHtml = `<span class="card-badge badge-new">NEW</span>`;
+            badgeHtml += `<span class="card-badge card-badge-new">NEW</span>`;
           }
 
           let swatchesHtml = '';
@@ -547,14 +551,20 @@
             swatchesHtml = `<div class="card-color-swatches" aria-label="Available Colors">${swatches}${more}</div>`;
           }
 
+          const priceFormatted = `Rs. ${Number(product.price).toLocaleString('en-IN')}.00`;
           const originalPriceHtml = product.original_price > product.price 
-            ? `<span class="card-price-was">${product.original_price_formatted}</span>` 
+            ? `Rs. ${Number(product.original_price).toLocaleString('en-IN')}.00` 
             : '';
 
           return `
-            <div class="catalog-product-card" data-product-id="${product.id}">
+            <div class="catalog-card" data-product-id="${product.id}">
               <div class="card-media-stage">
                 <div class="card-badges-row">${badgeHtml}</div>
+                <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
                 <div class="card-img-wrap" onclick="window.location.href='product?handle=${product.handle}'" style="cursor: pointer;">
                   <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
                 </div>
@@ -562,32 +572,13 @@
               </div>
 
               <div class="card-body-wrap">
-                <div class="card-cat-rating">
-                  <span class="card-cat-tag">${product.category_name || 'Accessories'}</span>
-                  <span class="card-rating-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    ${product.rating || '4.8'} (${product.reviews_count || '120'})
-                  </span>
-                </div>
-
                 <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
                   ${product.title}
                 </a>
 
                 <div class="card-price-row">
-                  <span class="card-price-now">${product.price_formatted}</span>
-                  ${originalPriceHtml}
-                  ${product.discount_percent > 0 ? `<span class="card-save-label">Save Rs. ${(product.original_price - product.price).toLocaleString('en-IN')}</span>` : ''}
-                </div>
-
-                <div class="card-actions-row">
-                  <button type="button" class="card-add-btn" data-id="${product.id}">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                    <span>Add to Cart</span>
-                  </button>
-                  <button type="button" class="card-buy-btn" onclick="window.location.href='product?handle=${product.handle}'">
-                    <span>View</span>
-                  </button>
+                  ${originalPriceHtml ? `<span class="card-price-was">${originalPriceHtml}</span>` : ''}
+                  <span class="card-price-now">${priceFormatted}</span>
                 </div>
               </div>
             </div>
@@ -598,7 +589,7 @@
         grid.querySelectorAll('.card-color-dot').forEach(dot => {
           dot.addEventListener('click', (e) => {
             e.stopPropagation();
-            const parent = dot.closest('.catalog-product-card');
+            const parent = dot.closest('.catalog-card');
             const cardImg = parent.querySelector('.card-main-img');
             parent.querySelectorAll('.card-color-dot').forEach(d => d.classList.remove('active'));
             dot.classList.add('active');

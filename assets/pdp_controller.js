@@ -1396,27 +1396,43 @@
 
     container.innerHTML = related.map(p => {
       const hasC = p.colors && p.colors.length > 1;
-      const img = p.primary_image || (hasC ? p.colors[0].image : '');
+      const initialImg = p.primary_image || (hasC ? p.colors[0].image : '');
+
+      let badgeHtml = '';
+      if (p.discount_percent > 0) {
+        badgeHtml += `<span class="card-badge card-badge-discount">${p.discount_percent}% OFF</span>`;
+      }
+      if (p.is_bestseller) {
+        badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
+      } else if (p.is_new) {
+        badgeHtml += `<span class="card-badge card-badge-new">NEW</span>`;
+      }
+
+      const priceFormatted = `Rs. ${Number(p.price).toLocaleString('en-IN')}.00`;
+      const origPriceFormatted = p.original_price && p.original_price > p.price 
+        ? `Rs. ${Number(p.original_price).toLocaleString('en-IN')}.00`
+        : '';
+
       return `
-        <div class="catalog-card" style="border-radius: 20px; background: rgba(255, 255, 255, 0.82); backdrop-filter: blur(14px); border: 1.5px solid rgba(226, 232, 240, 0.9); box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05); transition: all 0.25s ease;">
-          <div class="card-media-stage" style="padding: 16px; background: #FFFFFF; cursor: pointer;" onclick="window.location.href='product?handle=${p.handle}'">
-            <img src="${img}" alt="${p.title}" class="card-main-img" style="max-height: 180px; mix-blend-mode: multiply; filter: drop-shadow(0 12px 20px rgba(15, 23, 42, 0.06));">
-          </div>
-          <div class="card-body-wrap" style="padding: 14px 16px;">
-            <div class="card-cat-rating">
-              <span class="card-cat-tag">${p.category_name}</span>
-              <span class="card-rating-badge">${p.rating} ★</span>
+        <div class="catalog-card" data-id="${p.id}">
+          <div class="card-media-stage">
+            <div class="card-badges-row">${badgeHtml}</div>
+            <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist" onclick="event.stopPropagation(); this.classList.toggle('active');">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+            <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product?handle=${p.handle}'">
+              <img src="${initialImg}" alt="${p.title}" class="card-main-img" loading="lazy">
             </div>
-            <a href="product?handle=${p.handle}" class="card-product-title" style="font-size: 0.9rem; font-weight: 800; color: #0F172A; text-decoration: none;">
+          </div>
+          <div class="card-body-wrap">
+            <a href="product?handle=${p.handle}" class="card-product-title" title="${p.title}">
               ${p.title}
             </a>
-            <div class="card-price-row" style="margin-bottom: 10px;">
-              <span class="card-price-now" style="font-weight: 900; color: #0F172A;">${p.price_formatted}</span>
-            </div>
-            <div style="display: flex; gap: 8px; margin-top: 8px;">
-              <button type="button" class="btn btn-pill-outline" onclick="window.location.href='product?handle=${p.handle}'" style="flex: 1; text-align: center; font-size: 0.8rem; padding: 8px 12px; font-weight: 700; border-radius: 999px; background: #0F172A; color: #FFFFFF; border: none; cursor: pointer;">
-                BUY NOW
-              </button>
+            <div class="card-price-row">
+              ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
+              <span class="card-price-now">${priceFormatted}</span>
             </div>
           </div>
         </div>
