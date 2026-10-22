@@ -1,13 +1,13 @@
 /* ==========================================================================
    COVERTOK 3-PIECE COMBO STUDIO (combo.css)
-   Clean, Plain White Catalog UI with Direct Checkmark Checkbox Selection
+   Bespoke luxury catalog UI with discreet selection pill and sticky action bar
    ========================================================================== */
 
 /* --- Clean Canvas & Page Body --- */
 body.combo-page-canvas {
   background-color: #FFFFFF !important;
   color: #171513 !important;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif);
   margin: 0;
   padding: 0;
   padding-bottom: 96px; /* Space for sticky bottom bar */
@@ -34,54 +34,62 @@ body.combo-page-canvas {
 /* --- Catalog Card Combo Enhancements --- */
 .combo-catalog-card {
   position: relative;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.25s ease,
-              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.22s ease;
   cursor: pointer;
+  border-radius: 18px;
 }
 
-/* Selected state: refined gold ring border and soft glow */
+.combo-catalog-card:hover {
+  transform: translateY(-3px);
+  border-color: #D1D5DB;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+/* Selected state: refined obsidian border with clean depth */
 .combo-catalog-card.is-selected {
-  border: 2px solid #C5A059 !important;
-  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.22), 0 0 0 1px #C5A059 !important;
+  border-color: #171513 !important;
+  box-shadow: 0 0 0 1px #171513, 0 8px 24px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* --- Prominent Checkmark Checkbox Badge (Top-Right on Image Stage) --- */
+/* --- Discreet Selection Pill (Top-Right on Image Stage) --- */
 .combo-card-checkbox {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 10px;
+  right: 10px;
   z-index: 10;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #CBD5E1;
-  color: #94A3B8;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #171513;
   border-radius: 999px;
-  padding: 6px 10px;
-  min-height: 34px;
+  padding: 4px 10px;
+  min-height: 28px;
   cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
 }
 
 .combo-card-checkbox:hover {
-  border-color: #C5A059;
-  color: #C5A059;
-  transform: scale(1.05);
-  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.25);
+  border-color: #171513;
+  color: #171513;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .combo-check-circle {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 1.5px solid #CBD5E1;
+  border: 1.5px solid #94A3B8;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -97,19 +105,19 @@ body.combo-page-canvas {
 }
 
 .combo-checkbox-text {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #475569;
+  letter-spacing: 0.01em;
+  color: #1E293B;
   white-space: nowrap;
 }
 
 /* Active / Checked State */
 .combo-card-checkbox.checked {
   background: #171513;
-  border-color: #C5A059;
+  border-color: #171513;
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
 }
 
 .combo-card-checkbox.checked .combo-check-circle {
@@ -141,19 +149,19 @@ body.combo-page-canvas {
   display: none;
 }
 
-/* --- Clean Sticky Bottom Bar (Zero Mess, White Luxury) --- */
+/* --- Clean Sticky Bottom Floating Bar --- */
 .combo-sticky-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.98);
-  border-top: 1px solid #E2E8F0;
-  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 24px;
   transition: transform 0.3s ease;
 }
 
@@ -183,11 +191,12 @@ body.combo-page-canvas {
 .combo-slots-badge {
   font-family: var(--font-heading, 'Outfit', sans-serif);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #171513;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  letter-spacing: -0.01em;
 }
 
 .combo-dots-indicator {
@@ -197,57 +206,58 @@ body.combo-page-canvas {
 }
 
 .combo-dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   border: 1.5px solid #CBD5E1;
   background: #F1F5F9;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .combo-dot.filled {
-  background: #C5A059;
-  border-color: #C5A059;
-  box-shadow: 0 0 6px rgba(197, 160, 89, 0.5);
-  transform: scale(1.15);
+  background: #171513;
+  border-color: #171513;
+  transform: scale(1.1);
 }
 
 .combo-sticky-pricing {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  padding-left: 14px;
-  border-left: 1.5px solid #E2E8F0;
+  padding-left: 16px;
+  border-left: 1px solid #E2E8F0;
 }
 
 .combo-sticky-price-label {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: #64748B;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .combo-sticky-price {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 1.35rem;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: #171513;
   letter-spacing: -0.02em;
 }
 
 .combo-sticky-mrp {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: #94A3B8;
   text-decoration: line-through;
   font-weight: 600;
 }
 
 .combo-sticky-save {
-  font-size: 0.75rem;
-  font-weight: 800;
-  background: #DCFCE7;
-  color: #166534;
-  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #F0FDF4;
+  color: #15803D;
+  border: 1px solid #DCFCE7;
+  padding: 2px 7px;
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -284,33 +294,32 @@ body.combo-page-canvas {
   border-radius: 999px;
   border: none;
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 0.95rem;
-  font-weight: 800;
+  font-size: 0.9rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
 }
 
 /* Disabled state */
 .combo-sticky-checkout-btn:disabled {
-  background: #E2E8F0;
-  color: #94A3B8;
+  background: #E5E7EB;
+  color: #9CA3AF;
   cursor: not-allowed;
   box-shadow: none;
 }
 
 /* Enabled state (When all 3 items are selected) */
 .combo-sticky-checkout-btn:not(:disabled) {
-  background: linear-gradient(135deg, #171513 0%, #2A241C 100%);
+  background: #171513;
   color: #FFFFFF;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
 }
 
 .combo-sticky-checkout-btn:not(:disabled):hover {
-  background: linear-gradient(135deg, #C5A059 0%, #A98135 100%);
-  color: #090A0C;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.4);
+  background: #27272A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
 }
 
 /* --- Mobile Responsiveness --- */
@@ -321,6 +330,8 @@ body.combo-page-canvas {
 
   .combo-sticky-bar {
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
   }
 
   .combo-sticky-bar-inner {
@@ -344,8 +355,8 @@ body.combo-page-canvas {
   }
 
   .combo-slots-badge {
-    font-size: 0.85rem;
-    font-weight: 800;
+    font-size: 0.8125rem;
+    font-weight: 700;
     color: #171513;
   }
 
@@ -358,8 +369,8 @@ body.combo-page-canvas {
   }
 
   .combo-sticky-price {
-    font-size: 1.15rem;
-    font-weight: 900;
+    font-size: 1.1rem;
+    font-weight: 800;
     color: #171513;
   }
 
@@ -370,12 +381,13 @@ body.combo-page-canvas {
   }
 
   .combo-sticky-save {
-    font-size: 0.7rem;
+    font-size: 0.6875rem;
     padding: 2px 6px;
-    background: #DCFCE7;
-    color: #166534;
+    background: #F0FDF4;
+    color: #15803D;
+    border: 1px solid #DCFCE7;
     border-radius: 999px;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .combo-sticky-price-label {
@@ -407,7 +419,7 @@ body.combo-page-canvas {
     height: 44px;
     padding: 0 16px;
     font-size: 0.85rem;
-    font-weight: 800;
+    font-weight: 700;
     border-radius: 999px;
     display: flex;
     align-items: center;
@@ -421,18 +433,20 @@ body.combo-page-canvas {
   .combo-card-checkbox {
     top: 6px;
     right: 6px;
-    padding: 4px 8px;
-    min-height: 26px;
+    padding: 3px 8px;
+    min-height: 25px;
     gap: 4px;
+    border-width: 1px;
   }
 
   .combo-check-circle {
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
   }
 
   .combo-checkbox-text {
-    font-size: 0.6875rem;
+    font-size: 0.65rem;
+    font-weight: 700;
   }
 
   /* 2-column mobile grid spacing */

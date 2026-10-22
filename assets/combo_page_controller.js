@@ -243,7 +243,7 @@
       renderStickyBarUI();
       updateCardUI(sId);
       if (window.showToast) {
-        window.showToast(`Unchecked item from Slot ${existingSlot}`, 'trash');
+        window.showToast('Removed from combo', 'trash');
       }
       return;
     }
@@ -257,9 +257,9 @@
     if (emptySlot === null) {
       // All 3 filled
       if (window.showToast) {
-        window.showToast('All 3 combo slots are filled! Tap any checked item to uncheck and swap.', 'trash');
+        window.showToast('All 3 slots selected. Tap any chosen item to replace it.', 'trash');
       } else {
-        alert('All 3 items are selected! Tap any checked item to uncheck it.');
+        alert('All 3 slots are selected. Tap any chosen item to replace it.');
       }
       return;
     }
@@ -285,9 +285,9 @@
     const filled = getFilledCount();
     if (window.showToast) {
       if (filled === 3) {
-        window.showToast('🎉 All 3 items selected! Flat ₹1,199 Combo Deal Activated!', 'bag');
+        window.showToast('Suite complete — Flat ₹1,199 deal applied', 'bag');
       } else {
-        window.showToast(`Checked! (${filled}/3 items selected)`, 'bag');
+        window.showToast(`Added to combo (${filled} of 3)`, 'bag');
       }
     }
   };
@@ -298,7 +298,7 @@
     renderStickyBarUI();
     renderProductsGrid();
     if (window.showToast) {
-      window.showToast('All combo selections reset', 'trash');
+      window.showToast('Combo selections cleared', 'trash');
     }
   };
 
@@ -456,9 +456,8 @@
         </a>
 
         <div class="card-price-row">
-          <span class="card-price-now">₹${product.price}</span>
-          ${product.original_price > product.price ? `<span class="card-price-was">₹${product.original_price}</span>` : ''}
-          <span class="card-save-label" style="color: #C5A059; font-weight: 800;">Combo Eligible</span>
+          <span class="card-price-now">₹${Number(product.price).toLocaleString('en-IN')}</span>
+          ${product.original_price > product.price ? `<span class="card-price-was">₹${Number(product.original_price).toLocaleString('en-IN')}</span>` : ''}
         </div>
       </div>
     `;
@@ -514,7 +513,7 @@
     const badgeEl = document.getElementById('comboStickyBadge');
     if (badgeEl) {
       if (isReady) {
-        badgeEl.textContent = '3 of 3 Selected • Deal Ready! ★';
+        badgeEl.textContent = '3 of 3 Selected • Suite Complete';
       } else {
         badgeEl.textContent = `${filledCount} of 3 Selected`;
       }
@@ -555,8 +554,8 @@
       if (isReady) {
         addBtn.disabled = false;
         addBtn.innerHTML = `
-          <span class="combo-cta-desktop">Add 3-Piece Combo to Cart • ₹1,199</span>
-          <span class="combo-cta-mobile">Add Combo to Cart • ₹1,199</span>
+          <span class="combo-cta-desktop">Add 3-Piece Suite to Cart • ₹1,199</span>
+          <span class="combo-cta-mobile">Add Suite to Cart • ₹1,199</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
@@ -565,7 +564,7 @@
         addBtn.disabled = true;
         const remaining = 3 - filledCount;
         addBtn.innerHTML = `
-          <span class="combo-cta-desktop">Select ${remaining} More ${remaining === 1 ? 'Item' : 'Items'} for Combo (${filledCount}/3)</span>
+          <span class="combo-cta-desktop">Select ${remaining} More ${remaining === 1 ? 'Item' : 'Items'} (${filledCount}/3)</span>
           <span class="combo-cta-mobile">Select ${remaining} More (${filledCount}/3)</span>
         `;
       }
