@@ -326,25 +326,8 @@
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </span>
-        <span class="combo-checkbox-text">${isSelected ? `✓ Selected (${selectedSlot}/3)` : '+ Select'}</span>
+        <span class="combo-checkbox-text">${isSelected ? `<span class="combo-slot-full">Item ${selectedSlot} of 3</span><span class="combo-slot-short">Item ${selectedSlot}</span>` : '+ Select'}</span>
       `;
-    }
-
-    // Update Action Button
-    const toggleBtn = card.querySelector('.combo-toggle-btn');
-    if (toggleBtn) {
-      toggleBtn.classList.toggle('btn-checked', isSelected);
-      if (isSelected) {
-        toggleBtn.innerHTML = `
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>Selected (${selectedSlot}/3)</span>
-        `;
-      } else {
-        toggleBtn.innerHTML = `
-          <span class="combo-mini-box"></span>
-          <span>Select for Combo</span>
-        `;
-      }
     }
   }
 
@@ -449,7 +432,7 @@
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </span>
-          <span class="combo-checkbox-text">${isSelected ? `✓ Selected (${selectedSlot}/3)` : '+ Select'}</span>
+          <span class="combo-checkbox-text">${isSelected ? `<span class="combo-slot-full">Item ${selectedSlot} of 3</span><span class="combo-slot-short">Item ${selectedSlot}</span>` : '+ Select'}</span>
         </button>
 
         <div class="card-img-wrap">
@@ -477,40 +460,25 @@
           ${product.original_price > product.price ? `<span class="card-price-was">₹${product.original_price}</span>` : ''}
           <span class="card-save-label" style="color: #C5A059; font-weight: 800;">Combo Eligible</span>
         </div>
-
-        <div class="card-actions-row">
-          <button type="button" class="combo-toggle-btn ${isSelected ? 'btn-checked' : ''}" aria-label="Toggle combo item">
-            ${isSelected 
-              ? `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Selected (${selectedSlot}/3)</span>` 
-              : `<span class="combo-mini-box"></span><span>Select for Combo</span>`
-            }
-          </button>
-          <a href="product?handle=${product.handle || product.id}" class="card-buy-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;" title="View Details">
-            <span>Details</span>
-          </a>
-        </div>
       </div>
     `;
 
-    // Bind checkbox click
+    // Tap anywhere on card to toggle combo selection (except when clicking title link or color swatch dot)
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('.card-color-dot')) {
+        return;
+      }
+      window.toggleComboProduct(product.id);
+    });
+
+    // Checkbox button explicit click handler
     const checkboxBtn = card.querySelector('.combo-card-checkbox');
-    checkboxBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      window.toggleComboProduct(product.id);
-    });
-
-    // Bind action toggle button click
-    const toggleBtn = card.querySelector('.combo-toggle-btn');
-    toggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      window.toggleComboProduct(product.id);
-    });
-
-    // Clicking image area toggles checkbox for ultra-easy mobile usability
-    const imgWrap = card.querySelector('.card-img-wrap');
-    imgWrap.addEventListener('click', () => {
-      window.toggleComboProduct(product.id);
-    });
+    if (checkboxBtn) {
+      checkboxBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.toggleComboProduct(product.id);
+      });
+    }
 
     // Color Swatches interaction
     const imgEl = card.querySelector(`#cardImg_${product.id}`);
@@ -587,15 +555,18 @@
       if (isReady) {
         addBtn.disabled = false;
         addBtn.innerHTML = `
-          <span>Add 3-Piece Combo to Cart • ₹1,199</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <span class="combo-cta-desktop">Add 3-Piece Combo to Cart • ₹1,199</span>
+          <span class="combo-cta-mobile">Add Combo to Cart • ₹1,199</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         `;
       } else {
         addBtn.disabled = true;
+        const remaining = 3 - filledCount;
         addBtn.innerHTML = `
-          <span>Select ${3 - filledCount} More ${filledCount === 2 ? 'Item' : 'Items'} for Combo (${filledCount}/3)</span>
+          <span class="combo-cta-desktop">Select ${remaining} More ${remaining === 1 ? 'Item' : 'Items'} for Combo (${filledCount}/3)</span>
+          <span class="combo-cta-mobile">Select ${remaining} More (${filledCount}/3)</span>
         `;
       }
     }
