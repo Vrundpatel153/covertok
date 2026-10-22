@@ -1280,6 +1280,10 @@ img {
   color: #FFFFFF;
 }
 
+.hero-cta-inline-arrow {
+  display: none;
+}
+
 .hero-arrow-btn {
   margin: 0;
   width: 44px;
@@ -7061,9 +7065,9 @@ a.footer-contact-main:hover {
     display: block !important;
   }
 
-  /* Exact Mobile Hero Section */
+  /* Professional Mobile Hero Section (Modern Luxury E-Commerce Layout) */
   .hero-section {
-    padding: 10px 14px 18px !important;
+    padding: 8px 12px 14px !important;
     background: #FFFFFF !important;
     margin: 0 !important;
   }
@@ -7073,17 +7077,19 @@ a.footer-contact-main:hover {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    position: relative !important;
   }
 
   .hero-card {
-    min-height: 600px !important;
-    height: clamp(600px, 88vh, 740px) !important;
-    border-radius: 24px !important;
+    min-height: 460px !important;
+    max-height: 520px !important;
+    height: clamp(460px, 118vw, 510px) !important;
+    border-radius: 20px !important;
     clip-path: none !important;
     overflow: hidden !important;
     position: relative !important;
-    background: #101114 !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2) !important;
+    background: #0A0A0C !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18) !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
@@ -7127,13 +7133,21 @@ a.footer-contact-main:hover {
     visibility: visible !important;
   }
 
+  /* Smooth cinematic bottom gradient scrim: clear product focus at top 60%, dark luxury contrast for bottom 40% */
   .hero-mob-bg::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(8, 8, 10, 0.65) 0%, rgba(8, 8, 10, 0.3) 32%, rgba(8, 8, 10, 0) 55%);
-    pointer-events: none;
-    z-index: 2;
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 12, 0.08) 0%,
+      rgba(10, 10, 12, 0) 30%,
+      rgba(10, 10, 12, 0.5) 58%,
+      rgba(10, 10, 12, 0.88) 80%,
+      rgba(10, 10, 12, 0.98) 100%
+    ) !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
   }
 
   .hero-mob-img {
@@ -7142,7 +7156,7 @@ a.footer-contact-main:hover {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center top !important;
+    object-position: center 22% !important;
     display: block !important;
   }
 
@@ -7173,13 +7187,13 @@ a.footer-contact-main:hover {
     pointer-events: auto !important;
   }
 
-  /* Mobile Hero Content centered above the model/product subject */
+  /* Bottom-anchored editorial content stack: professional e-commerce layout */
   .hero-content {
     position: absolute !important;
-    top: 24px !important;
+    bottom: 84px !important;
     left: 16px !important;
     right: 16px !important;
-    bottom: auto !important;
+    top: auto !important;
     width: auto !important;
     max-width: 100% !important;
     z-index: 5 !important;
@@ -7191,18 +7205,18 @@ a.footer-contact-main:hover {
     pointer-events: auto !important;
   }
 
-  /* Sleek unboxed luxury typography eyebrow on mobile - centered */
+  /* Sleek luxury typography eyebrow on mobile */
   .hero-kicker {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 0.72rem !important;
+    font-size: 0.6875rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.18em !important;
+    letter-spacing: 0.16em !important;
     text-transform: uppercase !important;
     color: #C5A059 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
     background: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -7242,23 +7256,23 @@ a.footer-contact-main:hover {
     -webkit-text-fill-color: transparent !important;
     animation: heroKickerGleam 4.5s ease-in-out infinite 0.3s !important;
     will-change: background-position !important;
-    letter-spacing: 0.18em !important;
+    letter-spacing: 0.16em !important;
     font-weight: 800 !important;
   }
 
   /* Bold, rhythmic 2-line headline on mobile with natural breathing room - centered */
   .hero-headline {
     font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: clamp(1.4rem, 6.2vw, 2.1rem) !important;
+    font-size: clamp(1.3rem, 5.6vw, 1.7rem) !important;
     font-weight: 900 !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.02em !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.015em !important;
     text-transform: uppercase !important;
     margin: 0 !important;
     display: block !important;
     text-align: center !important;
     color: #FFFFFF !important;
-    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45) !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75) !important;
     max-width: 100% !important;
     width: 100% !important;
   }
@@ -7345,17 +7359,16 @@ a.footer-contact-main:hover {
     animation: heroStarFlare 5s ease-in-out infinite !important;
   }
 
-  /* Clean Bottom Bar docked to the bottom of the card on mobile - strictly NO WRAP */
+  /* Centered, Unified Mobile Action Bar (Single High-Converting CTA + Centered Dots) */
   .hero-bottom-bar {
     display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
     position: absolute !important;
-    bottom: 20px !important;
+    bottom: 16px !important;
     left: 16px !important;
     right: 16px !important;
-    justify-content: space-between !important;
-    align-items: center !important;
     z-index: 25 !important;
     pointer-events: none !important;
     box-sizing: border-box !important;
@@ -7368,74 +7381,66 @@ a.footer-contact-main:hover {
     bottom: auto !important;
     display: inline-flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    justify-content: center !important;
     pointer-events: auto !important;
-    flex-shrink: 0 !important;
+    width: auto !important;
+    gap: 0 !important;
   }
 
   .hero-contact-btn {
-    height: 42px !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    padding: 0 18px !important;
-    font-size: 0.72rem !important;
+    height: 44px !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+    padding: 0 26px !important;
+    font-size: 0.75rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.06em !important;
+    letter-spacing: 0.08em !important;
     background: #0E0F12 !important;
     color: #FFFFFF !important;
-    border: 1.5px solid rgba(197, 160, 89, 0.55) !important;
+    border: 1.5px solid rgba(197, 160, 89, 0.75) !important;
     border-radius: 999px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 14px rgba(197, 160, 89, 0.22) !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    gap: 8px !important;
     white-space: nowrap !important;
     text-decoration: none !important;
     box-sizing: border-box !important;
     line-height: 1 !important;
-    flex-shrink: 0 !important;
+    transition: transform 0.15s ease, background 0.15s ease !important;
   }
 
   .hero-contact-btn:active {
     transform: scale(0.96) !important;
+    background: #17181D !important;
   }
 
+  .hero-cta-inline-arrow {
+    display: inline-block !important;
+    stroke: #C5A059 !important;
+    margin-left: 2px !important;
+  }
+
+  /* Hide separate circular arrow on mobile to prevent duplicate button clutter */
   .hero-arrow-btn {
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
-    border-radius: 50% !important;
-    background: linear-gradient(135deg, #F5DFB8 0%, #D8AE66 50%, #B88937 100%) !important;
-    color: #0A0A0C !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-decoration: none !important;
-    box-shadow: 0 8px 20px rgba(216, 174, 102, 0.4) !important;
-    flex-shrink: 0 !important;
-    box-sizing: border-box !important;
-    pointer-events: auto !important;
+    display: none !important;
   }
 
-  .hero-arrow-btn:active {
-    transform: scale(0.92) !important;
-  }
-
-  /* Floating Glass Pagination Dock on mobile */
+  /* Centered minimalist pagination dots dock */
   .hero-pagination-pill {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 7px 12px !important;
+    padding: 5px 12px !important;
     border-radius: 999px !important;
-    background: rgba(18, 18, 20, 0.8) !important;
-    backdrop-filter: blur(14px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+    background: rgba(10, 10, 12, 0.65) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
     pointer-events: auto !important;
-    flex-shrink: 0 !important;
-    margin-left: auto !important;
+    margin: 0 auto !important;
   }
 
   .hero-nav-dots {
@@ -7448,7 +7453,7 @@ a.footer-contact-main:hover {
     width: 7px !important;
     height: 7px !important;
     border-radius: 50% !important;
-    background: #64748B !important;
+    background: rgba(255, 255, 255, 0.35) !important;
     border: none !important;
     padding: 0 !important;
     cursor: pointer !important;
@@ -7456,12 +7461,12 @@ a.footer-contact-main:hover {
   }
 
   .hero-dot.active {
-    width: 24px !important;
-    height: 9px !important;
+    width: 22px !important;
+    height: 7px !important;
     border-radius: 999px !important;
-    border: 1.5px solid #FFFFFF !important;
-    background: #111113 !important;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+    border: none !important;
+    background: #C5A059 !important;
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.6) !important;
   }
 
 

@@ -639,7 +639,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const syncHeroCta = (btnText, btnLink, idx = currentHeroIndex) => {
     if (heroDynamicCta && btnText) {
-      heroDynamicCta.textContent = btnText;
+      const textSpan = heroDynamicCta.querySelector('.hero-cta-text');
+      if (textSpan) {
+        textSpan.textContent = btnText;
+      } else {
+        heroDynamicCta.textContent = btnText;
+      }
       if (btnLink) heroDynamicCta.setAttribute('href', btnLink);
     }
     if (heroExploreArrow && btnLink) {
