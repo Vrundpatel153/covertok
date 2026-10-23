@@ -312,54 +312,36 @@
   function getColorGallery(product, color) {
     if (!product) return [];
 
-    // If product has no colors or only 1 color variant
-    if (!product.colors || product.colors.length <= 1) {
-      if (color && color.images && color.images.length > 0) return [...color.images];
+    // If product has multiple colors, the gallery MUST strictly contain ONLY images of that selected color
+    if (product.colors && product.colors.length > 1) {
+      if (color) {
+        let colorImgs = [];
+        if (Array.isArray(color.images) && color.images.length > 0) {
+          colorImgs = color.images.filter(Boolean);
+        } else if (color.image) {
+          colorImgs = [color.image];
+        }
+
+        if (colorImgs.length > 0) {
+          return Array.from(new Set(colorImgs));
+        }
+      }
+
       if (color && color.image) return [color.image];
-      if (product.images && product.images.length > 0) return [...product.images];
       return product.primary_image ? [product.primary_image] : [];
     }
 
-    // Identify ALL images that belong to OTHER colors
-    const otherColorImages = new Set();
-    product.colors.forEach(c => {
-      if (color && c.name !== color.name) {
-        if (c.image) otherColorImages.add(c.image);
-        if (Array.isArray(c.images)) {
-          c.images.forEach(img => otherColorImages.add(img));
-        }
-      }
-    });
-
-    let gallery = [];
-
-    // 1. Color's explicit primary and angle images
-    if (color) {
-      if (color.image && !gallery.includes(color.image)) {
-        gallery.push(color.image);
-      }
-      if (color.images && Array.isArray(color.images)) {
-        color.images.forEach(img => {
-          if (img && !gallery.includes(img)) gallery.push(img);
-        });
-      }
+    // Single-color or no-color product (e.g., power bank or cable)
+    if (color && Array.isArray(color.images) && color.images.length > 0) {
+      return Array.from(new Set(color.images.filter(Boolean)));
     }
-
-    // 2. Any shared / detail images in product.images that do NOT belong to any OTHER color variant
-    if (product.images && Array.isArray(product.images)) {
-      product.images.forEach(img => {
-        if (img && !otherColorImages.has(img) && !gallery.includes(img)) {
-          gallery.push(img);
-        }
-      });
+    if (color && color.image) {
+      return [color.image];
     }
-
-    if (!gallery.length) {
-      if (color && color.image) gallery.push(color.image);
-      else if (product.primary_image) gallery.push(product.primary_image);
+    if (Array.isArray(product.images) && product.images.length > 0) {
+      return Array.from(new Set(product.images.filter(Boolean)));
     }
-
-    return Array.from(new Set(gallery.filter(Boolean)));
+    return product.primary_image ? [product.primary_image] : [];
   }
 
   // Render Thumbnails Rail: Strictly shows ONLY the chosen color's image gallery below/beside the window

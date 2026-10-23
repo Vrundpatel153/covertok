@@ -14,7 +14,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=20261020_v4">
   <link rel="stylesheet" href="catalog.css?v=20261020_v4">
-  <link rel="stylesheet" href="pdp.css?v=20261020_v4">
+  <link rel="stylesheet" href="pdp.css?v=20261023_v3">
   <link rel="stylesheet" href="microinteractions.css?v=20261020_v4">
 
   <!-- Products Catalog Script -->
@@ -228,21 +228,8 @@
         <!-- LEFT: MEDIA GALLERY (Sticky on Desktop) -->
         <div class="pdp-gallery-col" id="pdpGalleryCol">
           <div class="pdp-gallery-wrap">
-            <!-- Vertical Thumbnails Rail (Default Color Gallery) -->
-            <div class="pdp-vertical-thumbs" id="pdpThumbnails" role="tablist" aria-label="Product thumbnails">
-              <button type="button" class="pdp-vthumb active" data-img="assets/products/9888955924778/2_50035509330218.webp" aria-label="Thumbnail 1">
-                <img src="assets/products/9888955924778/2_50035509330218.webp" alt="Black model view" loading="lazy">
-              </button>
-              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/1_50035509362986.webp" aria-label="Thumbnail 2">
-                <img src="assets/products/9888955924778/1_50035509362986.webp" alt="Front view with LED display" loading="lazy">
-              </button>
-              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/5_50035509231914.webp" aria-label="Thumbnail 3">
-                <img src="assets/products/9888955924778/5_50035509231914.webp" alt="Bottom port and edge view" loading="lazy">
-              </button>
-              <button type="button" class="pdp-vthumb" data-img="assets/products/9888955924778/6_50035509199146.webp" aria-label="Thumbnail 4">
-                <img src="assets/products/9888955924778/6_50035509199146.webp" alt="Side slim profile view" loading="lazy">
-              </button>
-            </div>
+            <!-- Vertical Thumbnails Rail (Rendered dynamically per color) -->
+            <div class="pdp-vertical-thumbs" id="pdpThumbnails" role="tablist" aria-label="Product thumbnails"></div>
 
             <!-- Main Showcase Stage -->
             <div class="pdp-main-stage" id="pdpMainStage">
@@ -964,7 +951,7 @@
   <script src="assets/store_core.js"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
-  <script src="assets/pdp_controller.js"></script>
+  <script src="assets/pdp_controller.js?v=20261023_v3"></script>
   <script src="assets/community_reviews_controller.js"></script>
 
   <script>
