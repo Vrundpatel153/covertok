@@ -732,19 +732,11 @@
           </div>
         </div>
 
-        <!-- ROW 2: Left (Category Filter Pills Track) | Right (Luxury Sort Dropdown) -->
+        <!-- ROW 2: Status Indicator | Luxury Sort Dropdown & Count -->
         <div class="discovery-row-secondary">
-          <div class="discovery-pills-wrap">
-            <div class="search-filter-pills" id="searchFilterPills">
-              <button type="button" class="filter-pill active" data-filter="all">All Items</button>
-              <button type="button" class="filter-pill" data-filter="iphone-cases">iPhone Covers</button>
-              <button type="button" class="filter-pill" data-filter="watchbands">Watch Bands</button>
-              <button type="button" class="filter-pill" data-filter="airpod-covers">AirPods Covers</button>
-              <button type="button" class="filter-pill" data-filter="charger-and-cables">Cables & Chargers</button>
-              <button type="button" class="filter-pill" data-filter="other-accessories">Accessories</button>
-              <button type="button" class="filter-pill" data-filter="bestseller">⭐ Bestsellers</button>
-              <button type="button" class="filter-pill" data-filter="under-999">Under ₹999</button>
-            </div>
+          <div class="catalog-discovery-status" id="discoveryStatusText">
+            <span class="status-dot"></span>
+            <span id="discoveryStatusLabel">Explore by Category Shelves</span>
           </div>
 
           <div class="discovery-meta-controls">
@@ -806,13 +798,10 @@
       </div>
     </header>
 
-    <!-- Search Results Section: Grid Starts Immediately Here -->
-    <section class="search-catalog-section" style="padding-top: 8px; padding-bottom: 72px;">
-      <div class="page-container">
-        <!-- Products Grid Container -->
-        <div class="catalog-products-grid" id="searchResultsGrid">
-          <!-- Rendered dynamically by javascript -->
-        </div>
+    <!-- Search & Category Shelves Section -->
+    <section class="search-catalog-section" style="padding-top: 14px; padding-bottom: 72px;">
+      <div class="page-container" id="catalogContentArea">
+        <!-- Rendered dynamically by javascript: Category Shelves OR Search Results Grid -->
       </div>
     </section>
 
@@ -997,14 +986,50 @@
 
       const input = document.getElementById('pageSearchInput');
       const clearBtn = document.getElementById('clearSearchBtn');
-      const pills = document.querySelectorAll('.filter-pill');
-      const grid = document.getElementById('searchResultsGrid');
-      const countEl = document.getElementById('countNumber');
+      const contentArea = document.getElementById('catalogContentArea');
       const sortSelect = document.getElementById('searchSortSelect');
       const sortDropdownWrap = document.getElementById('luxurySortDropdown');
       const sortTrigger = document.getElementById('sortDropdownTrigger');
       const sortSelectedLabel = document.getElementById('sortSelectedLabel');
       const sortOptions = document.querySelectorAll('.luxury-sort-option');
+      const heroTitle = document.getElementById('searchHeroTitle');
+      const heroSubtitle = document.getElementById('searchHeroSubtitle');
+      const countBadge = document.getElementById('searchCountBadge');
+      const metaCountBold = document.getElementById('catalogCountBold');
+      const discoveryStatusLabel = document.getElementById('discoveryStatusLabel');
+
+      const CATEGORY_ROWS = [
+        {
+          id: 'iphone-cases',
+          title: '📱 iPhone Luxury Covers',
+          tagline: 'Titanium, Leather, Magnetic & Suede',
+          filter: p => ['iphone-cases', 'mens-cover', 'womens-cover'].includes(p.category) || (p.collections && (p.collections.includes('iphone-cases') || p.collections.includes('mens-cover') || p.collections.includes('womens-cover')))
+        },
+        {
+          id: 'watchbands',
+          title: '⌚ Apple Watch Armor Bands',
+          tagline: 'Titanium Links, Ocean Silicone & Milanese Loop',
+          filter: p => p.category === 'watchbands' || (p.collections && p.collections.includes('watchbands'))
+        },
+        {
+          id: 'airpod-covers',
+          title: '🎧 AirPods & Power Armor Covers',
+          tagline: 'Shockproof Cases & Leather Pod Protectors',
+          filter: p => ['airpod-covers', 'charger-covers'].includes(p.category) || (p.collections && (p.collections.includes('airpod-covers') || p.collections.includes('charger-covers')))
+        },
+        {
+          id: 'charger-and-cables',
+          title: '⚡ Fast Chargers & High-Speed Cables',
+          tagline: 'GaN Rapid Power & Military-Grade Braided Lines',
+          filter: p => p.category === 'charger-and-cables' || (p.collections && p.collections.includes('charger-and-cables'))
+        },
+        {
+          id: 'other-accessories',
+          title: '✨ Everyday Tech Accessories & Charms',
+          tagline: '360° Magnetic Mounts, Lanyards & Luxury Accents',
+          filter: p => ['other-accessories', 'cover-charms'].includes(p.category) || (p.collections && (p.collections.includes('other-accessories') || p.collections.includes('cover-charms')))
+        }
+      ];
 
       const sortLabelsMap = {
         'featured': 'Featured / Best Sellers',
@@ -1072,7 +1097,263 @@
         });
       }
 
-      // Initialize from URL query parameters (e.g., search.html?q=iphone)
+      function sortProductList(list, sortKey) {
+        const copy = list.slice();
+        if (sortKey === 'price-low') {
+          copy.sort((a, b) => a.price - b.price);
+        } else if (sortKey === 'price-high') {
+          copy.sort((a, b) => b.price - a.price);
+        } else if (sortKey === 'rating') {
+          copy.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        } else if (sortKey === 'newest') {
+          copy.sort((a, b) => (b.is_new ? 1 : 0) - (a.is_new ? 1 : 0));
+        } else if (sortKey === 'title-az') {
+          copy.sort((a, b) => a.title.localeCompare(b.title));
+        }
+        return copy;
+      }
+
+      function renderCard(product) {
+        // Single clean micro-badge if discounted; no clutter over image
+        let badgeHtml = '';
+        if (product.discount_percent > 0) {
+          badgeHtml = `<span class="card-micro-badge">-${product.discount_percent}%</span>`;
+        }
+
+        let swatchesHtml = '';
+        if (product.has_colors && product.colors && product.colors.length > 0) {
+          const swatches = product.colors.slice(0, 4).map((c, i) => `
+            <button type="button" 
+              class="card-color-dot ${i === 0 ? 'active' : ''}" 
+              data-img="${c.image || product.primary_image}" 
+              style="background: ${c.hex};" 
+              title="${c.name}">
+            </button>
+          `).join('');
+          const more = product.colors.length > 4 ? `<span style="font-size: 0.6rem; font-weight: 700; color: #64748B;">+${product.colors.length - 4}</span>` : '';
+          swatchesHtml = `<div class="card-color-swatches" aria-label="Available Colors">${swatches}${more}</div>`;
+        }
+
+        const priceFormatted = `Rs. ${Number(product.price).toLocaleString('en-IN')}.00`;
+        const originalPriceHtml = product.original_price > product.price 
+          ? `<span class="card-price-was">Rs. ${Number(product.original_price).toLocaleString('en-IN')}.00</span>` 
+          : '';
+
+        return `
+          <div class="catalog-card" data-product-id="${product.id}">
+            <div class="card-media-stage">
+              ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
+              <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="card-img-wrap" onclick="window.location.href='product?handle=${product.handle}'" style="cursor: pointer;">
+                <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
+              </div>
+              ${swatchesHtml}
+            </div>
+
+            <div class="card-body-wrap">
+              <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
+                ${product.title}
+              </a>
+
+              <div class="card-price-row">
+                <span class="card-price-now">${priceFormatted}</span>
+                ${originalPriceHtml}
+                <span class="card-micro-rating">★ ${product.rating || '4.9'}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function escapeSearchText(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function filterAndRender() {
+        if (!products || !products.length) {
+          products = window.CovertokProducts || [];
+        }
+
+        if (!contentArea) return;
+
+        const q = activeQuery.toLowerCase().trim();
+
+        // 1. Search Query active: Render Search Results Grid
+        if (q) {
+          const terms = q.split(/\s+/);
+          let list = products.filter(p => {
+            const titleMatch = terms.every(t => p.title.toLowerCase().includes(t));
+            const catMatch = p.category_name && p.category_name.toLowerCase().includes(q);
+            const tagMatch = p.tags && p.tags.some(t => t.toLowerCase().includes(q));
+            const descMatch = p.description && p.description.toLowerCase().includes(q);
+            return titleMatch || catMatch || tagMatch || descMatch;
+          });
+
+          list = sortProductList(list, activeSort);
+
+          if (heroTitle) heroTitle.innerHTML = `Results for <span class="search-query-highlight">"${escapeSearchText(activeQuery)}"</span>`;
+          if (heroSubtitle) heroSubtitle.textContent = `${list.length} product${list.length === 1 ? '' : 's'} found`;
+          if (countBadge) countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}`;
+          if (metaCountBold) metaCountBold.textContent = list.length;
+          if (discoveryStatusLabel) discoveryStatusLabel.textContent = `Search: "${activeQuery}"`;
+
+          if (list.length === 0) {
+            contentArea.innerHTML = `
+              <div class="search-empty-state">
+                <div class="empty-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <h3 class="empty-title">No matching products found</h3>
+                <p class="empty-desc">
+                  We couldn't find any items matching "${escapeSearchText(activeQuery)}". Try searching for cases, bands, or chargers:
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px;">
+                  <button type="button" class="filter-pill" onclick="quickSearch('Titanium')">Titanium</button>
+                  <button type="button" class="filter-pill" onclick="quickSearch('Magnetic')">Magnetic Holder</button>
+                  <button type="button" class="filter-pill" onclick="quickSearch('AirPods')">AirPods</button>
+                  <button type="button" class="filter-pill" onclick="resetToCategoryRows()">Browse Category Rows</button>
+                </div>
+              </div>
+            `;
+            return;
+          }
+
+          contentArea.innerHTML = `
+            <div class="category-filter-banner">
+              <div class="banner-text">
+                Results for <strong>"${escapeSearchText(activeQuery)}"</strong> <span>(${list.length} Products)</span>
+              </div>
+              <button type="button" class="banner-reset-btn" onclick="resetToCategoryRows()">
+                ← Browse Category Rows
+              </button>
+            </div>
+            <div class="catalog-products-grid" id="searchResultsGrid">
+              ${list.map(p => renderCard(p)).join('')}
+            </div>
+          `;
+          return;
+        }
+
+        // 2. Specific Category active: Render that category's full grid
+        if (activeFilter !== 'all') {
+          const categoryObj = CATEGORY_ROWS.find(c => c.id === activeFilter);
+          let list = [];
+          if (categoryObj) {
+            list = products.filter(categoryObj.filter);
+          } else {
+            list = products.filter(p => p.category === activeFilter || (p.collections && p.collections.includes(activeFilter)));
+          }
+
+          list = sortProductList(list, activeSort);
+
+          const catTitle = categoryObj ? categoryObj.title : 'Category Items';
+          if (heroTitle) heroTitle.textContent = catTitle;
+          if (heroSubtitle) heroSubtitle.textContent = categoryObj ? categoryObj.tagline : `Showing ${list.length} products`;
+          if (countBadge) countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${list.length}</span> Products`;
+          if (metaCountBold) metaCountBold.textContent = list.length;
+          if (discoveryStatusLabel) discoveryStatusLabel.textContent = `Browsing: ${catTitle}`;
+
+          contentArea.innerHTML = `
+            <div class="category-filter-banner">
+              <div class="banner-text">
+                <strong>${catTitle}</strong> <span>(${list.length} Products)</span>
+              </div>
+              <button type="button" class="banner-reset-btn" onclick="resetToCategoryRows()">
+                ← Back to All Categories
+              </button>
+            </div>
+            <div class="catalog-products-grid" id="searchResultsGrid">
+              ${list.map(p => renderCard(p)).join('')}
+            </div>
+          `;
+          return;
+        }
+
+        // 3. Default Browse: Dedicated Rows per Each Category
+        if (heroTitle) heroTitle.textContent = 'Explore Collections';
+        if (heroSubtitle) heroSubtitle.textContent = '75+ Luxury cases, armor bands & tech essentials arranged by category';
+        if (countBadge) countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${products.length}</span> Products`;
+        if (metaCountBold) metaCountBold.textContent = products.length;
+        if (discoveryStatusLabel) discoveryStatusLabel.textContent = 'Explore by Category Shelves';
+
+        const shelvesHtml = CATEGORY_ROWS.map(cat => {
+          let catProducts = products.filter(cat.filter);
+          catProducts = sortProductList(catProducts, activeSort);
+          if (catProducts.length === 0) return '';
+          return `
+            <section class="category-shelf-section" data-shelf="${cat.id}">
+              <div class="shelf-header">
+                <div class="shelf-header-left">
+                  <h2 class="shelf-title">${cat.title}</h2>
+                  <span class="shelf-count-chip">${catProducts.length} Styles</span>
+                </div>
+                <button type="button" class="shelf-view-all-btn" onclick="viewCategoryAll('${cat.id}')">
+                  View All (${catProducts.length})
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+              <div class="shelf-cards-row">
+                ${catProducts.map(p => renderCard(p)).join('')}
+              </div>
+            </section>
+          `;
+        }).join('');
+
+        contentArea.innerHTML = shelvesHtml;
+      }
+
+      // Event delegation for Color Swatches and Wishlist on dynamic contentArea
+      if (contentArea) {
+        contentArea.addEventListener('click', (e) => {
+          // Color dot switcher
+          const dot = e.target.closest('.card-color-dot');
+          if (dot) {
+            e.stopPropagation();
+            const parent = dot.closest('.catalog-card');
+            if (parent) {
+              const cardImg = parent.querySelector('.card-main-img');
+              parent.querySelectorAll('.card-color-dot').forEach(d => d.classList.remove('active'));
+              dot.classList.add('active');
+              const newSrc = dot.getAttribute('data-img');
+              if (newSrc && cardImg) {
+                cardImg.style.opacity = '0.35';
+                cardImg.style.transform = 'scale(0.97)';
+                setTimeout(() => {
+                  cardImg.src = newSrc;
+                  cardImg.style.opacity = '1';
+                  cardImg.style.transform = 'scale(1)';
+                }, 120);
+              }
+            }
+            return;
+          }
+
+          // Wishlist button
+          const wishlistBtn = e.target.closest('.card-wishlist-btn');
+          if (wishlistBtn) {
+            e.stopPropagation();
+            wishlistBtn.classList.toggle('liked');
+            const isLiked = wishlistBtn.classList.contains('liked');
+            const svg = wishlistBtn.querySelector('svg');
+            if (svg) {
+              svg.setAttribute('fill', isLiked ? '#EF4444' : 'none');
+              svg.setAttribute('stroke', isLiked ? '#EF4444' : 'currentColor');
+            }
+            if (window.showToast) {
+              window.showToast(isLiked ? 'Added to your Wishlist!' : 'Removed from Wishlist', 'heart');
+            }
+            return;
+          }
+        });
+      }
+
+      // URL search params init
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.has('q')) {
         activeQuery = urlParams.get('q').trim();
@@ -1081,12 +1362,6 @@
       }
       if (urlParams.has('filter')) {
         activeFilter = urlParams.get('filter');
-        pills.forEach(p => {
-          if (p.getAttribute('data-filter') === activeFilter) {
-            pills.forEach(el => el.classList.remove('active'));
-            p.classList.add('active');
-          }
-        });
       }
       if (urlParams.has('sort')) {
         activeSort = urlParams.get('sort');
@@ -1095,253 +1370,7 @@
         updateSortDropdownUI('featured');
       }
 
-      function filterAndRender() {
-        if (!products || !products.length) {
-          products = window.CovertokProducts || [];
-        }
-        let list = products.slice();
-
-        // 1. Filter by Category / Pill
-        if (activeFilter !== 'all') {
-          if (activeFilter === 'bestseller') {
-            list = list.filter(p => p.is_bestseller);
-          } else if (activeFilter === 'under-999') {
-            list = list.filter(p => p.price <= 999);
-          } else {
-            list = list.filter(p => p.category === activeFilter || (p.collections && p.collections.includes(activeFilter)));
-          }
-        }
-
-        // 2. Filter by search query
-        const q = activeQuery.toLowerCase().trim();
-        if (q) {
-          const terms = q.split(/\s+/);
-          list = list.filter(p => {
-            const titleMatch = terms.every(t => p.title.toLowerCase().includes(t));
-            const catMatch = p.category_name && p.category_name.toLowerCase().includes(q);
-            const tagMatch = p.tags && p.tags.some(t => t.toLowerCase().includes(q));
-            const descMatch = p.description && p.description.toLowerCase().includes(q);
-            return titleMatch || catMatch || tagMatch || descMatch;
-          });
-        }
-
-        // 3. Sort
-        if (activeSort === 'price-low') {
-          list.sort((a, b) => a.price - b.price);
-        } else if (activeSort === 'price-high') {
-          list.sort((a, b) => b.price - a.price);
-        } else if (activeSort === 'rating') {
-          list.sort((a, b) => b.rating - a.rating);
-        } else if (activeSort === 'newest') {
-          list.sort((a, b) => (b.is_new ? 1 : 0) - (a.is_new ? 1 : 0));
-        } else if (activeSort === 'title-az') {
-          list.sort((a, b) => a.title.localeCompare(b.title));
-        }
-
-        // 4. Update dynamic structured title, subtitle & count
-        const heroTitle = document.getElementById('searchHeroTitle');
-        const heroSubtitle = document.getElementById('searchHeroSubtitle');
-
-        function escapeSearchText(str) {
-          return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-        }
-
-        if (activeQuery) {
-          if (heroTitle) {
-            heroTitle.innerHTML = `Results for <span class="search-query-highlight">"${escapeSearchText(activeQuery)}"</span>`;
-          }
-          if (heroSubtitle) {
-            heroSubtitle.textContent = `${list.length} product${list.length === 1 ? '' : 's'} found`;
-          }
-        } else if (activeFilter !== 'all') {
-          const filterNames = {
-            'iphone-cases': 'iPhone Covers',
-            'watchbands': 'Apple Watch Bands',
-            'airpod-covers': 'AirPods Covers',
-            'charger-and-cables': 'Cables & Chargers',
-            'other-accessories': 'Tech Accessories',
-            'bestseller': 'Bestselling Covers & Accessories',
-            'under-999': 'Items Under ₹999'
-          };
-          if (heroTitle) {
-            heroTitle.textContent = filterNames[activeFilter] || 'Curated Products';
-          }
-          if (heroSubtitle) {
-            heroSubtitle.textContent = `Showing ${list.length} item${list.length === 1 ? '' : 's'} in this collection`;
-          }
-        } else {
-          if (heroTitle) {
-            heroTitle.textContent = 'Search Products';
-          }
-          if (heroSubtitle) {
-            heroSubtitle.textContent = 'Explore 75+ luxury cases, watch bands & accessories';
-          }
-        }
-
-        const countBadge = document.getElementById('searchCountBadge');
-        if (countBadge) {
-          countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}`;
-        } else if (countEl) {
-          countEl.textContent = list.length;
-        }
-
-        const metaCountBold = document.getElementById('catalogCountBold');
-        if (metaCountBold) {
-          metaCountBold.textContent = list.length;
-        }
-
-        // 5. Render Products or Empty State
-        if (list.length === 0) {
-          grid.innerHTML = `
-            <div class="search-empty-state">
-              <div class="empty-icon">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </div>
-              <h3 class="empty-title">No matching products found</h3>
-              <p class="empty-desc">
-                We couldn't find any items matching "${activeQuery || activeFilter}". Try checking your spelling or explore these popular searches:
-              </p>
-              <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px;">
-                <button type="button" class="filter-pill" onclick="quickSearch('iPhone 15')">iPhone 15</button>
-                <button type="button" class="filter-pill" onclick="quickSearch('Titanium')">Titanium Bands</button>
-                <button type="button" class="filter-pill" onclick="quickSearch('Magnetic')">Magnetic Holder</button>
-                <button type="button" class="filter-pill" onclick="quickSearch('AirPods')">AirPods Covers</button>
-                <button type="button" class="filter-pill" onclick="quickSearch('Transparent')">Transparent Cases</button>
-                <button type="button" class="filter-pill" onclick="resetSearch()">Browse All Products</button>
-              </div>
-            </div>
-          `;
-          return;
-        }
-
-        grid.innerHTML = list.map(product => {
-          let badgeHtml = '';
-          if (product.discount_percent > 0) {
-            badgeHtml += `<span class="card-badge card-badge-discount">${product.discount_percent}% OFF</span>`;
-          }
-          if (product.is_bestseller) {
-            badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
-          } else if (product.is_new) {
-            badgeHtml += `<span class="card-badge card-badge-new">NEW</span>`;
-          }
-
-          let swatchesHtml = '';
-          if (product.has_colors && product.colors && product.colors.length > 0) {
-            const swatches = product.colors.slice(0, 5).map((c, i) => `
-              <button type="button" 
-                class="card-color-dot ${i === 0 ? 'active' : ''}" 
-                data-img="${c.image || product.primary_image}" 
-                style="background: ${c.hex};" 
-                title="${c.name}">
-              </button>
-            `).join('');
-            const more = product.colors.length > 5 ? `<span style="font-size: 0.65rem; font-weight: 700; color: #64748B;">+${product.colors.length - 5}</span>` : '';
-            swatchesHtml = `<div class="card-color-swatches" aria-label="Available Colors">${swatches}${more}</div>`;
-          }
-
-          const priceFormatted = `Rs. ${Number(product.price).toLocaleString('en-IN')}.00`;
-          const originalPriceHtml = product.original_price > product.price 
-            ? `Rs. ${Number(product.original_price).toLocaleString('en-IN')}.00` 
-            : '';
-
-          return `
-            <div class="catalog-card" data-product-id="${product.id}">
-              <div class="card-media-stage">
-                <div class="card-badges-row">${badgeHtml}</div>
-                <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                </button>
-                <div class="card-img-wrap" onclick="window.location.href='product?handle=${product.handle}'" style="cursor: pointer;">
-                  <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
-                </div>
-                ${swatchesHtml}
-              </div>
-
-              <div class="card-body-wrap">
-                <div class="card-cat-rating">
-                  <span class="card-cat-tag">${product.category_name || 'Covertok'}</span>
-                  <span class="card-rating-badge">★ ${product.rating || '4.9'}</span>
-                </div>
-                <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
-                  ${product.title}
-                </a>
-
-                <div class="card-price-row">
-                  ${originalPriceHtml ? `<span class="card-price-was">${originalPriceHtml}</span>` : ''}
-                  <span class="card-price-now">${priceFormatted}</span>
-                </div>
-              </div>
-            </div>
-          `;
-        }).join('');
-
-        // Attach color switcher handlers
-        grid.querySelectorAll('.card-color-dot').forEach(dot => {
-          dot.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const parent = dot.closest('.catalog-card');
-            const cardImg = parent.querySelector('.card-main-img');
-            parent.querySelectorAll('.card-color-dot').forEach(d => d.classList.remove('active'));
-            dot.classList.add('active');
-            const newSrc = dot.getAttribute('data-img');
-            if (newSrc && cardImg) {
-              cardImg.style.opacity = '0.35';
-              cardImg.style.transform = 'scale(0.97)';
-              setTimeout(() => {
-                cardImg.src = newSrc;
-                cardImg.style.opacity = '1';
-                cardImg.style.transform = 'scale(1)';
-              }, 120);
-            }
-          });
-        });
-
-        // Attach wishlist handlers
-        grid.querySelectorAll('.card-wishlist-btn').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            btn.classList.toggle('liked');
-            const isLiked = btn.classList.contains('liked');
-            const svg = btn.querySelector('svg');
-            if (svg) {
-              svg.setAttribute('fill', isLiked ? '#EF4444' : 'none');
-              svg.setAttribute('stroke', isLiked ? '#EF4444' : 'currentColor');
-            }
-            if (window.showToast) {
-              window.showToast(isLiked ? 'Added to your Wishlist!' : 'Removed from Wishlist', 'heart');
-            }
-          });
-        });
-
-        // Attach Add to Cart handlers
-        grid.querySelectorAll('.card-add-btn').forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const id = btn.getAttribute('data-id');
-            const p = products.find(item => String(item.id) === String(id));
-            if (!p) return;
-
-            if (window.CovertokStore && typeof window.CovertokStore.addToCart === 'function') {
-              window.CovertokStore.addToCart({
-                id: p.id,
-                title: p.title,
-                price: p.price,
-                price_formatted: p.price_formatted,
-                image: p.primary_image,
-                quantity: 1
-              });
-            } else if (window.CovertokFlows && typeof window.CovertokFlows.addToCart === 'function') {
-              window.CovertokFlows.addToCart(p.id);
-            }
-          });
-        });
-      }
-
-      // Event Listeners
+      // Search input handler
       let debounceTimeout = null;
       if (input) {
         input.addEventListener('input', (e) => {
@@ -1370,16 +1399,6 @@
           filterAndRender();
         });
       }
-
-      pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          pills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-          activeFilter = pill.getAttribute('data-filter');
-          updateUrlParams();
-          filterAndRender();
-        });
-      });
 
       if (sortSelect) {
         sortSelect.addEventListener('change', (e) => {
@@ -1411,16 +1430,24 @@
         filterAndRender();
       };
 
-      window.resetSearch = function() {
+      window.viewCategoryAll = function(catId) {
+        activeFilter = catId;
+        activeQuery = '';
         if (input) input.value = '';
         if (clearBtn) clearBtn.classList.remove('visible');
-        activeQuery = '';
-        activeFilter = 'all';
-        pills.forEach(p => p.classList.remove('active'));
-        const allPill = document.querySelector('.filter-pill[data-filter="all"]');
-        if (allPill) allPill.classList.add('active');
         updateUrlParams();
         filterAndRender();
+        window.scrollTo({ top: 180, behavior: 'smooth' });
+      };
+
+      window.resetToCategoryRows = function() {
+        activeFilter = 'all';
+        activeQuery = '';
+        if (input) input.value = '';
+        if (clearBtn) clearBtn.classList.remove('visible');
+        updateUrlParams();
+        filterAndRender();
+        window.scrollTo({ top: 180, behavior: 'smooth' });
       };
 
       // Initial execution
