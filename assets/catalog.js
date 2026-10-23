@@ -742,12 +742,84 @@
       });
     }
 
-    // 2. Sort select
+    // 2. Luxury Custom Sort Dropdown Controller
+    const catalogSortDropdown = document.getElementById('catalogSortDropdown');
+    const catalogSortTrigger = document.getElementById('catalogSortTrigger');
+    const catalogSortSelectedLabel = document.getElementById('catalogSortSelectedLabel');
+    const catalogSortOptions = document.querySelectorAll('#catalogSortDropdownMenu .luxury-sort-option');
+
+    const sortLabelsMap = {
+      'featured': 'Featured / Best Sellers',
+      'price-low': 'Price: Low to High',
+      'price-high': 'Price: High to Low',
+      'rating': 'Customer Rating',
+      'newest': 'New Arrivals',
+      'title-az': 'Name: A to Z'
+    };
+
+    function syncCustomSortUI(val) {
+      if (catalogSortSelectedLabel) {
+        catalogSortSelectedLabel.textContent = sortLabelsMap[val] || 'Featured / Best Sellers';
+      }
+      catalogSortOptions.forEach(opt => {
+        if (opt.getAttribute('data-value') === val) {
+          opt.classList.add('active');
+        } else {
+          opt.classList.remove('active');
+        }
+      });
+      if (sortSelect && sortSelect.value !== val) {
+        sortSelect.value = val;
+      }
+    }
+
     if (sortSelect) {
-      if (currentSort) sortSelect.value = currentSort;
+      if (currentSort) {
+        sortSelect.value = currentSort;
+        syncCustomSortUI(currentSort);
+      }
       sortSelect.addEventListener('change', (e) => {
         currentSort = e.target.value;
+        syncCustomSortUI(currentSort);
         filterAndRenderProducts();
+      });
+    }
+
+    if (catalogSortTrigger && catalogSortDropdown) {
+      catalogSortTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = catalogSortDropdown.classList.contains('open');
+        catalogSortDropdown.classList.toggle('open', !isOpen);
+        catalogSortTrigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      });
+
+      catalogSortOptions.forEach(opt => {
+        opt.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const val = opt.getAttribute('data-value');
+          if (val) {
+            currentSort = val;
+            syncCustomSortUI(val);
+            catalogSortDropdown.classList.remove('open');
+            catalogSortTrigger.setAttribute('aria-expanded', 'false');
+            filterAndRenderProducts();
+          }
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!catalogSortDropdown.contains(e.target)) {
+          catalogSortDropdown.classList.remove('open');
+          catalogSortTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && catalogSortDropdown.classList.contains('open')) {
+          catalogSortDropdown.classList.remove('open');
+          catalogSortTrigger.setAttribute('aria-expanded', 'false');
+          catalogSortTrigger.focus();
+        }
       });
     }
 

@@ -654,7 +654,7 @@
           </div>
 
           <div class="luxury-custom-sort" id="luxurySortWrap">
-            <span class="catalog-sort-label">Sort:</span>
+            <span class="catalog-sort-label">Sort By:</span>
             <div class="luxury-sort-dropdown" id="luxurySortDropdown">
               <button type="button" 
                 class="luxury-sort-trigger" 
@@ -662,14 +662,14 @@
                 aria-haspopup="listbox" 
                 aria-expanded="false" 
                 aria-label="Sort by">
-                <span class="sort-trigger-text" id="sortSelectedLabel">Featured</span>
+                <span class="sort-trigger-text" id="sortSelectedLabel">Featured / Best Sellers</span>
                 <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="6 9 12 15 18 9"/>
                 </svg>
               </button>
               <div class="luxury-sort-menu" id="sortDropdownMenu" role="listbox" aria-label="Sort options">
                 <div class="luxury-sort-option active" data-value="featured" role="option">
-                  <span class="option-label">Featured</span>
+                  <span class="option-label">Featured / Best Sellers</span>
                   <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <div class="luxury-sort-option" data-value="price-low" role="option">
@@ -688,14 +688,19 @@
                   <span class="option-label">New Arrivals</span>
                   <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
+                <div class="luxury-sort-option" data-value="title-az" role="option">
+                  <span class="option-label">Name: A to Z</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
               </div>
               <!-- Hidden native select for script synchronization -->
               <select id="searchSortSelect" style="display: none;" aria-hidden="true">
-                <option value="featured">Featured</option>
+                <option value="featured">Featured / Best Sellers</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Customer Rating</option>
                 <option value="newest">New Arrivals</option>
+                <option value="title-az">Name: A to Z</option>
               </select>
             </div>
           </div>
@@ -905,11 +910,12 @@
       const sortOptions = document.querySelectorAll('.luxury-sort-option');
 
       const sortLabelsMap = {
-        'featured': 'Featured',
+        'featured': 'Featured / Best Sellers',
         'price-low': 'Price: Low to High',
         'price-high': 'Price: High to Low',
         'rating': 'Customer Rating',
-        'newest': 'New Arrivals'
+        'newest': 'New Arrivals',
+        'title-az': 'Name: A to Z'
       };
 
       function updateSortDropdownUI(val) {
@@ -1031,6 +1037,8 @@
           list.sort((a, b) => b.rating - a.rating);
         } else if (activeSort === 'newest') {
           list.sort((a, b) => (b.is_new ? 1 : 0) - (a.is_new ? 1 : 0));
+        } else if (activeSort === 'title-az') {
+          list.sort((a, b) => a.title.localeCompare(b.title));
         }
 
         // 4. Update dynamic structured title, subtitle & count
