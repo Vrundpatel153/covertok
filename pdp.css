@@ -3555,3 +3555,10 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 }
 
+/* Float WhatsApp safely above mobile sticky action bar */
+@media (max-width: 768px) {
+  .floating-whatsapp-btn {
+    bottom: 84px !important;
+  }
+}
+

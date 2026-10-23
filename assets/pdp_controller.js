@@ -1083,13 +1083,13 @@
     const stickyAddBtn = document.getElementById('stickyAddBtn');
     const mainAddBtn = document.getElementById('pdpAddToCartBtn');
 
-    const formattedUnit = `Rs. ${unitPrice.toLocaleString('en-IN')}.00`;
-    const formattedTotal = `Rs. ${totalCurrent.toLocaleString('en-IN')}.00`;
+    const formattedUnit = `₹${Math.round(unitPrice).toLocaleString('en-IN')}`;
+    const formattedTotal = `₹${Math.round(totalCurrent).toLocaleString('en-IN')}`;
 
     if (priceDisplay) priceDisplay.textContent = formattedUnit;
     if (origPriceDisplay) {
       if (totalOriginal > totalCurrent) {
-        origPriceDisplay.textContent = `Rs. ${totalOriginal.toLocaleString('en-IN')}.00`;
+        origPriceDisplay.textContent = `₹${Math.round(totalOriginal).toLocaleString('en-IN')}`;
         origPriceDisplay.style.display = 'inline';
       } else {
         origPriceDisplay.style.display = 'none';
@@ -1100,7 +1100,7 @@
       const diff = totalOriginal - totalCurrent;
       if (diff > 0) {
         const pct = Math.round((diff / totalOriginal) * 100);
-        discountTag.textContent = `Save Rs. ${diff.toLocaleString('en-IN')}.00 (${pct}% OFF)`;
+        discountTag.textContent = `Save ₹${Math.round(diff).toLocaleString('en-IN')} (${pct}% OFF)`;
         discountTag.style.display = 'inline-block';
       } else {
         discountTag.style.display = 'none';
@@ -1154,7 +1154,7 @@
     if (summaryAddonsRow) {
       if (addonsSum > 0) {
         summaryAddonsRow.style.display = 'flex';
-        if (summaryAddonsPrice) summaryAddonsPrice.textContent = `+Rs. ${addonsSum.toLocaleString('en-IN')}.00`;
+        if (summaryAddonsPrice) summaryAddonsPrice.textContent = `+₹${Math.round(addonsSum).toLocaleString('en-IN')}`;
       } else {
         summaryAddonsRow.style.display = 'none';
       }

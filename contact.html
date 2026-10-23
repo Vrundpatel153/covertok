@@ -137,25 +137,51 @@
   <!-- Mobile Nav Overlay Drawer -->
   <div class="mobile-nav-drawer" id="mobileDrawer">
     <div class="mobile-nav-header">
-      <div class="brand-logo">
+      <a href="index.html" class="brand-logo" aria-label="Covertok Home">
         <img src="assets/covertok_luxury_logo.webp" alt="Covertok" class="logo-img">
-      </div>
-      <button class="close-btn" id="closeMobileDrawer">&times;</button>
+      </a>
+      <button type="button" class="close-btn" id="closeMobileDrawer" aria-label="Close Navigation Drawer">&times;</button>
     </div>
-    <ul class="mobile-nav-links">
-      <li><a href="index.html" class="mobile-link">HOME</a></li>
-      <li><a href="collections.html" class="mobile-link">ALL COLLECTIONS</a></li>
-      <li><a href="collections.html?cat=iphone-cases" class="mobile-link">PHONE CASES</a></li>
-      <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
-      <li><a href="about.html" class="mobile-link">ABOUT US</a></li>
-      <li><a href="contact.html" class="mobile-link active">CONTACT US</a></li>
-      <li><a href="privacy-policy.html" class="mobile-link">PRIVACY POLICY</a></li>
-      <li><a href="refund-policy.html" class="mobile-link">REFUND POLICY</a></li>
-      <li><a href="shipping-policy.html" class="mobile-link">SHIPPING POLICY</a></li>
-      <li><a href="terms-of-service.html" class="mobile-link">TERMS OF SERVICE</a></li>
-    </ul>
-    <div class="mobile-drawer-footer" style="display: flex; flex-direction: column; gap: 10px;">
-      <a href="contact.html" class="btn btn-dark full-width">CONTACT US</a>
+    <div class="mobile-nav-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-link">HOME</a></li>
+        <li><a href="collections.html" class="mobile-link">ALL COLLECTIONS</a></li>
+        <li><a href="collections.html?cat=iphone-cases" class="mobile-link">IPHONE COVERS</a></li>
+        <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
+        <li>
+          <a href="combo.html" class="mobile-link" style="color: #C5A059; font-weight: 800;">
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              3-PIECE COMBO
+            </span>
+            <span style="font-size: 0.68rem; font-weight: 800; background: #C5A059; color: #171513; padding: 2px 7px; border-radius: 999px;">₹1,199</span>
+          </a>
+        </li>
+        <li><a href="search.html" class="mobile-link">SEARCH PRODUCTS</a></li>
+        <li><a href="about.html" class="mobile-link">ABOUT US</a></li>
+        <li><a href="contact.html" class="mobile-link active">CONTACT US</a></li>
+      </ul>
+
+      <div class="mobile-drawer-policies">
+        <span class="mobile-policies-title">Legal &amp; Policies</span>
+        <div class="mobile-policies-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <span class="sep">•</span>
+          <a href="refund-policy.html">Refunds</a>
+          <span class="sep">•</span>
+          <a href="shipping-policy.html">Shipping</a>
+          <span class="sep">•</span>
+          <a href="terms-of-service.html">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="collections.html" class="btn btn-dark full-width">SHOP CATALOG</a>
+      <a href="contact.html" class="btn btn-outline full-width">CONTACT SUPPORT</a>
+      <div class="mobile-drawer-trust-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span>FREE EXPRESS SHIPPING ACROSS INDIA</span>
+      </div>
     </div>
   </div>
 
