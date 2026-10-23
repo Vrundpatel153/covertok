@@ -2634,6 +2634,10 @@ img {
   color: var(--text-muted, #7A7067);
 }
 
+.trust-title-desktop {
+  display: inline;
+}
+
 /* ==========================================================================
    GLOBAL LUXURY FOOTER (Shopify: sections/footer.liquid)
    Matching Official Covertok Luxury Brand Aesthetic
@@ -4202,29 +4206,62 @@ a.footer-contact-main:hover {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 8px;
   }
+  /* TRUST BANNER - SLEEK 1-ROW COMPACT STRIP ON MOBILE */
+  .trust-banner-section {
+    padding: 14px 0 !important;
+    background: #FAF7F2 !important;
+  }
+  .trust-banner-section .section-container {
+    padding: 0 10px !important;
+  }
   .trust-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 4px !important;
+    align-items: flex-start !important;
   }
-  .trust-card {
-    padding: 14px 10px;
-    text-align: center;
+  .trust-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 5px !important;
+    padding: 0 1px !important;
   }
-  .trust-card h4 {
-    font-size: 0.82rem;
+  .trust-icon {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 11px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(169, 129, 53, 0.22) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
-  .trust-card p {
-    font-size: 0.72rem;
+  .trust-icon svg {
+    width: 18px !important;
+    height: 18px !important;
   }
-  .cards-deck-container {
-    width: 100%;
-    max-width: 320px;
-    height: 380px;
-    margin: 0 auto;
+  .trust-info {
+    text-align: center !important;
+    width: 100% !important;
   }
-  .deck-card {
-    width: 270px;
-    height: 350px;
+  .trust-info h4 {
+    font-family: var(--font-heading, 'Outfit', sans-serif) !important;
+    font-weight: 700 !important;
+    font-size: 0.65rem !important; /* ~10.5px */
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    margin: 0 !important;
+    color: #171513 !important;
+    word-break: break-word !important;
+  }
+  .trust-info p,
+  .trust-title-desktop {
+    display: none !important;
   }
 
   /* FOOTER */
