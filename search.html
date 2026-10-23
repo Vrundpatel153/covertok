@@ -8,10 +8,324 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261021_v1">
-  <link rel="stylesheet" href="catalog.css?v=20261021_v1">
-  <link rel="stylesheet" href="pages.css?v=20261021_v1">
-  <link rel="stylesheet" href="microinteractions.css?v=20261021_v1">
+  <link rel="stylesheet" href="styles.css?v=20261023_v3">
+  <link rel="stylesheet" href="catalog.css?v=20261023_v3">
+  <link rel="stylesheet" href="pages.css?v=20261023_v3">
+  <link rel="stylesheet" href="microinteractions.css?v=20261023_v3">
+  <style>
+    /* Dedicated Luxury Search Styles */
+    .search-hero-wrap {
+      padding: 24px 0 20px;
+      text-align: center;
+    }
+
+    .search-hero-content {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .search-badge-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(197, 160, 89, 0.12);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      color: #936B24;
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .search-hero-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #171513;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0 0 6px 0;
+    }
+
+    .search-hero-title .search-query-highlight {
+      color: #C5A059;
+      font-weight: 800;
+    }
+
+    .search-hero-subtitle {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      color: #786B61;
+      margin: 0 auto 20px auto;
+      line-height: 1.5;
+      max-width: 520px;
+    }
+
+    /* Luxury Search Input Bar */
+    .search-input-box {
+      position: relative;
+      max-width: 580px;
+      margin: 0 auto 16px auto;
+    }
+
+    .search-input-box .search-input-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C5A059;
+      z-index: 2;
+    }
+
+    .search-input-box .search-page-input {
+      width: 100%;
+      height: 52px;
+      padding: 0 48px 0 50px;
+      border: 1.5px solid #E2DCD4;
+      border-radius: 999px;
+      background: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #171513;
+      outline: none;
+      box-sizing: border-box;
+      transition: all 0.22s ease;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .search-input-box .search-page-input::placeholder {
+      color: #9E948A;
+      font-weight: 400;
+    }
+
+    .search-input-box .search-page-input:focus {
+      border-color: #C5A059;
+      box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.18), 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .search-input-box .search-clear-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #EAE5DB;
+      color: #5C5249;
+      border: none;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.18s ease;
+    }
+
+    .search-input-box .search-clear-btn:hover {
+      background: #171513;
+      color: #FFFFFF;
+    }
+
+    .search-input-box .search-clear-btn.visible {
+      display: flex;
+    }
+
+    /* Filter Pills */
+    .search-filter-pills {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      max-width: 720px;
+    }
+
+    .filter-pill {
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1.5px solid #E2DCD4;
+      background: #FFFFFF;
+      color: #5C5249;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .filter-pill:hover {
+      border-color: #C5A059;
+      color: #171513;
+    }
+
+    .filter-pill.active {
+      background: #171513;
+      color: #FFFFFF;
+      border-color: #171513;
+      box-shadow: 0 4px 12px rgba(23, 21, 19, 0.16);
+    }
+
+    /* Breadcrumbs Force Row */
+    .page-breadcrumb {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #786B61 !important;
+      margin: 12px 0 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+    }
+
+    .page-breadcrumb a {
+      color: #786B61 !important;
+      text-decoration: none !important;
+    }
+
+    .page-breadcrumb a:hover {
+      color: #C5A059 !important;
+    }
+
+    .page-breadcrumb .crumb-sep {
+      color: #CBD5E1 !important;
+    }
+
+    .page-breadcrumb .crumb-current {
+      color: #171513 !important;
+    }
+
+    /* Toolbar Styling */
+    .catalog-toolbar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 16px !important;
+      margin-bottom: 24px !important;
+      padding-bottom: 14px !important;
+      border-bottom: 1px solid #EFEAE2 !important;
+      flex-wrap: wrap !important;
+    }
+
+    .catalog-sort-group {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+    }
+
+    .catalog-sort-label {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      color: #5C5249 !important;
+      white-space: nowrap !important;
+    }
+
+    .catalog-sort-select-wrap {
+      position: relative !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+
+    .catalog-select {
+      appearance: none !important;
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      padding: 8px 36px 8px 16px !important;
+      border-radius: 999px !important;
+      border: 1.5px solid #E2DCD4 !important;
+      background: #FFFFFF !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #171513 !important;
+      cursor: pointer !important;
+      outline: none !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .catalog-select:hover,
+    .catalog-select:focus {
+      border-color: #C5A059 !important;
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.16) !important;
+    }
+
+    .sort-chevron-icon {
+      position: absolute !important;
+      right: 12px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      pointer-events: none !important;
+      color: #786B61 !important;
+    }
+
+    .catalog-count-label {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.84rem !important;
+      font-weight: 600 !important;
+      color: #786B61 !important;
+      white-space: nowrap !important;
+    }
+
+    .catalog-count-num {
+      font-weight: 800 !important;
+      color: #171513 !important;
+    }
+
+    @media (max-width: 680px) {
+      .search-hero-title {
+        font-size: 1.45rem;
+      }
+      .search-hero-subtitle {
+        font-size: 0.82rem;
+        margin-bottom: 14px;
+      }
+      .search-hero-wrap {
+        padding: 16px 0 14px;
+      }
+      .search-input-box .search-page-input {
+        height: 46px;
+        font-size: 0.9rem;
+        padding: 0 42px 0 44px;
+      }
+      .search-filter-pills {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 4px 8px;
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      .search-filter-pills::-webkit-scrollbar {
+        display: none;
+      }
+      .catalog-toolbar {
+        gap: 10px !important;
+      }
+    }
+  </style>
 </head>
 <body class="page-canvas">
 
@@ -172,20 +486,20 @@
       </nav>
     </div>
 
-    <!-- Page Hero with Interactive Search Bar -->
-    <section class="page-hero-section" style="padding-bottom: 28px;">
+    <!-- Structured Luxury Search Header -->
+    <section class="search-hero-wrap">
       <div class="page-container">
-        <div class="page-hero-inner" style="max-width: 820px; margin: 0 auto; text-align: center;">
-          <span class="page-hero-pill">COVERTOK PRODUCT DISCOVERY</span>
-          <h1 class="page-hero-title">Search Our Catalog</h1>
-          <p class="page-hero-desc">
-            Explore 75+ precision-engineered iPhone cases, aerospace titanium watch bands, AirPods covers, and fast chargers.
+        <div class="search-hero-content">
+          <span class="search-badge-eyebrow">DISCOVERY &amp; SEARCH</span>
+          <h1 class="search-hero-title" id="searchHeroTitle">Search Products</h1>
+          <p class="search-hero-subtitle" id="searchHeroSubtitle">
+            Explore 75+ luxury cases, watch bands &amp; accessories
           </p>
 
-          <!-- Large Search Input Bar -->
-          <div style="position: relative; max-width: 680px; margin: 32px auto 0;">
+          <!-- Search Input Box -->
+          <div class="search-input-box">
             <div class="search-input-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
@@ -495,7 +809,46 @@
           list.sort((a, b) => (b.is_new ? 1 : 0) - (a.is_new ? 1 : 0));
         }
 
-        // 4. Render Count
+        // 4. Update dynamic structured title, subtitle & count
+        const heroTitle = document.getElementById('searchHeroTitle');
+        const heroSubtitle = document.getElementById('searchHeroSubtitle');
+
+        function escapeSearchText(str) {
+          return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        if (activeQuery) {
+          if (heroTitle) {
+            heroTitle.innerHTML = `Results for <span class="search-query-highlight">"${escapeSearchText(activeQuery)}"</span>`;
+          }
+          if (heroSubtitle) {
+            heroSubtitle.textContent = `${list.length} product${list.length === 1 ? '' : 's'} found`;
+          }
+        } else if (activeFilter !== 'all') {
+          const filterNames = {
+            'iphone-cases': 'iPhone Covers',
+            'watchbands': 'Apple Watch Bands',
+            'airpod-covers': 'AirPods Covers',
+            'charger-and-cables': 'Cables & Chargers',
+            'other-accessories': 'Tech Accessories',
+            'bestseller': 'Bestselling Covers & Accessories',
+            'under-999': 'Items Under ₹999'
+          };
+          if (heroTitle) {
+            heroTitle.textContent = filterNames[activeFilter] || 'Curated Products';
+          }
+          if (heroSubtitle) {
+            heroSubtitle.textContent = `Showing ${list.length} item${list.length === 1 ? '' : 's'} in this collection`;
+          }
+        } else {
+          if (heroTitle) {
+            heroTitle.textContent = 'Search Products';
+          }
+          if (heroSubtitle) {
+            heroSubtitle.textContent = 'Explore 75+ luxury cases, watch bands & accessories';
+          }
+        }
+
         if (countEl) countEl.textContent = list.length;
 
         // 5. Render Products or Empty State
