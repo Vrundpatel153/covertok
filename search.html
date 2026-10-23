@@ -164,15 +164,13 @@
 
   <main id="mainContent">
     <!-- Breadcrumb -->
-    <nav class="page-breadcrumb-nav" aria-label="Breadcrumb">
-      <div class="page-container">
-        <ol class="page-breadcrumb-list">
-          <li class="page-breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="page-breadcrumb-separator">/</li>
-          <li class="page-breadcrumb-item current" aria-current="page">Search Products</li>
-        </ol>
-      </div>
-    </nav>
+    <div class="page-container" style="padding-top: 14px; padding-bottom: 0;">
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">Search Products</span>
+      </nav>
+    </div>
 
     <!-- Page Hero with Interactive Search Bar -->
     <section class="page-hero-section" style="padding-bottom: 28px;">
@@ -205,7 +203,7 @@
           </div>
 
           <!-- Quick Filter Pills -->
-          <div class="search-filter-pills" id="searchFilterPills" style="justify-content: center; margin-top: 22px;">
+          <div class="search-filter-pills" id="searchFilterPills">
             <button type="button" class="filter-pill active" data-filter="all">All Items</button>
             <button type="button" class="filter-pill" data-filter="iphone-cases">iPhone Covers</button>
             <button type="button" class="filter-pill" data-filter="watchbands">Watch Bands</button>
@@ -224,17 +222,17 @@
       <div class="page-container">
         <!-- Search Meta Toolbar -->
         <div class="catalog-toolbar" style="margin-bottom: 24px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <label for="searchSortSelect" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.84rem; font-weight: 700; color: #735238;">Sort By:</label>
+          <div class="catalog-sort-group">
+            <label for="searchSortSelect" class="catalog-sort-label">Sort By:</label>
             <div class="catalog-sort-select-wrap">
-              <select id="searchSortSelect" class="catalog-sort-select">
+              <select id="searchSortSelect" class="catalog-select" aria-label="Sort products">
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Customer Rating</option>
                 <option value="newest">New Arrivals</option>
               </select>
-              <svg class="sort-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="sort-chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </div>
           <div class="catalog-count-label" id="searchResultCount">
@@ -560,7 +558,7 @@
             <div class="catalog-card" data-product-id="${product.id}">
               <div class="card-media-stage">
                 <div class="card-badges-row">${badgeHtml}</div>
-                <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist" onclick="event.stopPropagation(); this.classList.toggle('active');">
+                <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                   </svg>
@@ -572,6 +570,10 @@
               </div>
 
               <div class="card-body-wrap">
+                <div class="card-cat-rating">
+                  <span class="card-cat-tag">${product.category_name || 'Covertok'}</span>
+                  <span class="card-rating-badge">★ ${product.rating || '4.9'}</span>
+                </div>
                 <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
                   ${product.title}
                 </a>
@@ -594,7 +596,32 @@
             parent.querySelectorAll('.card-color-dot').forEach(d => d.classList.remove('active'));
             dot.classList.add('active');
             const newSrc = dot.getAttribute('data-img');
-            if (newSrc && cardImg) cardImg.src = newSrc;
+            if (newSrc && cardImg) {
+              cardImg.style.opacity = '0.35';
+              cardImg.style.transform = 'scale(0.97)';
+              setTimeout(() => {
+                cardImg.src = newSrc;
+                cardImg.style.opacity = '1';
+                cardImg.style.transform = 'scale(1)';
+              }, 120);
+            }
+          });
+        });
+
+        // Attach wishlist handlers
+        grid.querySelectorAll('.card-wishlist-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.classList.toggle('liked');
+            const isLiked = btn.classList.contains('liked');
+            const svg = btn.querySelector('svg');
+            if (svg) {
+              svg.setAttribute('fill', isLiked ? '#EF4444' : 'none');
+              svg.setAttribute('stroke', isLiked ? '#EF4444' : 'currentColor');
+            }
+            if (window.showToast) {
+              window.showToast(isLiked ? 'Added to your Wishlist!' : 'Removed from Wishlist', 'heart');
+            }
           });
         });
 

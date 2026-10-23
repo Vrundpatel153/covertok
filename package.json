@@ -5,8 +5,8 @@
   "description": "Covertok - Colorful, Trendy & Protective Mobile Covers & Accessories",
   "main": "index.html",
   "scripts": {
-    "start": "npx -y serve .",
-    "dev": "npx -y serve .",
+    "start": "node dev_server.js",
+    "dev": "node dev_server.js",
     "build": "echo 'Static assets ready for deployment'"
   },
   "keywords": [
