@@ -224,10 +224,132 @@
       flex-wrap: wrap !important;
     }
 
-    .catalog-sort-group {
+    /* Fully Themed Luxury Sort Dropdown */
+    .luxury-custom-sort {
       display: flex !important;
       align-items: center !important;
-      gap: 8px !important;
+      gap: 10px !important;
+    }
+
+    .luxury-sort-dropdown {
+      position: relative !important;
+      display: inline-block !important;
+      user-select: none !important;
+    }
+
+    .luxury-sort-trigger {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      padding: 8px 18px !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid #E2DCD4 !important;
+      border-radius: 999px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.84rem !important;
+      font-weight: 600 !important;
+      color: #171513 !important;
+      cursor: pointer !important;
+      outline: none !important;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .luxury-sort-trigger:hover {
+      border-color: #C5A059 !important;
+      background: #FAF8F5 !important;
+      box-shadow: 0 2px 8px rgba(197, 160, 89, 0.12) !important;
+    }
+
+    .luxury-sort-dropdown.open .luxury-sort-trigger,
+    .luxury-sort-trigger:focus-visible {
+      border-color: #C5A059 !important;
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2) !important;
+      background: #FFFFFF !important;
+    }
+
+    .sort-trigger-text {
+      white-space: nowrap !important;
+    }
+
+    .sort-trigger-icon {
+      color: #786B61 !important;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease !important;
+    }
+
+    .luxury-sort-dropdown.open .sort-trigger-icon {
+      transform: rotate(180deg) !important;
+      color: #C5A059 !important;
+    }
+
+    /* Floating Dropdown Menu Card */
+    .luxury-sort-menu {
+      position: absolute !important;
+      top: calc(100% + 8px) !important;
+      left: 0 !important;
+      min-width: 195px !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid #EAE5DB !important;
+      border-radius: 16px !important;
+      padding: 6px !important;
+      box-shadow: 0 14px 34px rgba(23, 21, 19, 0.14), 0 3px 10px rgba(0, 0, 0, 0.04) !important;
+      z-index: 100 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(-6px) scale(0.97) !important;
+      transform-origin: top left !important;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                  visibility 0.2s !important;
+      pointer-events: none !important;
+    }
+
+    .luxury-sort-dropdown.open .luxury-sort-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) scale(1) !important;
+      pointer-events: auto !important;
+    }
+
+    .luxury-sort-option {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 12px !important;
+      padding: 9px 14px !important;
+      border-radius: 10px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.84rem !important;
+      font-weight: 600 !important;
+      color: #4A443E !important;
+      cursor: pointer !important;
+      transition: all 0.16s ease !important;
+    }
+
+    .luxury-sort-option:hover {
+      background: #FAF7F2 !important;
+      color: #171513 !important;
+    }
+
+    .luxury-sort-option.active {
+      background: #171513 !important;
+      color: #FFFFFF !important;
+    }
+
+    .luxury-sort-option .option-check {
+      display: none !important;
+      color: #C5A059 !important;
+      flex-shrink: 0 !important;
+    }
+
+    .luxury-sort-option.active .option-check {
+      display: block !important;
+      color: #C5A059 !important;
+    }
+
+    .luxury-sort-option.active:hover {
+      background: #272522 !important;
+      color: #FFFFFF !important;
     }
 
     .catalog-sort-label {
@@ -236,45 +358,6 @@
       font-weight: 700 !important;
       color: #5C5249 !important;
       white-space: nowrap !important;
-    }
-
-    .catalog-sort-select-wrap {
-      position: relative !important;
-      display: inline-flex !important;
-      align-items: center !important;
-    }
-
-    .catalog-select {
-      appearance: none !important;
-      -webkit-appearance: none !important;
-      -moz-appearance: none !important;
-      padding: 8px 36px 8px 16px !important;
-      border-radius: 999px !important;
-      border: 1.5px solid #E2DCD4 !important;
-      background: #FFFFFF !important;
-      font-family: 'Plus Jakarta Sans', sans-serif !important;
-      font-size: 0.82rem !important;
-      font-weight: 600 !important;
-      color: #171513 !important;
-      cursor: pointer !important;
-      outline: none !important;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-      transition: all 0.2s ease !important;
-    }
-
-    .catalog-select:hover,
-    .catalog-select:focus {
-      border-color: #C5A059 !important;
-      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.16) !important;
-    }
-
-    .sort-chevron-icon {
-      position: absolute !important;
-      right: 12px !important;
-      top: 50% !important;
-      transform: translateY(-50%) !important;
-      pointer-events: none !important;
-      color: #786B61 !important;
     }
 
     .catalog-count-label {
@@ -534,19 +617,52 @@
     <!-- Search Results Section -->
     <section class="section-container" style="padding-top: 24px; padding-bottom: 72px;">
       <div class="page-container">
-        <!-- Search Meta Toolbar -->
+        <!-- Search Meta Toolbar with Fully Themed Luxury Sort Dropdown -->
         <div class="catalog-toolbar" style="margin-bottom: 24px;">
-          <div class="catalog-sort-group">
-            <label for="searchSortSelect" class="catalog-sort-label">Sort By:</label>
-            <div class="catalog-sort-select-wrap">
-              <select id="searchSortSelect" class="catalog-select" aria-label="Sort products">
+          <div class="luxury-custom-sort" id="luxurySortWrap">
+            <span class="catalog-sort-label">Sort By:</span>
+            <div class="luxury-sort-dropdown" id="luxurySortDropdown">
+              <button type="button" 
+                class="luxury-sort-trigger" 
+                id="sortDropdownTrigger" 
+                aria-haspopup="listbox" 
+                aria-expanded="false" 
+                aria-label="Sort by">
+                <span class="sort-trigger-text" id="sortSelectedLabel">Featured</span>
+                <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="luxury-sort-menu" id="sortDropdownMenu" role="listbox" aria-label="Sort options">
+                <div class="luxury-sort-option active" data-value="featured" role="option">
+                  <span class="option-label">Featured</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="price-low" role="option">
+                  <span class="option-label">Price: Low to High</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="price-high" role="option">
+                  <span class="option-label">Price: High to Low</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="rating" role="option">
+                  <span class="option-label">Customer Rating</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="newest" role="option">
+                  <span class="option-label">New Arrivals</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+              </div>
+              <!-- Hidden native select for script synchronization -->
+              <select id="searchSortSelect" style="display: none;" aria-hidden="true">
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Customer Rating</option>
                 <option value="newest">New Arrivals</option>
               </select>
-              <svg class="sort-chevron-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </div>
           <div class="catalog-count-label" id="searchResultCount">
@@ -746,6 +862,75 @@
       const grid = document.getElementById('searchResultsGrid');
       const countEl = document.getElementById('countNumber');
       const sortSelect = document.getElementById('searchSortSelect');
+      const sortDropdownWrap = document.getElementById('luxurySortDropdown');
+      const sortTrigger = document.getElementById('sortDropdownTrigger');
+      const sortSelectedLabel = document.getElementById('sortSelectedLabel');
+      const sortOptions = document.querySelectorAll('.luxury-sort-option');
+
+      const sortLabelsMap = {
+        'featured': 'Featured',
+        'price-low': 'Price: Low to High',
+        'price-high': 'Price: High to Low',
+        'rating': 'Customer Rating',
+        'newest': 'New Arrivals'
+      };
+
+      function updateSortDropdownUI(val) {
+        if (sortSelectedLabel) {
+          sortSelectedLabel.textContent = sortLabelsMap[val] || 'Featured';
+        }
+        sortOptions.forEach(opt => {
+          if (opt.getAttribute('data-value') === val) {
+            opt.classList.add('active');
+          } else {
+            opt.classList.remove('active');
+          }
+        });
+        if (sortSelect) sortSelect.value = val;
+      }
+
+      function setSortValue(val) {
+        activeSort = val;
+        updateSortDropdownUI(val);
+        if (sortDropdownWrap) {
+          sortDropdownWrap.classList.remove('open');
+          if (sortTrigger) sortTrigger.setAttribute('aria-expanded', 'false');
+        }
+        updateUrlParams();
+        filterAndRender();
+      }
+
+      if (sortTrigger && sortDropdownWrap) {
+        sortTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = sortDropdownWrap.classList.contains('open');
+          sortDropdownWrap.classList.toggle('open', !isOpen);
+          sortTrigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        });
+
+        sortOptions.forEach(opt => {
+          opt.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const val = opt.getAttribute('data-value');
+            setSortValue(val);
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!sortDropdownWrap.contains(e.target)) {
+            sortDropdownWrap.classList.remove('open');
+            if (sortTrigger) sortTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && sortDropdownWrap.classList.contains('open')) {
+            sortDropdownWrap.classList.remove('open');
+            if (sortTrigger) sortTrigger.setAttribute('aria-expanded', 'false');
+            sortTrigger.focus();
+          }
+        });
+      }
 
       // Initialize from URL query parameters (e.g., search.html?q=iphone)
       const urlParams = new URLSearchParams(window.location.search);
@@ -763,9 +948,11 @@
           }
         });
       }
-      if (urlParams.has('sort') && sortSelect) {
+      if (urlParams.has('sort')) {
         activeSort = urlParams.get('sort');
-        sortSelect.value = activeSort;
+        updateSortDropdownUI(activeSort);
+      } else {
+        updateSortDropdownUI('featured');
       }
 
       function filterAndRender() {
