@@ -24,6 +24,18 @@
       box-sizing: border-box;
     }
 
+    @media (max-width: 768px) {
+      .page-container {
+        padding: 0 16px !important;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .page-container {
+        padding: 0 12px !important;
+      }
+    }
+
     .catalog-discovery-header {
       background: #FFFFFF;
       border-bottom: 1px solid #EFEAE2;
@@ -261,6 +273,26 @@
       box-shadow: 0 2px 8px rgba(23, 21, 19, 0.16);
     }
 
+    /* Meta Controls: Count & Sort Wrapper */
+    .discovery-meta-controls {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .catalog-results-count {
+      display: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #786B61;
+    }
+
+    .catalog-results-count strong {
+      color: #171513;
+      font-weight: 800;
+    }
+
     /* Luxury Sort Dropdown (Right side of Row 2) */
     .discovery-row-secondary .luxury-custom-sort {
       flex-shrink: 0;
@@ -404,8 +436,8 @@
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .catalog-discovery-header {
-        padding: 12px 0 10px;
-        margin-bottom: 14px;
+        padding: 14px 0 12px;
+        margin-bottom: 12px;
       }
       .discovery-row-primary {
         flex-direction: column;
@@ -413,34 +445,96 @@
         gap: 10px;
         margin-bottom: 10px;
       }
+      .page-breadcrumb {
+        font-size: 0.74rem !important;
+        gap: 5px !important;
+      }
       .discovery-heading-wrap {
+        display: flex;
+        align-items: baseline;
         justify-content: space-between;
+        gap: 8px;
       }
       .discovery-title {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
+        line-height: 1.25;
+      }
+      .discovery-count-pill {
+        display: none !important; /* Replaced by the bottom meta bar on mobile */
       }
       .discovery-search-wrap {
         flex: 1 1 100%;
         width: 100%;
       }
       .search-input-box .search-page-input {
-        height: 38px;
-        font-size: 0.85rem;
+        height: 40px;
+        font-size: 0.86rem;
+        padding: 0 38px 0 38px;
       }
       .discovery-row-secondary {
-        gap: 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+      .discovery-pills-wrap {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        padding: 2px 0 4px !important;
+        margin: 0 !important;
+      }
+      .search-filter-pills {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin: 0 !important;
+        padding: 2px 0 !important;
+        flex-wrap: nowrap !important;
+      }
+      .filter-pill {
+        padding: 6px 13px !important;
+        font-size: 0.78rem !important;
+        flex-shrink: 0 !important;
+      }
+      .discovery-meta-controls {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding-top: 2px !important;
+      }
+      .catalog-results-count {
+        display: inline-block !important;
+        font-size: 0.78rem !important;
       }
       .catalog-sort-label {
-        display: none !important;
+        display: inline-block !important;
+        font-size: 0.78rem !important;
       }
       .luxury-sort-trigger {
         padding: 5px 12px !important;
         height: 34px !important;
         font-size: 0.78rem !important;
       }
+    }
+
+    @media (max-width: 360px) {
+      .discovery-title {
+        font-size: 1.05rem;
+      }
       .filter-pill {
-        padding: 5px 12px;
-        font-size: 0.76rem;
+        padding: 5px 10px !important;
+        font-size: 0.74rem !important;
+      }
+      .luxury-sort-trigger {
+        padding: 4px 10px !important;
+        height: 32px !important;
+        font-size: 0.74rem !important;
+      }
+      .catalog-sort-label {
+        display: none !important;
       }
     }
   </style>
@@ -653,55 +747,58 @@
             </div>
           </div>
 
-          <div class="luxury-custom-sort" id="luxurySortWrap">
-            <span class="catalog-sort-label">Sort By:</span>
-            <div class="luxury-sort-dropdown" id="luxurySortDropdown">
-              <button type="button" 
-                class="luxury-sort-trigger" 
-                id="sortDropdownTrigger" 
-                aria-haspopup="listbox" 
-                aria-expanded="false" 
-                aria-label="Sort by">
-                <span class="sort-trigger-text" id="sortSelectedLabel">Featured / Best Sellers</span>
-                <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="6 9 12 15 18 9"/>
-                </svg>
-              </button>
-              <div class="luxury-sort-menu" id="sortDropdownMenu" role="listbox" aria-label="Sort options">
-                <div class="luxury-sort-option active" data-value="featured" role="option">
-                  <span class="option-label">Featured / Best Sellers</span>
-                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <div class="discovery-meta-controls">
+            <span class="catalog-results-count" id="catalogResultsCount">Showing <strong id="catalogCountBold">0</strong> Products</span>
+            <div class="luxury-custom-sort" id="luxurySortWrap">
+              <span class="catalog-sort-label">Sort By:</span>
+              <div class="luxury-sort-dropdown" id="luxurySortDropdown">
+                <button type="button" 
+                  class="luxury-sort-trigger" 
+                  id="sortDropdownTrigger" 
+                  aria-haspopup="listbox" 
+                  aria-expanded="false" 
+                  aria-label="Sort by">
+                  <span class="sort-trigger-text" id="sortSelectedLabel">Featured / Best Sellers</span>
+                  <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </button>
+                <div class="luxury-sort-menu" id="sortDropdownMenu" role="listbox" aria-label="Sort options">
+                  <div class="luxury-sort-option active" data-value="featured" role="option">
+                    <span class="option-label">Featured / Best Sellers</span>
+                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div class="luxury-sort-option" data-value="price-low" role="option">
+                    <span class="option-label">Price: Low to High</span>
+                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div class="luxury-sort-option" data-value="price-high" role="option">
+                    <span class="option-label">Price: High to Low</span>
+                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div class="luxury-sort-option" data-value="rating" role="option">
+                    <span class="option-label">Customer Rating</span>
+                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div class="luxury-sort-option" data-value="newest" role="option">
+                    <span class="option-label">New Arrivals</span>
+                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <div class="luxury-sort-option" data-value="title-az" role="option">
+                    <span class="option-label">Name: A to Z</span>
+                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
                 </div>
-                <div class="luxury-sort-option" data-value="price-low" role="option">
-                  <span class="option-label">Price: Low to High</span>
-                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="luxury-sort-option" data-value="price-high" role="option">
-                  <span class="option-label">Price: High to Low</span>
-                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="luxury-sort-option" data-value="rating" role="option">
-                  <span class="option-label">Customer Rating</span>
-                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="luxury-sort-option" data-value="newest" role="option">
-                  <span class="option-label">New Arrivals</span>
-                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="luxury-sort-option" data-value="title-az" role="option">
-                  <span class="option-label">Name: A to Z</span>
-                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
+                <!-- Hidden native select for script synchronization -->
+                <select id="searchSortSelect" style="display: none;" aria-hidden="true">
+                  <option value="featured">Featured / Best Sellers</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Customer Rating</option>
+                  <option value="newest">New Arrivals</option>
+                  <option value="title-az">Name: A to Z</option>
+                </select>
               </div>
-              <!-- Hidden native select for script synchronization -->
-              <select id="searchSortSelect" style="display: none;" aria-hidden="true">
-                <option value="featured">Featured / Best Sellers</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="rating">Customer Rating</option>
-                <option value="newest">New Arrivals</option>
-                <option value="title-az">Name: A to Z</option>
-              </select>
             </div>
           </div>
         </div>
@@ -710,7 +807,7 @@
     </header>
 
     <!-- Search Results Section: Grid Starts Immediately Here -->
-    <section class="section-container" style="padding-top: 6px; padding-bottom: 72px;">
+    <section class="search-catalog-section" style="padding-top: 8px; padding-bottom: 72px;">
       <div class="page-container">
         <!-- Products Grid Container -->
         <div class="catalog-products-grid" id="searchResultsGrid">
@@ -1086,6 +1183,11 @@
           countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}`;
         } else if (countEl) {
           countEl.textContent = list.length;
+        }
+
+        const metaCountBold = document.getElementById('catalogCountBold');
+        if (metaCountBold) {
+          metaCountBold.textContent = list.length;
         }
 
         // 5. Render Products or Empty State

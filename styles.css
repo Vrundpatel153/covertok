@@ -175,6 +175,8 @@ img {
   overflow: hidden;
   position: relative;
   z-index: 1001;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14px, #000 calc(100% - 14px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 14px, #000 calc(100% - 14px), transparent 100%);
 }
 
 .site-announcement-track {
@@ -3690,23 +3692,23 @@ a.footer-contact-main:hover {
     flex-direction: column !important;
     justify-content: center !important;
     gap: 4px !important;
-    width: 38px !important;
-    height: 38px !important;
+    width: 34px !important;
+    height: 34px !important;
     padding: 0 !important;
   }
   .mobile-toggle-btn span {
     background-color: #0F172A !important;
-    width: 22px !important;
+    width: 20px !important;
     height: 2px !important;
   }
   .brand-logo .logo-img {
-    height: 44px !important;
-    max-height: 44px !important;
+    height: 32px !important;
+    max-height: 32px !important;
     width: auto !important;
     object-fit: contain !important;
   }
   .header-right {
-    gap: 12px !important;
+    gap: 8px !important;
     display: flex !important;
     align-items: center !important;
   }
@@ -3714,8 +3716,8 @@ a.footer-contact-main:hover {
     display: none !important;
   }
   .icon-btn {
-    width: 40px !important;
-    height: 40px !important;
+    width: 34px !important;
+    height: 34px !important;
     padding: 0 !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -3723,6 +3725,24 @@ a.footer-contact-main:hover {
     color: #0F172A !important;
     background: transparent !important;
     border: none !important;
+  }
+
+  @media (max-width: 360px) {
+    .header-inner {
+      padding: 0 12px !important;
+    }
+    .brand-logo .logo-img {
+      height: 26px !important;
+      max-height: 26px !important;
+    }
+    .header-right {
+      gap: 5px !important;
+    }
+    .icon-btn,
+    .mobile-toggle-btn {
+      width: 30px !important;
+      height: 30px !important;
+    }
   }
 
   /* HERO SECTION ON MOBILE (Exact Match to Reference Mockup) */

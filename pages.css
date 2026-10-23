@@ -1013,10 +1013,8 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding: 6px 4px 10px 4px;
-    margin: 18px -16px 0 -16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 2px 0;
+    margin: 0;
   }
   .search-filter-pills::-webkit-scrollbar {
     display: none;
