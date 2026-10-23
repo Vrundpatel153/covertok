@@ -16,6 +16,461 @@
   <link rel="stylesheet" href="catalog.css?v=20261022_v1">
   <link rel="stylesheet" href="combo.css?v=20261022_v1">
   <link rel="stylesheet" href="microinteractions.css?v=20261022_v1">
+  <style>
+    /* ==========================================================================
+       Professional 2-Row Luxury Combo Discovery Header
+       ========================================================================== */
+    .combo-discovery-header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #EFEAE2;
+      padding: 16px 0 14px;
+      margin-bottom: 18px;
+    }
+
+    /* Row 1: Left (Breadcrumb + Title + Bundle Badge + Count) | Right (Search Pill) */
+    .combo-row-primary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+
+    .combo-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+    }
+
+    .combo-breadcrumb {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      color: #786B61 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+    }
+
+    .combo-breadcrumb a {
+      color: #786B61 !important;
+      text-decoration: none !important;
+      transition: color 0.18s ease !important;
+    }
+
+    .combo-breadcrumb a:hover {
+      color: #C5A059 !important;
+    }
+
+    .combo-breadcrumb .crumb-sep {
+      color: #CBD5E1 !important;
+    }
+
+    .combo-breadcrumb .crumb-current {
+      color: #171513 !important;
+      font-weight: 700 !important;
+    }
+
+    .combo-heading-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .combo-headline {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #171513;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    .combo-bundle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #171513;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .combo-bundle-pill svg {
+      color: #C5A059;
+      fill: #C5A059;
+    }
+
+    .combo-count-pill {
+      display: inline-flex;
+      align-items: center;
+      background: #FAF7F2;
+      color: #786B61;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid #EAE5DB;
+      white-space: nowrap;
+    }
+
+    /* Right Search Input Box */
+    .combo-search-wrap {
+      flex: 0 1 340px;
+      min-width: 200px;
+    }
+
+    .combo-search-box {
+      position: relative;
+      width: 100%;
+      margin: 0;
+    }
+
+    .combo-search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C5A059;
+      z-index: 2;
+    }
+
+    .combo-search-input {
+      width: 100%;
+      height: 40px;
+      padding: 0 38px 0 40px;
+      border: 1.5px solid #E2DCD4;
+      border-radius: 999px;
+      background: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #171513;
+      outline: none;
+      box-sizing: border-box;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .combo-search-input::placeholder {
+      color: #9E948A;
+      font-weight: 400;
+    }
+
+    .combo-search-input:focus {
+      border-color: #C5A059;
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .combo-search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #EAE5DB;
+      color: #5C5249;
+      border: none;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.18s ease;
+    }
+
+    .combo-search-clear-btn:hover {
+      background: #171513;
+      color: #FFFFFF;
+    }
+
+    .combo-search-clear-btn.visible {
+      display: flex;
+    }
+
+    /* Row 2: Left (Category Switcher Pills Track) | Right (Sort Dropdown) */
+    .combo-row-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .combo-pills-wrap {
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .combo-pills-wrap::-webkit-scrollbar {
+      display: none;
+    }
+
+    .catalog-nav-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      padding: 2px 2px;
+    }
+
+    .catalog-nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1.5px solid #E2DCD4;
+      background: #FFFFFF;
+      color: #5C5249;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+      outline: none;
+    }
+
+    .catalog-nav-pill:hover {
+      border-color: #C5A059;
+      color: #171513;
+      background: #FAF8F5;
+    }
+
+    .catalog-nav-pill.active {
+      background: #171513;
+      color: #FFFFFF;
+      border-color: #171513;
+      box-shadow: 0 2px 8px rgba(23, 21, 19, 0.16);
+    }
+
+    .catalog-pill-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.06);
+      color: #786B61;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 999px;
+    }
+
+    .catalog-nav-pill.active .catalog-pill-count {
+      background: rgba(255, 255, 255, 0.2);
+      color: #C5A059;
+    }
+
+    /* Luxury Sort Dropdown (Right side of Row 2) */
+    .combo-row-secondary .luxury-custom-sort {
+      flex-shrink: 0;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+    }
+
+    .catalog-sort-label {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      color: #786B61 !important;
+      white-space: nowrap !important;
+    }
+
+    .luxury-sort-dropdown {
+      position: relative !important;
+      display: inline-block !important;
+      user-select: none !important;
+    }
+
+    .luxury-sort-trigger {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      padding: 6px 15px !important;
+      height: 38px !important;
+      box-sizing: border-box !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid #E2DCD4 !important;
+      border-radius: 999px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #171513 !important;
+      cursor: pointer !important;
+      outline: none !important;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+    }
+
+    .luxury-sort-trigger:hover {
+      border-color: #C5A059 !important;
+      background: #FAF8F5 !important;
+      box-shadow: 0 2px 8px rgba(197, 160, 89, 0.12) !important;
+    }
+
+    .luxury-sort-dropdown.open .luxury-sort-trigger,
+    .luxury-sort-trigger:focus-visible {
+      border-color: #C5A059 !important;
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2) !important;
+      background: #FFFFFF !important;
+    }
+
+    .sort-trigger-text {
+      white-space: nowrap !important;
+    }
+
+    .sort-trigger-icon {
+      color: #786B61 !important;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease !important;
+    }
+
+    .luxury-sort-dropdown.open .sort-trigger-icon {
+      transform: rotate(180deg) !important;
+      color: #C5A059 !important;
+    }
+
+    .luxury-sort-menu {
+      position: absolute !important;
+      top: calc(100% + 6px) !important;
+      right: 0 !important;
+      left: auto !important;
+      min-width: 205px !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid #EAE5DB !important;
+      border-radius: 14px !important;
+      padding: 6px !important;
+      box-shadow: 0 14px 34px rgba(23, 21, 19, 0.14), 0 3px 10px rgba(0, 0, 0, 0.04) !important;
+      z-index: 100 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(-6px) scale(0.97) !important;
+      transform-origin: top right !important;
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                  visibility 0.2s !important;
+      pointer-events: none !important;
+    }
+
+    .luxury-sort-dropdown.open .luxury-sort-menu {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) scale(1) !important;
+      pointer-events: auto !important;
+    }
+
+    .luxury-sort-option {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 12px !important;
+      padding: 8px 12px !important;
+      border-radius: 8px !important;
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #4A443E !important;
+      cursor: pointer !important;
+      transition: all 0.16s ease !important;
+    }
+
+    .luxury-sort-option:hover {
+      background: #FAF7F2 !important;
+      color: #171513 !important;
+    }
+
+    .luxury-sort-option.active {
+      background: #171513 !important;
+      color: #FFFFFF !important;
+    }
+
+    .luxury-sort-option .option-check {
+      display: none !important;
+      color: #C5A059 !important;
+      flex-shrink: 0 !important;
+    }
+
+    .luxury-sort-option.active .option-check {
+      display: block !important;
+      color: #C5A059 !important;
+    }
+
+    .luxury-sort-option.active:hover {
+      background: #272522 !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .combo-discovery-header {
+        padding: 12px 0 10px;
+        margin-bottom: 14px;
+      }
+      .combo-row-primary {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .combo-heading-wrap {
+        justify-content: space-between;
+      }
+      .combo-headline {
+        font-size: 1.25rem;
+      }
+      .combo-search-wrap {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      .combo-search-input {
+        height: 38px;
+        font-size: 0.85rem;
+      }
+      .combo-row-secondary {
+        gap: 10px;
+      }
+      .catalog-sort-label {
+        display: none !important;
+      }
+      .luxury-sort-trigger {
+        padding: 5px 12px !important;
+        height: 34px !important;
+        font-size: 0.78rem !important;
+      }
+      .catalog-nav-pill {
+        padding: 5px 12px;
+        font-size: 0.76rem;
+      }
+    }
+  </style>
 </head>
 <body class="combo-page-canvas">
 
@@ -150,87 +605,138 @@
   </div>
 
   <main>
-    <!-- Catalog Hero Section (Clean Plain White Layout matching collections.html) -->
-    <section class="catalog-hero-section">
+    <!-- Professional 2-Row Luxury Discovery Header -->
+    <header class="combo-discovery-header">
       <div class="section-container">
-        <!-- Breadcrumb -->
-        <div class="catalog-breadcrumb">
-          <a href="index.html">Home</a>
-          <span>/</span>
-          <a href="collections.html">Collections</a>
-          <span>/</span>
-          <span style="font-weight: 700; color: #171513;">3-PIECE COMBO DEAL</span>
-        </div>
-
-        <!-- Header Wrap -->
-        <div class="catalog-header-wrap">
-          <div>
-            <span class="catalog-badge-pill" style="background: #171513; color: #FFFFFF; letter-spacing: 0.04em;">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="#C5A059" style="margin-right: 5px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              CURATED BUNDLE &bull; FLAT ₹1,199
-            </span>
-            <h1 class="catalog-headline">Build Your 3-Piece Suite</h1>
-            <p class="catalog-subtext">
-              Select any three accessories across cases, straps, and chargers to bundle them together for a flat <strong>₹1,199</strong> (Save up to 60%).
-            </p>
-          </div>
-          <div class="catalog-count-label" id="comboCountLabel">Showing 53 Eligible Products</div>
-        </div>
-
-        <!-- Clean Category Switcher Pills Bar (Exact same layout as all products page) -->
-        <div class="catalog-nav-bar" id="comboNavBar" role="tablist" aria-label="Collections Filter">
-          <button type="button" class="catalog-nav-pill active" data-category="all">
-            <span>All Eligible</span>
-            <span class="catalog-pill-count" id="count-all">53</span>
-          </button>
-          <button type="button" class="catalog-nav-pill" data-category="mobile-cover">
-            <span>Phone Cases</span>
-            <span class="catalog-pill-count" id="count-mobile-cover">25</span>
-          </button>
-          <button type="button" class="catalog-nav-pill" data-category="watch-band">
-            <span>Watch Bands</span>
-            <span class="catalog-pill-count" id="count-watch-band">13</span>
-          </button>
-          <button type="button" class="catalog-nav-pill" data-category="watch-cover">
-            <span>Watch Covers</span>
-            <span class="catalog-pill-count" id="count-watch-cover">4</span>
-          </button>
-          <button type="button" class="catalog-nav-pill" data-category="charger-cover">
-            <span>Charger Cases</span>
-            <span class="catalog-pill-count" id="count-charger-cover">6</span>
-          </button>
-          <button type="button" class="catalog-nav-pill" data-category="airpod-cover">
-            <span>AirPod Cases</span>
-            <span class="catalog-pill-count" id="count-airpod-cover">5</span>
-          </button>
-        </div>
-
-        <!-- Filter & Search Toolbar (Exact same as all products page) -->
-        <div class="catalog-toolbar">
-          <div class="catalog-search-inline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A98135" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" id="comboSearchInput" placeholder="Filter by product name, model, tag..." autocomplete="off">
+        
+        <!-- ROW 1: Left (Breadcrumb + Title + Bundle Badge + Count) | Right (Search Pill) -->
+        <div class="combo-row-primary">
+          <div class="combo-title-group">
+            <nav class="combo-breadcrumb" aria-label="Breadcrumb">
+              <a href="index.html">Home</a>
+              <span class="crumb-sep">/</span>
+              <a href="collections.html">Collections</a>
+              <span class="crumb-sep">/</span>
+              <span class="crumb-current">3-Piece Combo</span>
+            </nav>
+            <div class="combo-heading-wrap">
+              <h1 class="combo-headline">Build Your 3-Piece Suite</h1>
+              <span class="combo-bundle-pill">
+                <svg width="11" height="11" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                FLAT ₹1,199
+              </span>
+              <span class="combo-count-pill" id="comboCountLabel">Showing 53 Eligible Products</span>
+            </div>
           </div>
 
-          <div class="catalog-sort-group">
-            <label for="comboSortSelect" style="font-size: 0.825rem; font-weight: 700; color: #735238;">Sort By:</label>
-            <select class="catalog-select" id="comboSortSelect">
-              <option value="featured">Featured / Best Sellers</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="rating">Customer Rating</option>
-              <option value="title-az">Name: A to Z</option>
-            </select>
+          <!-- Right: Compact Search Pill Input -->
+          <div class="combo-search-wrap">
+            <div class="combo-search-box">
+              <div class="combo-search-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+              <input 
+                type="text" 
+                id="comboSearchInput" 
+                class="combo-search-input" 
+                placeholder="Filter by product name, model..." 
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Filter combo products"
+              >
+              <button type="button" id="comboClearSearchBtn" class="combo-search-clear-btn" aria-label="Clear search input">&times;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2: Left (Category Switcher Pills Track) | Right (Luxury Sort Dropdown) -->
+        <div class="combo-row-secondary">
+          <div class="combo-pills-wrap">
+            <div class="catalog-nav-bar" id="comboNavBar" role="tablist" aria-label="Collections Filter">
+              <button type="button" class="catalog-nav-pill active" data-category="all">
+                <span>All Eligible</span>
+                <span class="catalog-pill-count" id="count-all">53</span>
+              </button>
+              <button type="button" class="catalog-nav-pill" data-category="mobile-cover">
+                <span>Phone Cases</span>
+                <span class="catalog-pill-count" id="count-mobile-cover">25</span>
+              </button>
+              <button type="button" class="catalog-nav-pill" data-category="watch-band">
+                <span>Watch Bands</span>
+                <span class="catalog-pill-count" id="count-watch-band">13</span>
+              </button>
+              <button type="button" class="catalog-nav-pill" data-category="watch-cover">
+                <span>Watch Covers</span>
+                <span class="catalog-pill-count" id="count-watch-cover">4</span>
+              </button>
+              <button type="button" class="catalog-nav-pill" data-category="charger-cover">
+                <span>Charger Cases</span>
+                <span class="catalog-pill-count" id="count-charger-cover">6</span>
+              </button>
+              <button type="button" class="catalog-nav-pill" data-category="airpod-cover">
+                <span>AirPod Cases</span>
+                <span class="catalog-pill-count" id="count-airpod-cover">5</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Luxury Custom Sort Dropdown (Right) -->
+          <div class="luxury-custom-sort" id="comboLuxurySortWrap">
+            <span class="catalog-sort-label">Sort:</span>
+            <div class="luxury-sort-dropdown" id="comboLuxurySortDropdown">
+              <button type="button" 
+                class="luxury-sort-trigger" 
+                id="comboSortTrigger" 
+                aria-haspopup="listbox" 
+                aria-expanded="false" 
+                aria-label="Sort by">
+                <span class="sort-trigger-text" id="comboSortSelectedLabel">Featured / Best Sellers</span>
+                <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="luxury-sort-menu" id="comboSortDropdownMenu" role="listbox" aria-label="Sort options">
+                <div class="luxury-sort-option active" data-value="featured" role="option">
+                  <span class="option-label">Featured / Best Sellers</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="price-low" role="option">
+                  <span class="option-label">Price: Low to High</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="price-high" role="option">
+                  <span class="option-label">Price: High to Low</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="rating" role="option">
+                  <span class="option-label">Customer Rating</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="title-az" role="option">
+                  <span class="option-label">Name: A to Z</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+              </div>
+              <!-- Hidden native select for script synchronization with combo_page_controller.js -->
+              <select id="comboSortSelect" style="display: none;" aria-hidden="true">
+                <option value="featured" selected>Featured / Best Sellers</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Customer Rating</option>
+                <option value="title-az">Name: A to Z</option>
+              </select>
+            </div>
           </div>
         </div>
 
       </div>
-    </section>
+    </header>
 
-    <!-- Products Grid Section -->
-    <section class="section-container" style="padding-top: 28px; padding-bottom: 96px;">
+    <!-- Products Grid Section: Starts Immediately Here -->
+    <section class="section-container" style="padding-top: 6px; padding-bottom: 96px;">
       <div class="catalog-products-grid" id="comboProductsGrid">
         <!-- Rendered dynamically by combo_page_controller.js -->
       </div>
@@ -408,5 +914,72 @@
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
   <script src="assets/combo_page_controller.js"></script>
+  <script>
+    (function() {
+      // Luxury Custom Sort Dropdown Handler for Combo Page
+      const sortTrigger = document.getElementById('comboSortTrigger');
+      const sortDropdownWrap = document.getElementById('comboLuxurySortDropdown');
+      const sortSelectedLabel = document.getElementById('comboSortSelectedLabel');
+      const sortOptions = document.querySelectorAll('#comboSortDropdownMenu .luxury-sort-option');
+      const sortSelect = document.getElementById('comboSortSelect');
+      const searchInput = document.getElementById('comboSearchInput');
+      const clearBtn = document.getElementById('comboClearSearchBtn');
+
+      if (searchInput && clearBtn) {
+        searchInput.addEventListener('input', () => {
+          clearBtn.classList.toggle('visible', !!searchInput.value);
+        });
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          clearBtn.classList.remove('visible');
+          searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+          searchInput.focus();
+        });
+      }
+
+      if (sortTrigger && sortDropdownWrap) {
+        sortTrigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = sortDropdownWrap.classList.contains('open');
+          sortDropdownWrap.classList.toggle('open', !isOpen);
+          sortTrigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        });
+
+        sortOptions.forEach(opt => {
+          opt.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const val = opt.getAttribute('data-value');
+            const label = opt.querySelector('.option-label')?.textContent || val;
+            if (sortSelectedLabel) sortSelectedLabel.textContent = label;
+
+            sortOptions.forEach(o => o.classList.toggle('active', o === opt));
+
+            if (sortSelect) {
+              sortSelect.value = val;
+              sortSelect.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+
+            sortDropdownWrap.classList.remove('open');
+            sortTrigger.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!sortDropdownWrap.contains(e.target)) {
+            sortDropdownWrap.classList.remove('open');
+            sortTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && sortDropdownWrap.classList.contains('open')) {
+            sortDropdownWrap.classList.remove('open');
+            sortTrigger.setAttribute('aria-expanded', 'false');
+            sortTrigger.focus();
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
