@@ -413,10 +413,10 @@
       `;
     }
 
-    // Format Prices cleanly matching "Rs. 1,299.00  Rs. 520.00"
-    const priceFormatted = `Rs. ${Number(product.price).toLocaleString('en-IN')}.00`;
+    // Format Prices cleanly matching "Rs. 1,299  Rs. 520"
+    const priceFormatted = `Rs. ${Math.round(product.price).toLocaleString('en-IN')}`;
     const origPriceFormatted = product.original_price && product.original_price > product.price 
-      ? `Rs. ${Number(product.original_price).toLocaleString('en-IN')}.00`
+      ? `Rs. ${Math.round(product.original_price).toLocaleString('en-IN')}`
       : '';
 
     card.innerHTML = `
@@ -485,7 +485,7 @@
 
 
     // Add To Cart button
-    card.querySelector('.card-add-btn').addEventListener('click', () => {
+    card.querySelector('.card-add-btn')?.addEventListener('click', () => {
       const activeDot = card.querySelector('.card-color-dot.active');
       const chosenColor = activeDot ? activeDot.getAttribute('data-color') : (product.colors && product.colors[0] ? product.colors[0].name : '');
       const chosenImg = activeDot ? activeDot.getAttribute('data-img') : product.primary_image;

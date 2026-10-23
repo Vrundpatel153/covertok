@@ -43,29 +43,21 @@
       margin-bottom: 18px;
     }
 
-    /* Row 1: Left (Breadcrumb + Title + Count) | Right (Search Pill) */
-    .discovery-row-primary {
+    /* Row 1: Left Breadcrumb | Right Search Bar */
+    .discovery-top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
       margin-bottom: 12px;
     }
 
-    .discovery-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      min-width: 0;
-    }
-
     .page-breadcrumb {
-      display: flex !important;
-      flex-direction: row !important;
+      display: inline-flex !important;
       align-items: center !important;
       gap: 6px !important;
       font-family: 'Plus Jakarta Sans', sans-serif !important;
-      font-size: 0.78rem !important;
+      font-size: 0.8rem !important;
       font-weight: 600 !important;
       color: #786B61 !important;
       margin: 0 !important;
@@ -89,54 +81,12 @@
 
     .page-breadcrumb .crumb-current {
       color: #171513 !important;
+      font-weight: 700 !important;
     }
 
-    .discovery-heading-wrap {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .discovery-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #171513;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin: 0;
-    }
-
-    .discovery-title .search-query-highlight {
-      color: #C5A059;
-      font-weight: 800;
-    }
-
-    .discovery-count-pill {
-      display: inline-flex;
-      align-items: center;
-      background: #FAF7F2;
-      color: #786B61;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 999px;
-      border: 1px solid #EAE5DB;
-      white-space: nowrap;
-    }
-
-    .discovery-count-pill .catalog-count-num {
-      font-weight: 800;
-      color: #171513;
-      margin-right: 3px;
-    }
-
-    /* Right Search Input Box */
     .discovery-search-wrap {
-      flex: 0 1 360px;
-      min-width: 200px;
+      flex: 0 1 380px;
+      min-width: 220px;
     }
 
     .search-input-box {
@@ -164,7 +114,7 @@
       padding: 0 38px 0 40px;
       border: 1.5px solid #E2DCD4;
       border-radius: 999px;
-      background: #FFFFFF;
+      background: #FAFAFA;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.88rem;
       font-weight: 500;
@@ -175,12 +125,8 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     }
 
-    .search-input-box .search-page-input::placeholder {
-      color: #9E948A;
-      font-weight: 400;
-    }
-
     .search-input-box .search-page-input:focus {
+      background: #FFFFFF;
       border-color: #C5A059;
       box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04);
     }
@@ -200,7 +146,6 @@
       align-items: center;
       justify-content: center;
       font-size: 14px;
-      line-height: 1;
       cursor: pointer;
       z-index: 2;
       transition: all 0.18s ease;
@@ -215,90 +160,76 @@
       display: flex;
     }
 
-    /* Row 2: Left (Filter Pills Track) | Right (Sort Dropdown) */
-    .discovery-row-secondary {
+    /* Row 2: Controls Bar - Left Action/Status | Right Sort */
+    .discovery-controls-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
+      min-height: 38px;
     }
 
-    .discovery-pills-wrap {
-      flex: 1;
+    .discovery-controls-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       min-width: 0;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      flex-wrap: wrap;
     }
 
-    .discovery-pills-wrap::-webkit-scrollbar {
-      display: none;
-    }
-
-    .search-filter-pills {
+    .discovery-controls-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: #171513;
+      letter-spacing: -0.015em;
       display: flex;
       align-items: center;
       gap: 8px;
-      flex-wrap: nowrap;
-      white-space: nowrap;
-      padding: 2px 2px;
+      margin: 0;
+      line-height: 1.2;
     }
 
-    .filter-pill {
-      padding: 6px 14px;
+    .discovery-count-chip {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #786B61;
+      background: #FAF7F2;
+      border: 1px solid #EAE5DB;
+      padding: 3px 10px;
       border-radius: 999px;
-      border: 1.5px solid #E2DCD4;
-      background: #FFFFFF;
-      color: #5C5249;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       white-space: nowrap;
-      flex-shrink: 0;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
     }
 
-    .filter-pill:hover {
-      border-color: #C5A059;
-      color: #171513;
-      background: #FAF8F5;
-    }
-
-    .filter-pill.active {
+    .discovery-back-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       background: #171513;
       color: #FFFFFF;
-      border-color: #171513;
-      box-shadow: 0 2px 8px rgba(23, 21, 19, 0.16);
+      border: none;
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
-    /* Meta Controls: Count & Sort Wrapper */
-    .discovery-meta-controls {
+    .discovery-back-pill-btn:hover {
+      background: #C5A059;
+      transform: translateX(-2px);
+    }
+
+    .discovery-controls-right {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-    }
-
-    .catalog-results-count {
-      display: none;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #786B61;
-    }
-
-    .catalog-results-count strong {
-      color: #171513;
-      font-weight: 800;
-    }
-
-    /* Luxury Sort Dropdown (Right side of Row 2) */
-    .discovery-row-secondary .luxury-custom-sort {
+      gap: 8px;
       flex-shrink: 0;
-      display: flex !important;
-      align-items: center !important;
-      gap: 8px !important;
     }
 
     .catalog-sort-label {
@@ -319,7 +250,7 @@
       display: inline-flex !important;
       align-items: center !important;
       gap: 8px !important;
-      padding: 6px 15px !important;
+      padding: 6px 14px !important;
       height: 38px !important;
       box-sizing: border-box !important;
       background: #FFFFFF !important;
@@ -333,12 +264,12 @@
       outline: none !important;
       transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+      white-space: nowrap !important;
     }
 
     .luxury-sort-trigger:hover {
       border-color: #C5A059 !important;
       background: #FAF8F5 !important;
-      box-shadow: 0 2px 8px rgba(197, 160, 89, 0.12) !important;
     }
 
     .luxury-sort-dropdown.open .luxury-sort-trigger,
@@ -362,7 +293,6 @@
       color: #C5A059 !important;
     }
 
-    /* Floating Dropdown Menu Card */
     .luxury-sort-menu {
       position: absolute !important;
       top: calc(100% + 6px) !important;
@@ -436,105 +366,87 @@
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .catalog-discovery-header {
-        padding: 14px 0 12px;
+        padding: 12px 0 10px;
         margin-bottom: 12px;
       }
-      .discovery-row-primary {
+
+      .discovery-top-bar {
         flex-direction: column;
         align-items: stretch;
-        gap: 10px;
+        gap: 8px;
         margin-bottom: 10px;
       }
+
       .page-breadcrumb {
         font-size: 0.74rem !important;
-        gap: 5px !important;
       }
-      .discovery-heading-wrap {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 8px;
-      }
-      .discovery-title {
-        font-size: 1.15rem;
-        line-height: 1.25;
-      }
-      .discovery-count-pill {
-        display: none !important; /* Replaced by the bottom meta bar on mobile */
-      }
+
       .discovery-search-wrap {
-        flex: 1 1 100%;
-        width: 100%;
-      }
-      .search-input-box .search-page-input {
-        height: 40px;
-        font-size: 0.86rem;
-        padding: 0 38px 0 38px;
-      }
-      .discovery-row-secondary {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 10px !important;
-      }
-      .discovery-pills-wrap {
         width: 100% !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        scrollbar-width: none !important;
-        padding: 2px 0 4px !important;
-        margin: 0 !important;
+        flex: 1 1 100% !important;
       }
-      .search-filter-pills {
-        display: flex !important;
-        align-items: center !important;
-        gap: 6px !important;
-        margin: 0 !important;
-        padding: 2px 0 !important;
-        flex-wrap: nowrap !important;
+
+      .search-input-box .search-page-input {
+        height: 38px;
+        font-size: 0.84rem;
+        padding: 0 36px 0 38px;
       }
-      .filter-pill {
-        padding: 6px 13px !important;
-        font-size: 0.78rem !important;
-        flex-shrink: 0 !important;
-      }
-      .discovery-meta-controls {
+
+      .discovery-controls-bar {
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
-        width: 100% !important;
-        padding-top: 2px !important;
+        gap: 8px !important;
       }
-      .catalog-results-count {
-        display: inline-block !important;
-        font-size: 0.78rem !important;
+
+      .discovery-controls-left {
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow: hidden;
       }
+
+      .discovery-controls-heading {
+        font-size: 0.96rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .desktop-query-label {
+        display: none !important;
+      }
+
+      .discovery-count-chip {
+        font-size: 0.72rem;
+        padding: 2px 7px;
+        flex-shrink: 0;
+      }
+
+      .discovery-back-pill-btn {
+        padding: 5px 10px;
+        font-size: 0.74rem;
+      }
+
       .catalog-sort-label {
-        display: inline-block !important;
-        font-size: 0.78rem !important;
+        display: none !important;
       }
+
       .luxury-sort-trigger {
-        padding: 5px 12px !important;
+        padding: 4px 10px !important;
         height: 34px !important;
-        font-size: 0.78rem !important;
+        font-size: 0.76rem !important;
       }
     }
 
     @media (max-width: 360px) {
-      .discovery-title {
-        font-size: 1.05rem;
+      .discovery-controls-heading {
+        font-size: 0.88rem;
       }
-      .filter-pill {
-        padding: 5px 10px !important;
-        font-size: 0.74rem !important;
-      }
+
       .luxury-sort-trigger {
-        padding: 4px 10px !important;
+        padding: 3px 8px !important;
         height: 32px !important;
-        font-size: 0.74rem !important;
-      }
-      .catalog-sort-label {
-        display: none !important;
+        font-size: 0.72rem !important;
       }
     }
   </style>
@@ -687,23 +599,14 @@
     <header class="catalog-discovery-header">
       <div class="page-container">
         
-        <!-- ROW 1: Left (Breadcrumb + Title + Count Pill) | Right (Search Pill) -->
-        <div class="discovery-row-primary">
-          <div class="discovery-title-group">
-            <nav class="page-breadcrumb" aria-label="Breadcrumb">
-              <a href="index.html">Home</a>
-              <span class="crumb-sep">/</span>
-              <span class="crumb-current">Search</span>
-            </nav>
-            <div class="discovery-heading-wrap">
-              <h1 class="discovery-title" id="searchHeroTitle">Search Products</h1>
-              <span class="discovery-count-pill" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">0</span> Products</span>
-            </div>
-            <!-- Hidden subtitle to preserve script compatibility without visual clutter -->
-            <span id="searchHeroSubtitle" style="display: none;" aria-hidden="true"></span>
-          </div>
+        <!-- ROW 1: Left Breadcrumb | Right Search Bar -->
+        <div class="discovery-top-bar">
+          <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="crumb-sep">/</span>
+            <span class="crumb-current">Search Products</span>
+          </nav>
 
-          <!-- Right: Compact Search Pill Input -->
           <div class="discovery-search-wrap">
             <div class="search-input-box">
               <div class="search-input-icon">
@@ -726,65 +629,63 @@
           </div>
         </div>
 
-        <!-- ROW 2: Status Indicator | Luxury Sort Dropdown & Count -->
-        <div class="discovery-row-secondary">
-          <div class="catalog-discovery-status" id="discoveryStatusText">
-            <span class="status-dot"></span>
-            <span id="discoveryStatusLabel">Explore by Category Shelves</span>
+        <!-- ROW 2: Navigation & Status Action (Left) | Luxury Sort Dropdown (Right) -->
+        <div class="discovery-controls-bar">
+          <div class="discovery-controls-left" id="discoveryNavAction">
+            <h1 class="discovery-controls-heading" id="searchHeroTitle">Explore Collections</h1>
+            <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">75</span> Styles</span>
+            <span id="searchHeroSubtitle" style="display: none;" aria-hidden="true"></span>
           </div>
 
-          <div class="discovery-meta-controls">
-            <span class="catalog-results-count" id="catalogResultsCount">Showing <strong id="catalogCountBold">0</strong> Products</span>
-            <div class="luxury-custom-sort" id="luxurySortWrap">
-              <span class="catalog-sort-label">Sort By:</span>
-              <div class="luxury-sort-dropdown" id="luxurySortDropdown">
-                <button type="button" 
-                  class="luxury-sort-trigger" 
-                  id="sortDropdownTrigger" 
-                  aria-haspopup="listbox" 
-                  aria-expanded="false" 
-                  aria-label="Sort by">
-                  <span class="sort-trigger-text" id="sortSelectedLabel">Featured / Best Sellers</span>
-                  <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                  </svg>
-                </button>
-                <div class="luxury-sort-menu" id="sortDropdownMenu" role="listbox" aria-label="Sort options">
-                  <div class="luxury-sort-option active" data-value="featured" role="option">
-                    <span class="option-label">Featured / Best Sellers</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="price-low" role="option">
-                    <span class="option-label">Price: Low to High</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="price-high" role="option">
-                    <span class="option-label">Price: High to Low</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="rating" role="option">
-                    <span class="option-label">Customer Rating</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="newest" role="option">
-                    <span class="option-label">New Arrivals</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="title-az" role="option">
-                    <span class="option-label">Name: A to Z</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
+          <div class="discovery-controls-right">
+            <span class="catalog-sort-label">Sort By:</span>
+            <div class="luxury-sort-dropdown" id="luxurySortDropdown">
+              <button type="button" 
+                class="luxury-sort-trigger" 
+                id="sortDropdownTrigger" 
+                aria-haspopup="listbox" 
+                aria-expanded="false" 
+                aria-label="Sort by">
+                <span class="sort-trigger-text" id="sortSelectedLabel">Featured / Best Sellers</span>
+                <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="luxury-sort-menu" id="sortDropdownMenu" role="listbox" aria-label="Sort options">
+                <div class="luxury-sort-option active" data-value="featured" role="option">
+                  <span class="option-label">Featured / Best Sellers</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <!-- Hidden native select for script synchronization -->
-                <select id="searchSortSelect" style="display: none;" aria-hidden="true">
-                  <option value="featured">Featured / Best Sellers</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="rating">Customer Rating</option>
-                  <option value="newest">New Arrivals</option>
-                  <option value="title-az">Name: A to Z</option>
-                </select>
+                <div class="luxury-sort-option" data-value="price-low" role="option">
+                  <span class="option-label">Price: Low to High</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="price-high" role="option">
+                  <span class="option-label">Price: High to Low</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="rating" role="option">
+                  <span class="option-label">Customer Rating</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="newest" role="option">
+                  <span class="option-label">New Arrivals</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="luxury-sort-option" data-value="title-az" role="option">
+                  <span class="option-label">Name: A to Z</span>
+                  <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
               </div>
+              <!-- Hidden native select for script synchronization -->
+              <select id="searchSortSelect" style="display: none;" aria-hidden="true">
+                <option value="featured">Featured / Best Sellers</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Customer Rating</option>
+                <option value="newest">New Arrivals</option>
+                <option value="title-az">Name: A to Z</option>
+              </select>
             </div>
           </div>
         </div>
@@ -1128,9 +1029,9 @@
           swatchesHtml = `<div class="card-color-swatches" aria-label="Available Colors">${swatches}${more}</div>`;
         }
 
-        const priceFormatted = `Rs. ${Number(product.price).toLocaleString('en-IN')}.00`;
+        const priceFormatted = `Rs. ${Math.round(product.price).toLocaleString('en-IN')}`;
         const originalPriceHtml = product.original_price > product.price 
-          ? `<span class="card-price-was">Rs. ${Number(product.original_price).toLocaleString('en-IN')}.00</span>` 
+          ? `<span class="card-price-was">Rs. ${Math.round(product.original_price).toLocaleString('en-IN')}</span>` 
           : '';
 
         return `
@@ -1174,6 +1075,7 @@
 
         if (!contentArea) return;
 
+        const navAction = document.getElementById('discoveryNavAction');
         const q = activeQuery.toLowerCase().trim();
 
         // 1. Search Query active: Render Search Results Grid
@@ -1189,13 +1091,18 @@
 
           list = sortProductList(list, activeSort);
 
-          if (heroTitle) heroTitle.innerHTML = `Results for <span class="search-query-highlight">"${escapeSearchText(activeQuery)}"</span>`;
-          if (heroSubtitle) heroSubtitle.textContent = `${list.length} product${list.length === 1 ? '' : 's'} found`;
-          if (countBadge) countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}`;
-          if (metaCountBold) metaCountBold.textContent = list.length;
-          if (discoveryStatusLabel) discoveryStatusLabel.textContent = `Search: "${activeQuery}"`;
-
           if (list.length === 0) {
+            if (navAction) {
+              navAction.innerHTML = `
+                <button type="button" class="discovery-back-pill-btn" onclick="resetToCategoryRows()">
+                  &larr; All Shelves
+                </button>
+                <h1 class="discovery-controls-heading" id="searchHeroTitle">
+                  No Results for <span style="color: #C5A059;">"${escapeSearchText(activeQuery)}"</span>
+                </h1>
+                <span class="discovery-count-chip" id="searchCountBadge">0 Products</span>
+              `;
+            }
             contentArea.innerHTML = `
               <div class="search-empty-state">
                 <div class="empty-icon">
@@ -1218,15 +1125,19 @@
             return;
           }
 
-          contentArea.innerHTML = `
-            <div class="category-filter-banner">
-              <div class="banner-text">
-                Results for <strong>"${escapeSearchText(activeQuery)}"</strong> <span>(${list.length} Products)</span>
-              </div>
-              <button type="button" class="banner-reset-btn" onclick="resetToCategoryRows()">
-                ← Browse Category Rows
+          if (navAction) {
+            navAction.innerHTML = `
+              <button type="button" class="discovery-back-pill-btn" onclick="resetToCategoryRows()">
+                &larr; All Shelves
               </button>
-            </div>
+              <h1 class="discovery-controls-heading" id="searchHeroTitle">
+                <span class="desktop-query-label">Results for <span style="color: #C5A059;">"${escapeSearchText(activeQuery)}"</span></span>
+              </h1>
+              <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}</span>
+            `;
+          }
+
+          contentArea.innerHTML = `
             <div class="catalog-products-grid" id="searchResultsGrid">
               ${list.map(p => renderCard(p)).join('')}
             </div>
@@ -1247,21 +1158,17 @@
           list = sortProductList(list, activeSort);
 
           const catTitle = categoryObj ? categoryObj.title : 'Category Items';
-          if (heroTitle) heroTitle.textContent = catTitle;
-          if (heroSubtitle) heroSubtitle.textContent = categoryObj ? categoryObj.tagline : `Showing ${list.length} products`;
-          if (countBadge) countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${list.length}</span> Products`;
-          if (metaCountBold) metaCountBold.textContent = list.length;
-          if (discoveryStatusLabel) discoveryStatusLabel.textContent = `Browsing: ${catTitle}`;
+          if (navAction) {
+            navAction.innerHTML = `
+              <button type="button" class="discovery-back-pill-btn" onclick="resetToCategoryRows()">
+                &larr; All Shelves
+              </button>
+              <h1 class="discovery-controls-heading" id="searchHeroTitle">${catTitle}</h1>
+              <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}</span>
+            `;
+          }
 
           contentArea.innerHTML = `
-            <div class="category-filter-banner">
-              <div class="banner-text">
-                <strong>${catTitle}</strong> <span>(${list.length} Products)</span>
-              </div>
-              <button type="button" class="banner-reset-btn" onclick="resetToCategoryRows()">
-                ← Back to All Categories
-              </button>
-            </div>
             <div class="catalog-products-grid" id="searchResultsGrid">
               ${list.map(p => renderCard(p)).join('')}
             </div>
@@ -1270,11 +1177,12 @@
         }
 
         // 3. Default Browse: Dedicated Rows per Each Category
-        if (heroTitle) heroTitle.textContent = 'Explore Collections';
-        if (heroSubtitle) heroSubtitle.textContent = '75+ Luxury cases, armor bands & tech essentials arranged by category';
-        if (countBadge) countBadge.innerHTML = `<span class="catalog-count-num" id="countNumber">${products.length}</span> Products`;
-        if (metaCountBold) metaCountBold.textContent = products.length;
-        if (discoveryStatusLabel) discoveryStatusLabel.textContent = 'Explore by Category Shelves';
+        if (navAction) {
+          navAction.innerHTML = `
+            <h1 class="discovery-controls-heading" id="searchHeroTitle">Explore Collections</h1>
+            <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${products.length}</span> Styles</span>
+          `;
+        }
 
         const shelvesHtml = CATEGORY_ROWS.map(cat => {
           let catProducts = products.filter(cat.filter);

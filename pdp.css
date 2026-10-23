@@ -208,6 +208,50 @@ html, body {
   border: 2px solid #FFFFFF;
 }
 
+.pdp-mobile-toggle-btn {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .pdp-header-container {
+    padding: 10px 16px !important;
+  }
+  .pdp-brand-logo-img {
+    height: 25px !important;
+  }
+  .pdp-action-icon-btn {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .pdp-action-icon-btn svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+  #userProfileBtn {
+    display: none !important;
+  }
+  .pdp-mobile-toggle-btn {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .pdp-header-container {
+    padding: 8px 12px !important;
+  }
+  .pdp-brand-logo-img {
+    height: 22px !important;
+  }
+  .pdp-action-icon-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .pdp-action-icon-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
 /* 3. BREADCRUMBS & LINEUP STRIP */
 .pdp-breadcrumbs-strip {
   max-width: 1360px;
