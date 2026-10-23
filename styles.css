@@ -8471,6 +8471,126 @@ a.footer-contact-main:hover {
   scroll-margin-top: 80px;
 }
 
+/* Base Bestseller Header (Universal across all viewports) */
+.bestseller-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 24px;
+  margin-bottom: 24px;
+  z-index: 10;
+}
+
+.bestseller-eyebrow-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.bestseller-eyebrow-line {
+  width: 44px;
+  height: 1.5px;
+  display: inline-block;
+}
+
+.bestseller-eyebrow-line.line-left {
+  background: linear-gradient(to right, transparent, #C5A059);
+}
+
+.bestseller-eyebrow-line.line-right {
+  background: linear-gradient(to left, transparent, #C5A059);
+}
+
+.bestseller-eyebrow-text {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #C5A059;
+  text-transform: uppercase;
+}
+
+.bestseller-header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bestseller-main-title {
+  font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0A0A0A;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.bestseller-title-accent {
+  background: linear-gradient(135deg, #E6C280 0%, #C5A059 45%, #946F25 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin-left: 8px;
+}
+
+.bestseller-subtitle {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #64748B;
+  margin: 10px auto 0 auto;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  max-width: 520px;
+}
+
+.bestseller-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0A0A0A;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 15;
+}
+
+.bestseller-view-text-mobile {
+  display: none;
+}
+
+.bestseller-view-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #0A0A0A;
+  background: transparent;
+  color: #0A0A0A;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.bestseller-view-all-btn:hover .bestseller-view-circle {
+  background: #0A0A0A;
+  color: #FFFFFF;
+  transform: translateX(3px);
+}
+
 /* Master Desktop Container (Exact 1672px x 941px Canvas matching mockup) */
 @media (min-width: 1201px) {
   .bestseller-section {
@@ -8494,79 +8614,15 @@ a.footer-contact-main:hover {
 
   /* Header Centered at top */
   .bestseller-header {
-    position: relative;
-    width: 100%;
-    text-align: center;
     padding-top: 50px;
     margin-bottom: 24px;
-    z-index: 10;
-  }
-
-  .bestseller-header-center {
-    display: inline-block;
-    text-align: center;
-  }
-
-  .bestseller-main-title {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 52px;
-    font-weight: 700;
-    letter-spacing: 2.2px;
-    color: #121316;
-    margin: 0;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-
-  .bestseller-title-accent {
-    color: #9E5627;
-    font-weight: 700;
-    letter-spacing: 5.4px;
-    margin-left: 16px;
-  }
-
-  .bestseller-subtitle {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #605C57;
-    margin: 12px 0 0 0;
-    letter-spacing: 0.1px;
   }
 
   /* View All Button at exact bottom-right of header bar above right slider card */
   .bestseller-view-all-btn {
     position: absolute;
     right: 0;
-    bottom: 0;
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #1C1C1E;
-    text-decoration: none;
-    z-index: 15;
-    transition: transform 0.25s ease, opacity 0.2s ease;
-  }
-
-  .bestseller-view-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #DAC8B8;
-    color: #141416;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.25s ease, transform 0.25s ease;
-    flex-shrink: 0;
-  }
-
-  .bestseller-view-all-btn:hover .bestseller-view-circle {
-    background-color: #CBB4A0;
-    transform: translateX(3px);
+    bottom: 2px;
   }
 
   /* Dual Stage Flex Layout */
@@ -9197,31 +9253,71 @@ a.footer-contact-main:hover {
 
 @media (max-width: 768px) {
   .bestseller-section {
-    padding: 36px 0 48px 0;
+    padding: 34px 0 44px 0;
   }
 
   .bestseller-container {
     padding: 0 16px;
   }
 
+  .bestseller-header {
+    margin-bottom: 16px;
+    padding-top: 4px;
+  }
+
+  .bestseller-eyebrow-wrap {
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
+  .bestseller-eyebrow-line {
+    width: 26px;
+  }
+
+  .bestseller-eyebrow-text {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+
   .bestseller-main-title {
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: clamp(1.75rem, 6.8vw, 2.15rem);
+    letter-spacing: -0.02em;
+  }
+
+  .bestseller-title-accent {
+    margin-left: 6px;
   }
 
   .bestseller-subtitle {
-    font-size: 14px;
+    font-size: 13.5px;
+    margin-top: 6px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+  .bestseller-view-text-desktop {
+    display: none;
+  }
+
+  .bestseller-view-text-mobile {
+    display: inline;
   }
 
   .bestseller-view-all-btn {
-    font-size: 14px;
-    gap: 10px;
-    margin: 8px auto 20px auto;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    gap: 8px;
+    margin: 12px auto 18px auto;
   }
 
   .bestseller-view-circle {
-    width: 38px;
-    height: 38px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .bestseller-view-circle svg {
+    width: 13px;
+    height: 13px;
   }
 
   .bestseller-right-slider {
