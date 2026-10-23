@@ -6186,6 +6186,10 @@ a.footer-contact-main:hover {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.bento-view-all-text-mobile {
+  display: none;
+}
+
 .bento-view-all-circle {
   width: 36px;
   height: 36px;
@@ -6226,11 +6230,11 @@ a.footer-contact-main:hover {
 .bento-main-heading {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 800;
-  font-size: clamp(2.4rem, 3.8vw, 4.45rem);
-  line-height: 1.0;
+  font-size: clamp(2.2rem, 3.2vw, 3.6rem);
+  line-height: 1.08;
   letter-spacing: -0.035em;
   color: #0A0A0A;
-  margin: 0 0 18px 0;
+  margin: 0 0 16px 0;
   text-transform: none;
 }
 
@@ -6495,39 +6499,55 @@ a.footer-contact-main:hover {
 /* Mobile Layout (< 768px) */
 @media (max-width: 768px) {
   .bento-collections-section {
-    padding: 36px 0;
+    padding: 30px 0;
   }
   .bento-container {
     padding: 0 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .bento-top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 18px;
+    gap: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .bento-kicker-wrap {
     gap: 8px;
+    min-width: 0;
+    flex-shrink: 1;
   }
   .bento-kicker {
     font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.12em;
     white-space: nowrap;
   }
   .bento-kicker-line {
     display: none;
   }
+  .bento-view-all-text-desktop {
+    display: none;
+  }
+  .bento-view-all-text-mobile {
+    display: inline;
+  }
   .bento-view-all-btn {
     font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.1em;
     gap: 8px;
     white-space: nowrap;
+    flex-shrink: 0;
   }
   .bento-view-all-circle {
     width: 28px;
     height: 28px;
     min-width: 28px;
+    flex-shrink: 0;
   }
   .bento-view-all-circle svg {
     width: 13px;
@@ -6539,14 +6559,18 @@ a.footer-contact-main:hover {
   }
   .bento-intro-card {
     grid-column: span 2;
-    padding: 0 0 8px 0;
+    padding: 0 0 4px 0;
   }
   .bento-main-heading {
-    font-size: clamp(2.1rem, 8.8vw, 2.75rem);
-    margin-bottom: 12px;
+    font-size: clamp(1.85rem, 7.5vw, 2.35rem);
+    line-height: 1.12;
+    margin-bottom: 8px;
   }
   .bento-subtitle {
-    font-size: 14px;
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: #475569;
+    max-width: 100%;
   }
   .bento-card-01 {
     grid-column: span 2;
