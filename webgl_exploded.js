@@ -256,43 +256,6 @@
       targetRotY = 0;
     });
 
-    // 7. Interactive HUD Controls
-    const snapBtn = document.getElementById('webglSnapBtn');
-    const snapBtnText = document.getElementById('webglSnapBtnText');
-    const loopBtn = document.getElementById('webglLoopBtn');
-    const loopBtnText = document.getElementById('webglLoopBtnText');
-    const statusText = document.getElementById('webglStatusText');
-
-    if (snapBtn) {
-      snapBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        isAutoLoop = false;
-        if (loopBtn) {
-          loopBtn.classList.remove('active');
-          if (loopBtnText) loopBtnText.textContent = 'PAUSED';
-        }
-        manualAssembled = !manualAssembled;
-        targetProgress = manualAssembled ? 0.0 : 1.0;
-        if (snapBtnText) {
-          snapBtnText.textContent = manualAssembled ? 'EXPLODE' : 'ASSEMBLE';
-        }
-      });
-    }
-
-    if (loopBtn) {
-      loopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        isAutoLoop = !isAutoLoop;
-        if (isAutoLoop) {
-          loopBtn.classList.add('active');
-          if (loopBtnText) loopBtnText.textContent = 'LOOPING';
-        } else {
-          loopBtn.classList.remove('active');
-          if (loopBtnText) loopBtnText.textContent = 'PAUSED';
-        }
-      });
-    }
-
     function easeOutCubic(t) {
       return 1 - Math.pow(1 - Math.max(0, Math.min(1, t)), 3);
     }
@@ -302,7 +265,7 @@
       return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
     }
 
-    // 8. Main 60 FPS Render Loop: Dynamic "Combine and Go" Animation
+    // 7. Main 60 FPS Render Loop: Pure, Seamless "Combine and Go" 3D Product Showcase
     const clock = new THREE.Clock();
 
     function animate() {
@@ -312,54 +275,31 @@
 
       const delta = Math.min(clock.getDelta(), 0.1);
 
-      if (isAutoLoop) {
-        animTime += delta;
-        // Continuous, rhythmic "Combine and Go" cycle: 5.2 seconds
-        // 0.0s - 0.8s: Detached floating hover
-        // 0.8s - 2.1s: The "COMBINE" glide: smooth precision docking directly onto the phone
-        // 2.1s - 3.4s: Locked assembled hold on the phone (zero gap, flush fit)
-        // 3.4s - 4.6s: The "GO" lift: smooth detachment lifting up into 3D space
-        // 4.6s - 5.2s: Gentle deceleration into hovering float
-        const cycleDuration = 5.2;
-        const cycle = animTime % cycleDuration;
+      animTime += delta;
+      // Continuous, hypnotic "Combine and Go" 3D product showcase loop: 5.2 seconds
+      // 0.0s - 0.8s: Detached floating hover in isometric space
+      // 0.8s - 2.1s: The "COMBINE" glide: smooth precision docking directly onto the phone
+      // 2.1s - 3.4s: Locked assembled hold on the phone (zero gap, 100% precision flush fit)
+      // 3.4s - 4.6s: The "GO" lift: smooth detachment lifting up into 3D isometric space
+      // 4.6s - 5.2s: Gentle deceleration into hovering float
+      const cycleDuration = 5.2;
+      const cycle = animTime % cycleDuration;
 
-        if (cycle < 0.8) {
-          targetProgress = 1.0;
-          if (statusText) statusText.textContent = '3D FRAMELESS ARMOR DETACHED • HOVER VIEW';
-          if (snapBtnText) snapBtnText.textContent = 'ASSEMBLE';
-        } else if (cycle < 2.1) {
-          const t = (cycle - 0.8) / 1.3;
-          targetProgress = 1.0 - easeOutCubic(t);
-          if (statusText) statusText.textContent = 'COMBINING: PRECISION DOCKING ONTO PHONE...';
-        } else if (cycle < 3.4) {
-          targetProgress = 0.0;
-          if (statusText) statusText.textContent = 'COVER LOCKED ON PHONE • 100% PRECISE FIT';
-          if (snapBtnText) snapBtnText.textContent = 'EXPLODE';
-        } else if (cycle < 4.6) {
-          const t = (cycle - 3.4) / 1.2;
-          targetProgress = easeInOutQuad(t);
-          if (statusText) statusText.textContent = 'DETACHING COVER FROM PHONE...';
-        } else {
-          targetProgress = 1.0;
-          if (statusText) statusText.textContent = '3D FRAMELESS ARMOR DETACHED • HOVER VIEW';
-          if (snapBtnText) snapBtnText.textContent = 'ASSEMBLE';
-        }
-      }
-
-      if (isAutoLoop) {
-        animProgress = targetProgress;
+      if (cycle < 0.8) {
+        targetProgress = 1.0;
+      } else if (cycle < 2.1) {
+        const t = (cycle - 0.8) / 1.3;
+        targetProgress = 1.0 - easeOutCubic(t);
+      } else if (cycle < 3.4) {
+        targetProgress = 0.0;
+      } else if (cycle < 4.6) {
+        const t = (cycle - 3.4) / 1.2;
+        targetProgress = easeInOutQuad(t);
       } else {
-        // Ultra-smooth interpolation for manual toggle button
-        animProgress += (targetProgress - animProgress) * 0.14;
-        if (Math.abs(targetProgress - animProgress) < 0.001) {
-          animProgress = targetProgress;
-        }
-        if (statusText) {
-          if (animProgress > 0.85) statusText.textContent = '3D FRAMELESS ARMOR DETACHED • HOVER VIEW';
-          else if (animProgress < 0.15) statusText.textContent = 'COVER LOCKED ON PHONE • 100% PRECISE FIT';
-          else statusText.textContent = targetProgress === 0.0 ? 'COMBINING: PRECISION DOCKING ONTO PHONE...' : 'DETACHING COVER FROM PHONE...';
-        }
+        targetProgress = 1.0;
       }
+
+      animProgress = targetProgress;
 
       // Update Mesh positions, scales and rotations:
       // When animProgress = 0: strictly locked at (0, 0, 4) with scale 1.0 and rotZ 0.0 (sub-pixel exact fit)!
