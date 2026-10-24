@@ -99,8 +99,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: clip;
-  max-width: 100%;
+  overflow-x: hidden !important;
+  max-width: 100vw;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -111,8 +111,8 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-dark);
   line-height: 1.5;
-  overflow-x: clip;
-  max-width: 100%;
+  overflow-x: hidden !important;
+  max-width: 100vw;
   width: 100%;
   position: relative;
 }
@@ -3302,6 +3302,14 @@ a.footer-contact-main:hover {
   .footer-hero-wordmark {
     letter-spacing: -0.01em;
     gap: 1px;
+  }
+  .footer-hero-subtag {
+    flex-wrap: wrap !important;
+    gap: 6px 12px !important;
+    padding: 0 16px !important;
+    font-size: 0.72rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
   }
   .wordmark-letter {
     font-size: clamp(2.4rem, 11vw, 3.4rem);
