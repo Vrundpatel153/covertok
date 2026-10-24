@@ -330,12 +330,11 @@
   .catalog-curated-banner {
     flex-direction: row;
     min-height: auto;
-    background: #FAF7F2;
-    border: 1px solid #EAE5DB;
-    border-radius: 14px;
-    padding: 12px 14px;
-    margin-bottom: 8px;
-    box-shadow: none;
+    background: transparent !important;
+    border: none !important;
+    padding: 4px 0 2px !important;
+    margin-bottom: 4px !important;
+    box-shadow: none !important;
   }
   .catalog-curated-media {
     display: none !important; /* Hide giant decorative image on mobile */
@@ -486,6 +485,8 @@
   background: rgba(23, 21, 19, 0.06);
   color: #786B61;
   line-height: 1.2;
+  margin-left: 3px;
+  flex-shrink: 0;
 }
 
 .catalog-cat-card.active .cat-pill-count {
@@ -783,13 +784,16 @@
     flex-direction: column;
     align-items: stretch;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .catalog-search-pill {
     max-width: 100%;
     width: 100%;
-    height: 38px;
+    height: 40px;
     padding: 0 14px;
+    background: #FFFFFF;
+    border: 1.5px solid #EAE5DB;
+    border-radius: 999px;
   }
   .catalog-toolbar-right {
     display: flex;
@@ -803,8 +807,37 @@
   .catalog-sort-label {
     display: none;
   }
+  .catalog-count-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #786B61;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .catalog-toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .catalog-filters-btn {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
   .luxury-sort-trigger {
-    max-width: 150px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 999px;
+    max-width: none !important;
+    flex-shrink: 0;
   }
 }
 
@@ -825,7 +858,7 @@
     height: 35px;
     padding: 0 10px;
     font-size: 0.76rem;
-    max-width: 125px;
+    max-width: none !important;
     gap: 4px;
   }
 }
@@ -846,7 +879,7 @@
     height: 32px;
     padding: 0 8px;
     font-size: 0.72rem;
-    max-width: 105px;
+    max-width: none !important;
   }
 }
 
@@ -1740,226 +1773,126 @@
     padding: 24px 20px;
   }
 
+  /* Mobile Product Grid & Luxury Cards */
   .catalog-products-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 12px 10px !important;
+    margin-bottom: 36px !important;
   }
 
   .catalog-card {
-    border-radius: 16px !important;
-    border: 1px solid #EAE5DB !important;
+    border-radius: 18px !important;
+    border: 1px solid #ECE7DE !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    overflow: hidden !important;
   }
 
   .card-media-stage {
     margin: 0 !important;
-    padding: 4px !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 15px 15px 0 0 !important;
+    padding: 0 !important;
+    aspect-ratio: 4 / 4.6 !important;
+    background: #F8F6F2 !important;
+    border-radius: 18px 18px 0 0 !important;
+    overflow: hidden !important;
+  }
+
+  .card-img-wrap {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .card-main-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
   }
 
   .card-badges-row {
     position: absolute !important;
-    top: 6px !important;
-    left: 6px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 3px !important;
+    top: 8px !important;
+    left: 8px !important;
     z-index: 3 !important;
     pointer-events: none !important;
   }
 
-  .card-micro-badge,
-  .card-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    line-height: 1 !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
-    padding: 2.5px 6px !important;
-    font-size: 0.6rem !important;
+  .luxury-card-tag {
+    padding: 3.5px 8px !important;
+    font-size: 0.65rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.02em !important;
-    border-radius: 6px !important;
-    background: #171513 !important;
+    border-radius: 999px !important;
+    background: rgba(23, 21, 19, 0.88) !important;
     color: #FFFFFF !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12) !important;
-    margin: 0 !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
   }
 
-  .card-color-swatches {
-    bottom: 5px !important;
-    padding: 2px 6px !important;
-    gap: 3px !important;
-    max-width: 90% !important;
-  }
-
-  .card-color-dot {
-    width: 9px !important;
-    height: 9px !important;
+  .card-wishlist-btn {
+    top: 8px !important;
+    right: 8px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: rgba(255, 255, 255, 0.92) !important;
   }
 
   .card-body-wrap {
-    padding: 10px 12px 14px !important;
+    padding: 10px 10px 12px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 3px !important;
-    box-sizing: border-box !important;
-  }
-
-  .card-cat-rating {
-    display: none !important; /* Hide clunky category name for clean luxury minimalism */
+    flex: 1 !important;
+    background: #FFFFFF !important;
   }
 
   .card-product-title {
-    font-size: 0.76rem !important;
+    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif) !important;
+    font-size: 0.82rem !important;
     font-weight: 600 !important;
-    line-height: 1.3 !important;
+    line-height: 1.32 !important;
+    color: #171513 !important;
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
-    height: 2.6em !important;
-    min-height: 2.6em !important;
-    margin-bottom: 5px !important;
-    color: #171513 !important;
+    margin: 0 0 6px !important;
+    height: auto !important;
+    min-height: 0 !important;
   }
 
   .card-price-row {
     display: flex !important;
     align-items: baseline !important;
-    gap: 4px !important;
-    flex-wrap: nowrap !important;
-    overflow: hidden !important;
+    gap: 6px !important;
     margin-top: auto !important;
-    width: 100% !important;
   }
 
   .card-price-now {
-    font-size: 0.88rem !important;
+    font-family: var(--font-heading, 'Outfit', sans-serif) !important;
+    font-size: 1rem !important;
     font-weight: 800 !important;
     color: #171513 !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
     line-height: 1 !important;
   }
 
   .card-price-was {
-    font-size: 0.72rem !important;
+    font-family: var(--font-heading, 'Outfit', sans-serif) !important;
+    font-size: 0.78rem !important;
     color: #8C827A !important;
     text-decoration: line-through !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
     line-height: 1 !important;
   }
 
-  .card-micro-rating {
-    font-size: 0.7rem !important;
-    font-weight: 700 !important;
-    color: #D97706 !important;
-    margin-left: auto !important;
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 2px !important;
-    line-height: 1 !important;
-  }
-
-  .card-rating-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 2px !important;
-    color: #D97706 !important;
-    font-size: 0.63rem !important;
-    font-weight: 700 !important;
-    flex: 0 0 auto !important;
-    white-space: nowrap !important;
-  }
-
-  .card-product-title {
-    font-size: 0.8125rem !important;
-    font-weight: 600 !important;
-    line-height: 1.35 !important;
-    height: 2.7em !important;
-    min-height: 2.7em !important;
-    margin: 2px 0 6px !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
-    overflow: hidden !important;
-  }
-
-  .card-price-row {
-    display: flex !important;
-    align-items: baseline !important;
-    gap: 6px !important;
-    margin-top: auto !important;
-    margin-bottom: 8px !important;
-    flex-wrap: wrap !important;
-  }
-
-  .card-price-now {
-    font-size: 0.92rem !important;
-    font-weight: 800 !important;
-    color: #171513 !important;
-    white-space: nowrap !important;
-  }
-
-  .card-price-was {
-    font-size: 0.72rem !important;
-    color: #94A3B8 !important;
-    text-decoration: line-through !important;
-    white-space: nowrap !important;
-  }
-
+  /* Completely remove clutter elements */
+  .card-badge,
+  .card-color-swatches,
+  .card-color-dot,
+  .card-actions-row,
+  .card-micro-rating,
+  .card-rating-badge,
+  .card-cat-rating,
+  .card-view-btn,
   .card-save-label {
-    display: none !important;
-  }
-
-  .card-actions-row {
-    display: flex !important;
-    gap: 6px !important;
-    margin-top: 4px !important;
-    align-items: center !important;
-  }
-
-  .card-add-btn {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    padding: 0 !important;
-    border-radius: 999px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #A98135 !important;
-    border: 1px solid #8E6B2A !important;
-    color: #FFFFFF !important;
-  }
-
-  .card-add-btn span {
-    display: none !important;
-  }
-
-  .card-buy-btn {
-    flex: 1 !important;
-    height: 36px !important;
-    padding: 0 10px !important;
-    font-size: 0.78rem !important;
-    font-weight: 700 !important;
-    border-radius: 999px !important;
-    background: #171513 !important;
-    border: none !important;
-    color: #FFFFFF !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    white-space: nowrap !important;
-  }
-
-  .card-view-btn {
     display: none !important;
   }
 

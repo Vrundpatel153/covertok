@@ -199,8 +199,16 @@
     if (currentHeading) {
       currentHeading.textContent = activeCatObj.title;
     }
+    const mainHeading = document.getElementById('catalogMainHeading');
+    if (mainHeading) {
+      if (currentCategory === 'all') {
+        mainHeading.innerHTML = `All Products &amp; <span class="copper-accent">Collections</span>`;
+      } else {
+        mainHeading.innerHTML = `${activeCatObj.title} <span class="copper-accent">Collection</span>`;
+      }
+    }
     if (countEl) {
-      countEl.innerHTML = `Showing <span class="catalog-count-num">${filtered.length}</span> Products`;
+      countEl.innerHTML = `<span class="catalog-count-num">${filtered.length}</span> Products`;
     }
 
     // Bind filters panel toggle button
@@ -712,17 +720,17 @@
     const catalogSortOptions = document.querySelectorAll('#catalogSortDropdownMenu .luxury-sort-option');
 
     const sortLabelsMap = {
-      'featured': 'Featured / Best Sellers',
-      'price-low': 'Price: Low to High',
-      'price-high': 'Price: High to Low',
-      'rating': 'Customer Rating',
+      'featured': 'Featured',
+      'price-low': 'Price: Low',
+      'price-high': 'Price: High',
+      'rating': 'Top Rated',
       'newest': 'New Arrivals',
-      'title-az': 'Name: A to Z'
+      'title-az': 'Name: A-Z'
     };
 
     function syncCustomSortUI(val) {
       if (catalogSortSelectedLabel) {
-        catalogSortSelectedLabel.textContent = sortLabelsMap[val] || 'Featured / Best Sellers';
+        catalogSortSelectedLabel.textContent = sortLabelsMap[val] || 'Featured';
       }
       catalogSortOptions.forEach(opt => {
         if (opt.getAttribute('data-value') === val) {
