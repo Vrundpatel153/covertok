@@ -381,65 +381,42 @@
     filterAndRenderProducts();
   }
 
-  // Create single product card with live color switcher
+  // Create single editorial luxury product card (Clean, dominant image, no messy swatches)
   function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'catalog-card';
     card.setAttribute('data-id', product.id);
 
-    const hasColors = product.colors && product.colors.length > 1;
-    const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : '');
+    const hasColors = product.colors && product.colors.length > 0;
+    const initialImg = product.primary_image || (hasColors && product.colors[0].image ? product.colors[0].image : '');
 
-    // Badges HTML
+    // Single Minimalist Luxury Badge (No clutter or duplicate pills)
     let badgeHtml = '';
-    if (product.discount_percent > 0) {
-      badgeHtml += `<span class="card-badge card-badge-discount">${product.discount_percent}% OFF</span>`;
-    }
-    if (product.is_bestseller) {
-      badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
+    if (product.discount_percent >= 10) {
+      badgeHtml = `<span class="luxury-card-tag">-${product.discount_percent}%</span>`;
+    } else if (product.is_bestseller) {
+      badgeHtml = `<span class="luxury-card-tag tag-bestseller">BESTSELLER</span>`;
     } else if (product.is_new) {
-      badgeHtml += `<span class="card-badge card-badge-new">NEW</span>`;
+      badgeHtml = `<span class="luxury-card-tag tag-new">NEW</span>`;
     }
 
-    // Color Swatches HTML
-    let swatchesHtml = '';
-    if (hasColors) {
-      const swatches = product.colors.slice(0, 6).map((c, idx) => `
-        <button type="button" 
-          class="card-color-dot ${c.image === initialImg ? 'active' : ''}" 
-          data-img="${c.image}" 
-          data-color="${c.name}"
-          style="background: ${c.hex};" 
-          title="${c.name}">
-        </button>
-      `).join('');
-      const moreCount = product.colors.length > 6 ? `<span style="font-size: 0.65rem; font-weight: 700; color: #64748B;">+${product.colors.length - 6}</span>` : '';
-      swatchesHtml = `
-        <div class="card-color-swatches" aria-label="Available Colors">
-          ${swatches}
-          ${moreCount}
-        </div>
-      `;
-    }
-
-    // Format Prices cleanly matching "Rs. 1,299  Rs. 520"
-    const priceFormatted = `Rs. ${Math.round(product.price).toLocaleString('en-IN')}`;
+    // Format Prices cleanly
+    const priceFormatted = `₹${Math.round(product.price).toLocaleString('en-IN')}`;
     const origPriceFormatted = product.original_price && product.original_price > product.price 
-      ? `Rs. ${Math.round(product.original_price).toLocaleString('en-IN')}`
+      ? `₹${Math.round(product.original_price).toLocaleString('en-IN')}`
       : '';
 
     card.innerHTML = `
-      <div class="card-media-stage">
-        <div class="card-badges-row">${badgeHtml}</div>
+      <div class="card-media-stage" onclick="window.location.href='product?handle=${product.handle}'">
+        ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
         <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
           </svg>
         </button>
-        <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product?handle=${product.handle}'">
+        <div class="card-img-wrap">
           <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
         </div>
-        ${swatchesHtml}
       </div>
 
       <div class="card-body-wrap">
@@ -448,8 +425,8 @@
         </a>
 
         <div class="card-price-row">
-          ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
           <span class="card-price-now">${priceFormatted}</span>
+          ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
         </div>
       </div>
     `;
@@ -464,40 +441,17 @@
         wishBtn.querySelector('svg').setAttribute('fill', isLiked ? '#EF4444' : 'none');
         wishBtn.querySelector('svg').setAttribute('stroke', isLiked ? '#EF4444' : 'currentColor');
         if (window.showToast) {
-          window.showToast(isLiked ? 'Added to your Wishlist!' : 'Removed from Wishlist', 'heart');
+          window.showToast(isLiked ? 'Added to Wishlist' : 'Removed from Wishlist', 'heart');
         }
       });
     }
 
-    // Interactive Color Switcher on Card:
-    // "we will keep the color change option but it will change whole the product image window, while keeping the descriptoin , even the product name will be stay same."
-    const imgEl = card.querySelector(`#cardImg_${product.id}`);
-    const colorDots = card.querySelectorAll('.card-color-dot');
-    colorDots.forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        e.stopPropagation();
-        colorDots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
 
-        const newSrc = dot.getAttribute('data-img');
-        if (newSrc && imgEl) {
-          imgEl.style.opacity = '0.4';
-          imgEl.style.transform = 'scale(0.96)';
-          setTimeout(() => {
-            imgEl.src = newSrc;
-            imgEl.style.opacity = '1';
-            imgEl.style.transform = 'scale(1)';
-          }, 120);
-        }
-      });
-    });
-
-
-    // Add To Cart button
-    card.querySelector('.card-add-btn')?.addEventListener('click', () => {
-      const activeDot = card.querySelector('.card-color-dot.active');
-      const chosenColor = activeDot ? activeDot.getAttribute('data-color') : (product.colors && product.colors[0] ? product.colors[0].name : '');
-      const chosenImg = activeDot ? activeDot.getAttribute('data-img') : product.primary_image;
+    // Add To Cart button (if present)
+    card.querySelector('.card-add-btn')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const chosenColor = product.colors && product.colors[0] ? product.colors[0].name : '';
+      const chosenImg = product.primary_image || (product.colors && product.colors[0] ? product.colors[0].image : '');
       const chosenModel = product.models && product.models[0] ? product.models[0] : '';
 
       window.CovertokStore.addToCart({
