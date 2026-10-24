@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261020_v5">
-  <link rel="stylesheet" href="catalog.css?v=20261023_v1">
+  <link rel="stylesheet" href="catalog.css?v=20261024_v3">
   <link rel="stylesheet" href="microinteractions.css?v=20261020_v5">
 </head>
 <body>
@@ -233,70 +233,72 @@
           </div>
 
           <div class="catalog-toolbar-right">
-            <div class="luxury-custom-sort" id="catalogLuxurySortWrap">
-              <span class="catalog-sort-label">Sort By:</span>
-              <div class="luxury-sort-dropdown" id="catalogSortDropdown">
-                <button type="button" 
-                  class="luxury-sort-trigger" 
-                  id="catalogSortTrigger" 
-                  aria-haspopup="listbox" 
-                  aria-expanded="false" 
-                  aria-label="Sort by">
-                  <span class="sort-trigger-text" id="catalogSortSelectedLabel">Featured / Best Sellers</span>
-                  <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
-                  </svg>
-                </button>
-                <div class="luxury-sort-menu" id="catalogSortDropdownMenu" role="listbox" aria-label="Sort options">
-                  <div class="luxury-sort-option active" data-value="featured" role="option">
-                    <span class="option-label">Featured / Best Sellers</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <div class="catalog-count-label" id="catalogCount">Showing <span class="catalog-count-num">75</span> Products</div>
+
+            <div class="catalog-toolbar-actions">
+              <button type="button" class="catalog-filters-btn" id="catalogFiltersToggleBtn" aria-label="Toggle Filters">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line>
+                  <line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line>
+                  <line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line>
+                  <line x1="17" y1="16" x2="23" y2="16"></line>
+                </svg>
+                <span>Filter</span>
+              </button>
+
+              <div class="luxury-custom-sort" id="catalogLuxurySortWrap">
+                <span class="catalog-sort-label">Sort:</span>
+                <div class="luxury-sort-dropdown" id="catalogSortDropdown">
+                  <button type="button" 
+                    class="luxury-sort-trigger" 
+                    id="catalogSortTrigger" 
+                    aria-haspopup="listbox" 
+                    aria-expanded="false" 
+                    aria-label="Sort by">
+                    <span class="sort-trigger-text" id="catalogSortSelectedLabel">Featured</span>
+                    <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </button>
+                  <div class="luxury-sort-menu" id="catalogSortDropdownMenu" role="listbox" aria-label="Sort options">
+                    <div class="luxury-sort-option active" data-value="featured" role="option">
+                      <span class="option-label">Featured / Best Sellers</span>
+                      <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="luxury-sort-option" data-value="price-low" role="option">
+                      <span class="option-label">Price: Low to High</span>
+                      <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="luxury-sort-option" data-value="price-high" role="option">
+                      <span class="option-label">Price: High to Low</span>
+                      <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="luxury-sort-option" data-value="rating" role="option">
+                      <span class="option-label">Customer Rating</span>
+                      <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="luxury-sort-option" data-value="newest" role="option">
+                      <span class="option-label">New Arrivals</span>
+                      <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="luxury-sort-option" data-value="title-az" role="option">
+                      <span class="option-label">Name: A to Z</span>
+                      <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
                   </div>
-                  <div class="luxury-sort-option" data-value="price-low" role="option">
-                    <span class="option-label">Price: Low to High</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="price-high" role="option">
-                    <span class="option-label">Price: High to Low</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="rating" role="option">
-                    <span class="option-label">Customer Rating</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="newest" role="option">
-                    <span class="option-label">New Arrivals</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <div class="luxury-sort-option" data-value="title-az" role="option">
-                    <span class="option-label">Name: A to Z</span>
-                    <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
+                  <!-- Hidden native select for script synchronization with catalog.js -->
+                  <select class="catalog-select" id="catalogSortSelect" style="display: none;" aria-hidden="true">
+                    <option value="featured">Featured / Best Sellers</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Customer Rating</option>
+                    <option value="newest">New Arrivals</option>
+                    <option value="title-az">Name: A to Z</option>
+                  </select>
                 </div>
-                <!-- Hidden native select for script synchronization with catalog.js -->
-                <select class="catalog-select" id="catalogSortSelect" style="display: none;" aria-hidden="true">
-                  <option value="featured">Featured / Best Sellers</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="rating">Customer Rating</option>
-                  <option value="newest">New Arrivals</option>
-                  <option value="title-az">Name: A to Z</option>
-                </select>
               </div>
             </div>
-
-            <button type="button" class="catalog-filters-btn" id="catalogFiltersToggleBtn" aria-label="Toggle Filters">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line>
-                <line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line>
-                <line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line>
-                <line x1="17" y1="16" x2="23" y2="16"></line>
-              </svg>
-              <span>Filters</span>
-            </button>
-
-            <div class="catalog-count-label" id="catalogCount">Showing <span class="catalog-count-num">16</span> Products</div>
           </div>
         </div>
 
@@ -614,6 +616,6 @@
   <script src="assets/store_core.js"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
-  <script src="assets/catalog.js?v=20261023_v1"></script>
+  <script src="assets/catalog.js?v=20261024_v3"></script>
 </body>
 </html>

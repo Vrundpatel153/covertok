@@ -209,7 +209,8 @@
     if (filtersBtn && filtersPanel && !filtersBtn.__hasBoundToggle) {
       filtersBtn.__hasBoundToggle = true;
       filtersBtn.addEventListener('click', () => {
-        filtersPanel.classList.toggle('show');
+        const isOpen = filtersPanel.classList.toggle('show');
+        filtersBtn.classList.toggle('active', isOpen);
       });
     }
 
