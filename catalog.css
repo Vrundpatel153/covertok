@@ -338,16 +338,18 @@
   }
 }
 
-/* 4. CATEGORY CARDS NAVIGATION TRACK (Pills with Product Previews) */
+/* 4. CATEGORY CARDS NAVIGATION TRACK (Sleek Luxury Category Capsule Pills) */
 .catalog-cat-cards-track {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 22px 0 16px;
-  margin-bottom: 20px;
+  padding: 16px 2px 18px;
+  margin-bottom: 24px;
+  scroll-snap-type: x proximity;
 }
 
 .catalog-cat-cards-track::-webkit-scrollbar {
@@ -357,97 +359,106 @@
 .catalog-cat-card {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   background: #FAF8F5;
-  border: 1.5px solid #ECE6DE;
-  border-radius: 14px;
-  padding: 8px 14px;
-  height: 64px;
-  min-width: 155px;
-  flex: 1 1 0;
+  border: 1.5px solid #EAE5DB;
+  border-radius: 999px;
+  padding: 5px 14px 5px 6px;
+  height: 44px;
+  flex: 0 0 auto;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   box-sizing: border-box;
+  scroll-snap-align: start;
 }
 
 .catalog-cat-card:hover {
-  background: #F3EFE9;
-  border-color: #D6CEC3;
+  background: #FFFFFF;
+  border-color: #C5A059;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 .catalog-cat-card.active {
-  background: #111215;
-  border-color: #111215;
-  color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  background: #171513 !important;
+  border-color: #171513 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(23, 21, 19, 0.22) !important;
 }
 
-.cat-card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.cat-card-title {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 0.825rem;
-  font-weight: 700;
-  color: #171513;
-  line-height: 1.25;
-  white-space: nowrap;
-}
-
-.catalog-cat-card.active .cat-card-title {
-  color: #FFFFFF;
-}
-
-.cat-card-meta {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #8C827A;
-  margin-top: 3px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.catalog-cat-card.active .cat-card-meta {
-  color: #CBD5E1;
-}
-
-.cat-card-arrow {
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.catalog-cat-card:hover .cat-card-arrow {
-  transform: translateX(2px);
-}
-
-.cat-card-img-wrap {
-  width: 48px;
-  height: 48px;
+.cat-pill-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border-radius: 8px;
   overflow: hidden;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
-.cat-card-img {
-  max-width: 100%;
-  max-height: 100%;
+.catalog-cat-card.active .cat-pill-avatar {
+  border-color: #C5A059;
+  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.35);
+}
+
+.cat-pill-avatar.combo-avatar {
+  background: rgba(197, 160, 89, 0.16);
+  border-color: #C5A059;
+}
+
+.cat-pill-img {
+  width: 22px;
+  height: 22px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
+  display: block;
+}
+
+.cat-pill-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #171513;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.catalog-cat-card.active .cat-pill-title {
+  color: #FFFFFF !important;
+}
+
+.cat-pill-count {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(23, 21, 19, 0.06);
+  color: #786B61;
+  line-height: 1.2;
+}
+
+.catalog-cat-card.active .cat-pill-count {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+}
+
+.cat-pill-badge {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #C5A059;
+  color: #171513;
+  line-height: 1.2;
 }
 
 /* 5. CLEAN TOOLBAR (Search Pill + Sort + Filters Button + Count) */

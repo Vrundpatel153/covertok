@@ -13,16 +13,16 @@
   let maxCustomPrice = null;
   let inStockOnly = false;
 
-  // Category display names & definitions with authentic preview thumbnails matching mockup
+  // Category display names & definitions with authentic preview thumbnails
   const CATEGORIES = [
-    { id: 'all', title: 'All Products', thumb: 'assets/cat_thumb_cases.webp' },
-    { id: 'iphone-cases', title: 'Cases & Covers', thumb: 'assets/cat_thumb_cases.webp' },
+    { id: 'all', title: 'All Products', thumb: 'assets/brand_iphone16_pro.webp' },
+    { id: 'iphone-cases', title: 'Phone Cases', thumb: 'assets/brand_iphone16_pro.webp' },
     { id: 'airpod-covers', title: 'AirPods Covers', thumb: 'assets/cat_thumb_airpods.webp' },
-    { id: 'charger-and-cables', title: 'Charger & Cables', thumb: 'assets/cat_thumb_cables.webp' },
+    { id: 'charger-and-cables', title: 'Cables & Power', thumb: 'assets/cat_thumb_cables.webp' },
     { id: 'charger-covers', title: 'Charger Cases', thumb: 'assets/cat_thumb_chargers.webp' },
     { id: 'cover-charms', title: 'Cover Charms', thumb: 'assets/cat_thumb_charms.webp' },
     { id: 'other-accessories', title: 'Accessories', thumb: 'assets/cat_thumb_accessories.webp' },
-    { id: 'watchbands', title: 'Iwatch Bands', thumb: 'assets/cat_thumb_accessories.webp' },
+    { id: 'watchbands', title: 'Watch Bands', thumb: 'assets/cat_thumb_accessories.webp' },
     { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/phone_cream.webp', isCombo: true }
   ];
 
@@ -51,7 +51,7 @@
     filterAndRenderProducts();
   }
 
-  // Render top category cards track (Rectangular cards with product thumbnails)
+  // Render top category cards track (Luxury capsule pills with circular avatars)
   function renderCategoryTabs() {
     const navBar = document.getElementById('catalogNavBar');
     if (!navBar) return;
@@ -76,15 +76,23 @@
       card.setAttribute('role', 'tab');
       card.setAttribute('aria-selected', currentCategory === cat.id ? 'true' : 'false');
 
-      card.innerHTML = `
-        <div class="cat-card-text">
-          <span class="cat-card-title">${isComboPill ? '★ 3-Piece Combo' : cat.title}</span>
-          <span class="cat-card-meta">${isComboPill ? 'Flat ₹1,199' : `${count} Products`} <span class="cat-card-arrow">→</span></span>
-        </div>
-        <div class="cat-card-img-wrap">
-          <img src="${cat.thumb || 'assets/cat_thumb_cases.webp'}" alt="${cat.title}" class="cat-card-img" loading="lazy">
-        </div>
-      `;
+      if (isComboPill) {
+        card.innerHTML = `
+          <span class="cat-pill-avatar combo-avatar">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+          <span class="cat-pill-title">3-Piece Combo</span>
+          <span class="cat-pill-badge">₹1,199</span>
+        `;
+      } else {
+        card.innerHTML = `
+          <span class="cat-pill-avatar">
+            <img src="${cat.thumb || 'assets/brand_iphone16_pro.webp'}" alt="${cat.title}" class="cat-pill-img" loading="lazy">
+          </span>
+          <span class="cat-pill-title">${cat.title}</span>
+          <span class="cat-pill-count">${count}</span>
+        `;
+      }
 
       card.addEventListener('click', () => {
         if (cat.id === 'buy-three') {
