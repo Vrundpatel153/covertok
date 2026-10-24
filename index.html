@@ -71,7 +71,7 @@
                     <a href="collections.html?cat=mens-cover" class="mega-link">MEN'S COVER</a>
                     <a href="collections.html?cat=charger-covers" class="mega-link">CHARGER CASES</a>
                     <a href="collections.html?cat=cover-charms" class="mega-link">COVER CHARMS</a>
-                    <a href="combo.html" class="mega-link" style="color: #C5A059; font-weight: 800;">3-PIECE COMBO (₹1,199)</a>
+                    <a href="combo.html" class="mega-link" style="color: #0A0A0A; font-weight: 800;">3-PIECE COMBO (₹1,199)</a>
                   </div>
                   <!-- Column 2 -->
                   <div class="mega-dropdown-col">
@@ -96,7 +96,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a href="combo.html" class="nav-link" style="color: #C5A059; font-weight: 800;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-PIECE COMBO</a>
+              <a href="combo.html" class="nav-link" style="color: #0A0A0A; font-weight: 800;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-PIECE COMBO</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">ABOUT US</a>
@@ -161,12 +161,12 @@
         <li><a href="collections.html?cat=iphone-cases" class="mobile-link">IPHONE COVERS</a></li>
         <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
         <li>
-          <a href="combo.html" class="mobile-link" style="color: #C5A059; font-weight: 800;">
+          <a href="combo.html" class="mobile-link" style="color: #0A0A0A; font-weight: 800;">
             <span style="display: flex; align-items: center; gap: 6px;">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               3-PIECE COMBO
             </span>
-            <span style="font-size: 0.68rem; font-weight: 800; background: #C5A059; color: #171513; padding: 2px 7px; border-radius: 999px;">₹1,199</span>
+            <span style="font-size: 0.68rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.45); padding: 2px 7px; border-radius: 999px;">₹1,199</span>
           </a>
         </li>
         <li><a href="search.html" class="mobile-link">SEARCH PRODUCTS</a></li>
@@ -1826,47 +1826,50 @@
     <section class="story-section" id="story" aria-label="The Covertok Story: Our Story Our Style">
       <div class="story-container">
         
-        <!-- Left: Cinematic Video & Animated Showcase Card -->
-        <div class="story-visual-wrap" id="storyVisualCard" role="button" tabindex="0" aria-label="Watch the Covertok Story video">
-          <picture>
-            <source srcset="assets/story/about_us_banners_jewelry.gif" type="image/gif">
-            <img src="assets/story/about_us_banners_jewelry.gif" alt="Covertok Story: Our Story Our Style" class="story-card-img" loading="lazy">
-          </picture>
-
-          <!-- Interactive Play Button & Aura Overlay -->
-          <button type="button" class="story-play-btn" id="storyPlayBtn" aria-label="Play Covertok Story video">
-            <span class="story-play-aura" aria-hidden="true"></span>
-          </button>
-        </div>
-
-        <!-- Right: Editorial Narrative Content -->
-        <div class="story-content-wrap">
+        <!-- Full-Width Hero Video Banner: Centered in Middle Proper -->
+        <div class="story-video-banner" id="storyVideoBanner">
           
-          <!-- Eyebrow: Line + THE COVERTOK STORY -->
-          <div class="story-eyebrow-wrap">
-            <span class="story-eyebrow-line" aria-hidden="true"></span>
-            <span class="story-eyebrow-text">THE COVERTOK STORY</span>
+          <!-- Background Video & Atmospheric Backdrop -->
+          <div class="story-banner-media">
+            <video class="story-bg-video" id="storyBgVideo" autoplay muted loop playsinline preload="auto" poster="assets/story/story_cases_backdrop.jpg">
+              <source src="assets/story/story_bg_video.mp4" type="video/mp4">
+              <source src="assets/community_videos/video_77297.mp4" type="video/mp4">
+            </video>
+            <!-- Cinematic Dark Scrim Overlay to ensure optimal contrast & readability -->
+            <div class="story-banner-overlay" aria-hidden="true"></div>
           </div>
 
-          <!-- Main Heading -->
-          <h2 class="story-main-title">
-            OUR STORY <span class="story-title-accent">OUR STYLE</span>
-          </h2>
+          <!-- Story Narrative Written in Middle of Video -->
+          <div class="story-center-content">
+            <!-- Eyebrow Badge -->
+            <div class="story-eyebrow-pill">
+              <span class="story-eyebrow-dot" aria-hidden="true"></span>
+              <span class="story-eyebrow-text">THE COVERTOK STORY</span>
+            </div>
 
-          <!-- Descriptive Body Text -->
-          <p class="story-desc">
-            Born from a small-town dream and built with big passion, Covertok blends premium protection with expressive design. We craft durable, stylish Apple covers and accessories made to match your unique identity.
-          </p>
+            <!-- Main Heading in Middle of Video -->
+            <h2 class="story-hero-title">
+              OUR STORY <span class="story-title-accent">OUR STYLE</span>
+            </h2>
 
-          <!-- Underlined Call-to-Action Link -->
-          <div class="story-cta-wrap">
-            <a href="about.html" class="story-cta-link" id="storyCtaLink" aria-label="Get to know us: Explore our story">
-              <span class="story-cta-text">MORE INFO — OUR STORY</span>
-              <svg class="story-cta-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
-            </a>
+            <!-- Descriptive Narrative Body Text -->
+            <p class="story-hero-desc">
+              Born from a small-town dream and built with big passion, Covertok blends premium protection with expressive design. We craft durable, stylish Apple covers and accessories made to match your unique identity.
+            </p>
+
+            <!-- Actions Row: Exact Shop / Story button from user reference image -->
+            <div class="story-actions-group">
+              <a href="about.html" class="story-btn-primary" id="storyCtaLink" aria-label="Get to know us: Explore our story">
+                <span>MORE INFO — OUR STORY</span>
+              </a>
+              <button type="button" class="story-btn-watch" id="storyPlayBtn" aria-label="Watch full brand story video">
+                <svg class="story-watch-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>WATCH FILM</span>
+              </button>
+            </div>
+
           </div>
 
         </div>
@@ -1879,10 +1882,10 @@
         <div class="story-modal-dialog">
           <button type="button" class="story-modal-close" id="storyModalClose" aria-label="Close video dialog">&times;</button>
           <div class="story-modal-video-wrap">
-            <video class="story-modal-player" id="storyModalPlayer" controls preload="metadata" playsinline poster="assets/story/about_us_banners_jewelry.gif">
+            <video class="story-modal-player" id="storyModalPlayer" controls preload="metadata" playsinline poster="assets/story/story_cases_backdrop.jpg">
+              <source src="assets/story/story_bg_video.mp4" type="video/mp4">
+              <source src="assets/story/story_brand_cinematic.mp4" type="video/mp4">
               <source src="assets/community_videos/video_77297.mp4" type="video/mp4">
-              <source src="https://cdn.shopify.com/videos/c/vp/e6886932cfc64a35a1437b0e4aec463e/e6886932cfc64a35a1437b0e4aec463e.HD-1080p-2.5Mbps-62729026.mp4" type="video/mp4">
-              <source src="https://cdn.shopify.com/videos/c/vp/1c275748de1342ee95c39867196e9b27/1c275748de1342ee95c39867196e9b27.HD-1080p-2.5Mbps-63469372.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>

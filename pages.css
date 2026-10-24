@@ -7,7 +7,7 @@
 
 /* --- Page Wrapper & Canvas --- */
 .page-canvas {
-  background-color: #FAFAFA;
+  background-color: transparent;
   min-height: 100vh;
   padding-bottom: 80px;
 }
@@ -15,8 +15,11 @@
 /* --- Hero Banner Section --- */
 .page-hero-section {
   position: relative;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F5F5F7 100%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   padding: 56px 0 48px;
   overflow: hidden;
 }
@@ -60,7 +63,7 @@
 }
 
 .page-breadcrumb a:hover {
-  color: #C5A059;
+  color: #0A0A0A;
 }
 
 .page-breadcrumb .crumb-sep {
@@ -77,14 +80,14 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(197, 160, 89, 0.12);
-  border: 1px solid rgba(197, 160, 89, 0.35);
-  color: #936B24;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  color: #0A0A0A;
   padding: 4px 12px;
   border-radius: 999px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -110,9 +113,10 @@
 }
 
 .page-hero-title .text-gold {
-  background: linear-gradient(135deg, #DFBD7E 0%, #C5A059 50%, #9B772E 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0A0A0A;
+  -webkit-text-fill-color: #0A0A0A;
+  background: none;
+  font-weight: 900;
 }
 
 .page-hero-desc {
@@ -370,7 +374,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 800;
-  color: #C5A059;
+  color: #0A0A0A;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -475,7 +479,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 1.7rem;
   font-weight: 900;
-  color: #C5A059;
+  color: #0A0A0A;
   line-height: 1;
   margin-bottom: 10px;
 }
@@ -543,8 +547,9 @@
 }
 
 .channel-icon-wrap.email-gold {
-  background: linear-gradient(135deg, #DFBD7E 0%, #C5A059 100%);
-  color: #0A0A0A;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border: 1.5px solid rgba(197, 160, 89, 0.45);
 }
 
 .channel-title {
@@ -698,10 +703,11 @@
 }
 
 .btn-form-submit:hover {
-  background: linear-gradient(135deg, #F5DFB8 0%, #D8AE66 50%, #B88937 100%);
-  color: #0A0A0A;
+  background: #27272A;
+  color: #FFFFFF;
+  border-color: #C5A059;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(197, 160, 89, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Contact Info Aside */
@@ -773,7 +779,8 @@
 }
 
 .detail-val:hover {
-  color: #C5A059;
+  color: #0A0A0A;
+  text-decoration: underline;
 }
 
 /* --- About Us Page Specific Styles --- */
@@ -801,7 +808,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
-  color: #C5A059;
+  color: #0A0A0A;
   line-height: 1;
   margin-bottom: 14px;
 }
@@ -840,7 +847,7 @@
   position: absolute;
   top: -40px;
   left: 30px;
-  color: rgba(197, 160, 89, 0.12);
+  color: rgba(255, 255, 255, 0.06);
   line-height: 1;
   pointer-events: none;
 }
@@ -859,7 +866,7 @@
 .about-quote-author {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.9rem;
-  color: #C5A059;
+  color: #FFFFFF;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -920,7 +927,7 @@
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: #C5A059;
+  color: #0A0A0A;
   pointer-events: none;
   display: flex;
   align-items: center;

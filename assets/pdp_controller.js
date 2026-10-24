@@ -1536,27 +1536,29 @@
 
         if (inSlotKey) {
           if (actionAddBtn) {
-            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
-            actionAddBtn.style.background = '#C5A059';
-            actionAddBtn.style.color = '#090A0C';
+            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
+            actionAddBtn.style.background = '#0A0A0A';
+            actionAddBtn.style.color = '#FFFFFF';
             actionAddBtn.style.borderColor = '#C5A059';
           }
           if (topAddBtn) {
-            topAddBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px; margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg>In Slot ${inSlotKey}`;
-            topAddBtn.style.background = '#C5A059';
-            topAddBtn.style.color = '#090A0C';
+            topAddBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" style="vertical-align:-1px; margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg>In Slot ${inSlotKey}`;
+            topAddBtn.style.background = '#0A0A0A';
+            topAddBtn.style.color = '#FFFFFF';
+            topAddBtn.style.borderColor = '#C5A059';
           }
         } else {
           if (actionAddBtn) {
-            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
-            actionAddBtn.style.background = 'rgba(197, 160, 89, 0.12)';
-            actionAddBtn.style.color = '#EACAA6';
+            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" stroke="none" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
+            actionAddBtn.style.background = '#FFFFFF';
+            actionAddBtn.style.color = '#0A0A0A';
             actionAddBtn.style.borderColor = '#C5A059';
           }
           if (topAddBtn) {
             topAddBtn.textContent = `+ Add to Combo`;
-            topAddBtn.style.background = 'rgba(197, 160, 89, 0.16)';
-            topAddBtn.style.color = '#EACAA6';
+            topAddBtn.style.background = '#FFFFFF';
+            topAddBtn.style.color = '#0A0A0A';
+            topAddBtn.style.borderColor = '#C5A059';
           }
         }
       }

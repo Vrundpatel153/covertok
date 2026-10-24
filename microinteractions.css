@@ -120,8 +120,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 /* --------------------------------------------------------------------------
    2. MASTER OVERLAYS & SLIDE-IN DRAWERS (IN-AND-OUT SMOOTH TRANSITIONS)
    -------------------------------------------------------------------------- */
-.app-modal-overlay,
-.app-drawer-overlay {
+/* Page Scroll Lock when Drawer / Modal is Active */
+html.app-sheet-open,
+body.app-sheet-open {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
+.app-modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 10000;
@@ -137,6 +144,27 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   align-items: center;
   justify-content: center;
   padding: 20px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Slide-In Drawer Overlay: Zero Padding & Absolute Overflow Hidden to prevent secondary scrollbar */
+.app-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(18, 17, 15, 0.65);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-med) var(--ease-spring),
+              backdrop-filter var(--dur-med) var(--ease-spring),
+              visibility var(--dur-med) var(--ease-spring);
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
 }
 
 .app-modal-overlay.active,
@@ -155,9 +183,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   bottom: 0;
   width: 100%;
   max-width: 450px;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(34px) saturate(200%) contrast(102%);
+  -webkit-backdrop-filter: blur(34px) saturate(200%) contrast(102%);
+  border-left: 1px solid rgba(255, 255, 255, 0.82);
   z-index: 10001;
-  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.16);
+  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.9);
   transform: translateX(100%);
   transition: transform var(--dur-slow) var(--ease-spring);
   display: flex;
@@ -173,10 +204,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .app-modal-card {
   width: 100%;
   max-width: 580px;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(36px) saturate(200%) contrast(102%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%) contrast(102%);
   border-radius: 24px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
-  border: 1px solid #E2E8F0;
+  box-shadow: 0 35px 85px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   transform: translateY(20px) scale(0.96);
   opacity: 0;
   transition: transform var(--dur-med) var(--ease-spring),
@@ -196,8 +229,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 /* Drawer / Modal Header */
 .app-sheet-header {
   padding: 20px 24px;
-  background: #FFFFFF;
-  border-bottom: 1px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -214,8 +249,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   width: 38px;
   height: 38px;
   border-radius: 12px;
-  background: rgba(169, 129, 53, 0.12);
-  color: #C5A059;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  color: #0A0A0A;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -260,10 +296,46 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .app-sheet-body {
-  padding: 24px;
+  padding: 22px 24px;
   overflow-y: auto;
+  overflow-x: hidden;
   flex: 1;
   -webkit-overflow-scrolling: touch;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .app-sheet-body {
+    scrollbar-width: thin;
+    scrollbar-color: #0A0A0A transparent;
+  }
+}
+
+.app-sheet-body::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+.app-sheet-body::-webkit-scrollbar-track {
+  background: transparent !important;
+  border: none !important;
+}
+
+.app-sheet-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #333333 0%, #0A0A0A 40%, #000000 70%, #222222 100%) !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7), inset 0 1px 1px rgba(255, 255, 255, 0.5) !important;
+}
+
+.app-sheet-body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4A4A4A 0%, #151515 40%, #000000 70%, #303030 100%) !important;
+  border-color: rgba(255, 255, 255, 0.38) !important;
+}
+
+.app-sheet-body::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .app-sheet-footer {
@@ -288,7 +360,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cart-free-shipping-msg {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   font-size: 0.8rem;
   font-weight: 700;
   color: #0A0A0A;
@@ -421,7 +493,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .cart-upsell-price {
   font-size: 0.775rem;
   font-weight: 800;
-  color: #C5A059;
+  color: #0A0A0A;
 }
 
 .cart-upsell-add-btn {
@@ -603,7 +675,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-family: 'Outfit', sans-serif;
   font-size: 0.875rem;
   font-weight: 800;
-  color: #C5A059;
+  color: #0A0A0A;
 }
 
 /* Order Success Celebration View */
@@ -692,7 +764,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .wishlist-item-price {
   font-size: 0.85rem;
   font-weight: 800;
-  color: #C5A059;
+  color: #0A0A0A;
 }
 
 .wishlist-item-actions {
@@ -774,7 +846,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .profile-member-tier {
   font-size: 0.75rem;
-  color: #E5C07B;
+  color: #FFFFFF;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -782,13 +854,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .profile-points-badge {
-  background: rgba(231, 213, 164, 0.18);
-  border: 1px solid rgba(231, 213, 164, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(197, 160, 89, 0.45);
   padding: 3px 8px;
   border-radius: 999px;
   font-size: 0.7rem;
   font-weight: 800;
-  color: #E5C07B;
+  color: #FFFFFF;
   margin-top: 4px;
   align-self: flex-start;
 }
@@ -923,8 +995,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .track-step-time {
   font-size: 0.725rem;
-  color: #C5A059;
-  font-weight: 700;
+  color: #71717A;
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
@@ -960,7 +1032,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   font-weight: 800;
   letter-spacing: 0.08em;
   background: #0A0A0A;
-  color: #E5C07B;
+  color: #FFFFFF;
+  border: 1px solid rgba(197, 160, 89, 0.45);
   padding: 6px 14px;
   border-radius: 8px;
   display: inline-block;
@@ -998,10 +1071,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .search-modal-box {
   width: 100%;
   max-width: 680px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-  border: 1px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(36px) saturate(200%) contrast(102%);
+  -webkit-backdrop-filter: blur(36px) saturate(200%) contrast(102%);
+  border-radius: 24px;
+  box-shadow: 0 35px 85px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1011,9 +1086,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   display: flex;
   align-items: center;
   padding: 18px 24px;
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   gap: 14px;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .search-input-box {
@@ -1070,5 +1147,443 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .search-result-price {
   font-size: 0.8rem;
   font-weight: 800;
-  color: #C5A059;
+  color: #0A0A0A;
+}
+
+/* ==========================================================================
+   10. PURE MASTER LIQUID GLASSMORHPISM DESIGN SYSTEM (UNIVERSAL ACROSS ALL PAGES)
+   Applies to every single page and all eligible elements:
+   - Sticky Navigation & Headers (Index, PDP, Combo, Collections, Pages)
+   - Mega Menus, Mobile Nav Drawers & Action Icon Bubbles
+   - Modals & Drawers (Cart, Checkout, Tracker, Offers, Profile, Live Search)
+   - Cart Internal Containers (Shipping Bar, Cart Items, Upsell, Promo)
+   - Product Cards & Bestseller Showcases (Refractive blur, specular border, hover lift)
+   - Bento Collection Blocks, Combo Cards & Feature Tiles
+   - 3-Piece Combo Studio Controls & Sticky Action Bar
+   - Product Detail Page (PDP) Sticky ATC Bar, Trust Badges, Info Panels & Accordions
+   - Customer Review Cards & Rating Summary Box
+   - Content Page Cards, TOC Sidebars, Policy Grids & Floating Controls
+   ========================================================================== */
+
+/* Universal Glass Base Tokens */
+:root {
+  --lq-glass-bg: rgba(255, 255, 255, 0.72);
+  --lq-glass-bg-elevated: rgba(255, 255, 255, 0.85);
+  --lq-glass-bg-subtle: rgba(255, 255, 255, 0.58);
+  --lq-glass-border: 1px solid rgba(255, 255, 255, 0.78);
+  --lq-glass-border-hover: 1px solid rgba(197, 160, 89, 0.48);
+  --lq-glass-blur: blur(24px) saturate(190%) contrast(102%);
+  --lq-glass-blur-heavy: blur(34px) saturate(200%) contrast(103%);
+  --lq-glass-shadow: 0 16px 36px -10px rgba(23, 21, 19, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
+  --lq-glass-shadow-hover: 0 26px 54px -10px rgba(23, 21, 19, 0.12), 0 0 26px rgba(197, 160, 89, 0.22), inset 0 1px 1px 0 #FFFFFF;
+}
+
+/* 1. UNIVERSAL LIQUID GLASS HEADERS & NAVIGATION (Every Page) */
+.site-header,
+.pdp-header,
+#siteHeader,
+.combo-discovery-header {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: var(--lq-glass-blur) !important;
+  -webkit-backdrop-filter: var(--lq-glass-blur) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Circular Liquid Glass Action Buttons in Navigation */
+.icon-btn,
+.pdp-action-icon-btn,
+.header-right .icon-btn,
+.pdp-header-actions .pdp-action-icon-btn {
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: blur(14px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 50% !important;
+  transition: all 0.25s var(--ease-spring) !important;
+}
+
+.icon-btn:hover,
+.pdp-action-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(197, 160, 89, 0.5) !important;
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 8px 22px rgba(197, 160, 89, 0.2), inset 0 1px 0 #FFFFFF !important;
+}
+
+/* Mega Dropdown Menus */
+.mega-dropdown-menu,
+.pdp-nav .mega-dropdown-menu {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: var(--lq-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--lq-glass-blur-heavy) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 1px 2px #FFFFFF !important;
+  border-radius: 24px !important;
+}
+
+.mega-showcase-card {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 18px !important;
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav-drawer {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(32px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(200%) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.82) !important;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 2. UNIVERSAL DRAWERS & POPUP MODALS */
+.app-drawer,
+.cart-drawer,
+#cartDrawer,
+#cartDrawerSheet,
+#accountDrawerSheet {
+  background: rgba(255, 255, 255, 0.86) !important;
+  backdrop-filter: var(--lq-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--lq-glass-blur-heavy) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.app-sheet-header,
+.app-sheet-footer,
+.cart-header,
+.cart-footer {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.app-modal-card,
+.search-modal-box,
+.search-modal-content,
+#checkoutModalCard,
+#trackModalCard,
+#offersModalCard {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: var(--lq-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--lq-glass-blur-heavy) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 35px 85px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Drawer & Modal Internal Glass Containers */
+.cart-free-shipping-bar {
+  background: rgba(255, 253, 249, 0.72) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(216, 196, 157, 0.45) !important;
+  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+.cart-item-row,
+.cart-combo-item-row {
+  background: rgba(255, 255, 255, 0.62) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.82) !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
+  transition: all 0.25s var(--ease-spring) !important;
+}
+
+.cart-item-row:hover {
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-color: rgba(197, 160, 89, 0.38) !important;
+  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.12), inset 0 1px 0 #FFFFFF !important;
+}
+
+.cart-promo-box {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: inset 0 1px 0 #FFFFFF !important;
+}
+
+.cart-upsell-section {
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 18px !important;
+}
+
+.checkout-option-card {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.85) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 16px !important;
+  transition: all 0.25s var(--ease-spring) !important;
+}
+
+.checkout-option-card.selected {
+  background: rgba(250, 248, 242, 0.88) !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 10px 28px rgba(197, 160, 89, 0.16), inset 0 1px 0 #FFFFFF !important;
+}
+
+.profile-member-card,
+.profile-order-card,
+.offer-voucher-card {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 18px !important;
+}
+
+/* 3. PRODUCT & BESTSELLER CARDS (Universal Across All Catalogs) */
+.bestseller-prod-card,
+.bestseller-card,
+.product-card,
+.pdp-product-card,
+.search-product-card,
+.catalog-product-card {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(20px) saturate(185%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(185%) contrast(102%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.78) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 16px 36px -10px rgba(23, 21, 19, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring), border-color 0.25s ease, background-color 0.25s ease !important;
+}
+
+.bestseller-prod-card:hover,
+.bestseller-card:hover,
+.product-card:hover,
+.pdp-product-card:hover,
+.search-product-card:hover,
+.catalog-product-card:hover {
+  background: rgba(255, 255, 255, 0.88) !important;
+  transform: translateY(-8px) scale(1.012) !important;
+  border-color: rgba(197, 160, 89, 0.48) !important;
+  box-shadow: 0 28px 56px -10px rgba(23, 21, 19, 0.12), 0 0 28px rgba(197, 160, 89, 0.22), inset 0 1px 1px #FFFFFF !important;
+}
+
+.bestseller-card-img-wrap {
+  border-radius: 16px !important;
+  background: rgba(247, 245, 242, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+}
+
+/* 4. CATEGORY PILLS, FILTER CHIPS & DROPDOWNS */
+.cat-pill,
+.filter-pill,
+.catalog-nav-pill,
+.pdp-switch-pill,
+.category-pill,
+.luxury-sort-trigger {
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+  border-radius: 999px !important;
+  transition: all 0.25s var(--ease-spring) !important;
+}
+
+.cat-pill:hover,
+.filter-pill:hover,
+.catalog-nav-pill:hover,
+.pdp-switch-pill:hover,
+.luxury-sort-trigger:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(197, 160, 89, 0.45) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 10px 24px rgba(197, 160, 89, 0.18), inset 0 1px 0 #FFFFFF !important;
+}
+
+.cat-pill.active,
+.filter-pill.active,
+.catalog-nav-pill.active,
+.pdp-switch-pill.active {
+  background: #0A0A0A !important;
+  color: #FFFFFF !important;
+  border-color: #0A0A0A !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+.luxury-sort-menu {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 18px !important;
+}
+
+/* 5. HOMEPAGE BENTO & HERO GLASS DOCKS (index.html) */
+.hero-pagination-pill,
+.hero-cta-group .btn-circle-arrow,
+.bento-intro-card,
+.combo-card,
+.combo-bottom-pill-bar,
+.bento-card-footer {
+  background: rgba(255, 255, 255, 0.74) !important;
+  backdrop-filter: blur(22px) saturate(185%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(185%) contrast(102%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 16px 40px -8px rgba(23, 21, 19, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+.bento-card {
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 24px !important;
+}
+
+.bento-card-btn {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06), inset 0 1px 0 #FFFFFF !important;
+}
+
+/* 6. PRODUCT DETAIL PAGE (PDP) LIQUID GLASS */
+.pdp-sticky-bar,
+.sticky-atc-bar {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(28px) saturate(190%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) contrast(102%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+.pdp-trust-card,
+.pdp-trust-item,
+.pdp-accordion-item,
+.pdp-summary-card,
+.pdp-info-panel,
+.trust-badge-item,
+.trust-badges-grid {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(18px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
+}
+
+/* 7. COMBO STUDIO LIQUID GLASS (combo.html) */
+.combo-sticky-bar {
+  background: rgba(255, 255, 255, 0.84) !important;
+  backdrop-filter: blur(30px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF !important;
+}
+
+.combo-search-input {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(226, 220, 212, 0.8) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+}
+
+.combo-search-input:focus {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.18), 0 8px 24px rgba(197, 160, 89, 0.1) !important;
+}
+
+.combo-count-pill,
+.combo-bundle-pill {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 8. REVIEWS & COMMUNITY RATINGS */
+.rating-summary-card,
+.review-item-card,
+.review-card {
+  background: rgba(255, 255, 255, 0.70) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.82) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-spring) !important;
+}
+
+.review-item-card:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+  border-color: rgba(197, 160, 89, 0.4) !important;
+  box-shadow: 0 24px 50px -10px rgba(23, 21, 19, 0.1), inset 0 1px 0 #FFFFFF !important;
+}
+
+.reviews-nav-btn,
+.bestseller-nav-btn {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF !important;
+}
+
+/* 9. INFORMATION, POLICY & CONTACT PAGES */
+.highlight-card,
+.toc-card,
+.contact-form-card,
+.policy-card {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(22px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.82) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 14px 36px -8px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+}
+
+.highlight-card:hover,
+.toc-card:hover {
+  border-color: rgba(197, 160, 89, 0.45) !important;
+  box-shadow: 0 20px 48px -10px rgba(197, 160, 89, 0.14), inset 0 1px 0 #FFFFFF !important;
+}
+
+/* 10. TOAST NOTIFICATIONS & FLOATING CONTROLS */
+.toast,
+.toast-notification {
+  background: rgba(14, 15, 18, 0.86) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+  border-radius: 999px !important;
+}
+
+.footer-social-btn,
+.footer-contact-badge {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+}
+
+.footer-newsletter-row {
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 999px !important;
 }

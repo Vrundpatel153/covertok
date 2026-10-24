@@ -1,14 +1,24 @@
 /**
  * Covertok Our Story Section Controller
- * Handles interactive video showcase modal, hover states, and accessibility.
+ * Handles interactive video showcase modal, background video loop, hover states, and accessibility.
  */
 document.addEventListener('DOMContentLoaded', () => {
-  const storyVisualCard = document.getElementById('storyVisualCard');
+  const storyBgVideo = document.getElementById('storyBgVideo');
   const storyPlayBtn = document.getElementById('storyPlayBtn');
   const storyModal = document.getElementById('storyVideoModal');
   const modalClose = document.getElementById('storyModalClose');
   const modalBackdrop = document.getElementById('storyModalBackdrop');
   const modalPlayer = document.getElementById('storyModalPlayer');
+
+  // Attempt smooth background video playback
+  if (storyBgVideo) {
+    const playPromise = storyBgVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay policy fallback: muted autoplay is supported by modern browsers
+      });
+    }
+  }
 
   function openStoryModal(e) {
     if (e) e.preventDefault();
@@ -18,10 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     storyModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
+    // Pause background video to save resources
+    if (storyBgVideo && !storyBgVideo.paused) {
+      storyBgVideo.pause();
+    }
+
     if (modalPlayer) {
       modalPlayer.currentTime = 0;
       modalPlayer.play().catch(() => {
-        // Autoplay policy fallback: muted or user play
+        // Autoplay policy fallback
       });
     }
   }
@@ -35,14 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalPlayer) {
       modalPlayer.pause();
     }
+
+    // Resume background video
+    if (storyBgVideo) {
+      storyBgVideo.play().catch(() => {});
+    }
   }
 
   if (storyPlayBtn) {
     storyPlayBtn.addEventListener('click', openStoryModal);
-  }
-
-  if (storyVisualCard) {
-    storyVisualCard.addEventListener('click', openStoryModal);
   }
 
   if (modalClose) {

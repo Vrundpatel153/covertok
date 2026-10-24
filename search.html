@@ -72,7 +72,7 @@
     }
 
     .page-breadcrumb a:hover {
-      color: #C5A059 !important;
+      color: #0A0A0A !important;
     }
 
     .page-breadcrumb .crumb-sep {
@@ -104,7 +104,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #C5A059;
+      color: #71717A;
       z-index: 2;
     }
 
@@ -221,7 +221,8 @@
     }
 
     .discovery-back-pill-btn:hover {
-      background: #C5A059;
+      background: #000000;
+      color: #FFFFFF;
       transform: translateX(-2px);
     }
 
@@ -290,7 +291,7 @@
 
     .luxury-sort-dropdown.open .sort-trigger-icon {
       transform: rotate(180deg) !important;
-      color: #C5A059 !important;
+      color: #0A0A0A !important;
     }
 
     .luxury-sort-menu {
@@ -529,7 +530,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a href="combo.html" class="nav-link" style="color: #C5A059; font-weight: 800;"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-PIECE COMBO</a>
+              <a href="combo.html" class="nav-link" style="color: #0A0A0A; font-weight: 800;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-PIECE COMBO</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">ABOUT US</a>
@@ -582,12 +583,12 @@
         <li><a href="collections.html?cat=iphone-cases" class="mobile-link">IPHONE COVERS</a></li>
         <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
         <li>
-          <a href="combo.html" class="mobile-link" style="color: #C5A059; font-weight: 800;">
+          <a href="combo.html" class="mobile-link" style="color: #0A0A0A; font-weight: 800;">
             <span style="display: flex; align-items: center; gap: 6px;">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               3-PIECE COMBO
             </span>
-            <span style="font-size: 0.68rem; font-weight: 800; background: #C5A059; color: #171513; padding: 2px 7px; border-radius: 999px;">₹1,199</span>
+            <span style="font-size: 0.68rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.45); padding: 2px 7px; border-radius: 999px;">₹1,199</span>
           </a>
         </li>
         <li><a href="search.html" class="mobile-link active">SEARCH PRODUCTS</a></li>
@@ -920,31 +921,31 @@
       const CATEGORY_ROWS = [
         {
           id: 'iphone-cases',
-          title: '📱 iPhone Luxury Covers',
+          title: 'iPhone Luxury Covers',
           tagline: 'Titanium, Leather, Magnetic & Suede',
           filter: p => ['iphone-cases', 'mens-cover', 'womens-cover'].includes(p.category) || (p.collections && (p.collections.includes('iphone-cases') || p.collections.includes('mens-cover') || p.collections.includes('womens-cover')))
         },
         {
           id: 'watchbands',
-          title: '⌚ Apple Watch Armor Bands',
+          title: 'Apple Watch Armor Bands',
           tagline: 'Titanium Links, Ocean Silicone & Milanese Loop',
           filter: p => p.category === 'watchbands' || (p.collections && p.collections.includes('watchbands'))
         },
         {
           id: 'airpod-covers',
-          title: '🎧 AirPods & Power Armor Covers',
+          title: 'AirPods & Power Armor Covers',
           tagline: 'Shockproof Cases & Leather Pod Protectors',
           filter: p => ['airpod-covers', 'charger-covers'].includes(p.category) || (p.collections && (p.collections.includes('airpod-covers') || p.collections.includes('charger-covers')))
         },
         {
           id: 'charger-and-cables',
-          title: '⚡ Fast Chargers & High-Speed Cables',
+          title: 'Fast Chargers & High-Speed Cables',
           tagline: 'GaN Rapid Power & Military-Grade Braided Lines',
           filter: p => p.category === 'charger-and-cables' || (p.collections && p.collections.includes('charger-and-cables'))
         },
         {
           id: 'other-accessories',
-          title: '✨ Everyday Tech Accessories & Charms',
+          title: 'Everyday Tech Accessories & Charms',
           tagline: '360° Magnetic Mounts, Lanyards & Luxury Accents',
           filter: p => ['other-accessories', 'cover-charms'].includes(p.category) || (p.collections && (p.collections.includes('other-accessories') || p.collections.includes('cover-charms')))
         }
@@ -1122,7 +1123,7 @@
                   &larr; All Shelves
                 </button>
                 <h1 class="discovery-controls-heading" id="searchHeroTitle">
-                  No Results for <span style="color: #C5A059;">"${escapeSearchText(activeQuery)}"</span>
+                  No Results for <span style="color: #0A0A0A; font-weight: 900;">"${escapeSearchText(activeQuery)}"</span>
                 </h1>
                 <span class="discovery-count-chip" id="searchCountBadge">0 Products</span>
               `;
@@ -1155,7 +1156,7 @@
                 &larr; All Shelves
               </button>
               <h1 class="discovery-controls-heading" id="searchHeroTitle">
-                <span class="desktop-query-label">Results for <span style="color: #C5A059;">"${escapeSearchText(activeQuery)}"</span></span>
+                <span class="desktop-query-label">Results for <span style="color: #0A0A0A; font-weight: 900;">"${escapeSearchText(activeQuery)}"</span></span>
               </h1>
               <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}</span>
             `;

@@ -280,7 +280,7 @@
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #A95D2A;
+  color: #71717A;
   margin-bottom: 4px;
 }
 
@@ -295,7 +295,8 @@
 }
 
 .copper-accent {
-  color: #A95D2A;
+  color: #171513;
+  font-weight: 900;
 }
 
 .catalog-subtext {
@@ -691,7 +692,7 @@
 
 .luxury-sort-dropdown.open .sort-trigger-icon {
   transform: rotate(180deg);
-  color: #C5A059;
+  color: #171513;
 }
 
 .luxury-sort-menu {
@@ -750,13 +751,13 @@
 
 .luxury-sort-option .option-check {
   display: none;
-  color: #C5A059;
+  color: #FFFFFF;
   flex-shrink: 0;
 }
 
 .luxury-sort-option.active .option-check {
   display: block;
-  color: #C5A059;
+  color: #FFFFFF;
 }
 
 /* ========================================================================= */
@@ -929,9 +930,9 @@
 }
 
 .catalog-price-btn:hover {
-  border-color: #A98135;
-  background: #FFFFFF;
-  color: #A98135;
+  border-color: #C5A059;
+  background: #0A0A0A;
+  color: #FFFFFF;
 }
 
 .catalog-price-btn.active {
@@ -1021,7 +1022,7 @@
 .catalog-chip-remove {
   background: none;
   border: none;
-  color: #A98135;
+  color: #0A0A0A;
   font-weight: 900;
   cursor: pointer;
   padding: 0 2px;
@@ -1243,7 +1244,8 @@
 }
 
 .card-product-title:hover {
-  color: #C5A059;
+  color: #000000;
+  text-decoration: underline;
 }
 
 /* Price Box */
@@ -1318,7 +1320,7 @@
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #A95D2A;
+  color: #71717A;
   margin-bottom: 8px;
 }
 
@@ -1665,12 +1667,12 @@
   height: 46px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 1px solid rgba(169, 129, 53, 0.25);
-  box-shadow: 0 4px 12px rgba(169, 129, 53, 0.08);
+  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #A98135;
+  color: #0A0A0A;
   flex-shrink: 0;
 }
 
@@ -1973,7 +1975,7 @@
 .shelf-view-all-btn {
   background: transparent;
   border: none;
-  color: #C5A059;
+  color: #171513;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
@@ -1987,7 +1989,8 @@
 }
 
 .shelf-view-all-btn:hover {
-  color: #171513;
+  color: #000000;
+  text-decoration: underline;
 }
 
 /* Horizontal Scroll Row */

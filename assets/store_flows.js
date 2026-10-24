@@ -46,6 +46,9 @@
     if (element) {
       element.classList.add('active');
     }
+    document.documentElement.classList.add('app-sheet-open');
+    document.body.classList.add('app-sheet-open');
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   }
 
@@ -63,6 +66,9 @@
     // Only restore body scroll if no other overlay is open
     setTimeout(() => {
       if (!document.querySelector('.app-modal-overlay.active, .app-drawer-overlay.active')) {
+        document.documentElement.classList.remove('app-sheet-open');
+        document.body.classList.remove('app-sheet-open');
+        document.documentElement.style.overflow = '';
         document.body.style.overflow = '';
       }
     }, 280);
@@ -234,7 +240,7 @@
             </div>
             <div style="flex: 1; min-width: 0;">
               <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px;">
-                <span style="font-size: 0.65rem; font-weight: 800; background: rgba(197, 160, 89, 0.16); color: #8D6B28; border: 1px solid rgba(197, 160, 89, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px; margin-right:3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-Piece Combo</span>
+                <span style="font-size: 0.68rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.4); padding: 2px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.05em;">3-Piece Combo</span>
                 <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.885rem; color: #171513;">${item.title}</span>
               </div>
               ${bundleList.length ? `
@@ -243,7 +249,7 @@
                     <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
                       <img src="${b.image || 'assets/phone_cream.webp'}" alt="${b.title}" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.webp';">
                       <div style="flex: 1; min-width: 0;">
-                        <div style="font-size: 0.65rem; font-weight: 800; color: #8D6B28; text-transform: uppercase;">${b.category || 'Accessory'}</div>
+                        <div style="font-size: 0.65rem; font-weight: 800; color: #0A0A0A; text-transform: uppercase;">${b.category || 'Accessory'}</div>
                         <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>
                       </div>
                     </div>
@@ -254,7 +260,7 @@
               `}
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
                 <div>
-                  <span style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 0.95rem; color: #A98135;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+                  <span style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 0.95rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
                   ${item.original_price ? `<span style="text-decoration: line-through; font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
                 </div>
                 <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
@@ -277,7 +283,7 @@
             <div style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.875rem; color: #171513; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</div>
             <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
             <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-              <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.925rem; color: #A98135;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+              <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.925rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
               <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
                 <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">−</button>
                 <span style="font-size: 0.8rem; font-weight: 800; padding: 0 4px; min-width: 18px; text-align: center;">${item.qty}</span>

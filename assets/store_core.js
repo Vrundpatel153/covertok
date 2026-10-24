@@ -196,7 +196,7 @@
             </div>
             <div style="flex: 1; min-width: 0;">
               <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px;">
-                <span style="font-size: 0.65rem; font-weight: 800; background: rgba(197, 160, 89, 0.16); color: #8D6B28; border: 1px solid rgba(197, 160, 89, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase;">3-Piece Combo</span>
+                <span style="font-size: 0.65rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase;">3-Piece Combo</span>
                 <span style="font-weight: 800; font-size: 0.885rem; color: #171513;">${item.title}</span>
               </div>
               ${bundleList.length ? `
@@ -205,7 +205,7 @@
                     <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
                       <img src="${b.image || 'assets/phone_cream.webp'}" alt="${b.title}" style="width: 26px; height: 26px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.webp';">
                       <div style="flex: 1; min-width: 0;">
-                        <div style="font-size: 0.65rem; font-weight: 800; color: #8D6B28; text-transform: uppercase;">${b.category || 'Accessory'}</div>
+                        <div style="font-size: 0.65rem; font-weight: 800; color: #0A0A0A; text-transform: uppercase;">${b.category || 'Accessory'}</div>
                         <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>
                       </div>
                     </div>
@@ -216,7 +216,7 @@
               `}
               <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
                 <div>
-                  <span style="font-weight: 800; font-size: 0.925rem; color: #A98135;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+                  <span style="font-weight: 800; font-size: 0.925rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
                   ${item.original_price ? `<span style="text-decoration: line-through; font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
                 </div>
                 <div style="display: flex; align-items: center; border: 1px solid #EAE5DB; border-radius: 999px; overflow: hidden; background: #F8FAFC;">

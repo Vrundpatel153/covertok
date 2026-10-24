@@ -4,13 +4,595 @@
  * Account Drawer, Order Tracker, Coupons Sheet, Live Search)
  * across all pages if not already rendered by the server/Shopify Liquid layout.
  *
- * Shopify Migration Note:
- * When migrating to Shopify OS 2.0, this HTML is pre-isolated in:
- * `snippets/store_drawers.html` -> `snippets/store-drawers.liquid`
- * which can be rendered directly in `layout/theme.liquid`.
+ * All icons use crisp luxury SVG vectors — no low-grade OS emojis.
  */
 (function() {
-  const MODALS_HTML = "<!-- 1. RICH CART DRAWER -->\n  <div class=\"app-drawer-overlay\" id=\"cartDrawerOverlay\" aria-hidden=\"true\">\n    <aside class=\"app-drawer\" id=\"cartDrawerSheet\" aria-label=\"Shopping Cart Drawer\">\n      <!-- Header -->\n      <div class=\"app-sheet-header\">\n        <div class=\"app-sheet-title-group\">\n          <div class=\"app-sheet-icon\">\ud83d\udecd\ufe0f</div>\n          <div>\n            <h3 class=\"app-sheet-title\">Your Cart</h3>\n            <p class=\"app-sheet-subtitle\"><span id=\"cartDrawerCount\">0</span> items selected</p>\n          </div>\n        </div>\n        <button type=\"button\" class=\"app-sheet-close-btn\" onclick=\"window.CovertokFlows.closeCart();\" aria-label=\"Close cart\">&times;</button>\n      </div>\n\n      <!-- Body -->\n      <div class=\"app-sheet-body\">\n        <!-- Free Shipping Progress Tracker -->\n        <div class=\"cart-free-shipping-bar\">\n          <div class=\"cart-free-shipping-msg\" id=\"cartProgressMsg\">\n            Add <strong>Rs. 350.00</strong> more to unlock <strong>FREE Express Air Shipping</strong>!\n          </div>\n          <div class=\"cart-progress-track\">\n            <div class=\"cart-progress-fill\" id=\"cartProgressFill\" style=\"width: 65%;\"></div>\n          </div>\n        </div>\n\n        <!-- Cart Items List -->\n        <div id=\"cartDrawerItemsList\">\n          <!-- Populated dynamically by store_flows.js -->\n        </div>\n\n        <!-- Promo Code Input -->\n        <div class=\"cart-promo-box\">\n          <input type=\"text\" class=\"cart-promo-input\" id=\"cartPromoInput\" placeholder=\"Enter Promo Code (e.g. COVERTOK15)\">\n          <button type=\"button\" class=\"cart-promo-btn\" id=\"cartApplyPromoBtn\">APPLY</button>\n        </div>\n\n        <!-- Active Discount Line -->\n        <div class=\"cart-discount-badge-line\" id=\"cartDiscountLine\" style=\"display: none;\">\n          <span id=\"cartDiscountCodeLabel\">Promo Code Applied</span>\n          <span id=\"cartDiscountVal\">-Rs. 0.00</span>\n        </div>\n\n        <!-- Frequently Bought Together / Upsell Section -->\n        <div class=\"cart-upsell-section\">\n          <div class=\"cart-upsell-title\">\n            <span>\u2728 Customers Also Added</span>\n          </div>\n          <div class=\"cart-upsell-item\">\n            <div class=\"cart-upsell-left\">\n              <img src=\"assets/bestseller/prod_01_clear_case.webp\" alt=\"Camera Lens Protector\" class=\"cart-upsell-img\">\n              <div>\n                <div class=\"cart-upsell-name\">2x 9H Diamond Camera Lens Protector</div>\n                <div class=\"cart-upsell-price\">+Rs. 299.00</div>\n              </div>\n            </div>\n            <button type=\"button\" class=\"cart-upsell-add-btn\" onclick=\"window.CovertokStore.addToCart({ id: 'lens-protector', title: '2x 9H Diamond Camera Lens Protector', price: 299, img: 'assets/bestseller/prod_01_clear_case.webp', qty: 1 })\">\n              + Add\n            </button>\n          </div>\n        </div>\n      </div>\n\n      <!-- Footer -->\n      <div class=\"app-sheet-footer\" id=\"cartDrawerFooter\">\n        <div style=\"display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748B; margin-bottom: 6px;\">\n          <span>Subtotal</span>\n          <span id=\"cartDrawerSubtotal\" style=\"font-weight: 700; color: #171513;\">Rs. 0.00</span>\n        </div>\n        <div style=\"display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748B; margin-bottom: 12px;\">\n          <span>Shipping (Express Air)</span>\n          <span style=\"color: #10B981; font-weight: 800;\">FREE</span>\n        </div>\n        <div style=\"display: flex; justify-content: space-between; font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 900; color: #171513; margin-bottom: 16px; border-top: 1px solid #EAE5DB; padding-top: 10px;\">\n          <span>Estimated Total:</span>\n          <span id=\"cartDrawerTotal\" style=\"color: #A98135;\">Rs. 0.00</span>\n        </div>\n        <button type=\"button\" class=\"btn btn-pill-dark full-width btn-shine-sweep\" onclick=\"window.CovertokFlows.openCheckout();\" style=\"width: 100%; height: 50px; border-radius: 999px; font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px;\">\n          <span>PROCEED TO CHECKOUT</span>\n          <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg>\n        </button>\n      </div>\n    </aside>\n  </div>\n\n  <!-- 2. MULTI-STEP CHECKOUT MODAL -->\n  <div class=\"app-modal-overlay\" id=\"checkoutModalOverlay\" aria-hidden=\"true\">\n    <div class=\"app-modal-card\" id=\"checkoutModalCard\" style=\"max-width: 620px;\">\n      <!-- Header -->\n      <div class=\"app-sheet-header\">\n        <div class=\"app-sheet-title-group\">\n          <div class=\"app-sheet-icon\">\ud83d\udd12</div>\n          <div>\n            <h3 class=\"app-sheet-title\">Secure Express Checkout</h3>\n            <p class=\"app-sheet-subtitle\">256-bit SSL Encrypted \u00b7 100% Buyer Protection</p>\n          </div>\n        </div>\n        <button type=\"button\" class=\"app-sheet-close-btn\" onclick=\"window.CovertokFlows.closeCheckout();\">&times;</button>\n      </div>\n\n      <!-- Step Indicator Bar -->\n      <div style=\"padding: 18px 24px 0;\">\n        <div class=\"checkout-steps-bar\">\n          <div class=\"checkout-step-pill active\" data-step=\"1\">\n            <div class=\"checkout-step-circle\">1</div>\n            <span class=\"checkout-step-label\">Address</span>\n          </div>\n          <div class=\"checkout-step-pill\" data-step=\"2\">\n            <div class=\"checkout-step-circle\">2</div>\n            <span class=\"checkout-step-label\">Shipping</span>\n          </div>\n          <div class=\"checkout-step-pill\" data-step=\"3\">\n            <div class=\"checkout-step-circle\">3</div>\n            <span class=\"checkout-step-label\">Payment</span>\n          </div>\n        </div>\n      </div>\n\n      <!-- Body -->\n      <div class=\"app-sheet-body\">\n        \n        <!-- STEP 1: Address & Contact View -->\n        <div class=\"checkout-step-view\" data-step=\"1\">\n          <div class=\"checkout-form-grid\">\n            <div class=\"checkout-input-group full-width\">\n              <label class=\"checkout-label\">Full Name *</label>\n              <input type=\"text\" class=\"checkout-input\" id=\"checkoutName\" placeholder=\"e.g. Varun Patel\" required>\n            </div>\n            <div class=\"checkout-input-group\">\n              <label class=\"checkout-label\">Mobile Number *</label>\n              <input type=\"tel\" class=\"checkout-input\" id=\"checkoutPhone\" placeholder=\"+91 98765 43210\" required>\n            </div>\n            <div class=\"checkout-input-group\">\n              <label class=\"checkout-label\">Email Address *</label>\n              <input type=\"email\" class=\"checkout-input\" id=\"checkoutEmail\" placeholder=\"your@email.com\" required>\n            </div>\n            <div class=\"checkout-input-group full-width\">\n              <label class=\"checkout-label\">Street Address & Flat / Building *</label>\n              <input type=\"text\" class=\"checkout-input\" id=\"checkoutAddress\" placeholder=\"Apartment, suite, unit, building, floor\">\n            </div>\n            <div class=\"checkout-input-group\">\n              <label class=\"checkout-label\">PIN Code *</label>\n              <input type=\"text\" class=\"checkout-input\" id=\"checkoutPin\" placeholder=\"e.g. 400001\" maxlength=\"6\">\n            </div>\n            <div class=\"checkout-input-group\">\n              <label class=\"checkout-label\">City *</label>\n              <input type=\"text\" class=\"checkout-input\" id=\"checkoutCity\" placeholder=\"e.g. Mumbai\">\n            </div>\n          </div>\n        </div>\n\n        <!-- STEP 2: Shipping Method View -->\n        <div class=\"checkout-step-view\" data-step=\"2\" style=\"display: none;\">\n          <h4 style=\"font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;\">Select Delivery Speed</h4>\n          <div class=\"checkout-option-card selected\" onclick=\"window.selectShippingOption(this)\">\n            <div class=\"checkout-option-left\">\n              <div style=\"font-size: 1.4rem;\">\u2708\ufe0f</div>\n              <div>\n                <div class=\"checkout-option-title\">Priority Air Courier (Bluedart / Delhivery)</div>\n                <div class=\"checkout-option-sub\">Estimated Delivery: 2 to 3 Business Days</div>\n              </div>\n            </div>\n            <span class=\"checkout-option-price\" style=\"color: #10B981;\">FREE</span>\n          </div>\n\n          <div class=\"checkout-option-card\" onclick=\"window.selectShippingOption(this)\">\n            <div class=\"checkout-option-left\">\n              <div style=\"font-size: 1.4rem;\">\u26a1</div>\n              <div>\n                <div class=\"checkout-option-title\">VIP Same-Day Dispatch (Within 2 Hours)</div>\n                <div class=\"checkout-option-sub\">Guaranteed instant dispatch with live WhatsApp flight tracking</div>\n              </div>\n            </div>\n            <span class=\"checkout-option-price\">+Rs. 99.00</span>\n          </div>\n        </div>\n\n        <!-- STEP 3: Payment Options View -->\n        <div class=\"checkout-step-view\" data-step=\"3\" style=\"display: none;\">\n          <h4 style=\"font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;\">Select Payment Method</h4>\n          \n          <div class=\"checkout-option-card selected\" onclick=\"window.selectPaymentOption(this)\">\n            <div class=\"checkout-option-left\">\n              <div style=\"font-size: 1.3rem;\">\ud83d\udcf1</div>\n              <div>\n                <div class=\"checkout-option-title\">Instant UPI / QR / Google Pay / PhonePe</div>\n                <div class=\"checkout-option-sub\">Zero transaction fee \u00b7 Instant verification</div>\n              </div>\n            </div>\n            <span class=\"checkout-option-price\" style=\"color: #10B981;\">RECOMMENDED</span>\n          </div>\n\n          <div class=\"checkout-option-card\" onclick=\"window.selectPaymentOption(this)\">\n            <div class=\"checkout-option-left\">\n              <div style=\"font-size: 1.3rem;\">\ud83d\udcb3</div>\n              <div>\n                <div class=\"checkout-option-title\">Credit / Debit Card / NetBanking</div>\n                <div class=\"checkout-option-sub\">Visa, MasterCard, RuPay, Amex</div>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"checkout-option-card\" onclick=\"window.selectPaymentOption(this)\">\n            <div class=\"checkout-option-left\">\n              <div style=\"font-size: 1.3rem;\">\ud83d\udcb5</div>\n              <div>\n                <div class=\"checkout-option-title\">Cash on Delivery (COD)</div>\n                <div class=\"checkout-option-sub\">Pay in cash or UPI at your doorstep upon arrival</div>\n              </div>\n            </div>\n            <span class=\"checkout-option-price\">Available</span>\n          </div>\n        </div>\n\n        <!-- STEP 4: Order Confirmed Celebration View -->\n        <div class=\"checkout-step-view\" data-step=\"4\" style=\"display: none;\">\n          <div class=\"checkout-success-view\">\n            <div class=\"checkout-success-badge\">\u2713</div>\n            <h3 style=\"font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; color: #171513; margin: 0 0 6px;\">Thank You For Your Order!</h3>\n            <p style=\"font-size: 0.875rem; color: #64748B; margin: 0;\">We've received your order and our dispatch team is prepping your items.</p>\n            \n            <div class=\"checkout-order-number-box\">\n              <div style=\"font-size: 0.775rem; font-weight: 700; color: #A98135; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;\">Order Confirmation ID</div>\n              <div style=\"font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 900; color: #171513;\" id=\"confirmedOrderId\">#CT-84920</div>\n            </div>\n\n            <p style=\"font-size: 0.85rem; color: #334155; margin-bottom: 20px;\">\n              \ud83d\ude9a Estimated Delivery: <strong>Tomorrow, by 6:00 PM</strong><br>\n              Live tracking link will be sent to your WhatsApp number.\n            </p>\n\n            <div style=\"display: flex; gap: 12px; justify-content: center;\">\n              <button type=\"button\" class=\"btn btn-pill-dark\" onclick=\"window.CovertokFlows.closeCheckout(); window.CovertokFlows.openTracker(document.getElementById('confirmedOrderId').textContent);\" style=\"padding: 10px 24px; border-radius: 999px;\">\n                Track This Order\n              </button>\n              <button type=\"button\" class=\"btn btn-pill-outline\" onclick=\"window.CovertokFlows.closeCheckout();\" style=\"padding: 10px 24px; border-radius: 999px;\">\n                Continue Shopping\n              </button>\n            </div>\n          </div>\n        </div>\n\n      </div>\n\n      <!-- Footer Action Buttons -->\n      <div class=\"app-sheet-footer\" id=\"checkoutFooter\">\n        <div style=\"display: flex; align-items: center; justify-content: space-between;\">\n          <div style=\"font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; color: #171513;\">\n            Total: <span id=\"checkoutSummaryTotal\" style=\"color: #A98135;\">Rs. 0.00</span>\n          </div>\n          <div style=\"display: flex; gap: 10px;\">\n            <button type=\"button\" class=\"btn btn-pill-outline\" onclick=\"window.prevCheckoutStep();\" style=\"padding: 8px 18px; border-radius: 999px;\">Back</button>\n            <button type=\"button\" class=\"btn btn-pill-dark btn-shine-sweep\" onclick=\"window.nextCheckoutStep();\" style=\"padding: 10px 24px; border-radius: 999px;\">\n              <span>Continue &rarr;</span>\n            </button>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 4. USER PROFILE / ACCOUNT DRAWER -->\n  <div class=\"app-drawer-overlay\" id=\"accountDrawerOverlay\" aria-hidden=\"true\">\n    <aside class=\"app-drawer\" id=\"accountDrawerSheet\" aria-label=\"Account Profile Drawer\">\n      <div class=\"app-sheet-header\">\n        <div class=\"app-sheet-title-group\">\n          <div class=\"app-sheet-icon\">\ud83d\udc64</div>\n          <div>\n            <h3 class=\"app-sheet-title\">My Account</h3>\n            <p class=\"app-sheet-subtitle\">Covertok VIP Club Member</p>\n          </div>\n        </div>\n        <button type=\"button\" class=\"app-sheet-close-btn\" onclick=\"window.CovertokFlows.closeAccount();\">&times;</button>\n      </div>\n\n      <div class=\"app-sheet-body\">\n        <!-- VIP Member Card -->\n        <div class=\"profile-member-card\">\n          <img src=\"assets/instagram/avatars/avatar_1.png\" alt=\"Avatar\" class=\"profile-avatar-img\">\n          <div class=\"profile-member-info\">\n            <span class=\"profile-member-name\">Varun Patel</span>\n            <span class=\"profile-member-tier\">\u2728 VIP Gold Member</span>\n            <span class=\"profile-points-badge\">450 Reward Coins (= \u20b9450)</span>\n          </div>\n        </div>\n\n        <!-- Tabs Navigation -->\n        <div class=\"profile-nav-tabs\">\n          <button type=\"button\" class=\"profile-tab-btn active\" data-tab=\"orders\">Recent Orders</button>\n          <button type=\"button\" class=\"profile-tab-btn\" data-tab=\"addresses\">Addresses</button>\n          <button type=\"button\" class=\"profile-tab-btn\" data-tab=\"perks\">VIP Perks</button>\n        </div>\n\n        <!-- Orders Tab Content -->\n        <div class=\"profile-tab-content\" data-tab=\"orders\">\n          <div class=\"profile-order-card\">\n            <div class=\"profile-order-header\">\n              <span class=\"profile-order-id\">#CT-84920</span>\n              <span class=\"profile-order-status-badge\">In Transit \ud83d\ude9a</span>\n            </div>\n            <div style=\"font-size: 0.825rem; font-weight: 700; color: #171513; margin-bottom: 2px;\">Aluminium Frame Transparent Case (Deep Blue)</div>\n            <div style=\"font-size: 0.775rem; color: #64748B; margin-bottom: 12px;\">Placed on Nov 15, 2025 \u00b7 Paid via UPI (Rs. 999.00)</div>\n            <button type=\"button\" class=\"btn btn-pill-outline\" onclick=\"window.CovertokFlows.closeAccount(); window.CovertokFlows.openTracker('#CT-84920');\" style=\"padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;\">\n              Live Tracking &rarr;\n            </button>\n          </div>\n\n          <div class=\"profile-order-card\">\n            <div class=\"profile-order-header\">\n              <span class=\"profile-order-id\">#CT-79104</span>\n              <span class=\"profile-order-status-badge\" style=\"background: #E0E7FF; color: #3730A3;\">Delivered \u2705</span>\n            </div>\n            <div style=\"font-size: 0.825rem; font-weight: 700; color: #171513; margin-bottom: 2px;\">Leather Wallet Card Holder With Kickstand</div>\n            <div style=\"font-size: 0.775rem; color: #64748B; margin-bottom: 12px;\">Delivered on Oct 28, 2025 \u00b7 Rs. 1,099.00</div>\n            <a href=\"https://api.whatsapp.com/send?phone=919838688544\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-pill-outline\" style=\"padding: 6px 14px; font-size: 0.775rem; border-radius: 999px; text-decoration: none;\">\n              Request Invoice\n            </a>\n          </div>\n        </div>\n\n        <!-- Addresses Tab Content -->\n        <div class=\"profile-tab-content\" data-tab=\"addresses\" style=\"display: none;\">\n          <div class=\"profile-order-card\">\n            <div style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;\">\n              <span style=\"font-weight: 800; font-size: 0.85rem; color: #171513;\">Primary Shipping Address</span>\n              <span style=\"font-size: 0.7rem; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 2px 8px; border-radius: 999px;\">Default</span>\n            </div>\n            <p style=\"font-size: 0.825rem; color: #475569; line-height: 1.5; margin: 0 0 10px;\">\n              Varun Patel<br>\n              B-402 Skyline Towers, Linking Road<br>\n              Bandra West, Mumbai, Maharashtra 400050<br>\n              Phone: +91 98386 88544\n            </p>\n            <button type=\"button\" class=\"btn btn-pill-outline\" onclick=\"window.showToast('Address is verified and up-to-date.');\" style=\"padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;\">\n              Edit Address\n            </button>\n          </div>\n        </div>\n\n        <!-- VIP Perks Tab Content -->\n        <div class=\"profile-tab-content\" data-tab=\"perks\" style=\"display: none;\">\n          <div class=\"profile-order-card\" style=\"border-left: 4px solid #A98135;\">\n            <div style=\"font-weight: 800; font-size: 0.875rem; color: #171513; margin-bottom: 4px;\">Exclusive VIP Member 15% Pass</div>\n            <p style=\"font-size: 0.8rem; color: #64748B; margin: 0 0 10px;\">Use your personal code at checkout for 15% off any case in store.</p>\n            <button type=\"button\" class=\"btn btn-pill-dark\" onclick=\"window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeAccount(); window.CovertokFlows.openCart();\" style=\"padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;\">\n              Apply VIP Code\n            </button>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"app-sheet-footer\">\n        <button type=\"button\" class=\"btn btn-pill-outline full-width\" onclick=\"window.showToast('Signed out of session'); window.CovertokFlows.closeAccount();\" style=\"width: 100%; border-radius: 999px; padding: 10px; font-size: 0.85rem;\">\n          Sign Out of Account\n        </button>\n      </div>\n    </aside>\n  </div>\n\n  <!-- 5. ORDER TRACKING TIMELINE MODAL -->\n  <div class=\"app-modal-overlay\" id=\"trackModalOverlay\" aria-hidden=\"true\">\n    <div class=\"app-modal-card\" id=\"trackModalCard\">\n      <div class=\"app-sheet-header\">\n        <div class=\"app-sheet-title-group\">\n          <div class=\"app-sheet-icon\">\ud83d\ude9a</div>\n          <div>\n            <h3 class=\"app-sheet-title\">Live Shipment Tracker</h3>\n            <p class=\"app-sheet-subtitle\">Real-time express air tracking across India</p>\n          </div>\n        </div>\n        <button type=\"button\" class=\"app-sheet-close-btn\" onclick=\"window.CovertokFlows.closeTracker();\">&times;</button>\n      </div>\n\n      <div class=\"app-sheet-body\">\n        <div class=\"track-search-bar\">\n          <input type=\"text\" class=\"checkout-input\" id=\"trackOrderInput\" placeholder=\"Enter Order ID (e.g. #CT-84920)\" value=\"#CT-84920\">\n          <button type=\"button\" class=\"btn btn-pill-dark\" id=\"trackOrderBtn\" style=\"padding: 0 20px; border-radius: 12px; white-space: nowrap;\">\n            Track\n          </button>\n        </div>\n\n        <div style=\"background: #FAF8F2; border: 1px solid #EAE5DB; border-radius: 14px; padding: 14px; margin-bottom: 20px;\">\n          <div style=\"display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;\">\n            <span style=\"font-weight: 800; color: #171513;\">Air Waybill: BD-982410842IN</span>\n            <span style=\"color: #A98135; font-weight: 800;\">Bluedart Priority Air</span>\n          </div>\n          <div style=\"font-size: 0.775rem; color: #64748B;\">\n            Estimated Delivery: <strong>Tomorrow by 6:00 PM</strong> (Out for delivery from local hub)\n          </div>\n        </div>\n\n        <!-- 5-Step Visual Timeline -->\n        <div class=\"track-timeline-wrap\">\n          <div class=\"track-step-node completed\">\n            <div class=\"track-step-bullet\">\u2713</div>\n            <h4 class=\"track-step-title\">Order Confirmed & Payment Verified</h4>\n            <p class=\"track-step-desc\">Order placed successfully on Covertok Store</p>\n            <span class=\"track-step-time\">Nov 15, 10:30 AM</span>\n          </div>\n\n          <div class=\"track-step-node completed\">\n            <div class=\"track-step-bullet\">\u2713</div>\n            <h4 class=\"track-step-title\">Quality Inspection & 100% Precision Check</h4>\n            <p class=\"track-step-desc\">Case inspected for flawless bumper finish & camera lip alignment</p>\n            <span class=\"track-step-time\">Nov 15, 11:45 AM</span>\n          </div>\n\n          <div class=\"track-step-node completed\">\n            <div class=\"track-step-bullet\">\u2713</div>\n            <h4 class=\"track-step-title\">Dispatched via Priority Air Courier</h4>\n            <p class=\"track-step-desc\">Handed over to Bluedart Express Air Hub, Mumbai</p>\n            <span class=\"track-step-time\">Nov 15, 01:20 PM</span>\n          </div>\n\n          <div class=\"track-step-node current\">\n            <div class=\"track-step-bullet\">\u25cf</div>\n            <h4 class=\"track-step-title\">Out for Delivery with Courier Executive</h4>\n            <p class=\"track-step-desc\">Delivery partner is en route to your shipping address</p>\n            <span class=\"track-step-time\">Tomorrow, 10:00 AM (Expected)</span>\n          </div>\n\n          <div class=\"track-step-node\">\n            <div class=\"track-step-bullet\">\u25cb</div>\n            <h4 class=\"track-step-title\">Delivered to Doorstep</h4>\n            <p class=\"track-step-desc\">Package received and OTP confirmed</p>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"app-sheet-footer\">\n        <a href=\"https://api.whatsapp.com/send?phone=919838688544\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-pill-outline full-width\" style=\"display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border-radius: 999px; text-decoration: none; padding: 10px;\">\n          <span>Need help? Chat with Courier Support on WhatsApp</span>\n        </a>\n      </div>\n    </div>\n  </div>\n\n  <!-- 6. OFFERS & PROMO CODES MODAL -->\n  <div class=\"app-modal-overlay\" id=\"offersModalOverlay\" aria-hidden=\"true\">\n    <div class=\"app-modal-card\" id=\"offersModalCard\">\n      <div class=\"app-sheet-header\">\n        <div class=\"app-sheet-title-group\">\n          <div class=\"app-sheet-icon\">\ud83c\udff7\ufe0f</div>\n          <div>\n            <h3 class=\"app-sheet-title\">Exclusive Store Coupons</h3>\n            <p class=\"app-sheet-subtitle\">Tap any coupon code to instantly apply at checkout</p>\n          </div>\n        </div>\n        <button type=\"button\" class=\"app-sheet-close-btn\" onclick=\"window.CovertokFlows.closeOffers();\">&times;</button>\n      </div>\n\n      <div class=\"app-sheet-body\">\n        <div class=\"offers-grid\">\n          \n          <div class=\"offer-voucher-card\">\n            <div>\n              <span class=\"offer-code-pill\">COVERTOK15</span>\n              <p class=\"offer-desc\">Get flat 15% OFF on your entire order. Valid on all phone covers and combo kits.</p>\n            </div>\n            <button type=\"button\" class=\"offer-apply-btn\" onclick=\"window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();\">\n              Apply Code\n            </button>\n          </div>\n\n          <div class=\"offer-voucher-card\">\n            <div>\n              <span class=\"offer-code-pill\">PAYDAY200</span>\n              <p class=\"offer-desc\">Flat Rs. 200 instant discount on prepaid orders above Rs. 1,299.</p>\n            </div>\n            <button type=\"button\" class=\"offer-apply-btn\" onclick=\"window.applyPromoCode('PAYDAY200'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();\">\n              Apply Code\n            </button>\n          </div>\n\n          <div class=\"offer-voucher-card\">\n            <div>\n              <span class=\"offer-code-pill\">FREESHIP</span>\n              <p class=\"offer-desc\">Free Express Air Shipping with zero minimum order value.</p>\n            </div>\n            <button type=\"button\" class=\"offer-apply-btn\" onclick=\"window.applyPromoCode('FREESHIP'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();\">\n              Apply Code\n            </button>\n          </div>\n\n          <div class=\"offer-voucher-card\">\n            <div>\n              <span class=\"offer-code-pill\">B2G1</span>\n              <p class=\"offer-desc\">Buy any 2 Phone Cases, get a Camera Lens Protector completely FREE!</p>\n            </div>\n            <button type=\"button\" class=\"offer-apply-btn\" onclick=\"window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();\">\n              Apply Deal\n            </button>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 7. LIVE SEARCH MODAL -->\n  <div class=\"app-modal-overlay\" id=\"searchModalOverlay\" aria-hidden=\"true\">\n    <div class=\"search-modal-box\" id=\"searchModalCard\">\n      <div class=\"search-input-header\">\n        <svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#64748B\" stroke-width=\"2.5\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><line x1=\"21\" y1=\"21\" x2=\"16.65\" y2=\"16.65\"></line></svg>\n        <input type=\"text\" class=\"search-input-box\" id=\"storeSearchInput\" placeholder=\"Search phone cases, watch bands, chargers, power banks...\" autocomplete=\"off\">\n        <button type=\"button\" class=\"app-sheet-close-btn\" onclick=\"window.CovertokFlows.closeSearch();\">&times;</button>\n      </div>\n      <div class=\"search-results-list\" id=\"storeSearchResults\">\n        <div style=\"text-align: center; padding: 24px; color: #64748B; font-size: 0.85rem;\">\n          Type to search among 75+ phone covers, watch bands, and charms...\n        </div>\n      </div>\n    </div>\n  </div>";
+  const MODALS_HTML = `<!-- 1. RICH CART DRAWER -->
+  <div class="app-drawer-overlay" id="cartDrawerOverlay" aria-hidden="true">
+    <aside class="app-drawer" id="cartDrawerSheet" aria-label="Shopping Cart Drawer">
+      <!-- Header -->
+      <div class="app-sheet-header">
+        <div class="app-sheet-title-group">
+          <div class="app-sheet-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="app-sheet-title">Your Cart</h3>
+            <p class="app-sheet-subtitle"><span id="cartDrawerCount">0</span> items selected</p>
+          </div>
+        </div>
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeCart();" aria-label="Close cart">&times;</button>
+      </div>
+
+      <!-- Body -->
+      <div class="app-sheet-body">
+        <!-- Free Shipping Progress Tracker -->
+        <div class="cart-free-shipping-bar">
+          <div class="cart-free-shipping-msg" id="cartProgressMsg">
+            Add <strong>Rs. 350.00</strong> more to unlock <strong>FREE Express Air Shipping</strong>!
+          </div>
+          <div class="cart-progress-track">
+            <div class="cart-progress-fill" id="cartProgressFill" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartDrawerItemsList">
+          <!-- Populated dynamically by store_flows.js -->
+        </div>
+
+        <!-- Promo Code Input -->
+        <div class="cart-promo-box">
+          <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Enter Promo Code (e.g. COVERTOK15)">
+          <button type="button" class="cart-promo-btn" id="cartApplyPromoBtn">APPLY</button>
+        </div>
+
+        <!-- Active Discount Line -->
+        <div class="cart-discount-badge-line" id="cartDiscountLine" style="display: none;">
+          <span id="cartDiscountCodeLabel">Promo Code Applied</span>
+          <span id="cartDiscountVal">-Rs. 0.00</span>
+        </div>
+
+        <!-- Frequently Bought Together / Upsell Section -->
+        <div class="cart-upsell-section">
+          <div class="cart-upsell-title">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1.2" style="vertical-align: -2px; margin-right: 6px;">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>Customers Also Added</span>
+          </div>
+          <div class="cart-upsell-item">
+            <div class="cart-upsell-left">
+              <img src="assets/bestseller/prod_01_clear_case.webp" alt="Camera Lens Protector" class="cart-upsell-img">
+              <div>
+                <div class="cart-upsell-name">2x 9H Diamond Camera Lens Protector</div>
+                <div class="cart-upsell-price">+Rs. 299.00</div>
+              </div>
+            </div>
+            <button type="button" class="cart-upsell-add-btn" onclick="window.CovertokStore.addToCart({ id: 'lens-protector', title: '2x 9H Diamond Camera Lens Protector', price: 299, img: 'assets/bestseller/prod_01_clear_case.webp', qty: 1 })">
+              + Add
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="app-sheet-footer" id="cartDrawerFooter">
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748B; margin-bottom: 6px;">
+          <span>Subtotal</span>
+          <span id="cartDrawerSubtotal" style="font-weight: 700; color: #171513;">Rs. 0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+          <span>Shipping (Express Air)</span>
+          <span style="color: #10B981; font-weight: 800;">FREE</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 900; color: #171513; margin-bottom: 16px; border-top: 1px solid #EAE5DB; padding-top: 10px;">
+          <span>Estimated Total:</span>
+          <span id="cartDrawerTotal" style="color: #171513;">Rs. 0.00</span>
+        </div>
+        <button type="button" class="btn btn-pill-dark full-width btn-shine-sweep" onclick="window.CovertokFlows.openCheckout();" style="width: 100%; height: 50px; border-radius: 999px; font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>PROCEED TO CHECKOUT</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 2. MULTI-STEP CHECKOUT MODAL -->
+  <div class="app-modal-overlay" id="checkoutModalOverlay" aria-hidden="true">
+    <div class="app-modal-card" id="checkoutModalCard" style="max-width: 620px;">
+      <!-- Header -->
+      <div class="app-sheet-header">
+        <div class="app-sheet-title-group">
+          <div class="app-sheet-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="app-sheet-title">Secure Express Checkout</h3>
+            <p class="app-sheet-subtitle">256-bit SSL Encrypted &bull; 100% Buyer Protection</p>
+          </div>
+        </div>
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeCheckout();">&times;</button>
+      </div>
+
+      <!-- Step Indicator Bar -->
+      <div style="padding: 18px 24px 0;">
+        <div class="checkout-steps-bar">
+          <div class="checkout-step-pill active" data-step="1">
+            <div class="checkout-step-circle">1</div>
+            <span class="checkout-step-label">Address</span>
+          </div>
+          <div class="checkout-step-pill" data-step="2">
+            <div class="checkout-step-circle">2</div>
+            <span class="checkout-step-label">Shipping</span>
+          </div>
+          <div class="checkout-step-pill" data-step="3">
+            <div class="checkout-step-circle">3</div>
+            <span class="checkout-step-label">Payment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="app-sheet-body">
+        
+        <!-- STEP 1: Address & Contact View -->
+        <div class="checkout-step-view" data-step="1">
+          <div class="checkout-form-grid">
+            <div class="checkout-input-group full-width">
+              <label class="checkout-label">Full Name *</label>
+              <input type="text" class="checkout-input" id="checkoutName" placeholder="e.g. Varun Patel" required>
+            </div>
+            <div class="checkout-input-group">
+              <label class="checkout-label">Mobile Number *</label>
+              <input type="tel" class="checkout-input" id="checkoutPhone" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="checkout-input-group">
+              <label class="checkout-label">Email Address *</label>
+              <input type="email" class="checkout-input" id="checkoutEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="checkout-input-group full-width">
+              <label class="checkout-label">Street Address & Flat / Building *</label>
+              <input type="text" class="checkout-input" id="checkoutAddress" placeholder="Apartment, suite, unit, building, floor">
+            </div>
+            <div class="checkout-input-group">
+              <label class="checkout-label">PIN Code *</label>
+              <input type="text" class="checkout-input" id="checkoutPin" placeholder="e.g. 400001" maxlength="6">
+            </div>
+            <div class="checkout-input-group">
+              <label class="checkout-label">City *</label>
+              <input type="text" class="checkout-input" id="checkoutCity" placeholder="e.g. Mumbai">
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Shipping Method View -->
+        <div class="checkout-step-view" data-step="2" style="display: none;">
+          <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;">Select Delivery Speed</h4>
+          <div class="checkout-option-card selected" onclick="window.selectShippingOption(this)">
+            <div class="checkout-option-left">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 2L11 13"></path>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div class="checkout-option-title">Priority Air Courier (Bluedart / Delhivery)</div>
+                <div class="checkout-option-sub">Estimated Delivery: 2 to 3 Business Days</div>
+              </div>
+            </div>
+            <span class="checkout-option-price" style="color: #10B981;">FREE</span>
+          </div>
+
+          <div class="checkout-option-card" onclick="window.selectShippingOption(this)">
+            <div class="checkout-option-left">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div>
+                <div class="checkout-option-title">VIP Same-Day Dispatch (Within 2 Hours)</div>
+                <div class="checkout-option-sub">Guaranteed instant dispatch with live WhatsApp flight tracking</div>
+              </div>
+            </div>
+            <span class="checkout-option-price">+Rs. 99.00</span>
+          </div>
+        </div>
+
+        <!-- STEP 3: Payment Options View -->
+        <div class="checkout-step-view" data-step="3" style="display: none;">
+          <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;">Select Payment Method</h4>
+          
+          <div class="checkout-option-card selected" onclick="window.selectPaymentOption(this)">
+            <div class="checkout-option-left">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="checkout-option-title">Instant UPI / QR / Google Pay / PhonePe</div>
+                <div class="checkout-option-sub">Zero transaction fee &bull; Instant verification</div>
+              </div>
+            </div>
+            <span class="checkout-option-price" style="color: #10B981;">RECOMMENDED</span>
+          </div>
+
+          <div class="checkout-option-card" onclick="window.selectPaymentOption(this)">
+            <div class="checkout-option-left">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                  <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+              </div>
+              <div>
+                <div class="checkout-option-title">Credit / Debit Card / NetBanking</div>
+                <div class="checkout-option-sub">Visa, MasterCard, RuPay, Amex</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-option-card" onclick="window.selectPaymentOption(this)">
+            <div class="checkout-option-left">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="checkout-option-title">Cash on Delivery (COD)</div>
+                <div class="checkout-option-sub">Pay in cash or UPI at your doorstep upon arrival</div>
+              </div>
+            </div>
+            <span class="checkout-option-price">Available</span>
+          </div>
+        </div>
+
+        <!-- STEP 4: Order Confirmed Celebration View -->
+        <div class="checkout-step-view" data-step="4" style="display: none;">
+          <div class="checkout-success-view">
+            <div class="checkout-success-badge">&#10003;</div>
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; color: #171513; margin: 0 0 6px;">Thank You For Your Order!</h3>
+            <p style="font-size: 0.875rem; color: #64748B; margin: 0;">We've received your order and our dispatch team is prepping your items.</p>
+            
+            <div class="checkout-order-number-box">
+              <div style="font-size: 0.775rem; font-weight: 700; color: #71717A; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">Order Confirmation ID</div>
+              <div style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 900; color: #171513;" id="confirmedOrderId">#CT-84920</div>
+            </div>
+
+            <p style="font-size: 0.85rem; color: #334155; margin-bottom: 20px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 4px;">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              Estimated Delivery: <strong>Tomorrow, by 6:00 PM</strong><br>
+              Live tracking link will be sent to your WhatsApp number.
+            </p>
+
+            <div style="display: flex; gap: 12px; justify-content: center;">
+              <button type="button" class="btn btn-pill-dark" onclick="window.CovertokFlows.closeCheckout(); window.CovertokFlows.openTracker(document.getElementById('confirmedOrderId').textContent);" style="padding: 10px 24px; border-radius: 999px;">
+                Track This Order
+              </button>
+              <button type="button" class="btn btn-pill-outline" onclick="window.CovertokFlows.closeCheckout();" style="padding: 10px 24px; border-radius: 999px;">
+                Continue Shopping
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Action Buttons -->
+      <div class="app-sheet-footer" id="checkoutFooter">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; color: #171513;">
+            Total: <span id="checkoutSummaryTotal" style="color: #171513; font-weight: 900;">Rs. 0.00</span>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="button" class="btn btn-pill-outline" onclick="window.prevCheckoutStep();" style="padding: 8px 18px; border-radius: 999px;">Back</button>
+            <button type="button" class="btn btn-pill-dark btn-shine-sweep" onclick="window.nextCheckoutStep();" style="padding: 10px 24px; border-radius: 999px;">
+              <span>Continue &rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. USER PROFILE / ACCOUNT DRAWER -->
+  <div class="app-drawer-overlay" id="accountDrawerOverlay" aria-hidden="true">
+    <aside class="app-drawer" id="accountDrawerSheet" aria-label="Account Profile Drawer">
+      <div class="app-sheet-header">
+        <div class="app-sheet-title-group">
+          <div class="app-sheet-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3 class="app-sheet-title">My Account</h3>
+            <p class="app-sheet-subtitle">Covertok VIP Club Member</p>
+          </div>
+        </div>
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeAccount();">&times;</button>
+      </div>
+
+      <div class="app-sheet-body">
+        <!-- VIP Member Card -->
+        <div class="profile-member-card">
+          <img src="assets/instagram/avatars/avatar_1.png" alt="Avatar" class="profile-avatar-img">
+          <div class="profile-member-info">
+            <span class="profile-member-name">Varun Patel</span>
+            <span class="profile-member-tier">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" stroke="none" style="vertical-align: -1px; margin-right: 3px;">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              VIP Gold Member
+            </span>
+            <span class="profile-points-badge">450 Reward Coins (= &#8377;450)</span>
+          </div>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="profile-nav-tabs">
+          <button type="button" class="profile-tab-btn active" data-tab="orders">Recent Orders</button>
+          <button type="button" class="profile-tab-btn" data-tab="addresses">Addresses</button>
+          <button type="button" class="profile-tab-btn" data-tab="perks">VIP Perks</button>
+        </div>
+
+        <!-- Orders Tab Content -->
+        <div class="profile-tab-content" data-tab="orders">
+          <div class="profile-order-card">
+            <div class="profile-order-header">
+              <span class="profile-order-id">#CT-84920</span>
+              <span class="profile-order-status-badge">In Transit</span>
+            </div>
+            <div style="font-size: 0.825rem; font-weight: 700; color: #171513; margin-bottom: 2px;">Aluminium Frame Transparent Case (Deep Blue)</div>
+            <div style="font-size: 0.775rem; color: #64748B; margin-bottom: 12px;">Placed on Nov 15, 2025 &bull; Paid via UPI (Rs. 999.00)</div>
+            <button type="button" class="btn btn-pill-outline" onclick="window.CovertokFlows.closeAccount(); window.CovertokFlows.openTracker('#CT-84920');" style="padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;">
+              Live Tracking &rarr;
+            </button>
+          </div>
+
+          <div class="profile-order-card">
+            <div class="profile-order-header">
+              <span class="profile-order-id">#CT-79104</span>
+              <span class="profile-order-status-badge" style="background: #E0E7FF; color: #3730A3;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align: -1px; margin-right: 3px;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Delivered
+              </span>
+            </div>
+            <div style="font-size: 0.825rem; font-weight: 700; color: #171513; margin-bottom: 2px;">Leather Wallet Card Holder With Kickstand</div>
+            <div style="font-size: 0.775rem; color: #64748B; margin-bottom: 12px;">Delivered on Oct 28, 2025 &bull; Rs. 1,099.00</div>
+            <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="btn btn-pill-outline" style="padding: 6px 14px; font-size: 0.775rem; border-radius: 999px; text-decoration: none;">
+              Request Invoice
+            </a>
+          </div>
+        </div>
+
+        <!-- Addresses Tab Content -->
+        <div class="profile-tab-content" data-tab="addresses" style="display: none;">
+          <div class="profile-order-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-weight: 800; font-size: 0.85rem; color: #171513;">Primary Shipping Address</span>
+              <span style="font-size: 0.7rem; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 2px 8px; border-radius: 999px;">Default</span>
+            </div>
+            <p style="font-size: 0.825rem; color: #475569; line-height: 1.5; margin: 0 0 10px;">
+              Varun Patel<br>
+              B-402 Skyline Towers, Linking Road<br>
+              Bandra West, Mumbai, Maharashtra 400050<br>
+              Phone: +91 98386 88544
+            </p>
+            <button type="button" class="btn btn-pill-outline" onclick="window.showToast('Address is verified and up-to-date.');" style="padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;">
+              Edit Address
+            </button>
+          </div>
+        </div>
+
+        <!-- VIP Perks Tab Content -->
+        <div class="profile-tab-content" data-tab="perks" style="display: none;">
+          <div class="profile-order-card" style="border-left: 4px solid #A98135;">
+            <div style="font-weight: 800; font-size: 0.875rem; color: #171513; margin-bottom: 4px;">Exclusive VIP Member 15% Pass</div>
+            <p style="font-size: 0.8rem; color: #64748B; margin: 0 0 10px;">Use your personal code at checkout for 15% off any case in store.</p>
+            <button type="button" class="btn btn-pill-dark" onclick="window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeAccount(); window.CovertokFlows.openCart();" style="padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;">
+              Apply VIP Code
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-sheet-footer">
+        <button type="button" class="btn btn-pill-outline full-width" onclick="window.showToast('Signed out of session'); window.CovertokFlows.closeAccount();" style="width: 100%; border-radius: 999px; padding: 10px; font-size: 0.85rem;">
+          Sign Out of Account
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 5. ORDER TRACKING TIMELINE MODAL -->
+  <div class="app-modal-overlay" id="trackModalOverlay" aria-hidden="true">
+    <div class="app-modal-card" id="trackModalCard">
+      <div class="app-sheet-header">
+        <div class="app-sheet-title-group">
+          <div class="app-sheet-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3 class="app-sheet-title">Live Shipment Tracker</h3>
+            <p class="app-sheet-subtitle">Real-time express air tracking across India</p>
+          </div>
+        </div>
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeTracker();">&times;</button>
+      </div>
+
+      <div class="app-sheet-body">
+        <div class="track-search-bar">
+          <input type="text" class="checkout-input" id="trackOrderInput" placeholder="Enter Order ID (e.g. #CT-84920)" value="#CT-84920">
+          <button type="button" class="btn btn-pill-dark" id="trackOrderBtn" style="padding: 0 20px; border-radius: 12px; white-space: nowrap;">
+            Track
+          </button>
+        </div>
+
+        <div style="background: #FAF8F2; border: 1px solid #EAE5DB; border-radius: 14px; padding: 14px; margin-bottom: 20px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 4px;">
+            <span style="font-weight: 800; color: #171513;">Air Waybill: BD-982410842IN</span>
+            <span style="color: #171513; font-weight: 800;">Bluedart Priority Air</span>
+          </div>
+          <div style="font-size: 0.775rem; color: #64748B;">
+            Estimated Delivery: <strong>Tomorrow by 6:00 PM</strong> (Out for delivery from local hub)
+          </div>
+        </div>
+
+        <!-- 5-Step Visual Timeline -->
+        <div class="track-timeline-wrap">
+          <div class="track-step-node completed">
+            <div class="track-step-bullet">&#10003;</div>
+            <h4 class="track-step-title">Order Confirmed & Payment Verified</h4>
+            <p class="track-step-desc">Order placed successfully on Covertok Store</p>
+            <span class="track-step-time">Nov 15, 10:30 AM</span>
+          </div>
+
+          <div class="track-step-node completed">
+            <div class="track-step-bullet">&#10003;</div>
+            <h4 class="track-step-title">Quality Inspection & 100% Precision Check</h4>
+            <p class="track-step-desc">Case inspected for flawless bumper finish & camera lip alignment</p>
+            <span class="track-step-time">Nov 15, 11:45 AM</span>
+          </div>
+
+          <div class="track-step-node completed">
+            <div class="track-step-bullet">&#10003;</div>
+            <h4 class="track-step-title">Dispatched via Priority Air Courier</h4>
+            <p class="track-step-desc">Handed over to Bluedart Express Air Hub, Mumbai</p>
+            <span class="track-step-time">Nov 15, 01:20 PM</span>
+          </div>
+
+          <div class="track-step-node current">
+            <div class="track-step-bullet">&bull;</div>
+            <h4 class="track-step-title">Out for Delivery with Courier Executive</h4>
+            <p class="track-step-desc">Delivery partner is en route to your shipping address</p>
+            <span class="track-step-time">Tomorrow, 10:00 AM (Expected)</span>
+          </div>
+
+          <div class="track-step-node">
+            <div class="track-step-bullet">&#9675;</div>
+            <h4 class="track-step-title">Delivered to Doorstep</h4>
+            <p class="track-step-desc">Package received and OTP confirmed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-sheet-footer">
+        <a href="https://api.whatsapp.com/send?phone=919838688544" target="_blank" rel="noopener noreferrer" class="btn btn-pill-outline full-width" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border-radius: 999px; text-decoration: none; padding: 10px;">
+          <span>Need help? Chat with Courier Support on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. OFFERS & PROMO CODES MODAL -->
+  <div class="app-modal-overlay" id="offersModalOverlay" aria-hidden="true">
+    <div class="app-modal-card" id="offersModalCard">
+      <div class="app-sheet-header">
+        <div class="app-sheet-title-group">
+          <div class="app-sheet-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+          </div>
+          <div>
+            <h3 class="app-sheet-title">Exclusive Store Coupons</h3>
+            <p class="app-sheet-subtitle">Tap any coupon code to instantly apply at checkout</p>
+          </div>
+        </div>
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeOffers();">&times;</button>
+      </div>
+
+      <div class="app-sheet-body">
+        <div class="offers-grid">
+          
+          <div class="offer-voucher-card">
+            <div>
+              <span class="offer-code-pill">COVERTOK15</span>
+              <p class="offer-desc">Get flat 15% OFF on your entire order. Valid on all phone covers and combo kits.</p>
+            </div>
+            <button type="button" class="offer-apply-btn" onclick="window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();">
+              Apply Code
+            </button>
+          </div>
+
+          <div class="offer-voucher-card">
+            <div>
+              <span class="offer-code-pill">PAYDAY200</span>
+              <p class="offer-desc">Flat Rs. 200 instant discount on prepaid orders above Rs. 1,299.</p>
+            </div>
+            <button type="button" class="offer-apply-btn" onclick="window.applyPromoCode('PAYDAY200'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();">
+              Apply Code
+            </button>
+          </div>
+
+          <div class="offer-voucher-card">
+            <div>
+              <span class="offer-code-pill">FREESHIP</span>
+              <p class="offer-desc">Free Express Air Shipping with zero minimum order value.</p>
+            </div>
+            <button type="button" class="offer-apply-btn" onclick="window.applyPromoCode('FREESHIP'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();">
+              Apply Code
+            </button>
+          </div>
+
+          <div class="offer-voucher-card">
+            <div>
+              <span class="offer-code-pill">B2G1</span>
+              <p class="offer-desc">Buy any 2 Phone Cases, get a Camera Lens Protector completely FREE!</p>
+            </div>
+            <button type="button" class="offer-apply-btn" onclick="window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeOffers(); window.CovertokFlows.openCart();">
+              Apply Deal
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. LIVE SEARCH MODAL -->
+  <div class="app-modal-overlay" id="searchModalOverlay" aria-hidden="true">
+    <div class="search-modal-box" id="searchModalCard">
+      <div class="search-input-header">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-input-box" id="storeSearchInput" placeholder="Search phone cases, watch bands, chargers, power banks..." autocomplete="off">
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeSearch();">&times;</button>
+      </div>
+      <div class="search-results-list" id="storeSearchResults">
+        <div style="text-align: center; padding: 24px; color: #64748B; font-size: 0.85rem;">
+          Type to search among 75+ phone covers, watch bands, and charms...
+        </div>
+      </div>
+    </div>
+  </div>`;
 
   function mountSharedModals() {
     if (!document.getElementById('cartDrawerOverlay')) {

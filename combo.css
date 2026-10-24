@@ -20,8 +20,11 @@ body.combo-page-canvas {
 
 /* --- 2-Row Luxury Discovery Header --- */
 .combo-discovery-header {
-  background: #FFFFFF;
-  border-bottom: 1px solid #EFEAE2;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(24px) saturate(190%) contrast(102%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%) contrast(102%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   padding: 16px 0 14px;
   margin-bottom: 18px;
 }
@@ -62,7 +65,8 @@ body.combo-page-canvas {
 }
 
 .combo-breadcrumb a:hover {
-  color: #C5A059 !important;
+  color: #171513 !important;
+  font-weight: 600 !important;
 }
 
 .combo-breadcrumb .crumb-sep {
@@ -146,7 +150,7 @@ body.combo-page-canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #C5A059;
+  color: #71717A;
   z-index: 2;
 }
 
@@ -282,7 +286,8 @@ body.combo-page-canvas {
 
 .catalog-nav-pill.active .catalog-pill-count {
   background: rgba(255, 255, 255, 0.2);
-  color: #C5A059;
+  color: #FFFFFF;
+  font-weight: 800;
 }
 
 .combo-row-secondary .luxury-custom-sort {
@@ -350,7 +355,7 @@ body.combo-page-canvas {
 
 .luxury-sort-dropdown.open .sort-trigger-icon {
   transform: rotate(180deg) !important;
-  color: #C5A059 !important;
+  color: #0A0A0A !important;
 }
 
 .luxury-sort-menu {
@@ -409,13 +414,13 @@ body.combo-page-canvas {
 
 .luxury-sort-option .option-check {
   display: none !important;
-  color: #C5A059 !important;
+  color: #FFFFFF !important;
   flex-shrink: 0 !important;
 }
 
 .luxury-sort-option.active .option-check {
   display: block !important;
-  color: #C5A059 !important;
+  color: #FFFFFF !important;
 }
 
 .luxury-sort-option.active:hover {
