@@ -220,32 +220,32 @@
   white-space: nowrap;
 }
 
-/* 3. CATALOG PAGE CURATED HERO BANNER (Matches Editorial Luxury Mockup) */
+/* 3. CATALOG PAGE CURATED HERO BANNER */
 .catalog-hero-section {
-  padding: 24px 0 20px;
+  padding: 16px 0 12px;
   background: #FFFFFF;
 }
 
 .catalog-curated-banner {
   background: linear-gradient(135deg, #FBF8F3 0%, #F5EFE6 55%, #EDE5D9 100%);
   border: 1px solid #EAE3D8;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.03);
   position: relative;
-  min-height: 200px;
+  min-height: 140px;
 }
 
 .catalog-curated-content {
   flex: 1;
-  padding: 36px 36px 32px;
+  padding: 24px 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 640px;
+  max-width: 600px;
   z-index: 2;
 }
 
@@ -253,9 +253,9 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #786B61;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .catalog-breadcrumb a {
@@ -276,22 +276,22 @@
 .catalog-curated-eyebrow {
   display: block;
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: 0.775rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #A95D2A;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .catalog-headline {
   font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
   font-weight: 900;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   color: #171513;
   line-height: 1.15;
-  margin: 0 0 10px;
+  margin: 0 0 6px;
 }
 
 .copper-accent {
@@ -299,14 +299,14 @@
 }
 
 .catalog-subtext {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: #786B61;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .catalog-curated-media {
-  flex: 0 0 48%;
+  flex: 0 0 42%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -322,19 +322,62 @@
   display: block;
 }
 
-@media (max-width: 900px) {
+/* Mobile: Sleek, Ultra-Compact Header Row (Zero Clutter, Immediate Product Visibility) */
+@media (max-width: 768px) {
+  .catalog-hero-section {
+    padding: 10px 0 6px;
+  }
   .catalog-curated-banner {
-    flex-direction: column;
+    flex-direction: row;
     min-height: auto;
+    background: #FAF7F2;
+    border: 1px solid #EAE5DB;
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    box-shadow: none;
+  }
+  .catalog-curated-media {
+    display: none !important; /* Hide giant decorative image on mobile */
+  }
+  .catalog-subtext {
+    display: none !important; /* Hide multi-line boilerplate paragraph on mobile */
   }
   .catalog-curated-content {
     max-width: 100%;
-    padding: 24px 20px;
+    padding: 0;
+    gap: 2px;
   }
-  .catalog-curated-media {
-    flex: 0 0 auto;
-    height: 160px;
-    width: 100%;
+  .catalog-breadcrumb {
+    font-size: 0.72rem;
+    gap: 5px;
+    margin-bottom: 2px;
+    color: #8C8074;
+  }
+  .catalog-curated-eyebrow {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1px;
+  }
+  .catalog-headline {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (max-width: 360px) {
+  .catalog-curated-banner {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+  .catalog-headline {
+    font-size: 1.15rem !important;
+  }
+  .catalog-breadcrumb {
+    font-size: 0.68rem;
   }
 }
 

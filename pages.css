@@ -1167,23 +1167,36 @@
 
 @media (max-width: 640px) {
   .page-hero-section {
-    padding: 32px 0 28px;
+    padding: 18px 0 14px;
   }
 
   .page-hero-container {
     padding: 0 16px;
   }
 
+  .page-hero-badge {
+    padding: 2px 9px !important;
+    font-size: 0.68rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .page-breadcrumb {
+    margin-bottom: 6px !important;
+    font-size: 0.74rem !important;
+  }
+
   .page-hero-title {
-    font-size: 1.85rem;
+    font-size: 1.45rem !important;
     line-height: 1.2;
+    margin: 0 0 6px 0 !important;
     word-break: break-word;
   }
 
   .page-hero-desc {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.85rem !important;
+    line-height: 1.45;
     word-break: break-word;
+    margin: 0;
   }
 
   .policy-highlights-grid {
