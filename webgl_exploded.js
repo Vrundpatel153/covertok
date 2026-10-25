@@ -128,25 +128,50 @@
     const planeSize = 580;
     const geom = new THREE.PlaneGeometry(planeSize, planeSize);
 
-    // Exact layer configuration:
-    // Both textures are registered in identical 1254x1254 viewport.
-    // Assembled: (0, 0, 4) with scale 1.0 and rotZ 0.0 -> 100% exact alignment, ZERO gap, ZERO mismatch!
-    // Exploded: (-105, 88, 95) with scale 1.065 and rotZ 0.032 -> clearly floats detached in 3D space!
-    const layerConfigs = [
+    // Exact layer configuration for all 3 color variants:
+    // Sierra Blue, Space Black, and Deep Purple
+    const vTag = '?v=' + Date.now();
+    const colorVariants = {
+      blue: {
+        id: 'blue',
+        name: 'Sierra Blue',
+        phoneWebp: 'assets/blue_phone_body.webp' + vTag,
+        phonePng: 'assets/blue_phone_body.png' + vTag,
+        coverWebp: 'assets/blue_protector_cover.webp' + vTag,
+        coverPng: 'assets/blue_protector_cover.png' + vTag,
+        posterWebp: 'assets/blue_frameless_assembled.webp' + vTag
+      },
+      black: {
+        id: 'black',
+        name: 'Space Black',
+        phoneWebp: 'assets/black_phone_body.webp' + vTag,
+        phonePng: 'assets/black_phone_body.png' + vTag,
+        coverWebp: 'assets/black_protector_cover.webp' + vTag,
+        coverPng: 'assets/black_protector_cover.png' + vTag,
+        posterWebp: 'assets/black_frameless_assembled.webp' + vTag
+      },
+      purple: {
+        id: 'purple',
+        name: 'Deep Purple',
+        phoneWebp: 'assets/purple_phone_body.webp' + vTag,
+        phonePng: 'assets/purple_phone_body.png' + vTag,
+        coverWebp: 'assets/purple_protector_cover.webp' + vTag,
+        coverPng: 'assets/purple_protector_cover.png' + vTag,
+        posterWebp: 'assets/purple_frameless_assembled.webp' + vTag
+      }
+    };
+
+    let currentColor = 'blue';
+
+    const layerTransforms = [
       {
         id: 1,
-        name: 'iPhone 16 Pro Sierra Blue Body',
-        webpPath: 'assets/blue_phone_body.webp?v=' + Date.now(),
-        pngPath: 'assets/blue_phone_body.png?v=' + Date.now(),
         key: 'phone',
         exploded: { x: 0, y: 0, z: 0, scale: 1.0, rotZ: 0.0 },
         assembled: { x: 0, y: 0, z: 0, scale: 1.0, rotZ: 0.0 }
       },
       {
         id: 2,
-        name: 'Frameless Bumper & 3D Lens Armor',
-        webpPath: 'assets/blue_protector_cover.webp?v=' + Date.now(),
-        pngPath: 'assets/blue_protector_cover.png?v=' + Date.now(),
         key: 'cover_guard',
         exploded: { x: -105, y: 88, z: 95, scale: 1.065, rotZ: 0.032 },
         assembled: { x: 0, y: 0, z: 4, scale: 1.0, rotZ: 0.0 }
@@ -155,17 +180,45 @@
 
     const meshes = [];
     let loadedCount = 0;
+    const textureCache = {};
+    const texLoader = new THREE.TextureLoader();
 
-    function applyTexture(texture, index, cfg) {
-      if (meshes[index]) return;
-
-      texture.generateMipmaps = true;
-      texture.minFilter = THREE.LinearMipmapLinearFilter;
-      texture.magFilter = THREE.LinearFilter;
-      if (renderer.capabilities && renderer.capabilities.getMaxAnisotropy) {
-        texture.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 4);
+    function getTexture(webpUrl, pngUrl, callback) {
+      if (textureCache[webpUrl]) {
+        callback(textureCache[webpUrl]);
+        return;
       }
-      texture.needsUpdate = true;
+      texLoader.load(
+        webpUrl,
+        function (tex) {
+          tex.generateMipmaps = true;
+          tex.minFilter = THREE.LinearMipmapLinearFilter;
+          tex.magFilter = THREE.LinearFilter;
+          if (renderer && renderer.capabilities && renderer.capabilities.getMaxAnisotropy) {
+            tex.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 4);
+          }
+          tex.needsUpdate = true;
+          textureCache[webpUrl] = tex;
+          callback(tex);
+        },
+        undefined,
+        function () {
+          if (pngUrl) {
+            texLoader.load(pngUrl, function (tex) {
+              tex.generateMipmaps = true;
+              tex.minFilter = THREE.LinearMipmapLinearFilter;
+              tex.magFilter = THREE.LinearFilter;
+              tex.needsUpdate = true;
+              textureCache[webpUrl] = tex;
+              callback(tex);
+            });
+          }
+        }
+      );
+    }
+
+    function applyTexture(texture, index, transformCfg) {
+      if (meshes[index]) return;
 
       const mat = new THREE.MeshBasicMaterial({
         map: texture,
@@ -175,18 +228,18 @@
       });
 
       const mesh = new THREE.Mesh(geom, mat);
-      mesh.position.set(cfg.exploded.x, cfg.exploded.y, cfg.exploded.z);
-      mesh.scale.set(cfg.exploded.scale || 1.0, cfg.exploded.scale || 1.0, 1.0);
-      mesh.rotation.z = cfg.exploded.rotZ || 0.0;
+      mesh.position.set(transformCfg.exploded.x, transformCfg.exploded.y, transformCfg.exploded.z);
+      mesh.scale.set(transformCfg.exploded.scale || 1.0, transformCfg.exploded.scale || 1.0, 1.0);
+      mesh.rotation.z = transformCfg.exploded.rotZ || 0.0;
       mesh.renderOrder = index + 1;
-      mesh.userData = cfg;
+      mesh.userData = transformCfg;
 
       rootGroup.add(mesh);
       meshes[index] = mesh;
       loadedCount++;
 
-      // When all textures are ready, smoothly transition from poster to WebGL canvas
-      if (loadedCount >= layerConfigs.length) {
+      // When initial textures are ready, transition from fallback poster to WebGL canvas
+      if (loadedCount >= layerTransforms.length) {
         container.classList.add('webgl-active');
         const poster = document.getElementById('webglFallbackPoster');
         if (poster) {
@@ -196,24 +249,74 @@
       renderer.render(scene, camera);
     }
 
-    function loadLayerTexture(cfg, index) {
-      const loader = new THREE.TextureLoader();
+    // Initial load for active color (Sierra Blue)
+    const initVar = colorVariants[currentColor];
+    getTexture(initVar.phoneWebp, initVar.phonePng, (tex) => applyTexture(tex, 0, layerTransforms[0]));
+    getTexture(initVar.coverWebp, initVar.coverPng, (tex) => applyTexture(tex, 1, layerTransforms[1]));
 
-      function onTexLoaded(tex) {
-        applyTexture(tex, index, cfg);
+    // Preload Black and Purple textures in background for instant zero-lag switching
+    ['black', 'purple'].forEach(col => {
+      const cv = colorVariants[col];
+      getTexture(cv.phoneWebp, cv.phonePng, () => {});
+      getTexture(cv.coverWebp, cv.coverPng, () => {});
+    });
+
+    // Real-time Color Switcher
+    function switchColor(colorKey) {
+      if (!colorVariants[colorKey] || currentColor === colorKey) return;
+      currentColor = colorKey;
+      const v = colorVariants[colorKey];
+
+      // Update swatch buttons active state
+      const buttons = document.querySelectorAll('.color-swatch-btn');
+      buttons.forEach(btn => {
+        const isAct = btn.getAttribute('data-color') === colorKey;
+        btn.classList.toggle('active', isAct);
+        btn.setAttribute('aria-checked', isAct ? 'true' : 'false');
+      });
+
+      // Update phone mesh texture
+      if (meshes[0]) {
+        getTexture(v.phoneWebp, v.phonePng, function (tex) {
+          meshes[0].material.map = tex;
+          meshes[0].material.needsUpdate = true;
+          renderer.render(scene, camera);
+        });
       }
 
-      function onTexError() {
-        console.warn('WebP load failed for ' + cfg.name + ', loading PNG fallback...');
-        loader.load(cfg.pngPath, onTexLoaded);
+      // Update cover guard mesh texture
+      if (meshes[1]) {
+        getTexture(v.coverWebp, v.coverPng, function (tex) {
+          meshes[1].material.map = tex;
+          meshes[1].material.needsUpdate = true;
+          renderer.render(scene, camera);
+        });
       }
 
-      loader.load(cfg.webpPath, onTexLoaded, undefined, onTexError);
+      // Update poster
+      const posterSource = document.querySelector('#webglFallbackPoster source');
+      const posterImg = document.querySelector('#webglFallbackPoster img');
+      if (posterSource) posterSource.srcset = v.posterWebp;
+      if (posterImg) posterImg.src = v.posterWebp;
     }
 
-    layerConfigs.forEach((cfg, index) => {
-      loadLayerTexture(cfg, index);
-    });
+    // Bind swatch buttons
+    function bindSwatchButtons() {
+      const buttons = document.querySelectorAll('.color-swatch-btn');
+      buttons.forEach(btn => {
+        btn.onclick = function (e) {
+          e.preventDefault();
+          const col = this.getAttribute('data-color');
+          if (col) switchColor(col);
+        };
+      });
+    }
+
+    bindSwatchButtons();
+    setTimeout(bindSwatchButtons, 300);
+    setTimeout(bindSwatchButtons, 1000);
+
+    window.switchShowcaseColor = switchColor;
 
     // 6. Animation State & Variables
     let isAutoLoop = true;
@@ -304,7 +407,7 @@
       // Update Mesh positions, scales and rotations:
       // When animProgress = 0: strictly locked at (0, 0, 4) with scale 1.0 and rotZ 0.0 (sub-pixel exact fit)!
       // When animProgress = 1: floating exploded at (-105, 88, 95) with scale 1.065 and rotZ 0.032!
-      layerConfigs.forEach((cfg, i) => {
+      layerTransforms.forEach((cfg, i) => {
         const mesh = meshes[i];
         if (!mesh) return;
 

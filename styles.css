@@ -2205,6 +2205,99 @@ img {
   }
 }
 
+/* 3D Showcase Interactive Color Switcher */
+.showcase-color-switcher {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 16px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 9999px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  position: relative;
+}
+
+.color-swatch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #55524e;
+  font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  font-size: 0.78125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.color-swatch-btn:hover {
+  color: #171513;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.color-swatch-btn.active {
+  background: #171513;
+  color: #FFFFFF;
+  border-color: rgba(197, 160, 89, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.swatch-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease;
+}
+
+.color-swatch-btn:hover .swatch-dot,
+.color-swatch-btn.active .swatch-dot {
+  transform: scale(1.15);
+}
+
+.swatch-blue {
+  background: linear-gradient(135deg, #a3c4e0 0%, #7ca5c8 100%);
+  border: 1px solid #6b93b5;
+}
+
+.swatch-black {
+  background: linear-gradient(135deg, #444347 0%, #222124 100%);
+  border: 1px solid #1a191c;
+}
+
+.swatch-purple {
+  background: linear-gradient(135deg, #876288 0%, #543755 100%);
+  border: 1px solid #442945;
+}
+
+@media (max-width: 480px) {
+  .showcase-color-switcher {
+    gap: 4px;
+    padding: 4px 6px;
+  }
+  .color-swatch-btn {
+    padding: 5px 9px;
+    font-size: 0.70rem;
+    gap: 5px;
+  }
+  .swatch-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 .glass-demo-stage-container {
   position: relative;
   width: 100%;
