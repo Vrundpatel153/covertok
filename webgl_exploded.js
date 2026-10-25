@@ -136,8 +136,8 @@
       {
         id: 1,
         name: 'iPhone 16 Pro Sierra Blue Body',
-        webpPath: 'assets/blue_phone_body.webp',
-        pngPath: 'assets/blue_phone_body.png',
+        webpPath: 'assets/blue_phone_body.webp?v=' + Date.now(),
+        pngPath: 'assets/blue_phone_body.png?v=' + Date.now(),
         key: 'phone',
         exploded: { x: 0, y: 0, z: 0, scale: 1.0, rotZ: 0.0 },
         assembled: { x: 0, y: 0, z: 0, scale: 1.0, rotZ: 0.0 }
@@ -145,8 +145,8 @@
       {
         id: 2,
         name: 'Frameless Bumper & 3D Lens Armor',
-        webpPath: 'assets/blue_protector_cover.webp',
-        pngPath: 'assets/blue_protector_cover.png',
+        webpPath: 'assets/blue_protector_cover.webp?v=' + Date.now(),
+        pngPath: 'assets/blue_protector_cover.png?v=' + Date.now(),
         key: 'cover_guard',
         exploded: { x: -105, y: 88, z: 95, scale: 1.065, rotZ: 0.032 },
         assembled: { x: 0, y: 0, z: 4, scale: 1.0, rotZ: 0.0 }
