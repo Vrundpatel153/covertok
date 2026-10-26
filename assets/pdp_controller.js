@@ -1506,56 +1506,25 @@
       comboCatLabel = 'AirPod Case';
     }
 
-    const stickyBar = document.getElementById('comboPdpStickyBar');
-    const bannerText = document.getElementById('comboPdpBannerText');
-    const topAddBtn = document.getElementById('pdpAddThisToComboBtn');
     const actionAddBtn = document.getElementById('pdpActionAddToComboBtn');
-
-    const params = new URLSearchParams(window.location.search);
-    const cameFromCombo = params.get('from') === 'combo';
 
     function updateComboPdpUI() {
       const slots = getSlots();
-      const filledCount = [slots[1], slots[2], slots[3]].filter(Boolean).length;
       const inSlotKey = Object.keys(slots).find(k => slots[k] && String(slots[k].id) === String(prod.id));
 
-      if (cameFromCombo || filledCount > 0) {
-        if (stickyBar) stickyBar.style.display = 'block';
-        if (bannerText) {
-          bannerText.textContent = `Custom 3-Piece Combo in progress: ${filledCount} of 3 items chosen (Flat ₹1,199 deal)`;
-        }
-      }
-
-      if (isEligible) {
-        if (actionAddBtn) actionAddBtn.style.display = 'block';
-        if (topAddBtn) topAddBtn.style.display = 'inline-block';
+      if (isEligible && actionAddBtn) {
+        actionAddBtn.style.display = 'block';
 
         if (inSlotKey) {
-          if (actionAddBtn) {
-            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
-            actionAddBtn.style.background = '#0A0A0A';
-            actionAddBtn.style.color = '#FFFFFF';
-            actionAddBtn.style.borderColor = '#C5A059';
-          }
-          if (topAddBtn) {
-            topAddBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" style="vertical-align:-1px; margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg>In Slot ${inSlotKey}`;
-            topAddBtn.style.background = '#0A0A0A';
-            topAddBtn.style.color = '#FFFFFF';
-            topAddBtn.style.borderColor = '#C5A059';
-          }
+          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
+          actionAddBtn.style.background = '#0A0A0A';
+          actionAddBtn.style.color = '#FFFFFF';
+          actionAddBtn.style.borderColor = '#C5A059';
         } else {
-          if (actionAddBtn) {
-            actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" stroke="none" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
-            actionAddBtn.style.background = '#FFFFFF';
-            actionAddBtn.style.color = '#0A0A0A';
-            actionAddBtn.style.borderColor = '#C5A059';
-          }
-          if (topAddBtn) {
-            topAddBtn.textContent = `+ Add to Combo`;
-            topAddBtn.style.background = '#FFFFFF';
-            topAddBtn.style.color = '#0A0A0A';
-            topAddBtn.style.borderColor = '#C5A059';
-          }
+          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" stroke="none" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
+          actionAddBtn.style.background = '#FFFFFF';
+          actionAddBtn.style.color = '#0A0A0A';
+          actionAddBtn.style.borderColor = '#C5A059';
         }
       }
     }
