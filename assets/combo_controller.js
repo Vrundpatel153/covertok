@@ -1,224 +1,592 @@
 /**
- * Covertok Combo Section Controller
- * Provides interactive custom 3-piece combo builder, slot progression,
- * real-time bundle pricing, and direct shopping bag integration.
+ * Covertok Homepage In-Section 3-Piece Combo Controller
+ * Powers live in-page accessories selection, category filter tabs,
+ * instant checkmark selection, real-time pricing, and seamless cart drawer integration.
  */
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('comboBuilderModal');
-  if (!modal) {
-    // Modal removed, all combo cards & CTA link directly to combo.html
-    return;
-  }
-  const closeBtn = document.getElementById('comboModalClose');
-  const backdrop = document.getElementById('comboModalBackdrop');
-  const openBtns = document.querySelectorAll('.combo-card, #openComboBuilderBtn, .combo-bottom-pill');
-  const itemsGrid = document.getElementById('comboItemsGrid');
-  const addBagBtn = document.getElementById('comboAddBagBtn');
-  const slot1 = document.getElementById('comboSlot1');
-  const slot2 = document.getElementById('comboSlot2');
-  const slot3 = document.getElementById('comboSlot3');
 
-  // Real store accessories catalog for combo deals
-  const comboCatalog = [
-    {
-      id: 'combo-prod-1',
-      slot: 1,
-      cat: 'case',
-      title: 'MagSafe Clear Armor Case',
-      regPrice: 899,
-      img: 'assets/bestseller/prod_01_clear_case.webp',
-      badge: 'Best Seller'
-    },
-    {
-      id: 'combo-prod-2',
-      slot: 1,
-      cat: 'case',
-      title: 'Leather Wallet Snap Case',
-      regPrice: 1299,
-      img: 'assets/bestseller/prod_02_wallet_kickstand.webp',
-      badge: 'Premium'
-    },
-    {
-      id: 'combo-prod-3',
-      slot: 2,
-      cat: 'watch',
-      title: 'Ribbed Cognac Leather Band',
-      regPrice: 999,
-      img: 'assets/popular_choice/card2_watch_bands.webp',
-      badge: 'Trending'
-    },
-    {
-      id: 'combo-prod-4',
-      slot: 2,
-      cat: 'watch',
-      title: 'Ivory Cream Link Band',
-      regPrice: 999,
-      img: 'assets/collections/card_02_watch_bg.webp',
-      badge: 'Luxury'
-    },
-    {
-      id: 'combo-prod-5',
-      slot: 3,
-      cat: 'power',
-      title: 'Braided Fast Type-C Cable',
-      regPrice: 599,
-      img: 'assets/collections/card_04_cables_bg.webp',
-      badge: 'Essential'
-    },
-    {
-      id: 'combo-prod-6',
-      slot: 3,
-      cat: 'audio',
-      title: 'AirPods Stitched Leather Case',
-      regPrice: 699,
-      img: 'assets/popular_choice/card3_airpods_covers.webp',
-      badge: 'Most Loved'
-    },
-    {
-      id: 'combo-prod-7',
-      slot: 3,
-      cat: 'power',
-      title: 'High-Capacity Slim Power Bank',
-      regPrice: 2099,
-      img: 'assets/popular_choice/card4_power_essentials.webp',
-      badge: 'Top Pick'
-    },
-    {
-      id: 'combo-prod-8',
-      slot: 1,
-      cat: 'case',
-      title: 'Tempered Glass Shield (3-Pack)',
-      regPrice: 799,
-      img: 'assets/popular_choice/card5_screen_protectors.webp',
-      badge: 'Protection'
+(function() {
+  'use strict';
+
+  const STORAGE_KEY = 'covertok_custom_combo_slots';
+  const BUNDLE_PRICE = 1199;
+
+  // 1. Identify and categorize eligible accessories
+  function classifyProduct(p) {
+    if (!p) return null;
+    const cat = p.category || '';
+    const title = (p.title || '').toLowerCase();
+
+    if (cat === 'iphone-cases') {
+      return { key: 'mobile-cover', label: 'Phone Case' };
     }
-  ];
+    if (cat === 'watchbands') {
+      if (title.includes('case') || title.includes('armor') || title.includes('protective')) {
+        return { key: 'watch-cover', label: 'Watch Cover' };
+      }
+      return { key: 'watch-band', label: 'Watch Band' };
+    }
+    if (cat === 'charger-covers') {
+      return { key: 'charger-cover', label: 'Charger Case' };
+    }
+    if (cat === 'airpod-covers') {
+      return { key: 'airpod-cover', label: 'AirPod Case' };
+    }
+    return null;
+  }
 
-  let selectedItems = {
-    1: comboCatalog[0], // preselect Case 1
-    2: comboCatalog[2], // preselect Watch Band 1
-    3: comboCatalog[4]  // preselect Cable 1
+  // 2. Persistent State Management
+  function normalizeSlotItem(item) {
+    if (!item) return null;
+    return {
+      id: item.id,
+      handle: item.handle || item.id,
+      title: item.title,
+      price: item.price,
+      original_price: item.original_price || item.price,
+      image: item.image || item.primary_image || 'assets/phone_cream.webp',
+      category_key: item.category_key || 'mobile-cover',
+      category_label: item.category_label || 'Accessory'
+    };
+  }
+
+  function loadSavedSlots() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        return {
+          1: normalizeSlotItem(parsed[1]),
+          2: normalizeSlotItem(parsed[2]),
+          3: normalizeSlotItem(parsed[3])
+        };
+      }
+    } catch (e) {
+      console.warn('Error reading combo slots from storage', e);
+    }
+    return { 1: null, 2: null, 3: null };
+  }
+
+  function saveSlots(slots) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(slots));
+    } catch (e) {
+      console.warn('Error saving combo slots', e);
+    }
+  }
+
+  let state = {
+    allEligibleProducts: [],
+    filteredProducts: [],
+    activeCategory: 'all',
+    slots: loadSavedSlots()
   };
 
-  function renderCatalog() {
-    if (!itemsGrid) return;
-    itemsGrid.innerHTML = '';
-
-    comboCatalog.forEach(item => {
-      const isSelected = (selectedItems[item.slot] && selectedItems[item.slot].id === item.id);
-      const card = document.createElement('div');
-      card.className = `combo-modal-item ${isSelected ? 'selected' : ''}`;
-      card.setAttribute('data-id', item.id);
-      card.setAttribute('data-slot', item.slot);
-
-      card.innerHTML = `
-        <div class="combo-item-badge">${item.badge}</div>
-        <div class="combo-item-thumb">
-          <img src="${item.img}" alt="${item.title}" loading="lazy">
-        </div>
-        <div class="combo-item-details">
-          <span class="combo-item-cat">Slot ${item.slot}: ${item.cat.toUpperCase()}</span>
-          <h4 class="combo-item-name">${item.title}</h4>
-          <span class="combo-item-price">Regular: ₹${item.regPrice}</span>
-        </div>
-        <button type="button" class="combo-item-select-btn" aria-label="Select ${item.title}">
-          ${isSelected ? '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px; margin-right:3px;"><polyline points="20 6 9 17 4 12"/></svg>Selected' : '+ Select for Slot ' + item.slot}
-        </button>
-      `;
-
-      card.addEventListener('click', () => {
-        selectItem(item);
-      });
-
-      itemsGrid.appendChild(card);
-    });
-
-    updateSlotUI();
+  function getFilledCount() {
+    return [state.slots[1], state.slots[2], state.slots[3]].filter(Boolean).length;
   }
 
-  function selectItem(item) {
-    selectedItems[item.slot] = item;
-    renderCatalog();
+  function getFirstEmptySlot() {
+    if (!state.slots[1]) return 1;
+    if (!state.slots[2]) return 2;
+    if (!state.slots[3]) return 3;
+    return null;
   }
 
-  function updateSlotUI() {
-    [slot1, slot2, slot3].forEach((slotEl, idx) => {
-      if (!slotEl) return;
-      const slotNum = idx + 1;
-      const item = selectedItems[slotNum];
-      const nameEl = slotEl.querySelector('.slot-name');
-
-      if (item) {
-        slotEl.classList.add('filled');
-        if (nameEl) nameEl.textContent = item.title;
-      } else {
-        slotEl.classList.remove('filled');
-        if (nameEl) nameEl.textContent = 'Select item...';
-      }
-    });
-
-    // Check if all 3 slots filled
-    const allFilled = selectedItems[1] && selectedItems[2] && selectedItems[3];
-    if (addBagBtn) {
-      addBagBtn.disabled = !allFilled;
-      if (allFilled) {
-        addBagBtn.innerHTML = `<span>Add 3-Piece Combo to Bag • ₹1,199 (Save ₹1,598)</span>`;
-      } else {
-        addBagBtn.innerHTML = `<span>Please select all 3 accessories</span>`;
+  function getSlotOfProduct(productId) {
+    for (const slotNum of [1, 2, 3]) {
+      if (state.slots[slotNum] && state.slots[slotNum].id === productId) {
+        return slotNum;
       }
     }
+    return null;
   }
 
-  function openModal(e) {
-    if (e) e.preventDefault();
-    if (!modal) return;
-    renderCatalog();
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
+  // 3. Init on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const gridEl = document.getElementById('comboHomepageProductsGrid');
+    if (!gridEl) return;
 
-  function closeModal() {
-    if (!modal) return;
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  openBtns.forEach(btn => {
-    btn.addEventListener('click', openModal);
-  });
-
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (backdrop) backdrop.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-      closeModal();
+    // Check if CovertokProducts is available
+    if (window.CovertokProducts && window.CovertokProducts.length > 0) {
+      initHomeCombo();
+    } else {
+      window.addEventListener('covertok:products_ready', initHomeCombo);
+      setTimeout(initHomeCombo, 250);
     }
   });
 
-  // Add Combo to Bag Action
-  if (addBagBtn) {
-    addBagBtn.addEventListener('click', () => {
-      const itemsList = Object.values(selectedItems);
-      if (itemsList.length < 3) return;
+  function initHomeCombo() {
+    const gridEl = document.getElementById('comboHomepageProductsGrid');
+    if (!gridEl || gridEl.getAttribute('data-combo-init')) return;
+    gridEl.setAttribute('data-combo-init', 'true');
 
-      const comboTitles = itemsList.map(i => i.title).join(' + ');
+    const rawCatalog = window.CovertokProducts || [];
+    
+    // Enrich eligible items
+    state.allEligibleProducts = rawCatalog
+      .map(p => {
+        const meta = classifyProduct(p);
+        if (!meta) return null;
+        return {
+          ...p,
+          combo_category: meta.key,
+          combo_label: meta.label
+        };
+      })
+      .filter(Boolean);
 
-      if (window.CovertokStore && window.CovertokStore.addToCart) {
-        window.CovertokStore.addToCart({
-          id: 'combo-3in1-deal-1199',
-          title: `Custom 3-Piece Combo: ${comboTitles}`,
-          price: 1199,
-          image: 'assets/combo/combo_master_stage.webp',
-          qty: 1
+    state.filteredProducts = [...state.allEligibleProducts];
+
+    // Setup Listeners
+    bindCategoryTabs();
+    bindBannerJumpCards();
+    bindStickyBarActions();
+
+    // Render Initial State
+    updateCategoryCounts();
+    renderProductsGrid();
+    renderStickyBarUI();
+  }
+
+  // 4. Category Tabs
+  function updateCategoryCounts() {
+    const counts = {
+      'all': state.allEligibleProducts.length,
+      'mobile-cover': 0,
+      'watch-band': 0,
+      'watch-cover': 0,
+      'charger-cover': 0,
+      'airpod-cover': 0
+    };
+
+    state.allEligibleProducts.forEach(p => {
+      if (counts[p.combo_category] !== undefined) {
+        counts[p.combo_category]++;
+      }
+    });
+
+    const setBadge = (id, count) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = count;
+    };
+
+    setBadge('homeCountAll', counts['all']);
+    setBadge('homeCountCases', counts['mobile-cover']);
+    setBadge('homeCountBands', counts['watch-band']);
+    setBadge('homeCountCovers', counts['watch-cover']);
+    setBadge('homeCountChargers', counts['charger-cover']);
+    setBadge('homeCountAirpods', counts['airpod-cover']);
+  }
+
+  function bindCategoryTabs() {
+    const tabs = document.querySelectorAll('#comboHomeCatTabs .catalog-nav-pill');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
         });
-      } else if (window.showToast) {
-        window.showToast('Added 3-Piece Combo to Bag for ₹1199!', 'bag');
-      }
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
 
-      closeModal();
+        const cat = tab.getAttribute('data-category');
+        state.activeCategory = cat;
+
+        if (cat === 'all') {
+          state.filteredProducts = [...state.allEligibleProducts];
+        } else {
+          state.filteredProducts = state.allEligibleProducts.filter(p => p.combo_category === cat);
+        }
+
+        renderProductsGrid();
+      });
     });
   }
-});
+
+  function bindBannerJumpCards() {
+    const bannerCards = document.querySelectorAll('[data-combo-filter]');
+    bannerCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetFilter = card.getAttribute('data-combo-filter');
+        
+        // Switch tab
+        const matchingTab = document.querySelector(`#comboHomeCatTabs .catalog-nav-pill[data-category="${targetFilter}"]`);
+        if (matchingTab) {
+          matchingTab.click();
+        }
+
+        // Smooth scroll to studio
+        const studioEl = document.getElementById('comboHomepageStudio');
+        if (studioEl) {
+          studioEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Bottom banner button
+    const bannerBtn = document.getElementById('openComboBuilderBtn');
+    if (bannerBtn) {
+      bannerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const studioEl = document.getElementById('comboHomepageStudio');
+        if (studioEl) {
+          studioEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  }
+
+  // 5. Toggle Product Selection
+  window.toggleHomeComboProduct = function(productId) {
+    const existingSlot = getSlotOfProduct(productId);
+
+    if (existingSlot) {
+      // Uncheck
+      state.slots[existingSlot] = null;
+      saveSlots(state.slots);
+      renderStickyBarUI();
+      updateAllCardsCheckboxUI();
+      if (window.showToast) {
+        window.showToast('Item removed from suite', 'bag');
+      }
+      return;
+    }
+
+    // Check
+    const emptySlot = getFirstEmptySlot();
+    if (!emptySlot) {
+      // All 3 slots filled: prompt user or replace slot 3
+      if (window.showToast) {
+        window.showToast('Suite is complete! Click Add to Cart or uncheck an item to swap.', 'bag');
+      }
+      return;
+    }
+
+    const targetProduct = state.allEligibleProducts.find(p => p.id === productId);
+    if (!targetProduct) return;
+
+    state.slots[emptySlot] = {
+      id: targetProduct.id,
+      handle: targetProduct.handle || targetProduct.id,
+      title: targetProduct.title,
+      price: targetProduct.price,
+      original_price: targetProduct.original_price || targetProduct.price,
+      image: targetProduct.primary_image || targetProduct.image || 'assets/phone_cream.webp',
+      category_key: targetProduct.combo_category,
+      category_label: targetProduct.combo_label
+    };
+
+    saveSlots(state.slots);
+    renderStickyBarUI();
+    updateAllCardsCheckboxUI();
+
+    const filledCount = getFilledCount();
+    if (window.showToast) {
+      if (filledCount === 3) {
+        window.showToast('✨ 3 of 3 Selected! Suite is ready to add to bag.', 'bag');
+      } else {
+        window.showToast(`Added to Slot ${emptySlot} (${filledCount}/3 Selected)`, 'bag');
+      }
+    }
+  };
+
+  // 6. Render Products Grid
+  function renderProductsGrid() {
+    const gridEl = document.getElementById('comboHomepageProductsGrid');
+    if (!gridEl) return;
+
+    gridEl.innerHTML = '';
+
+    if (state.filteredProducts.length === 0) {
+      gridEl.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 48px 20px;">
+          <p style="font-size: 1.1rem; font-weight: 700; color: #64748B;">No eligible accessories found in this category.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    state.filteredProducts.forEach(product => {
+      const card = buildProductCard(product);
+      fragment.appendChild(card);
+    });
+
+    gridEl.appendChild(fragment);
+  }
+
+  function buildProductCard(product) {
+    const card = document.createElement('article');
+    card.className = 'catalog-card combo-catalog-card';
+    card.setAttribute('data-id', product.id);
+
+    const selectedSlot = getSlotOfProduct(product.id);
+    const isSelected = Boolean(selectedSlot);
+    if (isSelected) card.classList.add('is-selected');
+
+    const initialImg = product.primary_image || product.image || 'assets/phone_cream.webp';
+    const hasColors = Array.isArray(product.colors) && product.colors.length > 0;
+
+    let badgeHtml = '';
+    if (product.badge) {
+      badgeHtml = `<span class="card-badge card-badge-gold">${product.badge}</span>`;
+    }
+
+    let swatchesHtml = '';
+    if (hasColors) {
+      const swatches = product.colors.slice(0, 5).map((c) => `
+        <button type="button" 
+          class="card-color-dot ${c.image === initialImg ? 'active' : ''}" 
+          data-img="${c.image}" 
+          data-color="${c.name}"
+          style="background: ${c.hex || '#E2E8F0'};" 
+          title="${c.name}">
+        </button>
+      `).join('');
+      const moreCount = product.colors.length > 5 ? `<span style="font-size: 0.65rem; font-weight: 700; color: #64748B;">+${product.colors.length - 5}</span>` : '';
+      swatchesHtml = `
+        <div class="card-color-swatches" aria-label="Available Colors">
+          ${swatches}
+          ${moreCount}
+        </div>
+      `;
+    }
+
+    card.innerHTML = `
+      <div class="card-media-stage">
+        <div class="card-badges-row">${badgeHtml}</div>
+
+        <!-- Prominent Checkmark Checkbox Badge (Top-Right) -->
+        <button type="button" 
+          class="combo-card-checkbox ${isSelected ? 'checked' : ''}" 
+          aria-label="${isSelected ? 'Uncheck item' : 'Select item for combo'}"
+          title="${isSelected ? 'Click to uncheck' : 'Click to select'}">
+          <span class="combo-check-circle">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </span>
+          <span class="combo-checkbox-text">${isSelected ? `<span class="combo-slot-full">Item ${selectedSlot} of 3</span><span class="combo-slot-short">Item ${selectedSlot}</span>` : '+ Select'}</span>
+        </button>
+
+        <div class="card-img-wrap">
+          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="homeCardImg_${product.id}" loading="lazy">
+        </div>
+
+        ${swatchesHtml}
+      </div>
+
+      <div class="card-body-wrap">
+        <div class="card-cat-rating">
+          <span class="card-cat-tag">${product.combo_label || product.category_name}</span>
+          <span class="card-rating-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            ${product.rating || 4.8} (${product.reviews_count || 120})
+          </span>
+        </div>
+
+        <a href="product.html?handle=${product.handle || product.id}" class="card-product-title" title="${product.title}">
+          ${product.title}
+        </a>
+
+        <div class="card-price-row">
+          <span class="card-price-now">₹${Number(product.price).toLocaleString('en-IN')}</span>
+          ${product.original_price > product.price ? `<span class="card-price-was">₹${Number(product.original_price).toLocaleString('en-IN')}</span>` : ''}
+        </div>
+      </div>
+    `;
+
+    // Tap anywhere on card to toggle selection (except links & swatches)
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('.card-color-dot')) {
+        return;
+      }
+      window.toggleHomeComboProduct(product.id);
+    });
+
+    const checkboxBtn = card.querySelector('.combo-card-checkbox');
+    if (checkboxBtn) {
+      checkboxBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.toggleHomeComboProduct(product.id);
+      });
+    }
+
+    // Color swatches interaction
+    const imgEl = card.querySelector(`#homeCardImg_${product.id}`);
+    const colorDots = card.querySelectorAll('.card-color-dot');
+    colorDots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        colorDots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+
+        const newSrc = dot.getAttribute('data-img');
+        if (newSrc && imgEl) {
+          imgEl.style.opacity = '0.4';
+          imgEl.style.transform = 'scale(0.96)';
+          setTimeout(() => {
+            imgEl.src = newSrc;
+            imgEl.style.opacity = '1';
+            imgEl.style.transform = 'scale(1)';
+          }, 120);
+        }
+      });
+    });
+
+    return card;
+  }
+
+  function updateAllCardsCheckboxUI() {
+    const cards = document.querySelectorAll('.combo-catalog-card');
+    cards.forEach(card => {
+      const prodId = card.getAttribute('data-id');
+      const selectedSlot = getSlotOfProduct(prodId);
+      const isSelected = Boolean(selectedSlot);
+
+      card.classList.toggle('is-selected', isSelected);
+
+      const checkbox = card.querySelector('.combo-card-checkbox');
+      const textSpan = card.querySelector('.combo-checkbox-text');
+
+      if (checkbox && textSpan) {
+        if (isSelected) {
+          checkbox.classList.add('checked');
+          checkbox.setAttribute('aria-label', 'Uncheck item');
+          textSpan.innerHTML = `<span class="combo-slot-full">Item ${selectedSlot} of 3</span><span class="combo-slot-short">Item ${selectedSlot}</span>`;
+        } else {
+          checkbox.classList.remove('checked');
+          checkbox.setAttribute('aria-label', 'Select item for combo');
+          textSpan.textContent = '+ Select';
+        }
+      }
+    });
+  }
+
+  // 7. Sticky Suite Bar & Actions
+  function renderStickyBarUI() {
+    const filledCount = getFilledCount();
+    const isReady = filledCount === 3;
+
+    // Update Badge
+    const badgeEl = document.getElementById('comboHomeBadge');
+    if (badgeEl) {
+      if (isReady) {
+        badgeEl.textContent = '3 of 3 Selected • Suite Complete';
+      } else {
+        badgeEl.textContent = `${filledCount} of 3 Selected`;
+      }
+    }
+
+    // Update Dots
+    [1, 2, 3].forEach(num => {
+      const dot = document.querySelector(`#comboHomeDots .combo-dot[data-dot="${num}"]`);
+      if (dot) {
+        dot.classList.toggle('filled', Boolean(state.slots[num]));
+      }
+    });
+
+    // Calculate total MRP
+    let totalRegular = 0;
+    [state.slots[1], state.slots[2], state.slots[3]].forEach(item => {
+      if (item) totalRegular += Number(item.price || 0);
+    });
+
+    const mrpEl = document.getElementById('comboHomeMrp');
+    const saveEl = document.getElementById('comboHomeSave');
+    const addBtn = document.getElementById('comboHomeAddBtn');
+
+    if (mrpEl) {
+      mrpEl.textContent = totalRegular > 0 ? `₹${totalRegular.toLocaleString('en-IN')}` : '₹2,799';
+    }
+
+    if (saveEl) {
+      if (isReady) {
+        const savings = Math.max(0, totalRegular - BUNDLE_PRICE);
+        saveEl.textContent = `Save ₹${savings.toLocaleString('en-IN')}`;
+      } else {
+        saveEl.textContent = 'Save ~60%';
+      }
+    }
+
+    if (addBtn) {
+      if (isReady) {
+        addBtn.disabled = false;
+        addBtn.innerHTML = `
+          <span>Add 3-Piece Suite to Cart • ₹1,199</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        `;
+      } else {
+        addBtn.disabled = true;
+        const remaining = 3 - filledCount;
+        addBtn.innerHTML = `
+          <span>Select ${remaining} More ${remaining === 1 ? 'Item' : 'Items'} (${filledCount}/3)</span>
+        `;
+      }
+    }
+  }
+
+  function bindStickyBarActions() {
+    const addBtn = document.getElementById('comboHomeAddBtn');
+    if (addBtn) {
+      addBtn.addEventListener('click', () => {
+        const selectedItems = [state.slots[1], state.slots[2], state.slots[3]].filter(Boolean);
+
+        if (selectedItems.length < 3) {
+          if (window.showToast) {
+            window.showToast(`Please check ${3 - selectedItems.length} more item to complete your combo!`, 'bag');
+          }
+          return;
+        }
+
+        const [s1, s2, s3] = selectedItems;
+        const totalOriginal = (Number(s1.original_price || s1.price) + Number(s2.original_price || s2.price) + Number(s3.original_price || s3.price));
+
+        const comboBundle = {
+          id: `combo-3in1-${s1.id}-${s2.id}-${s3.id}`,
+          is_combo: true,
+          title: `3-Piece Luxury Combo Deal`,
+          price: BUNDLE_PRICE,
+          original_price: totalOriginal,
+          img: s1.image || 'assets/phone_cream.webp',
+          qty: 1,
+          bundle_items: [
+            { id: s1.id, title: s1.title, image: s1.image, price: s1.price, category: s1.category_label },
+            { id: s2.id, title: s2.title, image: s2.image, price: s2.price, category: s2.category_label },
+            { id: s3.id, title: s3.title, image: s3.image, price: s3.price, category: s3.category_label }
+          ],
+          color: '3 Items Bundle',
+          model: `${s1.category_label} + ${s2.category_label} + ${s3.category_label}`
+        };
+
+        if (window.CovertokStore && window.CovertokStore.addToCart) {
+          window.CovertokStore.addToCart(comboBundle);
+        } else if (window.showToast) {
+          window.showToast('Added 3-Piece Combo to Cart for ₹1,199!', 'bag');
+        }
+
+        if (window.renderCartUI) window.renderCartUI();
+        if (window.CovertokFlows && window.CovertokFlows.openCart) {
+          window.CovertokFlows.openCart();
+        }
+      });
+    }
+
+    const resetBtn = document.getElementById('comboHomeResetBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        state.slots = { 1: null, 2: null, 3: null };
+        saveSlots(state.slots);
+        renderStickyBarUI();
+        updateAllCardsCheckboxUI();
+        if (window.showToast) {
+          window.showToast('Combo suite selections cleared', 'bag');
+        }
+      });
+    }
+  }
+
+})();

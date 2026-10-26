@@ -8,9 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261023_v5">
+  <link rel="stylesheet" href="styles.css?v=20261026_matte_v1">
   <link rel="stylesheet" href="catalog.css?v=20261021_v8">
-  <link rel="stylesheet" href="microinteractions.css?v=20261021_v8">
+  <link rel="stylesheet" href="microinteractions.css?v=20261026_matte_v1">
+  <link rel="stylesheet" href="combo.css?v=20261026_matte_v1">
   <!-- Preload 3D WebGL Textures for Instant Zero-Lag Rendering -->
   <link rel="preload" as="image" href="assets/blue_phone_body.webp" type="image/webp">
   <link rel="preload" as="image" href="assets/blue_protector_cover.webp" type="image/webp">
@@ -96,7 +97,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a href="combo.html" class="nav-link" style="color: #0A0A0A; font-weight: 800;"><svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" style="vertical-align:-1px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>3-PIECE COMBO</a>
+              <a href="combo.html" class="nav-link">3-PIECE COMBO</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">ABOUT US</a>
@@ -161,12 +162,9 @@
         <li><a href="collections.html?cat=iphone-cases" class="mobile-link">IPHONE COVERS</a></li>
         <li><a href="collections.html?cat=watchbands" class="mobile-link">WATCH BANDS</a></li>
         <li>
-          <a href="combo.html" class="mobile-link" style="color: #0A0A0A; font-weight: 800;">
-            <span style="display: flex; align-items: center; gap: 6px;">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              3-PIECE COMBO
-            </span>
-            <span style="font-size: 0.68rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.45); padding: 2px 7px; border-radius: 999px;">₹1,199</span>
+          <a href="combo.html" class="mobile-link">
+            <span>3-PIECE COMBO</span>
+            <span style="font-size: 0.68rem; font-weight: 800; background: #000000; color: #FFFFFF; border: 1px solid #000000; padding: 2px 7px; border-radius: 999px;">₹1,199</span>
           </a>
         </li>
         <li><a href="search.html" class="mobile-link">SEARCH PRODUCTS</a></li>
@@ -638,9 +636,9 @@
                   <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.2"/>
                 </filter>
               </defs>
-              <line class="stage-pin-line line-01" x1="145" y1="245" x2="170" y2="405" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" filter="url(#stageLineShadow)"/>
-              <line class="stage-pin-line line-02" x1="435" y1="100" x2="445" y2="475" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" filter="url(#stageLineShadow)"/>
-              <line class="stage-pin-line line-03" x1="655" y1="245" x2="675" y2="475" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" filter="url(#stageLineShadow)"/>
+              <path class="stage-pin-line line-01" d="M 140 200 L 140 325 Q 140 370 170 405" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#stageLineShadow)"/>
+              <path class="stage-pin-line line-02" d="M 470 65 L 470 375 Q 470 435 445 475" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#stageLineShadow)"/>
+              <path class="stage-pin-line line-03" d="M 645 200 L 645 355 Q 645 420 675 475" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#stageLineShadow)"/>
             </svg>
 
             <!-- Coded Tooltip & Hotspot 1: MagSafe Clear Case -->
@@ -713,8 +711,9 @@
               </svg>
             </button>
 
-            <!-- Slider Track / Cards Container -->
-            <div class="bestseller-cards-track" id="bestsellerTrack">
+            <!-- Slider Viewport & Track Container (Infinite Loop Swipe) -->
+            <div class="bestseller-cards-viewport" id="bestsellerViewport">
+              <div class="bestseller-cards-track" id="bestsellerTrack">
               
               <!-- Product Card 1: MagSafe Clear Case -->
               <div class="bestseller-prod-card" data-index="0">
@@ -880,6 +879,7 @@
               </div>
 
             </div>
+          </div>
 
             <!-- Slider Pagination Indicator -->
             <div class="bestseller-pagination-dots" id="bestsellerDots">
@@ -1907,43 +1907,38 @@
         <!-- Top Showcase Stage Card -->
         <div class="frameless-stage-card">
           
-          <!-- Stage Visual Showcase (Clean 3D product render plate, ZERO baked typography or cards) -->
-          <div class="fl-stage-media-wrap">
-            <img src="assets/frameless_stage_clean.webp" alt="Frameless Series cases in Desert Orange, Matte Black, and Silver Frost" class="fl-stage-media-img" loading="lazy">
+          <!-- Stage Visual Showcase: 3D Trio Advertisement Composition -->
+          <div class="fl-stage-media-wrap" id="flStageMediaWrap">
+            <!-- Photorealistic Neoclassical Stone Arch Podium Background -->
+            <img src="assets/frameless_stage_bg.webp" alt="Frameless Series Luxury Architecture Stage" class="fl-stage-bg-img" loading="lazy">
             
-            <!-- Floating Interactive Color Badges over the phones -->
+            <!-- Real GPU-Accelerated 3D WebGL Canvas for all 3 Models -->
+            <canvas id="flStageCanvas" class="fl-stage-webgl-canvas"></canvas>
+
+            <!-- Instant Preload Fallback Composite (Pre-rendered advertising plate) -->
+            <picture class="fl-stage-fallback-ad">
+              <source srcset="assets/frameless_stage_ad.webp" type="image/webp">
+              <img src="assets/frameless_stage_ad.webp" alt="Frameless Series cases in Sierra Blue, Black, and Dark Red" class="fl-stage-media-img" loading="lazy">
+            </picture>
+            
+            <!-- Floating Interactive Color Badges over the 3 phones -->
             <div class="fl-stage-badges" aria-label="Available Colors">
-              <button type="button" class="fl-color-pill fl-pill-orange active" data-color="orange" aria-label="Desert Orange Case view">
-                <span class="fl-pill-dot" style="background: #E05326;"></span>
-                <span class="fl-pill-text">Orange</span>
+              <button type="button" class="fl-color-pill fl-pill-blue" data-color="blue" aria-label="Sierra Blue Case view">
+                <span class="fl-pill-dot" style="background: #7ca5c8;"></span>
+                <span class="fl-pill-text">Sierra Blue</span>
               </button>
               
-              <button type="button" class="fl-color-pill fl-pill-black" data-color="black" aria-label="Matte Black Case view">
+              <button type="button" class="fl-color-pill fl-pill-black active" data-color="black" aria-label="Black Case view">
                 <span class="fl-pill-dot" style="background: #18181A;"></span>
-                <span class="fl-pill-text">Matte Black</span>
+                <span class="fl-pill-text">Black</span>
               </button>
               
-              <button type="button" class="fl-color-pill fl-pill-silver" data-color="silver" aria-label="Silver Frost Case view">
-                <span class="fl-pill-dot" style="background: #D4D4D8;"></span>
-                <span class="fl-pill-text"><span class="fl-pill-full">Silver Frost</span><span class="fl-pill-short">Silver</span></span>
+              <button type="button" class="fl-color-pill fl-pill-purple" data-color="purple" aria-label="Dark Red Case view">
+                <span class="fl-pill-dot" style="background: #8B263E;"></span>
+                <span class="fl-pill-text">Dark Red</span>
               </button>
             </div>
 
-            <!-- Stepper Track (Right Edge) -->
-            <div class="fl-stepper-rail" aria-hidden="true">
-              <div class="fl-step-item active">
-                <span class="fl-step-badge">01</span>
-                <span class="fl-step-label">Design</span>
-              </div>
-              <div class="fl-step-item">
-                <span class="fl-step-badge">02</span>
-                <span class="fl-step-label">Slimness</span>
-              </div>
-              <div class="fl-step-item">
-                <span class="fl-step-badge">03</span>
-                <span class="fl-step-label">Colors</span>
-              </div>
-            </div>
           </div>
 
           <!-- Stage Left Coded Content (Real typography, Real SVGs, Real clickable CTA) -->
@@ -1994,7 +1989,7 @@
                   <span class="fl-offer-label">Grab Any <strong>3</strong> Accessories for</span>
                   <div class="fl-offer-price"><span class="fl-curr">&#8377;</span>1199</div>
                 </div>
-                <a href="#combo-deals" class="fl-offer-shop-btn" id="flOfferShopNowBtn">
+                <a href="product.html?handle=bumper-case" class="fl-offer-shop-btn" id="flOfferShopNowBtn">
                   <span>Shop now</span>
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
@@ -2013,9 +2008,9 @@
         <!-- Bottom 3 Feature Cards Row (100% Coded HTML with High-Res Thumbnail Assets) -->
         <div class="frameless-bottom-cards">
           <!-- Card 1: Raised Lens Bezel -->
-          <a href="#combo-deals" class="fl-bottom-card" data-feature="bezel">
+          <a href="product.html?handle=bumper-case" class="fl-bottom-card" data-feature="bezel">
             <div class="fl-card-media">
-              <img src="assets/fl_card_bezel_clean.webp" alt="Raised Lens Bezel detail" class="fl-media-img" loading="lazy">
+              <img src="assets/fl_card_bezel_clean.webp?v=2" alt="Raised Lens Bezel detail" class="fl-media-img" loading="lazy">
             </div>
             <div class="fl-card-body">
               <h4 class="fl-card-title">Raised Lens Bezel</h4>
@@ -2030,9 +2025,9 @@
           </a>
 
           <!-- Card 2: Ultra-Slim Profile -->
-          <a href="#combo-deals" class="fl-bottom-card" data-feature="profile">
+          <a href="product.html?handle=bumper-case" class="fl-bottom-card" data-feature="profile">
             <div class="fl-card-media">
-              <img src="assets/fl_card_profile_clean.webp" alt="Ultra-Slim Profile detail" class="fl-media-img" loading="lazy">
+              <img src="assets/fl_card_profile_clean.webp?v=2" alt="Ultra-Slim Profile detail" class="fl-media-img" loading="lazy">
             </div>
             <div class="fl-card-body">
               <h4 class="fl-card-title">Ultra-Slim Profile</h4>
@@ -2047,9 +2042,9 @@
           </a>
 
           <!-- Card 3: Shock-Absorbing Bumper -->
-          <a href="#combo-deals" class="fl-bottom-card" data-feature="bumper">
+          <a href="product.html?handle=bumper-case" class="fl-bottom-card" data-feature="bumper">
             <div class="fl-card-media">
-              <img src="assets/fl_card_bumper_clean.webp" alt="Shock-Absorbing Bumper detail" class="fl-media-img" loading="lazy">
+              <img src="assets/fl_card_bumper_clean.webp?v=2" alt="Shock-Absorbing Bumper detail" class="fl-media-img" loading="lazy">
             </div>
             <div class="fl-card-body">
               <h4 class="fl-card-title">Shock-Absorbing Bumper</h4>
@@ -2097,72 +2092,63 @@
           </p>
         </div>
 
-        <!-- Left Coded Feature Cards -->
+        <!-- Left Coded Feature / Category Jump Cards -->
         <div class="combo-cards-col combo-cards-left">
-          <!-- Card 1: Best Value Deal -->
-          <a href="combo.html" class="combo-card combo-feature-card combo-card-01" id="comboCardValue" data-combo-feature="value" aria-label="Best Value Deal: More for Less" style="text-decoration: none;">
+          <!-- Card 1: Phone Cases -->
+          <a href="#comboHomepageStudio" class="combo-card combo-feature-card combo-card-01" id="comboCardValue" data-combo-filter="mobile-cover" aria-label="Phone Cases: Click to pick cases" style="text-decoration: none;">
             <div class="combo-card-icon">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 15h2"></path>
-                <path d="M15 15l2 2a2 2 0 0 0 2.83 0l1.41-1.41a2 2 0 0 0 0-2.83l-3.5-3.5"></path>
-                <path d="M9 15l-2 2a2 2 0 0 1-2.83 0L2.76 15.59a2 2 0 0 1 0-2.83l3.5-3.5"></path>
-                <path d="M11 9L8 6a2 2 0 0 0-2.83 0L4 7.17a2 2 0 0 0 0 2.83L7 13"></path>
-                <path d="M13 9l3-3a2 2 0 0 1 2.83 0L20 7.17a2 2 0 0 1 0 2.83L17 13"></path>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="3" ry="3"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
               </svg>
             </div>
             <div class="combo-card-text">
-              <h3 class="combo-card-heading">Best<br>Value Deal</h3>
-              <p class="combo-card-caption">More for Less</p>
+              <h3 class="combo-card-heading">Phone<br>Cases</h3>
+              <p class="combo-card-caption">9 Trending Models ↓</p>
             </div>
           </a>
 
-          <!-- Card 2: Premium Quality -->
-          <a href="combo.html" class="combo-card combo-feature-card combo-card-02" id="comboCardQuality" data-combo-feature="quality" aria-label="Premium Quality: Built to Last" style="text-decoration: none;">
+          <!-- Card 2: Watch Bands -->
+          <a href="#comboHomepageStudio" class="combo-card combo-feature-card combo-card-02" id="comboCardQuality" data-combo-filter="watch-band" aria-label="Watch Bands: Click to pick bands" style="text-decoration: none;">
             <div class="combo-card-icon">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="6"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                <polygon points="12 5 13.5 7.5 16 8 14 10 14.5 12.5 12 11 9.5 12.5 10 10 8 8 10.5 7.5 12 5" fill="currentColor" stroke="none"></polygon>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="7"></circle>
+                <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path>
               </svg>
             </div>
             <div class="combo-card-text">
-              <h3 class="combo-card-heading">Premium<br>Quality</h3>
-              <p class="combo-card-caption">Built to Last</p>
+              <h3 class="combo-card-heading">Watch<br>Bands</h3>
+              <p class="combo-card-caption">13 Luxury Straps ↓</p>
             </div>
           </a>
         </div>
 
-        <!-- Right Coded Feature Cards -->
+        <!-- Right Coded Feature / Category Jump Cards -->
         <div class="combo-cards-col combo-cards-right">
-          <!-- Card 3: Limited Time Offer -->
-          <a href="combo.html" class="combo-card combo-feature-card combo-card-03" id="comboCardLimited" data-combo-feature="limited" aria-label="Limited Time Offer: Don't Miss Out" style="text-decoration: none;">
+          <!-- Card 3: Watch Covers -->
+          <a href="#comboHomepageStudio" class="combo-card combo-feature-card combo-card-03" id="comboCardLimited" data-combo-filter="watch-cover" aria-label="Watch Covers: Click to pick covers" style="text-decoration: none;">
             <div class="combo-card-icon">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="13" r="8"></circle>
-                <polyline points="12 9 12 13 14.5 15"></polyline>
-                <path d="M5 3L2 6"></path>
-                <path d="M19 3l3 3"></path>
-                <circle cx="15" cy="11.5" r="0.8" fill="currentColor"></circle>
-                <circle cx="9" cy="14.5" r="0.8" fill="currentColor"></circle>
-                <line x1="9" y1="16" x2="15" y2="10"></line>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
             <div class="combo-card-text">
-              <h3 class="combo-card-heading">Limited<br>Time Offer</h3>
-              <p class="combo-card-caption">Don't Miss Out</p>
+              <h3 class="combo-card-heading">Watch<br>Covers</h3>
+              <p class="combo-card-caption">5 Armored Bezels ↓</p>
             </div>
           </a>
 
-          <!-- Card 4: Trending Styles -->
-          <a href="combo.html" class="combo-card combo-feature-card combo-card-04" id="comboCardTrending" data-combo-feature="trending" aria-label="Trending Styles: Most Loved" style="text-decoration: none;">
+          <!-- Card 4: AirPods & Chargers -->
+          <a href="#comboHomepageStudio" class="combo-card combo-feature-card combo-card-04" id="comboCardTrending" data-combo-filter="charger-cover" aria-label="AirPods & Chargers: Click to pick accessories" style="text-decoration: none;">
             <div class="combo-card-icon">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
               </svg>
             </div>
             <div class="combo-card-text">
-              <h3 class="combo-card-heading">Trending<br>Styles</h3>
-              <p class="combo-card-caption">Most Loved</p>
+              <h3 class="combo-card-heading">AirPods &amp;<br>Chargers</h3>
+              <p class="combo-card-caption">10 Power &amp; Audio ↓</p>
             </div>
           </a>
         </div>
@@ -2174,16 +2160,95 @@
               <span class="combo-pill-subtitle">Grab Any 3 Accessories for</span>
               <span class="combo-pill-price-val">₹1199</span>
             </div>
-            <a href="combo.html" class="combo-pill-cta-btn" id="openComboBuilderBtn" aria-label="Open Custom 3-Piece Combo Studio" style="text-decoration: none;">
-              <span>BUILD YOUR COMBO</span>
+            <a href="#comboHomepageStudio" class="combo-pill-cta-btn" id="openComboBuilderBtn" aria-label="Scroll to combo accessories studio" style="text-decoration: none;">
+              <span>PICK YOUR 3 ITEMS BELOW ↓</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+                <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </a>
           </div>
         </div>
 
+      </div>
+
+      <!-- IN-PAGE LIVE COMBO ACCESSORIES STUDIO -->
+      <div class="combo-homepage-studio" id="comboHomepageStudio">
+        <!-- Studio Header -->
+        <div class="combo-studio-header">
+          <div class="combo-studio-eyebrow">
+            <span class="combo-studio-sparkle">★</span>
+            <span>CUSTOM 3-PIECE SUITE STUDIO</span>
+            <span class="combo-flat-pill">FLAT ₹1,199</span>
+          </div>
+          <h3 class="combo-studio-title">Select Any 3 Items Directly to Build Your Suite</h3>
+          <p class="combo-studio-sub">Pick any 3 products across iPhone covers, Apple Watch straps, protective covers, charging cables &amp; AirPods cases. Instant bundle savings applied at checkout.</p>
+        </div>
+
+        <!-- Category Filter Tabs Bar -->
+        <div class="combo-pills-row">
+          <div class="catalog-nav-bar" id="comboHomeCatTabs" role="tablist">
+            <button type="button" class="catalog-nav-pill active" data-category="all" role="tab" aria-selected="true">
+              <span>All Eligible</span>
+              <span class="catalog-pill-count" id="homeCountAll">37</span>
+            </button>
+            <button type="button" class="catalog-nav-pill" data-category="mobile-cover" role="tab" aria-selected="false">
+              <span>Phone Cases</span>
+              <span class="catalog-pill-count" id="homeCountCases">9</span>
+            </button>
+            <button type="button" class="catalog-nav-pill" data-category="watch-band" role="tab" aria-selected="false">
+              <span>Watch Bands</span>
+              <span class="catalog-pill-count" id="homeCountBands">13</span>
+            </button>
+            <button type="button" class="catalog-nav-pill" data-category="watch-cover" role="tab" aria-selected="false">
+              <span>Watch Covers</span>
+              <span class="catalog-pill-count" id="homeCountCovers">5</span>
+            </button>
+            <button type="button" class="catalog-nav-pill" data-category="charger-cover" role="tab" aria-selected="false">
+              <span>Charger Cases</span>
+              <span class="catalog-pill-count" id="homeCountChargers">6</span>
+            </button>
+            <button type="button" class="catalog-nav-pill" data-category="airpod-cover" role="tab" aria-selected="false">
+              <span>AirPod Cases</span>
+              <span class="catalog-pill-count" id="homeCountAirpods">4</span>
+            </button>
+          </div>
+          <a href="combo.html" class="combo-full-page-link" title="Open Full Screen Studio">
+            <span>Explore Full Dedicated Studio (37 Items)</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- The Live Dynamic Product Grid -->
+        <div class="catalog-products-grid" id="comboHomepageProductsGrid">
+          <!-- Populated dynamically by assets/combo_controller.js -->
+        </div>
+
+        <!-- In-Page Suite Action Dock / Sticky Bar -->
+        <div class="combo-homepage-bar" id="comboHomepageStickyBar">
+          <div class="combo-sticky-bar-inner">
+            <div class="combo-sticky-left">
+              <div class="combo-sticky-slots-status">
+                <span class="combo-slots-badge" id="comboHomeBadge">0 of 3 Selected</span>
+                <div class="combo-dots-indicator" id="comboHomeDots">
+                  <span class="combo-dot" data-dot="1"></span>
+                  <span class="combo-dot" data-dot="2"></span>
+                  <span class="combo-dot" data-dot="3"></span>
+                </div>
+              </div>
+              <div class="combo-sticky-pricing">
+                <span class="combo-price-bundle">₹1,199</span>
+                <span class="combo-price-mrp" id="comboHomeMrp">₹2,799</span>
+                <span class="combo-price-savings" id="comboHomeSave">Save ~60%</span>
+              </div>
+            </div>
+            <div class="combo-sticky-right">
+              <button type="button" class="combo-reset-link" id="comboHomeResetBtn" title="Clear selections">Reset</button>
+              <button type="button" class="combo-sticky-cta" id="comboHomeAddBtn" disabled>
+                <span class="combo-cta-text">Select 3 Items to Complete Suite (0/3)</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2264,67 +2329,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: TEMPERED GLASS BACK COVERS (From image copy 4.png) -->
 
-    <!-- ========================================================================= -->
-
-    <!-- SECTION: TEMPERED GLASS (Shopify: sections/tempered-glass.liquid)       -->
-
-    <!-- ========================================================================= -->
-
-    <section class="glass-section" id="glass-case" aria-label="3D Frameless Armor Architecture">
-      <div class="section-container">
-        <div class="glass-banner glass-demo-banner">
-          
-          <!-- Header: 3D Interactive Architecture Tag -->
-          <div class="glass-demo-header">
-            <span class="glass-demo-tag">
-              <span class="demo-live-dot" aria-hidden="true"></span>
-              3D Frameless Architecture
-            </span>
-          </div>
-
-          <!-- Color Switcher: Sierra Blue | Space Black | Deep Purple -->
-          <div class="showcase-color-switcher" id="showcaseColorSwitcher" role="radiogroup" aria-label="Select Phone & Cover Color">
-            <button type="button" class="color-swatch-btn active" data-color="blue" role="radio" aria-checked="true" aria-label="Sierra Blue">
-              <span class="swatch-dot swatch-blue"></span>
-              <span class="swatch-label">Sierra Blue</span>
-            </button>
-            <button type="button" class="color-swatch-btn" data-color="black" role="radio" aria-checked="false" aria-label="Space Black">
-              <span class="swatch-dot swatch-black"></span>
-              <span class="swatch-label">Space Black</span>
-            </button>
-            <button type="button" class="color-swatch-btn" data-color="purple" role="radio" aria-checked="false" aria-label="Deep Purple">
-              <span class="swatch-dot swatch-purple"></span>
-              <span class="swatch-label">Deep Purple</span>
-            </button>
-          </div>
-
-          <!-- Animation Stage: Real GPU-Accelerated 3D WebGL Canvas -->
-          <div class="glass-demo-stage-container">
-            <div class="glass-graphic-wrap webgl-stage-wrap" id="webglStageWrap">
-              <!-- Studio Lighting & Pedestal Shadow -->
-              <div class="stage-lighting-rig" aria-hidden="true">
-                <div class="stage-core-spotlight"></div>
-                <div class="stage-pedestal-platform">
-                  <div class="pedestal-disc-base"></div>
-                </div>
-              </div>
-
-              <!-- Real Three.js 3D WebGL Canvas -->
-              <canvas id="explodedCaseCanvas" class="exploded-case-canvas"></canvas>
-
-              <!-- Instant Lightweight Preload Fallback Poster (123KB WebP / PNG fallback) -->
-              <picture id="webglFallbackPoster" class="webgl-fallback-poster">
-                <source srcset="assets/blue_frameless_assembled.webp" type="image/webp">
-                <img src="assets/blue_frameless_assembled.webp" alt="3D Precision Bumper & Lens Armor View">
-              </picture>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
 
 
 
@@ -3591,6 +3596,6 @@
   <script src="assets/home_products.js"></script>
   <!-- Real 3D GPU-Accelerated Interactive Exploded & Assembled Showcase -->
   <script src="assets/three.min.js"></script>
-  <script src="webgl_exploded.js?v=20261025h"></script>
+  <script src="webgl_stage_ad.js?v=20261026e"></script>
 </body>
 </html>

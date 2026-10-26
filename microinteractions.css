@@ -1349,19 +1349,17 @@ body.app-sheet-open {
   border-radius: 18px !important;
 }
 
-/* 3. PRODUCT & BESTSELLER CARDS (Universal Across All Catalogs) */
+/* 3. PRODUCT & BESTSELLER CARDS (Universal Modern Matte Black & White Contrast) */
 .bestseller-prod-card,
 .bestseller-card,
 .product-card,
 .pdp-product-card,
 .search-product-card,
 .catalog-product-card {
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(20px) saturate(185%) contrast(102%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(185%) contrast(102%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.78) !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E5E7EB !important;
   border-radius: 20px !important;
-  box-shadow: 0 16px 36px -10px rgba(23, 21, 19, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
   transition: transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring), border-color 0.25s ease, background-color 0.25s ease !important;
 }
 
@@ -1371,16 +1369,16 @@ body.app-sheet-open {
 .pdp-product-card:hover,
 .search-product-card:hover,
 .catalog-product-card:hover {
-  background: rgba(255, 255, 255, 0.88) !important;
-  transform: translateY(-8px) scale(1.012) !important;
-  border-color: rgba(197, 160, 89, 0.48) !important;
-  box-shadow: 0 28px 56px -10px rgba(23, 21, 19, 0.12), 0 0 28px rgba(197, 160, 89, 0.22), inset 0 1px 1px #FFFFFF !important;
+  background: #FFFFFF !important;
+  transform: translateY(-7px) scale(1.01) !important;
+  border-color: #000000 !important;
+  box-shadow: 0 20px 42px -8px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
 }
 
 .bestseller-card-img-wrap {
   border-radius: 16px !important;
-  background: rgba(247, 245, 242, 0.6) !important;
-  border: 1px solid rgba(255, 255, 255, 0.55) !important;
+  background: #F4F4F6 !important;
+  border: 1px solid #E5E7EB !important;
 }
 
 /* 4. CATEGORY PILLS, FILTER CHIPS & DROPDOWNS */
@@ -1390,12 +1388,12 @@ body.app-sheet-open {
 .pdp-switch-pill,
 .category-pill,
 .luxury-sort-trigger {
-  background: rgba(255, 255, 255, 0.68) !important;
-  backdrop-filter: blur(16px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.82) !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E5E7EB !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
   border-radius: 999px !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
   transition: all 0.25s var(--ease-spring) !important;
 }
 
@@ -1404,57 +1402,74 @@ body.app-sheet-open {
 .catalog-nav-pill:hover,
 .pdp-switch-pill:hover,
 .luxury-sort-trigger:hover {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border-color: rgba(197, 160, 89, 0.45) !important;
+  background: #000000 !important;
+  border-color: #000000 !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 10px 24px rgba(197, 160, 89, 0.18), inset 0 1px 0 #FFFFFF !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
 }
 
 .cat-pill.active,
 .filter-pill.active,
 .catalog-nav-pill.active,
 .pdp-switch-pill.active {
-  background: #0A0A0A !important;
+  background: #000000 !important;
   color: #FFFFFF !important;
-  border-color: #0A0A0A !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+  border-color: #000000 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
 }
 
 .luxury-sort-menu {
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(28px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12), inset 0 1px 0 #FFFFFF !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #000000 !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16) !important;
   border-radius: 18px !important;
 }
 
-/* 5. HOMEPAGE BENTO & HERO GLASS DOCKS (index.html) */
+/* 5. HOMEPAGE BENTO & HERO MODERN MATTE CONTRAST */
 .hero-pagination-pill,
 .hero-cta-group .btn-circle-arrow,
-.bento-intro-card,
 .combo-card,
 .combo-bottom-pill-bar,
 .bento-card-footer {
-  background: rgba(255, 255, 255, 0.74) !important;
-  backdrop-filter: blur(22px) saturate(185%) contrast(102%) !important;
-  -webkit-backdrop-filter: blur(22px) saturate(185%) contrast(102%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 16px 40px -8px rgba(23, 21, 19, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95) !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E5E7EB !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
 }
 
 .bento-card {
-  border: 1px solid rgba(255, 255, 255, 0.6) !important;
-  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08) !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E5E7EB !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04) !important;
   border-radius: 24px !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+}
+
+.bento-card:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12), 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-7px) scale(1.008) !important;
 }
 
 .bento-card-btn {
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06), inset 0 1px 0 #FFFFFF !important;
+  background: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.bento-card:hover .bento-card-btn,
+.bento-card-btn:hover {
+  background: var(--color-accent, #FF5500) !important;
+  border-color: var(--color-accent, #FF5500) !important;
+  color: #FFFFFF !important;
+  transform: scale(1.15) translateX(3px) !important;
+  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.45) !important;
 }
 
 /* 6. PRODUCT DETAIL PAGE (PDP) LIQUID GLASS */

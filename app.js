@@ -921,23 +921,13 @@ document.addEventListener('DOMContentLoaded', () => {
         pill.classList.add('active');
         const colorName = pill.getAttribute('data-color');
         if (typeof showToast === 'function') {
-          const formatted = colorName === 'orange' ? 'Desert Terracotta Orange' : (colorName === 'black' ? 'Matte Obsidian Black' : 'Silver Frost Titanium');
+          const formatted = colorName === 'blue' ? 'Sierra Blue' : (colorName === 'black' ? 'Black' : 'Dark Red');
           showToast(`Selected Frameless Case: ${formatted}`, 'sparkle');
         }
       });
     });
   }
 
-  if (flStepItems.length > 0) {
-    flStepItems.forEach((step, idx) => {
-      step.style.cursor = 'pointer';
-      step.style.pointerEvents = 'auto';
-      step.addEventListener('click', () => {
-        flStepItems.forEach(s => s.classList.remove('active'));
-        step.classList.add('active');
-      });
-    });
-  }
 
 
 
