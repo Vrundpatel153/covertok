@@ -9898,6 +9898,20 @@ a.footer-contact-main:hover {
   position: relative;
 }
 
+@media (min-width: 1081px) {
+  .popular-choices-header {
+    padding: 0 180px;
+  }
+
+  .popular-header-action {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0 !important;
+  }
+}
+
 .popular-eyebrow-wrap {
   display: inline-flex;
   align-items: center;
@@ -9956,16 +9970,20 @@ a.footer-contact-main:hover {
   margin: 10px 0 0 0;
 }
 
-/* View All Products Pill */
+/* Header Action & View All Products Pill */
+.popular-header-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+}
+
 .popular-view-all-btn {
-  position: absolute;
-  top: 10px;
-  right: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 10px 24px;
+  padding: 11px 26px;
   border-radius: 999px;
   background: #000000;
   border: 1.5px solid #000000;
@@ -9976,7 +9994,11 @@ a.footer-contact-main:hover {
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 10;
+  white-space: nowrap;
+}
+
+.popular-view-all-btn svg {
+  transition: transform 0.25s ease;
 }
 
 .popular-view-all-btn:hover {
@@ -9985,6 +10007,14 @@ a.footer-contact-main:hover {
   color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(255, 85, 0, 0.4);
+}
+
+.popular-view-all-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.popular-view-all-btn:active {
+  transform: translateY(0) scale(0.97);
 }
 
 /* Dual Showcase Rows */
@@ -10473,6 +10503,17 @@ a.footer-contact-main:hover {
    RESPONSIVE BREAKPOINTS FOR POPULAR CHOICES
    ========================================== */
 @media (max-width: 1080px) {
+  .popular-choices-header {
+    margin-bottom: 38px;
+    padding: 0;
+  }
+
+  .popular-header-action {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
   .popular-showcase-row {
     flex-direction: column;
     gap: 20px;
@@ -10480,6 +10521,7 @@ a.footer-contact-main:hover {
 
   .popular-feature-card {
     max-width: 100%;
+    width: 100%;
     flex: 0 0 340px;
     height: 340px;
   }
@@ -10505,19 +10547,80 @@ a.footer-contact-main:hover {
     padding: 0 16px;
   }
 
+  .popular-choices-header {
+    margin-bottom: 34px;
+    padding: 0;
+  }
+
+  .popular-eyebrow-line {
+    width: 32px;
+  }
+
+  .popular-eyebrow-text {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .popular-main-title {
+    font-size: clamp(1.85rem, 7vw, 2.4rem);
+  }
+
+  .popular-subtitle {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    padding: 0 8px;
+  }
+
+  .popular-header-action {
+    margin-top: 18px;
+  }
+
   .popular-view-all-btn {
-    position: static;
-    margin: 16px auto 0;
-    display: inline-flex;
+    padding: 10px 24px;
+    font-size: 0.82rem;
   }
 
   .popular-feature-card {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 300px;
     height: 300px;
     border-radius: 20px;
   }
 
+  .pop-card-top-bar {
+    top: 22px;
+    left: 22px;
+    right: 22px;
+  }
+
+  .pop-card-content {
+    top: 58px;
+    left: 22px;
+    max-width: calc(100% - 44px);
+  }
+
   .pop-card-title {
-    font-size: 28px !important;
+    font-size: 26px !important;
+    margin-bottom: 6px;
+  }
+
+  .pop-card-desc {
+    font-size: 13.5px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .popular-swatches-wrap {
+    left: 22px;
+    bottom: 22px;
+  }
+
+  .popular-cart-btn {
+    right: 22px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
   }
 
   .popular-slider-wrap {
