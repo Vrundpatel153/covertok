@@ -623,9 +623,23 @@ img {
   font-weight: 800;
   color: #0A0A0A;
   margin-top: 4px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.mega-showcase-cta .mega-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.mega-showcase-card:hover .mega-showcase-cta .mega-cta-arrow,
+.mega-showcase-item:hover .mega-showcase-cta .mega-cta-arrow,
+.mega-showcase-box:hover .mega-showcase-cta .mega-cta-arrow {
+  transform: translateX(4px);
 }
 
 
@@ -3353,9 +3367,16 @@ img {
 
 .footer-nav-link .nav-arrow {
   color: #6C6761;
-  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
   transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-nav-link .nav-arrow svg {
+  display: block;
+  transition: stroke 0.2s ease;
 }
 
 .footer-nav-link:hover {

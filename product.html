@@ -153,7 +153,7 @@
                     <div class="mega-showcase-body">
                       <span class="mega-showcase-tag">TRENDING COVERS</span>
                       <strong class="mega-showcase-title">Explore 75+ Luxury Armor Cases</strong>
-                      <span class="mega-showcase-cta">Shop All &rarr;</span>
+                      <span class="mega-showcase-cta">Shop All <span class="mega-cta-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></span>
                     </div>
                   </a>
                 </div>
@@ -249,18 +249,27 @@
   </div>
 
   <!-- 2.5 COMBO BUILDER CONTEXT BAR -->
-  <aside class="combo-pdp-sticky-bar" id="comboPdpStickyBar" style="display: none; background: #0E1013; border-bottom: 1.5px solid rgba(197, 160, 89, 0.4); padding: 10px 24px; position: sticky; top: 0; z-index: 999; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <span style="background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.45); font-family: 'Outfit', sans-serif; font-size: 0.72rem; font-weight: 900; padding: 2px 8px; border-radius: 999px; text-transform: uppercase;">3-Piece Combo</span>
-        <span style="font-size: 0.85rem; color: #E2E8F0; font-weight: 600;" id="comboPdpBannerText">Your custom bundle is in progress (0/3 selected)</span>
+  <aside class="combo-pdp-sticky-bar" id="comboPdpStickyBar" style="display: none;">
+    <div class="combo-pdp-sticky-inner">
+      <div class="combo-pdp-sticky-left">
+        <span class="combo-pdp-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          3-Piece Combo Studio
+        </span>
+        <span class="combo-pdp-banner-text" id="comboPdpBannerText">Your custom bundle is in progress (0/3 selected)</span>
       </div>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <button type="button" id="pdpAddThisToComboBtn" style="display: none; background: #0A0A0A; border: 1.5px solid rgba(197, 160, 89, 0.45); color: #FFFFFF; font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 999px; cursor: pointer; transition: all 0.2s;">
-          + Add to 3-Piece Combo
+      <div class="combo-pdp-sticky-right">
+        <button type="button" id="pdpAddThisToComboBtn" class="combo-pdp-add-top-btn" style="display: none;">
+          + Add to Combo
         </button>
-        <a href="combo.html" style="color: #FFFFFF; font-size: 0.85rem; font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 5px;">
-          <span>&larr; Return to Combo Studio</span>
+        <a href="combo.html" class="combo-return-pill-btn" aria-label="Return to Combo Studio">
+          <span class="combo-return-arrow-circle">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </span>
+          <span class="combo-return-label">Return to Combo Studio</span>
         </a>
       </div>
     </div>
@@ -882,13 +891,13 @@
         <div class="footer-col col-collections">
           <h4 class="footer-col-heading">SHOP COLLECTIONS</h4>
           <ul class="footer-nav-list">
-            <li class="footer-nav-item"><a href="collections.html" class="footer-nav-link"><span>All Collections</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="collections.html?cat=iphone-cases" class="footer-nav-link"><span>iPhone Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="collections.html?cat=airpod-covers" class="footer-nav-link"><span>AirPod Covers</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="collections.html?cat=iwatch-bands" class="footer-nav-link"><span>iWatch Bands</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="collections.html?cat=cables-chargers" class="footer-nav-link"><span>Charger Cases & Cables</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="collections.html?cat=power-accessories" class="footer-nav-link"><span>Other Accessories & Power</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="search.html" class="footer-nav-link"><span>Search Products</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="collections.html" class="footer-nav-link"><span>All Collections</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=iphone-cases" class="footer-nav-link"><span>iPhone Covers</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=airpod-covers" class="footer-nav-link"><span>AirPod Covers</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=iwatch-bands" class="footer-nav-link"><span>iWatch Bands</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=cables-chargers" class="footer-nav-link"><span>Charger Cases & Cables</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="collections.html?cat=power-accessories" class="footer-nav-link"><span>Other Accessories & Power</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="search.html" class="footer-nav-link"><span>Search Products</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
           </ul>
         </div>
 
@@ -896,12 +905,12 @@
         <div class="footer-col col-policies">
           <h4 class="footer-col-heading">POLICIES & INFO</h4>
           <ul class="footer-nav-list">
-            <li class="footer-nav-item"><a href="about.html" class="footer-nav-link"><span>About Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link"><span>Contact Us</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="privacy-policy.html" class="footer-nav-link"><span>Privacy Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="refund-policy.html" class="footer-nav-link"><span>Refund Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="shipping-policy.html" class="footer-nav-link"><span>Shipping Policy</span><span class="nav-arrow">&rsaquo;</span></a></li>
-            <li class="footer-nav-item"><a href="terms-of-service.html" class="footer-nav-link"><span>Terms of Service</span><span class="nav-arrow">&rsaquo;</span></a></li>
+            <li class="footer-nav-item"><a href="about.html" class="footer-nav-link"><span>About Us</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link"><span>Contact Us</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="privacy-policy.html" class="footer-nav-link"><span>Privacy Policy</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="refund-policy.html" class="footer-nav-link"><span>Refund Policy</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="shipping-policy.html" class="footer-nav-link"><span>Shipping Policy</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
+            <li class="footer-nav-item"><a href="terms-of-service.html" class="footer-nav-link"><span>Terms of Service</span><span class="nav-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></li>
           </ul>
         </div>
 
@@ -968,7 +977,9 @@
 
           <!-- Center: Back to Top Pill Button -->
           <button type="button" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to top of page">
-            <span class="top-arrow-circle" aria-hidden="true">&uarr;</span>
+            <span class="top-arrow-circle" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </span>
             <span>BACK TO TOP</span>
           </button>
 
