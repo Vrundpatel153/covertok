@@ -10,13 +10,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBackdrop = document.getElementById('storyModalBackdrop');
   const modalPlayer = document.getElementById('storyModalPlayer');
 
-  // Attempt smooth background video playback
+  // Attempt smooth background video playback with IntersectionObserver
   if (storyBgVideo) {
-    const playPromise = storyBgVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay policy fallback: muted autoplay is supported by modern browsers
-      });
+    storyBgVideo.muted = true;
+    storyBgVideo.playsInline = true;
+    const tryPlay = () => {
+      const playPromise = storyBgVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {});
+      }
+    };
+    tryPlay();
+
+    if ('IntersectionObserver' in window) {
+      const banner = document.getElementById('storyVideoBanner');
+      if (banner) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              tryPlay();
+            } else if (!storyModal || !storyModal.classList.contains('active')) {
+              storyBgVideo.pause();
+            }
+          });
+        }, { threshold: 0.1 });
+        observer.observe(banner);
+      }
     }
   }
 

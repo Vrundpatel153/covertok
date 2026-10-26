@@ -10751,14 +10751,11 @@ a.footer-contact-main:hover {
   transform: scale(1.05);
 }
 
-/* Cinematic Dark Vignette Scrim Overlay */
+/* Cinematic Light Scrim Overlay - Keeps center video crystal clear & vivid */
 .story-banner-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, rgba(11, 12, 16, 0.54) 0%, rgba(9, 10, 13, 0.82) 100%),
-              linear-gradient(180deg, rgba(8, 9, 12, 0.3) 0%, rgba(8, 9, 12, 0.62) 100%);
-  backdrop-filter: blur(0.5px);
-  -webkit-backdrop-filter: blur(0.5px);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.04) 40%, rgba(0, 0, 0, 0.68) 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -10768,8 +10765,8 @@ a.footer-contact-main:hover {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 800px;
-  padding: 60px 32px;
+  max-width: 760px;
+  padding: 50px 28px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -10783,48 +10780,48 @@ a.footer-contact-main:hover {
 .story-eyebrow-pill {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 18px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 100px;
+  gap: 8px;
+  padding: 5px 14px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  margin-bottom: 22px;
+  margin-bottom: 16px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .story-eyebrow-pill:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.38);
 }
 
 .story-eyebrow-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #E5A87B;
-  box-shadow: 0 0 10px rgba(229, 168, 123, 0.85);
+  box-shadow: 0 0 8px rgba(229, 168, 123, 0.85);
 }
 
 .story-eyebrow-text {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #F2C7A5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: #FAD6B8;
   text-transform: uppercase;
 }
 
 /* Main Hero Heading in Video Center */
 .story-hero-title {
   font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
-  font-size: clamp(34px, 4.6vw, 56px);
-  font-weight: 800;
+  font-size: clamp(30px, 4.2vw, 52px);
+  font-weight: 900;
   line-height: 1.14;
   letter-spacing: -0.025em;
   color: #FFFFFF;
-  margin: 0 0 18px 0;
+  margin: 0 0 12px 0;
   padding: 0;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
 }
@@ -10838,13 +10835,13 @@ a.footer-contact-main:hover {
 
 /* Narrative Body Text */
 .story-hero-desc {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(15px, 1.6vw, 17.5px);
-  font-weight: 400;
-  line-height: 1.68;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 630px;
-  margin: 0 auto 34px auto;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 520px;
+  margin: 0 auto 26px auto;
   padding: 0;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
 }
@@ -10854,67 +10851,78 @@ a.footer-contact-main:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-/* Primary Button: Exact match to user reference image */
+/* Primary Button: Luxury Pill */
 .story-btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 34px;
-  background-color: #000000;
-  color: #FFFFFF;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13.5px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: #FFFFFF;
+  color: #0A0A0A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 999px;
+  border: 1.5px solid #FFFFFF;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.story-btn-primary svg {
+  transition: transform 0.25s ease;
 }
 
 .story-btn-primary:hover {
-  background-color: #FFFFFF;
-  color: #000000;
-  border-color: #FFFFFF;
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.35);
+  background-color: var(--color-accent, #FF5500);
+  border-color: var(--color-accent, #FF5500);
+  color: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(255, 85, 0, 0.45);
 }
 
-/* Secondary Button: Watch Film with Frosted Glass */
+.story-btn-primary:hover svg {
+  transform: translateX(3px);
+}
+
+/* Secondary Button: Watch Film Frosted Glass Pill */
 .story-btn-watch {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
-  background: rgba(255, 255, 255, 0.1);
+  gap: 8px;
+  padding: 12px 26px;
+  background: rgba(255, 255, 255, 0.16);
   color: #FFFFFF;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .story-btn-watch:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.28);
+  border-color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4);
 }
 
 .story-watch-icon {
@@ -11038,52 +11046,75 @@ a.footer-contact-main:hover {
 
 @media (max-width: 768px) {
   .story-container {
-    padding: 24px 14px;
+    padding: 20px 12px;
   }
 
   .story-video-banner {
-    min-height: 400px;
-    border-radius: 18px;
+    min-height: 460px;
+    border-radius: 20px;
   }
 
   .story-center-content {
-    padding: 36px 16px;
+    padding: 24px 14px;
+    max-width: 380px;
   }
 
   .story-eyebrow-pill {
-    padding: 5px 14px;
-    margin-bottom: 14px;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+    gap: 6px;
+  }
+
+  .story-eyebrow-dot {
+    width: 5px;
+    height: 5px;
   }
 
   .story-eyebrow-text {
-    font-size: 10.5px;
+    font-size: 9.5px;
     letter-spacing: 2px;
   }
 
   .story-hero-title {
-    font-size: 28px;
-    line-height: 1.16;
-    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 1.15;
+    margin-bottom: 8px;
   }
 
   .story-hero-desc {
-    font-size: 13.5px;
-    line-height: 1.55;
-    margin-bottom: 24px;
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 20px;
+    max-width: 280px;
+    opacity: 0.92;
   }
 
   .story-actions-group {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     width: 100%;
-    gap: 12px;
   }
 
-  .story-btn-primary,
+  .story-btn-primary {
+    width: auto;
+    padding: 8px 16px;
+    font-size: 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+    gap: 6px;
+  }
+
   .story-btn-watch {
-    width: 100%;
-    max-width: 290px;
-    padding: 12px 20px;
-    font-size: 12px;
+    width: auto;
+    padding: 8px 14px;
+    font-size: 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+    gap: 6px;
   }
 }
 
