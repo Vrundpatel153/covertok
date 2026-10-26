@@ -543,6 +543,8 @@
 
 /* 5. LUXURY CATALOG TOOLBAR (Search Capsule + Unified Utility Strip) */
 .catalog-toolbar {
+  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -678,6 +680,11 @@
   position: relative;
   display: inline-block;
   user-select: none;
+  z-index: 120;
+}
+
+.luxury-sort-dropdown.open {
+  z-index: 1000;
 }
 
 .luxury-sort-trigger {
@@ -741,7 +748,7 @@
   border-radius: 14px;
   padding: 6px;
   box-shadow: 0 14px 34px rgba(23, 21, 19, 0.14), 0 3px 10px rgba(0, 0, 0, 0.04);
-  z-index: 1000;
+  z-index: 1005;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px) scale(0.97);

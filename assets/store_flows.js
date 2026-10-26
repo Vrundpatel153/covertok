@@ -159,15 +159,52 @@
     // Free Shipping Progress
     const progressFill = document.getElementById('cartProgressFill');
     const progressMsg = document.getElementById('cartProgressMsg');
+    const shippingBar = progressMsg ? progressMsg.closest('.cart-free-shipping-bar') : null;
     if (progressFill && progressMsg) {
       if (subtotal >= FREE_SHIPPING_THRESHOLD) {
+        if (shippingBar) shippingBar.classList.add('is-unlocked');
         progressFill.style.width = '100%';
-        progressMsg.innerHTML = '<svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>You unlocked <strong>FREE Express Air Shipping</strong>!';
+        progressMsg.innerHTML = `
+          <div class="cart-shipping-status-wrap">
+            <div class="cart-shipping-badge is-unlocked">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <div class="cart-shipping-ping"></div>
+            </div>
+            <div class="cart-shipping-text-group">
+              <div class="cart-shipping-kicker is-unlocked">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#059669"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>COMPLIMENTARY PRIVILEGE UNLOCKED</span>
+              </div>
+              <div class="cart-shipping-headline is-unlocked">
+                You unlocked <strong>FREE Express Air Shipping</strong>!
+              </div>
+            </div>
+          </div>
+        `;
       } else {
+        if (shippingBar) shippingBar.classList.remove('is-unlocked');
         const remaining = FREE_SHIPPING_THRESHOLD - subtotal;
         const pct = Math.min(100, Math.round((subtotal / FREE_SHIPPING_THRESHOLD) * 100));
         progressFill.style.width = `${pct}%`;
-        progressMsg.innerHTML = `Add <strong>Rs. ${remaining.toLocaleString('en-IN')}.00</strong> more to unlock <strong>FREE Express Shipping</strong>!`;
+        progressMsg.innerHTML = `
+          <div class="cart-shipping-status-wrap">
+            <div class="cart-shipping-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A17A28" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/>
+              </svg>
+            </div>
+            <div class="cart-shipping-text-group">
+              <div class="cart-shipping-kicker">
+                <span>EXPRESS DISPATCH PRIVILEGE</span>
+              </div>
+              <div class="cart-shipping-headline">
+                Add <span class="shipping-accent-amt">Rs. ${remaining.toLocaleString('en-IN')}.00</span> more to unlock <strong>FREE Express Shipping</strong>!
+              </div>
+            </div>
+          </div>
+        `;
       }
     }
 

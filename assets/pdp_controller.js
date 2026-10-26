@@ -88,7 +88,7 @@
       if (found) return found;
     }
 
-    return window.CovertokProducts.find(p => String(p.id) === '9888955924778') || window.CovertokProducts[0];
+    return window.CovertokProducts[0] || null;
   }
 
   // Top Lineup Quick Switcher Bar
@@ -1253,12 +1253,8 @@
   // Setup Add To Cart & Sticky Actions
   function setupCartActions() {
     function performAdd() {
-      const prod = currentProduct || (window.CovertokProducts ? (window.CovertokProducts.find(p => String(p.id) === '9888955924778') || window.CovertokProducts[0]) : null) || {
-        id: '9888955924778',
-        title: 'Magnetic Wireless Power Bank',
-        price: 2099,
-        primary_image: 'assets/products/9888955924778/1_50035509362986.webp'
-      };
+      const prod = currentProduct || (window.CovertokProducts ? window.CovertokProducts[0] : null);
+      if (!prod) return;
 
       const basePrice = selectedCapacityPrice || ((selectedColor && selectedColor.price) ? selectedColor.price : prod.price);
       const addonsSum = (selectedAddons || []).reduce((s, a) => s + a.price, 0);

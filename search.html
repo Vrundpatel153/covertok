@@ -162,6 +162,8 @@
 
     /* Row 2: Controls Bar - Left Action/Status | Right Sort */
     .discovery-controls-bar {
+      position: relative;
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -245,6 +247,11 @@
       position: relative !important;
       display: inline-block !important;
       user-select: none !important;
+      z-index: 120 !important;
+    }
+
+    .luxury-sort-dropdown.open {
+      z-index: 1000 !important;
     }
 
     .luxury-sort-trigger {
@@ -305,7 +312,7 @@
       border-radius: 14px !important;
       padding: 6px !important;
       box-shadow: 0 14px 34px rgba(23, 21, 19, 0.14), 0 3px 10px rgba(0, 0, 0, 0.04) !important;
-      z-index: 100 !important;
+      z-index: 1005 !important;
       opacity: 0 !important;
       visibility: hidden !important;
       transform: translateY(-6px) scale(0.97) !important;

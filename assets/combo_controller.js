@@ -93,8 +93,9 @@
   }
 
   function getSlotOfProduct(productId) {
+    const sId = String(productId);
     for (const slotNum of [1, 2, 3]) {
-      if (state.slots[slotNum] && state.slots[slotNum].id === productId) {
+      if (state.slots[slotNum] && String(state.slots[slotNum].id) === sId) {
         return slotNum;
       }
     }
@@ -119,6 +120,8 @@
     const gridEl = document.getElementById('comboHomepageProductsGrid');
     if (!gridEl || gridEl.getAttribute('data-combo-init')) return;
     gridEl.setAttribute('data-combo-init', 'true');
+
+    state.slots = loadSavedSlots();
 
     const rawCatalog = window.CovertokProducts || [];
     
@@ -370,9 +373,9 @@
           <span class="combo-checkbox-text">${isSelected ? `<span class="combo-slot-full">Item ${selectedSlot} of 3</span><span class="combo-slot-short">Item ${selectedSlot}</span>` : '+ Select'}</span>
         </button>
 
-        <div class="card-img-wrap">
+        <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-img-wrap card-img-link" aria-label="${product.title}">
           <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="homeCardImg_${product.id}" loading="lazy">
-        </div>
+        </a>
 
         ${swatchesHtml}
       </div>
@@ -386,7 +389,7 @@
           </span>
         </div>
 
-        <a href="product.html?handle=${product.handle || product.id}" class="card-product-title" title="${product.title}">
+        <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-product-title" title="${product.title}">
           ${product.title}
         </a>
 
@@ -397,17 +400,11 @@
       </div>
     `;
 
-    // Tap anywhere on card to toggle selection (except links & swatches)
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('a') || e.target.closest('.card-color-dot')) {
-        return;
-      }
-      window.toggleHomeComboProduct(product.id);
-    });
-
+    // Checkbox button explicit click handler (ONLY this selects / unselects item)
     const checkboxBtn = card.querySelector('.combo-card-checkbox');
     if (checkboxBtn) {
       checkboxBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         window.toggleHomeComboProduct(product.id);
       });
@@ -588,5 +585,28 @@
       });
     }
   }
+
+  function syncHomeComboUI() {
+    state.slots = loadSavedSlots();
+    renderStickyBarUI();
+    updateAllCardsCheckboxUI();
+  }
+
+  // Restore saved selections when returning from PDP via back button, BFCache, or storage update
+  window.addEventListener('pageshow', () => {
+    syncHomeComboUI();
+  });
+
+  window.addEventListener('storage', (e) => {
+    if (e.key === STORAGE_KEY) {
+      syncHomeComboUI();
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      syncHomeComboUI();
+    }
+  });
 
 })();

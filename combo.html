@@ -21,6 +21,8 @@
        Professional 2-Row Luxury Combo Discovery Header
        ========================================================================== */
     .combo-discovery-header {
+      position: relative;
+      z-index: 100;
       background: #FFFFFF;
       border-bottom: 1px solid #EFEAE2;
       padding: 16px 0 14px;
@@ -212,6 +214,8 @@
 
     /* Row 2: Left (Category Switcher Pills Track) | Right (Sort Dropdown) */
     .combo-row-secondary {
+      position: relative;
+      z-index: 105;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -295,6 +299,8 @@
       display: flex !important;
       align-items: center !important;
       gap: 8px !important;
+      position: relative !important;
+      z-index: 110 !important;
     }
 
     .catalog-sort-label {
@@ -309,6 +315,11 @@
       position: relative !important;
       display: inline-block !important;
       user-select: none !important;
+      z-index: 120 !important;
+    }
+
+    .luxury-sort-dropdown.open {
+      z-index: 1000 !important;
     }
 
     .luxury-sort-trigger {
@@ -369,7 +380,7 @@
       border-radius: 14px !important;
       padding: 6px !important;
       box-shadow: 0 14px 34px rgba(23, 21, 19, 0.14), 0 3px 10px rgba(0, 0, 0, 0.04) !important;
-      z-index: 100 !important;
+      z-index: 1005 !important;
       opacity: 0 !important;
       visibility: hidden !important;
       transform: translateY(-6px) scale(0.97) !important;
@@ -761,7 +772,7 @@
     </header>
 
     <!-- Products Grid Section: Starts Immediately Here -->
-    <section class="section-container" style="padding-top: 6px; padding-bottom: 96px;">
+    <section class="section-container" style="padding-top: 6px; padding-bottom: 96px; position: relative; z-index: 1;">
       <div class="catalog-products-grid" id="comboProductsGrid">
         <!-- Rendered dynamically by combo_page_controller.js -->
       </div>

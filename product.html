@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/10000 mAh | Covertok Official</title>
-  <meta name="description" content="Shop the Magnetic Wireless Power Bank at Covertok. Ultra-sleek 5000mAh/10000mAh, strong magnetic hold, digital LED display, and fast charging output.">
+  <title>Covertok Official Store</title>
+  <meta name="description" content="Shop premium mobile cases, watch bands, and lifestyle tech accessories at Covertok.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,8 +71,8 @@
             if (found) return found;
           }
 
-          // Fallback
-          return window.CovertokProducts.find(function(p) { return String(p.id) === '9888955924778'; }) || window.CovertokProducts[0];
+          // Fallback to first product in catalog
+          return window.CovertokProducts[0] || null;
         }
 
         var p = resolveProduct();
@@ -273,7 +273,7 @@
       <span>/</span>
       <a href="collections.html">Products</a>
       <span>/</span>
-      <span class="active" id="breadcrumbTitle">Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/10000 mAh</span>
+      <span class="active" id="breadcrumbTitle"></span>
     </nav>
   </div>
 
@@ -290,7 +290,7 @@
 
             <!-- Main Showcase Stage -->
             <div class="pdp-main-stage" id="pdpMainStage">
-              <img id="pdpMainImg" src="assets/products/9888955924778/2_50035509330218.webp" alt="Magnetic Wireless Power Bank" class="pdp-main-img">
+              <img id="pdpMainImg" src="" alt="Product Image" class="pdp-main-img" style="background: #F8F6F2;">
               
               <!-- Zoom Button (Circle with magnifying glass) -->
               <button type="button" class="pdp-zoom-btn" id="pdpZoomBtn" aria-label="Zoom image" title="Zoom">
@@ -313,8 +313,8 @@
           </div>
 
           <!-- Product Title & Subtitle -->
-          <h1 class="pdp-product-title" id="pdpProductTitle">Magnetic Wireless Power Bank</h1>
-          <h2 class="pdp-product-subtitle" id="pdpProductSubtitle">Ultra Sleek 5000mAh/10000 mAh</h2>
+          <h1 class="pdp-product-title" id="pdpProductTitle"></h1>
+          <h2 class="pdp-product-subtitle" id="pdpProductSubtitle" style="display: none;"></h2>
 
           <!-- Rating & Verified Choice Badge -->
           <div class="pdp-rating-row">
@@ -332,15 +332,15 @@
           <!-- Price Block (Kept at top right below rating & title) -->
           <div class="pdp-price-card">
             <div class="pdp-price-row">
-              <span class="pdp-price-current" id="pdpPriceDisplay">₹2,099</span>
-              <span class="pdp-price-original" id="pdpOriginalPrice">₹3,249</span>
-              <span class="pdp-save-badge" id="pdpDiscountTag">Save ₹1,150 (35% OFF)</span>
+              <span class="pdp-price-current" id="pdpPriceDisplay"></span>
+              <span class="pdp-price-original" id="pdpOriginalPrice"></span>
+              <span class="pdp-save-badge" id="pdpDiscountTag" style="display: none;"></span>
             </div>
             <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
           </div>
 
-          <!-- Capacity Selector -->
-          <div class="pdp-option-group" id="capacityGroup">
+          <!-- Capacity Selector (Hidden by default, shown ONLY for Power Bank) -->
+          <div class="pdp-option-group" id="capacityGroup" style="display: none;">
             <div class="pdp-option-header">
               <span class="pdp-option-title">Capacity</span>
             </div>
@@ -367,22 +367,12 @@
             </div>
           </div>
 
-          <!-- Color Swatches -->
-          <div class="pdp-option-group" id="colorGroup">
+          <!-- Color Swatches (Populated dynamically) -->
+          <div class="pdp-option-group" id="colorGroup" style="display: none;">
             <div class="pdp-option-header">
-              <span class="pdp-option-title">Color: <strong id="selectedColorLabel">Black</strong></span>
+              <span class="pdp-option-title">Color: <strong id="selectedColorLabel"></strong></span>
             </div>
-            <div class="pdp-color-swatches" id="colorSwatchesGrid">
-              <button type="button" class="pdp-color-swatch active" data-color="Black" data-img="assets/products/9888955924778/1_50035509362986.webp" title="Black" aria-label="Black">
-                <span class="swatch-circle" style="background: #18181B;"></span>
-              </button>
-              <button type="button" class="pdp-color-swatch" data-color="Rose Gold" data-img="assets/products/9888955924778/3_50035509297450.webp" title="Rose Gold" aria-label="Rose Gold">
-                <span class="swatch-circle" style="background: #F8B5C4;"></span>
-              </button>
-              <button type="button" class="pdp-color-swatch" data-color="Grey" data-img="assets/products/9888955924778/4_50035509264682.webp" title="Grey" aria-label="Grey">
-                <span class="swatch-circle" style="background: #9CA3AF;"></span>
-              </button>
-            </div>
+            <div class="pdp-color-swatches" id="colorSwatchesGrid"></div>
           </div>
 
           <!-- Actions CTA Row: Qty Stepper, Add to Cart, Buy It Now -->
@@ -450,6 +440,71 @@
 
         </div>
       </div>
+      <!-- Instant Synchronous Hydration: Renders current product before first paint -->
+      <script>
+        (function() {
+          try {
+            var p = window.__PDP_INITIAL_PRODUCT__;
+            if (!p) return;
+            var b = document.getElementById('breadcrumbTitle'); if (b) b.textContent = p.title;
+            var t = document.getElementById('pdpProductTitle'); if (t) t.textContent = p.title;
+            var s = document.getElementById('pdpProductSubtitle'); if (s) {
+              if (String(p.id) === '9888955924778') {
+                s.textContent = 'Ultra Sleek 5000mAh/10000 mAh';
+                s.style.display = 'block';
+              } else if (p.category_name) {
+                s.textContent = p.category_name;
+                s.style.display = 'block';
+              } else {
+                s.style.display = 'none';
+              }
+            }
+            var brandTag = document.getElementById('pdpBrandTag'); if (brandTag) {
+              brandTag.textContent = (String(p.id) === '9888955924778')
+                ? 'COVERTOK ORIGINAL'
+                : ((p.category_name || 'COVERTOK').toUpperCase() + ' · COVERTOK ORIGINAL');
+            }
+            var pr = document.getElementById('pdpPriceDisplay'); if (pr) pr.textContent = p.price_formatted || ('₹' + (p.price || 0).toLocaleString('en-IN'));
+            var op = document.getElementById('pdpOriginalPrice'); if (op) {
+              if (p.original_price && p.original_price > p.price) {
+                op.textContent = p.original_price_formatted || ('₹' + p.original_price.toLocaleString('en-IN'));
+                op.style.display = 'inline';
+              } else {
+                op.style.display = 'none';
+              }
+            }
+            var dt = document.getElementById('pdpDiscountTag'); if (dt) {
+              var disc = p.discount_percent || (p.original_price && p.original_price > p.price ? Math.round(((p.original_price - p.price) / p.original_price) * 100) : 0);
+              if (disc > 0) {
+                var saveAmt = p.original_price ? (p.original_price - p.price) : 0;
+                dt.textContent = saveAmt > 0 ? ('Save ₹' + saveAmt.toLocaleString('en-IN') + ' (' + disc + '% OFF)') : (disc + '% OFF');
+                dt.style.display = 'inline-block';
+              } else {
+                dt.style.display = 'none';
+              }
+            }
+            var img = document.getElementById('pdpMainImg'); if (img) {
+              var initialImg = (p.colors && p.colors[0] && (p.colors[0].image || (p.colors[0].images && p.colors[0].images[0]))) || p.primary_image || (p.images && p.images[0]) || '';
+              if (initialImg) {
+                img.src = initialImg;
+                img.alt = p.title;
+              }
+            }
+            var cap = document.getElementById('capacityGroup'); if (cap) {
+              cap.style.display = String(p.id) === '9888955924778' ? 'block' : 'none';
+            }
+            var mod = document.getElementById('modelGroup'); if (mod) {
+              mod.style.display = (p.category === 'cases' || p.category === 'watch-bands' || (p.models && p.models.length)) ? 'block' : 'none';
+            }
+            var col = document.getElementById('colorGroup'); if (col) {
+              col.style.display = (p.colors && p.colors.length > 0) ? 'block' : 'none';
+            }
+            var sticky = document.getElementById('stickyTitle'); if (sticky) sticky.textContent = p.title;
+            var stickyThumb = document.getElementById('stickyThumb'); if (stickyThumb && initialImg) stickyThumb.src = initialImg;
+            var stickyPrice = document.getElementById('stickyPrice'); if (stickyPrice) stickyPrice.textContent = p.price_formatted || ('Rs. ' + (p.price || 0).toLocaleString('en-IN') + '.00');
+          } catch(e) {}
+        })();
+      </script>
     </div>
   </main>
 
@@ -507,15 +562,7 @@
         </div>
         <div class="pdp-description-wrap collapsed" id="pdpOverviewContentWrap">
           <div class="pdp-description-body" id="pdpOverviewText">
-            <p>Stay charged in style with Covertok. This ultra-slim 5000mAh/10000 mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your exact battery percentage at a single glance.</p>
-            <p>Engineered with high-grade magnetic alignment, it snaps firmly to any MagSafe-compatible iPhone for rapid, cable-free power wherever your day takes you. Perfectly pocket-sized, it slips effortlessly into your jeans, blazer pocket, or bag without any awkward weight.</p>
-            <div class="pdp-description-highlights">
-              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>High Capacity Battery:</strong> Keep your iPhone powered through work, travel, and commutes.</div>
-              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Ultra-Slim Aerospace Design:</strong> Fits naturally in one hand while using your phone.</div>
-              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Digital LED Display:</strong> Clear numeric readout of remaining battery life.</div>
-              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Dual Mode Charging:</strong> Supports magnetic wireless output plus bi-directional USB-C fast charging.</div>
-              <div class="desc-highlight-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" style="vertical-align:-2px; margin-right:6px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>6-Month Warranty:</strong> Covered against internal battery defects and malfunctions.</div>
-            </div>
+            <p>Crafted with premium materials engineered for daily drop protection, effortless tactile grip, and authentic style. Designed to seamlessly fit your lifestyle.</p>
           </div>
         </div>
         <button type="button" class="pdp-readmore-btn" id="pdpSeeMoreBtn" aria-expanded="false" aria-controls="pdpOverviewContentWrap">
@@ -538,22 +585,22 @@
       </div>
 
       <div class="pdp-bundle-grid">
-        <!-- Card 1: Power Bank -->
-        <article class="pdp-bundle-card" data-bundle-id="power-bank" data-bundle-price="2099">
+        <!-- Card 1: Current Product in Bundle -->
+        <article class="pdp-bundle-card" id="bundleCard1" data-bundle-id="main-product" data-bundle-price="0">
           <label class="pdp-bundle-checkbox-label">
-            <input type="checkbox" class="bundle-check" data-name="Magnetic Wireless Power Bank" data-price="2099" id="bundleCheck1">
+            <input type="checkbox" class="bundle-check" data-name="This Item" data-price="0" id="bundleCheck1">
             <span class="bundle-checkbox-custom"></span>
           </label>
           <div class="pdp-bundle-card-img-wrap">
-            <img src="assets/products/9888955924778/1_50035509362986.webp" alt="Magnetic Wireless Power Bank" loading="lazy">
+            <img id="bundleCardImg1" src="" alt="This Item" loading="lazy">
           </div>
           <div class="pdp-bundle-card-footer">
             <label for="bundleCheck1" class="bundle-card-title-label">
               <span class="bundle-mini-check"></span>
-              <span class="bundle-prod-title">Magnetic Wireless Power Bank</span>
+              <span class="bundle-prod-title" id="bundleProdTitle1">This Item</span>
             </label>
             <div class="bundle-price-row">
-              <span class="bundle-current-price">Rs. 2,099.00</span>
+              <span class="bundle-current-price" id="bundlePriceDisplay1">Rs. 0.00</span>
             </div>
           </div>
         </article>
@@ -686,7 +733,7 @@
             <span class="pdp-accordion-plus">+</span>
           </button>
           <div class="pdp-accordion-panel">
-            <p>Comes with a 6-Month Manufacturer Warranty against internal circuitry defects and battery malfunction. Reach our WhatsApp support anytime for rapid assistance.</p>
+            <p>Covered by our 6-Month Quality &amp; Authenticity Guarantee against manufacturing defects or fit issues. Reach our WhatsApp support anytime for rapid assistance.</p>
           </div>
         </div>
       </div>
@@ -739,7 +786,7 @@
                 <span class="pdp-user-card-date">2 weeks ago</span>
               </div>
               <p class="pdp-user-card-text">
-                One of the best power banks I've used. The magnetic hold is strong and the build quality feels premium.
+                One of the best products I've used. The build quality feels super premium and fits like a glove.
               </p>
             </div>
 
@@ -751,7 +798,7 @@
                 <span class="pdp-user-card-date">1 month ago</span>
               </div>
               <p class="pdp-user-card-text">
-                Very slim and lightweight. The digital display is super helpful. Charges my iPhone perfectly.
+                Very sleek and lightweight. The tactile buttons and finish are top-tier. Protects my phone perfectly.
               </p>
             </div>
           </div>
@@ -970,11 +1017,11 @@
   <aside class="pdp-sticky-bar" id="pdpStickyBar" aria-label="Quick purchase actions">
     <div class="pdp-sticky-container">
       <div class="pdp-sticky-left" id="stickyLeft">
-        <img src="assets/products/9888955924778/1_50035509362986.webp" alt="Thumbnail" class="pdp-sticky-thumb" id="stickyThumb">
+        <img src="" alt="Thumbnail" class="pdp-sticky-thumb" id="stickyThumb" style="background: #F8F6F2;">
         <div class="pdp-sticky-info">
-          <span class="pdp-sticky-title" id="stickyTitle">Magnetic Wireless Power Bank</span>
+          <span class="pdp-sticky-title" id="stickyTitle"></span>
           <div class="pdp-sticky-price-row">
-            <span class="pdp-sticky-price" id="stickyPrice">Rs. 2,099.00</span>
+            <span class="pdp-sticky-price" id="stickyPrice"></span>
             <span class="pdp-sticky-tag">In Stock • Fast Dispatch</span>
           </div>
         </div>

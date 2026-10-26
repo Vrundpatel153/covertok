@@ -348,38 +348,370 @@ body.app-sheet-open {
 /* --------------------------------------------------------------------------
    3. RICH CART DRAWER ENHANCEMENTS
    -------------------------------------------------------------------------- */
-/* Free Shipping Progress Indicator */
+/* --------------------------------------------------------------------------
+   3. ULTRA-LUXURY CART DRAWER: SHIPPING TRACKER & CHECKOUT CTA
+   -------------------------------------------------------------------------- */
+/* Free Shipping Progress Luxury Tracker */
 .cart-free-shipping-bar {
-  background: #FFFDF9;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 14px 18px;
-  margin-bottom: 18px;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(253, 250, 244, 0.92) 100%) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(216, 196, 157, 0.42) !important;
+  border-radius: 18px !important;
+  padding: 14px 16px !important;
+  margin-bottom: 18px !important;
+  box-shadow: 0 10px 28px -6px rgba(197, 160, 89, 0.12), 0 2px 6px rgba(0, 0, 0, 0.02), inset 0 1px 2px #FFFFFF !important;
+  overflow: hidden;
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+.cart-free-shipping-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.95) 25%, rgba(216, 196, 157, 0.85) 50%, rgba(255, 255, 255, 0.95) 75%, transparent 100%);
+  pointer-events: none;
+}
+
+.cart-free-shipping-bar.is-unlocked {
+  background: linear-gradient(135deg, rgba(240, 253, 244, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%) !important;
+  border-color: rgba(16, 185, 129, 0.45) !important;
+  box-shadow: 0 12px 32px -6px rgba(16, 185, 129, 0.22), 0 2px 6px rgba(0, 0, 0, 0.02), inset 0 1px 2px #FFFFFF !important;
+}
+
+.cart-free-shipping-bar.is-unlocked::before {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.95) 25%, rgba(52, 211, 153, 0.85) 50%, rgba(255, 255, 255, 0.95) 75%, transparent 100%);
+}
+
+/* Shipping Message & Layout */
 .cart-free-shipping-msg {
+  display: block !important;
+  margin-bottom: 0 !important;
+}
+
+.cart-shipping-status-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #0A0A0A;
-  margin-bottom: 8px;
+  gap: 12px;
 }
 
+.cart-shipping-badge {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFFBF3 0%, #F5E8CB 100%);
+  border: 1px solid rgba(197, 160, 89, 0.55);
+  box-shadow: 0 4px 10px rgba(197, 160, 89, 0.2), inset 0 1px 1px #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: badge-float 3.5s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-shipping-badge.is-unlocked {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  animation: emerald-halo-pulse 2.2s infinite;
+}
+
+.cart-shipping-ping {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background: #34D399;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+}
+
+.cart-shipping-text-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-shipping-kicker {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #9A7B38;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
+}
+
+.cart-shipping-kicker.is-unlocked {
+  color: #059669;
+}
+
+.cart-shipping-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #171513;
+  line-height: 1.35;
+  margin-top: 3px;
+  letter-spacing: -0.01em;
+}
+
+.cart-shipping-headline .shipping-accent-amt {
+  font-weight: 800;
+  color: #0F0E0D;
+  background: rgba(197, 160, 89, 0.16);
+  padding: 1px 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.28);
+}
+
+.cart-shipping-headline.is-unlocked {
+  color: #064E3B;
+  font-weight: 600;
+}
+
+.cart-shipping-headline.is-unlocked strong {
+  font-weight: 800;
+  color: #047857;
+}
+
+/* Shipping Progress Track & Fill */
 .cart-progress-track {
   width: 100%;
-  height: 6px;
-  background: #E2E8F0;
+  height: 7px;
+  background: rgba(0, 0, 0, 0.06);
   border-radius: 999px;
   overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  margin-top: 10px;
 }
 
 .cart-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #C5A059 0%, #10B981 100%);
+  background: linear-gradient(90deg, #B8860B 0%, #D4AF37 40%, #E6C567 100%);
   border-radius: 999px;
-  transition: width 0.4s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+  transition: width 0.6s cubic-bezier(0.34, 1.4, 0.64, 1);
+  box-shadow: 0 1px 4px rgba(197, 160, 89, 0.35);
+}
+
+.cart-free-shipping-bar.is-unlocked .cart-progress-fill {
+  background: linear-gradient(90deg, #059669 0%, #10B981 50%, #34D399 100%);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6), 0 1px 4px rgba(5, 150, 105, 0.4);
+}
+
+/* Fluid continuous light sheen beam traversing progress fill */
+.cart-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: progress-beam-sweep 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes progress-beam-sweep {
+  0% { left: -80%; }
+  100% { left: 180%; }
+}
+
+@keyframes emerald-halo-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.55), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes badge-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+/* --- Luxury Checkout CTA Button & Animations --- */
+.btn-checkout-luxury {
+  position: relative;
+  width: 100%;
+  height: 54px;
+  background: linear-gradient(180deg, #1C1A18 0%, #0F0E0D 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 0 8px 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  box-shadow: 0 12px 28px -4px rgba(15, 14, 13, 0.5), 0 4px 10px rgba(0, 0, 0, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.22);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-checkout-luxury:hover {
+  transform: translateY(-2px);
+  border-color: rgba(197, 160, 89, 0.6);
+  box-shadow: 0 16px 36px -4px rgba(15, 14, 13, 0.65), 0 0 24px rgba(197, 160, 89, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.btn-checkout-luxury:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: 0 6px 18px -2px rgba(15, 14, 13, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Sweeping Luxury Sheen */
+.btn-checkout-shine {
+  position: absolute;
+  top: -50%;
+  left: -90%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 248, 225, 0.38) 50%,
+    rgba(255, 255, 255, 0.03) 80%,
+    transparent 100%
+  );
+  transform: rotate(26deg);
+  pointer-events: none;
+  animation: luxury-btn-sheen 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes luxury-btn-sheen {
+  0% { left: -100%; opacity: 0; }
+  15% { opacity: 1; }
+  48% { left: 160%; opacity: 1; }
+  49%, 100% { left: 160%; opacity: 0; }
+}
+
+.btn-checkout-lock {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #D4AF37;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.btn-checkout-luxury:hover .btn-checkout-lock {
+  background: rgba(197, 160, 89, 0.2);
+  border-color: rgba(197, 160, 89, 0.4);
+  color: #F6E05E;
+}
+
+.btn-checkout-label-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.btn-checkout-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  line-height: 1.1;
+}
+
+.btn-checkout-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #C5A059;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.btn-checkout-arrow-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-checkout-luxury:hover .btn-checkout-arrow-circle {
+  background: linear-gradient(135deg, #C5A059 0%, #D4AF37 100%);
+  border-color: #F59E0B;
+  color: #0F0E0D;
+  transform: translateX(3px) scale(1.05);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.5);
+}
+
+/* Micro-Trust Strip under Checkout Button */
+.cart-drawer-trust-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.72rem;
+  color: #78716C;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.cart-drawer-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cart-drawer-trust-sep {
+  color: #CBD5E1;
+  font-size: 0.7rem;
 }
 
 /* Promo Voucher Code Box inside Cart */
@@ -1278,14 +1610,6 @@ body.app-sheet-open {
 }
 
 /* Drawer & Modal Internal Glass Containers */
-.cart-free-shipping-bar {
-  background: rgba(255, 253, 249, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(216, 196, 157, 0.45) !important;
-  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
-}
-
 .cart-item-row,
 .cart-combo-item-row {
   background: rgba(255, 255, 255, 0.62) !important;

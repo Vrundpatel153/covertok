@@ -86,6 +86,7 @@
   document.addEventListener('DOMContentLoaded', initComboStudio);
 
   function initComboStudio() {
+    state.slots = loadSavedSlots();
     const rawCatalog = window.CovertokProducts || [];
     
     // Enrich eligible items only
@@ -241,7 +242,7 @@
       state.slots[existingSlot] = null;
       saveSlots(state.slots);
       renderStickyBarUI();
-      updateCardUI(sId);
+      updateAllCardsCheckboxUI();
       if (window.showToast) {
         window.showToast('Removed from combo', 'trash');
       }
@@ -280,7 +281,7 @@
 
     saveSlots(state.slots);
     renderStickyBarUI();
-    updateCardUI(sId);
+    updateAllCardsCheckboxUI();
 
     const filled = getFilledCount();
     if (window.showToast) {
@@ -302,13 +303,10 @@
     }
   };
 
-  // Efficient targeted DOM update for single card
+  // Targeted DOM update for single card
   function updateCardUI(prodId) {
     const card = document.getElementById(`comboCard_${prodId}`);
-    if (!card) {
-      renderProductsGrid();
-      return;
-    }
+    if (!card) return;
 
     const selectedSlot = getSlotForProduct(prodId);
     const isSelected = selectedSlot !== null;
@@ -320,6 +318,7 @@
     if (checkboxBtn) {
       checkboxBtn.classList.toggle('checked', isSelected);
       checkboxBtn.setAttribute('title', isSelected ? 'Click to uncheck' : 'Click to select');
+      checkboxBtn.setAttribute('aria-label', isSelected ? 'Uncheck item' : 'Select item for combo');
       checkboxBtn.innerHTML = `
         <span class="combo-check-circle">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
@@ -330,6 +329,39 @@
       `;
     }
   }
+
+  function updateAllCardsCheckboxUI() {
+    const cards = document.querySelectorAll('.combo-catalog-card');
+    cards.forEach(card => {
+      const prodId = card.getAttribute('data-id');
+      if (prodId) {
+        updateCardUI(prodId);
+      }
+    });
+  }
+
+  function syncStateFromStorage() {
+    state.slots = loadSavedSlots();
+    renderStickyBarUI();
+    updateAllCardsCheckboxUI();
+  }
+
+  // Restore saved selections when returning from PDP via back button, BFCache, or storage update
+  window.addEventListener('pageshow', () => {
+    syncStateFromStorage();
+  });
+
+  window.addEventListener('storage', (e) => {
+    if (e.key === STORAGE_KEY) {
+      syncStateFromStorage();
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      syncStateFromStorage();
+    }
+  });
 
   // 8. Render Products Grid (Matching collections.html layout)
   function renderProductsGrid() {
@@ -435,9 +467,9 @@
           <span class="combo-checkbox-text">${isSelected ? `<span class="combo-slot-full">Item ${selectedSlot} of 3</span><span class="combo-slot-short">Item ${selectedSlot}</span>` : '+ Select'}</span>
         </button>
 
-        <div class="card-img-wrap">
+        <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-img-wrap card-img-link" aria-label="${product.title}">
           <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
-        </div>
+        </a>
 
         ${swatchesHtml}
       </div>
@@ -451,7 +483,7 @@
           </span>
         </div>
 
-        <a href="product?handle=${product.handle || product.id}" class="card-product-title" title="${product.title}">
+        <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-product-title" title="${product.title}">
           ${product.title}
         </a>
 
@@ -462,18 +494,11 @@
       </div>
     `;
 
-    // Tap anywhere on card to toggle combo selection (except when clicking title link or color swatch dot)
-    card.addEventListener('click', (e) => {
-      if (e.target.closest('a') || e.target.closest('.card-color-dot')) {
-        return;
-      }
-      window.toggleComboProduct(product.id);
-    });
-
-    // Checkbox button explicit click handler
+    // Checkbox button explicit click handler (ONLY this selects / unselects item)
     const checkboxBtn = card.querySelector('.combo-card-checkbox');
     if (checkboxBtn) {
       checkboxBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         window.toggleComboProduct(product.id);
       });
