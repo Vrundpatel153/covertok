@@ -1484,207 +1484,151 @@ body.app-sheet-open {
 
 /* ==========================================================================
    10. PURE MASTER LIQUID GLASSMORHPISM DESIGN SYSTEM (UNIVERSAL ACROSS ALL PAGES)
-   Applies to every single page and all eligible elements:
-   - Sticky Navigation & Headers (Index, PDP, Combo, Collections, Pages)
-   - Mega Menus, Mobile Nav Drawers & Action Icon Bubbles
-   - Modals & Drawers (Cart, Checkout, Tracker, Offers, Profile, Live Search)
-   - Cart Internal Containers (Shipping Bar, Cart Items, Upsell, Promo)
-   - Product Cards & Bestseller Showcases (Refractive blur, specular border, hover lift)
-   - Bento Collection Blocks, Combo Cards & Feature Tiles
-   - 3-Piece Combo Studio Controls & Sticky Action Bar
-   - Product Detail Page (PDP) Sticky ATC Bar, Trust Badges, Info Panels & Accordions
-   - Customer Review Cards & Rating Summary Box
-   - Content Page Cards, TOC Sidebars, Policy Grids & Floating Controls
+   Applies true liquid glassmorphism, refractive blur, specular chamfer borders,
+   inner prismatic light highlights, and organic hover bloom to EVERY eligible element:
+   - Sticky Navigation, Headers & Action Orbs (Index, PDP, Combo, Collections, Pages)
+   - Mega Menus, Mobile Nav Drawers & Floating Toolbars
+   - Product Cards, Bestsellers, Trending Drops, Bento Tiles & Grids
+   - Category Switcher Pills, Nav Bars, Filter Chips & Sort Menus
+   - 3-Piece Combo Studio Controls, Sticky Action Bar & Homepage Suite Bar
+   - Product Detail Page (PDP) Sticky ATC Bar, Trust Badges, Info Panels & Specs
+   - Modals & Drawers (Cart, Account, Checkout, Tracking, Offers, Quick View)
+   - Cart Internal Containers (Free Shipping Track, Cart Items, Upsell, Promo)
+   - Reviews, Ratings Summary, Testimonial Cards & Video Showcase Cards
+   - Search Bars, Form Fields, Text Inputs & Dropdown Triggers
+   - Information Page Cards, TOC Sidebars, Policy Grids & Floating Controls
+   - Toasts, Notifications & Footer Floating Action Badges
    ========================================================================== */
 
-/* Universal Glass Base Tokens */
+/* 1. Universal Liquid Glass Core Design Tokens */
 :root {
-  --lq-glass-bg: rgba(255, 255, 255, 0.72);
-  --lq-glass-bg-elevated: rgba(255, 255, 255, 0.85);
-  --lq-glass-bg-subtle: rgba(255, 255, 255, 0.58);
-  --lq-glass-border: 1px solid rgba(255, 255, 255, 0.78);
-  --lq-glass-border-hover: 1px solid rgba(197, 160, 89, 0.48);
-  --lq-glass-blur: blur(24px) saturate(190%) contrast(102%);
-  --lq-glass-blur-heavy: blur(34px) saturate(200%) contrast(103%);
-  --lq-glass-shadow: 0 16px 36px -10px rgba(23, 21, 19, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
-  --lq-glass-shadow-hover: 0 26px 54px -10px rgba(23, 21, 19, 0.12), 0 0 26px rgba(197, 160, 89, 0.22), inset 0 1px 1px 0 #FFFFFF;
+  /* Multi-Layer Refractive Light Liquid Glass */
+  --liquid-glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.62) 100%);
+  --liquid-glass-bg-subtle: linear-gradient(145deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.48) 100%);
+  --liquid-glass-bg-elevated: linear-gradient(145deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.76) 100%);
+  --liquid-glass-bg-hover: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.82) 100%);
+  
+  /* Obsidian Dark Liquid Glass (for Active States, CTAs, Toasts & Dark Tiles) */
+  --liquid-glass-dark: linear-gradient(145deg, rgba(26, 23, 21, 0.90) 0%, rgba(12, 11, 10, 0.94) 100%);
+  --liquid-glass-dark-elevated: linear-gradient(145deg, rgba(36, 32, 29, 0.94) 0%, rgba(16, 15, 14, 0.96) 100%);
+  --liquid-glass-dark-border: 1px solid rgba(255, 255, 255, 0.22);
+  --liquid-glass-dark-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), inset 0 1px 1px 0 rgba(255, 255, 255, 0.32);
+
+  /* Specular Chamfer Edge Borders */
+  --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.86);
+  --liquid-glass-border-subtle: 1px solid rgba(255, 255, 255, 0.68);
+  --liquid-glass-border-hover: 1px solid rgba(197, 160, 89, 0.55);
+  --liquid-glass-border-gold: 1.5px solid rgba(197, 160, 89, 0.45);
+
+  /* Optical Refraction & Frosted Blur */
+  --liquid-glass-blur: blur(22px) saturate(190%) contrast(102%);
+  --liquid-glass-blur-heavy: blur(34px) saturate(200%) contrast(104%);
+  --liquid-glass-blur-soft: blur(14px) saturate(170%);
+
+  /* Specular Highlights & Ambient Shadows */
+  --liquid-glass-shadow: 0 14px 36px -8px rgba(23, 21, 19, 0.05), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.98), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
+  --liquid-glass-shadow-elevated: 0 24px 52px -10px rgba(23, 21, 19, 0.09), inset 0 2px 2px 0 #FFFFFF, inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
+  --liquid-glass-shadow-hover: 0 28px 60px -12px rgba(23, 21, 19, 0.14), 0 0 32px rgba(197, 160, 89, 0.22), inset 0 2px 2px 0 #FFFFFF;
+
+  /* Spring Physics */
+  --liquid-glass-transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, background 0.28s ease;
 }
 
-/* 1. UNIVERSAL LIQUID GLASS HEADERS & NAVIGATION (Every Page) */
+/* 2. Ambient Canvas Atmosphere (Provides Luminous Texture for Glass Refraction) */
+body {
+  background: radial-gradient(circle at 12% 10%, rgba(246, 241, 233, 0.7) 0%, transparent 45%),
+              radial-gradient(circle at 88% 30%, rgba(242, 237, 227, 0.6) 0%, transparent 50%),
+              radial-gradient(circle at 18% 65%, rgba(248, 244, 237, 0.7) 0%, transparent 55%),
+              #FAF8F5 !important;
+  background-attachment: fixed !important;
+}
+
+/* 3. UNIVERSAL LIQUID GLASS HEADERS & NAVIGATION (Every Page) */
 .site-header,
 .pdp-header,
 #siteHeader,
-.combo-discovery-header {
-  background: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: var(--lq-glass-blur) !important;
-  -webkit-backdrop-filter: var(--lq-glass-blur) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.75) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+.combo-discovery-header,
+.catalog-breadcrumb-strip {
+  background: var(--liquid-glass-bg-elevated) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border-bottom: var(--liquid-glass-border) !important;
+  box-shadow: 0 10px 32px -10px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.98) !important;
 }
 
-/* Circular Liquid Glass Action Buttons in Navigation */
+/* Circular Floating Action Orbs in Header */
 .icon-btn,
 .pdp-action-icon-btn,
 .header-right .icon-btn,
-.pdp-header-actions .pdp-action-icon-btn {
-  background: rgba(255, 255, 255, 0.68) !important;
-  backdrop-filter: blur(14px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
+.pdp-header-actions .pdp-action-icon-btn,
+.drops-arrow-circle {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), inset 0 1.5px 1px #FFFFFF !important;
   border-radius: 50% !important;
-  transition: all 0.25s var(--ease-spring) !important;
+  transition: var(--liquid-glass-transition) !important;
 }
 
 .icon-btn:hover,
-.pdp-action-icon-btn:hover {
-  background: rgba(255, 255, 255, 0.92) !important;
-  border-color: rgba(197, 160, 89, 0.5) !important;
-  transform: translateY(-2px) scale(1.05) !important;
-  box-shadow: 0 8px 22px rgba(197, 160, 89, 0.2), inset 0 1px 0 #FFFFFF !important;
+.pdp-action-icon-btn:hover,
+.drops-arrow-circle:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.6) !important;
+  transform: translateY(-2px) scale(1.06) !important;
+  box-shadow: 0 10px 26px rgba(197, 160, 89, 0.25), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* Mega Dropdown Menus */
 .mega-dropdown-menu,
 .pdp-nav .mega-dropdown-menu {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: var(--lq-glass-blur-heavy) !important;
-  -webkit-backdrop-filter: var(--lq-glass-blur-heavy) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 1px 2px #FFFFFF !important;
-  border-radius: 24px !important;
+  background: var(--liquid-glass-bg-elevated) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 35px 85px -15px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 2px 2px #FFFFFF !important;
+  border-radius: 26px !important;
 }
 
 .mega-showcase-card {
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.82) !important;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
-  border-radius: 18px !important;
+  background: var(--liquid-glass-bg-subtle) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04), inset 0 1.5px 1px #FFFFFF !important;
+  border-radius: 20px !important;
 }
 
 /* Mobile Nav Drawer */
 .mobile-nav-drawer {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: blur(32px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(32px) saturate(200%) !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.82) !important;
-  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.9) !important;
+  background: var(--liquid-glass-bg-elevated) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border-left: var(--liquid-glass-border) !important;
+  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.16), inset 1.5px 0 0 rgba(255, 255, 255, 0.95) !important;
 }
 
-/* 2. UNIVERSAL DRAWERS & POPUP MODALS */
-.app-drawer,
-.cart-drawer,
-#cartDrawer,
-#cartDrawerSheet,
-#accountDrawerSheet {
-  background: rgba(255, 255, 255, 0.86) !important;
-  backdrop-filter: var(--lq-glass-blur-heavy) !important;
-  -webkit-backdrop-filter: var(--lq-glass-blur-heavy) !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.8) !important;
-  box-shadow: -24px 0 70px rgba(0, 0, 0, 0.15), inset 1px 0 0 rgba(255, 255, 255, 0.9) !important;
-}
-
-.app-sheet-header,
-.app-sheet-footer,
-.cart-header,
-.cart-footer {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border-color: rgba(255, 255, 255, 0.7) !important;
-}
-
-.app-modal-card,
-.search-modal-box,
-.search-modal-content,
-#checkoutModalCard,
-#trackModalCard,
-#offersModalCard {
-  background: rgba(255, 255, 255, 0.88) !important;
-  backdrop-filter: var(--lq-glass-blur-heavy) !important;
-  -webkit-backdrop-filter: var(--lq-glass-blur-heavy) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 35px 85px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.95) !important;
-}
-
-/* Drawer & Modal Internal Glass Containers */
-.cart-item-row,
-.cart-combo-item-row {
-  background: rgba(255, 255, 255, 0.62) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.82) !important;
-  border-radius: 16px !important;
-  padding: 14px !important;
-  margin-bottom: 12px !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
-  transition: all 0.25s var(--ease-spring) !important;
-}
-
-.cart-item-row:hover {
-  background: rgba(255, 255, 255, 0.82) !important;
-  border-color: rgba(197, 160, 89, 0.38) !important;
-  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.12), inset 0 1px 0 #FFFFFF !important;
-}
-
-.cart-promo-box {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: inset 0 1px 0 #FFFFFF !important;
-}
-
-.cart-upsell-section {
-  background: rgba(255, 255, 255, 0.68) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
-  border-radius: 18px !important;
-}
-
-.checkout-option-card {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(226, 232, 240, 0.85) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), inset 0 1px 0 #FFFFFF !important;
-  border-radius: 16px !important;
-  transition: all 0.25s var(--ease-spring) !important;
-}
-
-.checkout-option-card.selected {
-  background: rgba(250, 248, 242, 0.88) !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 10px 28px rgba(197, 160, 89, 0.16), inset 0 1px 0 #FFFFFF !important;
-}
-
-.profile-member-card,
-.profile-order-card,
-.offer-voucher-card {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
-  border-radius: 18px !important;
-}
-
-/* 3. PRODUCT & BESTSELLER CARDS (Universal Modern Matte Black & White Contrast) */
+/* 4. UNIVERSAL PRODUCT CARDS, BESTSELLERS, DROPS & GRIDS (All Pages) */
 .bestseller-prod-card,
 .bestseller-card,
 .product-card,
 .pdp-product-card,
 .search-product-card,
-.catalog-product-card {
-  background: #FFFFFF !important;
-  border: 1.5px solid #E5E7EB !important;
-  border-radius: 20px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
-  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s var(--ease-spring), border-color 0.25s ease, background-color 0.25s ease !important;
+.catalog-product-card,
+.catalog-card,
+.combo-card,
+.drop-3d-card .drop-card-inner,
+.drop-card-inner,
+.popular-choice-card {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  border-radius: 22px !important;
+  box-shadow: var(--liquid-glass-shadow) !important;
+  transition: var(--liquid-glass-transition) !important;
+  box-sizing: border-box !important;
 }
 
 .bestseller-prod-card:hover,
@@ -1692,237 +1636,503 @@ body.app-sheet-open {
 .product-card:hover,
 .pdp-product-card:hover,
 .search-product-card:hover,
-.catalog-product-card:hover {
-  background: #FFFFFF !important;
-  transform: translateY(-7px) scale(1.01) !important;
-  border-color: #000000 !important;
-  box-shadow: 0 20px 42px -8px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+.catalog-product-card:hover,
+.catalog-card:hover,
+.combo-card:hover,
+.drop-3d-card:hover .drop-card-inner,
+.popular-choice-card:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  transform: translateY(-8px) scale(1.012) !important;
+  border-color: rgba(197, 160, 89, 0.55) !important;
+  box-shadow: var(--liquid-glass-shadow-hover) !important;
 }
 
-.bestseller-card-img-wrap {
-  border-radius: 16px !important;
-  background: #F4F4F6 !important;
-  border: 1px solid #E5E7EB !important;
+/* Card Image Stages & Media Frames */
+.bestseller-card-img-wrap,
+.product-card-media,
+.catalog-card-image-wrap,
+.card-media-stage,
+.card-img-wrap,
+.combo-card-image-wrap,
+.drop-card-media,
+.popular-card-img-wrap {
+  background: linear-gradient(135deg, rgba(248, 246, 242, 0.72) 0%, rgba(238, 234, 227, 0.52) 100%) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: 18px !important;
+  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
 }
 
-/* 4. CATEGORY PILLS, FILTER CHIPS & DROPDOWNS */
+/* Card Floating Badges & Selection Chips */
+.product-card-tag,
+.bestseller-tag,
+.bestseller-sale-badge,
+.drop-live-badge,
+.combo-tag,
+.discount-badge,
+.card-badge,
+.card-badge-pill,
+.combo-card-checkbox {
+  background: rgba(255, 255, 255, 0.80) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: 1px solid rgba(255, 255, 255, 0.92) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 999px !important;
+}
+
+/* Quick Add & Card Action Buttons */
+.product-card-quick-add,
+.bestseller-atc-btn,
+.catalog-card-quick-btn,
+.drop-atc-btn,
+.drop-wishlist-btn {
+  background: var(--liquid-glass-dark) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: var(--liquid-glass-dark-border) !important;
+  box-shadow: var(--liquid-glass-dark-shadow) !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.product-card-quick-add:hover,
+.bestseller-atc-btn:hover,
+.catalog-card-quick-btn:hover,
+.drop-atc-btn:hover {
+  background: var(--color-accent, #FF5500) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.45), inset 0 1px 1px #FFFFFF !important;
+  transform: scale(1.04) !important;
+}
+
+/* 5. UNIVERSAL CATEGORY PILLS, NAV BARS, FILTER CHIPS & SORT TRIGGERS */
 .cat-pill,
 .filter-pill,
 .catalog-nav-pill,
 .pdp-switch-pill,
 .category-pill,
-.luxury-sort-trigger {
-  background: #FFFFFF !important;
-  border: 1.5px solid #E5E7EB !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+.luxury-sort-trigger,
+.catalog-filters-btn,
+.catalog-cat-card,
+.catalog-price-btn,
+.filter-chip,
+.search-filter-chip {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), inset 0 1px 1px rgba(255, 255, 255, 0.98) !important;
   border-radius: 999px !important;
-  color: #000000 !important;
+  color: #171513 !important;
   font-weight: 700 !important;
-  transition: all 0.25s var(--ease-spring) !important;
+  transition: var(--liquid-glass-transition) !important;
 }
 
 .cat-pill:hover,
 .filter-pill:hover,
 .catalog-nav-pill:hover,
 .pdp-switch-pill:hover,
-.luxury-sort-trigger:hover {
-  background: #000000 !important;
-  border-color: #000000 !important;
-  color: #FFFFFF !important;
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+.luxury-sort-trigger:hover,
+.catalog-filters-btn:hover,
+.catalog-cat-card:hover,
+.catalog-price-btn:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.6) !important;
+  color: #0A0A0A !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 8px 22px rgba(197, 160, 89, 0.22), inset 0 1.5px 1px #FFFFFF !important;
 }
 
+/* Active Category & Filter Pills (Obsidian Liquid Glass) */
 .cat-pill.active,
 .filter-pill.active,
 .catalog-nav-pill.active,
-.pdp-switch-pill.active {
-  background: #000000 !important;
+.pdp-switch-pill.active,
+.catalog-cat-card.active,
+.catalog-price-btn.active {
+  background: var(--liquid-glass-dark) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
   color: #FFFFFF !important;
-  border-color: #000000 !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+  border: var(--liquid-glass-dark-border) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.38) !important;
 }
 
-.luxury-sort-menu {
-  background: #FFFFFF !important;
-  border: 1.5px solid #000000 !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16) !important;
-  border-radius: 18px !important;
+/* Pill Count Badges */
+.catalog-pill-count,
+.cat-pill-count,
+.filter-count-badge {
+  background: rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
 }
 
-/* 5. HOMEPAGE BENTO & HERO MODERN MATTE CONTRAST */
+.catalog-nav-pill.active .catalog-pill-count,
+.catalog-cat-card.active .cat-pill-count {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Luxury Sort & Filter Dropdown Menus */
+.luxury-sort-menu,
+.catalog-filters-sheet,
+.catalog-filters-panel,
+.filter-dropdown-menu {
+  background: var(--liquid-glass-bg-elevated) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 28px 70px -10px rgba(23, 21, 19, 0.16), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1.5px 1.5px #FFFFFF !important;
+  border-radius: 20px !important;
+}
+
+/* 6. UNIVERSAL BENTO GRIDS, FEATURE BLOCKS & HERO CAPSULES */
+.bento-card,
+.bento-content,
+.bento-card-footer,
+.catalog-curated-banner,
+.curated-banner-glass,
 .hero-pagination-pill,
-.hero-cta-group .btn-circle-arrow,
-.combo-card,
-.combo-bottom-pill-bar,
-.bento-card-footer {
-  background: #FFFFFF !important;
-  border: 1.5px solid #E5E7EB !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
-}
-
-.bento-card {
-  background: #FFFFFF !important;
-  border: 1.5px solid #E5E7EB !important;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04) !important;
+.combo-full-page-link,
+.guarantee-tile,
+.trust-badge-tile,
+.feature-pillar-card {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: var(--liquid-glass-shadow) !important;
   border-radius: 24px !important;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease !important;
+  transition: var(--liquid-glass-transition) !important;
 }
 
-.bento-card:hover {
-  border-color: #000000 !important;
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12), 0 4px 14px rgba(0, 0, 0, 0.06) !important;
-  transform: translateY(-7px) scale(1.008) !important;
+.bento-card:hover,
+.catalog-curated-banner:hover,
+.combo-full-page-link:hover,
+.guarantee-tile:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.52) !important;
+  box-shadow: var(--liquid-glass-shadow-hover) !important;
+  transform: translateY(-6px) scale(1.008) !important;
 }
 
 .bento-card-btn {
-  background: #000000 !important;
-  border: 1.5px solid #000000 !important;
+  background: var(--liquid-glass-dark) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: var(--liquid-glass-dark-border) !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.32) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 50% !important;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition: var(--liquid-glass-transition) !important;
 }
 
 .bento-card:hover .bento-card-btn,
 .bento-card-btn:hover {
   background: var(--color-accent, #FF5500) !important;
-  border-color: var(--color-accent, #FF5500) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
   color: #FFFFFF !important;
   transform: scale(1.15) translateX(3px) !important;
-  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.45) !important;
+  box-shadow: 0 8px 26px rgba(255, 85, 0, 0.45), inset 0 1px 1px #FFFFFF !important;
 }
 
-/* 6. PRODUCT DETAIL PAGE (PDP) LIQUID GLASS */
+/* 7. UNIVERSAL STICKY ACTION BARS (Mobile & Desktop) */
+.combo-sticky-bar,
+.combo-homepage-bar,
+.sticky-atc-bar,
 .pdp-sticky-bar,
-.sticky-atc-bar {
-  background: rgba(255, 255, 255, 0.82) !important;
-  backdrop-filter: blur(28px) saturate(190%) contrast(102%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(190%) contrast(102%) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
-  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+.floating-quick-bar {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.72) 100%) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border-top: var(--liquid-glass-border) !important;
+  box-shadow: 0 -16px 44px rgba(0, 0, 0, 0.08), inset 0 1.5px 1px 0 #FFFFFF !important;
 }
 
+.combo-homepage-bar {
+  border: var(--liquid-glass-border) !important;
+  border-radius: 26px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), inset 0 1.5px 1.5px 0 #FFFFFF !important;
+}
+
+.combo-sticky-slots-status,
+.combo-sticky-pricing,
+.combo-slots-badge,
+.combo-sticky-save,
+.combo-count-pill,
+.combo-bundle-pill,
+.combo-flat-pill {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: 1px solid rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+}
+
+.combo-bundle-pill,
+.combo-flat-pill {
+  background: var(--liquid-glass-dark) !important;
+  color: #FFFFFF !important;
+  border: var(--liquid-glass-dark-border) !important;
+  box-shadow: var(--liquid-glass-dark-shadow) !important;
+}
+
+.combo-sticky-checkout-btn,
+.combo-sticky-cta,
+.sticky-atc-btn {
+  background: var(--liquid-glass-dark) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: var(--liquid-glass-dark-border) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.38) !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.combo-sticky-checkout-btn:hover,
+.combo-sticky-cta:not(:disabled):hover,
+.sticky-atc-btn:hover {
+  background: var(--color-accent, #FF5500) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 10px 30px rgba(255, 85, 0, 0.45), inset 0 1px 1px #FFFFFF !important;
+  transform: translateY(-2px) scale(1.02) !important;
+}
+
+/* 8. UNIVERSAL DRAWERS, SHEETS & MODALS (Cart, Account, Checkout, Tracker, Offers) */
+.app-drawer,
+.cart-drawer,
+#cartDrawer,
+#cartDrawerSheet,
+#accountDrawerSheet,
+.app-modal-card,
+.search-modal-box,
+.search-modal-content,
+#checkoutModalCard,
+#trackModalCard,
+#offersModalCard,
+.quick-view-card {
+  background: var(--liquid-glass-bg-elevated) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 35px 90px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 2px 2px rgba(255, 255, 255, 0.98) !important;
+}
+
+.app-sheet-header,
+.app-sheet-footer,
+.cart-header,
+.cart-footer {
+  background: rgba(255, 255, 255, 0.68) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Drawer Internal Glass Containers */
+.cart-item-row,
+.cart-combo-item-row,
+.cart-promo-box,
+.cart-upsell-section,
+.checkout-option-card,
+.profile-member-card,
+.profile-order-card,
+.offer-voucher-card,
+.cart-free-shipping-bar {
+  background: var(--liquid-glass-bg-subtle) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), inset 0 1.5px 1px #FFFFFF !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.cart-item-row:hover,
+.checkout-option-card:hover,
+.profile-order-card:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.45) !important;
+  box-shadow: 0 10px 28px rgba(197, 160, 89, 0.16), inset 0 1.5px 1px #FFFFFF !important;
+}
+
+.checkout-option-card.selected {
+  background: rgba(250, 248, 242, 0.92) !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 12px 30px rgba(197, 160, 89, 0.2), inset 0 1.5px 1px #FFFFFF !important;
+}
+
+/* 9. UNIVERSAL SEARCH BARS, FORM INPUTS & TEXT FIELDS */
+.combo-search-box,
+.combo-search-input,
+.catalog-search-pill,
+.catalog-search-pill input,
+.search-bar-input,
+.search-input-wrap,
+.contact-form-input,
+.newsletter-input,
+.checkout-field,
+.catalog-price-input,
+.form-input,
+.form-textarea {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.88) !important;
+  box-shadow: inset 0 1.5px 1.5px rgba(0, 0, 0, 0.03), 0 4px 16px rgba(0, 0, 0, 0.02) !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.combo-search-input:focus,
+.catalog-search-pill:focus-within,
+.search-bar-input:focus,
+.contact-form-input:focus,
+.newsletter-input:focus,
+.checkout-field:focus {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 0 0 3.5px rgba(197, 160, 89, 0.22), 0 8px 24px rgba(197, 160, 89, 0.12), inset 0 1px 1px #FFFFFF !important;
+}
+
+/* 10. UNIVERSAL REVIEWS, VIDEO SHOWCASES & COMMUNITY RATINGS */
+.rating-summary-card,
+.review-item-card,
+.review-card,
+.customer-review-tile,
+.video-card,
+.video-card-glass {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  border-radius: 22px !important;
+  box-shadow: var(--liquid-glass-shadow) !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.review-item-card:hover,
+.review-card:hover,
+.video-card:hover {
+  transform: translateY(-6px) scale(1.012) !important;
+  border-color: rgba(197, 160, 89, 0.45) !important;
+  box-shadow: var(--liquid-glass-shadow-hover) !important;
+}
+
+.reviews-nav-btn,
+.bestseller-nav-btn,
+.swiper-button-prev,
+.swiper-button-next {
+  background: var(--liquid-glass-bg-elevated) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 1.5px 1px #FFFFFF !important;
+  border-radius: 50% !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.reviews-nav-btn:hover,
+.bestseller-nav-btn:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.6) !important;
+  transform: translateY(-2px) scale(1.08) !important;
+  box-shadow: 0 10px 28px rgba(197, 160, 89, 0.25), inset 0 1.5px 1px #FFFFFF !important;
+}
+
+/* 11. UNIVERSAL PDP SPECIFICATIONS, TRUST BADGES, INFO PANELS & ACCORDIONS */
 .pdp-trust-card,
 .pdp-trust-item,
 .pdp-accordion-item,
 .pdp-summary-card,
 .pdp-info-panel,
 .trust-badge-item,
-.trust-badges-grid {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(18px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.8) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03), inset 0 1px 0 #FFFFFF !important;
+.trust-badges-grid,
+.pdp-thumb-pill,
+.pdp-thumb-btn,
+.pdp-bundle-box,
+.pdp-price-box {
+  background: var(--liquid-glass-bg-subtle) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.03), inset 0 1.5px 1px #FFFFFF !important;
+  transition: var(--liquid-glass-transition) !important;
 }
 
-/* 7. COMBO STUDIO LIQUID GLASS (combo.html) */
-.combo-sticky-bar {
-  background: rgba(255, 255, 255, 0.84) !important;
-  backdrop-filter: blur(30px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
-  box-shadow: 0 -14px 40px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF !important;
+.pdp-trust-item:hover,
+.pdp-accordion-item:hover,
+.pdp-summary-card:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.45) !important;
+  box-shadow: 0 12px 32px rgba(197, 160, 89, 0.14), inset 0 1.5px 1px #FFFFFF !important;
 }
 
-.combo-search-input {
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1.5px solid rgba(226, 220, 212, 0.8) !important;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02) !important;
-}
-
-.combo-search-input:focus {
-  background: rgba(255, 255, 255, 0.92) !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.18), 0 8px 24px rgba(197, 160, 89, 0.1) !important;
-}
-
-.combo-count-pill,
-.combo-bundle-pill {
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.7) !important;
-}
-
-/* 8. REVIEWS & COMMUNITY RATINGS */
-.rating-summary-card,
-.review-item-card,
-.review-card {
-  background: rgba(255, 255, 255, 0.70) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.82) !important;
-  border-radius: 22px !important;
-  box-shadow: 0 14px 34px -8px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
-  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-spring) !important;
-}
-
-.review-item-card:hover {
-  transform: translateY(-6px) scale(1.01) !important;
-  border-color: rgba(197, 160, 89, 0.4) !important;
-  box-shadow: 0 24px 50px -10px rgba(23, 21, 19, 0.1), inset 0 1px 0 #FFFFFF !important;
-}
-
-.reviews-nav-btn,
-.bestseller-nav-btn {
-  background: rgba(255, 255, 255, 0.82) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.9) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF !important;
-}
-
-/* 9. INFORMATION, POLICY & CONTACT PAGES */
+/* 12. UNIVERSAL INFORMATION, POLICY & CONTACT PAGES */
 .highlight-card,
 .toc-card,
 .contact-form-card,
-.policy-card {
-  background: rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(22px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(22px) saturate(180%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.82) !important;
-  border-radius: 20px !important;
-  box-shadow: 0 14px 36px -8px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+.policy-card,
+.faq-accordion-item,
+.about-feature-card {
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  border-radius: 22px !important;
+  box-shadow: var(--liquid-glass-shadow) !important;
+  transition: var(--liquid-glass-transition) !important;
 }
 
 .highlight-card:hover,
-.toc-card:hover {
-  border-color: rgba(197, 160, 89, 0.45) !important;
-  box-shadow: 0 20px 48px -10px rgba(197, 160, 89, 0.14), inset 0 1px 0 #FFFFFF !important;
+.toc-card:hover,
+.policy-card:hover {
+  border-color: rgba(197, 160, 89, 0.5) !important;
+  box-shadow: var(--liquid-glass-shadow-hover) !important;
+  transform: translateY(-4px) !important;
 }
 
-/* 10. TOAST NOTIFICATIONS & FLOATING CONTROLS */
+/* 13. UNIVERSAL TOAST NOTIFICATIONS & FLOATING CONTROLS */
 .toast,
-.toast-notification {
-  background: rgba(14, 15, 18, 0.86) !important;
-  backdrop-filter: blur(24px) saturate(190%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
-  border: 1px solid rgba(255, 255, 255, 0.22) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+.toast-notification,
+.cart-notification {
+  background: var(--liquid-glass-dark) !important;
+  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
+  border: var(--liquid-glass-dark-border) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38), inset 0 1px 1px rgba(255, 255, 255, 0.45) !important;
   border-radius: 999px !important;
+  color: #FFFFFF !important;
 }
 
 .footer-social-btn,
 .footer-contact-badge {
-  background: rgba(255, 255, 255, 0.65) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
+  border: var(--liquid-glass-border) !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+  border-radius: 50% !important;
+  transition: var(--liquid-glass-transition) !important;
+}
+
+.footer-social-btn:hover {
+  background: var(--liquid-glass-bg-hover) !important;
+  border-color: rgba(197, 160, 89, 0.6) !important;
+  transform: translateY(-2px) scale(1.08) !important;
 }
 
 .footer-newsletter-row {
-  background: rgba(255, 255, 255, 0.68) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
+  background: var(--liquid-glass-bg) !important;
+  backdrop-filter: var(--liquid-glass-blur) !important;
+  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
+  border: var(--liquid-glass-border) !important;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
   border-radius: 999px !important;
 }
+
