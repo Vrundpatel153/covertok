@@ -29,8 +29,8 @@
   --pdp-radius-md: 16px;
   --pdp-radius-lg: 24px;
   --pdp-radius-pill: 9999px;
-  --pdp-font-head: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --pdp-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --pdp-font-head: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --pdp-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --pdp-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -3533,7 +3533,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .covertok-trust-item span {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.815rem;
   color: #171513;
   font-weight: 700;
@@ -3613,7 +3613,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .covertok-feature-content h4 {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.85rem;
   font-weight: 800;
   color: #FFFFFF;

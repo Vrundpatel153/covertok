@@ -200,34 +200,38 @@
 
     if (eyebrowTag) {
       eyebrowTag.innerHTML = currentCategory === 'all' 
-        ? `OFFICIAL CATALOG &bull; 2026 EDITION` 
-        : `COVERTOK CURATED &bull; ${activeCatObj.title.toUpperCase()}`;
+        ? `<span class="eyebrow-accent-dot"></span> Official Catalog &bull; 2026 Edition` 
+        : `<span class="eyebrow-accent-dot"></span> Covertok Studio &bull; ${activeCatObj.title}`;
     }
 
     if (mainHeading) {
       const headingMap = {
-        'all': `Luxury Armor &amp; <span class="copper-accent">Accessories</span>`,
-        'iphone-cases': `iPhone Luxury <span class="copper-accent">Armor Cases</span>`,
-        'airpod-covers': `AirPods Protective <span class="copper-accent">Cases</span>`,
-        'watchbands': `Apple Watch <span class="copper-accent">Bands &amp; Straps</span>`,
-        'charger-covers': `MagSafe <span class="copper-accent">Charger Covers</span>`,
-        'charger-and-cables': `Braided Cables &amp; <span class="copper-accent">Fast Power</span>`,
-        'cover-charms': `Designer Phone <span class="copper-accent">Charms</span>`,
-        'other-accessories': `Everyday Tech <span class="copper-accent">Accessories</span>`
+        'all': `Signature Collection`,
+        'iphone-cases': `iPhone Cases`,
+        'airpod-covers': `AirPods Cases`,
+        'watchbands': `Apple Watch Bands`,
+        'charger-covers': `MagSafe Charger Covers`,
+        'charger-and-cables': `Cables &amp; Fast Charging`,
+        'cover-charms': `Phone Charms &amp; Straps`,
+        'other-accessories': `Everyday Tech Accessories`,
+        'our-bestsellers': `Most Loved Bestsellers`,
+        'new-arrivals': `New Arrivals`
       };
-      mainHeading.innerHTML = headingMap[currentCategory] || `${activeCatObj.title} &bull; <span class="copper-accent">Signature</span>`;
+      mainHeading.textContent = headingMap[currentCategory] || activeCatObj.title;
     }
 
     if (categoryDesc) {
       const descMap = {
-        'all': `Explore 75+ precision-crafted Covertok cases, Apple Watch bands, AirPods essentials and daily MagSafe charging setups.`,
-        'iphone-cases': `Precision-engineered shockproof cases, magnetic phone covers, and sleek silicone designs for iPhone 16 down to iPhone 11.`,
-        'airpod-covers': `Drop-tested luxury leather, silicone, and armor shell cases with secure clips for AirPods Pro &amp; AirPods 1–4.`,
-        'watchbands': `Breathable sports silicone, magnetic loops, and rugged Alpine bands for Apple Watch Ultra &amp; Series 1–10.`,
-        'charger-covers': `Protective silicone bumpers and aesthetic charging station covers for Apple MagSafe.`,
-        'charger-and-cables': `High-speed charging cables, braided cords, and fast charging adapters.`,
-        'cover-charms': `Aesthetic wrist lanyards, pearl bead chains, and luxury phone charms.`,
-        'other-accessories': `Essential daily carry, camera lens protectors, and smartphone stand accessories.`
+        'all': `Explore our curated range of precision cases, watch bands, and everyday charging essentials.`,
+        'iphone-cases': `Engineered for impact protection, tactile grip, and seamless MagSafe compatibility.`,
+        'airpod-covers': `Lightweight, scratch-resistant cases with secure carabiner clips for everyday carry.`,
+        'watchbands': `Comfortable silicone, rugged loops, and titanium-finish bands for Apple Watch.`,
+        'charger-covers': `Slim silicone bumpers and protective dock covers for Apple MagSafe chargers.`,
+        'charger-and-cables': `Fast, durable braided cables and high-efficiency power adapters.`,
+        'cover-charms': `Handcrafted wrist lanyards and decorative bead charms for personal style.`,
+        'other-accessories': `Lens protectors, desktop phone stands, and daily mobile accessories.`,
+        'our-bestsellers': `Our top customer favorites, tried and tested for daily durability and style.`,
+        'new-arrivals': `The latest additions to the Covertok collection, updated weekly.`
       };
       categoryDesc.innerHTML = descMap[currentCategory] || `Curated authentic Covertok accessories designed to elevate your everyday setup.`;
     }

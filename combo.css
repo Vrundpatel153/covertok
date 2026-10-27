@@ -7,7 +7,7 @@
 body.combo-page-canvas {
   background-color: #FFFFFF !important;
   color: #171513 !important;
-  font-family: var(--font-body, 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif);
+  font-family: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
   margin: 0;
   padding: 0;
   padding-bottom: 96px; /* Space for sticky bottom bar */
@@ -51,7 +51,7 @@ body.combo-page-canvas {
   flex-direction: row !important;
   align-items: center !important;
   gap: 6px !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.78rem !important;
   font-weight: 600 !important;
   color: #786B61 !important;
@@ -88,7 +88,7 @@ body.combo-page-canvas {
 }
 
 .combo-headline {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.35rem;
   font-weight: 800;
   color: #171513;
@@ -104,7 +104,7 @@ body.combo-page-canvas {
   gap: 5px;
   background: #171513;
   color: #FFFFFF;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.74rem;
   font-weight: 800;
   padding: 4px 11px;
@@ -118,7 +118,7 @@ body.combo-page-canvas {
   align-items: center;
   background: #FAF7F2;
   color: #786B61;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.78rem;
   font-weight: 700;
   padding: 3px 10px;
@@ -158,7 +158,7 @@ body.combo-page-canvas {
   border: 1.5px solid #E2DCD4;
   border-radius: 999px;
   background: #FFFFFF;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.88rem;
   font-weight: 500;
   color: #171513;
@@ -247,7 +247,7 @@ body.combo-page-canvas {
   border: 1.5px solid #E2DCD4;
   background: #FFFFFF;
   color: #5C5249;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
@@ -299,7 +299,7 @@ body.combo-page-canvas {
 }
 
 .catalog-sort-label {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.82rem !important;
   font-weight: 700 !important;
   color: #786B61 !important;
@@ -327,7 +327,7 @@ body.combo-page-canvas {
   background: #FFFFFF !important;
   border: 1.5px solid #E2DCD4 !important;
   border-radius: 999px !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.82rem !important;
   font-weight: 600 !important;
   color: #171513 !important;
@@ -400,7 +400,7 @@ body.combo-page-canvas {
   gap: 12px !important;
   padding: 8px 12px !important;
   border-radius: 8px !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.82rem !important;
   font-weight: 600 !important;
   color: #4A443E !important;
@@ -489,7 +489,7 @@ body.combo-page-canvas {
   -webkit-backdrop-filter: blur(8px);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
 }
 
 .combo-card-checkbox:hover {
@@ -619,7 +619,7 @@ body.combo-page-canvas {
 }
 
 .combo-slots-badge {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.95rem;
   font-weight: 700;
   color: #171513;
@@ -667,7 +667,7 @@ body.combo-page-canvas {
 }
 
 .combo-sticky-price {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.25rem;
   font-weight: 800;
   color: #171513;
@@ -723,7 +723,7 @@ body.combo-page-canvas {
   padding: 12px 28px;
   border-radius: 999px;
   border: none;
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
@@ -812,7 +812,7 @@ body.combo-page-canvas {
 
   .catalog-sort-label {
     display: inline-block !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 0.76rem !important;
     color: #786B61 !important;
     font-weight: 700 !important;
@@ -978,7 +978,7 @@ body.combo-page-canvas {
   border: 1px solid #EAE5DB;
   border-radius: 999px;
   padding: 5px 14px;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.78rem;
   font-weight: 750;
   color: #171513;
@@ -1001,7 +1001,7 @@ body.combo-page-canvas {
 }
 
 .combo-studio-title {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   font-weight: 850;
   color: #171513;
@@ -1011,7 +1011,7 @@ body.combo-page-canvas {
 }
 
 .combo-studio-sub {
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: clamp(0.88rem, 1.2vw, 1.02rem);
   color: #64748B;
   line-height: 1.5;
@@ -1032,7 +1032,7 @@ body.combo-page-canvas {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
   color: #171513;
@@ -1071,11 +1071,11 @@ body.combo-page-canvas {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
 }
 
 .combo-price-bundle {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.35rem;
   font-weight: 900;
   color: #171513;
@@ -1107,7 +1107,7 @@ body.combo-page-canvas {
 .combo-reset-link {
   background: none;
   border: none;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
   color: #94A3B8;
@@ -1130,7 +1130,7 @@ body.combo-page-canvas {
   background: #000000;
   color: #FFFFFF;
   border: 1.5px solid #000000;
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.9rem;
   font-weight: 800;
   cursor: pointer;

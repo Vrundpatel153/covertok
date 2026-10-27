@@ -25,7 +25,7 @@
   border-radius: 999px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.24);
   backdrop-filter: blur(12px);
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.875rem;
   font-weight: 600;
   transform: translateY(24px) scale(0.96);
@@ -102,7 +102,7 @@
   width: 100%;
   border: none;
   outline: none;
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.15rem;
   font-weight: 600;
   color: #171513;
@@ -308,45 +308,54 @@
 .catalog-curated-eyebrow {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
-  padding: 4px 12px !important;
-  border-radius: 999px !important;
-  background: rgba(14, 165, 233, 0.08) !important;
-  color: #0284C7 !important;
-  border: 1px solid rgba(14, 165, 233, 0.28) !important;
-  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif) !important;
-  font-size: 0.68rem !important;
-  font-weight: 800 !important;
+  gap: 7px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748B !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 6px !important;
   width: fit-content !important;
 }
 
+.eyebrow-accent-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF5500;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(255, 85, 0, 0.5);
+  flex-shrink: 0;
+}
+
 .catalog-headline {
-  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif) !important;
-  font-size: clamp(1.4rem, 2.6vw, 2.2rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.03em !important;
-  color: #0C0B0A !important;
-  line-height: 1.18 !important;
-  margin: 0 0 6px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  color: #0A0A0A !important;
+  line-height: 1.15 !important;
+  margin: 0 0 8px !important;
 }
 
 .copper-accent {
-  background: linear-gradient(135deg, #FF5500 0%, #FF8A00 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 2px 10px rgba(255, 85, 0, 0.25)) !important;
-  font-weight: 800 !important;
-  display: inline-block !important;
+  color: inherit !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  filter: none !important;
+  font-weight: inherit !important;
 }
 
 .catalog-subtext {
-  font-size: 0.85rem !important;
-  color: #64748B !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.88rem !important;
+  color: #475569 !important;
   margin: 0 !important;
-  line-height: 1.48 !important;
+  line-height: 1.55 !important;
   max-width: 580px !important;
 }
 
@@ -476,7 +485,7 @@
 }
 
 .cat-pill-title {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.84rem;
   font-weight: 600;
   color: #334155;
@@ -491,7 +500,7 @@
 }
 
 .cat-pill-count {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 2px 7px;
@@ -511,7 +520,7 @@
 }
 
 .cat-pill-badge {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.72rem;
   font-weight: 800;
   padding: 2px 8px;
@@ -562,7 +571,7 @@
   border: none;
   outline: none;
   background: transparent;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.84rem;
   width: 100%;
   color: #171513;
@@ -583,7 +592,7 @@
 }
 
 .catalog-count-label {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.84rem;
   font-weight: 700;
   color: #786B61;
@@ -612,7 +621,7 @@
   background: #FAF8F5;
   border: 1.5px solid #E2DCD4;
   color: #171513;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
@@ -640,7 +649,7 @@
 }
 
 .catalog-sort-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 700;
   color: #786B61;
@@ -678,7 +687,7 @@
   background: #FAF8F5;
   border: 1.5px solid #E2DCD4;
   border-radius: 999px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
   color: #171513;
@@ -753,7 +762,7 @@
   gap: 12px;
   padding: 8px 12px;
   border-radius: 8px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 600;
   color: #4A443E;
@@ -922,7 +931,7 @@
 }
 
 .catalog-group-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 800;
   color: #735238;
@@ -944,7 +953,7 @@
   border: 1px solid #EAE5DB;
   background: #FDFBF7;
   color: #171513;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.775rem;
   font-weight: 700;
   cursor: pointer;
@@ -1060,7 +1069,7 @@
   background: none;
   border: none;
   color: #DC2626;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 800;
   cursor: pointer;
@@ -1169,7 +1178,7 @@
   border-radius: 999px;
   background: rgba(23, 21, 19, 0.88);
   color: #FFFFFF;
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -1251,7 +1260,7 @@
 }
 
 .card-product-title {
-  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.88rem;
   font-weight: 600;
   color: #171513;
@@ -1279,7 +1288,7 @@
 }
 
 .card-price-now {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.08rem;
   font-weight: 800;
   color: #171513;
@@ -1287,7 +1296,7 @@
 }
 
 .card-price-was {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.82rem;
   color: #8C827A;
   text-decoration: line-through;
@@ -1337,7 +1346,7 @@
 
 .pdp-related-eyebrow {
   display: block;
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.775rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -1347,7 +1356,7 @@
 }
 
 .pdp-related-title {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: clamp(1.8rem, 3.2vw, 2.4rem);
   font-weight: 900;
   color: #171513;
@@ -1570,7 +1579,7 @@
 }
 
 .qv-title {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.45rem;
   font-weight: 800;
   color: #171513;
@@ -1586,7 +1595,7 @@
 }
 
 .qv-price-now {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.5rem;
   font-weight: 900;
   color: #171513;
@@ -1699,7 +1708,7 @@
 }
 
 .trust-badge-title {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-weight: 800;
   font-size: 0.95rem;
   color: #171513;
@@ -1777,7 +1786,7 @@
   }
 
   .trust-badge-title {
-    font-family: var(--font-heading, 'Outfit', sans-serif) !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
     font-weight: 700 !important;
     font-size: 0.65rem !important;
     line-height: 1.15 !important;
@@ -1870,7 +1879,7 @@
   }
 
   .card-product-title {
-    font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif) !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 0.82rem !important;
     font-weight: 600 !important;
     line-height: 1.32 !important;
@@ -1892,7 +1901,7 @@
   }
 
   .card-price-now {
-    font-family: var(--font-heading, 'Outfit', sans-serif) !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
     font-size: 1rem !important;
     font-weight: 800 !important;
     color: #171513 !important;
@@ -1900,7 +1909,7 @@
   }
 
   .card-price-was {
-    font-family: var(--font-heading, 'Outfit', sans-serif) !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
     font-size: 0.78rem !important;
     color: #8C827A !important;
     text-decoration: line-through !important;
@@ -1974,7 +1983,7 @@
 }
 
 .shelf-title {
-  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.15rem;
   font-weight: 800;
   color: #171513;
@@ -1983,7 +1992,7 @@
 }
 
 .shelf-count-chip {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
   color: #786B61;
@@ -1998,7 +2007,7 @@
   background: transparent;
   border: none;
   color: #171513;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
@@ -2095,7 +2104,7 @@
 }
 
 .category-filter-banner .banner-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.84rem;
   font-weight: 700;
   color: #171513;
@@ -2111,7 +2120,7 @@
   background: #FFFFFF;
   border: 1px solid #D9D2C7;
   color: #171513;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.78rem;
   font-weight: 700;
   border-radius: 999px;
@@ -2128,7 +2137,7 @@
 
 /* Micro Rating Tag in Price Row */
 .card-micro-rating {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.68rem;
   font-weight: 700;
   color: #D97706;
@@ -2147,7 +2156,7 @@
   white-space: nowrap;
   box-sizing: border-box;
   padding: 3px 6px;
-  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.02em;
@@ -2163,7 +2172,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 700;
   color: #786B61;

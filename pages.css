@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 600;
   color: #71717A;
@@ -85,7 +85,7 @@
   color: #0A0A0A;
   padding: 4px 12px;
   border-radius: 999px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -102,29 +102,28 @@
 }
 
 .page-hero-title {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-size: 2.85rem;
-  font-weight: 900;
+  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  font-weight: 700;
   color: #0A0A0A;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.025em;
   margin: 0 0 16px 0;
   max-width: 900px;
 }
 
 .page-hero-title .text-gold {
-  background: linear-gradient(135deg, #FF5500 0%, #FF8A00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  display: inline-block;
+  color: inherit;
+  background: none;
+  -webkit-text-fill-color: initial;
+  font-weight: inherit;
 }
 
 .page-hero-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 1.08rem;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
   line-height: 1.6;
-  color: #52525B;
+  color: #475569;
   max-width: 760px;
   margin: 0 0 24px 0;
 }
@@ -134,7 +133,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   color: #71717A;
 }
@@ -186,7 +185,7 @@
 }
 
 .highlight-card-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.95rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -194,7 +193,7 @@
 }
 
 .highlight-card-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   color: #64748B;
   line-height: 1.45;
@@ -230,7 +229,7 @@
 }
 
 .toc-card-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -256,7 +255,7 @@
 
 .toc-nav-link {
   display: block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.88rem;
   font-weight: 600;
   color: #64748B;
@@ -302,14 +301,14 @@
 }
 
 .sidebar-help-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.1rem;
   font-weight: 800;
   margin: 0 0 8px 0;
 }
 
 .sidebar-help-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   color: #A1A1AA;
   line-height: 1.5;
@@ -324,7 +323,7 @@
   width: 100%;
   padding: 10px 16px;
   border-radius: 10px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.84rem;
   font-weight: 700;
   text-decoration: none;
@@ -372,7 +371,7 @@
 
 .section-num-tag {
   display: inline-block;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.72rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -382,7 +381,7 @@
 }
 
 .legal-heading {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-heading, 'Manrope', sans-serif);
   font-size: 1.5rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -391,7 +390,7 @@
 }
 
 .legal-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.95rem;
   line-height: 1.72;
   color: #475569;
@@ -416,7 +415,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.92rem;
   line-height: 1.55;
   color: #334155;
@@ -442,7 +441,7 @@
 }
 
 .legal-callout-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.92rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -453,7 +452,7 @@
 }
 
 .legal-callout-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.88rem;
   line-height: 1.6;
   color: #475569;
@@ -477,7 +476,7 @@
 }
 
 .step-num {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.7rem;
   font-weight: 900;
   color: #0A0A0A;
@@ -486,7 +485,7 @@
 }
 
 .step-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.92rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -494,7 +493,7 @@
 }
 
 .step-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   color: #64748B;
   line-height: 1.45;
@@ -554,7 +553,7 @@
 }
 
 .channel-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.15rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -564,7 +563,7 @@
 }
 
 .channel-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.86rem;
   color: #64748B;
   line-height: 1.45;
@@ -577,7 +576,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.88rem;
   font-weight: 700;
   color: #0A0A0A;
@@ -621,7 +620,7 @@
 }
 
 .contact-form-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.6rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -629,7 +628,7 @@
 }
 
 .contact-form-subtitle {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.92rem;
   color: #64748B;
   margin: 0 0 28px 0;
@@ -649,7 +648,7 @@
 }
 
 .form-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.82rem;
   font-weight: 700;
   color: #1E293B;
@@ -663,7 +662,7 @@
   padding: 12px 16px;
   border: 1.5px solid #E2E8F0;
   border-radius: 10px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.92rem;
   color: #0F172A;
   background: #FFFFFF;
@@ -691,7 +690,7 @@
   background: #0A0A0A;
   color: #FFFFFF;
   border: none;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -726,7 +725,7 @@
 }
 
 .info-box-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.1rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -740,7 +739,7 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 16px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
 }
 
 .info-detail-item:last-child {
@@ -806,7 +805,7 @@
 }
 
 .pillar-num {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 2.2rem;
   font-weight: 900;
   color: #0A0A0A;
@@ -815,7 +814,7 @@
 }
 
 .pillar-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.25rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -823,7 +822,7 @@
 }
 
 .pillar-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.9rem;
   color: #64748B;
   line-height: 1.6;
@@ -854,7 +853,7 @@
 }
 
 .about-quote-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.4;
@@ -865,7 +864,7 @@
 }
 
 .about-quote-author {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.9rem;
   color: #FFFFFF;
   font-weight: 700;
@@ -890,7 +889,7 @@
 }
 
 .stat-value {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 2.2rem;
   font-weight: 900;
   color: #0A0A0A;
@@ -899,7 +898,7 @@
 }
 
 .stat-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.8rem;
   font-weight: 600;
   color: #64748B;
@@ -941,7 +940,7 @@
   padding: 16px 54px 16px 56px;
   border: 1.5px solid #E2DCD4;
   border-radius: 999px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1rem;
   font-weight: 500;
   color: #171513;
@@ -1010,7 +1009,7 @@
   border: 1.5px solid #E2DCD4;
   background: #FFFFFF;
   color: #5C5249;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
@@ -1062,7 +1061,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
 }
 
 .search-count-text {
@@ -1105,7 +1104,7 @@
 }
 
 .empty-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.4rem;
   font-weight: 800;
   color: #0A0A0A;
@@ -1113,7 +1112,7 @@
 }
 
 .empty-desc {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.92rem;
   color: #64748B;
   max-width: 440px;
