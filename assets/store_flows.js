@@ -151,10 +151,21 @@
     const subtotal = cart.reduce((acc, item) => acc + (item.price * (item.qty || 1)), 0);
 
     // Header badge updates
-    document.querySelectorAll('#cartCount, #cartDrawerCount, .cart-badge-count').forEach(el => {
+    document.querySelectorAll('#cartCount, .cart-badge, .cart-badge-count, .pdp-badge-count').forEach(el => {
       el.textContent = count;
-      el.style.display = count > 0 ? 'inline-flex' : 'none';
+      el.setAttribute('data-count', String(count));
+      if (count > 0) {
+        el.style.display = 'inline-flex';
+        el.removeAttribute('hidden');
+      } else {
+        el.style.display = 'none';
+        el.setAttribute('hidden', 'true');
+      }
     });
+    const drawerBadge = document.getElementById('cartDrawerCount');
+    if (drawerBadge) {
+      drawerBadge.textContent = count;
+    }
 
     // Free Shipping Progress
     const progressFill = document.getElementById('cartProgressFill');

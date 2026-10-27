@@ -1730,28 +1730,105 @@ body {
   box-shadow: 0 10px 32px -10px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.98) !important;
 }
 
-/* Circular Floating Action Orbs in Header */
+/* --- Clean Modern Header Action Buttons --- */
 .icon-btn,
 .pdp-action-icon-btn,
 .header-right .icon-btn,
 .pdp-header-actions .pdp-action-icon-btn,
 .drops-arrow-circle {
-  background: var(--liquid-glass-bg) !important;
-  backdrop-filter: var(--liquid-glass-blur) !important;
-  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
-  border: var(--liquid-glass-border) !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), inset 0 1.5px 1px #FFFFFF !important;
+  width: 42px !important;
+  height: 42px !important;
   border-radius: 50% !important;
-  transition: var(--liquid-glass-transition) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  color: #0A0A0A !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+}
+
+.icon-btn svg,
+.pdp-action-icon-btn svg,
+.header-right .icon-btn svg,
+.drops-arrow-circle svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #0A0A0A !important;
+  fill: none !important;
+  transition: stroke 0.2s ease, transform 0.2s ease !important;
 }
 
 .icon-btn:hover,
 .pdp-action-icon-btn:hover,
+.header-right .icon-btn:hover,
+.pdp-header-actions .pdp-action-icon-btn:hover,
 .drops-arrow-circle:hover {
-  background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(255, 85, 0, 0.6) !important;
-  transform: translateY(-2px) scale(1.06) !important;
-  box-shadow: 0 10px 26px rgba(255, 85, 0, 0.25), inset 0 1.5px 1px #FFFFFF !important;
+  background: #0A0A0A !important;
+  border-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14) !important;
+}
+
+.icon-btn:hover svg,
+.pdp-action-icon-btn:hover svg,
+.header-right .icon-btn:hover svg,
+.drops-arrow-circle:hover svg {
+  stroke: #FFFFFF !important;
+}
+
+.icon-btn:active,
+.pdp-action-icon-btn:active,
+.drops-arrow-circle:active {
+  transform: scale(0.94) !important;
+}
+
+/* Header Cart Badge (Hidden when empty) */
+.cart-badge,
+.pdp-badge-count {
+  position: absolute !important;
+  top: -3px !important;
+  right: -3px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  padding: 0 5px !important;
+  border-radius: 999px !important;
+  background: #0A0A0A !important;
+  color: #FFFFFF !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  border: 2px solid #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  transition: all 0.2s ease !important;
+}
+
+.cart-badge:empty,
+.cart-badge[data-count="0"],
+.cart-badge[hidden],
+.pdp-badge-count:empty,
+.pdp-badge-count[data-count="0"],
+.pdp-badge-count[hidden] {
+  display: none !important;
+}
+
+.icon-btn:hover .cart-badge,
+.pdp-action-icon-btn:hover .pdp-badge-count {
+  background: #FF5500 !important;
+  border-color: #0A0A0A !important;
 }
 
 /* Mega Dropdown Menus */
