@@ -105,15 +105,10 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.74rem;
       font-weight: 800;
-      padding: 3px 10px;
+      padding: 4px 11px;
       border-radius: 999px;
       letter-spacing: 0.03em;
       white-space: nowrap;
-    }
-
-    .combo-bundle-pill svg {
-      color: #C5A059;
-      fill: #C5A059;
     }
 
     .combo-count-pill {
@@ -469,19 +464,58 @@
         font-size: 0.85rem;
       }
       .combo-row-secondary {
-        gap: 10px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100% !important;
       }
-      .catalog-sort-label {
+      .combo-pills-wrap {
+        width: auto !important;
+        flex: none !important;
+        margin: 0 -16px !important;
+        padding: 4px 16px 6px 16px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+      }
+      .combo-pills-wrap::-webkit-scrollbar {
         display: none !important;
       }
-      .luxury-sort-trigger {
-        padding: 5px 12px !important;
-        height: 34px !important;
-        font-size: 0.78rem !important;
+      .catalog-nav-bar {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: max-content !important;
+        flex-wrap: nowrap !important;
+        padding: 0 !important;
       }
       .catalog-nav-pill {
-        padding: 5px 12px;
-        font-size: 0.76rem;
+        padding: 6px 14px !important;
+        font-size: 0.78rem !important;
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+      }
+      .combo-row-secondary .luxury-custom-sort {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        width: 100% !important;
+        margin-top: 2px !important;
+        gap: 8px !important;
+      }
+      .catalog-sort-label {
+        display: inline-block !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 0.76rem !important;
+        color: #786B61 !important;
+        font-weight: 700 !important;
+      }
+      .luxury-sort-trigger {
+        padding: 6px 14px !important;
+        height: 35px !important;
+        font-size: 0.78rem !important;
+        border-radius: 999px !important;
       }
     }
   </style>
@@ -493,7 +527,7 @@
     <div class="site-announcement-track">
       <span>PREPAID ORDER SHIPS WITHIN 2 HRS <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
       <span class="sep">•</span>
-      <span>3-PIECE COMBO DEAL IS LIVE: ANY 3 FOR FLAT ₹1,199 <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+      <span>3-PIECE COMBO DEAL IS LIVE: ANY 3 FOR FLAT ₹1,199 <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
       <span class="sep">•</span>
       <span>CASH ON DELIVERY AVAILABLE ACROSS INDIA <svg class="badge-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
       <span class="sep">•</span>
@@ -660,10 +694,7 @@
             </nav>
             <div class="combo-heading-wrap">
               <h1 class="combo-headline">Build Your 3-Piece Suite</h1>
-              <span class="combo-bundle-pill">
-                <svg width="11" height="11" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                FLAT ₹1,199
-              </span>
+              <span class="combo-bundle-pill">FLAT ₹1,199</span>
               <span class="combo-count-pill" id="comboCountLabel">Showing 53 Eligible Products</span>
             </div>
           </div>

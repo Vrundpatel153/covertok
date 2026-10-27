@@ -107,15 +107,10 @@ body.combo-page-canvas {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.74rem;
   font-weight: 800;
-  padding: 3px 10px;
+  padding: 4px 11px;
   border-radius: 999px;
   letter-spacing: 0.03em;
   white-space: nowrap;
-}
-
-.combo-bundle-pill svg {
-  color: #C5A059;
-  fill: #C5A059;
 }
 
 .combo-count-pill {
@@ -751,6 +746,69 @@ body.combo-page-canvas {
     display: none !important;
   }
 
+  /* Decouple mobile category pills scroller and filter/sort dropdown */
+  .combo-row-secondary {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .combo-pills-wrap {
+    width: auto !important;
+    flex: none !important;
+    margin: 0 -16px !important;
+    padding: 4px 16px 6px 16px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .combo-pills-wrap::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .catalog-nav-bar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: max-content !important;
+    flex-wrap: nowrap !important;
+    padding: 0 !important;
+  }
+
+  .catalog-nav-pill {
+    padding: 6px 14px !important;
+    font-size: 0.78rem !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+
+  .combo-row-secondary .luxury-custom-sort {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    width: 100% !important;
+    margin-top: 2px !important;
+    gap: 8px !important;
+  }
+
+  .catalog-sort-label {
+    display: inline-block !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 0.76rem !important;
+    color: #786B61 !important;
+    font-weight: 700 !important;
+  }
+
+  .luxury-sort-trigger {
+    padding: 6px 14px !important;
+    height: 35px !important;
+    font-size: 0.78rem !important;
+    border-radius: 999px !important;
+  }
+
   .combo-sticky-bar {
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
     border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -913,8 +971,7 @@ body.combo-page-canvas {
 }
 
 .combo-studio-sparkle {
-  color: #C5A059;
-  font-size: 0.9rem;
+  display: none !important;
 }
 
 .combo-flat-pill {
@@ -1095,5 +1152,29 @@ body.combo-page-canvas {
     width: 100%;
     padding: 12px 16px;
     font-size: 0.84rem;
+  }
+
+  .combo-pills-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 0 !important;
+  }
+
+  #comboHomeCatTabs {
+    width: auto !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    margin: 0 -16px !important;
+    padding: 4px 16px 6px 16px !important;
+  }
+
+  #comboHomeCatTabs::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .combo-full-page-link {
+    align-self: flex-start !important;
   }
 }
