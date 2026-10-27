@@ -13032,3 +13032,24 @@ a.footer-contact-main:hover {
 .video-reel-card:hover .video-card-inline-player {
   transform: scale(1.04);
 }
+
+/* ==========================================================================
+   MOBILE VIEW: HIDE ALL BREADCRUMBS GLOBALLY ACROSS ALL PAGES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .page-breadcrumb,
+  .catalog-breadcrumb-strip,
+  .catalog-breadcrumb,
+  .pdp-breadcrumbs-strip,
+  .pdp-breadcrumbs,
+  .combo-breadcrumb,
+  [class*="breadcrumb"],
+  [aria-label="Breadcrumb"],
+  [aria-label="Breadcrumbs"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

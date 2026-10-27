@@ -747,6 +747,10 @@ body.combo-page-canvas {
     padding-bottom: 120px;
   }
 
+  .combo-breadcrumb {
+    display: none !important;
+  }
+
   .combo-sticky-bar {
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
     border-top: 1px solid rgba(0, 0, 0, 0.08);

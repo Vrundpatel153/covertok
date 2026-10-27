@@ -2841,7 +2841,8 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   /* 1. HIDE BREADCRUMBS ON MOBILE PER USER REQUEST */
-  .pdp-breadcrumbs-strip {
+  .pdp-breadcrumbs-strip,
+  .pdp-breadcrumbs {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;

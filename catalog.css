@@ -377,15 +377,9 @@
     padding: 0;
     gap: 2px;
   }
-  .catalog-breadcrumb-strip {
-    margin-bottom: 14px;
-    padding-top: 4px;
-  }
+  .catalog-breadcrumb-strip,
   .catalog-breadcrumb {
-    font-size: 12px;
-    gap: 6px;
-    color: #6B7280;
-    margin-bottom: 0;
+    display: none !important;
   }
   .catalog-curated-eyebrow {
     font-size: 11px;
@@ -411,9 +405,6 @@
   }
   .catalog-headline {
     font-size: 1.2rem !important;
-  }
-  .catalog-breadcrumb {
-    font-size: 11px;
   }
 }
 

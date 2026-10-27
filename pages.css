@@ -1188,8 +1188,7 @@
   }
 
   .page-breadcrumb {
-    margin-bottom: 6px !important;
-    font-size: 0.74rem !important;
+    display: none !important;
   }
 
   .page-hero-title {
