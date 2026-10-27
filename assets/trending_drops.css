@@ -120,22 +120,55 @@
   box-shadow: 0 4px 14px rgba(255, 85, 0, 0.35);
 }
 
-/* 4-Column Grid on Desktop, Horizontal Reel on Mobile */
+/* Infinite Left-to-Right Swiping Track on All Devices */
+.trending-drops-slider-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 24px;
+  mask-image: linear-gradient(to right, transparent 0%, #000 2.5%, #000 97.5%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 2.5%, #000 97.5%, transparent 100%);
+}
+
 .trending-drops-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  perspective: 1200px;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 20px !important;
+  width: max-content !important;
+  animation: dropsMarqueeLTR 34s linear infinite;
+  will-change: transform;
+  cursor: grab;
+  padding: 6px 0;
+}
+
+.trending-drops-grid.is-dragging {
+  cursor: grabbing;
+}
+
+@keyframes dropsMarqueeLTR {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.trending-drops-slider-wrap:hover .trending-drops-grid {
+  animation-play-state: paused;
 }
 
 /* Interactive 3D Perspective Card */
 .drop-3d-card {
+  flex: 0 0 280px !important;
+  width: 280px !important;
+  min-width: 280px !important;
+  max-width: 280px !important;
   position: relative;
   border-radius: 22px;
   background: transparent;
   perspective: 1000px;
   transform-style: preserve-3d;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .drop-card-inner {
@@ -484,16 +517,17 @@
     height: 28px;
   }
 
+  .trending-drops-slider-wrap {
+    margin: 0 -20px;
+    padding: 6px 0 16px;
+  }
+
   .trending-drops-grid {
     display: flex !important;
-    gap: 14px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 6px 16px 20px 16px;
-    margin: 0 -20px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    gap: 14px !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    padding: 4px 0 14px 0 !important;
   }
 
   .trending-drops-grid::-webkit-scrollbar {
@@ -501,9 +535,10 @@
   }
 
   .drop-3d-card {
-    flex: 0 0 240px;
-    width: 240px;
-    scroll-snap-align: start;
+    flex: 0 0 236px !important;
+    width: 236px !important;
+    min-width: 236px !important;
+    max-width: 236px !important;
   }
 
   .drop-card-visual {

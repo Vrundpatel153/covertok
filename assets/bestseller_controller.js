@@ -22,30 +22,33 @@ document.addEventListener('DOMContentLoaded', () => {
   if (numOriginals === 0) return;
 
   // 2. Clone cards before and after for true infinite seamless loop
-  // Buffer: [Clone Set 1 (0..N-1)] [Originals (0..N-1)] [Clone Set 2 (0..N-1)]
-  const prependFrag = document.createDocumentFragment();
-  originalCards.forEach((card, idx) => {
-    const clone = card.cloneNode(true);
-    clone.classList.add('bestseller-clone');
-    clone.setAttribute('data-clone', 'pre');
-    clone.setAttribute('data-original-index', idx);
-    prependFrag.appendChild(clone);
-  });
+  // Buffer: [Clone 1 (N)] [Clone 2 (N)] [Originals (N)] [Clone 3 (N)] [Clone 4 (N)] (5 sets total)
+  for (let c = 0; c < 2; c++) {
+    const prependFrag = document.createDocumentFragment();
+    originalCards.forEach((card, idx) => {
+      const clone = card.cloneNode(true);
+      clone.classList.add('bestseller-clone');
+      clone.setAttribute('data-clone', 'pre');
+      clone.setAttribute('data-original-index', idx);
+      prependFrag.appendChild(clone);
+    });
+    track.insertBefore(prependFrag, track.firstChild);
+  }
 
-  const appendFrag = document.createDocumentFragment();
-  originalCards.forEach((card, idx) => {
-    const clone = card.cloneNode(true);
-    clone.classList.add('bestseller-clone');
-    clone.setAttribute('data-clone', 'post');
-    clone.setAttribute('data-original-index', idx);
-    appendFrag.appendChild(clone);
-  });
+  for (let c = 0; c < 2; c++) {
+    const appendFrag = document.createDocumentFragment();
+    originalCards.forEach((card, idx) => {
+      const clone = card.cloneNode(true);
+      clone.classList.add('bestseller-clone');
+      clone.setAttribute('data-clone', 'post');
+      clone.setAttribute('data-original-index', idx);
+      appendFrag.appendChild(clone);
+    });
+    track.appendChild(appendFrag);
+  }
 
-  track.insertBefore(prependFrag, originalCards[0]);
-  track.appendChild(appendFrag);
-
-  // All cards now: 3 sets (indices 0..5: clone, 6..11: real, 12..17: clone)
-  let currentIndex = numOriginals; // start at first real card (index 6)
+  // All cards now: 5 sets (indices 0..2N-1: clone, 2N..3N-1: real, 3N..5N-1: clone)
+  let currentIndex = numOriginals * 2; // start at first real card in middle set
   let isAnimating = false;
   let isDragging = false;
   let hasDragged = false;
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     // Fallback based on viewport
-    const step = window.innerWidth <= 768 ? 214 : 233;
+    const step = window.innerWidth <= 768 ? 218 : 233;
     return { width: 215, step };
   };
 
@@ -80,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     baseTranslateX = targetX;
 
     if (withTransition) {
-      track.style.transition = 'transform 0.45s cubic-bezier(0.2, 0.8, 0.25, 1)';
+      track.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
     } else {
       track.style.transition = 'none';
     }
@@ -96,21 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Seamless boundary teleportation
+  // Seamless boundary teleportation into center set (numOriginals * 2 .. numOriginals * 3 - 1)
   const normalizeIndex = () => {
-    if (currentIndex >= numOriginals * 2) {
+    const minCenter = numOriginals * 2;
+    const maxCenter = numOriginals * 3;
+    let changed = false;
+    while (currentIndex < minCenter) {
+      currentIndex += numOriginals;
+      changed = true;
+    }
+    while (currentIndex >= maxCenter) {
       currentIndex -= numOriginals;
+      changed = true;
+    }
+    if (changed) {
       setTransform(currentIndex, false);
       // Force layout reflow so future transitions animate correctly
-      void track.offsetHeight;
-    } else if (currentIndex < numOriginals) {
-      currentIndex += numOriginals;
-      setTransform(currentIndex, false);
       void track.offsetHeight;
     }
   };
 
-  // Slide navigation
+  // Slide navigation (Left-to-Right auto / interactive motion)
   const slideNext = () => {
     normalizeIndex();
     currentIndex++;
@@ -127,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const goToRealIndex = (realIdx) => {
     normalizeIndex();
-    currentIndex = numOriginals + realIdx;
+    currentIndex = numOriginals * 2 + realIdx;
     setTransform(currentIndex, true);
     updateDots(currentIndex);
   };
@@ -299,12 +308,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const duration = Math.max(1, Date.now() - startTime);
       const velocity = diffX / duration;
       const { step } = getCardMetrics();
-      const threshold = step * 0.18; // 18% drag distance or quick flick
 
-      if (diffX < -threshold || velocity < -0.3) {
-        slideNext();
-      } else if (diffX > threshold || velocity > 0.3) {
-        slidePrev();
+      const cardsMoved = Math.round(diffX / step);
+      if (cardsMoved !== 0) {
+        currentIndex -= cardsMoved;
+        setTransform(currentIndex, true);
+        updateDots(currentIndex);
+      } else if (Math.abs(velocity) > 0.25) {
+        if (velocity > 0) {
+          slidePrev(); // swipe right -> flow LTR
+        } else {
+          slideNext(); // swipe left -> flow RTL
+        }
       } else {
         // Snap back to current
         setTransform(currentIndex, true);
@@ -406,16 +421,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1500);
   });
 
-  // Autoplay Logic (every 4.5s, pauses on hover or interaction)
+  // Autoplay Logic (every 3.2s, slides Left-to-Right, pauses on hover or interaction)
   let autoplayTimer = null;
 
   const startAutoplay = () => {
     stopAutoplay();
     autoplayTimer = setInterval(() => {
       if (!isDragging && !isHovered) {
-        slideNext();
+        slidePrev(); // Slides Left-to-Right!
       }
-    }, 4500);
+    }, 3200);
   };
 
   const stopAutoplay = () => {

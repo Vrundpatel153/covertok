@@ -10401,10 +10401,18 @@ a.footer-contact-main:hover {
   width: max-content;
   padding: 0 18px;
   will-change: transform;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/* Row 1: Left-to-Right Marquee */
-.popular-track-ltr {
+.popular-slider-track.is-dragging {
+  cursor: grabbing;
+}
+
+/* Row 1 & Row 2: Left-to-Right Infinite Marquee */
+.popular-track-ltr,
+.popular-track-rtl {
   animation: popularMarqueeLTR 36s linear infinite;
 }
 
@@ -10413,14 +10421,9 @@ a.footer-contact-main:hover {
   100% { transform: translateX(0); }
 }
 
-/* Row 2: Right-to-Left Marquee */
-.popular-track-rtl {
-  animation: popularMarqueeRTL 36s linear infinite;
-}
-
 @keyframes popularMarqueeRTL {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 /* Pause on hover */
@@ -12302,18 +12305,36 @@ a.footer-contact-main:hover {
   min-width: 0; /* Prevents CSS grid overflow */
   display: flex;
   align-items: center;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #000 2.5%, #000 97.5%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 2.5%, #000 97.5%, transparent 100%);
 }
 
 .reviews-track {
-  display: flex;
-  gap: 18px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 18px !important;
+  width: max-content !important;
+  overflow: visible !important;
+  scroll-snap-type: none !important;
   padding: 8px 4px 16px 4px;
-  width: 100%;
+  animation: reviewsMarqueeLTR 40s linear infinite;
+  will-change: transform;
+  cursor: grab;
+}
+
+.reviews-track.is-dragging {
+  cursor: grabbing;
+}
+
+@keyframes reviewsMarqueeLTR {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.reviews-slider-wrap:hover .reviews-track {
+  animation-play-state: paused;
 }
 
 .reviews-track::-webkit-scrollbar {
@@ -12947,6 +12968,13 @@ a.footer-contact-main:hover {
   scroll-snap-type: none !important;
   animation: videosMarqueeLTR 40s linear infinite !important;
   will-change: transform;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.videos-track.is-dragging {
+  cursor: grabbing;
 }
 
 @keyframes videosMarqueeLTR {
