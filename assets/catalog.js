@@ -78,17 +78,11 @@
 
       if (isComboPill) {
         card.innerHTML = `
-          <span class="cat-pill-avatar combo-avatar">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C5A059"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </span>
           <span class="cat-pill-title">3-Piece Combo</span>
           <span class="cat-pill-badge">₹1,199</span>
         `;
       } else {
         card.innerHTML = `
-          <span class="cat-pill-avatar">
-            <img src="${cat.thumb || 'assets/brand_iphone16_pro.webp'}" alt="${cat.title}" class="cat-pill-img" loading="lazy">
-          </span>
           <span class="cat-pill-title">${cat.title}</span>
           <span class="cat-pill-count">${count}</span>
         `;

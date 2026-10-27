@@ -44,16 +44,16 @@ html, body {
 
 /* 1. TOP ANNOUNCEMENT MARQUEE */
 .pdp-announcement-bar {
-  background: linear-gradient(90deg, #0C0B0A 0%, #181613 50%, #0C0B0A 100%) !important;
-  color: rgba(255, 255, 255, 0.94) !important;
-  border-bottom: 1px solid rgba(197, 160, 89, 0.32) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  background: #F5EFEB !important;
+  color: #1F1C18 !important;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.28) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
   font-family: var(--pdp-font-body) !important;
-  font-size: 0.69rem !important;
+  font-size: 0.70rem !important;
   font-weight: 600 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.07em !important;
   text-transform: uppercase !important;
-  padding: 7px 0 !important;
+  padding: 8px 0 !important;
   overflow: hidden !important;
   position: relative !important;
   z-index: 1001 !important;
@@ -66,12 +66,17 @@ html, body {
   align-items: center;
   white-space: nowrap;
   animation: pdpMarquee 28s linear infinite;
-  gap: 28px;
+  gap: 36px;
 }
 
 .pdp-announcement-track span.sep {
-  color: rgba(255, 255, 255, 0.4);
-  opacity: 0.8;
+  color: #C5A059;
+  opacity: 0.75;
+  font-size: 0.75rem;
+}
+
+.pdp-announcement-track .badge-icon {
+  display: none !important;
 }
 
 @keyframes pdpMarquee {

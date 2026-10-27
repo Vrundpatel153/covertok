@@ -1749,7 +1749,6 @@ body {
 .filter-pill.active,
 .catalog-nav-pill.active,
 .pdp-switch-pill.active,
-.catalog-cat-card.active,
 .catalog-price-btn.active {
   background: var(--liquid-glass-dark) !important;
   backdrop-filter: var(--liquid-glass-blur) !important;
@@ -1761,7 +1760,6 @@ body {
 
 /* Pill Count Badges */
 .catalog-pill-count,
-.cat-pill-count,
 .filter-count-badge {
   background: rgba(0, 0, 0, 0.06) !important;
   backdrop-filter: blur(8px) !important;
@@ -1769,11 +1767,18 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.6) !important;
 }
 
-.catalog-nav-pill.active .catalog-pill-count,
-.catalog-cat-card.active .cat-pill-count {
+.catalog-nav-pill.active .catalog-pill-count {
   background: rgba(255, 255, 255, 0.22) !important;
   color: #FFFFFF !important;
   border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.catalog-cat-card.active .cat-pill-count {
+  background: #C5A059 !important;
+  color: #FFFFFF !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 2px 6px rgba(197, 160, 89, 0.35) !important;
+  font-weight: 800 !important;
 }
 
 /* Luxury Sort & Filter Dropdown Menus */
@@ -2425,7 +2430,6 @@ button:active,
   box-shadow: 0 8px 22px rgba(197, 160, 89, 0.2), inset 0 1.5px 1px #FFFFFF !important;
 }
 
-.catalog-cat-card.active,
 .combo-cat-pill.active,
 .pdp-switch-pill.active,
 .catalog-price-btn.active {
@@ -2439,11 +2443,6 @@ button:active,
 .catalog-cat-card.active .cat-pill-count,
 .combo-cat-pill.active .cat-pill-count {
   animation: countBadgePop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.catalog-cat-card.active .cat-pill-avatar {
-  border-color: #C5A059 !important;
-  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.45), 0 4px 10px rgba(197, 160, 89, 0.28) !important;
 }
 
 /* --- 14.5 Luxury Sort & Filter Dropdown In-Out Physics --- */
