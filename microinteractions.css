@@ -1673,7 +1673,7 @@ body {
 .discount-badge,
 .card-badge,
 .card-badge-pill,
-.combo-card-checkbox {
+.combo-card-checkbox:not(.checked) {
   background: rgba(255, 255, 255, 0.80) !important;
   backdrop-filter: var(--liquid-glass-blur-soft) !important;
   -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
@@ -2135,4 +2135,460 @@ body {
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.04), inset 0 1px 0 #FFFFFF !important;
   border-radius: 999px !important;
 }
+
+/* ==========================================================================
+   14. MASTER CINEMATIC MICROINTERACTIONS, HOVER PHYSICS & NON-GENERIC ON-OFF ANIMATIONS
+   - Ultra-smooth in-out FLIP rearrangement support
+   - Universal tactile mobile touch feedback (-webkit-tap-highlight-color removal)
+   - Dynamic checkbox on/off elastic pop & SVG checkmark stroke draw
+   - Category pill spring bounce & count badge pop
+   - Specular liquid light sweep on all card hovers
+   - Dropdown menu & filter panel spring in-out physics
+   ========================================================================== */
+
+/* --- 14.1 Universal Tactile Touch & Active Physics --- */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Global Haptic Compression on Interactive Elements */
+button:active,
+.btn:active,
+.catalog-cat-card:active,
+.combo-cat-pill:active,
+.pdp-switch-pill:active,
+.filter-chip:active,
+.catalog-price-btn:active,
+.luxury-sort-trigger:active,
+.icon-btn:active,
+.card-wishlist-btn:active,
+.combo-card-checkbox:active,
+.quick-view-btn:active,
+.cart-qty-btn:active {
+  transform: scale(0.94) !important;
+  transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* --- 14.2 Master Specular Light Sweep & Hover Elevation (All Cards) --- */
+.catalog-card,
+.combo-catalog-card,
+.product-card,
+.bestseller-prod-card,
+.drop-card-inner,
+.bento-card,
+.review-item-card,
+.pdp-product-card,
+.bestseller-card,
+.quick-view-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s ease !important;
+  will-change: transform, box-shadow;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.catalog-card::before,
+.combo-catalog-card::before,
+.product-card::before,
+.bestseller-prod-card::before,
+.drop-card-inner::before,
+.bento-card::before,
+.pdp-product-card::before,
+.quick-view-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(
+    108deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(197, 160, 89, 0.38) 65%,
+    transparent 100%
+  );
+  transform: skewX(-24deg);
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.catalog-card:hover::before,
+.combo-catalog-card:hover::before,
+.product-card:hover::before,
+.bestseller-prod-card:hover::before,
+.drop-card-inner:hover::before,
+.bento-card:hover::before,
+.pdp-product-card:hover::before,
+.quick-view-card:hover::before {
+  left: 175%;
+  opacity: 1;
+}
+
+.catalog-card:hover,
+.combo-catalog-card:hover,
+.product-card:hover,
+.bestseller-prod-card:hover,
+.drop-card-inner:hover {
+  transform: translateY(-6px) scale(1.012) !important;
+  border-color: rgba(197, 160, 89, 0.55) !important;
+  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 24px rgba(197, 160, 89, 0.22) !important;
+}
+
+/* Card Internal Media Smooth Zoom */
+.catalog-card .card-main-img,
+.combo-catalog-card .card-main-img,
+.product-card img,
+.bestseller-prod-card img {
+  transition: transform 0.48s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease !important;
+  will-change: transform;
+}
+
+.catalog-card:hover .card-main-img,
+.combo-catalog-card:hover .card-main-img,
+.product-card:hover img,
+.bestseller-prod-card:hover img {
+  transform: scale(1.06) !important;
+}
+
+/* --- 14.3 Non-Generic Checkbox On-Off Microinteraction --- */
+/* Checkbox Spring Pop Keyframe */
+@keyframes checkboxElasticPop {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.18); }
+  65% { transform: scale(0.96); }
+  100% { transform: scale(1); }
+}
+
+@keyframes checkCirclePop {
+  0% { transform: scale(0.7); }
+  45% { transform: scale(1.28); }
+  75% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+@keyframes checkAuraPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 16px rgba(197, 160, 89, 0);
+    opacity: 0;
+  }
+}
+
+.combo-card-checkbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #171513 !important;
+  border-radius: 999px !important;
+  padding: 4px 12px !important;
+  min-height: 28px !important;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 1px 1px #FFFFFF !important;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  user-select: none;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+}
+
+.combo-card-checkbox:hover {
+  background: #FFFFFF !important;
+  border-color: #C5A059 !important;
+  color: #171513 !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 6px 16px rgba(197, 160, 89, 0.22), inset 0 1px 1px #FFFFFF !important;
+}
+
+.combo-check-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1.5px solid #94A3B8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.combo-check-circle svg {
+  display: block !important;
+  stroke: #FFFFFF;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 26;
+  stroke-dashoffset: 26;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: stroke-dashoffset 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s ease,
+              transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Checked State: Pure Artisan Obsidian & Gold Bloom */
+.combo-card-checkbox.checked {
+  background: linear-gradient(135deg, #1C1A18 0%, #0A0A0A 100%) !important;
+  border-color: #C5A059 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.36), 0 2px 6px rgba(0, 0, 0, 0.24), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+  animation: checkboxElasticPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.combo-card-checkbox.checked::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 999px;
+  animation: checkAuraPulse 0.55s ease-out forwards;
+  pointer-events: none;
+}
+
+.combo-card-checkbox.checked .combo-check-circle {
+  background: linear-gradient(135deg, #DFBE74 0%, #C5A059 100%) !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.6) !important;
+  animation: checkCirclePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.combo-card-checkbox.checked .combo-check-circle svg {
+  stroke-dashoffset: 0 !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.combo-card-checkbox.checked .combo-checkbox-text {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+/* Checked Card Parent Selection Glow */
+.combo-catalog-card.selected,
+.combo-catalog-card.is-selected {
+  border-color: rgba(197, 160, 89, 0.85) !important;
+  box-shadow: 0 18px 42px -6px rgba(197, 160, 89, 0.3), 0 0 0 1.5px rgba(197, 160, 89, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.95) !important;
+  transform: translateY(-4px) scale(1.01) !important;
+}
+
+/* --- 14.4 Category Pills & Filter Chips Microinteractions --- */
+@keyframes pillActivePop {
+  0% { transform: scale(0.92); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+@keyframes countBadgePop {
+  0% { transform: scale(0.7); opacity: 0.6; }
+  60% { transform: scale(1.22); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.catalog-cat-card,
+.combo-cat-pill,
+.pdp-switch-pill,
+.catalog-price-btn,
+.filter-chip {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease !important;
+}
+
+.catalog-cat-card:hover,
+.combo-cat-pill:hover,
+.pdp-switch-pill:hover,
+.catalog-price-btn:hover {
+  transform: translateY(-2px) scale(1.025) !important;
+  border-color: rgba(197, 160, 89, 0.65) !important;
+  box-shadow: 0 8px 22px rgba(197, 160, 89, 0.2), inset 0 1.5px 1px #FFFFFF !important;
+}
+
+.catalog-cat-card.active,
+.combo-cat-pill.active,
+.pdp-switch-pill.active,
+.catalog-price-btn.active {
+  background: linear-gradient(145deg, #1C1A18 0%, #0A0A0A 100%) !important;
+  border-color: #C5A059 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32), 0 0 16px rgba(197, 160, 89, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.45) !important;
+  animation: pillActivePop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.catalog-cat-card.active .cat-pill-count,
+.combo-cat-pill.active .cat-pill-count {
+  animation: countBadgePop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.catalog-cat-card.active .cat-pill-avatar {
+  border-color: #C5A059 !important;
+  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.45), 0 4px 10px rgba(197, 160, 89, 0.28) !important;
+}
+
+/* --- 14.5 Luxury Sort & Filter Dropdown In-Out Physics --- */
+.luxury-sort-trigger {
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.luxury-sort-trigger .sort-trigger-icon {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.luxury-sort-dropdown.open .sort-trigger-icon {
+  transform: rotate(180deg) !important;
+  color: #C5A059 !important;
+}
+
+.luxury-sort-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.96) !important;
+  filter: blur(4px);
+  transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.2s ease,
+              visibility 0.24s !important;
+  pointer-events: none;
+  transform-origin: top right;
+}
+
+.luxury-sort-dropdown.open .luxury-sort-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+  filter: blur(0px) !important;
+  pointer-events: auto !important;
+}
+
+.luxury-sort-option {
+  transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease !important;
+}
+
+.luxury-sort-option:hover {
+  transform: translateX(4px) !important;
+  background: rgba(197, 160, 89, 0.12) !important;
+  color: #171513 !important;
+}
+
+.luxury-sort-option.active {
+  background: linear-gradient(135deg, #1C1A18 0%, #0A0A0A 100%) !important;
+  color: #FFFFFF !important;
+}
+
+/* Active Filter Chips Entrance & Removal */
+@keyframes chipEntrance {
+  0% { transform: scale(0.8) translateY(6px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.catalog-chip {
+  animation: chipEntrance 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transition: transform 0.2s ease, background 0.2s ease !important;
+}
+
+.catalog-chip:hover {
+  transform: translateY(-1px) scale(1.02) !important;
+  border-color: #C5A059 !important;
+}
+
+.catalog-chip-remove {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.18s ease !important;
+}
+
+.catalog-chip-remove:hover {
+  transform: rotate(90deg) scale(1.2) !important;
+  color: #DC2626 !important;
+}
+
+/* --- 14.6 Wishlist Heart & Cart Feedback Micro-Interactions --- */
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.42); }
+  75% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+.card-wishlist-btn {
+  transition: transform 0.24s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease !important;
+}
+
+.card-wishlist-btn:hover {
+  transform: scale(1.15) !important;
+  background: #FFFFFF !important;
+  color: #EF4444 !important;
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.25) !important;
+}
+
+.card-wishlist-btn.liked {
+  color: #EF4444 !important;
+  background: #FFFFFF !important;
+  animation: heartPop 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes cartBadgeBounce {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.45); }
+  80% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+.cart-badge.bounce {
+  animation: cartBadgeBounce 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* --- 14.7 Elastic Toast Motion --- */
+@keyframes toastElasticIn {
+  0% {
+    opacity: 0;
+    transform: translateY(36px) scale(0.88);
+    filter: blur(8px);
+  }
+  65% {
+    transform: translateY(-4px) scale(1.02);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.toast.show {
+  animation: toastElasticIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+}
+
+/* --- 14.8 Focus Accessibility Glow --- */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: #C5A059 !important;
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.22), 0 6px 18px rgba(197, 160, 89, 0.1) !important;
+}
+
 

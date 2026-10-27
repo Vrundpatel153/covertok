@@ -363,14 +363,14 @@
     }
   });
 
-  // 8. Render Products Grid (Matching collections.html layout)
+  // 8. Render Products Grid with Cinematic Rearrangement
   function renderProductsGrid() {
     const grid = document.getElementById('comboProductsGrid');
     if (!grid) return;
 
     if (state.filteredProducts.length === 0) {
       grid.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FFFFFF; border-radius: 24px; border: 1.5px dashed #CBD5E1;">
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(20px); border-radius: 24px; border: 1.5px dashed #CBD5E1;">
           <div style="display:flex; justify-content:center; margin-bottom: 12px; color: #94A3B8;">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
@@ -382,11 +382,137 @@
       return;
     }
 
-    grid.innerHTML = '';
-    state.filteredProducts.forEach(prod => {
-      const card = createComboProductCard(prod);
-      grid.appendChild(card);
+    const currentCards = Array.from(grid.children).filter(el => el.classList && el.classList.contains('combo-catalog-card'));
+
+    // First render: Staggered cinematic entrance
+    if (currentCards.length === 0) {
+      grid.innerHTML = '';
+      const fragment = document.createDocumentFragment();
+      state.filteredProducts.forEach(prod => {
+        const card = createComboProductCard(prod);
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(24px) scale(0.93)';
+        card.style.filter = 'blur(6px)';
+        fragment.appendChild(card);
+      });
+      grid.appendChild(fragment);
+
+      requestAnimationFrame(() => {
+        const cards = grid.querySelectorAll('.combo-catalog-card');
+        cards.forEach((card, idx) => {
+          const delay = Math.min(idx * 30, 240);
+          card.style.transition = `transform 0.5s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.4s ease ${delay}ms, filter 0.4s ease ${delay}ms`;
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0) scale(1)';
+          card.style.filter = 'blur(0)';
+        });
+        setTimeout(() => {
+          cards.forEach(card => {
+            card.style.transform = '';
+            card.style.transition = '';
+            card.style.filter = '';
+            card.style.opacity = '';
+          });
+        }, 650);
+      });
+      return;
+    }
+
+    // FLIP Step 1: Record initial rects
+    const firstRects = new Map();
+    const existingCardsMap = new Map();
+    currentCards.forEach(card => {
+      const id = card.getAttribute('data-id');
+      if (id) {
+        firstRects.set(id, card.getBoundingClientRect());
+        existingCardsMap.set(id, card);
+      }
     });
+
+    const nextIds = new Set(state.filteredProducts.map(p => String(p.id)));
+    const leavingCards = currentCards.filter(card => {
+      const id = card.getAttribute('data-id');
+      return !nextIds.has(id);
+    });
+
+    // Animate leaving cards out
+    leavingCards.forEach(card => {
+      card.style.pointerEvents = 'none';
+      card.style.transition = 'transform 0.24s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s ease, filter 0.2s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.88) translateY(12px)';
+      card.style.filter = 'blur(6px)';
+    });
+
+    setTimeout(() => {
+      grid.innerHTML = '';
+      const fragment = document.createDocumentFragment();
+      const animatedCards = [];
+
+      state.filteredProducts.forEach((prod, idx) => {
+        const sId = String(prod.id);
+        let card = existingCardsMap.get(sId);
+        const isExisting = Boolean(card);
+
+        if (!card) {
+          card = createComboProductCard(prod);
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(28px) scale(0.92)';
+          card.style.filter = 'blur(8px)';
+        } else {
+          card.style.pointerEvents = '';
+          card.style.filter = '';
+          card.style.opacity = '1';
+          card.style.transform = '';
+        }
+
+        fragment.appendChild(card);
+        animatedCards.push({ card, isExisting, id: sId, idx });
+      });
+
+      grid.appendChild(fragment);
+
+      // FLIP Step 2 & 3: Last & Invert
+      requestAnimationFrame(() => {
+        animatedCards.forEach(({ card, isExisting, id, idx }) => {
+          if (isExisting && firstRects.has(id)) {
+            const first = firstRects.get(id);
+            const last = card.getBoundingClientRect();
+            const dx = first.left - last.left;
+            const dy = first.top - last.top;
+
+            if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+              card.style.transition = 'none';
+              card.style.transform = `translate(${dx}px, ${dy}px) scale(1)`;
+
+              requestAnimationFrame(() => {
+                const delay = Math.min(idx * 18, 160);
+                card.style.transition = `transform 0.52s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms`;
+                card.style.transform = 'translate(0, 0) scale(1)';
+              });
+            }
+          } else {
+            const delay = Math.min(idx * 30, 280);
+            card.style.transition = `transform 0.55s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.45s ease ${delay}ms, filter 0.45s ease ${delay}ms`;
+            requestAnimationFrame(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0) scale(1)';
+              card.style.filter = 'blur(0)';
+            });
+          }
+        });
+
+        // Cleanup inline styles after animation so CSS hover transitions resume naturally
+        setTimeout(() => {
+          animatedCards.forEach(({ card }) => {
+            card.style.transform = '';
+            card.style.transition = '';
+            card.style.filter = '';
+            card.style.opacity = '';
+          });
+        }, 650);
+      });
+    }, leavingCards.length > 0 ? 150 : 0);
   }
 
   window.clearComboFilters = function() {
