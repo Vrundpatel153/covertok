@@ -5,18 +5,21 @@
 <!-- ========================================================================= -->
 
 <!-- 1. RICH CART DRAWER -->
+  <!-- 1. LUXURY EDITORIAL CART DRAWER -->
   <div class="app-drawer-overlay" id="cartDrawerOverlay" aria-hidden="true">
     <aside class="app-drawer" id="cartDrawerSheet" aria-label="Shopping Cart Drawer">
       <!-- Header -->
       <div class="app-sheet-header">
         <div class="app-sheet-title-group">
-          <div class="app-sheet-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
-          <div>
-            <h3 class="app-sheet-title">Your Cart</h3>
-            <p class="app-sheet-subtitle"><span id="cartDrawerCount">0</span> items selected</p>
-          </div>
+          <h3 class="app-sheet-title">Your Cart</h3>
+          <span class="cart-drawer-count-badge" id="cartDrawerCount">0</span>
         </div>
-        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeCart();" aria-label="Close cart">&times;</button>
+        <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeCart();" aria-label="Close cart">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
 
       <!-- Body -->
@@ -24,20 +27,8 @@
         <!-- Free Shipping Progress Tracker -->
         <div class="cart-free-shipping-bar" id="cartShippingBarContainer">
           <div class="cart-free-shipping-msg" id="cartProgressMsg">
-            <div class="cart-shipping-status-wrap">
-              <div class="cart-shipping-badge">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A17A28" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/>
-                </svg>
-              </div>
-              <div class="cart-shipping-text-group">
-                <div class="cart-shipping-kicker">
-                  <span>EXPRESS DISPATCH PRIVILEGE</span>
-                </div>
-                <div class="cart-shipping-headline">
-                  Add <span class="shipping-accent-amt">Rs. 350.00</span> more to unlock <strong>FREE Express Shipping</strong>!
-                </div>
-              </div>
+            <div class="cart-shipping-headline">
+              Add <span class="shipping-accent-amt">Rs. 350.00</span> more to unlock <strong>FREE Express Shipping</strong>!
             </div>
           </div>
           <div class="cart-progress-track">
@@ -52,8 +43,8 @@
 
         <!-- Promo Code Input -->
         <div class="cart-promo-box">
-          <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Enter Promo Code (e.g. COVERTOK15)">
-          <button type="button" class="cart-promo-btn" id="cartApplyPromoBtn">APPLY</button>
+          <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Promo code (e.g. COVERTOK15)">
+          <button type="button" class="cart-promo-btn" id="cartApplyPromoBtn">Apply</button>
         </div>
 
         <!-- Active Discount Line -->
@@ -65,13 +56,13 @@
         <!-- Frequently Bought Together / Upsell Section -->
         <div class="cart-upsell-section">
           <div class="cart-upsell-title">
-            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2" style="vertical-align:-2px; margin-right:4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Customers Also Added</span>
+            <span>Recommended for your case</span>
           </div>
           <div class="cart-upsell-item">
             <div class="cart-upsell-left">
               <img src="assets/bestseller/prod_01_clear_case.webp" alt="Camera Lens Protector" class="cart-upsell-img">
               <div>
-                <div class="cart-upsell-name">2x 9H Diamond Camera Lens Protector</div>
+                <div class="cart-upsell-name">2× 9H Diamond Camera Lens Protector</div>
                 <div class="cart-upsell-price">+Rs. 299.00</div>
               </div>
             </div>
@@ -84,52 +75,28 @@
 
       <!-- Footer -->
       <div class="app-sheet-footer" id="cartDrawerFooter">
-        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748B; margin-bottom: 6px;">
+        <div class="cart-summary-row">
           <span>Subtotal</span>
-          <span id="cartDrawerSubtotal" style="font-weight: 700; color: #0A0A0A;">Rs. 0.00</span>
+          <span id="cartDrawerSubtotal" class="cart-summary-val">Rs. 0.00</span>
         </div>
-        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748B; margin-bottom: 12px;">
+        <div class="cart-summary-row">
           <span>Shipping (Express Air)</span>
-          <span style="color: #10B981; font-weight: 800;">FREE</span>
+          <span class="cart-shipping-free-tag">FREE</span>
         </div>
-        <div style="display: flex; justify-content: space-between; font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 900; color: #0A0A0A; margin-bottom: 16px; border-top: 1px solid #E2E8F0; padding-top: 10px;">
-          <span>Estimated Total:</span>
-          <span id="cartDrawerTotal" style="color: #0A0A0A;">Rs. 0.00</span>
+        <div class="cart-summary-total-row">
+          <span>Estimated Total</span>
+          <span id="cartDrawerTotal" class="cart-total-val">Rs. 0.00</span>
         </div>
-        <button type="button" class="btn-checkout-luxury" id="cartDrawerCheckoutBtn" onclick="window.CovertokFlows.openCheckout();">
-          <span class="btn-checkout-shine"></span>
-          <span class="btn-checkout-lock">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-          </span>
-          <span class="btn-checkout-label-wrap">
-            <span class="btn-checkout-title">PROCEED TO CHECKOUT</span>
-            <span class="btn-checkout-subtitle">INSTANT AIR DISPATCH &middot; 100% SECURE</span>
-          </span>
-          <span class="btn-checkout-arrow-circle">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </span>
+        <button type="button" class="btn-checkout-clean" id="cartDrawerCheckoutBtn" onclick="window.CovertokFlows.openCheckout();">
+          <span>Proceed to Checkout</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </button>
-        <div class="cart-drawer-trust-strip">
-          <div class="cart-drawer-trust-item">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>256-Bit SSL</span>
-          </div>
-          <span class="cart-drawer-trust-sep">&bull;</span>
-          <div class="cart-drawer-trust-item">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            <span>Express Air Dispatch</span>
-          </div>
-          <span class="cart-drawer-trust-sep">&bull;</span>
-          <div class="cart-drawer-trust-item">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>7-Day Returns</span>
-          </div>
+        <div class="cart-clean-trust">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          <span>Guaranteed Safe & Secure Checkout</span>
         </div>
       </div>
     </aside>
@@ -203,7 +170,7 @@
 
         <!-- STEP 2: Shipping Method View -->
         <div class="checkout-step-view" data-step="2" style="display: none;">
-          <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;">Select Delivery Speed</h4>
+          <h4 style="font-family: var(--font-heading, 'Manrope', sans-serif); font-weight: 700; font-size: 0.95rem; margin-bottom: 14px;">Select Delivery Speed</h4>
           <div class="checkout-option-card selected" onclick="window.selectShippingOption(this)">
             <div class="checkout-option-left">
               <div style="display:flex;align-items:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"></path></svg></div>
@@ -229,7 +196,7 @@
 
         <!-- STEP 3: Payment Options View -->
         <div class="checkout-step-view" data-step="3" style="display: none;">
-          <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;">Select Payment Method</h4>
+          <h4 style="font-family: var(--font-heading, 'Manrope', sans-serif); font-weight: 700; font-size: 0.95rem; margin-bottom: 14px;">Select Payment Method</h4>
           
           <div class="checkout-option-card selected" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
@@ -268,12 +235,12 @@
         <div class="checkout-step-view" data-step="4" style="display: none;">
           <div class="checkout-success-view">
             <div class="checkout-success-badge">✓</div>
-            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; color: #0A0A0A; margin: 0 0 6px;">Thank You For Your Order!</h3>
+            <h3 style="font-family: var(--font-heading, 'Manrope', sans-serif); font-size: 1.6rem; font-weight: 800; color: #0A0A0A; margin: 0 0 6px;">Thank You For Your Order!</h3>
             <p style="font-size: 0.875rem; color: #64748B; margin: 0;">We've received your order and our dispatch team is prepping your items.</p>
             
             <div class="checkout-order-number-box">
               <div style="font-size: 0.775rem; font-weight: 700; color: #71717A; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px;">Order Confirmation ID</div>
-              <div style="font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 900; color: #0A0A0A;" id="confirmedOrderId">#CT-84920</div>
+              <div style="font-family: var(--font-heading, 'Manrope', sans-serif); font-size: 1.4rem; font-weight: 800; color: #0A0A0A;" id="confirmedOrderId">#CT-84920</div>
             </div>
 
             <p style="font-size: 0.85rem; color: #334155; margin-bottom: 20px;">
@@ -297,8 +264,8 @@
       <!-- Footer Action Buttons -->
       <div class="app-sheet-footer" id="checkoutFooter">
         <div style="display: flex; align-items: center; justify-content: space-between;">
-          <div style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 800; color: #0A0A0A;">
-            Total: <span id="checkoutSummaryTotal" style="color: #0A0A0A; font-weight: 900;">Rs. 0.00</span>
+          <div style="font-family: var(--font-heading, 'Manrope', sans-serif); font-size: 0.95rem; font-weight: 700; color: #0A0A0A;">
+            Total: <span id="checkoutSummaryTotal" style="color: #0A0A0A; font-weight: 800;">Rs. 0.00</span>
           </div>
           <div style="display: flex; gap: 10px;">
             <button type="button" class="btn btn-pill-outline" onclick="window.prevCheckoutStep();" style="padding: 8px 18px; border-radius: 999px;">Back</button>

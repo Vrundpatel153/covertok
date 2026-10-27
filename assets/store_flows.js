@@ -165,22 +165,11 @@
         if (shippingBar) shippingBar.classList.add('is-unlocked');
         progressFill.style.width = '100%';
         progressMsg.innerHTML = `
-          <div class="cart-shipping-status-wrap">
-            <div class="cart-shipping-badge is-unlocked">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <div class="cart-shipping-ping"></div>
-            </div>
-            <div class="cart-shipping-text-group">
-              <div class="cart-shipping-kicker is-unlocked">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="#059669"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <span>COMPLIMENTARY PRIVILEGE UNLOCKED</span>
-              </div>
-              <div class="cart-shipping-headline is-unlocked">
-                You unlocked <strong>FREE Express Air Shipping</strong>!
-              </div>
-            </div>
+          <div class="cart-shipping-clean-status">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>You've unlocked <strong>Free Express Shipping</strong>!</span>
           </div>
         `;
       } else {
@@ -189,20 +178,8 @@
         const pct = Math.min(100, Math.round((subtotal / FREE_SHIPPING_THRESHOLD) * 100));
         progressFill.style.width = `${pct}%`;
         progressMsg.innerHTML = `
-          <div class="cart-shipping-status-wrap">
-            <div class="cart-shipping-badge">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A17A28" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/>
-              </svg>
-            </div>
-            <div class="cart-shipping-text-group">
-              <div class="cart-shipping-kicker">
-                <span>EXPRESS DISPATCH PRIVILEGE</span>
-              </div>
-              <div class="cart-shipping-headline">
-                Add <span class="shipping-accent-amt">Rs. ${remaining.toLocaleString('en-IN')}.00</span> more to unlock <strong>FREE Express Shipping</strong>!
-              </div>
-            </div>
+          <div class="cart-shipping-clean-status">
+            <span>Add <span class="shipping-accent-amt">Rs. ${remaining.toLocaleString('en-IN')}.00</span> more to unlock <strong>Free Express Shipping</strong></span>
           </div>
         `;
       }
@@ -247,14 +224,14 @@
 
     if (cart.length === 0) {
       container.innerHTML = `
-        <div style="text-align: center; padding: 48px 20px; color: #64748B;">
+        <div style="text-align: center; padding: 48px 20px; color: #71717A;">
           <div style="margin-bottom: 14px;">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A1A1AA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           </div>
-          <h4 style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; color: #171513; margin-bottom: 6px;">Your cart is empty</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 18px;">Discover our colorful and trendy phone cases & accessories.</p>
-          <a href="collections.html" class="btn btn-pill-dark" onclick="window.CovertokFlows.closeCart();" style="display: inline-block; padding: 10px 24px; border-radius: 999px;">
-            EXPLORE COLLECTIONS
+          <h4 style="font-family: var(--font-heading, 'Manrope', sans-serif); font-size: 1.1rem; font-weight: 700; color: #0A0A0A; margin-bottom: 6px;">Your cart is empty</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 20px; color: #71717A;">Explore our curated collection of iPhone cases & accessories.</p>
+          <a href="collections.html" class="btn btn-pill-dark" onclick="window.CovertokFlows.closeCart();" style="display: inline-block; padding: 10px 24px; border-radius: 8px; font-weight: 600; font-size: 13px;">
+            Explore Products
           </a>
         </div>
       `;
@@ -267,70 +244,68 @@
     if (footer) footer.style.display = 'block';
 
     container.innerHTML = cart.map((item, idx) => {
+      const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
       if (item.is_combo) {
         const bundleList = Array.isArray(item.bundle_items) ? item.bundle_items : [];
         return `
-          <div class="cart-item-row cart-combo-item-row" style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #EAE5DB; align-items: flex-start;">
-            <div style="position: relative; flex-shrink: 0;">
-              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" style="width: 62px; height: 62px; object-fit: contain; border-radius: 10px; background: #121316; border: 1.5px solid #FF5500; padding: 4px;">
-              <span style="position: absolute; bottom: -5px; right: -5px; background: #FF5500; color: #000; font-size: 10px; font-weight: 900; padding: 1px 5px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);">3-IN-1</span>
+          <div class="cart-item-row cart-combo-item-row">
+            <div class="cart-item-img-col">
+              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" class="cart-item-thumb">
+              <span class="cart-item-tag-badge">3-IN-1</span>
             </div>
-            <div style="flex: 1; min-width: 0;">
-              <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px;">
-                <span style="font-size: 0.68rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(255, 85, 0, 0.4); padding: 2px 8px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.05em;">3-Piece Combo</span>
-                <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.885rem; color: #171513;">${item.title}</span>
+            <div class="cart-item-details-col">
+              <div class="cart-item-header-line">
+                <span class="cart-combo-badge">3-Piece Combo</span>
+                <h4 class="cart-item-title">${item.title}</h4>
               </div>
               ${bundleList.length ? `
-                <div style="font-size: 0.72rem; color: #475569; margin: 4px 0 6px 0; background: #FAF8F2; padding: 6px 8px; border-radius: 8px; border: 1px solid #EAE5DB;">
-                  ${bundleList.map((b, bIdx) => `
-                    <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
-                      <img src="${b.image || 'assets/phone_cream.webp'}" alt="${b.title}" style="width: 28px; height: 28px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.webp';">
-                      <div style="flex: 1; min-width: 0;">
-                        <div style="font-size: 0.65rem; font-weight: 800; color: #0A0A0A; text-transform: uppercase;">${b.category || 'Accessory'}</div>
-                        <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>
-                      </div>
+                <div class="cart-combo-mini-bundle">
+                  ${bundleList.map((b) => `
+                    <div class="cart-combo-mini-item">
+                      <span class="cart-combo-mini-cat">${b.category || 'Item'}:</span>
+                      <span class="cart-combo-mini-name">${b.title}</span>
                     </div>
                   `).join('')}
                 </div>
-              ` : `
-                <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
-              `}
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
-                <div>
-                  <span style="font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 0.95rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-                  ${item.original_price ? `<span style="text-decoration: line-through; font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
+              ` : (variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : '')}
+              <div class="cart-item-actions-row">
+                <div class="cart-qty-stepper">
+                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" aria-label="Decrease quantity">−</button>
+                  <span class="cart-qty-num">${item.qty}</span>
+                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" aria-label="Increase quantity">+</button>
                 </div>
-                <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
-                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">−</button>
-                  <span style="font-size: 0.8rem; font-weight: 800; padding: 0 4px; min-width: 18px; text-align: center;">${item.qty}</span>
-                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">+</button>
+                <div class="cart-item-price-wrap">
+                  <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+                  ${item.original_price ? `<span class="cart-item-old-price">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
                 </div>
+                <button type="button" class="cart-item-remove-btn" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" aria-label="Remove item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
               </div>
             </div>
-            <button type="button" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove combo" style="background: none; border: none; color: #94A3B8; cursor: pointer; padding: 6px; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-            </button>
           </div>
         `;
       }
       return `
-        <div class="cart-item-row" style="display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #EAE5DB; align-items: center;">
-          <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" style="width: 58px; height: 58px; object-fit: contain; border-radius: 10px; background: #FAF8F2; border: 1px solid #EAE5DB; padding: 3px; flex-shrink: 0;">
-          <div style="flex: 1; min-width: 0;">
-            <div style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.875rem; color: #171513; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${item.title}</div>
-            <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${[item.color, item.model].filter(Boolean).join(' · ')}</div>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-              <span style="font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.925rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-              <div style="display: flex; align-items: center; border: 1.5px solid #EAE5DB; border-radius: 999px; background: #FAF8F2; overflow: hidden;">
-                <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">−</button>
-                <span style="font-size: 0.8rem; font-weight: 800; padding: 0 4px; min-width: 18px; text-align: center;">${item.qty}</span>
-                <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" style="padding: 2px 10px; border: none; background: transparent; cursor: pointer; font-weight: 800;">+</button>
+        <div class="cart-item-row">
+          <div class="cart-item-img-col">
+            <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" class="cart-item-thumb">
+          </div>
+          <div class="cart-item-details-col">
+            <h4 class="cart-item-title">${item.title}</h4>
+            ${variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : ''}
+            <div class="cart-item-actions-row">
+              <div class="cart-qty-stepper">
+                <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" aria-label="Decrease quantity">−</button>
+                <span class="cart-qty-num">${item.qty}</span>
+                <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" aria-label="Increase quantity">+</button>
               </div>
+              <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+              <button type="button" class="cart-item-remove-btn" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" aria-label="Remove item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              </button>
             </div>
           </div>
-          <button type="button" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" style="background: none; border: none; color: #94A3B8; cursor: pointer; padding: 6px; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-          </button>
         </div>
       `;
     }).join('');

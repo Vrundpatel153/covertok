@@ -172,9 +172,9 @@
                 <path d="M16 10a4 4 0 0 1-8 0"></path>
               </svg>
             </div>
-            <p style="font-weight: 800; font-size: 1.05rem; color: #171513; margin-bottom: 6px;">Your cart is empty</p>
-            <p style="font-size: 0.875rem; color: #735238;">Explore our trendy cases and accessories to start shopping.</p>
-            <a href="collections.html" class="btn btn-pill-dark" style="margin-top: 20px; display: inline-block; padding: 10px 24px; font-size: 0.85rem; border-radius: 999px;">EXPLORE PRODUCTS</a>
+            <p style="font-family: var(--font-heading, 'Manrope', sans-serif); font-weight: 700; font-size: 1.05rem; color: #0A0A0A; margin-bottom: 6px;">Your cart is empty</p>
+            <p style="font-size: 0.85rem; color: #71717A;">Explore our curated collection of iPhone cases & accessories.</p>
+            <a href="collections.html" class="btn btn-pill-dark" style="margin-top: 18px; display: inline-block; padding: 10px 24px; font-size: 13px; font-weight: 600; border-radius: 8px;">Explore Products</a>
           </div>
         `;
         return;
@@ -183,71 +183,67 @@
       cart.forEach((item, idx) => {
         const row = document.createElement('div');
         row.className = `cart-item-row ${item.is_combo ? 'cart-combo-item-row' : ''}`;
-        row.style.cssText = 'display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #F3EFE6; align-items: flex-start; position: relative;';
         
         const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
         const bundleList = Array.isArray(item.bundle_items) ? item.bundle_items : [];
 
         if (item.is_combo) {
           row.innerHTML = `
-            <div style="position: relative; flex-shrink: 0;">
-              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background: #121316; border: 1.5px solid #FF5500; padding: 4px;">
-              <span style="position: absolute; bottom: -4px; right: -4px; background: #FF5500; color: #000; font-size: 9px; font-weight: 900; padding: 1px 5px; border-radius: 4px;">3-IN-1</span>
+            <div class="cart-item-img-col">
+              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" class="cart-item-thumb">
+              <span class="cart-item-tag-badge">3-IN-1</span>
             </div>
-            <div style="flex: 1; min-width: 0;">
-              <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px;">
-                <span style="font-size: 0.65rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(255, 85, 0, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase;">3-Piece Combo</span>
-                <span style="font-weight: 800; font-size: 0.885rem; color: #171513;">${item.title}</span>
+            <div class="cart-item-details-col">
+              <div class="cart-item-header-line">
+                <span class="cart-combo-badge">3-Piece Combo</span>
+                <h4 class="cart-item-title">${item.title}</h4>
               </div>
               ${bundleList.length ? `
-                <div style="font-size: 0.72rem; color: #475569; margin: 4px 0 6px 0; background: #FAF8F2; padding: 6px 8px; border-radius: 8px; border: 1px solid #EAE5DB;">
-                  ${bundleList.map((b, bIdx) => `
-                    <div style="display: flex; align-items: center; gap: 8px; margin-top: ${bIdx > 0 ? '5px' : '0'}; padding-top: ${bIdx > 0 ? '5px' : '0'}; border-top: ${bIdx > 0 ? '1px dashed #E2E8F0' : 'none'};">
-                      <img src="${b.image || 'assets/phone_cream.webp'}" alt="${b.title}" style="width: 26px; height: 26px; object-fit: contain; border-radius: 6px; background: #FFF; border: 1px solid #EAE5DB; padding: 2px; flex-shrink: 0;" onerror="this.onerror=null; this.src='assets/phone_cream.webp';">
-                      <div style="flex: 1; min-width: 0;">
-                        <div style="font-size: 0.65rem; font-weight: 800; color: #0A0A0A; text-transform: uppercase;">${b.category || 'Accessory'}</div>
-                        <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #1E293B; font-weight: 600; font-size: 0.735rem;">${b.title}</div>
-                      </div>
+                <div class="cart-combo-mini-bundle">
+                  ${bundleList.map((b) => `
+                    <div class="cart-combo-mini-item">
+                      <span class="cart-combo-mini-cat">${b.category || 'Item'}:</span>
+                      <span class="cart-combo-mini-name">${b.title}</span>
                     </div>
                   `).join('')}
                 </div>
-              ` : `
-                <div style="font-size: 0.75rem; color: #64748B; margin-top: 2px;">${variantMeta}</div>
-              `}
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 6px;">
-                <div>
-                  <span style="font-weight: 800; font-size: 0.925rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-                  ${item.original_price ? `<span style="text-decoration: line-through; font-size: 0.75rem; color: #94A3B8; margin-left: 6px;">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
+              ` : (variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : '')}
+              <div class="cart-item-actions-row">
+                <div class="cart-qty-stepper">
+                  <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" aria-label="Decrease quantity">−</button>
+                  <span class="cart-qty-num">${item.qty}</span>
+                  <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" aria-label="Increase quantity">+</button>
                 </div>
-                <div style="display: flex; align-items: center; border: 1px solid #EAE5DB; border-radius: 999px; overflow: hidden; background: #F8FAFC;">
-                  <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #735238; border: none; background: transparent; cursor: pointer;">−</button>
-                  <span style="font-size: 0.825rem; font-weight: 700; padding: 0 4px; min-width: 20px; text-align: center;">${item.qty}</span>
-                  <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #735238; border: none; background: transparent; cursor: pointer;">+</button>
+                <div class="cart-item-price-wrap">
+                  <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+                  ${item.original_price ? `<span class="cart-item-old-price">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
                 </div>
+                <button type="button" class="cart-item-remove-btn cart-remove-btn" data-remove="${idx}" title="Remove item" aria-label="Remove item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
               </div>
             </div>
-            <button type="button" class="cart-remove-btn" data-remove="${idx}" title="Remove item" style="background: none; border: none; color: #94A3B8; padding: 6px; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
           `;
         } else {
           row.innerHTML = `
-            <img src="${item.img}" alt="${item.title}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background: #F8FAFC; border: 1px solid #EAE5DB; padding: 4px; flex-shrink: 0;">
-            <div style="flex: 1; min-width: 0;">
-              <div style="font-weight: 800; font-size: 0.875rem; color: #171513; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${item.title}</div>
-              ${variantMeta ? `<div style="font-size: 0.775rem; color: #735238; margin-top: 2px;">${variantMeta}</div>` : ''}
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-                <div style="font-weight: 800; font-size: 0.925rem; color: #171513;">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</div>
-                <div style="display: flex; align-items: center; border: 1px solid #EAE5DB; border-radius: 999px; overflow: hidden; background: #F8FAFC;">
-                  <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #735238; border: none; background: transparent; cursor: pointer;">−</button>
-                  <span style="font-size: 0.825rem; font-weight: 700; padding: 0 4px; min-width: 20px; text-align: center;">${item.qty}</span>
-                  <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" style="padding: 2px 10px; font-weight: 700; color: #735238; border: none; background: transparent; cursor: pointer;">+</button>
+            <div class="cart-item-img-col">
+              <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" class="cart-item-thumb">
+            </div>
+            <div class="cart-item-details-col">
+              <h4 class="cart-item-title">${item.title}</h4>
+              ${variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : ''}
+              <div class="cart-item-actions-row">
+                <div class="cart-qty-stepper">
+                  <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" aria-label="Decrease quantity">−</button>
+                  <span class="cart-qty-num">${item.qty}</span>
+                  <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" aria-label="Increase quantity">+</button>
                 </div>
+                <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+                <button type="button" class="cart-item-remove-btn cart-remove-btn" data-remove="${idx}" title="Remove item" aria-label="Remove item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
               </div>
             </div>
-            <button type="button" class="cart-remove-btn" data-remove="${idx}" title="Remove item" style="background: none; border: none; color: #94A3B8; padding: 6px; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#EF4444'" onmouseout="this.style.color='#94A3B8'">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
           `;
         }
 
