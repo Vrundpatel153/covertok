@@ -1,7 +1,7 @@
 /* ==========================================================================
    COVERTOK LUXURY PDP DESIGN SYSTEM (pdp.css)
    State-of-the-art E-Commerce Product Details Page Styling
-   Curated Palette: #FFFFFF Canvas, #0A0A0A Obsidian, #C5A059 Warm Gold
+   Curated Palette: #FFFFFF Canvas, #0A0A0A Obsidian, #FF5500 Warm Gold
    ========================================================================== */
 
 :root {
@@ -9,18 +9,22 @@
   --pdp-surface: #FFFFFF;
   --pdp-surface-subtle: #F8FAFC;
   --pdp-border: #E2E8F0;
-  --pdp-border-hover: #C5A059;
+  --pdp-border-hover: #0EA5E9;
   --pdp-text: #0A0A0A;
   --pdp-text-muted: #64748B;
   --pdp-text-subtle: #64748B;
-  --pdp-gold: #C5A059;
-  --pdp-gold-light: #E5C07B;
-  --pdp-gold-bg: rgba(169, 129, 53, 0.08);
+  --pdp-accent: #FF5500;
+  --pdp-accent-glow: rgba(255, 85, 0, 0.35);
+  --pdp-blue: #0284C7;
+  --pdp-teal: #0D9488;
+  --pdp-gold: #FF5500;
+  --pdp-gold-light: #0EA5E9;
+  --pdp-gold-bg: rgba(255, 85, 0, 0.08);
   --pdp-accent-green: #10B981;
   --pdp-accent-green-bg: #ECFDF5;
-  --pdp-shadow-sm: 0 2px 8px rgba(23, 21, 19, 0.04);
-  --pdp-shadow-md: 0 10px 30px rgba(23, 21, 19, 0.06);
-  --pdp-shadow-lg: 0 20px 48px rgba(23, 21, 19, 0.09);
+  --pdp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --pdp-shadow-md: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --pdp-shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.09);
   --pdp-radius-sm: 10px;
   --pdp-radius-md: 16px;
   --pdp-radius-lg: 24px;
@@ -44,14 +48,14 @@ html, body {
 
 /* 1. TOP ANNOUNCEMENT MARQUEE */
 .pdp-announcement-bar {
-  background: #F5EFEB !important;
-  color: #1F1C18 !important;
-  border-bottom: 1px solid rgba(197, 160, 89, 0.28) !important;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+  background: #F8FAFC !important;
+  color: #0F172A !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
   font-family: var(--pdp-font-body) !important;
   font-size: 0.70rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.07em !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
   padding: 8px 0 !important;
   overflow: hidden !important;
@@ -70,8 +74,8 @@ html, body {
 }
 
 .pdp-announcement-track span.sep {
-  color: #C5A059;
-  opacity: 0.75;
+  color: #0EA5E9;
+  opacity: 0.85;
   font-size: 0.75rem;
 }
 
@@ -505,7 +509,7 @@ html, body {
   letter-spacing: 0.05em;
   padding: 5px 12px;
   border-radius: var(--pdp-radius-pill);
-  box-shadow: 0 4px 12px rgba(169, 129, 53, 0.25);
+  box-shadow: 0 4px 12px rgba(255, 85, 0, 0.25);
   align-self: flex-start;
 }
 
@@ -640,7 +644,7 @@ html, body {
 
 .pdp-thumb-btn.active {
   border-color: var(--pdp-gold);
-  box-shadow: 0 0 0 3px rgba(169, 129, 53, 0.2), var(--pdp-shadow-md);
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.2), var(--pdp-shadow-md);
   transform: translateY(-2px);
 }
 
@@ -840,8 +844,8 @@ html, body {
 
 .pdp-save-badge {
   background: #0A0A0A;
-  color: #FFFFFF;
-  border: 1px solid rgba(197, 160, 89, 0.45);
+  color: #FF5500;
+  border: 1px solid rgba(255, 85, 0, 0.5);
   font-size: 0.775rem;
   font-weight: 700;
   padding: 4px 10px;
@@ -1137,7 +1141,7 @@ html, body {
 
 .pdp-color-swatch.active {
   transform: scale(1.12);
-  box-shadow: 0 0 0 2.5px var(--pdp-gold), 0 6px 14px rgba(169, 129, 53, 0.35);
+  box-shadow: 0 0 0 2.5px var(--pdp-gold), 0 6px 14px rgba(255, 85, 0, 0.35);
 }
 
 /* Overview / Description Expandable */
@@ -1216,7 +1220,7 @@ html, body {
 .pdp-finish-card.active {
   border-color: var(--pdp-gold);
   background: #FFFDF9;
-  box-shadow: 0 0 0 2px rgba(169, 129, 53, 0.2), var(--pdp-shadow-md);
+  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.2), var(--pdp-shadow-md);
 }
 
 .pdp-finish-title {
@@ -1484,7 +1488,7 @@ html, body {
 }
 
 .pdp-description-card:hover {
-  border-color: #C5A059;
+  border-color: #FF5500;
 }
 
 .pdp-description-header {
@@ -1648,7 +1652,7 @@ html, body {
 }
 
 .pdp-bundle-card:hover {
-  border-color: #C5A059;
+  border-color: #FF5500;
   box-shadow: var(--pdp-shadow-md);
 }
 
@@ -1844,7 +1848,7 @@ html, body {
 }
 
 .pdp-accordion-card:hover {
-  border-color: #C5A059;
+  border-color: #FF5500;
 }
 
 .pdp-accordion-trigger {
@@ -2237,7 +2241,7 @@ html, body {
   border-radius: 14px;
   background: var(--pdp-gold-bg);
   color: #0A0A0A;
-  border: 1px solid rgba(169, 129, 53, 0.2);
+  border: 1px solid rgba(255, 85, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2643,7 +2647,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   background: rgba(14, 16, 20, 0.96);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-top: 1.5px solid rgba(197, 160, 89, 0.38);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.35);
   padding: 12px 32px;
   display: block;
@@ -2686,7 +2690,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   background: #18191E;
   object-fit: contain;
   flex-shrink: 0;
-  border: 1.5px solid rgba(197, 160, 89, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
   padding: 3px;
 }
 
@@ -2762,30 +2766,30 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 .pdp-sticky-btn-cart {
   background: #101114;
   color: #FFFFFF;
-  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .pdp-sticky-btn-cart:hover {
   background: #1C1E24;
-  border-color: #C5A059;
+  border-color: #0EA5E9;
   transform: translateY(-2px);
   color: #FFFFFF;
 }
 
 .pdp-sticky-btn-buy {
-  background: #FFFFFF;
-  color: #0A0A0C;
-  border: 1.5px solid rgba(197, 160, 89, 0.45);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: #FF5500;
+  color: #FFFFFF;
+  border: 1.5px solid #FF5500;
+  box-shadow: 0 4px 16px rgba(255, 85, 0, 0.3);
 }
 
 .pdp-sticky-btn-buy:hover {
-  background: #0A0A0C;
+  background: #E04B00;
   color: #FFFFFF;
-  border-color: #C5A059;
+  border-color: #E04B00;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.45);
 }
 
 /* 13. RESPONSIVE BREAKPOINTS & MOBILE ARCHITECTURE */
@@ -3601,8 +3605,8 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   min-width: 44px;
   border-radius: 50%;
   background: #FFFFFF;
-  border: 1.5px solid rgba(197, 160, 89, 0.45);
-  color: #0A0A0A;
+  border: 1.5px solid rgba(14, 165, 233, 0.35);
+  color: #0284C7;
   display: flex;
   align-items: center;
   justify-content: center;

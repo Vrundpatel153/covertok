@@ -115,8 +115,8 @@
       const ctx = c.getContext('2d');
       const grad = ctx.createRadialGradient(256, 256, 20, 256, 256, 240);
       grad.addColorStop(0, 'rgba(255, 255, 255, 0.90)');
-      grad.addColorStop(0.35, 'rgba(243, 232, 210, 0.50)');
-      grad.addColorStop(0.70, 'rgba(197, 160, 89, 0.15)');
+      grad.addColorStop(0.35, 'rgba(240, 249, 255, 0.50)');
+      grad.addColorStop(0.70, 'rgba(14, 165, 233, 0.12)');
       grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 512, 512);

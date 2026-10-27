@@ -191,12 +191,12 @@
         if (item.is_combo) {
           row.innerHTML = `
             <div style="position: relative; flex-shrink: 0;">
-              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background: #121316; border: 1.5px solid #C5A059; padding: 4px;">
-              <span style="position: absolute; bottom: -4px; right: -4px; background: #C5A059; color: #000; font-size: 9px; font-weight: 900; padding: 1px 5px; border-radius: 4px;">3-IN-1</span>
+              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background: #121316; border: 1.5px solid #FF5500; padding: 4px;">
+              <span style="position: absolute; bottom: -4px; right: -4px; background: #FF5500; color: #000; font-size: 9px; font-weight: 900; padding: 1px 5px; border-radius: 4px;">3-IN-1</span>
             </div>
             <div style="flex: 1; min-width: 0;">
               <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 3px;">
-                <span style="font-size: 0.65rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(197, 160, 89, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase;">3-Piece Combo</span>
+                <span style="font-size: 0.65rem; font-weight: 800; background: #0A0A0A; color: #FFFFFF; border: 1px solid rgba(255, 85, 0, 0.4); padding: 1px 6px; border-radius: 4px; text-transform: uppercase;">3-Piece Combo</span>
                 <span style="font-weight: 800; font-size: 0.885rem; color: #171513;">${item.title}</span>
               </div>
               ${bundleList.length ? `

@@ -174,8 +174,8 @@ body.combo-page-canvas {
 }
 
 .combo-search-input:focus {
-  border-color: #C5A059;
-  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-color: #FF5500;
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .combo-search-clear-btn {
@@ -259,7 +259,7 @@ body.combo-page-canvas {
 }
 
 .catalog-nav-pill:hover {
-  border-color: #C5A059;
+  border-color: #FF5500;
   color: #171513;
   background: #FAF8F5;
 }
@@ -338,15 +338,15 @@ body.combo-page-canvas {
 }
 
 .luxury-sort-trigger:hover {
-  border-color: #C5A059 !important;
+  border-color: #FF5500 !important;
   background: #FAF8F5 !important;
-  box-shadow: 0 2px 8px rgba(197, 160, 89, 0.12) !important;
+  box-shadow: 0 2px 8px rgba(255, 85, 0, 0.12) !important;
 }
 
 .luxury-sort-dropdown.open .luxury-sort-trigger,
 .luxury-sort-trigger:focus-visible {
-  border-color: #C5A059 !important;
-  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2) !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.2) !important;
   background: #FFFFFF !important;
 }
 
@@ -540,16 +540,16 @@ body.combo-page-canvas {
 /* Active / Checked State */
 .combo-card-checkbox.checked {
   background: linear-gradient(135deg, #1C1A18 0%, #0A0A0A 100%);
-  border-color: #C5A059;
+  border-color: #FF5500;
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.36), 0 2px 6px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.36), 0 2px 6px rgba(0, 0, 0, 0.24);
   animation: checkboxElasticPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 .combo-card-checkbox.checked .combo-check-circle {
-  background: linear-gradient(135deg, #DFBE74 0%, #C5A059 100%);
-  border-color: #C5A059;
-  box-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
+  background: linear-gradient(135deg, #FF8A00 0%, #FF5500 100%);
+  border-color: #FF5500;
+  box-shadow: 0 0 10px rgba(255, 85, 0, 0.5);
   animation: checkCirclePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 

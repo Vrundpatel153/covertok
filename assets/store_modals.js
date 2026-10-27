@@ -74,7 +74,7 @@
         <!-- Frequently Bought Together / Upsell Section -->
         <div class="cart-upsell-section">
           <div class="cart-upsell-title">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1.2" style="vertical-align: -2px; margin-right: 6px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#FF5500" stroke="#FF5500" stroke-width="1.2" style="vertical-align: -2px; margin-right: 6px;">
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
             <span>Customers Also Added</span>
@@ -129,7 +129,7 @@
         </button>
         <div class="cart-drawer-trust-strip">
           <div class="cart-drawer-trust-item">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             <span>256-Bit SSL</span>
           </div>
           <span class="cart-drawer-trust-sep">&bull;</span>
@@ -139,7 +139,7 @@
           </div>
           <span class="cart-drawer-trust-sep">&bull;</span>
           <div class="cart-drawer-trust-item">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span>7-Day Returns</span>
           </div>
         </div>
@@ -223,8 +223,8 @@
           <h4 style="font-family: 'Outfit', sans-serif; font-size: 0.95rem; margin-bottom: 14px;">Select Delivery Speed</h4>
           <div class="checkout-option-card selected" onclick="window.selectShippingOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 2L11 13"></path>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
@@ -239,8 +239,8 @@
 
           <div class="checkout-option-card" onclick="window.selectShippingOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF5500" stroke="#FF5500" stroke-width="1">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
               </div>
@@ -259,8 +259,8 @@
           
           <div class="checkout-option-card selected" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                   <line x1="12" y1="18" x2="12.01" y2="18"></line>
                 </svg>
@@ -275,8 +275,8 @@
 
           <div class="checkout-option-card" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                   <line x1="1" y1="10" x2="23" y2="10"></line>
                 </svg>
@@ -290,8 +290,8 @@
 
           <div class="checkout-option-card" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(197, 160, 89, 0.12);">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2" y="6" width="20" height="12" rx="2"></rect>
                   <circle cx="12" cy="12" r="2"></circle>
                 </svg>
@@ -318,7 +318,7 @@
             </div>
 
             <p style="font-size: 0.85rem; color: #334155; margin-bottom: 20px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A059" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 4px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 4px;">
                 <rect x="1" y="3" width="15" height="13"></rect>
                 <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
                 <circle cx="5.5" cy="18.5" r="2.5"></circle>
@@ -385,7 +385,7 @@
           <div class="profile-member-info">
             <span class="profile-member-name">Varun Patel</span>
             <span class="profile-member-tier">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#C5A059" stroke="none" style="vertical-align: -1px; margin-right: 3px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#FF5500" stroke="none" style="vertical-align: -1px; margin-right: 3px;">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
               VIP Gold Member

@@ -3,7 +3,7 @@
    Ultra-smooth in-and-out transitions, physics-based springs,
    hover elevations, drawers, modals, checkout, user profile, wishlist,
    tracking, coupons, and interactive feedback.
-   Theme: #FFFFFF Canvas, #0A0A0A Obsidian, #C5A059 Warm Artisan Gold
+   Theme: #FFFFFF Canvas, #0A0A0A Obsidian, #FF5500 Warm Artisan Gold
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -36,8 +36,8 @@ button:active:not(:disabled), .btn:active:not(:disabled) {
 /* Subtle Card Hover Floating with Gold Glow */
 .bestseller-card:hover, .pdp-product-card:hover, .review-item-card:hover {
   transform: translateY(-6px) scale(1.008);
-  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 20px rgba(197, 160, 89, 0.2);
-  border-color: rgba(197, 160, 89, 0.45);
+  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 20px rgba(255, 85, 0, 0.2);
+  border-color: rgba(255, 85, 0, 0.45);
 }
 
 /* Specular Card Light-Sweep Shine Animation */
@@ -57,7 +57,7 @@ button:active:not(:disabled), .btn:active:not(:disabled) {
     100deg,
     transparent 0%,
     rgba(255, 255, 255, 0) 20%,
-    rgba(197, 160, 89, 0.22) 50%,
+    rgba(255, 85, 0, 0.22) 50%,
     rgba(255, 255, 255, 0.35) 75%,
     transparent 100%
   );
@@ -250,7 +250,7 @@ body.app-sheet-open {
   height: 38px;
   border-radius: 12px;
   background: #FFFFFF;
-  border: 1.5px solid rgba(197, 160, 89, 0.45);
+  border: 1.5px solid rgba(255, 85, 0, 0.45);
   color: #0A0A0A;
   display: flex;
   align-items: center;
@@ -361,7 +361,7 @@ body.app-sheet-open {
   border-radius: 18px !important;
   padding: 14px 16px !important;
   margin-bottom: 18px !important;
-  box-shadow: 0 10px 28px -6px rgba(197, 160, 89, 0.12), 0 2px 6px rgba(0, 0, 0, 0.02), inset 0 1px 2px #FFFFFF !important;
+  box-shadow: 0 10px 28px -6px rgba(255, 85, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.02), inset 0 1px 2px #FFFFFF !important;
   overflow: hidden;
   transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -405,8 +405,8 @@ body.app-sheet-open {
   height: 36px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FFFBF3 0%, #F5E8CB 100%);
-  border: 1px solid rgba(197, 160, 89, 0.55);
-  box-shadow: 0 4px 10px rgba(197, 160, 89, 0.2), inset 0 1px 1px #FFFFFF;
+  border: 1px solid rgba(255, 85, 0, 0.55);
+  box-shadow: 0 4px 10px rgba(255, 85, 0, 0.2), inset 0 1px 1px #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,10 +469,10 @@ body.app-sheet-open {
 .cart-shipping-headline .shipping-accent-amt {
   font-weight: 800;
   color: #0F0E0D;
-  background: rgba(197, 160, 89, 0.16);
+  background: rgba(255, 85, 0, 0.16);
   padding: 1px 6px;
   border-radius: 6px;
-  border: 1px solid rgba(197, 160, 89, 0.28);
+  border: 1px solid rgba(255, 85, 0, 0.28);
 }
 
 .cart-shipping-headline.is-unlocked {
@@ -504,7 +504,7 @@ body.app-sheet-open {
   position: relative;
   overflow: hidden;
   transition: width 0.6s cubic-bezier(0.34, 1.4, 0.64, 1);
-  box-shadow: 0 1px 4px rgba(197, 160, 89, 0.35);
+  box-shadow: 0 1px 4px rgba(255, 85, 0, 0.35);
 }
 
 .cart-free-shipping-bar.is-unlocked .cart-progress-fill {
@@ -578,8 +578,8 @@ body.app-sheet-open {
 
 .btn-checkout-luxury:hover {
   transform: translateY(-2px);
-  border-color: rgba(197, 160, 89, 0.6);
-  box-shadow: 0 16px 36px -4px rgba(15, 14, 13, 0.65), 0 0 24px rgba(197, 160, 89, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 85, 0, 0.6);
+  box-shadow: 0 16px 36px -4px rgba(15, 14, 13, 0.65), 0 0 24px rgba(255, 85, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.35);
 }
 
 .btn-checkout-luxury:active {
@@ -629,8 +629,8 @@ body.app-sheet-open {
 }
 
 .btn-checkout-luxury:hover .btn-checkout-lock {
-  background: rgba(197, 160, 89, 0.2);
-  border-color: rgba(197, 160, 89, 0.4);
+  background: rgba(255, 85, 0, 0.2);
+  border-color: rgba(255, 85, 0, 0.4);
   color: #F6E05E;
 }
 
@@ -661,7 +661,7 @@ body.app-sheet-open {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #C5A059;
+  color: #FF5500;
   margin-top: 2px;
   line-height: 1;
 }
@@ -681,7 +681,7 @@ body.app-sheet-open {
 }
 
 .btn-checkout-luxury:hover .btn-checkout-arrow-circle {
-  background: linear-gradient(135deg, #C5A059 0%, #D4AF37 100%);
+  background: linear-gradient(135deg, #FF5500 0%, #D4AF37 100%);
   border-color: #F59E0B;
   color: #0F0E0D;
   transform: translateX(3px) scale(1.05);
@@ -736,7 +736,7 @@ body.app-sheet-open {
 }
 
 .cart-promo-input:focus {
-  border-color: #C5A059;
+  border-color: #FF5500;
 }
 
 .cart-promo-btn {
@@ -754,7 +754,7 @@ body.app-sheet-open {
 }
 
 .cart-promo-btn:hover {
-  background: #C5A059;
+  background: #FF5500;
 }
 
 .cart-discount-badge-line {
@@ -958,7 +958,7 @@ body.app-sheet-open {
 
 .checkout-input:focus {
   background: #FFFFFF;
-  border-color: #C5A059;
+  border-color: #FF5500;
   box-shadow: var(--gold-glow);
 }
 
@@ -981,7 +981,7 @@ body.app-sheet-open {
 }
 
 .checkout-option-card.selected {
-  border-color: #C5A059;
+  border-color: #FF5500;
   background: #FFFDF9;
   box-shadow: var(--gold-glow);
 }
@@ -1032,7 +1032,7 @@ body.app-sheet-open {
 
 .checkout-order-number-box {
   background: #FFFFFF;
-  border: 1px dashed #C5A059;
+  border: 1px dashed #FF5500;
   border-radius: 14px;
   padding: 14px;
   margin: 18px 0;
@@ -1120,7 +1120,7 @@ body.app-sheet-open {
 }
 
 .wishlist-move-cart-btn:hover {
-  background: #C5A059;
+  background: #FF5500;
 }
 
 .wishlist-remove-btn {
@@ -1161,7 +1161,7 @@ body.app-sheet-open {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 2px solid #C5A059;
+  border: 2px solid #FF5500;
   object-fit: cover;
 }
 
@@ -1187,7 +1187,7 @@ body.app-sheet-open {
 
 .profile-points-badge {
   background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(197, 160, 89, 0.45);
+  border: 1px solid rgba(255, 85, 0, 0.45);
   padding: 3px 8px;
   border-radius: 999px;
   font-size: 0.7rem;
@@ -1219,7 +1219,7 @@ body.app-sheet-open {
 
 .profile-tab-btn.active {
   color: #0A0A0A;
-  border-bottom-color: #C5A059;
+  border-bottom-color: #FF5500;
 }
 
 .profile-order-card {
@@ -1305,8 +1305,8 @@ body.app-sheet-open {
 }
 
 .track-step-node.current .track-step-bullet {
-  background: #C5A059;
-  border-color: #C5A059;
+  background: #FF5500;
+  border-color: #FF5500;
   color: #FFFFFF;
   box-shadow: 0 0 0 4px rgba(169, 129, 53, 0.25);
 }
@@ -1346,7 +1346,7 @@ body.app-sheet-open {
   justify-content: space-between;
   padding: 16px;
   background: #FFFFFF;
-  border: 1.5px dashed #C5A059;
+  border: 1.5px dashed #FF5500;
   border-radius: 16px;
   gap: 14px;
   transition: all 0.2s ease;
@@ -1365,7 +1365,7 @@ body.app-sheet-open {
   letter-spacing: 0.08em;
   background: #0A0A0A;
   color: #FFFFFF;
-  border: 1px solid rgba(197, 160, 89, 0.45);
+  border: 1px solid rgba(255, 85, 0, 0.45);
   padding: 6px 14px;
   border-radius: 8px;
   display: inline-block;
@@ -1381,7 +1381,7 @@ body.app-sheet-open {
 
 .offer-apply-btn {
   padding: 8px 16px;
-  background: #C5A059;
+  background: #FF5500;
   color: #FFFFFF;
   border: none;
   border-radius: 999px;
@@ -1517,8 +1517,8 @@ body.app-sheet-open {
   /* Specular Chamfer Edge Borders */
   --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.86);
   --liquid-glass-border-subtle: 1px solid rgba(255, 255, 255, 0.68);
-  --liquid-glass-border-hover: 1px solid rgba(197, 160, 89, 0.55);
-  --liquid-glass-border-gold: 1.5px solid rgba(197, 160, 89, 0.45);
+  --liquid-glass-border-hover: 1px solid rgba(255, 85, 0, 0.55);
+  --liquid-glass-border-gold: 1.5px solid rgba(255, 85, 0, 0.45);
 
   /* Optical Refraction & Frosted Blur */
   --liquid-glass-blur: blur(22px) saturate(190%) contrast(102%);
@@ -1528,7 +1528,7 @@ body.app-sheet-open {
   /* Specular Highlights & Ambient Shadows */
   --liquid-glass-shadow: 0 14px 36px -8px rgba(23, 21, 19, 0.05), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.98), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
   --liquid-glass-shadow-elevated: 0 24px 52px -10px rgba(23, 21, 19, 0.09), inset 0 2px 2px 0 #FFFFFF, inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
-  --liquid-glass-shadow-hover: 0 28px 60px -12px rgba(23, 21, 19, 0.14), 0 0 32px rgba(197, 160, 89, 0.22), inset 0 2px 2px 0 #FFFFFF;
+  --liquid-glass-shadow-hover: 0 28px 60px -12px rgba(23, 21, 19, 0.14), 0 0 32px rgba(255, 85, 0, 0.22), inset 0 2px 2px 0 #FFFFFF;
 
   /* Spring Physics */
   --liquid-glass-transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, background 0.28s ease;
@@ -1575,9 +1575,9 @@ body {
 .pdp-action-icon-btn:hover,
 .drops-arrow-circle:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.6) !important;
+  border-color: rgba(255, 85, 0, 0.6) !important;
   transform: translateY(-2px) scale(1.06) !important;
-  box-shadow: 0 10px 26px rgba(197, 160, 89, 0.25), inset 0 1.5px 1px #FFFFFF !important;
+  box-shadow: 0 10px 26px rgba(255, 85, 0, 0.25), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* Mega Dropdown Menus */
@@ -1643,7 +1643,7 @@ body {
 .popular-choice-card:hover {
   background: var(--liquid-glass-bg-hover) !important;
   transform: translateY(-8px) scale(1.012) !important;
-  border-color: rgba(197, 160, 89, 0.55) !important;
+  border-color: rgba(255, 85, 0, 0.55) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
 }
 
@@ -1738,24 +1738,30 @@ body {
 .catalog-cat-card:hover,
 .catalog-price-btn:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.6) !important;
+  border-color: rgba(255, 85, 0, 0.6) !important;
   color: #0A0A0A !important;
   transform: translateY(-2px) scale(1.03) !important;
-  box-shadow: 0 8px 22px rgba(197, 160, 89, 0.22), inset 0 1.5px 1px #FFFFFF !important;
+  box-shadow: 0 8px 22px rgba(255, 85, 0, 0.22), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* Active Category & Filter Pills (Obsidian Liquid Glass) */
+.catalog-cat-card.active,
 .cat-pill.active,
 .filter-pill.active,
 .catalog-nav-pill.active,
 .pdp-switch-pill.active,
 .catalog-price-btn.active {
-  background: var(--liquid-glass-dark) !important;
+  background: #0A0A0A !important;
   backdrop-filter: var(--liquid-glass-blur) !important;
   -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
   color: #FFFFFF !important;
-  border: var(--liquid-glass-dark-border) !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.38) !important;
+  border: 1.5px solid #0A0A0A !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+.catalog-cat-card.active .cat-pill-title {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
 }
 
 /* Pill Count Badges */
@@ -1774,10 +1780,10 @@ body {
 }
 
 .catalog-cat-card.active .cat-pill-count {
-  background: #C5A059 !important;
+  background: #FF5500 !important;
   color: #FFFFFF !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 2px 6px rgba(197, 160, 89, 0.35) !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 2px 6px rgba(255, 85, 0, 0.35) !important;
   font-weight: 800 !important;
 }
 
@@ -1819,7 +1825,7 @@ body {
 .combo-full-page-link:hover,
 .guarantee-tile:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.52) !important;
+  border-color: rgba(255, 85, 0, 0.52) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
   transform: translateY(-6px) scale(1.008) !important;
 }
@@ -1962,14 +1968,14 @@ body {
 .checkout-option-card:hover,
 .profile-order-card:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.45) !important;
-  box-shadow: 0 10px 28px rgba(197, 160, 89, 0.16), inset 0 1.5px 1px #FFFFFF !important;
+  border-color: rgba(255, 85, 0, 0.45) !important;
+  box-shadow: 0 10px 28px rgba(255, 85, 0, 0.16), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 .checkout-option-card.selected {
   background: rgba(250, 248, 242, 0.92) !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 12px 30px rgba(197, 160, 89, 0.2), inset 0 1.5px 1px #FFFFFF !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 12px 30px rgba(255, 85, 0, 0.2), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* 9. UNIVERSAL SEARCH BARS, FORM INPUTS & TEXT FIELDS */
@@ -2000,8 +2006,8 @@ body {
 .newsletter-input:focus,
 .checkout-field:focus {
   background: rgba(255, 255, 255, 0.96) !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 0 0 3.5px rgba(197, 160, 89, 0.22), 0 8px 24px rgba(197, 160, 89, 0.12), inset 0 1px 1px #FFFFFF !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 0 0 3.5px rgba(255, 85, 0, 0.22), 0 8px 24px rgba(255, 85, 0, 0.12), inset 0 1px 1px #FFFFFF !important;
 }
 
 /* 10. UNIVERSAL REVIEWS, VIDEO SHOWCASES & COMMUNITY RATINGS */
@@ -2024,7 +2030,7 @@ body {
 .review-card:hover,
 .video-card:hover {
   transform: translateY(-6px) scale(1.012) !important;
-  border-color: rgba(197, 160, 89, 0.45) !important;
+  border-color: rgba(255, 85, 0, 0.45) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
 }
 
@@ -2044,9 +2050,9 @@ body {
 .reviews-nav-btn:hover,
 .bestseller-nav-btn:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.6) !important;
+  border-color: rgba(255, 85, 0, 0.6) !important;
   transform: translateY(-2px) scale(1.08) !important;
-  box-shadow: 0 10px 28px rgba(197, 160, 89, 0.25), inset 0 1.5px 1px #FFFFFF !important;
+  box-shadow: 0 10px 28px rgba(255, 85, 0, 0.25), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* 11. UNIVERSAL PDP SPECIFICATIONS, TRUST BADGES, INFO PANELS & ACCORDIONS */
@@ -2074,8 +2080,8 @@ body {
 .pdp-accordion-item:hover,
 .pdp-summary-card:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.45) !important;
-  box-shadow: 0 12px 32px rgba(197, 160, 89, 0.14), inset 0 1.5px 1px #FFFFFF !important;
+  border-color: rgba(255, 85, 0, 0.45) !important;
+  box-shadow: 0 12px 32px rgba(255, 85, 0, 0.14), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* 12. UNIVERSAL INFORMATION, POLICY & CONTACT PAGES */
@@ -2097,7 +2103,7 @@ body {
 .highlight-card:hover,
 .toc-card:hover,
 .policy-card:hover {
-  border-color: rgba(197, 160, 89, 0.5) !important;
+  border-color: rgba(255, 85, 0, 0.5) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
   transform: translateY(-4px) !important;
 }
@@ -2128,7 +2134,7 @@ body {
 
 .footer-social-btn:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(197, 160, 89, 0.6) !important;
+  border-color: rgba(255, 85, 0, 0.6) !important;
   transform: translateY(-2px) scale(1.08) !important;
 }
 
@@ -2214,7 +2220,7 @@ button:active,
     transparent 0%,
     rgba(255, 255, 255, 0.05) 20%,
     rgba(255, 255, 255, 0.45) 50%,
-    rgba(197, 160, 89, 0.38) 65%,
+    rgba(255, 85, 0, 0.38) 65%,
     transparent 100%
   );
   transform: skewX(-24deg);
@@ -2242,8 +2248,8 @@ button:active,
 .bestseller-prod-card:hover,
 .drop-card-inner:hover {
   transform: translateY(-6px) scale(1.012) !important;
-  border-color: rgba(197, 160, 89, 0.55) !important;
-  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 24px rgba(197, 160, 89, 0.22) !important;
+  border-color: rgba(255, 85, 0, 0.55) !important;
+  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 24px rgba(255, 85, 0, 0.22) !important;
 }
 
 /* Card Internal Media Smooth Zoom */
@@ -2280,11 +2286,11 @@ button:active,
 
 @keyframes checkAuraPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.7);
     opacity: 1;
   }
   100% {
-    box-shadow: 0 0 0 16px rgba(197, 160, 89, 0);
+    box-shadow: 0 0 0 16px rgba(255, 85, 0, 0);
     opacity: 0;
   }
 }
@@ -2315,10 +2321,10 @@ button:active,
 
 .combo-card-checkbox:hover {
   background: #FFFFFF !important;
-  border-color: #C5A059 !important;
+  border-color: #FF5500 !important;
   color: #171513 !important;
   transform: translateY(-2px) scale(1.03) !important;
-  box-shadow: 0 6px 16px rgba(197, 160, 89, 0.22), inset 0 1px 1px #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(255, 85, 0, 0.22), inset 0 1px 1px #FFFFFF !important;
 }
 
 .combo-check-circle {
@@ -2353,9 +2359,9 @@ button:active,
 /* Checked State: Pure Artisan Obsidian & Gold Bloom */
 .combo-card-checkbox.checked {
   background: linear-gradient(135deg, #1C1A18 0%, #0A0A0A 100%) !important;
-  border-color: #C5A059 !important;
+  border-color: #FF5500 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.36), 0 2px 6px rgba(0, 0, 0, 0.24), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.36), 0 2px 6px rgba(0, 0, 0, 0.24), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
   animation: checkboxElasticPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -2369,9 +2375,9 @@ button:active,
 }
 
 .combo-card-checkbox.checked .combo-check-circle {
-  background: linear-gradient(135deg, #DFBE74 0%, #C5A059 100%) !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 0 10px rgba(197, 160, 89, 0.6) !important;
+  background: linear-gradient(135deg, #FF8A00 0%, #FF5500 100%) !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 0 10px rgba(255, 85, 0, 0.6) !important;
   animation: checkCirclePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -2389,8 +2395,8 @@ button:active,
 /* Checked Card Parent Selection Glow */
 .combo-catalog-card.selected,
 .combo-catalog-card.is-selected {
-  border-color: rgba(197, 160, 89, 0.85) !important;
-  box-shadow: 0 18px 42px -6px rgba(197, 160, 89, 0.3), 0 0 0 1.5px rgba(197, 160, 89, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 85, 0, 0.85) !important;
+  box-shadow: 0 18px 42px -6px rgba(255, 85, 0, 0.3), 0 0 0 1.5px rgba(255, 85, 0, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.95) !important;
   transform: translateY(-4px) scale(1.01) !important;
 }
 
@@ -2426,17 +2432,18 @@ button:active,
 .pdp-switch-pill:hover,
 .catalog-price-btn:hover {
   transform: translateY(-2px) scale(1.025) !important;
-  border-color: rgba(197, 160, 89, 0.65) !important;
-  box-shadow: 0 8px 22px rgba(197, 160, 89, 0.2), inset 0 1.5px 1px #FFFFFF !important;
+  border-color: rgba(255, 85, 0, 0.65) !important;
+  box-shadow: 0 8px 22px rgba(255, 85, 0, 0.2), inset 0 1.5px 1px #FFFFFF !important;
 }
 
+.catalog-cat-card.active,
 .combo-cat-pill.active,
 .pdp-switch-pill.active,
 .catalog-price-btn.active {
-  background: linear-gradient(145deg, #1C1A18 0%, #0A0A0A 100%) !important;
-  border-color: #C5A059 !important;
+  background: #0A0A0A !important;
+  border-color: #0A0A0A !important;
   color: #FFFFFF !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32), 0 0 16px rgba(197, 160, 89, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
   animation: pillActivePop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -2456,7 +2463,7 @@ button:active,
 
 .luxury-sort-dropdown.open .sort-trigger-icon {
   transform: rotate(180deg) !important;
-  color: #C5A059 !important;
+  color: #FF5500 !important;
 }
 
 .luxury-sort-menu {
@@ -2486,7 +2493,7 @@ button:active,
 
 .luxury-sort-option:hover {
   transform: translateX(4px) !important;
-  background: rgba(197, 160, 89, 0.12) !important;
+  background: rgba(255, 85, 0, 0.12) !important;
   color: #171513 !important;
 }
 
@@ -2508,7 +2515,7 @@ button:active,
 
 .catalog-chip:hover {
   transform: translateY(-1px) scale(1.02) !important;
-  border-color: #C5A059 !important;
+  border-color: #FF5500 !important;
 }
 
 .catalog-chip-remove {
@@ -2586,8 +2593,8 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none !important;
-  border-color: #C5A059 !important;
-  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.22), 0 6px 18px rgba(197, 160, 89, 0.1) !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.22), 0 6px 18px rgba(255, 85, 0, 0.1) !important;
 }
 
 /* ==========================================================================
@@ -2850,10 +2857,10 @@ textarea:focus {
 }
 
 .mobile-link:hover {
-  background: rgba(197, 160, 89, 0.12) !important;
+  background: rgba(255, 85, 0, 0.12) !important;
   color: #0A0A0A !important;
   transform: translateX(6px) !important;
-  box-shadow: inset 3.5px 0 0 #C5A059 !important;
+  box-shadow: inset 3.5px 0 0 #FF5500 !important;
 }
 
 .mobile-link:active {
@@ -2861,10 +2868,10 @@ textarea:focus {
 }
 
 .mobile-link.active {
-  background: rgba(197, 160, 89, 0.16) !important;
+  background: rgba(255, 85, 0, 0.16) !important;
   color: #0A0A0A !important;
   font-weight: 800 !important;
-  box-shadow: inset 3.5px 0 0 #C5A059 !important;
+  box-shadow: inset 3.5px 0 0 #FF5500 !important;
 }
 
 /* --- 15.8 Cart Free Shipping Molten Gold Shimmer Bar --- */
@@ -2883,16 +2890,16 @@ textarea:focus {
 .cart-shipping-bar-fill {
   background: linear-gradient(
     90deg, 
-    #C5A059 0%, 
+    #FF5500 0%, 
     #F5DEB3 25%, 
     #FFE5B4 50%, 
     #F5DEB3 75%, 
-    #C5A059 100%
+    #FF5500 100%
   ) !important;
   background-size: 200% 100% !important;
   animation: shippingGlowShimmer 2.4s infinite linear !important;
   border-radius: 999px !important;
-  box-shadow: 0 0 12px rgba(197, 160, 89, 0.45) !important;
+  box-shadow: 0 0 12px rgba(255, 85, 0, 0.45) !important;
 }
 
 /* --- 15.9 Discreet Luxury Scrollbar for All Sidebars --- */
@@ -2917,7 +2924,7 @@ textarea:focus {
 .cart-drawer::-webkit-scrollbar-thumb,
 #cartDrawerSheet::-webkit-scrollbar-thumb,
 #accountDrawerSheet::-webkit-scrollbar-thumb {
-  background: rgba(197, 160, 89, 0.35) !important;
+  background: rgba(255, 85, 0, 0.35) !important;
   border-radius: 999px !important;
   transition: background 0.2s ease !important;
 }
@@ -2925,7 +2932,7 @@ textarea:focus {
 .mobile-nav-drawer::-webkit-scrollbar-thumb:hover,
 .app-drawer::-webkit-scrollbar-thumb:hover,
 .cart-drawer::-webkit-scrollbar-thumb:hover {
-  background: rgba(197, 160, 89, 0.75) !important;
+  background: rgba(255, 85, 0, 0.75) !important;
 }
 
 

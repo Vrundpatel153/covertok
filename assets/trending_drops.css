@@ -48,11 +48,11 @@
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #8C6219;
+  color: #0284C7;
   padding: 4px 12px;
   border-radius: 999px;
-  background: rgba(250, 248, 245, 0.95);
-  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.28);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   width: fit-content;
 }
@@ -71,10 +71,10 @@
 .drops-accent-word {
   position: relative;
   display: inline-block;
-  background: linear-gradient(135deg, #996515 0%, #C5A059 35%, #D4AF37 60%, #8A5A12 100%);
+  background: linear-gradient(135deg, #FF5500 0%, #FF8A00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 8px rgba(138, 90, 18, 0.25));
+  filter: drop-shadow(0 2px 10px rgba(255, 85, 0, 0.25));
   font-weight: 900;
 }
 
@@ -83,7 +83,7 @@
   font-size: clamp(0.85rem, 0.95vw, 0.98rem);
   font-weight: 500;
   line-height: 1.45;
-  color: #5A544E;
+  color: #64748B;
   margin: 0;
   max-width: 580px;
 }
@@ -121,14 +121,14 @@
 }
 
 .drops-view-all-btn:hover {
-  border-color: #C5A059;
-  color: #8C6219;
-  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.2);
+  border-color: #FF5500;
+  color: #FF5500;
+  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.2);
   transform: translateY(-1px);
 }
 
 .drops-view-all-btn:hover .drops-arrow-circle {
-  background: #8C6219;
+  background: #FF5500;
   transform: translateX(3px);
 }
 
@@ -183,8 +183,8 @@
 }
 
 .drop-3d-card:hover .drop-card-inner {
-  box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.12), 0 0 24px rgba(197, 160, 89, 0.22);
-  border-color: rgba(197, 160, 89, 0.55);
+  box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.12), 0 0 24px rgba(14, 165, 233, 0.16);
+  border-color: rgba(14, 165, 233, 0.45);
 }
 
 /* Specular Glare Overlay */
@@ -223,14 +223,14 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(197, 160, 89, 0.38);
-  color: #1E1C1A;
+  border: 1px solid rgba(14, 165, 233, 0.28);
+  color: #0F172A;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   white-space: nowrap;
 }
 
 .drop-luxury-badge svg {
-  stroke: #8C6219;
+  stroke: #0284C7;
   flex-shrink: 0;
 }
 
@@ -287,7 +287,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(197, 160, 89, 0.2) 0%, rgba(197, 160, 89, 0) 70%);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.16) 0%, rgba(14, 165, 233, 0) 70%);
   filter: blur(18px);
   pointer-events: none;
   transition: transform 0.5s ease, opacity 0.5s ease;
@@ -319,8 +319,8 @@
   bottom: 8px;
   right: 8px;
   background: #0C0B0A;
-  color: #DFBE74;
-  border: 1px solid rgba(197, 160, 89, 0.45);
+  color: #FF5500;
+  border: 1px solid rgba(255, 85, 0, 0.45);
   font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
   font-size: 9.5px;
   font-weight: 800;
@@ -393,7 +393,7 @@
 }
 
 .drop-title a:hover {
-  color: #8C6219;
+  color: #FF5500;
 }
 
 .drop-pricing-row {
@@ -449,10 +449,10 @@
 }
 
 .drop-quick-add-btn:hover {
-  background: #8C6219;
-  border-color: #8C6219;
+  background: #FF5500;
+  border-color: #FF5500;
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px rgba(140, 98, 25, 0.3);
+  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.35);
 }
 
 .drop-quick-add-btn.added {

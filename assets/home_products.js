@@ -63,7 +63,7 @@
         if (p.discount_percent >= 10) {
           badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: rgba(23, 21, 19, 0.88); color: #FFFFFF; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">-${p.discount_percent}%</span>`;
         } else if (p.is_bestseller) {
-          badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #C5A059; color: #171513; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
+          badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #FF5500; color: #171513; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
         }
 
         return `
@@ -127,7 +127,7 @@
       if (p.discount_percent >= 10) {
         badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: rgba(23, 21, 19, 0.88); color: #FFFFFF; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">-${p.discount_percent}%</span>`;
       } else if (p.is_bestseller) {
-        badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #C5A059; color: #171513; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
+        badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #FF5500; color: #171513; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
       }
 
       return `
