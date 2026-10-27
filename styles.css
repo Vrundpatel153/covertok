@@ -787,13 +787,16 @@ img {
 .mobile-nav-backdrop {
   position: fixed !important;
   inset: 0 !important;
-  background: rgba(17, 17, 19, 0.65) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+  background: rgba(18, 17, 15, 0.62) !important;
+  backdrop-filter: blur(14px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
   z-index: 99998 !important;
   opacity: 0 !important;
   visibility: hidden !important;
-  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease !important;
+  transition: opacity 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              backdrop-filter 0.38s ease, 
+              visibility 0.38s ease !important;
+  will-change: opacity, backdrop-filter !important;
 }
 
 .mobile-nav-backdrop.open {
@@ -809,21 +812,29 @@ img {
   width: min(88vw, 340px) !important;
   height: 100% !important;
   height: 100dvh !important;
-  background: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(34px) saturate(210%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(34px) saturate(210%) contrast(102%) !important;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.95) !important;
   z-index: 99999 !important;
-  box-shadow: -14px 0 45px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: -28px 0 80px rgba(0, 0, 0, 0.22), -6px 0 20px rgba(0, 0, 0, 0.08), inset 1.5px 0 0 rgba(255, 255, 255, 0.95) !important;
   padding: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  overflow: hidden !important;
-  transform: translateX(105%) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  transform: translate3d(105%, 0, 0) !important;
   visibility: hidden !important;
-  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.32s ease !important;
-  will-change: transform !important;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.42s ease, 
+              box-shadow 0.42s ease !important;
+  will-change: transform, box-shadow !important;
+  transform-style: preserve-3d !important;
+  backface-visibility: hidden !important;
 }
 
 .mobile-nav-drawer.open {
-  transform: translateX(0) !important;
+  transform: translate3d(0, 0, 0) !important;
   visibility: visible !important;
 }
 
@@ -832,8 +843,10 @@ img {
   align-items: center !important;
   justify-content: space-between !important;
   padding: 16px 20px !important;
-  border-bottom: 1px solid #F0ECE4 !important;
-  background: #FFFFFF !important;
+  border-bottom: 1px solid rgba(234, 229, 219, 0.8) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
   flex-shrink: 0 !important;
   margin: 0 !important;
 }
@@ -844,6 +857,11 @@ img {
   text-decoration: none !important;
   padding: 0 !important;
   margin: 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.mobile-nav-header .brand-logo:active {
+  transform: scale(0.96) !important;
 }
 
 .mobile-nav-header .brand-logo .logo-img {
@@ -859,8 +877,8 @@ img {
   width: 36px !important;
   height: 36px !important;
   border-radius: 50% !important;
-  background: #FAF7F2 !important;
-  border: 1.5px solid #EAE5DB !important;
+  background: rgba(250, 247, 242, 0.92) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -868,16 +886,23 @@ img {
   line-height: 1 !important;
   color: #171513 !important;
   cursor: pointer !important;
-  transition: all 0.2s ease !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
   padding: 0 !important;
   margin: 0 !important;
   flex-shrink: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 1px #FFFFFF !important;
 }
 
 .mobile-nav-header .close-btn:hover {
   background: #171513 !important;
   color: #FFFFFF !important;
   border-color: #171513 !important;
+  transform: rotate(90deg) scale(1.12) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+.mobile-nav-header .close-btn:active {
+  transform: rotate(90deg) scale(0.92) !important;
 }
 
 .mobile-nav-links {
@@ -902,26 +927,37 @@ img {
   align-items: center !important;
   justify-content: space-between !important;
   padding: 10px 14px !important;
-  border-radius: 10px !important;
-  transition: all 0.18s ease !important;
+  border-radius: 12px !important;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              background 0.18s ease, 
+              color 0.18s ease, 
+              box-shadow 0.2s ease !important;
 }
 
-.mobile-link:hover,
-.mobile-link:active {
-  background: #F1F5F9 !important;
+.mobile-link:hover {
+  background: rgba(197, 160, 89, 0.12) !important;
   color: #0A0A0A !important;
+  transform: translateX(6px) !important;
+  box-shadow: inset 3.5px 0 0 #C5A059 !important;
+}
+
+.mobile-link:active {
+  transform: scale(0.97) translateX(4px) !important;
 }
 
 .mobile-link.active {
-  background: #F1F5F9 !important;
+  background: rgba(197, 160, 89, 0.16) !important;
   color: #0A0A0A !important;
   font-weight: 800 !important;
+  box-shadow: inset 3.5px 0 0 #C5A059 !important;
 }
 
 .mobile-drawer-footer {
   padding: 16px 20px !important;
-  border-top: 1px solid #F0ECE4 !important;
-  background: #FAF7F2 !important;
+  border-top: 1px solid rgba(234, 229, 219, 0.8) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 8px !important;

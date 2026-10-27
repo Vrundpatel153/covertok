@@ -2591,4 +2591,343 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.22), 0 6px 18px rgba(197, 160, 89, 0.1) !important;
 }
 
+/* ==========================================================================
+   15. MASTER CINEMATIC SIDEBARS & DRAWERS ANIMATION SYSTEM
+   - Hardware-accelerated slide-in/out physics (cubic-bezier spring curve)
+   - Frosted liquid glass shell with multi-tier specular edge glow
+   - Deep ambient backdrop blur fade
+   - Internal waterfall cascade animation on nav links & cart items
+   - Header & footer slide entrance
+   - Close button dynamic 90° spin and tactile haptic response
+   - Floating free-shipping molten gold shimmer
+   - Discreet luxury slim scrollbars
+   ========================================================================== */
+
+/* --- 15.1 Master Slide-In Sidebars Shell (Mobile Nav, Cart, Account, Wishlist, Filters) --- */
+.mobile-nav-drawer,
+.cart-drawer,
+#cartDrawer,
+.app-drawer,
+#cartDrawerSheet,
+#accountDrawerSheet,
+#wishlistDrawerSheet,
+.catalog-filters-sheet {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 100% !important;
+  height: 100dvh !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(36px) saturate(210%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(210%) contrast(102%) !important;
+  border-left: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: -28px 0 80px rgba(0, 0, 0, 0.22), -6px 0 22px rgba(0, 0, 0, 0.08), inset 1.5px 0 0 rgba(255, 255, 255, 0.95) !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  transform: translate3d(105%, 0, 0) !important;
+  visibility: hidden !important;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.42s ease, 
+              box-shadow 0.42s ease !important;
+  will-change: transform, box-shadow !important;
+  transform-style: preserve-3d !important;
+  backface-visibility: hidden !important;
+}
+
+/* Open / Active State (Physics Glides Seamlessly into View) */
+.mobile-nav-drawer.open,
+.cart-drawer.open,
+#cartDrawer.open,
+.app-drawer.active,
+#cartDrawerSheet.active,
+#accountDrawerSheet.active,
+#wishlistDrawerSheet.active,
+.catalog-filters-sheet.active {
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+}
+
+/* --- 15.2 Deep Ambient Overlays & Backdrop Blurs --- */
+.mobile-nav-backdrop,
+.app-drawer-overlay,
+.cart-drawer-overlay,
+.modal-overlay,
+.app-modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(18, 17, 15, 0.62) !important;
+  backdrop-filter: blur(14px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+  z-index: 99998 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              backdrop-filter 0.38s ease, 
+              visibility 0.38s ease !important;
+  will-change: opacity, backdrop-filter !important;
+}
+
+.mobile-nav-backdrop.open,
+.app-drawer-overlay.active,
+.cart-drawer-overlay.active,
+.modal-overlay.active,
+.app-modal-overlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* --- 15.3 Sidebar Header Slide Entrance --- */
+@keyframes sidebarHeaderSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-18px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.mobile-nav-header,
+.app-sheet-header,
+.cart-drawer-header,
+.cart-header {
+  background: rgba(255, 255, 255, 0.76) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(234, 229, 219, 0.8) !important;
+  flex-shrink: 0 !important;
+}
+
+.mobile-nav-drawer.open .mobile-nav-header,
+.app-drawer.active .app-sheet-header,
+.cart-drawer.open .cart-drawer-header {
+  animation: sidebarHeaderSlide 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.04s both !important;
+}
+
+/* --- 15.4 Staggered Cascade Waterfall of Nav Links & Drawer Items --- */
+@keyframes sidebarItemCascade {
+  0% {
+    opacity: 0;
+    transform: translate3d(28px, 0, 0) scale(0.96);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Mobile Nav Links Waterfall */
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(1) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(2) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.10s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(3) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(4) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(5) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(6) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(7) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.30s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(8) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both; }
+.mobile-nav-drawer.open .mobile-nav-links li:nth-child(9) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both; }
+
+/* Cart Drawer Items Waterfall */
+.app-drawer.active .cart-item-row:nth-child(1),
+.cart-drawer.open .cart-item-row:nth-child(1) {
+  animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+.app-drawer.active .cart-item-row:nth-child(2),
+.cart-drawer.open .cart-item-row:nth-child(2) {
+  animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+}
+.app-drawer.active .cart-item-row:nth-child(3),
+.cart-drawer.open .cart-item-row:nth-child(3) {
+  animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.20s both;
+}
+.app-drawer.active .cart-item-row:nth-child(4),
+.cart-drawer.open .cart-item-row:nth-child(4) {
+  animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
+}
+
+/* Account Drawer Order / Voucher Waterfall */
+.app-drawer.active .profile-member-card { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both; }
+.app-drawer.active .profile-order-card:nth-child(1) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both; }
+.app-drawer.active .profile-order-card:nth-child(2) { animation: sidebarItemCascade 0.36s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+
+/* --- 15.5 Sidebar Footers & Policies Cascade Slide-Up --- */
+@keyframes sidebarFooterSlide {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+.mobile-nav-drawer.open .mobile-drawer-policies {
+  animation: sidebarFooterSlide 0.38s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both !important;
+}
+
+.mobile-nav-drawer.open .mobile-drawer-footer {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-top: 1px solid rgba(234, 229, 219, 0.8) !important;
+  animation: sidebarFooterSlide 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both !important;
+}
+
+.app-drawer.active .app-sheet-footer,
+.cart-drawer.open .cart-drawer-footer {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-top: 1px solid rgba(234, 229, 219, 0.8) !important;
+  animation: sidebarFooterSlide 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both !important;
+}
+
+/* --- 15.6 Close Button Dynamic Spin & Tactile Feedback --- */
+.mobile-nav-header .close-btn,
+.app-sheet-close,
+.close-drawer-btn,
+.cart-header .close-btn,
+#closeMobileDrawer {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(250, 247, 242, 0.92) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  color: #171513 !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05), inset 0 1px 1px #FFFFFF !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  user-select: none !important;
+}
+
+.mobile-nav-header .close-btn:hover,
+.app-sheet-close:hover,
+.close-drawer-btn:hover,
+.cart-header .close-btn:hover,
+#closeMobileDrawer:hover {
+  background: #171513 !important;
+  color: #FFFFFF !important;
+  border-color: #171513 !important;
+  transform: rotate(90deg) scale(1.12) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22) !important;
+}
+
+.mobile-nav-header .close-btn:active,
+.app-sheet-close:active,
+.close-drawer-btn:active,
+.cart-header .close-btn:active,
+#closeMobileDrawer:active {
+  transform: rotate(90deg) scale(0.92) !important;
+}
+
+/* --- 15.7 Mobile Links Interactive Hover & Touch Physics --- */
+.mobile-link {
+  border-radius: 12px !important;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              background 0.18s ease, 
+              color 0.18s ease, 
+              box-shadow 0.2s ease !important;
+}
+
+.mobile-link:hover {
+  background: rgba(197, 160, 89, 0.12) !important;
+  color: #0A0A0A !important;
+  transform: translateX(6px) !important;
+  box-shadow: inset 3.5px 0 0 #C5A059 !important;
+}
+
+.mobile-link:active {
+  transform: scale(0.97) translateX(4px) !important;
+}
+
+.mobile-link.active {
+  background: rgba(197, 160, 89, 0.16) !important;
+  color: #0A0A0A !important;
+  font-weight: 800 !important;
+  box-shadow: inset 3.5px 0 0 #C5A059 !important;
+}
+
+/* --- 15.8 Cart Free Shipping Molten Gold Shimmer Bar --- */
+@keyframes shippingGlowShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.cart-free-shipping-bar,
+.cart-shipping-progress {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.cart-free-shipping-progress,
+.cart-shipping-bar-fill {
+  background: linear-gradient(
+    90deg, 
+    #C5A059 0%, 
+    #F5DEB3 25%, 
+    #FFE5B4 50%, 
+    #F5DEB3 75%, 
+    #C5A059 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: shippingGlowShimmer 2.4s infinite linear !important;
+  border-radius: 999px !important;
+  box-shadow: 0 0 12px rgba(197, 160, 89, 0.45) !important;
+}
+
+/* --- 15.9 Discreet Luxury Scrollbar for All Sidebars --- */
+.mobile-nav-drawer::-webkit-scrollbar,
+.app-drawer::-webkit-scrollbar,
+.cart-drawer::-webkit-scrollbar,
+#cartDrawerSheet::-webkit-scrollbar,
+#accountDrawerSheet::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.mobile-nav-drawer::-webkit-scrollbar-track,
+.app-drawer::-webkit-scrollbar-track,
+.cart-drawer::-webkit-scrollbar-track,
+#cartDrawerSheet::-webkit-scrollbar-track,
+#accountDrawerSheet::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.mobile-nav-drawer::-webkit-scrollbar-thumb,
+.app-drawer::-webkit-scrollbar-thumb,
+.cart-drawer::-webkit-scrollbar-thumb,
+#cartDrawerSheet::-webkit-scrollbar-thumb,
+#accountDrawerSheet::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.35) !important;
+  border-radius: 999px !important;
+  transition: background 0.2s ease !important;
+}
+
+.mobile-nav-drawer::-webkit-scrollbar-thumb:hover,
+.app-drawer::-webkit-scrollbar-thumb:hover,
+.cart-drawer::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 160, 89, 0.75) !important;
+}
+
+
 
