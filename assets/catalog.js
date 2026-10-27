@@ -194,19 +194,50 @@
       filtered.sort((a, b) => (b.is_bestseller ? 1 : 0) - (a.is_bestseller ? 1 : 0));
     }
 
-    // Update Category Headings
+    // Update Category Headings & Editorial Descriptions
     const activeCatObj = CATEGORIES.find(c => c.id === currentCategory) || CATEGORIES[0];
     if (currentHeading) {
       currentHeading.textContent = activeCatObj.title;
     }
+
+    const eyebrowTag = document.getElementById('catalogEyebrowTag');
     const mainHeading = document.getElementById('catalogMainHeading');
-    if (mainHeading) {
-      if (currentCategory === 'all') {
-        mainHeading.innerHTML = `All Products &amp; <span class="copper-accent">Collections</span>`;
-      } else {
-        mainHeading.innerHTML = `${activeCatObj.title} <span class="copper-accent">Collection</span>`;
-      }
+    const categoryDesc = document.getElementById('catalogCategoryDesc');
+
+    if (eyebrowTag) {
+      eyebrowTag.innerHTML = currentCategory === 'all' 
+        ? `OFFICIAL CATALOG &bull; 2026 EDITION` 
+        : `COVERTOK CURATED &bull; ${activeCatObj.title.toUpperCase()}`;
     }
+
+    if (mainHeading) {
+      const headingMap = {
+        'all': `Luxury Armor &amp; <span class="copper-accent">Accessories</span>`,
+        'iphone-cases': `iPhone Luxury <span class="copper-accent">Armor Cases</span>`,
+        'airpod-covers': `AirPods Protective <span class="copper-accent">Cases</span>`,
+        'watchbands': `Apple Watch <span class="copper-accent">Bands &amp; Straps</span>`,
+        'charger-covers': `MagSafe <span class="copper-accent">Charger Covers</span>`,
+        'charger-and-cables': `Braided Cables &amp; <span class="copper-accent">Fast Power</span>`,
+        'cover-charms': `Designer Phone <span class="copper-accent">Charms</span>`,
+        'other-accessories': `Everyday Tech <span class="copper-accent">Accessories</span>`
+      };
+      mainHeading.innerHTML = headingMap[currentCategory] || `${activeCatObj.title} &bull; <span class="copper-accent">Signature</span>`;
+    }
+
+    if (categoryDesc) {
+      const descMap = {
+        'all': `Explore 75+ precision-crafted Covertok cases, Apple Watch bands, AirPods essentials and daily MagSafe charging setups.`,
+        'iphone-cases': `Precision-engineered shockproof cases, magnetic phone covers, and sleek silicone designs for iPhone 16 down to iPhone 11.`,
+        'airpod-covers': `Drop-tested luxury leather, silicone, and armor shell cases with secure clips for AirPods Pro &amp; AirPods 1–4.`,
+        'watchbands': `Breathable sports silicone, magnetic loops, and rugged Alpine bands for Apple Watch Ultra &amp; Series 1–10.`,
+        'charger-covers': `Protective silicone bumpers and aesthetic charging station covers for Apple MagSafe.`,
+        'charger-and-cables': `High-speed charging cables, braided cords, and fast charging adapters.`,
+        'cover-charms': `Aesthetic wrist lanyards, pearl bead chains, and luxury phone charms.`,
+        'other-accessories': `Essential daily carry, camera lens protectors, and smartphone stand accessories.`
+      };
+      categoryDesc.innerHTML = descMap[currentCategory] || `Curated authentic Covertok accessories designed to elevate your everyday setup.`;
+    }
+
     if (countEl) {
       countEl.innerHTML = `<span class="catalog-count-num">${filtered.length}</span> Products`;
     }

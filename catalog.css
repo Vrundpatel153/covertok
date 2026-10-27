@@ -280,63 +280,78 @@
 }
 
 .catalog-curated-banner {
-  background: #FAFAFA;
-  border: 1.5px solid #E5E7EB;
-  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 244, 0.88) 100%) !important;
+  backdrop-filter: blur(28px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.96) !important;
+  border-radius: 24px !important;
   overflow: hidden;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px -4px rgba(23, 21, 19, 0.06), inset 0 1.5px 1.5px #FFFFFF !important;
   position: relative;
-  min-height: 150px;
+  min-height: 140px;
+  margin-bottom: 22px;
 }
 
 .catalog-curated-content {
   flex: 1;
-  padding: 28px 32px;
+  padding: 24px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
+  max-width: 620px;
   z-index: 2;
 }
 
 .catalog-curated-eyebrow {
-  display: block;
-  font-family: 'Plus Jakarta Sans', var(--font-heading, sans-serif);
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #64748B;
-  margin-bottom: 8px;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 4px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(197, 160, 89, 0.12) !important;
+  color: #8C6219 !important;
+  border: 1px solid rgba(197, 160, 89, 0.3) !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+  width: fit-content !important;
 }
 
 .catalog-headline {
-  font-family: var(--font-heading, 'Outfit', sans-serif);
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  font-weight: 900;
-  letter-spacing: -0.025em;
-  color: #171513;
-  line-height: 1.15;
-  margin: 0 0 6px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif) !important;
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  color: #0C0B0A !important;
+  line-height: 1.18 !important;
+  margin: 0 0 6px !important;
 }
 
 .copper-accent {
-  color: #171513;
-  font-weight: 900;
+  background: linear-gradient(135deg, #996515 0%, #C5A059 35%, #D4AF37 60%, #8A5A12 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 1px 3px rgba(138, 90, 18, 0.35)) !important;
+  font-weight: 800 !important;
+  display: inline-block !important;
 }
 
 .catalog-subtext {
-  font-size: 0.88rem;
-  color: #786B61;
-  margin: 0;
-  line-height: 1.5;
+  font-size: 0.85rem !important;
+  color: #64748B !important;
+  margin: 0 !important;
+  line-height: 1.48 !important;
+  max-width: 580px !important;
 }
 
 .catalog-curated-media {
-  flex: 0 0 42%;
+  flex: 0 0 38%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -352,7 +367,7 @@
   display: block;
 }
 
-/* Mobile: Sleek, Ultra-Compact Header Row (Zero Clutter, Immediate Product Visibility) */
+/* Mobile: Elegant Compact Liquid Glass Header Card */
 @media (max-width: 768px) {
   .catalog-hero-section {
     padding: 10px 0 6px;
@@ -360,51 +375,53 @@
   .catalog-curated-banner {
     flex-direction: row;
     min-height: auto;
-    background: transparent !important;
-    border: none !important;
-    padding: 4px 0 2px !important;
-    margin-bottom: 4px !important;
-    box-shadow: none !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 244, 0.90) 100%) !important;
+    backdrop-filter: blur(24px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
+    border-radius: 18px !important;
+    padding: 14px 18px !important;
+    margin-bottom: 14px !important;
+    box-shadow: 0 6px 20px -4px rgba(23, 21, 19, 0.05), inset 0 1px 1px #FFFFFF !important;
   }
   .catalog-curated-media {
-    display: none !important; /* Hide giant decorative image on mobile */
+    display: none !important;
   }
   .catalog-subtext {
-    display: none !important; /* Hide multi-line boilerplate paragraph on mobile */
+    display: none !important;
   }
   .catalog-curated-content {
     max-width: 100%;
     padding: 0;
-    gap: 2px;
+    gap: 3px;
   }
   .catalog-breadcrumb-strip,
   .catalog-breadcrumb {
     display: none !important;
   }
   .catalog-curated-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    margin-bottom: 4px;
-    color: #64748B;
+    font-size: 0.65rem !important;
+    padding: 2.5px 9px !important;
+    margin-bottom: 5px !important;
+    letter-spacing: 0.1em !important;
   }
   .catalog-headline {
-    font-size: 1.35rem !important;
-    font-weight: 900 !important;
-    line-height: 1.15 !important;
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
     margin: 0 !important;
-    letter-spacing: -0.015em;
-    color: #000000 !important;
+    letter-spacing: -0.02em !important;
+    color: #171513 !important;
   }
 }
 
 @media (max-width: 360px) {
   .catalog-curated-banner {
-    padding: 10px 12px;
-    border-radius: 12px;
+    padding: 12px 14px !important;
+    border-radius: 16px !important;
   }
   .catalog-headline {
-    font-size: 1.2rem !important;
+    font-size: 1.18rem !important;
   }
 }
 

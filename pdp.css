@@ -25,7 +25,7 @@
   --pdp-radius-md: 16px;
   --pdp-radius-lg: 24px;
   --pdp-radius-pill: 9999px;
-  --pdp-font-head: 'Outfit', sans-serif;
+  --pdp-font-head: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --pdp-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --pdp-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -44,17 +44,21 @@ html, body {
 
 /* 1. TOP ANNOUNCEMENT MARQUEE */
 .pdp-announcement-bar {
-  background: #0A0A0A;
-  color: #FFFFFF;
-  font-family: var(--pdp-font-head);
-  font-size: 0.725rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 8px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 100;
+  background: linear-gradient(90deg, #0C0B0A 0%, #181613 50%, #0C0B0A 100%) !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.32) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  font-family: var(--pdp-font-body) !important;
+  font-size: 0.69rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 7px 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  z-index: 1001 !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 36px, #000 calc(100% - 36px), transparent 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 36px, #000 calc(100% - 36px), transparent 100%) !important;
 }
 
 .pdp-announcement-track {

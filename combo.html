@@ -23,8 +23,11 @@
     .combo-discovery-header {
       position: relative;
       z-index: 100;
-      background: #FFFFFF;
-      border-bottom: 1px solid #EFEAE2;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(250, 248, 244, 0.88) 100%);
+      backdrop-filter: blur(24px) saturate(200%);
+      -webkit-backdrop-filter: blur(24px) saturate(200%);
+      border-bottom: 1px solid rgba(234, 229, 219, 0.85);
+      box-shadow: 0 4px 20px -4px rgba(23, 21, 19, 0.04);
       padding: 16px 0 14px;
       margin-bottom: 18px;
     }
@@ -86,12 +89,12 @@
     }
 
     .combo-headline {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.35rem;
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-size: clamp(1.3rem, 2.4vw, 1.65rem);
       font-weight: 800;
-      color: #171513;
+      color: #0C0B0A;
       line-height: 1.2;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
       margin: 0;
       white-space: nowrap;
     }
@@ -100,15 +103,17 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #171513;
-      color: #FFFFFF;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #1C1A18 0%, #0A0A0A 100%);
+      border: 1px solid rgba(197, 160, 89, 0.6);
+      color: #DFBE74;
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
       font-size: 0.74rem;
       font-weight: 800;
-      padding: 4px 11px;
+      padding: 4px 12px;
       border-radius: 999px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
       white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(197, 160, 89, 0.22);
     }
 
     .combo-count-pill {

@@ -62,7 +62,7 @@
   --dark-border: #262626;
 
   /* Typography */
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
@@ -168,9 +168,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden !important;
-  max-width: 100vw;
-  width: 100%;
+  overflow-x: clip !important;
+  max-width: 100% !important;
+  width: 100% !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -181,9 +181,9 @@ body {
   background-image: none !important;
   color: #000000;
   line-height: 1.5;
-  overflow-x: hidden !important;
-  max-width: 100vw;
-  width: 100%;
+  overflow-x: clip !important;
+  max-width: 100% !important;
+  width: 100% !important;
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -242,41 +242,54 @@ img {
 
 /* Master Continuous Luxury Announcement Bar */
 .site-announcement-bar {
-  background: #171513;
-  color: #FFFFFF;
-  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
-  font-size: 0.725rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 8px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 1001;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14px, #000 calc(100% - 14px), transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 14px, #000 calc(100% - 14px), transparent 100%);
+  background: linear-gradient(90deg, #0C0B0A 0%, #181613 50%, #0C0B0A 100%) !important;
+  color: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.32) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif) !important;
+  font-size: 0.69rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 7px 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  z-index: 1001 !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 36px, #000 calc(100% - 36px), transparent 100%) !important;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 36px, #000 calc(100% - 36px), transparent 100%) !important;
+}
+
+@media (max-width: 768px) {
+  .site-announcement-bar {
+    font-size: 0.65rem !important;
+    padding: 6px 0 !important;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 16px, #000 calc(100% - 16px), transparent 100%) !important;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 16px, #000 calc(100% - 16px), transparent 100%) !important;
+  }
 }
 
 .site-announcement-track {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  animation: siteMarquee 28s linear infinite;
-  gap: 28px;
+  display: flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  animation: siteMarquee 38s linear infinite !important;
+  gap: 32px !important;
 }
 
 .site-announcement-track span.sep {
-  color: rgba(255, 255, 255, 0.4);
-  opacity: 0.8;
+  color: #C5A059 !important;
+  opacity: 0.8 !important;
+  font-size: 0.85rem !important;
 }
 
 .site-announcement-track .badge-icon,
 .pdp-announcement-track .badge-icon {
-  display: inline-block;
-  vertical-align: -2px;
-  stroke: #C5A059;
-  margin-right: 3px;
-  margin-left: 2px;
+  display: inline-block !important;
+  vertical-align: -2px !important;
+  stroke: #DFBE74 !important;
+  filter: drop-shadow(0 0 4px rgba(223, 190, 116, 0.45)) !important;
+  margin-right: 4px !important;
+  margin-left: 3px !important;
 }
 
 @keyframes siteMarquee {
@@ -384,9 +397,24 @@ img {
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--color-accent, #FF5500);
+.nav-link:hover {
+  color: #0A0A0A;
+}
+
+.nav-link.active {
+  color: #0A0A0A;
   font-weight: 800;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #A98135 0%, #D4AF37 50%, #A98135 100%);
 }
 
 @media (max-width: 1100px) and (min-width: 769px) {
@@ -1312,14 +1340,22 @@ img {
 .hero-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
-  font-size: clamp(0.72rem, 0.82vw, 0.85rem);
+  gap: 8px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.7rem, 0.78vw, 0.82rem);
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #0A0A0A;
+  color: #8C6219;
   margin-bottom: clamp(14px, 1.8vh, 20px);
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  width: fit-content;
 }
 
 .hero-slide:not(.active) .hero-kicker {
@@ -1338,19 +1374,19 @@ img {
 .hero-kicker-highlight,
 .hero-kicker-gold {
   display: inline-block;
-  color: #0A0A0A;
-  -webkit-text-fill-color: #0A0A0A;
+  color: #8C6219;
+  -webkit-text-fill-color: #8C6219;
   background: none;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .hero-headline {
-  font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif);
-  font-weight: 900;
-  font-size: clamp(2.4rem, 4.4vw, 4.4rem);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-  color: #111113;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-weight: 800;
+  font-size: clamp(2.3rem, 4.2vw, 4.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: #0C0B0A;
   margin-bottom: clamp(14px, 1.8vh, 22px);
   text-transform: uppercase;
 }
@@ -1380,22 +1416,23 @@ img {
 /* Solid deep luxury obsidian on line 1 */
 .hero-text-shine {
   display: inline-block;
-  color: #111113;
-  -webkit-text-fill-color: #111113;
+  color: #0C0B0A;
+  -webkit-text-fill-color: #0C0B0A;
 }
 
 .hero-br {
   display: inline;
 }
 
-/* Solid high-contrast deep obsidian signature word with subtle specular halo */
+/* Radiant molten artisan gold signature word */
 .hero-text-signature {
   position: relative;
   display: inline-block;
-  color: #111113;
-  -webkit-text-fill-color: #111113;
-  background: none;
-  font-weight: 900;
+  background: linear-gradient(135deg, #996515 0%, #C5A059 35%, #D4AF37 60%, #8A5A12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(138, 90, 18, 0.35));
+  font-weight: 800;
 }
 
 /* Subtle jewelry star glint on signature word */
@@ -4278,13 +4315,13 @@ a.footer-contact-main:hover {
     margin-bottom: 8px;
   }
   .hero-headline {
-    font-family: var(--font-heading, 'Outfit', sans-serif);
+    font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
     font-size: clamp(1.7rem, 6.8vw, 2.25rem);
-    font-weight: 900;
-    line-height: 1.05;
+    font-weight: 800;
+    line-height: 1.08;
     letter-spacing: -0.03em;
     margin-bottom: 10px;
-    color: #0F172A;
+    color: #0C0B0A;
     text-transform: uppercase;
   }
   .hero-word-accent {
@@ -7733,26 +7770,25 @@ a.footer-contact-main:hover {
     pointer-events: auto !important;
   }
 
-  /* Sleek luxury typography eyebrow on mobile */
+  /* Sleek luxury typography eyebrow pill on mobile */
   .hero-kicker {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: 0.6875rem !important;
+    font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif) !important;
+    font-size: 0.64rem !important;
     font-weight: 800 !important;
-    letter-spacing: 0.18em !important;
+    letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
-    color: #68440C !important;
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9) !important;
-    margin-bottom: 6px !important;
-    background: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
+    color: #8C6219 !important;
+    margin-bottom: 8px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    padding: 4px 14px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(197, 160, 89, 0.35) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
     white-space: nowrap !important;
     text-align: center !important;
   }
@@ -7771,35 +7807,27 @@ a.footer-contact-main:hover {
 
   .hero-kicker-highlight {
     display: inline-block !important;
-    color: #68440C !important;
-    background: linear-gradient(
-      90deg,
-      #68440C 0%,
-      #8C6219 50%,
-      #68440C 100%
-    ) !important;
-    background-size: 200% 100% !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    animation: heroKickerGleam 4.5s ease-in-out infinite 0.3s !important;
-    will-change: background-position !important;
-    letter-spacing: 0.18em !important;
+    color: #8C6219 !important;
+    letter-spacing: 0.14em !important;
     font-weight: 800 !important;
+    -webkit-text-fill-color: initial !important;
+    background: none !important;
   }
 
-  /* Bold, rhythmic 2-line headline on mobile with natural breathing room - dark luxury obsidian */
+  /* Rhythmic 2-line headline on mobile with natural breathing room - dark luxury obsidian */
   .hero-headline {
-    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
-    font-size: clamp(1.35rem, 6vw, 1.75rem) !important;
-    font-weight: 900 !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.015em !important;
+    font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif) !important;
+    font-size: clamp(1.4rem, 6.4vw, 1.9rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.03em !important;
     text-transform: uppercase !important;
     margin: 0 !important;
     display: block !important;
     text-align: center !important;
-    color: #111113 !important;
-    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.85) !important;
+    color: #0C0B0A !important;
+    text-shadow: none !important;
+    filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.85)) !important;
     max-width: 100% !important;
     width: 100% !important;
   }
@@ -7829,8 +7857,8 @@ a.footer-contact-main:hover {
 
   .hero-text-shine {
     display: inline-block !important;
-    color: #111113 !important;
-    -webkit-text-fill-color: #111113 !important;
+    color: #0C0B0A !important;
+    -webkit-text-fill-color: #0C0B0A !important;
     background: none !important;
   }
 
@@ -7841,10 +7869,11 @@ a.footer-contact-main:hover {
   .hero-text-signature {
     position: relative !important;
     display: inline-block !important;
-    color: #111113 !important;
-    -webkit-text-fill-color: #111113 !important;
-    background: none !important;
-    font-weight: 900 !important;
+    background: linear-gradient(135deg, #996515 0%, #C5A059 35%, #D4AF37 60%, #8A5A12 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 8px rgba(138, 90, 18, 0.4)) !important;
+    font-weight: 800 !important;
   }
 
   .hero-text-signature::after {
