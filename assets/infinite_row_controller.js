@@ -246,16 +246,8 @@
   }
 
   function initAllInfiniteRows() {
-    // 1. Trending Drops Row (#trendingDropsTrack)
-    const dropsTrack = document.getElementById('trendingDropsTrack');
-    if (dropsTrack) {
-      // 4 cards originally; clone twice so there are 12 cards (plenty for 1920px+ monitors)
-      setupInfiniteLTRSwipeRow(dropsTrack, {
-        animName: 'dropsMarqueeLTR',
-        duration: 34,
-        cloneMultiplier: 2
-      });
-    }
+    // 1. Curated Releases (#trendingDropsTrack) is now an architectural luxury grid (Desktop 4-col, Mobile 2-col)
+
 
     // 2. Popular Choices Row 1: iPhone Covers (.popular-row-covers .popular-slider-track)
     const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track');
