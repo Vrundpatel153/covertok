@@ -15,15 +15,15 @@
 
   // Category display names & definitions with authentic preview thumbnails
   const CATEGORIES = [
-    { id: 'all', title: 'All Products', thumb: 'assets/brand_iphone16_pro.webp' },
-    { id: 'iphone-cases', title: 'Phone Cases', thumb: 'assets/brand_iphone16_pro.webp' },
+    { id: 'all', title: 'All Products', thumb: 'assets/black_frameless_assembled.webp' },
+    { id: 'iphone-cases', title: 'Phone Cases', thumb: 'assets/bundle_clear_case.webp' },
     { id: 'airpod-covers', title: 'AirPods Covers', thumb: 'assets/cat_thumb_airpods.webp' },
     { id: 'charger-and-cables', title: 'Cables & Power', thumb: 'assets/cat_thumb_cables.webp' },
     { id: 'charger-covers', title: 'Charger Cases', thumb: 'assets/cat_thumb_chargers.webp' },
     { id: 'cover-charms', title: 'Cover Charms', thumb: 'assets/cat_thumb_charms.webp' },
     { id: 'other-accessories', title: 'Accessories', thumb: 'assets/cat_thumb_accessories.webp' },
-    { id: 'watchbands', title: 'Watch Bands', thumb: 'assets/cat_thumb_accessories.webp' },
-    { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/phone_cream.webp', isCombo: true }
+    { id: 'watchbands', title: 'Watch Bands', thumb: 'assets/popular_choice/card2_watch_bands_clean.webp' },
+    { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/bundle_clear_case.webp', isCombo: true }
   ];
 
   function initCatalog() {
