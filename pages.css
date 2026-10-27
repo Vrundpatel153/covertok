@@ -162,9 +162,9 @@
 }
 
 .highlight-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  border-color: rgba(255, 85, 0, 0.4);
+  transform: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #0A0A0A;
 }
 
 .highlight-card-icon {
@@ -524,9 +524,9 @@
 }
 
 .contact-channel-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
-  border-color: rgba(255, 85, 0, 0.4);
+  transform: none;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09);
+  border-color: #0A0A0A;
 }
 
 .channel-icon-wrap {
@@ -801,7 +801,9 @@
 }
 
 .pillar-card:hover {
-  transform: translateY(-4px);
+  transform: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+  border-color: #0A0A0A;
 }
 
 .pillar-num {

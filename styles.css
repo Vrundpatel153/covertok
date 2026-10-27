@@ -620,9 +620,9 @@ img {
 }
 
 .mega-showcase-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  border-color: rgba(255, 85, 0, 0.5);
+  transform: none;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09);
+  border-color: #0A0A0A;
 }
 
 .mega-showcase-img-wrap {
@@ -1971,13 +1971,13 @@ img {
 }
 
 .bento-grid-item:hover {
-  transform: translateY(-4px) scale(1.012);
+  transform: none;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 
 .bento-grid-item.highlighted {
-  transform: translateY(-4px) scale(1.015);
+  transform: none;
   box-shadow: 0 0 0 3px #0F172A, 0 16px 36px rgba(15, 23, 42, 0.2);
   z-index: 3;
 }
@@ -2118,7 +2118,7 @@ img {
 }
 
 .bento-card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
 }
 
@@ -2462,8 +2462,8 @@ img {
 }
 
 .showcase-model-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(169, 129, 53, 0.45);
+  transform: none;
+  border-color: #0A0A0A;
   box-shadow: 0 18px 46px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF;
 }
 
@@ -2819,8 +2819,9 @@ img {
 }
 
 .promo-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  transform: none;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+  border-color: #0A0A0A;
 }
 
 .promo-card-body {
@@ -5519,8 +5520,8 @@ a.footer-contact-main:hover {
 }
 
 .fl-bottom-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transform: none;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.09);
   background: #E4E0D8;
 }
 
@@ -5801,8 +5802,8 @@ a.footer-contact-main:hover {
 .combo-feature-card:hover {
   background: rgba(38, 33, 28, 0.75);
   border-color: rgba(234, 202, 166, 0.85);
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55), 0 0 25px rgba(212, 175, 55, 0.28);
+  transform: none;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
 }
 
 .combo-feature-card:active {
@@ -6778,9 +6779,9 @@ a.footer-contact-main:hover {
 
 .bento-card:hover,
 .bento-collections-section .bento-card:hover {
-  transform: translateY(-7px) scale(1.008);
-  border-color: #000000;
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12), 0 4px 14px rgba(0, 0, 0, 0.06);
+  transform: none;
+  border-color: #0A0A0A;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .bento-card-bg {
@@ -10359,7 +10360,7 @@ a.footer-contact-main:hover {
 }
 
 .popular-feature-card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
 }
 
@@ -10672,8 +10673,8 @@ a.footer-contact-main:hover {
 }
 
 .pop-slider-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+  transform: none;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
   border-color: #000000;
 }
 
@@ -11566,7 +11567,7 @@ a.footer-contact-main:hover {
 }
 
 .instagram-card:hover {
-  transform: translateY(-6px);
+  transform: none;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
 }
 
@@ -12269,7 +12270,7 @@ a.footer-contact-main:hover {
 }
 
 .video-reel-card:hover {
-  transform: translateY(-6px);
+  transform: none;
   box-shadow: 0 16px 36px rgba(23, 21, 19, 0.16);
 }
 
@@ -12576,9 +12577,9 @@ a.footer-contact-main:hover {
 }
 
 .review-item-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(23, 21, 19, 0.08);
-  border-color: rgba(169, 129, 53, 0.3);
+  transform: none;
+  box-shadow: 0 14px 32px rgba(23, 21, 19, 0.09);
+  border-color: #0A0A0A;
 }
 
 .review-card-header {

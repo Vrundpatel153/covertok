@@ -456,9 +456,9 @@ body.combo-page-canvas {
 }
 
 .combo-catalog-card:hover {
-  transform: translateY(-3px);
-  border-color: #D1D5DB;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  transform: none;
+  border-color: #0A0A0A;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08);
 }
 
 /* Selected state: refined obsidian border with clean depth */

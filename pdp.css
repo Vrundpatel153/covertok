@@ -1213,8 +1213,9 @@ html, body {
 }
 
 .pdp-finish-card:hover {
-  border-color: var(--pdp-gold-light);
-  transform: translateY(-2px);
+  border-color: #0A0A0A;
+  transform: none;
+  box-shadow: var(--pdp-shadow-md);
 }
 
 .pdp-finish-card.active {
@@ -2287,7 +2288,7 @@ html, body {
 }
 
 .pdp-reel-card:hover {
-  transform: translateY(-6px);
+  transform: none;
   box-shadow: var(--pdp-shadow-lg);
 }
 
@@ -2509,9 +2510,9 @@ html, body {
 }
 
 .pdp-product-card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: var(--pdp-shadow-md);
-  border-color: var(--pdp-gold-light);
+  border-color: #0A0A0A;
 }
 
 .pdp-card-img-wrap {

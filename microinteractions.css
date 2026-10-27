@@ -40,35 +40,9 @@ button:active:not(:disabled), .btn:active:not(:disabled) {
   border-color: rgba(255, 85, 0, 0.45);
 }
 
-/* Specular Card Light-Sweep Shine Animation */
-.bestseller-card, .pdp-product-card, .review-item-card, .shine-card {
-  position: relative;
-  overflow: hidden;
-}
-
+/* Specular Card Light-Sweep Shine Animation - Removed for Clean Modern Aesthetics */
 .bestseller-card::before, .pdp-product-card::before, .shine-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -130%;
-  width: 90%;
-  height: 100%;
-  background: linear-gradient(
-    100deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(255, 85, 0, 0.22) 50%,
-    rgba(255, 255, 255, 0.35) 75%,
-    transparent 100%
-  );
-  transform: skewX(-25deg);
-  pointer-events: none;
-  z-index: 5;
-  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.bestseller-card:hover::before, .pdp-product-card:hover::before, .shine-card:hover::before {
-  left: 170%;
+  display: none !important;
 }
 
 /* Radiant Focus Rings for Accessibility */
@@ -587,31 +561,9 @@ body.app-sheet-open {
   box-shadow: 0 6px 18px -2px rgba(15, 14, 13, 0.6), inset 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* Sweeping Luxury Sheen */
+/* Sweeping Luxury Sheen - Disabled for Clean Modern Aesthetics */
 .btn-checkout-shine {
-  position: absolute;
-  top: -50%;
-  left: -90%;
-  width: 50%;
-  height: 200%;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.03) 20%,
-    rgba(255, 248, 225, 0.38) 50%,
-    rgba(255, 255, 255, 0.03) 80%,
-    transparent 100%
-  );
-  transform: rotate(26deg);
-  pointer-events: none;
-  animation: luxury-btn-sheen 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes luxury-btn-sheen {
-  0% { left: -100%; opacity: 0; }
-  15% { opacity: 1; }
-  48% { left: 160%; opacity: 1; }
-  49%, 100% { left: 160%; opacity: 0; }
+  display: none !important;
 }
 
 .btn-checkout-lock {
@@ -1642,9 +1594,9 @@ body {
 .drop-3d-card:hover .drop-card-inner,
 .popular-choice-card:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  transform: translateY(-8px) scale(1.012) !important;
-  border-color: rgba(255, 85, 0, 0.55) !important;
-  box-shadow: var(--liquid-glass-shadow-hover) !important;
+  transform: none !important;
+  border-color: #0A0A0A !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Card Image Stages & Media Frames */
@@ -2180,7 +2132,7 @@ button:active,
   transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* --- 14.2 Master Specular Light Sweep & Hover Elevation (All Cards) --- */
+/* --- 14.2 Clean Modern Card Hover Elevation (Stable Bounds, Zero Jitter) --- */
 .catalog-card,
 .combo-catalog-card,
 .product-card,
@@ -2193,12 +2145,9 @@ button:active,
 .quick-view-card {
   position: relative;
   overflow: hidden;
-  transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.36s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.28s ease !important;
-  will-change: transform, box-shadow;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease !important;
+  will-change: box-shadow, border-color;
 }
 
 .catalog-card::before,
@@ -2209,37 +2158,7 @@ button:active,
 .bento-card::before,
 .pdp-product-card::before,
 .quick-view-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -140%;
-  width: 90%;
-  height: 100%;
-  background: linear-gradient(
-    108deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.05) 20%,
-    rgba(255, 255, 255, 0.45) 50%,
-    rgba(255, 85, 0, 0.38) 65%,
-    transparent 100%
-  );
-  transform: skewX(-24deg);
-  pointer-events: none;
-  z-index: 6;
-  opacity: 0;
-  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-}
-
-.catalog-card:hover::before,
-.combo-catalog-card:hover::before,
-.product-card:hover::before,
-.bestseller-prod-card:hover::before,
-.drop-card-inner:hover::before,
-.bento-card:hover::before,
-.pdp-product-card:hover::before,
-.quick-view-card:hover::before {
-  left: 175%;
-  opacity: 1;
+  display: none !important;
 }
 
 .catalog-card:hover,
@@ -2247,9 +2166,9 @@ button:active,
 .product-card:hover,
 .bestseller-prod-card:hover,
 .drop-card-inner:hover {
-  transform: translateY(-6px) scale(1.012) !important;
-  border-color: rgba(255, 85, 0, 0.55) !important;
-  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 24px rgba(255, 85, 0, 0.22) !important;
+  transform: none !important;
+  border-color: #0A0A0A !important;
+  box-shadow: 0 16px 36px -4px rgba(23, 21, 19, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Card Internal Media Smooth Zoom */

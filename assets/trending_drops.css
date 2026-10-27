@@ -179,20 +179,13 @@
 }
 
 .drop-3d-card:hover .drop-card-inner {
-  box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.12), 0 0 24px rgba(14, 165, 233, 0.16);
-  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-color: #0A0A0A;
 }
 
-/* Specular Glare Overlay */
+/* Specular Glare Overlay - Disabled for Clean Modern Aesthetics */
 .drop-card-glare {
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  pointer-events: none;
-  z-index: 6;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  mix-blend-mode: overlay;
+  display: none !important;
 }
 
 /* Card Top: Luxury Material Badges & Wishlist */

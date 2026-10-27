@@ -1116,9 +1116,9 @@
 }
 
 .catalog-card:hover {
-  transform: translateY(-4px);
-  border-color: #D6CEBE;
-  box-shadow: 0 14px 32px rgba(23, 21, 19, 0.08);
+  transform: none;
+  border-color: #0A0A0A;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.09), 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 /* Card Media Stage - Dominant, Crisp, Edge-to-Edge Hero Presentation */
