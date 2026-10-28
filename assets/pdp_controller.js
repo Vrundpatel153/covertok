@@ -1372,10 +1372,49 @@
       return 120;
     };
 
+    const footer = document.getElementById('siteFooter') || document.querySelector('.site-footer');
+
+    let isScrollingToTop = false;
+
+    // Listen for Back to Top clicks to smoothly keep the bar hidden while scrolling all the way up
+    document.querySelectorAll('.footer-back-to-top, [href="#top"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        isScrollingToTop = true;
+        bar.classList.remove('visible');
+        document.body.classList.remove('sticky-bar-visible');
+        if (wa) wa.classList.remove('elevated');
+      });
+    });
+
     let ticking = false;
     const checkScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (isScrollingToTop) {
+        if (scrollTop <= 80) {
+          isScrollingToTop = false;
+        } else {
+          bar.classList.remove('visible');
+          document.body.classList.remove('sticky-bar-visible');
+          if (wa) wa.classList.remove('elevated');
+          ticking = false;
+          return;
+        }
+      }
+
       const threshold = getTriggerScrollY();
-      if (window.scrollY > threshold) {
+      const isPastTop = scrollTop > threshold;
+
+      // Check if user has scrolled near or into the footer
+      let isAtFooter = false;
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        // Hide as soon as the footer top approaches the bottom of the viewport (with 20px comfortable margin)
+        // so it never collides with or obscures footer content, contact info, legal text, payment badges, or the Back to Top button
+        isAtFooter = footerRect.top <= (window.innerHeight - 20);
+      }
+
+      if (isPastTop && !isAtFooter) {
         bar.classList.add('visible');
         document.body.classList.add('sticky-bar-visible');
         if (wa) wa.classList.add('elevated');
@@ -1388,6 +1427,13 @@
     };
 
     window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(checkScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
       if (!ticking) {
         window.requestAnimationFrame(checkScroll);
         ticking = true;
