@@ -153,12 +153,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cartState.length === 0) {
       cartItemsContainer.innerHTML = `
-        <div style="text-align: center; padding: 40px 20px; color: #94A3B8;">
-          <div style="margin-bottom: 12px; display: flex; justify-content: center; color: #94A3B8;">
+        <div style="text-align: center; padding: 40px 20px;">
+          <div style="margin-bottom: 12px; display: flex; justify-content: center; color: #71717A;">
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
           </div>
-          <h4 style="color: #121316; font-size: 1.1rem; margin-bottom: 6px;">Your cart is empty</h4>
-          <p style="font-size: 0.875rem;">Discover our trendy cases and add your favorites!</p>
+          <h4 style="font-family: var(--font-heading, 'Manrope', sans-serif); color: #0A0A0A; font-size: 1.1rem; font-weight: 700; margin-bottom: 6px;">Your cart is empty</h4>
+          <p style="font-family: var(--font-body, 'Inter', sans-serif); color: #52525B; font-size: 0.875rem; font-weight: 500; margin: 0;">Discover our trendy cases and add your favorites!</p>
         </div>
       `;
       return;

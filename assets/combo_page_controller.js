@@ -371,12 +371,12 @@
     if (state.filteredProducts.length === 0) {
       grid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(20px); border-radius: 24px; border: 1.5px dashed #CBD5E1;">
-          <div style="display:flex; justify-content:center; margin-bottom: 12px; color: #94A3B8;">
+          <div style="display:flex; justify-content:center; margin-bottom: 12px; color: #52525B;">
             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
-          <h3 style="font-size: 1.25rem; font-weight: 800; color: #171513; margin-bottom: 6px;">No products match your search</h3>
-          <p style="color: #64748B; font-size: 0.9rem;">Try switching categories or clearing search keywords.</p>
-          <button type="button" class="btn btn-pill-dark" onclick="window.clearComboFilters()" style="margin-top: 16px; padding: 10px 24px; cursor: pointer; border-radius: 999px; background: #171513; color: #FFFFFF; font-weight: 800;">View All Products</button>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0A0A0A; margin-bottom: 6px;">No products match your search</h3>
+          <p style="color: #52525B; font-size: 0.9rem; font-weight: 500;">Try switching categories or clearing search keywords.</p>
+          <button type="button" class="btn btn-pill-dark" onclick="window.clearComboFilters()" style="margin-top: 16px; padding: 10px 24px; cursor: pointer; border-radius: 999px; background: #0A0A0A; color: #FFFFFF; font-weight: 800;">View All Products</button>
         </div>
       `;
       return;

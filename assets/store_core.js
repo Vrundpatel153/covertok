@@ -173,7 +173,7 @@
 
       if (cart.length === 0) {
         container.innerHTML = `
-          <div class="empty-cart-state" style="text-align: center; padding: 48px 20px; color: #94A3B8;">
+          <div class="empty-cart-state" style="text-align: center; padding: 48px 20px; color: #52525B;">
             <div style="display:flex; justify-content:center; margin-bottom: 14px; color: #D9CFBE;">
               <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
@@ -315,7 +315,7 @@
         <div class="search-modal-content">
           <div class="search-modal-header">
             <div class="search-input-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#735238" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
               <input type="text" id="globalSearchInput" placeholder="Search 75+ phone covers, watch bands, charms..." autocomplete="off">
@@ -323,7 +323,7 @@
             <button class="search-modal-close" id="closeSearchModalBtn">&times;</button>
           </div>
           <div class="search-quick-tags">
-            <span style="font-size: 0.775rem; font-weight: 700; color: #94A3B8; text-transform: uppercase;">Popular:</span>
+            <span style="font-size: 0.75rem; font-weight: 700; color: #52525B; text-transform: uppercase; letter-spacing: 0.05em;">Popular:</span>
             <button type="button" class="search-tag-chip" data-query="iPhone 16">iPhone 16</button>
             <button type="button" class="search-tag-chip" data-query="Watch">Watch Bands</button>
             <button type="button" class="search-tag-chip" data-query="Frameless">Frameless</button>
@@ -331,7 +331,7 @@
             <button type="button" class="search-tag-chip" data-query="MagSafe">MagSafe</button>
           </div>
           <div class="search-results-container" id="globalSearchResults">
-            <div style="text-align: center; padding: 40px 20px; color: #94A3B8;">Type to search all Covertok collections</div>
+            <div style="text-align: center; padding: 40px 20px; color: #52525B; font-weight: 500; font-size: 0.9rem;">Type to search all Covertok collections</div>
           </div>
         </div>
       `;
@@ -370,16 +370,21 @@
 
       if (filtered.length === 0) {
         resultsContainer.innerHTML = `
-          <div style="text-align: center; padding: 40px 20px; color: #94A3B8;">
-            <p style="font-weight: 700; color: #171513;">No products found for "${query}"</p>
-            <p style="font-size: 0.85rem; margin-top: 4px;">Try searching for iPhone, Watch, AirPods, or MagSafe.</p>
+          <div style="text-align: center; padding: 44px 20px;">
+            <div style="width: 46px; height: 46px; border-radius: 50%; background: #F4F4F5; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; color: #52525B;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <p style="font-family: var(--font-heading, 'Manrope', sans-serif); font-weight: 800; font-size: 1.05rem; color: #0A0A0A; margin: 0 0 6px 0;">No products found for "${query}"</p>
+            <p style="font-family: var(--font-body, 'Inter', sans-serif); font-size: 0.875rem; font-weight: 500; color: #52525B; margin: 0;">Try searching for iPhone, Watch, AirPods, or MagSafe.</p>
           </div>
         `;
         return;
       }
 
       resultsContainer.innerHTML = `
-        <div style="padding: 10px 0; font-size: 0.8rem; font-weight: 700; color: #735238; text-transform: uppercase; letter-spacing: 0.04em;">
+        <div style="padding: 10px 0; font-size: 0.8rem; font-weight: 700; color: #0A0A0A; text-transform: uppercase; letter-spacing: 0.04em;">
           ${q ? `Results (${filtered.length})` : 'Featured Products'}
         </div>
         <div class="search-results-list">
@@ -394,8 +399,8 @@
             </a>
           `).join('')}
         </div>
-        <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #F3EFE6;">
-          <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" style="font-size: 0.85rem; font-weight: 700; color: #1193FA; display: inline-flex; align-items: center; gap: 6px;">
+        <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #E4E4E7;">
+          <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" style="font-size: 0.85rem; font-weight: 700; color: #0A0A0A; display: inline-flex; align-items: center; gap: 6px;">
             <span>View All Products in Catalog</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>

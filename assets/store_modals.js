@@ -586,12 +586,12 @@
   <div class="app-modal-overlay" id="searchModalOverlay" aria-hidden="true">
     <div class="search-modal-box" id="searchModalCard">
       <div class="search-input-header">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0A0A" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         <input type="text" class="search-input-box" id="storeSearchInput" placeholder="Search phone cases, watch bands, chargers, power banks..." autocomplete="off">
         <button type="button" class="app-sheet-close-btn" onclick="window.CovertokFlows.closeSearch();">&times;</button>
       </div>
       <div class="search-results-list" id="storeSearchResults">
-        <div style="text-align: center; padding: 24px; color: #64748B; font-size: 0.85rem;">
+        <div style="text-align: center; padding: 28px; color: #52525B; font-size: 0.875rem; font-weight: 500;">
           Type to search among 75+ phone covers, watch bands, and charms...
         </div>
       </div>

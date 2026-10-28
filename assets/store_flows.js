@@ -448,7 +448,7 @@
       const query = input.value.trim().toLowerCase();
       if (!query || !window.CovertokProducts) {
         resultsContainer.innerHTML = `
-          <div style="text-align: center; padding: 24px; color: #64748B; font-size: 0.85rem;">
+          <div style="text-align: center; padding: 28px; color: #52525B; font-weight: 500; font-size: 0.875rem;">
             Type to search among 75+ phone covers, watch bands, and charms...
           </div>
         `;
@@ -462,8 +462,9 @@
 
       if (matches.length === 0) {
         resultsContainer.innerHTML = `
-          <div style="text-align: center; padding: 24px; color: #64748B;">
-            No products found for "${input.value}". Try "iPhone", "leather", or "magsafe".
+          <div style="text-align: center; padding: 36px 20px;">
+            <p style="font-family: var(--font-heading, 'Manrope', sans-serif); font-weight: 800; font-size: 1.05rem; color: #0A0A0A; margin: 0 0 6px 0;">No products found for "${input.value}"</p>
+            <p style="font-family: var(--font-body, 'Inter', sans-serif); font-size: 0.875rem; font-weight: 500; color: #52525B; margin: 0;">Try searching for "iPhone", "leather", or "magsafe".</p>
           </div>
         `;
         return;
@@ -474,7 +475,7 @@
           <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.webp'}" alt="${p.title}" class="search-result-thumb">
           <div style="flex: 1; min-width: 0;">
             <div class="search-result-title">${p.title}</div>
-            <div style="font-size: 0.725rem; color: #64748B;">${p.category_name || 'Accessories'}</div>
+            <div style="font-size: 0.75rem; color: #71717A; font-weight: 500;">${p.category_name || 'Accessories'}</div>
           </div>
           <div class="search-result-price">Rs. ${p.price}.00</div>
         </a>
