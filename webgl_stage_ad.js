@@ -194,18 +194,24 @@
       {
         id: 'blue',
         name: 'Sierra Blue',
+        color: '#7CA5C8',
+        glow: 'rgba(124, 165, 200, 0.6)',
         phoneWebp: 'assets/blue_phone_body.webp' + vTag,
         coverWebp: 'assets/blue_protector_cover.webp' + vTag
       },
       {
         id: 'black',
-        name: 'Black',
+        name: 'Space Black',
+        color: '#18181A',
+        glow: 'rgba(0, 0, 0, 0.35)',
         phoneWebp: 'assets/black_phone_body.webp' + vTag,
         coverWebp: 'assets/black_protector_cover.webp' + vTag
       },
       {
         id: 'purple',
         name: 'Dark Red',
+        color: '#8B263E',
+        glow: 'rgba(139, 38, 62, 0.6)',
         phoneWebp: 'assets/purple_phone_body.webp' + vTag,
         coverWebp: 'assets/purple_protector_cover.webp' + vTag
       }
@@ -297,54 +303,69 @@
     const TURN_DURATION = 6.4; // seconds per model's turn
     const TRANSITION_DURATION = 1.25; // seconds for glide between slots
 
-    // Color Pills dynamic tracking
-    const pills = container.querySelectorAll('.fl-color-pill');
+    // -------------------------------------------------------------
+    // Cinematic Active Finish Badge Controller (Apple Keynote HUD)
+    // -------------------------------------------------------------
+    const badgeEl = container.querySelector('#flCinematicBadge');
+    const badgeInfo = container.querySelector('#flCinematicInfo');
+    const badgeDot = container.querySelector('#flCinematicDot');
+    const badgeName = container.querySelector('#flCinematicName');
+    const pips = container.querySelectorAll('.fl-cinematic-pip');
 
-    function updatePillSlots(currHero, prevHero, nextHero, transProgress) {
-      const heroColor = modelsData[currHero].id;
-      const prevColor = modelsData[prevHero].id;
-      const nextColor = modelsData[nextHero].id;
+    let currentBadgeHero = -1;
 
-      const pillHero = container.querySelector(`.fl-pill-${heroColor}`);
-      const pillPrev = container.querySelector(`.fl-pill-${prevColor}`);
-      const pillNext = container.querySelector(`.fl-pill-${nextColor}`);
+    function updateCinematicBadge(heroIdx, animated = true) {
+      if (heroIdx === currentBadgeHero) return;
+      currentBadgeHero = heroIdx;
 
-      pills.forEach((p) => {
-        p.classList.remove('fl-pill-slot-center', 'fl-pill-slot-left', 'fl-pill-slot-right', 'fl-pill-slot-hidden', 'active');
+      const m = modelsData[heroIdx];
+      if (!m) return;
+
+      // Update active pip
+      pips.forEach((pip) => {
+        const pIdx = parseInt(pip.getAttribute('data-index'), 10);
+        const isActive = pIdx === heroIdx;
+        pip.classList.toggle('active', isActive);
+        pip.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
 
-      if (pillHero) {
-        pillHero.classList.add('fl-pill-slot-center', 'active');
-      }
-      if (pillPrev) {
-        pillPrev.classList.add('fl-pill-slot-left');
-      }
-      if (pillNext) {
-        if (transProgress < 0.45) {
-          pillNext.classList.add('fl-pill-slot-hidden');
-        } else {
-          pillNext.classList.add('fl-pill-slot-right');
-        }
+      if (!badgeInfo || !badgeDot || !badgeName) return;
+
+      if (animated) {
+        badgeInfo.classList.remove('is-entering');
+        badgeInfo.classList.add('is-animating');
+        setTimeout(() => {
+          badgeDot.style.backgroundColor = m.color;
+          badgeDot.style.boxShadow = `0 0 8px ${m.glow}`;
+          badgeName.textContent = m.name;
+          badgeInfo.classList.remove('is-animating');
+          badgeInfo.classList.add('is-entering');
+          setTimeout(() => {
+            badgeInfo.classList.remove('is-entering');
+          }, 320);
+        }, 160);
+      } else {
+        badgeDot.style.backgroundColor = m.color;
+        badgeDot.style.boxShadow = `0 0 8px ${m.glow}`;
+        badgeName.textContent = m.name;
       }
     }
 
-    // Initial pill placement
-    updatePillSlots(heroIndex, (heroIndex + 2) % 3, (heroIndex + 1) % 3, 1.0);
-
-    // Allow user to click any pill to bring that model to the center
-    pills.forEach((pill) => {
-      pill.addEventListener('click', (e) => {
+    // Allow user to click any pip to immediately call that cover to the hero spot
+    pips.forEach((pip) => {
+      pip.addEventListener('click', (e) => {
         e.preventDefault();
-        const color = pill.getAttribute('data-color');
-        if (!color) return;
-        const targetIdx = modelsData.findIndex(m => m.id === color);
-        if (targetIdx !== -1 && targetIdx !== heroIndex) {
-          heroIndex = targetIdx;
+        const pIdx = parseInt(pip.getAttribute('data-index'), 10);
+        if (!isNaN(pIdx) && pIdx !== heroIndex) {
+          heroIndex = pIdx;
           turnTime = 0.0;
-          updatePillSlots(heroIndex, (heroIndex + 2) % 3, (heroIndex + 1) % 3, 1.0);
+          updateCinematicBadge(heroIndex, true);
         }
       });
     });
+
+    // Initial badge placement
+    updateCinematicBadge(heroIndex, false);
 
     // Interactive Parallax 3D Tilt
     let targetRotX = 0;
@@ -449,8 +470,10 @@
       const transProgress = Math.min(turnTime / TRANSITION_DURATION, 1.0);
       const easedTrans = easeInOutCubic(transProgress);
 
-      // Update color pill slots
-      updatePillSlots(currHeroIdx, prevHeroIdx, nextHeroIdx, transProgress);
+      // Synchronize cinematic finish badge with the appearing hero cover
+      if (currHeroIdx !== currentBadgeHero) {
+        updateCinematicBadge(currHeroIdx, true);
+      }
 
       // Hero Center Explode & Round timeline:
       let heroExpProgress = 0.0;

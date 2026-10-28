@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261028_curved_stage_v1">
+  <link rel="stylesheet" href="styles.css?v=20261028_cinematic_label_v1">
   <link rel="stylesheet" href="catalog.css?v=20261028_liquid_v1">
   <link rel="stylesheet" href="microinteractions.css?v=20261028_liquid_v1">
   <link rel="stylesheet" href="combo.css?v=20261026_matte_v1">
@@ -2160,22 +2160,23 @@
               <img src="assets/frameless_stage_ad.webp" alt="Frameless Series cases in Sierra Blue, Black, and Dark Red" class="fl-stage-media-img" loading="lazy">
             </picture>
             
-            <!-- Floating Interactive Color Badges over the 3 phones -->
-            <div class="fl-stage-badges" aria-label="Available Colors">
-              <button type="button" class="fl-color-pill fl-pill-blue" data-color="blue" aria-label="Sierra Blue Case view">
-                <span class="fl-pill-dot" style="background: #7ca5c8;"></span>
-                <span class="fl-pill-text">Sierra Blue</span>
-              </button>
-              
-              <button type="button" class="fl-color-pill fl-pill-black active" data-color="black" aria-label="Black Case view">
-                <span class="fl-pill-dot" style="background: #18181A;"></span>
-                <span class="fl-pill-text">Black</span>
-              </button>
-              
-              <button type="button" class="fl-color-pill fl-pill-purple" data-color="purple" aria-label="Dark Red Case view">
-                <span class="fl-pill-dot" style="background: #8B263E;"></span>
-                <span class="fl-pill-text">Dark Red</span>
-              </button>
+            <!-- Cinematic Dynamic Finish Label (Updates smoothly per active cover without blocking showcase) -->
+            <div class="fl-cinematic-badge" id="flCinematicBadge" aria-live="polite">
+              <div class="fl-cinematic-info" id="flCinematicInfo">
+                <span class="fl-cinematic-dot" id="flCinematicDot" style="background-color: #18181A; box-shadow: 0 0 6px rgba(0,0,0,0.35);"></span>
+                <span class="fl-cinematic-name" id="flCinematicName">Space Black</span>
+              </div>
+              <div class="fl-cinematic-pips" id="flCinematicPips" role="tablist" aria-label="Available finishes">
+                <button type="button" class="fl-cinematic-pip" data-color="blue" data-index="0" role="tab" aria-selected="false" aria-label="Sierra Blue">
+                  <span class="fl-pip-core" style="background-color: #7CA5C8; color: #7CA5C8;"></span>
+                </button>
+                <button type="button" class="fl-cinematic-pip active" data-color="black" data-index="1" role="tab" aria-selected="true" aria-label="Space Black">
+                  <span class="fl-pip-core" style="background-color: #18181A; color: #18181A;"></span>
+                </button>
+                <button type="button" class="fl-cinematic-pip" data-color="purple" data-index="2" role="tab" aria-selected="false" aria-label="Dark Red">
+                  <span class="fl-pip-core" style="background-color: #8B263E; color: #8B263E;"></span>
+                </button>
+              </div>
             </div>
 
           </div>
@@ -3820,6 +3821,6 @@
   <script src="assets/infinite_row_controller.js?v=20261027_v2"></script>
   <!-- Real 3D GPU-Accelerated Interactive Exploded & Assembled Showcase -->
   <script src="assets/three.min.js"></script>
-  <script src="webgl_stage_ad.js?v=20261026e"></script>
+  <script src="webgl_stage_ad.js?v=20261028_cinematic_label_v1"></script>
 </body>
 </html>

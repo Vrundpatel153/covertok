@@ -909,19 +909,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Frameless Section Interactive Controls
-  const flColorPills = document.querySelectorAll('.fl-color-pill');
-  const flStepItems = document.querySelectorAll('.fl-step-item');
-  const flMediaImg = document.querySelector('.fl-stage-media-img');
-
-  if (flColorPills.length > 0) {
-    flColorPills.forEach(pill => {
-      pill.addEventListener('click', (e) => {
-        e.preventDefault();
-        flColorPills.forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
-        const colorName = pill.getAttribute('data-color');
+  const flPips = document.querySelectorAll('.fl-cinematic-pip');
+  if (flPips.length > 0) {
+    flPips.forEach(pip => {
+      pip.addEventListener('click', (e) => {
+        const colorName = pip.getAttribute('data-color');
         if (typeof showToast === 'function') {
-          const formatted = colorName === 'blue' ? 'Sierra Blue' : (colorName === 'black' ? 'Black' : 'Dark Red');
+          const formatted = colorName === 'blue' ? 'Sierra Blue' : (colorName === 'black' ? 'Space Black' : 'Dark Red');
           showToast(`Selected Frameless Case: ${formatted}`, 'sparkle');
         }
       });

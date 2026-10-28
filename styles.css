@@ -5367,93 +5367,126 @@ a.footer-contact-main:hover {
   cursor: grabbing;
 }
 
-/* Floating Interactive Color Badges over the phones */
-/* Floating Interactive Color Badges: Unified Luxury Segmented Capsule */
-.fl-stage-badges {
+/* ========================================================================= */
+/* CINEMATIC ACTIVE COVER BADGE (Minimalist Luxury Glass HUD)                 */
+/* ========================================================================= */
+.fl-cinematic-badge {
   position: absolute;
-  top: 28px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 24px;
+  right: 26px;
   display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 14px 7px 12px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+  z-index: 15;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fl-cinematic-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+/* Info: Live Gemstone Dot & Active Finish Title */
+.fl-cinematic-info {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 8px;
-  background: rgba(255, 255, 255, 0.90);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  pointer-events: auto;
-  z-index: 15;
-  user-select: none;
+  transition: opacity 0.18s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
 }
 
-.fl-color-pill {
-  position: static !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  padding: 8px 16px 8px 12px !important;
-  background: transparent !important;
-  border-radius: 999px !important;
-  border: 1px solid transparent !important;
-  box-shadow: none !important;
-  font-family: var(--font-heading, 'Manrope', sans-serif);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: #63605a !important;
-  cursor: pointer;
-  transition: all 0.25s ease !important;
-  white-space: nowrap;
-  user-select: none;
-  transform: none !important;
-  opacity: 1 !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
+.fl-cinematic-info.is-animating {
+  opacity: 0;
+  transform: translateY(4px);
 }
 
-.fl-color-pill:hover {
-  color: #171513 !important;
-  background: rgba(255, 255, 255, 0.6) !important;
+.fl-cinematic-info.is-entering {
+  opacity: 1;
+  transform: translateY(0);
+  animation: flBadgeSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.fl-color-pill.active {
-  background: #FFFFFF !important;
-  color: #171513 !important;
-  border-color: rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
-  font-weight: 800 !important;
+@keyframes flBadgeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-.fl-color-pill.fl-pill-slot-hidden {
-  display: inline-flex !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-.fl-pill-dot {
+.fl-cinematic-dot {
   width: 9px;
   height: 9px;
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
-  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.95);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.fl-pill-full {
-  display: inline;
+.fl-cinematic-name {
+  font-family: var(--font-heading, 'Manrope', -apple-system, sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  color: #171513;
+  white-space: nowrap;
+  line-height: 1;
 }
 
-.fl-pill-short {
-  display: none;
+/* Micro Pager Pips */
+.fl-cinematic-pips {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.fl-cinematic-pip {
+  background: transparent;
+  border: none;
+  padding: 4px 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: transform 0.2s ease;
+}
 
+.fl-cinematic-pip:hover {
+  transform: scale(1.2);
+}
+
+.fl-pip-core {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  opacity: 0.35;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fl-cinematic-pip.active .fl-pip-core {
+  width: 14px;
+  opacity: 1;
+  box-shadow: 0 0 6px currentColor;
+}
 
 /* Stage Left Coded Content */
 .fl-stage-content {
@@ -8809,95 +8842,57 @@ a.footer-contact-main:hover {
     mask-image: none !important;
     -webkit-mask-image: none !important;
   }
-  /* Mobile & Tablet: Seamless Centered Floating Capsule Selector */
-  .fl-stage-badges {
-    position: absolute !important;
+  /* Mobile & Tablet: Clean Top-Right Cinematic Badge (Never overlaps phones) */
+  .fl-cinematic-badge {
     top: 12px !important;
-    left: 50% !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: translateX(-50%) !important;
-    width: auto !important;
-    max-width: 95% !important;
-    display: inline-flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 6px !important;
-    padding: 4px 6px !important;
-    background: rgba(255, 255, 255, 0.90) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    border-radius: 999px !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10) !important;
-    pointer-events: auto !important;
-    z-index: 15 !important;
-  }
-
-  .fl-stage-badges .fl-color-pill {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
+    right: 12px !important;
     left: auto !important;
-    right: auto !important;
-    padding: 6px 12px 6px 9px !important;
+    transform: none !important;
+    padding: 5px 12px 5px 10px !important;
+    gap: 8px !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .fl-cinematic-name {
     font-size: 0.74rem !important;
-    font-weight: 700 !important;
-    color: #63605a !important;
-    background: transparent !important;
-    border: 1px solid transparent !important;
-    box-shadow: none !important;
-    border-radius: 999px !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    cursor: pointer !important;
-    transition: all 0.25s ease !important;
-    white-space: nowrap !important;
   }
 
-  .fl-stage-badges .fl-color-pill.active {
-    background: #FFFFFF !important;
-    color: #171513 !important;
-    border-color: rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
-    font-weight: 800 !important;
+  .fl-cinematic-dot {
+    width: 7.5px !important;
+    height: 7.5px !important;
   }
 
-  .fl-stage-badges .fl-color-pill.fl-pill-slot-hidden {
-    display: inline-flex !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
+  .fl-cinematic-pips {
+    gap: 4px !important;
+    padding-left: 6px !important;
+  }
+
+  .fl-pip-core {
+    width: 5px !important;
+    height: 5px !important;
+  }
+
+  .fl-cinematic-pip.active .fl-pip-core {
+    width: 12px !important;
+  }
+
+  @media (max-width: 440px) {
+    .fl-cinematic-badge {
+      top: 10px !important;
+      right: 10px !important;
+      padding: 4px 10px 4px 8px !important;
+      gap: 7px !important;
+    }
+    .fl-cinematic-name {
+      font-size: 0.69rem !important;
+    }
   }
 
   .fl-stepper-rail {
     display: none !important;
   }
 
-  @media (max-width: 440px) {
-    .fl-stage-badges {
-      top: 10px !important;
-      gap: 4px !important;
-      padding: 3px 5px !important;
-    }
-    .fl-stage-badges .fl-color-pill {
-      padding: 5px 9px 5px 7px !important;
-      font-size: 0.68rem !important;
-      gap: 5px !important;
-    }
-    .fl-pill-dot {
-      width: 7.5px !important;
-      height: 7.5px !important;
-    }
-  }
-
-  @media (max-width: 360px) {
-    .fl-stage-badges .fl-color-pill {
-      padding: 4px 7px 4px 5px !important;
-      font-size: 0.64rem !important;
-      gap: 4px !important;
-    }
-  }
   .fl-stage-content {
     display: contents !important;
   }
