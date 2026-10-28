@@ -9451,19 +9451,20 @@ a.footer-contact-main:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Master Desktop Container (Exact 1672px x 941px Canvas matching mockup) */
+/* Master Desktop Container: Perfectly Fitted Showcase Window */
 @media (min-width: 1201px) {
   .bestseller-section {
-    min-height: 980px;
     height: auto;
-    padding-bottom: 45px;
+    min-height: auto;
+    padding-top: clamp(12px, 1.8vh, 24px);
+    padding-bottom: clamp(18px, 2.5vh, 32px);
   }
 
   .bestseller-container {
     max-width: 1672px;
     width: 100%;
     height: auto;
-    min-height: 941px;
+    min-height: auto;
     margin: 0 auto;
     position: relative;
     background: #FFFFFF;
@@ -9474,8 +9475,8 @@ a.footer-contact-main:hover {
 
   /* Header Centered at top */
   .bestseller-header {
-    padding-top: 50px;
-    margin-bottom: 24px;
+    padding-top: 0;
+    margin-bottom: clamp(12px, 1.6vh, 18px);
   }
 
   /* View All Button at exact bottom-right of header bar above right slider card */
@@ -9488,30 +9489,33 @@ a.footer-contact-main:hover {
   /* Dual Stage Flex Layout */
   .bestseller-stage-wrap {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: clamp(24px, 3.2vw, 56px);
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(20px, 2.5vw, 40px);
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 45px;
+    margin-top: 4px;
+    margin-bottom: clamp(10px, 1.5vh, 20px);
     box-sizing: border-box;
     position: relative;
   }
 
-  /* Left Stage: 3D Phones on Travertine Pedestal */
+  /* Left Stage: Luxury Curved 3D Hotspot Window (Fitted to PC screen) */
   .bestseller-left-stage {
     position: relative;
     top: 0;
     left: 0;
-    flex: 0 0 clamp(440px, 46vw, 780px);
-    width: clamp(440px, 46vw, 780px);
-    max-width: 100%;
+    height: clamp(450px, calc(100vh - 230px), 530px);
+    max-height: 530px;
     aspect-ratio: 800 / 750;
+    width: auto;
+    flex: 0 0 auto;
     z-index: 8;
     box-sizing: border-box;
+    border-radius: 28px;
+    overflow: visible;
   }
 
-  /* Right White Slider Container (Fluid & Responsive) */
+  /* Right White Slider Container (Fluid & Responsive, matching height & curvature) */
   .bestseller-right-slider {
     position: relative;
     top: 0;
@@ -9519,12 +9523,13 @@ a.footer-contact-main:hover {
     flex: 1;
     min-width: 0;
     max-width: 775px;
-    height: clamp(520px, 58vh, 595px);
+    height: clamp(450px, calc(100vh - 230px), 530px);
+    max-height: 530px;
     background: #FFFFFF;
     border-radius: 28px;
     border: 1.5px solid #E5E7EB;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
-    padding: 24px 28px 22px 28px;
+    padding: 20px 24px 18px 24px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -9538,6 +9543,11 @@ a.footer-contact-main:hover {
   inset: 0;
   width: 100%;
   height: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1.5px solid #E5E7EB;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+  background: #FAF8F5;
   display: block !important;
   pointer-events: none;
 }
@@ -9545,15 +9555,16 @@ a.footer-contact-main:hover {
   .bestseller-stage-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 28px;
     display: block;
   }
 
   /* Coded "Tap to explore" with script font & curved arrow */
   .bestseller-tap-explore {
     position: absolute;
-    left: 35px;
-    top: 40px;
+    left: 28px;
+    top: 26px;
     display: flex;
     align-items: flex-start;
     gap: 8px;
@@ -10080,10 +10091,16 @@ a.footer-contact-main:hover {
   }
 
   .bestseller-stage-visual {
-    position: relative;
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1.5px solid #E5E7EB;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    background: #FAF8F5;
+    display: block !important;
   }
 
   .bestseller-right-slider {
