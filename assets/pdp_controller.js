@@ -203,15 +203,20 @@
     if (overviewText) {
       if (product.raw_html && product.raw_html.trim().length > 20) {
         let cleanHtml = product.raw_html
+          // Purge all AI emojis (sparkles, stars, checks, fire, lightning, etc.)
+          .replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}✨⭐✔✅🔥⚡💥🌟💫🎉]/gu, '')
+          // Clean empty tags and whitespace
           .replace(/<p>\s*(&nbsp;|\u00a0|\s)*<\/p>/gi, '')
           .replace(/<p>\s*<br\s*\/?>\s*<\/p>/gi, '')
-          .replace(/(<br\s*\/?>\s*){3,}/gi, '<br><br>');
+          .replace(/(<br\s*\/?>\s*){2,}/gi, '<br>')
+          .trim();
         overviewText.innerHTML = cleanHtml;
       } else if (product.description) {
-        const paras = product.description.split(/\n\n+/);
-        overviewText.innerHTML = paras.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+        const cleanDesc = product.description.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}✨⭐✔✅🔥⚡💥🌟💫🎉]/gu, '');
+        const paras = cleanDesc.split(/\n\n+/);
+        overviewText.innerHTML = paras.map(p => `<p class="pdp-desc-lead">${p.replace(/\n/g, '<br>')}</p>`).join('');
       } else {
-        overviewText.innerHTML = '<p>Stay protected in style with Covertok. Designed for modern lifestyles – lightweight, sleek, and durable.</p>';
+        overviewText.innerHTML = '<p class="pdp-desc-lead">Engineered with precision for everyday drop defense, authentic tactile grip, and minimalist design. Crafted to seamlessly fit your lifestyle.</p>';
       }
       
       // Reset collapsed state on product load
