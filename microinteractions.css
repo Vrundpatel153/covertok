@@ -2187,7 +2187,6 @@ body {
 .combo-sticky-bar,
 .combo-homepage-bar,
 .sticky-atc-bar,
-.pdp-sticky-bar,
 .floating-quick-bar {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.72) 100%) !important;
   backdrop-filter: var(--liquid-glass-blur-heavy) !important;

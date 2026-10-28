@@ -2595,61 +2595,64 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   bottom: 88px;
 }
 
-/* 12. DUAL-ACTION STICKY BOTTOM BUY BAR (ADD TO CART + BUY NOW) */
+/* 12. DYNAMIC ISLAND FLOATING MIDDLE PILL (SMALL CENTERED POPUP) */
 .pdp-sticky-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9980;
-  background: rgba(14, 16, 20, 0.96);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-top: 1.5px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.35);
-  padding: 12px 32px;
-  display: block;
-  transform: translateY(115%);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
-  box-sizing: border-box;
+  position: fixed !important;
+  bottom: 24px !important;
+  left: 50% !important;
+  right: auto !important;
+  width: auto !important;
+  max-width: min(92vw, 680px) !important;
+  z-index: 9980 !important;
+  background: rgba(12, 13, 16, 0.94) !important;
+  backdrop-filter: blur(28px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), 0 4px 14px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  padding: 7px 12px 7px 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  transform: translateX(-50%) translateY(140%) scale(0.95) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease !important;
+  box-sizing: border-box !important;
 }
 
 .pdp-sticky-bar.visible {
-  transform: translateY(0) !important;
+  transform: translateX(-50%) translateY(0) scale(1) !important;
   opacity: 1 !important;
   pointer-events: auto !important;
 }
 
 .pdp-sticky-container {
-  max-width: 1360px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
   box-sizing: border-box;
 }
 
 .pdp-sticky-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   overflow: hidden;
-  max-width: 55%;
+  max-width: 320px;
 }
 
 .pdp-sticky-thumb {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
   background: #18191E;
-  object-fit: contain;
+  object-fit: cover;
   flex-shrink: 0;
-  border: 1.5px solid rgba(255, 255, 255, 0.15);
-  padding: 3px;
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  padding: 2px;
 }
 
 .pdp-sticky-info {
@@ -2660,10 +2663,10 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .pdp-sticky-title {
-  font-family: var(--pdp-font-head);
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: #FFFFFF;
+  font-family: var(--pdp-font-head, -apple-system, sans-serif);
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2673,24 +2676,24 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 .pdp-sticky-price-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .pdp-sticky-price {
-  font-family: var(--pdp-font-head);
+  font-family: var(--pdp-font-head, -apple-system, sans-serif);
   font-size: 0.95rem;
   font-weight: 800;
-  color: #E2BC7A;
+  color: #FBBF24 !important;
 }
 
 .pdp-sticky-tag {
-  font-family: var(--pdp-font-head);
-  font-size: 0.7rem;
+  font-family: var(--pdp-font-head, -apple-system, sans-serif);
+  font-size: 0.65rem;
   font-weight: 700;
-  color: #10B981;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  padding: 2px 8px;
+  color: #34D399 !important;
+  background: rgba(16, 185, 129, 0.16) !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  padding: 2px 7px;
   border-radius: 999px;
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -2699,7 +2702,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 .pdp-sticky-actions {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
@@ -2707,13 +2710,14 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-family: var(--pdp-font-head);
-  font-size: 0.85rem;
+  gap: 6px;
+  font-family: var(--pdp-font-head, -apple-system, sans-serif);
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 13px 26px;
+  height: 40px;
+  padding: 0 16px;
   border-radius: 999px;
   cursor: pointer;
   white-space: nowrap;
@@ -2722,32 +2726,31 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .pdp-sticky-btn-cart {
-  background: #101114;
-  color: #FFFFFF;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
 .pdp-sticky-btn-cart:hover {
-  background: #27272A;
-  border-color: #27272A;
-  transform: translateY(-1px);
-  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.24) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-1px) scale(1.02);
+  color: #FFFFFF !important;
 }
 
 .pdp-sticky-btn-buy {
-  background: #0A0A0A;
-  color: #FFFFFF;
-  border: 1.5px solid #0A0A0A;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF !important;
+  color: #0A0A0A !important;
+  border: 1.5px solid #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25) !important;
 }
 
 .pdp-sticky-btn-buy:hover {
-  background: #27272A;
-  color: #FFFFFF;
-  border-color: #27272A;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  background: #F4F4F5 !important;
+  color: #000000 !important;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4) !important;
 }
 
 /* 13. RESPONSIVE BREAKPOINTS & MOBILE ARCHITECTURE */
@@ -3341,9 +3344,20 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     left: auto !important;
   }
 
-  /* 10. STICKY BOTTOM BUY BAR (MOBILE OPTIMIZED) */
+  /* 10. STICKY FLOATING POPUP PILL (MOBILE OPTIMIZED) */
   .pdp-sticky-bar {
-    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) translateY(140%) scale(0.95) !important;
+    width: auto !important;
+    max-width: 95vw !important;
+    padding: 6px 8px 6px 6px !important;
+    border-radius: 999px !important;
+  }
+
+  .pdp-sticky-bar.visible {
+    transform: translateX(-50%) translateY(0) scale(1) !important;
   }
 
   .pdp-sticky-container {
@@ -3351,16 +3365,16 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   .pdp-sticky-left {
-    max-width: 32% !important;
+    max-width: 140px !important;
     gap: 8px !important;
     flex-shrink: 0 !important;
   }
 
   .pdp-sticky-thumb {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    border-radius: 8px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 50% !important;
   }
 
   .pdp-sticky-title {
@@ -3368,11 +3382,17 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   .pdp-sticky-price {
-    font-size: 0.78rem !important;
+    font-size: 0.85rem !important;
   }
 
   .pdp-sticky-tag {
     display: none !important;
+  }
+
+  .pdp-sticky-btn {
+    height: 36px !important;
+    padding: 0 12px !important;
+    font-size: 0.72rem !important;
   }
 
   .pdp-sticky-actions {
