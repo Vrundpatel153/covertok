@@ -2268,7 +2268,6 @@ body {
 .catalog-search-pill,
 .catalog-search-pill input,
 .search-bar-input,
-.search-input-wrap,
 .contact-form-input,
 .newsletter-input,
 .checkout-field,
@@ -2290,8 +2289,98 @@ body {
 .newsletter-input:focus,
 .checkout-field:focus {
   background: rgba(255, 255, 255, 0.96) !important;
-  border-color: #FF5500 !important;
-  box-shadow: 0 0 0 3.5px rgba(255, 85, 0, 0.22), 0 8px 24px rgba(255, 85, 0, 0.12), inset 0 1px 1px #FFFFFF !important;
+  border-color: #0A0A0A !important;
+  box-shadow: 0 0 0 3.5px rgba(10, 10, 10, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1px #FFFFFF !important;
+}
+
+/* --- Dedicated Studio-Grade Search Pill --- */
+.search-modal-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid #ECECEF !important;
+  margin-bottom: 12px !important;
+}
+
+.search-input-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex: 1 !important;
+  height: 52px !important;
+  padding: 0 20px !important;
+  background: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid #E4E4E7 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03), inset 0 1px 1.5px #FFFFFF !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+}
+
+.search-input-wrap:focus-within {
+  background: #FFFFFF !important;
+  border-color: #0A0A0A !important;
+  box-shadow: 0 0 0 3.5px rgba(10, 10, 10, 0.08), 0 8px 24px rgba(0, 0, 0, 0.06), inset 0 1px 1.5px #FFFFFF !important;
+}
+
+.search-input-wrap svg {
+  width: 20px !important;
+  height: 20px !important;
+  stroke: #71717A !important;
+  flex-shrink: 0 !important;
+  transition: stroke 0.2s ease !important;
+}
+
+.search-input-wrap:focus-within svg {
+  stroke: #0A0A0A !important;
+}
+
+.search-input-wrap input {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: #0A0A0A !important;
+  letter-spacing: -0.01em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.search-input-wrap input::placeholder {
+  color: #71717A !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+}
+
+.search-modal-close {
+  background: #F4F4F5 !important;
+  border: 1px solid #E4E4E7 !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  font-size: 1.3rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #52525B !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+}
+
+.search-modal-close:hover {
+  background: #0A0A0A !important;
+  border-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+  transform: scale(1.05) !important;
 }
 
 /* 10. UNIVERSAL REVIEWS, VIDEO SHOWCASES & COMMUNITY RATINGS */
