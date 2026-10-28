@@ -236,6 +236,33 @@
       categoryDesc.innerHTML = descMap[currentCategory] || `Curated authentic Covertok accessories designed to elevate your everyday setup.`;
     }
 
+    const curatedImg = document.getElementById('catalogCuratedImg');
+    if (curatedImg) {
+      const imgMap = {
+        'all': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok Signature Collection - Precision Cases & Accessories' },
+        'iphone-cases': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok iPhone Precision Cases' },
+        'airpod-covers': { src: 'assets/collections/card_03_airpods_bg.webp', alt: 'Covertok AirPods Protective Cases' },
+        'watchbands': { src: 'assets/collections/card_02_watch_bg.webp', alt: 'Covertok Apple Watch Bands' },
+        'charger-covers': { src: 'assets/collections/card_05_power_bg.webp', alt: 'Covertok MagSafe Chargers and Power Bank' },
+        'charger-and-cables': { src: 'assets/collections/card_04_cables_bg.webp', alt: 'Covertok High-Speed Braided Cables' },
+        'cover-charms': { src: 'assets/collections/card_07_charms_bg.webp', alt: 'Covertok Phone Charms and Wrist Lanyards' },
+        'other-accessories': { src: 'assets/collections/card_06_accessories_bg.webp', alt: 'Covertok Everyday Tech Accessories' },
+        'our-bestsellers': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok Most Loved Bestsellers' },
+        'new-arrivals': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok New Arrivals' }
+      };
+      const activeImg = imgMap[currentCategory] || imgMap['all'];
+      if (!curatedImg.src.endsWith(activeImg.src)) {
+        curatedImg.style.opacity = '0';
+        curatedImg.style.transform = 'scale(0.96)';
+        setTimeout(() => {
+          curatedImg.src = activeImg.src;
+          curatedImg.alt = activeImg.alt;
+          curatedImg.style.opacity = '1';
+          curatedImg.style.transform = 'scale(1)';
+        }, 120);
+      }
+    }
+
     if (countEl) {
       countEl.innerHTML = `<span class="catalog-count-num">${filtered.length}</span> Products`;
     }
