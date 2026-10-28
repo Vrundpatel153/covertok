@@ -122,32 +122,16 @@ body.app-sheet-open {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Slide-In Drawer Overlay: Frosted Glass Scrim */
-.app-drawer-overlay {
+/* Slide-In Drawer Overlay: Frosted Glass Scrim (Full definition in 15.2) */
+.app-drawer-overlay,
+.app-modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 10000;
-  background: rgba(18, 17, 15, 0.38) !important;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--dur-med) var(--ease-spring),
-              backdrop-filter var(--dur-med) var(--ease-spring),
-              visibility var(--dur-med) var(--ease-spring);
   display: block;
   padding: 0 !important;
   margin: 0 !important;
   overflow: hidden !important;
-}
-
-.app-modal-overlay.active,
-.app-drawer-overlay.active {
-  opacity: 1;
-  visibility: visible;
-  background: rgba(18, 17, 15, 0.38) !important;
-  backdrop-filter: blur(12px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(140%) !important;
 }
 
 /* Slide-In Sidebars / Drawers (Right side) */
@@ -1614,39 +1598,49 @@ body.app-sheet-open {
    9. SEARCH MODAL REFINED
    -------------------------------------------------------------------------- */
 .search-modal-box {
-  width: 100%;
-  max-width: 680px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(36px) saturate(200%) contrast(102%);
-  -webkit-backdrop-filter: blur(36px) saturate(200%) contrast(102%);
-  border-radius: 24px;
-  box-shadow: 0 35px 85px -10px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1px 2px rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  width: 100% !important;
+  max-width: 680px !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(40px) saturate(200%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(200%) contrast(102%) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 40px 100px -15px rgba(0, 0, 0, 0.22), 0 0 1px 1px rgba(255, 255, 255, 0.95), inset 0 2px 3px rgba(255, 255, 255, 0.98) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .search-input-header {
-  display: flex;
-  align-items: center;
-  padding: 18px 24px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  display: flex !important;
+  align-items: center !important;
+  padding: 16px 20px !important;
+  gap: 12px !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  border-bottom: 1px solid rgba(228, 228, 231, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
 }
 
 .search-input-box {
-  flex: 1;
-  border: none;
-  background: transparent;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #0A0A0A;
-  outline: none;
+  flex: 1 !important;
+  height: 48px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1.5px solid #E4E4E7 !important;
+  padding: 0 18px !important;
+  font-family: 'Outfit', 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #0A0A0A !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.search-input-box:focus {
+  border-color: #0A0A0A !important;
+  box-shadow: 0 0 0 3.5px rgba(10, 10, 10, 0.08) !important;
 }
 
 .search-results-list {
@@ -1716,10 +1710,10 @@ body.app-sheet-open {
 /* 1. Universal Liquid Glass Core Design Tokens */
 :root {
   /* Multi-Layer Refractive Light Liquid Glass */
-  --liquid-glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.62) 100%);
-  --liquid-glass-bg-subtle: linear-gradient(145deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.48) 100%);
-  --liquid-glass-bg-elevated: linear-gradient(145deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.76) 100%);
-  --liquid-glass-bg-hover: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.82) 100%);
+  --liquid-glass-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0.52) 100%);
+  --liquid-glass-bg-subtle: linear-gradient(145deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.40) 100%);
+  --liquid-glass-bg-elevated: linear-gradient(145deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.64) 100%);
+  --liquid-glass-bg-hover: linear-gradient(145deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.72) 100%);
   
   /* Obsidian Dark Liquid Glass (for Active States, CTAs, Toasts & Dark Tiles) */
   --liquid-glass-dark: linear-gradient(145deg, rgba(26, 23, 21, 0.90) 0%, rgba(12, 11, 10, 0.94) 100%);
@@ -1728,20 +1722,20 @@ body.app-sheet-open {
   --liquid-glass-dark-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), inset 0 1px 1px 0 rgba(255, 255, 255, 0.32);
 
   /* Specular Chamfer Edge Borders */
-  --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.86);
-  --liquid-glass-border-subtle: 1px solid rgba(255, 255, 255, 0.68);
+  --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.90);
+  --liquid-glass-border-subtle: 1px solid rgba(255, 255, 255, 0.75);
   --liquid-glass-border-hover: 1px solid rgba(255, 85, 0, 0.55);
   --liquid-glass-border-gold: 1.5px solid rgba(255, 85, 0, 0.45);
 
   /* Optical Refraction & Frosted Blur */
-  --liquid-glass-blur: blur(22px) saturate(190%) contrast(102%);
-  --liquid-glass-blur-heavy: blur(34px) saturate(200%) contrast(104%);
-  --liquid-glass-blur-soft: blur(14px) saturate(170%);
+  --liquid-glass-blur: blur(28px) saturate(190%) contrast(102%);
+  --liquid-glass-blur-heavy: blur(38px) saturate(210%) contrast(102%);
+  --liquid-glass-blur-soft: blur(16px) saturate(180%);
 
   /* Specular Highlights & Ambient Shadows */
-  --liquid-glass-shadow: 0 14px 36px -8px rgba(23, 21, 19, 0.05), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.98), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
-  --liquid-glass-shadow-elevated: 0 24px 52px -10px rgba(23, 21, 19, 0.09), inset 0 2px 2px 0 #FFFFFF, inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
-  --liquid-glass-shadow-hover: 0 28px 60px -12px rgba(23, 21, 19, 0.14), 0 0 32px rgba(255, 85, 0, 0.22), inset 0 2px 2px 0 #FFFFFF;
+  --liquid-glass-shadow: 0 16px 40px -8px rgba(23, 21, 19, 0.08), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.98), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
+  --liquid-glass-shadow-elevated: 0 28px 65px -12px rgba(23, 21, 19, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.95), inset 0 2px 2px 0 #FFFFFF, inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
+  --liquid-glass-shadow-hover: 0 32px 70px -12px rgba(23, 21, 19, 0.16), 0 0 32px rgba(255, 85, 0, 0.22), inset 0 2px 2px 0 #FFFFFF;
 
   /* Spring Physics */
   --liquid-glass-transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, background 0.28s ease;
@@ -3016,9 +3010,11 @@ textarea:focus {
   top: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
+  width: 100% !important;
+  max-width: 450px !important;
   height: 100% !important;
   height: 100dvh !important;
-  background: rgba(255, 255, 255, 0.88) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(36px) saturate(210%) contrast(102%) !important;
   -webkit-backdrop-filter: blur(36px) saturate(210%) contrast(102%) !important;
   border-left: 1.5px solid rgba(255, 255, 255, 0.95) !important;
@@ -3043,6 +3039,9 @@ textarea:focus {
 .mobile-nav-drawer.open,
 .cart-drawer.open,
 #cartDrawer.open,
+.app-drawer-overlay.active .app-drawer,
+.app-drawer-overlay.active #cartDrawerSheet,
+.app-drawer-overlay.active #accountDrawerSheet,
 .app-drawer.active,
 #cartDrawerSheet.active,
 #accountDrawerSheet.active,
@@ -3050,6 +3049,7 @@ textarea:focus {
 .catalog-filters-sheet.active {
   transform: translate3d(0, 0, 0) !important;
   visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* --- 15.2 Deep Ambient Overlays & Backdrop Blurs --- */
@@ -3057,18 +3057,22 @@ textarea:focus {
 .app-drawer-overlay,
 .cart-drawer-overlay,
 .modal-overlay,
-.app-modal-overlay {
+.app-modal-overlay,
+.search-modal-overlay,
+.instagram-modal-overlay,
+.story-video-modal,
+.community-reel-modal {
   position: fixed !important;
   inset: 0 !important;
-  background: rgba(18, 17, 15, 0.62) !important;
-  backdrop-filter: blur(14px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+  background: rgba(12, 10, 16, 0.42) !important;
+  backdrop-filter: blur(28px) saturate(190%) contrast(105%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(190%) contrast(105%) !important;
   z-index: 99998 !important;
   opacity: 0 !important;
   visibility: hidden !important;
-  transition: opacity 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
-              backdrop-filter 0.38s ease, 
-              visibility 0.38s ease !important;
+  pointer-events: none !important;
+  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.32s ease !important;
   will-change: opacity, backdrop-filter !important;
 }
 
@@ -3076,9 +3080,25 @@ textarea:focus {
 .app-drawer-overlay.active,
 .cart-drawer-overlay.active,
 .modal-overlay.active,
-.app-modal-overlay.active {
+.app-modal-overlay.active,
+.search-modal-overlay.active,
+.instagram-modal-overlay.active,
+.story-video-modal.active,
+.community-reel-modal.active {
   opacity: 1 !important;
   visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+#storeSharedModalsMount,
+#storeSharedModals {
+  display: contents !important;
+}
+
+/* Master Glassmorphic Page Background Blur when any Modal or Drawer is Open */
+body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#storeSharedModalsMount):not(#storeSharedModals):not(.toast-container):not(.story-video-modal):not(.instagram-modal-overlay):not(.community-reel-modal) {
+  filter: blur(12px) brightness(0.92) !important;
+  transition: filter 0.32s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 /* --- 15.3 Sidebar Header Slide Entrance --- */

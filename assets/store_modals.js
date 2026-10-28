@@ -600,10 +600,15 @@
 
   function mountSharedModals() {
     if (!document.getElementById('cartDrawerOverlay')) {
-      const container = document.createElement('div');
-      container.id = 'storeSharedModals';
-      container.innerHTML = MODALS_HTML;
-      document.body.appendChild(container);
+      const mount = document.getElementById('storeSharedModalsMount');
+      if (mount) {
+        mount.innerHTML = MODALS_HTML;
+      } else {
+        const container = document.createElement('div');
+        container.id = 'storeSharedModalsMount';
+        container.innerHTML = MODALS_HTML;
+        document.body.appendChild(container);
+      }
     }
   }
 

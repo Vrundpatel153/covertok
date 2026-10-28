@@ -331,16 +331,16 @@
 }
 
 .catalog-curated-banner {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F5 100%) !important;
-  backdrop-filter: blur(28px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
-  border: 1.5px solid #EFEAE2 !important;
-  border-radius: 24px !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.58) 100%) !important;
+  backdrop-filter: blur(28px) saturate(200%) contrast(102%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(200%) contrast(102%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.92) !important;
+  border-radius: 26px !important;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 30px -4px rgba(23, 21, 19, 0.04), inset 0 1.5px 1.5px #FFFFFF !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.06), 0 0 1px 1px rgba(255, 255, 255, 0.95), inset 0 2px 2px #FFFFFF !important;
   position: relative;
   min-height: 156px;
   margin-bottom: 22px;
@@ -518,8 +518,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #FFFFFF;
-  border: 1.5px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.88);
   border-radius: 999px;
   padding: 6px 16px;
   height: 38px;
@@ -530,13 +532,14 @@
   user-select: none;
   box-sizing: border-box;
   scroll-snap-align: start;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), inset 0 1px 1px #FFFFFF;
 }
 
 .catalog-cat-card:hover {
-  background: #F8FAFC;
-  border-color: #0EA5E9;
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #0A0A0A;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .catalog-cat-card.active {
@@ -547,9 +550,9 @@
 }
 
 .cat-pill-title {
-  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 0.84rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #334155;
   line-height: 1;
   white-space: nowrap;
@@ -562,7 +565,7 @@
 }
 
 .cat-pill-count {
-  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 2px 7px;
@@ -582,7 +585,7 @@
 }
 
 .cat-pill-badge {
-  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-family: 'Outfit', 'Inter', sans-serif;
   font-size: 0.72rem;
   font-weight: 800;
   padding: 2px 8px;
@@ -609,15 +612,19 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #FFFFFF;
-  border: 1.5px solid #EAE5DB;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
   border-radius: 999px;
   padding: 0 16px;
-  height: 40px;
+  height: 42px;
   width: 100%;
   max-width: 320px;
   transition: all 0.2s ease;
   box-sizing: border-box;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03), inset 0 1.5px 1px #FFFFFF;
+}
 }
 
 .catalog-search-pill:focus-within {
