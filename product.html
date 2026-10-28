@@ -14,7 +14,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=20261028_luxury_v2">
   <link rel="stylesheet" href="catalog.css?v=20261028_liquid_v1">
-  <link rel="stylesheet" href="pdp.css?v=20261028_luxury_v2">
+  <link rel="stylesheet" href="pdp.css?v=20261028_aligned_v3">
   <link rel="stylesheet" href="microinteractions.css?v=20261028_liquid_v1">
 
   <!-- Products Catalog Script -->
@@ -320,6 +320,17 @@
               <span class="pdp-save-badge" id="pdpDiscountTag" style="display: none;"></span>
             </div>
             <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
+            <!-- Integrated Urgency & Social Proof -->
+            <div class="pdp-urgency-row" id="pdpSocialProof">
+              <span class="pdp-urgency-fire">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                <strong id="pdpSoldNumber">842</strong> sold in last <span id="pdpSoldHours">6</span> hours
+              </span>
+              <span class="pdp-urgency-stock">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Only <strong id="pdpStockNumber">12</strong> left in stock!
+              </span>
+            </div>
           </div>
 
           <!-- Capacity Selector (Hidden by default, shown ONLY for Power Bank) -->
@@ -386,38 +397,63 @@
               <span>+ Add to 3-Piece Combo (₹1,199 Flat Deal)</span>
             </button>
 
-            <!-- Clean Studio Reassurance Strip (Vector SVG Icons) -->
+            <!-- Balanced 2x2 Reassurance Grid -->
             <div class="covertok-live-trust-badges" id="pdpTrustBadgesStrip">
               <div class="covertok-trust-item">
                 <div class="covertok-trust-icon">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                 </div>
-                <span>Premium Quality</span>
+                <div class="covertok-trust-meta">
+                  <strong>1-Year Quality Warranty</strong>
+                  <span>Guaranteed authentic protection</span>
+                </div>
               </div>
               <div class="covertok-trust-item">
                 <div class="covertok-trust-icon">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                 </div>
-                <span>1-Year Warranty</span>
+                <div class="covertok-trust-meta">
+                  <strong>Free Express Delivery</strong>
+                  <span>Ships in 2 hours via express air</span>
+                </div>
               </div>
               <div class="covertok-trust-item">
                 <div class="covertok-trust-icon">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
                 </div>
-                <span>2-Day Returns</span>
+                <div class="covertok-trust-meta">
+                  <strong>2-Day Easy Returns</strong>
+                  <span>Quick exchange or instant refund</span>
+                </div>
               </div>
               <div class="covertok-trust-item">
                 <div class="covertok-trust-icon">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                 </div>
-                <span>Express Air Delivery</span>
+                <div class="covertok-trust-meta">
+                  <strong>100% Secure &amp; COD</strong>
+                  <span>Pay via UPI, Cards, or on Arrival</span>
+                </div>
               </div>
             </div>
 
-            <!-- Authentic Social Proof Banner -->
-            <div class="covertok-social-proof" id="pdpSocialProof">
-              <div class="covertok-sold-text"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2" style="vertical-align:-2px; margin-right:4px;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg><span id="pdpSoldNumber">842</span> sold in last <span id="pdpSoldHours">6</span> hours</div>
-              <div class="covertok-stock-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2" style="vertical-align:-2px; margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Only <span id="pdpStockNumber">12</span> left in stock!</div>
+            <!-- Integrated Product Description & Overview Card -->
+            <div class="pdp-description-card" id="pdpOverviewBox">
+              <div class="pdp-description-header">
+                <h3 class="pdp-description-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  <span>Product Description &amp; Overview</span>
+                </h3>
+              </div>
+              <div class="pdp-description-wrap collapsed" id="pdpOverviewContentWrap">
+                <div class="pdp-description-body" id="pdpOverviewText">
+                  <p>Crafted with premium materials engineered for daily drop protection, effortless tactile grip, and authentic style. Designed to seamlessly fit your lifestyle.</p>
+                </div>
+              </div>
+              <button type="button" class="pdp-readmore-btn" id="pdpSeeMoreBtn" aria-expanded="false" aria-controls="pdpOverviewContentWrap">
+                <span id="pdpSeeMoreText">Read more</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
             </div>
           </div>
 
@@ -492,28 +528,6 @@
   </main>
 
 
-  <!-- 5. PRODUCT OVERVIEW & DESCRIPTION (With Read More / See Less Toggle) -->
-  <section class="pdp-description-section" id="productDescriptionSection">
-    <div class="pdp-container">
-      <div class="pdp-description-card" id="pdpOverviewBox">
-        <div class="pdp-description-header">
-          <h3 class="pdp-description-title">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A98135" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-            <span>Product Description &amp; Overview</span>
-          </h3>
-        </div>
-        <div class="pdp-description-wrap collapsed" id="pdpOverviewContentWrap">
-          <div class="pdp-description-body" id="pdpOverviewText">
-            <p>Crafted with premium materials engineered for daily drop protection, effortless tactile grip, and authentic style. Designed to seamlessly fit your lifestyle.</p>
-          </div>
-        </div>
-        <button type="button" class="pdp-readmore-btn" id="pdpSeeMoreBtn" aria-expanded="false" aria-controls="pdpOverviewContentWrap">
-          <span id="pdpSeeMoreText">Read more</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-      </div>
-    </div>
-  </section>
 
   <!-- 7. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) -->
   <section class="pdp-bundle-section" id="bundleSection">

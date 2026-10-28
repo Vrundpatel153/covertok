@@ -360,8 +360,8 @@ html, body {
 
 .pdp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(360px, 490px) 1fr;
-  gap: clamp(28px, 4vw, 52px);
+  grid-template-columns: minmax(400px, 520px) 1fr;
+  gap: clamp(28px, 3.5vw, 48px);
   align-items: start;
 }
 
@@ -382,7 +382,8 @@ html, body {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  max-width: 490px;
+  max-width: 520px;
+  width: 100%;
 }
 
 /* Vertical Thumbnails Rail */
@@ -428,11 +429,11 @@ html, body {
   flex: 1;
   position: relative;
   width: 100%;
-  max-width: 420px;
-  max-height: 440px;
+  max-width: 440px;
+  max-height: 460px;
   aspect-ratio: 1 / 1;
   background: #F8F6F2;
-  border-radius: 28px;
+  border-radius: 24px;
   border: 1.5px solid #ECE7DF;
   box-shadow: 0 10px 32px rgba(23, 21, 19, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
   overflow: hidden;
@@ -1475,18 +1476,15 @@ html, body {
   margin: 0;
 }
 
-/* 6. PRODUCT OVERVIEW & DESCRIPTION (Luxury Card With Read More / See Less Toggle) */
-.pdp-description-section {
-  padding: 8px 0 24px;
-}
-
+/* 6. PRODUCT OVERVIEW & DESCRIPTION (Integrated Inside Configurator) */
 .pdp-description-card {
   background: #FFFFFF;
-  border: 1px solid #EAE7E0;
+  border: 1px solid #E4E4E7;
   border-radius: 14px;
-  padding: 22px 28px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
   transition: border-color 0.2s ease;
+  margin-top: 14px;
 }
 
 .pdp-description-card:hover {
@@ -1497,20 +1495,24 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #F1EFEA;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F4F4F5;
 }
 
 .pdp-description-title {
-  font-family: var(--pdp-font-head);
-  font-size: 1.35rem;
-  font-weight: 800;
+  font-family: var(--pdp-font-head, 'Manrope', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #0A0A0A;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
+.pdp-description-title svg {
+  color: #71717A;
 }
 
 .pdp-description-wrap {
@@ -3492,98 +3494,119 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 /* ========================================================================= */
-/* COVERTOK AUTHENTIC LIVE TRUST BADGES & SOCIAL PROOF                       */
+/* COVERTOK AUTHENTIC LUXURY 2x2 REASSURANCE GRID & URGENCY                 */
 /* ========================================================================= */
 .covertok-live-trust-badges {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin: 16px 0 12px;
-  padding: 12px 14px;
-  background: #FAF8F5;
-  border: 1px solid #EFEAE1;
-  border-radius: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 14px;
+  margin: 18px 0 14px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E7;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .covertok-trust-item {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 10px;
   min-width: 0;
 }
 
 .covertok-trust-icon {
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
-  border: 1px solid #E5DFD3;
-  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border: 1px solid #E4E4E7;
+  border-radius: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #FFFFFF;
+  background: #F4F4F5;
   color: #0A0A0A;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
 }
 
 .covertok-trust-icon svg {
   stroke: #0A0A0A;
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
 }
 
-.covertok-trust-item span {
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.74rem;
-  color: #171513;
-  font-weight: 700;
-  line-height: 1.2;
+.covertok-trust-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
 }
 
-@media (max-width: 640px) {
+.covertok-trust-meta strong {
+  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: #0A0A0A;
+  line-height: 1.25;
+}
+
+.covertok-trust-meta span {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.70rem;
+  font-weight: 500;
+  color: #71717A;
+  line-height: 1.25;
+}
+
+@media (max-width: 480px) {
   .covertok-live-trust-badges {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 }
 
-/* Social Proof Banner */
-.covertok-social-proof {
+/* Integrated Urgency & Scarcity Row (Inside Price Block) */
+.pdp-urgency-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.815rem;
-  margin: 8px 0 12px;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #F4F4F5;
+  font-size: 0.785rem;
   flex-wrap: wrap;
 }
 
-.covertok-sold-text {
-  color: #52525B;
-  font-weight: 600;
+.pdp-urgency-fire {
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.covertok-sold-text svg {
-  stroke: #71717A !important;
-}
-
-.covertok-sold-text span {
-  font-weight: 700;
-  color: #18181B;
-}
-
-.covertok-stock-badge {
-  background: #F4F4F5;
-  color: #18181B;
-  padding: 3.5px 11px;
-  border-radius: 999px;
-  font-size: 0.74rem;
   font-weight: 600;
-  border: 1px solid #E4E4E7;
+  color: #52525B;
+}
+
+.pdp-urgency-fire strong {
+  color: #18181B;
+  font-weight: 700;
+}
+
+.pdp-urgency-stock {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  background: #F4F4F5;
+  color: #18181B;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.735rem;
+  border: 1px solid #E4E4E7;
+}
+
+.pdp-urgency-stock strong {
+  color: #0A0A0A;
+  font-weight: 700;
 }
 
 .covertok-stock-badge svg {
