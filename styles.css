@@ -86,10 +86,20 @@
   --dark-card-bg: #141414;
   --dark-border: #1E293B;
 
-  /* Typography */
-  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Funky, Modern & Cool Mobile Cover Brand Typography */
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-funky: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Syne', 'Outfit', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Cool & Colorful Mobile Cover Brand Gradients */
+  --grad-sunset: linear-gradient(135deg, #FF007A 0%, #FF5500 50%, #FFAE00 100%);
+  --grad-neon-pink: linear-gradient(135deg, #FF1361 0%, #FF8A00 100%);
+  --grad-aurora: linear-gradient(135deg, #00F5D4 0%, #7928CA 60%, #FF007A 100%);
+  --grad-electric-blue: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+  --grad-candy: linear-gradient(135deg, #FA709A 0%, #FEE140 100%);
+  --grad-cyber-violet: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
 
   /* Geometry & Shadows */
   --container-max-width: 1440px;
@@ -5347,8 +5357,12 @@ a.footer-contact-main:hover {
 }
 
 .fl-headline-accent {
-  color: #D65126;
+  background: linear-gradient(135deg, #00F5D4 0%, #0072FF 50%, #7928CA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0072FF;
   display: block;
+  filter: drop-shadow(0 4px 16px rgba(0, 114, 255, 0.28));
 }
 
 .fl-subtext {
@@ -5750,10 +5764,12 @@ a.footer-contact-main:hover {
 }
 
 .combo-title-gold {
-  color: #FFFFFF;
-  -webkit-text-fill-color: #FFFFFF;
-  background: none;
-  font-weight: 800;
+  background: linear-gradient(135deg, #FFB800 0%, #FF5500 50%, #FF007A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FF5500;
+  font-weight: 900;
+  filter: drop-shadow(0 4px 18px rgba(255, 85, 0, 0.45));
 }
 
 .combo-subtitle {
@@ -6749,19 +6765,23 @@ a.footer-contact-main:hover {
 }
 
 .bento-main-heading {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   font-weight: 900;
-  font-size: clamp(2.4rem, 3.5vw, 3.8rem);
-  line-height: 1.05;
+  font-size: clamp(2.4rem, 3.8vw, 4rem);
+  line-height: 1.04;
   letter-spacing: -0.04em;
-  color: #000000;
+  color: #0A0A0A;
   margin: 0 0 16px 0;
   text-transform: none;
 }
 
 .bento-heading-accent {
-  color: #000000;
-  display: inline;
+  background: linear-gradient(135deg, #FF007A 0%, #FF5500 50%, #FFAE00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FF5500;
+  display: inline-block;
+  filter: drop-shadow(0 4px 16px rgba(255, 0, 122, 0.28));
 }
 
 .bento-subtitle {
@@ -9188,30 +9208,27 @@ a.footer-contact-main:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  margin-bottom: 10px;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding: 4px 16px;
+  background: linear-gradient(135deg, rgba(255, 0, 122, 0.08), rgba(255, 85, 0, 0.08));
+  border: 1px solid rgba(255, 85, 0, 0.28);
+  border-radius: 999px;
+  width: fit-content;
 }
 
 .bestseller-eyebrow-line {
-  width: 44px;
-  height: 1.5px;
-  display: inline-block;
-}
-
-.bestseller-eyebrow-line.line-left {
-  background: linear-gradient(to right, transparent, var(--color-accent, #FF5500));
-}
-
-.bestseller-eyebrow-line.line-right {
-  background: linear-gradient(to left, transparent, var(--color-accent, #FF5500));
+  display: none;
 }
 
 .bestseller-eyebrow-text {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.22em;
-  color: #000000;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  background: linear-gradient(135deg, #FF007A 0%, #FF5500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
 
@@ -9223,10 +9240,10 @@ a.footer-contact-main:hover {
 }
 
 .bestseller-main-title {
-  font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: clamp(2rem, 3.4vw, 3.25rem);
-  font-weight: 800;
-  letter-spacing: -0.025em;
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
   color: #0A0A0A;
   margin: 0;
   text-transform: uppercase;
@@ -9234,14 +9251,14 @@ a.footer-contact-main:hover {
 }
 
 .bestseller-title-accent {
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: #0A0A0A;
-  color: #0A0A0A;
-  display: inline;
+  background: linear-gradient(135deg, #FF007A 0%, #FF5500 50%, #FFAE00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   font-weight: 900;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   margin-left: 8px;
+  filter: drop-shadow(0 4px 16px rgba(255, 0, 122, 0.3));
 }
 
 .bestseller-subtitle {
@@ -10235,31 +10252,35 @@ a.footer-contact-main:hover {
 }
 
 .popular-eyebrow-text {
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 4px;
-  color: #000000;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  background: linear-gradient(135deg, #00F5D4 0%, #7928CA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
 
 .popular-main-title {
-  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.2rem, 3.5vw, 3.4rem);
   font-weight: 900;
-  color: #000000;
+  color: #0A0A0A;
   line-height: 1.1;
   margin: 0;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
 .popular-title-accent {
-  background: none;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: #000000;
-  color: #000000;
-  display: inline;
+  background: linear-gradient(135deg, #00F5D4 0%, #7928CA 55%, #FF007A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #7928CA;
+  display: inline-block;
+  letter-spacing: -0.01em;
+  filter: drop-shadow(0 4px 16px rgba(121, 40, 202, 0.3));
 }
 
 .popular-subtitle {
