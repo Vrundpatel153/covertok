@@ -9840,28 +9840,15 @@ a.footer-contact-main:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Pagination Dots */
-.bestseller-pagination-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 14px;
-  width: 100%;
-}
-
+/* Pagination Dots Removed */
+.bestseller-pagination-dots,
 .bestseller-dot {
-  height: 4px;
-  width: 28px;
-  border-radius: 4px;
-  background: #E5E7EB;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.bestseller-dot.active {
-  width: 34px;
-  background: #000000;
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none !important;
 }
 
 /* Responsive Tablet & Mobile (<= 1200px) */
