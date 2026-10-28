@@ -143,6 +143,14 @@
   margin: 0;
 }
 
+.search-input-wrap input:focus,
+.search-input-wrap input:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
 .search-input-wrap input::placeholder {
   color: #71717A;
   font-weight: 500;

@@ -2354,6 +2354,14 @@ body {
   margin: 0 !important;
 }
 
+.search-input-wrap input:focus,
+.search-input-wrap input:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
 .search-input-wrap input::placeholder {
   color: #71717A !important;
   font-weight: 500 !important;
