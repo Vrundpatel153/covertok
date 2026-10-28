@@ -544,8 +544,9 @@
   }
 
   // ============================================================
-  // AUTOMATIC INFINITE LOOP WORDMARK ANIMATION
-  // Smoothly cycles through COVERTOK characters from first to last
+  // CONNECTED FLUID WAVE WORDMARK: INTERACTIVE MAGNETIC TRACKING
+  // GPU-accelerated CSS drives continuous connected wave.
+  // JavaScript enhances cursor proximity with fluid magnetic physics.
   // ============================================================
   function initWordmarkAutoLoop() {
     const wordmarks = document.querySelectorAll('.footer-hero-wordmark');
@@ -558,49 +559,35 @@
       const letters = Array.from(wm.querySelectorAll('.wordmark-letter'));
       if (!letters.length) return;
 
-      let currentIndex = 0;
-      let isHovering = false;
-      let isVisible = true;
+      // Mousemove dynamic magnetic ripple effect
+      wm.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
 
-      function step() {
-        if (isHovering || !isVisible) return;
-        letters.forEach((letter, idx) => {
-          if (idx === currentIndex) {
-            letter.classList.add('is-active');
+        letters.forEach(letter => {
+          const lRect = letter.getBoundingClientRect();
+          const lCenter = lRect.left + lRect.width / 2;
+          const dist = Math.abs(mouseX - lCenter);
+          const maxDist = 140;
+
+          if (dist < maxDist) {
+            const factor = 1 - (dist / maxDist);
+            const lift = factor * -13;
+            const scale = 1 + factor * 0.08;
+            letter.style.transform = `translateY(${lift}px) scale(${scale})`;
+            letter.style.filter = `drop-shadow(0 0 ${14 + factor * 12}px rgba(212, 178, 111, ${0.45 + factor * 0.45})) brightness(${1 + factor * 0.25})`;
           } else {
-            letter.classList.remove('is-active');
+            letter.style.transform = '';
+            letter.style.filter = '';
           }
         });
-        currentIndex = (currentIndex + 1) % letters.length;
-      }
-
-      // Initial character activation
-      step();
-      setInterval(step, 450);
-
-      // Pause auto loop on mouse hover so user can manually hover and inspect any letter
-      wm.addEventListener('mouseenter', () => {
-        isHovering = true;
-        letters.forEach(letter => letter.classList.remove('is-active'));
       });
 
       wm.addEventListener('mouseleave', () => {
-        isHovering = false;
-        step();
+        letters.forEach(letter => {
+          letter.style.transform = '';
+          letter.style.filter = '';
+        });
       });
-
-      // Pause when footer is not in viewport to optimize performance
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            isVisible = entry.isIntersecting;
-            if (isVisible && !isHovering) {
-              step();
-            }
-          });
-        }, { threshold: 0.05 });
-        observer.observe(wm);
-      }
     });
   }
 
