@@ -314,8 +314,8 @@
     if (currentCards.length === 0) {
       gridEl.innerHTML = '';
       const fragment = document.createDocumentFragment();
-      state.filteredProducts.forEach(prod => {
-        const card = buildProductCard(prod);
+      state.filteredProducts.forEach((prod, idx) => {
+        const card = buildProductCard(prod, idx);
         card.style.opacity = '0';
         card.style.transform = 'translateY(24px) scale(0.93)';
         card.style.filter = 'blur(6px)';
@@ -381,7 +381,7 @@
         const isExisting = Boolean(card);
 
         if (!card) {
-          card = buildProductCard(prod);
+          card = buildProductCard(prod, idx);
           card.style.opacity = '0';
           card.style.transform = 'translateY(28px) scale(0.92)';
           card.style.filter = 'blur(8px)';
@@ -441,7 +441,7 @@
     }, leavingCards.length > 0 ? 150 : 0);
   }
 
-  function buildProductCard(product) {
+  function buildProductCard(product, idx = 0) {
     const card = document.createElement('article');
     card.className = 'catalog-card combo-catalog-card';
     card.setAttribute('data-id', product.id);
@@ -451,6 +451,7 @@
     if (isSelected) card.classList.add('is-selected');
 
     const initialImg = product.primary_image || product.image || 'assets/phone_cream.webp';
+    const isEager = (typeof idx === 'number' && idx < 12);
     const hasColors = Array.isArray(product.colors) && product.colors.length > 0;
 
     let badgeHtml = '';
@@ -496,7 +497,7 @@
         </button>
 
         <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-img-wrap card-img-link" aria-label="${product.title}">
-          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="homeCardImg_${product.id}" loading="lazy">
+          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="homeCardImg_${product.id}" loading="${isEager ? 'eager' : 'lazy'}" decoding="async" onerror="this.onerror=null;this.src='assets/phone_cream.webp';">
         </a>
 
         ${swatchesHtml}
