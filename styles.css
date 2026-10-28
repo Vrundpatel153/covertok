@@ -3539,109 +3539,149 @@ img {
 .footer-brand-desc {
   font-size: 0.875rem;
   line-height: 1.6;
-  color: #9C968F;
-  margin-bottom: 22px;
+  color: #D4D4D8;
+  margin-bottom: 20px;
   max-width: 360px;
 }
 
-/* Newsletter Input & Subscribe Button */
+/* Newsletter Input & Subscribe Button - High-Contrast Frosted Obsidian Capsule */
 .footer-newsletter-row {
-  display: flex;
-  align-items: center;
-  background: #171615;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  padding: 4px;
-  margin-bottom: 8px;
-  max-width: 390px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 999px !important;
+  height: 48px !important;
+  padding: 3px 4px 3px 16px !important;
+  margin-bottom: 8px !important;
+  max-width: 390px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  transition: all 0.25s ease !important;
+  box-sizing: border-box !important;
 }
 
 .footer-newsletter-row:focus-within {
-  border-color: rgba(197, 165, 102, 0.6);
-  box-shadow: 0 0 0 3px rgba(197, 165, 102, 0.12);
+  border-color: #FCD34D !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 0 0 3px rgba(252, 211, 77, 0.2), 0 8px 24px rgba(0, 0, 0, 0.45) !important;
 }
 
 .footer-newsletter-input {
   flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #FFFFFF;
-  font-size: 0.85rem;
-  font-family: inherit;
-  padding: 8px 12px;
-  min-width: 0;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: #FFFFFF !important;
+  font-size: 0.88rem !important;
+  font-family: inherit !important;
+  padding: 8px 4px !important;
+  min-width: 0 !important;
 }
 
 .footer-newsletter-input::placeholder {
-  color: #6C6761;
+  color: #A1A1AA !important;
+  opacity: 1 !important;
 }
 
 .footer-newsletter-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #FFFFFF;
-  color: #0A0A0A;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-weight: 700;
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  padding: 9px 15px;
-  border: 1px solid #E4E4E7;
-  border-radius: 6px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #FFFFFF !important;
+  color: #0A0A0A !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-weight: 800 !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.05em !important;
+  padding: 10px 18px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
 }
 
 .footer-newsletter-btn:hover {
-  background: #0A0A0A;
-  color: #FFFFFF;
-  border-color: #0A0A0A;
-  transform: translateY(-1px);
+  background: #FCD34D !important;
+  color: #0A0A0A !important;
+  transform: translateY(-1px) scale(1.02) !important;
+  box-shadow: 0 4px 14px rgba(252, 211, 77, 0.35) !important;
 }
 
 .footer-newsletter-btn:active {
-  transform: translateY(0);
+  transform: translateY(0) !important;
 }
 
 .footer-newsletter-micro {
-  font-size: 0.75rem;
-  color: #736E68;
-  margin-bottom: 24px;
+  display: block;
+  font-size: 0.78rem;
+  color: #A1A1AA;
+  margin-bottom: 22px;
 }
 
-/* Social Media Circular Buttons */
+/* Social Media Circular Buttons - Vibrant Glowing Obsidian Jewels */
 .footer-social-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-social-btn {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #181716;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #B3ADA5;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .footer-social-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: #C5A566;
-  color: #FFFFFF;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.08) !important;
+  color: #FFFFFF !important;
 }
 
-/* Columns 2 & 3: Nav Lists with > Chevrons */
+.footer-social-btn[aria-label="Instagram"]:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 20px rgba(225, 48, 108, 0.6) !important;
+}
+
+.footer-social-btn[aria-label="WhatsApp"]:hover {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6) !important;
+}
+
+.footer-social-btn[aria-label="Facebook"]:hover {
+  background: #1877F2 !important;
+  border-color: #1877F2 !important;
+  box-shadow: 0 0 20px rgba(24, 119, 242, 0.6) !important;
+}
+
+.footer-social-btn[aria-label="YouTube"]:hover {
+  background: #FF0000 !important;
+  border-color: #FF0000 !important;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6) !important;
+}
+
+.footer-social-btn[aria-label="Email Us"]:hover {
+  background: #F59E0B !important;
+  border-color: #F59E0B !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.6) !important;
+}
+
+/* Columns 2 & 3: Nav Lists with > Chevrons - Crisp High-Contrast */
 .footer-nav-list {
   list-style: none;
   padding: 0;
@@ -3659,15 +3699,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #9C968F;
+  color: #D4D4D8;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   transition: color 0.2s ease, transform 0.2s ease;
   padding-right: 12px;
 }
 
 .footer-nav-link .nav-arrow {
-  color: #6C6761;
+  color: rgba(255, 255, 255, 0.4);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3682,11 +3723,11 @@ img {
 
 .footer-nav-link:hover {
   color: #FFFFFF;
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 .footer-nav-link:hover .nav-arrow {
-  color: #FFFFFF;
+  color: #FCD34D;
   transform: translateX(3px);
 }
 
@@ -3909,37 +3950,188 @@ a.footer-contact-main:hover {
 
 @media (max-width: 640px) {
   .site-footer {
-    padding: 44px 0 28px !important;
+    padding: 40px 0 calc(96px + env(safe-area-inset-bottom, 0px)) !important;
   }
+
+  /* 1. Wordmark on Mobile: Perfectly proportioned, no clipping or wrapping */
   .footer-hero-wordmark {
-    letter-spacing: -0.01em;
-    gap: 1px;
+    letter-spacing: -0.015em !important;
+    gap: 2px !important;
+    margin-bottom: 12px !important;
+    width: 100% !important;
+    justify-content: center !important;
   }
+
+  .wordmark-letter {
+    font-size: clamp(1.85rem, 10.2vw, 2.7rem) !important;
+    -webkit-text-stroke: 1px rgba(212, 178, 111, 0.7) !important;
+  }
+
   .footer-hero-subtag {
-    flex-wrap: wrap !important;
-    gap: 6px 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
     padding: 0 16px !important;
-    font-size: 0.72rem !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-hero-subtag .subtag-line {
+    display: none !important;
+  }
+
+  .subtag-text {
+    font-size: 0.68rem !important;
+    letter-spacing: 0.16em !important;
+    color: #A1A1AA !important;
     text-align: center !important;
+  }
+
+  .footer-divider-rule {
+    margin: 28px 0 32px !important;
+  }
+
+  /* 2. Structured 2-Column Mobile Content Grid */
+  .footer-main-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px 20px !important;
+    margin-bottom: 36px !important;
+  }
+
+  .footer-col.col-brand-newsletter {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer-col.col-collections {
+    grid-column: 1 !important;
+  }
+
+  .footer-col.col-policies {
+    grid-column: 2 !important;
+  }
+
+  .footer-col.col-contact {
+    grid-column: 1 / -1 !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .footer-brand-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .footer-brand-desc {
+    font-size: 0.84rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
     max-width: 100% !important;
   }
-  .wordmark-letter {
-    font-size: clamp(2.4rem, 11vw, 3.4rem);
-    -webkit-text-stroke: 1px rgba(212, 178, 111, 0.7);
+
+  .footer-newsletter-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    max-width: 100% !important;
+    height: 48px !important;
+    padding: 3px 4px 3px 14px !important;
+    box-sizing: border-box !important;
   }
-  .subtag-text {
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
+
+  .footer-newsletter-input {
+    flex: 1 !important;
+    min-width: 0 !important;
+    font-size: 0.82rem !important;
+    padding: 0 6px 0 0 !important;
+    height: 100% !important;
   }
-  .footer-main-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+
+  .footer-newsletter-btn {
+    flex-shrink: 0 !important;
+    height: 38px !important;
+    padding: 0 14px !important;
+    font-size: 0.72rem !important;
   }
+
+  .footer-newsletter-micro {
+    font-size: 0.74rem !important;
+    margin-bottom: 18px !important;
+  }
+
+  .footer-social-row {
+    gap: 10px !important;
+  }
+
+  .footer-social-btn {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
   .footer-col-heading {
-    margin-bottom: 14px;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 12px !important;
   }
+
+  .footer-nav-list {
+    gap: 10px !important;
+  }
+
   .footer-nav-link {
-    padding-right: 0;
+    font-size: 0.82rem !important;
+    padding-right: 0 !important;
+  }
+
+  .footer-contact-list {
+    gap: 14px !important;
+  }
+
+  .footer-contact-item {
+    gap: 12px !important;
+  }
+
+  .footer-contact-badge {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  .footer-contact-main {
+    font-size: 0.86rem !important;
+  }
+
+  .footer-contact-sub {
+    font-size: 0.72rem !important;
+  }
+
+  /* 3. Bottom Legal, Back to Top, & Payment Badges */
+  .footer-bottom-wrap {
+    padding-top: 24px !important;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
+
+  .footer-back-to-top {
+    width: 100% !important;
+    max-width: 220px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-payment-badges {
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .pay-badge-pill {
+    height: 26px !important;
+    padding: 0 8px !important;
   }
 }
 
@@ -5114,7 +5306,7 @@ a.footer-contact-main:hover {
     max-width: 100% !important;
     box-sizing: border-box !important;
   }
-  .footer-newsletter-row {
+  .newsletter-banner-row {
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 16px !important;
