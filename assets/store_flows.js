@@ -471,8 +471,8 @@
       }
 
       resultsContainer.innerHTML = matches.map(p => `
-        <a href="product?handle=${p.handle}" class="search-result-item" onclick="window.CovertokFlows.closeSearch();">
-          <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.webp'}" alt="${p.title}" class="search-result-thumb">
+        <a href="product.html?handle=${p.handle}" class="search-result-item" onclick="window.CovertokFlows.closeSearch();">
+          <img src="${p.primary_image || (p.images && p.images[0]) || 'assets/phone_cream.webp'}" alt="${p.title}" class="search-result-thumb" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
           <div style="flex: 1; min-width: 0;">
             <div class="search-result-title">${p.title}</div>
             <div style="font-size: 0.75rem; color: #71717A; font-weight: 500;">${p.category_name || 'Accessories'}</div>

@@ -1056,14 +1056,14 @@
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
               </button>
-              <div class="card-img-wrap" onclick="window.location.href='product?handle=${product.handle}'" style="cursor: pointer;">
+              <div class="card-img-wrap" onclick="window.location.href='product.html?handle=${product.handle}'" style="cursor: pointer;">
                 <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
               </div>
               ${swatchesHtml}
             </div>
 
             <div class="card-body-wrap">
-              <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
+              <a href="product.html?handle=${product.handle}" class="card-product-title" title="${product.title}">
                 ${product.title}
               </a>
 

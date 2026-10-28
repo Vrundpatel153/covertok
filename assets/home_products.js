@@ -68,14 +68,14 @@
 
         return `
           <div class="col-prod-card" data-id="${p.id}">
-            <div class="col-prod-media" style="position: relative; background: #F8F6F2; aspect-ratio: 4 / 4.6; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; border-radius: 18px 18px 0 0; cursor: pointer;" onclick="window.location.href='product?handle=${p.handle}'">
+            <div class="col-prod-media" style="position: relative; background: #F8F6F2; aspect-ratio: 4 / 4.6; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; border-radius: 18px 18px 0 0; cursor: pointer;" onclick="window.location.href='product.html?handle=${p.handle}'">
               ${badgeHtml}
-              <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+              <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>
 
             <div class="col-prod-info" style="padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1;">
               <span style="font-size: 0.72rem; font-weight: 700; color: #8C827A; text-transform: uppercase; margin-bottom: 4px;">${p.category_name}</span>
-              <a href="product?handle=${p.handle}" style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: #171513; text-decoration: none; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px;">
+              <a href="product.html?handle=${p.handle}" style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: #171513; text-decoration: none; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px;">
                 ${p.title}
               </a>
               <div class="col-prod-price-box" style="display: flex; align-items: baseline; gap: 8px; margin-top: auto;">
@@ -131,15 +131,15 @@
       }
 
       return `
-        <div class="product-card" data-id="${p.id}" onclick="window.location.href='product?handle=${p.handle}'" style="cursor: pointer;">
+        <div class="product-card" data-id="${p.id}" onclick="window.location.href='product.html?handle=${p.handle}'" style="cursor: pointer;">
           <div class="product-card-inner">
             <div class="product-image-box" style="position: relative; overflow: hidden; background: #F8F6F2; border-radius: 18px; border: 1px solid #ECE7DE; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 4.6;">
               ${badgeHtml}
-              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>
             <div class="product-info" style="padding: 12px 4px 4px; display: flex; flex-direction: column;">
               <h3 class="product-name" style="font-size: 0.9rem; font-weight: 700; color: #171513; line-height: 1.35; margin: 0 0 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-                <a href="product?handle=${p.handle}" style="color: inherit; text-decoration: none;">${p.title}</a>
+                <a href="product.html?handle=${p.handle}" style="color: inherit; text-decoration: none;">${p.title}</a>
               </h3>
               <div class="product-price" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #171513; margin-top: auto;">${p.price_formatted}</div>
             </div>

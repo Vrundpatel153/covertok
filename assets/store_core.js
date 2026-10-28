@@ -389,8 +389,8 @@
         </div>
         <div class="search-results-list">
           ${filtered.map(p => `
-            <a href="product?handle=${p.handle}" class="search-result-row">
-              <img src="${p.primary_image}" alt="${p.title}" class="search-result-img">
+            <a href="product.html?handle=${p.handle}" class="search-result-row">
+              <img src="${p.primary_image}" alt="${p.title}" class="search-result-img" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
               <div class="search-result-info">
                 <div class="search-result-title">${p.title}</div>
                 <div class="search-result-meta">${p.category_name} · ${p.colors && p.colors.length > 1 ? `${p.colors.length} Colors` : '1 Color'}</div>

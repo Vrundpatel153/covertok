@@ -610,7 +610,7 @@
       : '';
 
     card.innerHTML = `
-      <div class="card-media-stage" onclick="window.location.href='product?handle=${product.handle}'">
+      <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'">
         ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
         <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -618,12 +618,12 @@
           </svg>
         </button>
         <div class="card-img-wrap">
-          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
+          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
         </div>
       </div>
 
       <div class="card-body-wrap">
-        <a href="product?handle=${product.handle}" class="card-product-title" title="${product.title}">
+        <a href="product.html?handle=${product.handle}" class="card-product-title" title="${product.title}">
           ${product.title}
         </a>
 
@@ -769,7 +769,7 @@
     titleEl.textContent = product.title;
     brandTag.textContent = `${product.category_name.toUpperCase()} · COVERTOK`;
     priceNow.textContent = product.price_formatted;
-    fullLink.href = `product?handle=${product.handle}`;
+    fullLink.href = `product.html?handle=${product.handle}`;
 
     if (product.original_price > product.price) {
       priceWas.textContent = product.original_price_formatted;

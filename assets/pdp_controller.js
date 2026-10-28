@@ -29,16 +29,18 @@
       currentProduct = resolvePDPProduct();
     }
 
-    // Ensure address bar reflects clean product URL (/product?handle=<handle> or /products/<handle>)
+    // Ensure address bar reflects clean product URL (product.html?handle=<handle> or /products/<handle>)
     if (currentProduct && currentProduct.handle && window.history && window.history.replaceState) {
       try {
         const isPathStyle = window.location.pathname.startsWith('/products/');
         const cleanUrl = isPathStyle 
           ? `/products/${currentProduct.handle}`
-          : `/product?handle=${currentProduct.handle}`;
+          : `product.html?handle=${currentProduct.handle}`;
         window.history.replaceState({ id: currentProduct.id, handle: currentProduct.handle }, '', cleanUrl);
       } catch(e) {}
     }
+
+    setupImageFallbacks();
 
     renderTopProductSwitcher();
     loadProductData(currentProduct);
@@ -47,6 +49,24 @@
     setupStickyBar();
     renderRelatedProducts();
     setupComboSync(currentProduct);
+  }
+
+  // Universal Global Image Error Fallback Handler
+  function setupImageFallbacks() {
+    window.addEventListener('error', function(e) {
+      if (e.target && e.target.tagName === 'IMG') {
+        const img = e.target;
+        const currentSrc = img.getAttribute('src') || '';
+        if (img.dataset.failedOnce) return;
+        img.dataset.failedOnce = 'true';
+
+        if (currentSrc.endsWith('.webp')) {
+          img.src = currentSrc.replace(/\.webp$/, '.png');
+        } else if (!currentSrc.startsWith('/') && !currentSrc.startsWith('http')) {
+          img.src = '/' + currentSrc;
+        }
+      }
+    }, true);
   }
 
   // Universal Product Resolver supporting paths, handles, slugs, and numeric IDs
@@ -132,7 +152,7 @@
           const isPathStyle = window.location.pathname.startsWith('/products/');
           const cleanUrl = isPathStyle 
             ? `/products/${targetProd.handle}`
-            : `/product?handle=${targetProd.handle}`;
+            : `product.html?handle=${targetProd.handle}`;
           window.history.pushState({ id: targetProd.id, handle: targetProd.handle }, '', cleanUrl);
           document.title = `${targetProd.title} | Covertok`;
 
@@ -289,12 +309,20 @@
     recalculatePrice();
   }
 
-  // Update Main Image Window with smooth transition
+  // Update Main Image Window with smooth transition & automatic fallback
   function updateMainImage(src, isInitial = false) {
     const mainImg = document.getElementById('pdpMainImg');
     const stickyThumb = document.getElementById('stickyThumb');
 
     if (mainImg) {
+      mainImg.onerror = function() {
+        if (this.src.endsWith('.webp')) {
+          this.src = this.src.replace(/\.webp$/, '.png');
+        } else if (currentProduct && currentProduct.primary_image && this.src !== currentProduct.primary_image) {
+          this.src = currentProduct.primary_image;
+        }
+      };
+
       if (isInitial) {
         mainImg.src = src;
         mainImg.style.opacity = '1';
@@ -308,6 +336,9 @@
     }
 
     if (stickyThumb) {
+      stickyThumb.onerror = function() {
+        if (this.src.endsWith('.webp')) this.src = this.src.replace(/\.webp$/, '.png');
+      };
       stickyThumb.src = src;
       stickyThumb.style.opacity = '1';
     }
@@ -381,7 +412,7 @@
     // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-        <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy">
+        <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
       </button>
     `).join('');
 
@@ -1403,12 +1434,12 @@
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
               </svg>
             </button>
-            <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product?handle=${p.handle}'">
-              <img src="${initialImg}" alt="${p.title}" class="card-main-img" loading="lazy">
+            <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product.html?handle=${p.handle}'">
+              <img src="${initialImg}" alt="${p.title}" class="card-main-img" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>
           </div>
           <div class="card-body-wrap">
-            <a href="product?handle=${p.handle}" class="card-product-title" title="${p.title}">
+            <a href="product.html?handle=${p.handle}" class="card-product-title" title="${p.title}">
               ${p.title}
             </a>
             <div class="card-price-row">
@@ -1473,6 +1504,7 @@
     }
 
     const actionAddBtn = document.getElementById('pdpActionAddToComboBtn');
+    const topAddBtn = document.getElementById('pdpTopAddToComboBtn');
 
     function updateComboPdpUI() {
       const slots = getSlots();
