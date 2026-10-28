@@ -1768,77 +1768,52 @@ html, body {
   text-decoration: line-through;
 }
 
-/* 7. PRODUCT DETAILS & TECHNICAL SPECIFICATIONS (2-COLUMN CARD) */
+/* 6. TECHNICAL SPECIFICATIONS & BUILD */
 .pdp-details-specs-section {
-  padding: 16px 0 28px;
+  padding: 24px 0 28px;
 }
 
 .pdp-details-specs-card {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 14px;
-  padding: 36px 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  box-shadow: var(--pdp-shadow-sm);
+  border: 1px solid #E4E4E7;
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
-.pdp-specs-col-left {
-  border-right: 1px solid #E2E8F0;
-  padding-right: 48px;
+.pdp-specs-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F4F4F5;
 }
 
-.pdp-subheading {
-  font-family: var(--pdp-font-head);
-  font-size: 1.4rem;
+.pdp-specs-eyebrow {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #71717A;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.pdp-specs-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif);
+  font-size: 1.35rem;
   font-weight: 800;
   color: #0A0A0A;
-  margin: 0 0 14px 0;
+  margin: 0 0 4px 0;
 }
 
-.pdp-details-paragraph {
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: #5A554E;
-  margin: 0 0 24px 0;
-}
-
-.pdp-feature-callouts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.pdp-feature-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.pdp-feature-circle-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #FDF3E7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.pdp-feature-title {
-  font-family: var(--pdp-font-head);
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #0A0A0A;
-  margin: 0 0 2px 0;
-}
-
-.pdp-feature-sub {
-  font-size: 0.825rem;
-  color: #64748B;
+.pdp-specs-subtext {
+  font-size: 0.85rem;
+  color: #71717A;
   margin: 0;
+}
+
+.pdp-specs-table-wrap {
+  overflow-x: auto;
 }
 
 .pdp-specs-table {
@@ -1847,7 +1822,7 @@ html, body {
 }
 
 .pdp-specs-table tr {
-  border-bottom: 1px solid #F1EFEA;
+  border-bottom: 1px solid #F4F4F5;
 }
 
 .pdp-specs-table tr:last-child {
@@ -1855,91 +1830,30 @@ html, body {
 }
 
 .specs-label {
-  padding: 11px 0;
-  font-size: 0.85rem;
+  padding: 13px 0;
+  font-size: 0.84rem;
   font-weight: 700;
   color: #0A0A0A;
-  width: 34%;
-  vertical-align: top;
+  width: 30%;
+  vertical-align: middle;
 }
 
 .specs-value {
-  padding: 11px 0;
-  font-size: 0.85rem;
-  color: #475569;
-  line-height: 1.45;
-  vertical-align: top;
+  padding: 13px 0;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #52525B;
+  line-height: 1.5;
+  vertical-align: middle;
 }
 
-/* 8. ACCORDION CARDS */
-.pdp-accordions-section {
-  padding: 12px 0 28px;
-}
-
-.pdp-accordions-cards-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.pdp-accordion-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: border-color 0.2s ease;
-  box-shadow: var(--pdp-shadow-sm);
-}
-
-.pdp-accordion-card:hover {
-  border-color: #0A0A0A;
-}
-
-.pdp-accordion-trigger {
-  width: 100%;
-  padding: 18px 24px;
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  text-align: left;
-  font-family: var(--pdp-font-head);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #0A0A0A;
-}
-
-.pdp-accordion-plus {
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #64748B;
-  transition: transform 0.2s ease;
-  line-height: 1;
-}
-
-.pdp-accordion-card.open .pdp-accordion-plus {
-  transform: rotate(45deg);
-}
-
-.pdp-accordion-panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 24px;
-}
-
-.pdp-accordion-card.open .pdp-accordion-panel {
-  max-height: 250px;
-  padding: 0 24px 20px;
-}
-
-.pdp-accordion-panel p {
-  margin: 0;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: #5A554E;
+@media (max-width: 640px) {
+  .pdp-details-specs-card {
+    padding: 24px 20px;
+  }
+  .specs-label {
+    width: 40%;
+  }
 }
 
 /* 9. CUSTOMER REVIEWS SECTION */

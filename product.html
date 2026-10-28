@@ -14,7 +14,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=20261028_luxury_v2">
   <link rel="stylesheet" href="catalog.css?v=20261028_liquid_v1">
-  <link rel="stylesheet" href="pdp.css?v=20261028_desc_v4">
+  <link rel="stylesheet" href="pdp.css?v=20261028_specs_v5">
   <link rel="stylesheet" href="microinteractions.css?v=20261028_liquid_v1">
 
   <!-- Products Catalog Script -->
@@ -527,9 +527,27 @@
     </div>
   </main>
 
+  <!-- 6. TECHNICAL SPECIFICATIONS & BUILD -->
+  <section class="pdp-details-specs-section" id="pdpSpecsSection">
+    <div class="pdp-container">
+      <div class="pdp-details-specs-card">
+        <div class="pdp-specs-header">
+          <span class="pdp-specs-eyebrow">ENGINEERING &amp; BUILD</span>
+          <h2 class="pdp-specs-title">Technical Specifications</h2>
+          <p class="pdp-specs-subtext">Precision materials, magnetic alignment architecture, and military drop standards.</p>
+        </div>
+        <div class="pdp-specs-table-wrap">
+          <table class="pdp-specs-table">
+            <tbody id="pdpSpecsTableBody">
+              <!-- Dynamically populated from product.specs by pdp_controller.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-  <!-- 7. COMPLETE YOUR SETUP (FREQUENTLY BOUGHT TOGETHER) -->
+  <!-- 7. FREQUENTLY BOUGHT TOGETHER (COMPLETE YOUR SETUP) -->
   <section class="pdp-bundle-section" id="bundleSection">
     <div class="pdp-container">
       <div class="pdp-bundle-header">
@@ -627,81 +645,12 @@
     </div>
   </section>
 
-  <!-- 7. PRODUCT DETAILS & TECHNICAL SPECIFICATIONS (2-COLUMN CARD) -->
-  <section class="pdp-details-specs-section">
-    <div class="pdp-container">
-      <div class="pdp-details-specs-card">
-        <!-- Left: Product Details & Features -->
-        <div class="pdp-specs-col-left">
-          <h3 class="pdp-subheading">Product Details</h3>
-          <p class="pdp-details-paragraph" id="pdpDetailsParagraph">
-            Experience premium engineering and precision fit with Covertok.
-          </p>
-
-          <div class="pdp-feature-callouts-list" id="pdpFeatureCalloutsList">
-            <!-- Dynamically populated from product.features by pdp_controller.js -->
-          </div>
-        </div>
-
-        <!-- Right: Technical Specifications -->
-        <div class="pdp-specs-col-right">
-          <h3 class="pdp-subheading">Technical Specifications</h3>
-          <table class="pdp-specs-table">
-            <tbody id="pdpSpecsTableBody">
-              <!-- Dynamically populated from product.specs by pdp_controller.js -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. ACCORDION CARDS (Materials & Care, Delivery & Returns, Warranty) -->
-  <section class="pdp-accordions-section">
-    <div class="pdp-container">
-      <div class="pdp-accordions-cards-wrap">
-        <!-- Accordion 1 -->
-        <div class="pdp-accordion-card">
-          <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-            <span class="pdp-accordion-trigger-text">Materials & Care</span>
-            <span class="pdp-accordion-plus">+</span>
-          </button>
-          <div class="pdp-accordion-panel">
-            <p>Constructed with flame-retardant ABS and smooth matte finish. Clean with a dry microfiber cloth. Avoid exposure to high moisture or extreme heat sources.</p>
-          </div>
-        </div>
-
-        <!-- Accordion 2 -->
-        <div class="pdp-accordion-card">
-          <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-            <span class="pdp-accordion-trigger-text">Delivery & Returns</span>
-            <span class="pdp-accordion-plus">+</span>
-          </button>
-          <div class="pdp-accordion-panel">
-            <p>Orders dispatch within 1–2 business days via express air courier across India. Cash on Delivery is available at checkout. 30-Day Hassle-Free Exchange guarantee on all orders.</p>
-          </div>
-        </div>
-
-        <!-- Accordion 3 -->
-        <div class="pdp-accordion-card">
-          <button type="button" class="pdp-accordion-trigger" aria-expanded="false">
-            <span class="pdp-accordion-trigger-text">Warranty</span>
-            <span class="pdp-accordion-plus">+</span>
-          </button>
-          <div class="pdp-accordion-panel">
-            <p>Covered by our 6-Month Quality &amp; Authenticity Guarantee against manufacturing defects or fit issues. Reach our WhatsApp support anytime for rapid assistance.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8.5. CURATED RELATED PRODUCTS / COMPLETE YOUR SETUP -->
+  <!-- 8. CURATED RELATED PRODUCTS / MORE TO EXPLORE -->
   <section class="pdp-related-section" id="completeYourSetupSection">
     <div class="pdp-container">
       <div class="pdp-related-header">
         <span class="pdp-related-eyebrow">COVERTOK CURATED COLLECTION</span>
-        <h2 class="pdp-related-title">Complete Your Setup</h2>
+        <h2 class="pdp-related-title">More To Explore</h2>
         <p class="pdp-related-subtext">Pair your device with complementary charging essentials and protective accessories.</p>
       </div>
       <div class="catalog-products-grid" id="pdpRelatedGrid"></div>
@@ -1013,7 +962,7 @@
   <script src="assets/store_core.js?v=20261028_contrast_v2"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
-  <script src="assets/pdp_controller.js?v=20261028_clean_v4"></script>
+  <script src="assets/pdp_controller.js?v=20261028_specs_v5"></script>
   <script src="assets/community_reviews_controller.js"></script>
 
   <script>

@@ -1171,46 +1171,7 @@
   function renderDescriptions(product) {
     if (!product) return;
 
-    // 1. Product Details Paragraph
-    const detailsParagraph = document.getElementById('pdpDetailsParagraph');
-    if (detailsParagraph) {
-      detailsParagraph.textContent = product.description || `The Covertok ${product.title} is crafted with precision-engineered materials for uncompromising protection and daily luxury.`;
-    }
-
-    // 2. Feature Callouts List (3-4 Features with Icons)
-    const featList = document.getElementById('pdpFeatureCalloutsList');
-    if (featList && product.features && product.features.length) {
-      const getIconSvg = (icon) => {
-        if (icon === 'magnet') {
-          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a6 6 0 0 0 12 0V3"></path><line x1="4" y1="3" x2="8" y2="3"></line><line x1="16" y1="3" x2="20" y2="3"></line><line x1="4" y1="8" x2="8" y2="8"></line><line x1="16" y1="8" x2="20" y2="8"></line></svg>`;
-        }
-        if (icon === 'feather') {
-          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>`;
-        }
-        if (icon === 'sparkles') {
-          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>`;
-        }
-        if (icon === 'battery') {
-          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect><line x1="22" y1="11" x2="22" y2="13"></line></svg>`;
-        }
-        if (icon === 'refresh') {
-          return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>`;
-        }
-        return `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C28248" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`;
-      };
-
-      featList.innerHTML = product.features.map(f => `
-        <div class="pdp-feature-item">
-          <div class="pdp-feature-circle-icon">
-            ${getIconSvg(f.icon)}
-          </div>
-          <div class="pdp-feature-text">
-            <h4 class="pdp-feature-title">${f.title}</h4>
-            <p class="pdp-feature-sub">${f.subtitle}</p>
-          </div>
-        </div>
-      `).join('');
-    }
+    // Technical Specifications Table (Directly Below Main Hero)
 
     // 3. Technical Specifications Table
     const specsTable = document.getElementById('pdpSpecsTableBody');
