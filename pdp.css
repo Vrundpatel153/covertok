@@ -2613,28 +2613,28 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   bottom: 88px;
 }
 
-/* 12. DYNAMIC ISLAND FLOATING MIDDLE PILL (SMALL CENTERED POPUP) */
+/* 12. DYNAMIC ISLAND FLOATING MIDDLE PILL (STREAMLINED & OPTIMIZED) */
 .pdp-sticky-bar {
   position: fixed !important;
   bottom: 24px !important;
   left: 50% !important;
   right: auto !important;
   width: auto !important;
-  max-width: min(92vw, 680px) !important;
+  max-width: min(94vw, 440px) !important;
   z-index: 9980 !important;
   background: rgba(12, 13, 16, 0.94) !important;
   backdrop-filter: blur(28px) saturate(190%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
   border-radius: 999px !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), 0 4px 14px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
-  padding: 7px 12px 7px 8px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 4px 14px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  padding: 6px 7px 6px 18px !important;
   display: flex !important;
   align-items: center !important;
   transform: translateX(-50%) translateY(140%) scale(0.95) !important;
   opacity: 0 !important;
   pointer-events: none !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.24s ease !important;
   box-sizing: border-box !important;
 }
 
@@ -2653,67 +2653,18 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   box-sizing: border-box;
 }
 
-.pdp-sticky-left {
+.pdp-sticky-price-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
-  overflow: hidden;
-  max-width: 320px;
-}
-
-.pdp-sticky-thumb {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
-  background: #18191E;
-  object-fit: cover;
   flex-shrink: 0;
-  border: 1.5px solid rgba(255, 255, 255, 0.22);
-  padding: 2px;
-}
-
-.pdp-sticky-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  overflow: hidden;
-}
-
-.pdp-sticky-title {
-  font-family: var(--pdp-font-head, -apple-system, sans-serif);
-  font-size: 0.86rem;
-  font-weight: 700;
-  color: #FFFFFF !important;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  letter-spacing: -0.01em;
-}
-
-.pdp-sticky-price-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .pdp-sticky-price {
   font-family: var(--pdp-font-head, -apple-system, sans-serif);
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   font-weight: 800;
-  color: #FBBF24 !important;
-}
-
-.pdp-sticky-tag {
-  font-family: var(--pdp-font-head, -apple-system, sans-serif);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #34D399 !important;
-  background: rgba(16, 185, 129, 0.16) !important;
-  border: 1px solid rgba(16, 185, 129, 0.35) !important;
-  padding: 2px 7px;
-  border-radius: 999px;
-  letter-spacing: 0.04em;
+  color: #FFFFFF !important;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
@@ -2734,7 +2685,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  height: 40px;
+  height: 38px;
   padding: 0 16px;
   border-radius: 999px;
   cursor: pointer;
@@ -2751,9 +2702,9 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .pdp-sticky-btn-cart:hover {
-  background: rgba(255, 255, 255, 0.24) !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  transform: translateY(-1px) scale(1.02);
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.38) !important;
+  transform: translateY(-1px);
   color: #FFFFFF !important;
 }
 
@@ -2761,7 +2712,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   background: #FFFFFF !important;
   color: #0A0A0A !important;
   border: 1.5px solid #FFFFFF !important;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.22) !important;
+}
+
+.pdp-sticky-btn-buy:hover {
+  background: #F4F4F5 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.32) !important;
 }
 
 .pdp-sticky-btn-buy:hover {
@@ -3370,7 +3327,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     transform: translateX(-50%) translateY(140%) scale(0.95) !important;
     width: auto !important;
     max-width: 95vw !important;
-    padding: 6px 8px 6px 6px !important;
+    padding: 5px 6px 5px 14px !important;
     border-radius: 999px !important;
   }
 
@@ -3379,32 +3336,19 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   .pdp-sticky-container {
-    gap: 8px !important;
+    gap: 12px !important;
   }
 
-  .pdp-sticky-left {
-    max-width: 140px !important;
-    gap: 8px !important;
+  .pdp-sticky-price-wrap {
+    display: flex !important;
+    align-items: center !important;
     flex-shrink: 0 !important;
   }
 
-  .pdp-sticky-thumb {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    border-radius: 50% !important;
-  }
-
-  .pdp-sticky-title {
-    font-size: 0.74rem !important;
-  }
-
   .pdp-sticky-price {
-    font-size: 0.85rem !important;
-  }
-
-  .pdp-sticky-tag {
-    display: none !important;
+    font-size: 1.05rem !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
   }
 
   .pdp-sticky-actions {
