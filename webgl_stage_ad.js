@@ -189,7 +189,8 @@
     };
 
     // 3 Models Configurations
-    const vTag = '?v=' + Date.now();
+    const isFileProtocol = typeof window !== 'undefined' && window.location.protocol === 'file:';
+    const vTag = isFileProtocol ? '' : ('?v=' + Date.now());
     const modelsData = [
       {
         id: 'blue',

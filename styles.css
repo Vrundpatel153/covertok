@@ -5737,7 +5737,19 @@ a.footer-contact-main:hover {
   background: #D8D4CC;
 }
 
+.fl-bottom-card[data-feature="bezel"] .fl-card-media {
+  background: #D8D4CC url('assets/fl_card_bezel_clean.png') no-repeat center / cover;
+}
+.fl-bottom-card[data-feature="profile"] .fl-card-media {
+  background: #D8D4CC url('assets/fl_card_profile_clean.png') no-repeat center / cover;
+}
+.fl-bottom-card[data-feature="bumper"] .fl-card-media {
+  background: #D8D4CC url('assets/fl_card_bumper_clean.png') no-repeat center / cover;
+}
 .fl-media-img {
+  font-size: 0 !important;
+  color: transparent !important;
+  text-indent: -9999px !important;
   width: 100%;
   height: 100%;
   object-fit: cover;
