@@ -43,38 +43,36 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #7928CA;
-  padding: 4px 14px;
-  background: linear-gradient(135deg, rgba(121, 40, 202, 0.08), rgba(255, 0, 122, 0.08));
-  border: 1px solid rgba(121, 40, 202, 0.25);
-  border-radius: 999px;
+  color: #71717A;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
   width: fit-content;
 }
 
 .drops-headline {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(2rem, 3.6vw, 3.2rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-family: var(--font-heading, 'Manrope', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
   color: #0A0A0A;
   margin: 0;
 }
 
 .drops-accent-word {
-  background: linear-gradient(135deg, #FF007A 0%, #7928CA 60%, #4338CA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #7928CA;
-  font-weight: 900;
-  display: inline-block;
-  letter-spacing: -0.01em;
-  filter: drop-shadow(0 4px 16px rgba(121, 40, 202, 0.3));
+  color: inherit;
+  background: none;
+  -webkit-text-fill-color: initial;
+  filter: none;
+  font-weight: inherit;
+  display: inline;
 }
 
 .drops-subtitle {
@@ -205,25 +203,21 @@
 .drop-luxury-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-family: var(--font-heading, 'Manrope', sans-serif);
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  justify-content: center;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 3.5px 9px;
+  padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(14, 165, 233, 0.28);
-  color: #0F172A;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #0A0A0A;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   white-space: nowrap;
-}
-
-.drop-luxury-badge svg {
-  stroke: #0284C7;
-  flex-shrink: 0;
 }
 
 .drop-wishlist-btn {

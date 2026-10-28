@@ -349,7 +349,7 @@ html, body {
 /* 4. MAIN PRODUCT HERO GRID */
 .pdp-main-section {
   position: relative;
-  padding: 20px 0 60px;
+  padding: 16px 0 24px;
 }
 
 .pdp-container {
@@ -1476,20 +1476,20 @@ html, body {
 
 /* 6. PRODUCT OVERVIEW & DESCRIPTION (Luxury Card With Read More / See Less Toggle) */
 .pdp-description-section {
-  padding: 16px 0 24px;
+  padding: 8px 0 24px;
 }
 
 .pdp-description-card {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  border: 1px solid #EAE7E0;
   border-radius: 14px;
-  padding: 30px 36px;
-  box-shadow: var(--pdp-shadow-sm);
+  padding: 22px 28px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
   transition: border-color 0.2s ease;
 }
 
 .pdp-description-card:hover {
-  border-color: #FF5500;
+  border-color: #0A0A0A;
 }
 
 .pdp-description-header {
@@ -3494,60 +3494,64 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 /* COVERTOK AUTHENTIC LIVE TRUST BADGES & SOCIAL PROOF                       */
 /* ========================================================================= */
 .covertok-live-trust-badges {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin: 20px 0 14px;
-  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 16px 0 12px;
+  padding: 12px 14px;
   background: #FAF8F5;
   border: 1px solid #EFEAE1;
-  border-radius: 14px;
-  flex-wrap: wrap;
+  border-radius: 12px;
 }
 
 .covertok-trust-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex: 1;
-  min-width: 130px;
+  gap: 8px;
+  min-width: 0;
 }
 
 .covertok-trust-icon {
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
   border: 1px solid #E5DFD3;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  color: #0A0A0A;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.covertok-trust-icon img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+.covertok-trust-icon svg {
+  stroke: #0A0A0A;
+  flex-shrink: 0;
 }
 
 .covertok-trust-item span {
   font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.815rem;
+  font-size: 0.74rem;
   color: #171513;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .covertok-live-trust-badges {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 
 /* Social Proof Banner */
 .covertok-social-proof {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 0.825rem;
-  margin: 10px 0 16px;
+  gap: 12px;
+  font-size: 0.815rem;
+  margin: 8px 0 12px;
   flex-wrap: wrap;
 }
 

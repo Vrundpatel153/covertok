@@ -5385,12 +5385,11 @@ a.footer-contact-main:hover {
 }
 
 .fl-headline-accent {
-  background: linear-gradient(135deg, #00F5D4 0%, #0072FF 50%, #7928CA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #0072FF;
-  display: block;
-  filter: drop-shadow(0 4px 16px rgba(0, 114, 255, 0.28));
+  color: inherit;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: inline;
+  filter: none;
 }
 
 .fl-subtext {
@@ -5792,12 +5791,11 @@ a.footer-contact-main:hover {
 }
 
 .combo-title-gold {
-  background: linear-gradient(135deg, #FFB800 0%, #FF5500 50%, #FF007A 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #FF5500;
-  font-weight: 900;
-  filter: drop-shadow(0 4px 18px rgba(255, 85, 0, 0.45));
+  color: #FFFFFF;
+  background: none;
+  -webkit-text-fill-color: #FFFFFF;
+  font-weight: 800;
+  filter: none;
 }
 
 .combo-subtitle {
@@ -6793,23 +6791,23 @@ a.footer-contact-main:hover {
 }
 
 .bento-main-heading {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.4rem, 3.8vw, 4rem);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
+  font-family: var(--font-heading, 'Manrope', 'Plus Jakarta Sans', sans-serif);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 3.6vw, 3.6rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
   color: #0A0A0A;
   margin: 0 0 16px 0;
   text-transform: none;
 }
 
 .bento-heading-accent {
-  background: linear-gradient(135deg, #FF007A 0%, #FF5500 50%, #FFAE00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #FF5500;
-  display: inline-block;
-  filter: drop-shadow(0 4px 16px rgba(255, 0, 122, 0.28));
+  color: #0A0A0A;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: inline;
+  filter: none;
+  font-weight: inherit;
 }
 
 .bento-subtitle {
@@ -9237,11 +9235,10 @@ a.footer-contact-main:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 12px;
-  padding: 4px 16px;
-  background: linear-gradient(135deg, rgba(255, 0, 122, 0.08), rgba(255, 85, 0, 0.08));
-  border: 1px solid rgba(255, 85, 0, 0.28);
-  border-radius: 999px;
+  margin-bottom: 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
   width: fit-content;
 }
 
@@ -9250,14 +9247,14 @@ a.footer-contact-main:hover {
 }
 
 .bestseller-eyebrow-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  background: linear-gradient(135deg, #FF007A 0%, #FF5500 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #71717A;
   text-transform: uppercase;
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 .bestseller-header-center {
@@ -9268,10 +9265,10 @@ a.footer-contact-main:hover {
 }
 
 .bestseller-main-title {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
-  font-weight: 900;
-  letter-spacing: -0.03em;
+  font-family: var(--font-heading, 'Manrope', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
   color: #0A0A0A;
   margin: 0;
   text-transform: uppercase;
@@ -9279,14 +9276,14 @@ a.footer-contact-main:hover {
 }
 
 .bestseller-title-accent {
-  background: linear-gradient(135deg, #FF007A 0%, #FF5500 50%, #FFAE00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  margin-left: 8px;
-  filter: drop-shadow(0 4px 16px rgba(255, 0, 122, 0.3));
+  color: #0A0A0A;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: inline;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  margin-left: 0;
+  filter: none;
 }
 
 .bestseller-subtitle {
@@ -10280,35 +10277,35 @@ a.footer-contact-main:hover {
 }
 
 .popular-eyebrow-text {
-  font-family: 'Outfit', sans-serif;
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  background: linear-gradient(135deg, #00F5D4 0%, #7928CA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #71717A;
+  background: none;
+  -webkit-text-fill-color: initial;
   text-transform: uppercase;
 }
 
 .popular-main-title {
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
-  font-weight: 900;
+  font-family: var(--font-heading, 'Manrope', 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 800;
   color: #0A0A0A;
   line-height: 1.1;
   margin: 0;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
 }
 
 .popular-title-accent {
-  background: linear-gradient(135deg, #00F5D4 0%, #7928CA 55%, #FF007A 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #7928CA;
-  display: inline-block;
-  letter-spacing: -0.01em;
-  filter: drop-shadow(0 4px 16px rgba(121, 40, 202, 0.3));
+  color: #0A0A0A;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: inline;
+  letter-spacing: inherit;
+  filter: none;
+  font-weight: inherit;
 }
 
 .popular-subtitle {
@@ -11208,11 +11205,10 @@ a.footer-contact-main:hover {
 }
 
 .story-hero-title .story-title-accent {
-  color: #E5C378;
-  background: linear-gradient(135deg, #FDE3B8 0%, #D8A059 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.8));
+  color: #FFFFFF;
+  background: none;
+  -webkit-text-fill-color: initial;
+  filter: none;
 }
 
 /* Narrative Body Text */
