@@ -3309,10 +3309,10 @@ img {
    Matching Official Covertok Luxury Brand Aesthetic
    ========================================================================== */
 .site-footer {
-  background-color: #0B0A09 !important;
+  background-color: #0A0A0A !important;
   color: #EDE8DF !important;
-  padding: 56px 0 32px !important;
-  border-top: 1px solid rgba(197, 165, 102, 0.18) !important;
+  padding: 64px 0 36px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
   position: relative;
   overflow: hidden;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -3340,169 +3340,12 @@ img {
   z-index: 1;
 }
 
-/* 1. TOP HERO WORDMARK (COVERTOK with Masked Phone Cases) */
-.footer-hero-brand-wrap {
-  text-align: center;
-  margin-bottom: 36px;
-}
-
-/* ============================================================
-   CONNECTED FLUID WAVE WORDMARK: COVERTOK LUXURY HERO
-   Continuous, connected sinusoidal wave across all 8 characters
-   ============================================================ */
-.footer-hero-wordmark {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-  user-select: none;
-  margin-bottom: 14px;
-}
-
-/* Ambient connected light beam behind letters */
-.footer-hero-wordmark::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  height: 80px;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse 420px 50px at 50% 50%, rgba(212, 178, 111, 0.16), transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  animation: wordmarkAmbientPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes wordmarkAmbientPulse {
-  0% { opacity: 0.45; transform: translate(-50%, -50%) scaleX(0.9); }
-  100% { opacity: 0.95; transform: translate(-50%, -50%) scaleX(1.1); }
-}
-
-.wordmark-letter {
-  display: inline-block;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-weight: 900;
-  font-size: clamp(3.2rem, 7.8vw, 6.8rem);
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: -0.015em;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-text-stroke: 1.3px rgba(212, 178, 111, 0.55);
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7)) brightness(0.96);
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  will-change: transform, filter, -webkit-text-stroke;
-  /* Connected continuous wave animation */
-  animation: wordmarkConnectedWave 3.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
-              filter 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
-              -webkit-text-stroke 0.28s ease,
-              opacity 0.28s ease;
-}
-
-/* Staggered phase offsets for smooth, continuous connected wave (C -> O -> V -> E -> R -> T -> O -> K) */
-.wordmark-letter:nth-child(1) { animation-delay: 0.00s; }
-.wordmark-letter:nth-child(2) { animation-delay: 0.22s; }
-.wordmark-letter:nth-child(3) { animation-delay: 0.44s; }
-.wordmark-letter:nth-child(4) { animation-delay: 0.66s; }
-.wordmark-letter:nth-child(5) { animation-delay: 0.88s; }
-.wordmark-letter:nth-child(6) { animation-delay: 1.10s; }
-.wordmark-letter:nth-child(7) { animation-delay: 1.32s; }
-.wordmark-letter:nth-child(8) { animation-delay: 1.54s; }
-
-/* Connected Sinusoidal Wave Keyframe: Smooth elevation, glowing specular crest, and seamless landing */
-@keyframes wordmarkConnectedWave {
-  0%, 100% {
-    transform: translateY(0px) scale(1);
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7)) brightness(0.96);
-    -webkit-text-stroke: 1.3px rgba(212, 178, 111, 0.5);
-  }
-  30% {
-    transform: translateY(-11px) scale(1.05);
-    filter: drop-shadow(0 0 18px rgba(212, 178, 111, 0.7)) 
-            drop-shadow(0 8px 20px rgba(212, 178, 111, 0.4)) 
-            brightness(1.24);
-    -webkit-text-stroke: 1.8px rgba(255, 230, 165, 0.95);
-  }
-  60% {
-    transform: translateY(0px) scale(1);
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7)) brightness(0.96);
-    -webkit-text-stroke: 1.3px rgba(212, 178, 111, 0.5);
-  }
-}
-
-/* Interactive Cursor Hover: Instant magnetic elevation with radiant golden halo */
-.wordmark-letter:hover {
-  transform: translateY(-15px) scale(1.1) !important;
-  filter: drop-shadow(0 0 24px rgba(212, 178, 111, 0.95)) 
-          drop-shadow(0 10px 28px rgba(212, 178, 111, 0.6)) 
-          brightness(1.32) !important;
-  -webkit-text-stroke: 2px rgba(255, 235, 175, 1) !important;
-  z-index: 10;
-  animation-play-state: paused;
-}
-
-/* When the wordmark is hovered, gently soften neighboring letters */
-.footer-hero-wordmark:hover .wordmark-letter:not(:hover) {
-  opacity: 0.82;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.6)) brightness(0.92);
-}
-
-.wordmark-letter.letter-c  { background-image: url('assets/brand_iphone15_pro.webp'); background-position: 35% 22%; background-size: 155%; }
-.wordmark-letter.letter-o1 { background-image: url('assets/brand_iphone15.webp'); background-position: 42% 24%; background-size: 165%; }
-.wordmark-letter.letter-v  { background-image: url('assets/deck_card_5.webp'); background-position: 86% 18%; background-size: 175%; }
-.wordmark-letter.letter-e  { background-image: url('assets/products/9982201299242/1_51142359679274.webp'); background-position: 50% 35%; background-size: 155%; }
-.wordmark-letter.letter-r  { background-image: url('assets/brand_iphone16_pro.webp'); background-position: 42% 68%; background-size: 165%; }
-.wordmark-letter.letter-t  { background-image: url('assets/brand_iphone16.webp'); background-position: 42% 24%; background-size: 165%; }
-.wordmark-letter.letter-o2 { background-image: url('assets/products/9875589628202/1_49939894698282.webp'); background-position: 50% 40%; background-size: 155%; }
-.wordmark-letter.letter-k  { background-image: url('assets/brand_iphone16_promax.webp'); background-position: 28% 22%; background-size: 165%; }
-
-/* Subtitle with Flanking Gold Gradient Dividers */
-.footer-hero-subtag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  max-width: 680px;
-  margin: 0 auto;
-}
-
-.subtag-line {
-  flex: 1;
-  height: 1px;
-}
-
-.footer-hero-subtag .subtag-line:first-child {
-  background: linear-gradient(90deg, transparent, rgba(197, 165, 102, 0.5));
-}
-
-.footer-hero-subtag .subtag-line:last-child {
-  background: linear-gradient(90deg, rgba(197, 165, 102, 0.5), transparent);
-}
-
-.subtag-text {
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  color: #A1A1AA;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
+/* 1. TOP HERO WORDMARK - REMOVED PER USER PREFERENCE */
+.footer-hero-brand-wrap,
+.footer-hero-wordmark,
+.footer-hero-subtag,
 .footer-divider-rule {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 36px 0 44px;
+  display: none !important;
 }
 
 /* 2. MAIN 4-COLUMN CONTENT GRID */
@@ -3953,44 +3796,7 @@ a.footer-contact-main:hover {
     padding: 40px 0 calc(96px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  /* 1. Wordmark on Mobile: Perfectly proportioned, no clipping or wrapping */
-  .footer-hero-wordmark {
-    letter-spacing: -0.015em !important;
-    gap: 2px !important;
-    margin-bottom: 12px !important;
-    width: 100% !important;
-    justify-content: center !important;
-  }
 
-  .wordmark-letter {
-    font-size: clamp(1.85rem, 10.2vw, 2.7rem) !important;
-    -webkit-text-stroke: 1px rgba(212, 178, 111, 0.7) !important;
-  }
-
-  .footer-hero-subtag {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    padding: 0 16px !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-  }
-
-  .footer-hero-subtag .subtag-line {
-    display: none !important;
-  }
-
-  .subtag-text {
-    font-size: 0.68rem !important;
-    letter-spacing: 0.16em !important;
-    color: #A1A1AA !important;
-    text-align: center !important;
-  }
-
-  .footer-divider-rule {
-    margin: 28px 0 32px !important;
-  }
 
   /* 2. Structured 2-Column Mobile Content Grid */
   .footer-main-grid {
