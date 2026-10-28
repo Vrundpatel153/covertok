@@ -380,27 +380,41 @@ html, body {
 
 .pdp-gallery-wrap {
   display: flex;
+  flex-direction: column;
   gap: 16px;
-  align-items: flex-start;
+  align-items: center;
   max-width: 520px;
   width: 100%;
+  margin: 0 auto;
 }
 
-/* Vertical Thumbnails Rail */
+/* Photo Gallery Thumbnails Slider Below Window */
 .pdp-vertical-thumbs {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 72px;
-  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 6px;
+  box-sizing: border-box;
+}
+
+.pdp-vertical-thumbs::-webkit-scrollbar {
+  display: none;
 }
 
 .pdp-vthumb {
   width: 72px;
   height: 72px;
+  min-width: 72px;
   border-radius: 14px;
   border: 1.5px solid #EAE5DB;
-  background: #F8F6F2;
+  background: #FFFFFF;
   padding: 3px;
   cursor: pointer;
   overflow: hidden;
@@ -408,13 +422,19 @@ html, body {
   align-items: center;
   justify-content: center;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
 }
 
-.pdp-vthumb:hover,
+.pdp-vthumb:hover {
+  border-color: #171513;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
 .pdp-vthumb.active {
   border-color: #171513;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 2px #171513, 0 4px 14px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .pdp-vthumb img {
@@ -424,13 +444,11 @@ html, body {
   border-radius: 10px;
 }
 
-/* Main Showcase Stage: Compact, Curved Angled Luxury Window */
+/* Main Showcase Stage: Fitted Luxury Window */
 .pdp-main-stage {
-  flex: 1;
   position: relative;
   width: 100%;
-  max-width: 440px;
-  max-height: 460px;
+  max-width: 520px;
   aspect-ratio: 1 / 1;
   background: #F8F6F2;
   border-radius: 24px;
@@ -2859,7 +2877,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
   .pdp-gallery-wrap {
     display: flex !important;
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
     gap: 12px !important;
     width: 100% !important;
     max-width: 100% !important;
