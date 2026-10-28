@@ -93,13 +93,13 @@
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Cool & Colorful Mobile Cover Brand Gradients */
-  --grad-sunset: linear-gradient(135deg, #FF007A 0%, #FF5500 50%, #FFAE00 100%);
-  --grad-neon-pink: linear-gradient(135deg, #FF1361 0%, #FF8A00 100%);
-  --grad-aurora: linear-gradient(135deg, #00F5D4 0%, #7928CA 60%, #FF007A 100%);
-  --grad-electric-blue: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
-  --grad-candy: linear-gradient(135deg, #FA709A 0%, #FEE140 100%);
-  --grad-cyber-violet: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+  /* Quiet Luxury & Studio Neutral Gradients */
+  --grad-sunset: linear-gradient(135deg, #0A0A0A 0%, #27272A 100%);
+  --grad-neon-pink: linear-gradient(135deg, #18181B 0%, #27272A 100%);
+  --grad-aurora: linear-gradient(135deg, #0A0A0A 0%, #18181B 100%);
+  --grad-electric-blue: linear-gradient(135deg, #18181B 0%, #27272A 100%);
+  --grad-candy: linear-gradient(135deg, #0A0A0A 0%, #27272A 100%);
+  --grad-cyber-violet: linear-gradient(135deg, #18181B 0%, #27272A 100%);
 
   /* Geometry & Shadows */
   --container-max-width: 1440px;
@@ -519,15 +519,15 @@ img {
 }
 
 .dropdown-item:hover {
-  background: rgba(255, 85, 0, 0.08);
-  color: var(--color-accent, #FF5500);
+  background: rgba(10, 10, 10, 0.04);
+  color: #0A0A0A;
   padding-left: 24px;
 }
 
 .pill-mini {
   background: #0A0A0A;
   color: #FFFFFF;
-  border: 1px solid rgba(255, 85, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.65rem;
   font-weight: 800;
   padding: 2px 7px;
@@ -781,7 +781,7 @@ img {
   height: 18px;
   padding: 0 4px;
   border-radius: 999px;
-  background: var(--color-accent, #FF5500);
+  background: #0A0A0A;
   color: #FFFFFF;
   font-size: 10px;
   font-weight: 700;
@@ -816,7 +816,7 @@ img {
 
 .mobile-toggle-btn:hover {
   background-color: #0A0A0A;
-  border-color: #FF5500;
+  border-color: #0A0A0A;
   color: #FFFFFF;
   transform: translateY(-2px);
 }

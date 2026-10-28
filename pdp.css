@@ -7,19 +7,19 @@
 :root {
   --pdp-bg: #FFFFFF;
   --pdp-surface: #FFFFFF;
-  --pdp-surface-subtle: #F8FAFC;
-  --pdp-border: #E2E8F0;
-  --pdp-border-hover: #0EA5E9;
+  --pdp-surface-subtle: #FAF9F6;
+  --pdp-border: #E4E4E7;
+  --pdp-border-hover: #0A0A0A;
   --pdp-text: #0A0A0A;
-  --pdp-text-muted: #64748B;
-  --pdp-text-subtle: #64748B;
-  --pdp-accent: #FF5500;
-  --pdp-accent-glow: rgba(255, 85, 0, 0.35);
-  --pdp-blue: #0284C7;
-  --pdp-teal: #0D9488;
-  --pdp-gold: #FF5500;
-  --pdp-gold-light: #0EA5E9;
-  --pdp-gold-bg: rgba(255, 85, 0, 0.08);
+  --pdp-text-muted: #71717A;
+  --pdp-text-subtle: #71717A;
+  --pdp-accent: #0A0A0A;
+  --pdp-accent-glow: rgba(0, 0, 0, 0.06);
+  --pdp-blue: #0A0A0A;
+  --pdp-teal: #0A0A0A;
+  --pdp-gold: #0A0A0A;
+  --pdp-gold-light: #27272A;
+  --pdp-gold-bg: rgba(10, 10, 10, 0.04);
   --pdp-accent-green: #10B981;
   --pdp-accent-green-bg: #ECFDF5;
   --pdp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -74,7 +74,7 @@ html, body {
 }
 
 .pdp-announcement-track span.sep {
-  color: #0EA5E9;
+  color: #A1A1AA;
   opacity: 0.85;
   font-size: 0.75rem;
 }
@@ -843,13 +843,14 @@ html, body {
 }
 
 .pdp-save-badge {
-  background: #0A0A0A;
-  color: #FF5500;
-  border: 1px solid rgba(255, 85, 0, 0.5);
-  font-size: 0.775rem;
+  background: #18181B;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.74rem;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
+  letter-spacing: 0.04em;
+  padding: 3.5px 10px;
+  border-radius: 999px;
 }
 
 .pdp-price-note {
@@ -1653,8 +1654,8 @@ html, body {
 }
 
 .pdp-bundle-card:hover {
-  border-color: #FF5500;
-  box-shadow: var(--pdp-shadow-md);
+  border-color: #0A0A0A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .pdp-bundle-checkbox-label {
@@ -1849,7 +1850,7 @@ html, body {
 }
 
 .pdp-accordion-card:hover {
-  border-color: #FF5500;
+  border-color: #0A0A0A;
 }
 
 .pdp-accordion-trigger {
@@ -2772,25 +2773,25 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .pdp-sticky-btn-cart:hover {
-  background: #1C1E24;
-  border-color: #0EA5E9;
-  transform: translateY(-2px);
+  background: #27272A;
+  border-color: #27272A;
+  transform: translateY(-1px);
   color: #FFFFFF;
 }
 
 .pdp-sticky-btn-buy {
-  background: #FF5500;
+  background: #0A0A0A;
   color: #FFFFFF;
-  border: 1.5px solid #FF5500;
-  box-shadow: 0 4px 16px rgba(255, 85, 0, 0.3);
+  border: 1.5px solid #0A0A0A;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .pdp-sticky-btn-buy:hover {
-  background: #E04B00;
+  background: #27272A;
   color: #FFFFFF;
-  border-color: #E04B00;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.45);
+  border-color: #27272A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
 }
 
 /* 13. RESPONSIVE BREAKPOINTS & MOBILE ARCHITECTURE */
@@ -3556,28 +3557,37 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .covertok-sold-text {
-  color: #E11D48;
-  font-weight: 700;
+  color: #52525B;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+}
+
+.covertok-sold-text svg {
+  stroke: #71717A !important;
 }
 
 .covertok-sold-text span {
-  font-weight: 800;
+  font-weight: 700;
+  color: #18181B;
 }
 
 .covertok-stock-badge {
-  background: #0A0A0A;
-  color: #FFFFFF;
-  padding: 4px 12px;
+  background: #F4F4F5;
+  color: #18181B;
+  padding: 3.5px 11px;
   border-radius: 999px;
-  font-size: 0.775rem;
-  font-weight: 700;
-  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-size: 0.74rem;
+  font-weight: 600;
+  border: 1px solid #E4E4E7;
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+
+.covertok-stock-badge svg {
+  stroke: #71717A !important;
 }
 
 /* Store Features Luxury Strip (Directly Below Hero) */
