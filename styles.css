@@ -9625,40 +9625,14 @@ a.footer-contact-main:hover {
 
 
 
-/* Floating Slider Navigation Arrows */
+/* Floating Slider Navigation Arrows Removed */
 .bestseller-nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  border: 1.5px solid #000000;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #000000;
-  z-index: 12;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: none !important;
 }
 
-.bestseller-nav-btn.prev-btn {
-  left: -22px;
-}
-
-.bestseller-nav-btn.next-btn {
-  right: -22px;
-}
-
-.bestseller-nav-btn:hover {
-  background: #0A0A0A;
-  border-color: #0A0A0A;
-  color: #FFFFFF;
-  transform: translateY(-50%) scale(1.12);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+/* Pagination Dots Removed for Continuous Infinite Loop */
+.bestseller-pagination-dots {
+  display: none !important;
 }
 
 /* Cards Viewport: Mask for smooth infinite transform-based carousel */
@@ -9678,7 +9652,7 @@ a.footer-contact-main:hover {
   cursor: grabbing;
 }
 
-/* Cards Track: Smooth Horizontal Infinite Flow */
+/* Cards Track: Smooth Horizontal Left-to-Right Infinite Flow */
 .bestseller-cards-track {
   display: flex !important;
   flex-direction: row !important;
@@ -9690,8 +9664,25 @@ a.footer-contact-main:hover {
   overflow: visible !important;
   padding: 0 !important;
   margin: 0 !important;
-  transform: translate3d(0, 0, 0);
   will-change: transform;
+  animation: bestsellerMarqueeLTR 32s linear infinite;
+}
+
+.bestseller-cards-viewport:hover .bestseller-cards-track {
+  animation-play-state: paused;
+}
+
+.bestseller-cards-track.is-dragging {
+  animation: none !important;
+}
+
+@keyframes bestsellerMarqueeLTR {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .bestseller-cards-track::-webkit-scrollbar {
