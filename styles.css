@@ -3707,48 +3707,102 @@ img {
 }
 
 .footer-contact-badge {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #181716;
-  border: 1px solid rgba(197, 165, 102, 0.4);
-  color: #FFFFFF;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
-a.footer-contact-badge:hover {
-  background: rgba(197, 165, 102, 0.2);
-  border-color: #FFFFFF;
-  color: #FFFFFF;
-  transform: scale(1.05);
+/* 1. WhatsApp Luminous Emerald Jewel */
+.footer-contact-item:nth-child(1) .footer-contact-badge {
+  background: rgba(37, 211, 102, 0.15) !important;
+  border: 1.5px solid rgba(37, 211, 102, 0.5) !important;
+  color: #25D366 !important;
+  box-shadow: 0 0 16px rgba(37, 211, 102, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+.footer-contact-item:nth-child(1) a.footer-contact-badge:hover {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 24px rgba(37, 211, 102, 0.7), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* 2. Phone Support Luminous Azure Jewel */
+.footer-contact-item:nth-child(2) .footer-contact-badge {
+  background: rgba(59, 130, 246, 0.15) !important;
+  border: 1.5px solid rgba(59, 130, 246, 0.5) !important;
+  color: #60A5FA !important;
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+.footer-contact-item:nth-child(2) a.footer-contact-badge:hover {
+  background: #3B82F6 !important;
+  border-color: #3B82F6 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.7), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* 3. Email Luminous Coral Rose Jewel */
+.footer-contact-item:nth-child(3) .footer-contact-badge {
+  background: rgba(244, 63, 94, 0.15) !important;
+  border: 1.5px solid rgba(244, 63, 94, 0.5) !important;
+  color: #FB7185 !important;
+  box-shadow: 0 0 16px rgba(244, 63, 94, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+.footer-contact-item:nth-child(3) a.footer-contact-badge:hover {
+  background: #F43F5E !important;
+  border-color: #F43F5E !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 24px rgba(244, 63, 94, 0.7), 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* 4. Support Hours Luminous Champagne Amber Jewel */
+.footer-contact-item:nth-child(4) .footer-contact-badge {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.5) !important;
+  color: #FBBF24 !important;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.2) !important;
 }
 
 .footer-contact-text-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 3px !important;
 }
 
 .footer-contact-main {
-  color: #EDE8DF;
-  font-size: 0.88rem;
-  font-weight: 600;
+  display: block;
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   text-decoration: none;
+  line-height: 1.25;
   transition: color 0.2s ease;
 }
 
 a.footer-contact-main:hover {
-  color: #FFFFFF;
+  color: #FCD34D;
 }
 
 .footer-contact-sub {
-  color: #7A756E;
-  font-size: 0.75rem;
+  display: block;
+  color: #A1A1AA;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 /* 3. BOTTOM LEGAL, BACK TO TOP, & PAYMENT ROW */
