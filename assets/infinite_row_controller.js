@@ -81,6 +81,10 @@
     }
 
     function resumeMarquee(xPos) {
+      if (options.autoScroll === false) {
+        track.style.animation = 'none';
+        return;
+      }
       const halfWidth = getHalfWidth();
       if (halfWidth <= 20) return;
 
@@ -162,6 +166,31 @@
       if (!isDragging) return;
       isDragging = false;
       track.classList.remove('is-dragging');
+
+      if (options.autoScroll === false) {
+        if (hasDragged) {
+          const durationMs = Math.max(1, Date.now() - startTime);
+          const diffX = lastClientX - startX;
+          const velocity = diffX / durationMs;
+          if (Math.abs(velocity) > 0.25) {
+            const glideDistance = Math.max(-320, Math.min(320, velocity * 160));
+            let finalX = currentX + glideDistance;
+            const halfWidth = getHalfWidth();
+            if (halfWidth > 20) {
+              while (finalX > 0) finalX -= halfWidth;
+              while (finalX < -halfWidth) finalX += halfWidth;
+            }
+            track.style.transition = 'transform 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
+            track.style.transform = `translate3d(${finalX}px, 0, 0)`;
+            currentX = finalX;
+            return;
+          }
+        }
+        track.style.animation = 'none';
+        track.style.transition = 'none';
+        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+        return;
+      }
 
       if (hasDragged) {
         const durationMs = Math.max(1, Date.now() - startTime);
@@ -247,13 +276,14 @@
   }
 
   function initAllInfiniteRows() {
-    // 1. Curated Releases (#trendingDropsTrack) Infinite Left-to-Right Loop
+    // 1. Curated Releases (#trendingDropsTrack) (Auto-Scroll Disabled, manual swipe & arrow navigation only)
     const dropsTrack = document.getElementById('trendingDropsTrack');
     if (dropsTrack) {
       setupInfiniteLTRSwipeRow(dropsTrack, {
         animName: 'dropsMarqueeLTR',
         duration: 48,
-        cloneMultiplier: 1
+        cloneMultiplier: 1,
+        autoScroll: false
       });
 
       const prevBtn = document.getElementById('dropsPrevBtn');
@@ -264,14 +294,15 @@
         prevBtn.addEventListener('click', (e) => {
           e.preventDefault();
           const currX = getCurrentTranslateX(dropsTrack);
-          const newX = currX + STEP;
+          let newX = currX + STEP;
+          const halfWidth = dropsTrack.scrollWidth / 2;
+          if (halfWidth > 20) {
+            while (newX > 0) newX -= halfWidth;
+            while (newX < -halfWidth) newX += halfWidth;
+          }
           dropsTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
           dropsTrack.style.animation = 'none';
-          dropsTrack.style.transform = `translateX(${newX}px)`;
-          if (dropsTrack._resumeTimeout) clearTimeout(dropsTrack._resumeTimeout);
-          dropsTrack._resumeTimeout = setTimeout(() => {
-            if (dropsTrack._resumeMarquee) dropsTrack._resumeMarquee(newX);
-          }, 460);
+          dropsTrack.style.transform = `translate3d(${newX}px, 0, 0)`;
         });
       }
 
@@ -279,35 +310,38 @@
         nextBtn.addEventListener('click', (e) => {
           e.preventDefault();
           const currX = getCurrentTranslateX(dropsTrack);
-          const newX = currX - STEP;
+          let newX = currX - STEP;
+          const halfWidth = dropsTrack.scrollWidth / 2;
+          if (halfWidth > 20) {
+            while (newX > 0) newX -= halfWidth;
+            while (newX < -halfWidth) newX += halfWidth;
+          }
           dropsTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
           dropsTrack.style.animation = 'none';
-          dropsTrack.style.transform = `translateX(${newX}px)`;
-          if (dropsTrack._resumeTimeout) clearTimeout(dropsTrack._resumeTimeout);
-          dropsTrack._resumeTimeout = setTimeout(() => {
-            if (dropsTrack._resumeMarquee) dropsTrack._resumeMarquee(newX);
-          }, 460);
+          dropsTrack.style.transform = `translate3d(${newX}px, 0, 0)`;
         });
       }
     }
 
-    // 2. Popular Choices Row 1: iPhone Covers (.popular-row-covers .popular-slider-track)
+    // 2. Popular Choices Row 1: iPhone Covers (Auto-Scroll Disabled)
     const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track');
     if (popTrack1) {
       setupInfiniteLTRSwipeRow(popTrack1, {
         animName: 'popularMarqueeLTR',
         duration: 36,
-        cloneMultiplier: 0 // Already cloned in HTML
+        cloneMultiplier: 0,
+        autoScroll: false
       });
     }
 
-    // 3. Popular Choices Row 2: Watch Bands (.popular-row-watchbands .popular-slider-track)
+    // 3. Popular Choices Row 2: Watch Bands (Auto-Scroll Disabled)
     const popTrack2 = document.querySelector('.popular-row-watchbands .popular-slider-track');
     if (popTrack2) {
       setupInfiniteLTRSwipeRow(popTrack2, {
         animName: 'popularMarqueeLTR',
         duration: 36,
-        cloneMultiplier: 0 // Already cloned in HTML
+        cloneMultiplier: 0,
+        autoScroll: false
       });
     }
 

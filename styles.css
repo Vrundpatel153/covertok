@@ -38904,7 +38904,7 @@ a.footer-contact-main:hover {
 
 
 
-  animation: bestsellerMarqueeLTR 32s linear infinite;
+  animation: none !important;
 
 
 
@@ -42760,7 +42760,7 @@ a.footer-contact-main:hover {
 
 
 
-  animation: popularMarqueeLTR 36s linear infinite;
+  animation: none !important;
 
 
 

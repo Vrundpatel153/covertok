@@ -89,7 +89,8 @@
     }
 
     // Start initial continuous marquee
-    resumeMarquee(-getHalfWidth() / 2);
+    track.style.animation = "none";
+    track.style.transform = "translate3d(0, 0, 0)";
 
     // Pointer Drag Handlers
     function onPointerStart(clientX, clientY) {
@@ -159,8 +160,8 @@
         const diffX = lastClientX - startX;
         const velocity = diffX / durationMs;
 
-        if (Math.abs(velocity) > 0.35) {
-          const glideDistance = Math.max(-280, Math.min(280, velocity * 140));
+        if (Math.abs(velocity) > 0.25) {
+          const glideDistance = Math.max(-300, Math.min(300, velocity * 150));
           let finalX = currentX + glideDistance;
           const halfWidth = getHalfWidth();
           if (halfWidth > 20) {
@@ -168,19 +169,15 @@
             while (finalX < -halfWidth) finalX += halfWidth;
           }
 
-          track.style.transition = 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+          track.style.transition = 'transform 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
           track.style.transform = `translate3d(${finalX}px, 0, 0)`;
-
-          setTimeout(() => {
-            resumeMarquee(finalX);
-          }, 360);
+          currentX = finalX;
           return;
         }
-
-        resumeMarquee(currentX);
-      } else {
-        resumeMarquee(currentX);
       }
+      track.style.animation = 'none';
+      track.style.transition = 'none';
+      track.style.transform = `translate3d(${currentX}px, 0, 0)`;
     }
 
     // Mouse Listeners
