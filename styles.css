@@ -7578,7 +7578,7 @@ img {
 
 
 
-  justify-content: flex-end;
+  justify-content: center;
 
 
 
@@ -44452,7 +44452,7 @@ a.footer-contact-main:hover {
 
 
 
-  align-items: flex-end;
+  align-items: center;
 
 
 
@@ -44612,31 +44612,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: linear-gradient(180deg, 
-
-
-
-    rgba(0, 0, 0, 0.20) 0%, 
-
-
-
-    rgba(0, 0, 0, 0.0) 25%, 
-
-
-
-    rgba(0, 0, 0, 0.15) 45%, 
-
-
-
-    rgba(0, 0, 0, 0.78) 75%,
-
-
-
-    rgba(0, 0, 0, 0.94) 100%
-
-
-
-  );
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.65) 100%);
 
 
 
@@ -45824,7 +45800,7 @@ a.footer-contact-main:hover {
 
 
 
-    align-items: flex-end;
+    align-items: center;
 
 
 
