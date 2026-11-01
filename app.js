@@ -1278,17 +1278,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const syncHeroCta = (btnText, btnLink, idx = currentHeroIndex) => {
 
-    if (heroDynamicCta && btnText) {
+    const consistentText = 'SHOP COVERS';
+
+    if (heroDynamicCta) {
 
       const textSpan = heroDynamicCta.querySelector('.hero-cta-text');
 
       if (textSpan) {
 
-        textSpan.textContent = btnText;
+        textSpan.textContent = consistentText;
 
       } else {
 
-        heroDynamicCta.textContent = btnText;
+        heroDynamicCta.textContent = consistentText;
 
       }
 
