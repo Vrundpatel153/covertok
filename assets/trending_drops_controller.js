@@ -8,22 +8,6 @@
     const track = document.getElementById('trendingDropsTrack');
     if (!track) return;
 
-
-
-    // Wishlist Button Toggle Delegation
-    track.addEventListener('click', (e) => {
-      const btn = e.target.closest('.drop-wishlist-btn');
-      if (!btn) return;
-
-      e.preventDefault();
-      e.stopPropagation();
-      btn.classList.toggle('active');
-      if (window.CovertokStore && window.CovertokStore.showToast) {
-        const isAdded = btn.classList.contains('active');
-        window.CovertokStore.showToast(isAdded ? 'Added to your wishlist!' : 'Removed from wishlist.');
-      }
-    });
-
     // Quick Add Button Delegation
     track.addEventListener('click', (e) => {
       const btn = e.target.closest('.drop-quick-add-btn');

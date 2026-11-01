@@ -1475,11 +1475,6 @@
         <div class="catalog-card" data-id="${p.id}">
           <div class="card-media-stage">
             <div class="card-badges-row">${badgeHtml}</div>
-            <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist" onclick="event.stopPropagation(); this.classList.toggle('active');">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </button>
             <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product.html?handle=${p.handle}'">
               <img src="${initialImg}" alt="${p.title}" class="card-main-img" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>

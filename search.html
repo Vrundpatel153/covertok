@@ -1585,11 +1585,6 @@
           <div class="catalog-card" data-product-id="${product.id}">
             <div class="card-media-stage">
               ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
-              <button type="button" class="card-wishlist-btn" aria-label="Add to Wishlist" title="Add to Wishlist">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-              </button>
               <div class="card-img-wrap" onclick="window.location.href='product.html?handle=${product.handle}'" style="cursor: pointer;">
                 <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
               </div>
@@ -1785,21 +1780,6 @@
             }
             return;
           }
-
-          // Wishlist button
-          const wishlistBtn = e.target.closest('.card-wishlist-btn');
-          if (wishlistBtn) {
-            e.stopPropagation();
-            wishlistBtn.classList.toggle('liked');
-            const isLiked = wishlistBtn.classList.contains('liked');
-            const svg = wishlistBtn.querySelector('svg');
-            if (svg) {
-              svg.setAttribute('fill', isLiked ? '#EF4444' : 'none');
-              svg.setAttribute('stroke', isLiked ? '#EF4444' : 'currentColor');
-            }
-            if (window.showToast) {
-              window.showToast(isLiked ? 'Added to your Wishlist!' : 'Removed from Wishlist', 'heart');
-            }
             return;
           }
         });
