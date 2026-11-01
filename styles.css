@@ -54710,7 +54710,7 @@ body.home-page .hero-content {
 .hero-cta-group {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 12px !important;
+  gap: 0 !important;
   padding-left: 24px !important;
   pointer-events: auto !important;
 }
@@ -54745,6 +54745,7 @@ body.home-page .hero-content {
   width: 48px !important;
   height: 48px !important;
   min-width: 48px !important;
+  margin-left: 68px !important;
   border-radius: 50% !important;
   background: #E8BA87 !important; /* Authentic warm artisan sand from Image 2 */
   color: #0A0A0C !important;

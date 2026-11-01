@@ -1,20 +1,26 @@
 /**
  * Covertok Signature Architectural Hero Window Precision Fitter
- * Mathematically computes the exact Bezier silhouette matching Image 2:
+ * Mathematically computes the exact Bezier silhouette matching Image 2 & User Request:
  * - Stepped top edge: lower baseline under nav & icons (y ~ 0.104), elevated plateau in center (y ~ 0.020)
- * - Recessed bottom-left shelf (y ~ 0.865) for the action buttons
- * - Extended bottom baseline (y = 1.000) across remaining 75%+ of card
+ * - Recessed bottom-left shelf for the action pill ("SHOP COVERS") inside the notch
+ * - Smooth organic S-curve dropping between the pill and the circular arrow button
+ * - Extended bottom baseline (y = 1.000) enclosing the circular arrow button on the black card
  * - Tangent continuous rounded corners on all vertices (no sharp cuts)
  */
 (function() {
   'use strict';
 
   function fitHeroWindow() {
+    const arrowBtn = document.querySelector('#heroExploreArrow');
+
     // Only apply desktop architectural silhouette on screens >= 992px
     if (window.innerWidth < 992) {
       const clipPathEl = document.querySelector('#heroCardClip path');
       if (clipPathEl) {
         clipPathEl.setAttribute('d', 'M 0 0 L 1 0 L 1 1 L 0 1 Z');
+      }
+      if (arrowBtn) {
+        arrowBtn.style.marginLeft = '0px';
       }
       return;
     }
@@ -23,7 +29,6 @@
     const clipPathEl = document.querySelector('#heroCardClip path');
     const headerLeft = document.querySelector('.site-header .header-left');
     const headerRight = document.querySelector('.site-header .header-right');
-    const ctaGroup = document.querySelector('.hero-bottom-bar .hero-cta-group');
 
     if (!heroCard || !clipPathEl) return;
 
@@ -34,7 +39,6 @@
 
     const hlRect = headerLeft ? headerLeft.getBoundingClientRect() : null;
     const hrRect = headerRight ? headerRight.getBoundingClientRect() : null;
-    const ctaRect = ctaGroup ? ctaGroup.getBoundingClientRect() : null;
 
     // Relative X positions in pixels from hero card left edge
     const hlRight = hlRect ? (hlRect.right - cRect.left) : (cardW * 0.50);
@@ -42,11 +46,9 @@
 
     const pillBtn = document.querySelector('#heroDynamicCta');
     const pillRect = pillBtn ? pillBtn.getBoundingClientRect() : null;
-    const arrowBtn = document.querySelector('#heroExploreArrow');
-    const arrowRect = arrowBtn ? arrowBtn.getBoundingClientRect() : null;
 
-    // Relative right edge of the entire action button group (pill + circular arrow button)
-    const arrowRight = arrowRect ? (arrowRect.right - cRect.left) : (pillRect ? pillRect.right - cRect.left + 64 : (ctaRect ? ctaRect.right - cRect.left : 260));
+    // Relative right edge of the pill button inside the notch
+    const pillRight = pillRect ? (pillRect.right - cRect.left) : 224;
 
     // 1. Top riser curve (starts right after CONTACT US link, rises to y=yTopPeak)
     const topRiseX1 = Math.max(0.40, Math.min(0.55, (hlRight + 20) / cardW));
@@ -56,14 +58,24 @@
     const topDropX4 = Math.max(topRiseX2 + 0.12, Math.min(0.92, (hrLeft - 20) / cardW));
     const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
 
-    // 3. Bottom step curve (shelf envelopes BOTH pill and circular arrow button, then sweeps gracefully to the floor)
-    const shelfEndPx = arrowRight + 16;
-    const curveFloorPx = shelfEndPx + 62;
-    const botStepX2 = Math.max(0.18, Math.min(0.32, shelfEndPx / cardW));
-    const botStepX1 = Math.max(botStepX2 + 0.025, Math.min(0.38, curveFloorPx / cardW));
+    // 3. Bottom step curve (Shelf envelopes ONLY the pill, then smooth organic S-curve drops to floor right before the arrow button)
+    const shelfOverhang = 16;
+    const curveSpan = 48;
+    const arrowCurveMargin = 4;
+
+    const shelfEndPx = pillRight + shelfOverhang;
+    const curveFloorPx = shelfEndPx + curveSpan;
+    const botStepX2 = shelfEndPx / cardW;
+    const botStepX1 = curveFloorPx / cardW;
+
+    // Align the circular arrow button on the black card floor nestled against the curve
+    if (arrowBtn) {
+      const desiredMargin = Math.max(16, (curveFloorPx + arrowCurveMargin) - pillRight);
+      arrowBtn.style.marginLeft = desiredMargin + 'px';
+    }
 
     // Vertical landmarks
-    // Baseline y: under nav links (hlRect.bottom - cRect.top + 16px)
+    // Baseline y: under nav links
     const yTopBasePx = hlRect ? Math.max(68, (hlRect.bottom - cRect.top) + 16) : 74;
     const yTopBase = yTopBasePx / cardH;
     
@@ -71,15 +83,15 @@
     const yTopPeakPx = 14;
     const yTopPeak = yTopPeakPx / cardH;
 
-    // Bottom shelf y: ~86px above bottom edge (provides balanced ~20px vertical padding for 48px buttons)
-    const yBotShelf = Math.max(0.850, Math.min(0.895, (cardH - 86) / cardH));
+    // Bottom shelf y: exactly 84px from bottom edge (gives balanced 18px top and bottom padding for 48px buttons)
+    const yBotShelf = (cardH - 84) / cardH;
     const yBotBase = 1.0000;
 
     // Tangent corner radii (approx 24px)
     const rx = Math.min(0.026, 24 / cardW);
     const ry = Math.min(0.048, 24 / cardH);
 
-    // Construct mathematically perfect, tangent-continuous Bezier path matching Image 2
+    // Construct mathematically perfect, tangent-continuous Bezier path matching Image 2 & user drawing
     const d = [
       // Start on left vertical edge just above bottom shelf corner
       `M 0.0000 ${(yBotShelf - ry).toFixed(4)}`,
@@ -118,7 +130,7 @@
       `L ${botStepX1.toFixed(4)} ${yBotBase.toFixed(4)}`,
       
       // Bottom step-up organic S-curve curving around action buttons into shelf
-      `C ${(botStepX1 - (botStepX1 - botStepX2) * 0.45).toFixed(4)} ${yBotBase.toFixed(4)}, ${(botStepX1 - (botStepX1 - botStepX2) * 0.55).toFixed(4)} ${yBotShelf.toFixed(4)}, ${botStepX2.toFixed(4)} ${yBotShelf.toFixed(4)}`,
+      `C ${(botStepX1 - (botStepX1 - botStepX2) * 0.48).toFixed(4)} ${yBotBase.toFixed(4)}, ${(botStepX2 + (botStepX1 - botStepX2) * 0.48).toFixed(4)} ${yBotShelf.toFixed(4)}, ${botStepX2.toFixed(4)} ${yBotShelf.toFixed(4)}`,
       
       // Bottom shelf horizontal line above buttons
       `L ${rx.toFixed(4)} ${yBotShelf.toFixed(4)}`,
@@ -155,7 +167,9 @@
     const ro = new ResizeObserver(scheduleFit);
     const header = document.querySelector('.site-header');
     const heroSec = document.querySelector('.hero-section');
+    const pill = document.querySelector('#heroDynamicCta');
     if (header) ro.observe(header);
     if (heroSec) ro.observe(heroSec);
+    if (pill) ro.observe(pill);
   }
 })();
