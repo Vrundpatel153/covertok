@@ -600,3 +600,27 @@
     initStoreCore();
   }
 })();
+
+
+    // Top Announcement Headline Dismiss Handler
+  function initAnnouncementDismiss() {
+    const annCloseBtn = document.getElementById('announcementCloseBtn');
+    const annBar = document.getElementById('siteAnnouncementBar') || document.querySelector('.site-announcement-bar');
+    if (annCloseBtn && annBar) {
+      if (sessionStorage.getItem('covertok_announcement_dismissed') === '1') {
+        annBar.classList.add('dismissed');
+      }
+      annCloseBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        annBar.classList.add('dismissed');
+        sessionStorage.setItem('covertok_announcement_dismissed', '1');
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAnnouncementDismiss);
+  } else {
+    initAnnouncementDismiss();
+  }

@@ -1,0 +1,199 @@
+<header class="site-header" id="siteHeader">
+
+    <div class="header-inner">
+
+      <!-- Left: Logo & Nav Links -->
+
+      <div class="header-left">
+
+        <a href="index.html" class="brand-logo" aria-label="Covertok Home">
+
+          <img src="assets/covertok_luxury_logo.webp" alt="Covertok" class="logo-img">
+
+        </a>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+
+          <ul class="nav-list">
+
+            <li class="nav-item">
+
+              <a href="index.html" class="nav-link active">HOME</a>
+
+            </li>
+
+            <li class="nav-item has-dropdown has-mega-menu">
+
+              <a href="collections.html" class="nav-link">
+
+                ALL PRODUCTS
+
+                <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+
+              </a>
+
+              <div class="mega-dropdown-menu">
+
+                <div class="mega-dropdown-grid">
+
+                  <!-- Column 1 -->
+
+                  <div class="mega-dropdown-col">
+
+                    <a href="collections.html?cat=iphone-cases" class="mega-link">IPHONE COVERS</a>
+
+                    <a href="collections.html?cat=watchbands" class="mega-link">IWATCH BANDS</a>
+
+                    <a href="collections.html?cat=mens-cover" class="mega-link">MEN'S COVER</a>
+
+                    <a href="collections.html?cat=charger-covers" class="mega-link">CHARGER CASES</a>
+
+                    <a href="collections.html?cat=cover-charms" class="mega-link">COVER CHARMS</a>
+
+                    <a href="combo.html" class="mega-link" style="color: #0A0A0A; font-weight: 800;">3-PIECE COMBO (₹1,199)</a>
+
+                  </div>
+
+                  <!-- Column 2 -->
+
+                  <div class="mega-dropdown-col">
+
+                    <a href="collections.html?cat=covers" class="mega-link">COVERS</a>
+
+                    <a href="collections.html?cat=womens-cover" class="mega-link">WOMEN'S COVER</a>
+
+                    <a href="collections.html?cat=charger-and-cables" class="mega-link">CHARGER AND CABLES</a>
+
+                    <a href="collections.html?cat=airpod-covers" class="mega-link">AIRPOD COVERS</a>
+
+                    <a href="collections.html?cat=other-accessories" class="mega-link">OTHER ACCESSORIES</a>
+
+                  </div>
+
+                  <!-- Column 3: Featured Showcase -->
+
+                  <a href="collections.html" class="mega-showcase-card">
+
+                    <div class="mega-showcase-img-wrap">
+
+                      <img src="assets/brand_iphone16_pro.webp" alt="Featured Cover" class="mega-showcase-img">
+
+                    </div>
+
+                    <div class="mega-showcase-body">
+
+                      <span class="mega-showcase-tag">COVERTOK CURATED</span>
+
+                      <strong class="mega-showcase-title">Discover 75+ Precision Cases &amp; Accessories</strong>
+
+                      <span class="mega-showcase-cta">Explore All Products <span class="mega-cta-arrow"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></span>
+
+                    </div>
+
+                  </a>
+
+                </div>
+
+              </div>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a href="combo.html" class="nav-link">3-PIECE COMBO</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a href="about.html" class="nav-link">ABOUT US</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a href="contact.html" class="nav-link">CONTACT US</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </div>
+
+
+
+      <!-- Right: Utility Icons matching hero-pc-new & hero-mobile-new exactly -->
+
+      <div class="header-right">
+
+        <!-- Search Button -->
+
+        <button class="icon-btn" id="searchBtn" aria-label="Search products" title="Search">
+
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+
+            <circle cx="11" cy="11" r="8"></circle>
+
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+
+          </svg>
+
+        </button>
+
+
+
+        <!-- User Profile Button -->
+
+        <button class="icon-btn" id="userBtn" aria-label="My Account" title="Account">
+
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+
+            <circle cx="12" cy="7" r="4"></circle>
+
+          </svg>
+
+        </button>
+
+
+
+        <!-- Cart Button -->
+
+        <button class="icon-btn store-btn" id="cartBtn" aria-label="Shopping Cart" title="Cart">
+
+          <svg class="cart-icon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+
+          </svg>
+
+          <span class="cart-badge" id="cartCount" data-count="0" hidden>0</span>
+
+        </button>
+
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle navigation">
+
+          <svg class="mobile-menu-svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+
+          </svg>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>

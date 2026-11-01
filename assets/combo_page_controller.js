@@ -109,6 +109,24 @@
     bindSearchAndSort();
     bindBottomBarActions();
 
+    // Check URL parameters for pre-selected category filter
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('category');
+      if (catParam) {
+        const navBar = document.getElementById('comboNavBar');
+        const targetBtn = navBar ? navBar.querySelector('.catalog-nav-pill[data-category="' + catParam + '"]') : null;
+        if (targetBtn) {
+          navBar.querySelectorAll('.catalog-nav-pill').forEach(b => b.classList.remove('active'));
+          targetBtn.classList.add('active');
+          state.activeCategory = catParam;
+          state.filteredProducts = state.allEligibleProducts.filter(p => p.combo_category === catParam);
+        }
+      }
+    } catch (e) {
+      console.warn('Could not parse combo category param:', e);
+    }
+
     // Initial render
     updateCategoryCounts();
     renderProductsGrid();
