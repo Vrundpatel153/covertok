@@ -568,7 +568,7 @@
         <svg width="0" height="0" style="position: absolute; pointer-events: none;" aria-hidden="true">
           <defs>
             <clipPath id="heroCardClip" clipPathUnits="objectBoundingBox">
-              <path d="M 0.0000 0.8390 L 0.0000 0.1190 C 0.0000 0.0914, 0.0096 0.0730, 0.0240 0.0730 L 0.4900 0.0730 C 0.5050 0.0730, 0.5120 0.0000, 0.5250 0.0000 L 0.8160 0.0000 C 0.8300 0.0000, 0.8420 0.0730, 0.8580 0.0730 L 0.9760 0.0730 C 0.9904 0.0730, 1.0000 0.0914, 1.0000 0.1190 L 1.0000 0.9540 C 1.0000 0.9816, 0.9904 1.0000, 0.9760 1.0000 L 0.2800 1.0000 C 0.2640 1.0000, 0.2580 0.8850, 0.2440 0.8850 L 0.0240 0.8850 C 0.0096 0.8850, 0.0000 0.8666, 0.0000 0.8390 Z"></path>
+              <path d="M 0.0000 0.8644 L 0.0000 0.1397 C 0.0000 0.1211, 0.0075 0.1058, 0.0167 0.1058 L 0.5253 0.1058 C 0.5424 0.1058, 0.5462 0.0198, 0.5633 0.0198 L 0.8439 0.0198 C 0.8610 0.0198, 0.8648 0.1058, 0.8819 0.1058 L 0.9833 0.1058 C 0.9925 0.1058, 1.0000 0.1211, 1.0000 0.1397 L 1.0000 0.9661 C 1.0000 0.9847, 0.9925 1.0000, 0.9833 1.0000 L 0.1618 1.0000 C 0.1447 1.0000, 0.1409 0.8983, 0.1238 0.8983 L 0.0167 0.8983 C 0.0075 0.8983, 0.0000 0.8831, 0.0000 0.8644 Z"></path>
             </clipPath>
           </defs>
         </svg>
@@ -770,6 +770,14 @@
       </div>
 
     </section>
+
+    <!-- Immediate Synchronous Execution for Zero-Flash Hero Window Silhouette -->
+    <script src="assets/hero_window_fitter.js?v=20261101_fitter_v5"></script>
+    <script>
+      if (typeof window.fitHeroWindow === 'function') {
+        window.fitHeroWindow();
+      }
+    </script>
 
 
 
@@ -6708,8 +6716,7 @@
   <script src="assets/community_reviews_controller.js"></script>
 
   <script src="assets/hero_hand_slideshow.js?v=20261101_seamless_v2"></script>
-  <script src="assets/hero_window_fitter.js?v=20261101_fitter_v3"></script>
-
+  
   <script src="app.js"></script>
 
   <script src="assets/home_products.js"></script>
