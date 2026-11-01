@@ -53575,6 +53575,15 @@ a.footer-contact-main:hover {
 
   font-weight: 800 !important;
 
+  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+}
+
+.hero-slide .hero-kicker-highlight,
+.hero-slide .hero-kicker-gold {
+
+  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
 }
 
 
@@ -53850,6 +53859,7 @@ a.footer-contact-main:hover {
     -webkit-text-fill-color: #FF5A18 !important;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
     font-weight: 850 !important;
+    transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   .hero-slide .hero-content .hero-editorial-desc {
