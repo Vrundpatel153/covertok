@@ -31713,6 +31713,10 @@ a.footer-contact-main:hover {
 
 
 
+  .hero-mob-bg[data-bg-index="2"]::after {
+    display: none !important;
+  }
+
   .hero-mob-bg::after {
 
 
@@ -53222,9 +53226,24 @@ a.footer-contact-main:hover {
 
 /* Slide 1 & 2 Scrim: Smooth dark gradient over left side for 100% text contrast */
 
-.hero-slide-bg[data-bg-index="1"] .hero-bg-scrim,
+.hero-slide-bg[data-bg-index="1"] .hero-bg-scrim {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 9, 12, 0.78) 0%,
+    rgba(8, 9, 12, 0.52) 38%,
+    rgba(8, 9, 12, 0.16) 62%,
+    rgba(8, 9, 12, 0) 100%
+  ) !important;
+  z-index: 2 !important;
+}
 
+/* Slide 3 (Lip Balm Case) - Pure Light Travertine Aesthetics (No dark scrim) */
 .hero-slide-bg[data-bg-index="2"] .hero-bg-scrim {
+  display: none !important;
+}
+
+/* Old placeholder rule kept clean */
+.hero-slide-bg[data-bg-index="1_inactive"] .hero-bg-scrim {
 
   background: linear-gradient(
 
@@ -53510,7 +53529,36 @@ a.footer-contact-main:hover {
 
 }
 
+/* Viral Edition Lip Case - Light Editorial Theme (Slide 3) */
+.hero-slide[data-theme="lipcase"] .hero-headline {
+  color: #111111 !important;
+}
 
+.hero-slide[data-theme="lipcase"] .hero-headline .hero-headline-line {
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+  text-shadow: none !important;
+}
+
+.hero-slide[data-theme="lipcase"] .hero-headline .hero-text-signature {
+  color: #D0386E !important;
+  -webkit-text-fill-color: #D0386E !important;
+  text-shadow: 0 0 20px rgba(208, 56, 110, 0.25) !important;
+}
+
+.hero-slide[data-theme="lipcase"] .hero-kicker-highlight {
+  color: #D0386E !important;
+  -webkit-text-fill-color: #D0386E !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-shadow: none !important;
+}
+
+.hero-slide[data-theme="lipcase"] .hero-editorial-desc {
+  color: #2A2A2A !important;
+  -webkit-text-fill-color: #2A2A2A !important;
+  text-shadow: none !important;
+}
 
 .hero-slide .hero-feature-chips {
 
