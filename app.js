@@ -1278,7 +1278,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const syncHeroCta = (btnText, btnLink, idx = currentHeroIndex) => {
 
-    const consistentText = 'SHOP COVERS';
+    const consistentText = btnText || 'SHOP COVERS';
 
     if (heroDynamicCta) {
 
