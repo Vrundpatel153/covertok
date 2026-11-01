@@ -39,7 +39,10 @@
     // Relative X positions in pixels from hero card left edge
     const hlRight = hlRect ? (hlRect.right - cRect.left) : (cardW * 0.50);
     const hrLeft = hrRect ? (hrRect.left - cRect.left) : (cardW * 0.88);
-    const ctaRight = ctaRect ? (ctaRect.right - cRect.left) : (cardW * 0.28);
+
+    const pillBtn = document.querySelector('#heroDynamicCta');
+    const pillRect = pillBtn ? pillBtn.getBoundingClientRect() : null;
+    const pillRight = pillRect ? (pillRect.right - cRect.left) : (ctaRect ? ctaRect.left - cRect.left + 172 : 196);
 
     // 1. Top riser curve (starts right after CONTACT US link, rises to y=yTopPeak)
     const topRiseX1 = Math.max(0.40, Math.min(0.55, (hlRight + 20) / cardW));
@@ -49,9 +52,11 @@
     const topDropX4 = Math.max(topRiseX2 + 0.12, Math.min(0.92, (hrLeft - 20) / cardW));
     const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
 
-    // 3. Bottom step curve (starts at bottom baseline, rises to shelf above action buttons)
-    const botStepX1 = Math.max(0.14, Math.min(0.38, (ctaRight + 20) / cardW));
-    const botStepX2 = Math.max(0.10, Math.min(botStepX1 - 0.038, (ctaRight - 8) / cardW));
+    // 3. Bottom step curve (shelf sits over pill button, then curves down to bottom floor BEFORE arrow button)
+    const shelfEndPx = pillRight + 14;
+    const curveFloorPx = shelfEndPx + 18;
+    const botStepX2 = Math.max(0.10, Math.min(0.24, shelfEndPx / cardW));
+    const botStepX1 = Math.max(botStepX2 + 0.010, Math.min(0.28, curveFloorPx / cardW));
 
     // Vertical landmarks
     // Baseline y: under nav links (hlRect.bottom - cRect.top + 16px)
