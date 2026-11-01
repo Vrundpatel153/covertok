@@ -53900,7 +53900,7 @@ a.footer-contact-main:hover {
   .hero-slide .hero-headline .hero-headline-line {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
-    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
     display: inline-block !important;
     text-align: center !important;
   }
@@ -53912,7 +53912,7 @@ a.footer-contact-main:hover {
   .hero-slide .hero-text-signature {
     color: #FF5A18 !important;
     -webkit-text-fill-color: #FF5A18 !important;
-    text-shadow: 0 0 22px rgba(255, 90, 24, 0.55), 0 2px 12px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
     font-weight: 850 !important;
   }
 
@@ -53934,9 +53934,9 @@ a.footer-contact-main:hover {
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
-    bottom: 54px !important;
-    height: 58% !important;
-    max-height: 410px !important;
+    bottom: 78px !important;
+    height: 52% !important;
+    max-height: 380px !important;
 
     width: 100% !important;
 
