@@ -43604,18 +43604,21 @@ a.footer-contact-main:hover {
 
 
 
-  /* Keep featured card on top on mobile for both rows */
+  /* Keep featured card on top on mobile/tablet for both rows */
+  .popular-showcase-row {
+    flex-direction: column !important;
+  }
 
+  .popular-showcase-row .popular-feature-card {
+    order: 1 !important;
+  }
 
+  .popular-showcase-row .popular-slider-wrap {
+    order: 2 !important;
+  }
 
   .popular-row-bands {
-
-
-
-    flex-direction: column-reverse;
-
-
-
+    flex-direction: column !important;
   }
 
 
@@ -43837,17 +43840,20 @@ a.footer-contact-main:hover {
 
 
   .popular-showcase-row {
-
-
-
-    flex-direction: column;
-
-
-
+    flex-direction: column !important;
     gap: 14px;
+  }
 
+  .popular-showcase-row .popular-feature-card {
+    order: 1 !important;
+  }
 
+  .popular-showcase-row .popular-slider-wrap {
+    order: 2 !important;
+  }
 
+  .popular-row-bands {
+    flex-direction: column !important;
   }
 
 
