@@ -412,7 +412,7 @@
 
         <!-- VIP Perks Tab Content -->
         <div class="profile-tab-content" data-tab="perks" style="display: none;">
-          <div class="profile-order-card" style="border-left: 4px solid #A98135;">
+          <div class="profile-order-card" style="border-left: 4px solid #E77242;">
             <div style="font-weight: 800; font-size: 0.875rem; color: #171513; margin-bottom: 4px;">Exclusive VIP Member 15% Pass</div>
             <p style="font-size: 0.8rem; color: #64748B; margin: 0 0 10px;">Use your personal code at checkout for 15% off any case in store.</p>
             <button type="button" class="btn btn-pill-dark" onclick="window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeAccount(); window.CovertokFlows.openCart();" style="padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;">

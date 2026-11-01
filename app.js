@@ -1448,7 +1448,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Slide 0 showcases the 8-color transformation (8 * 1.43s = 11.44s)
 
-      const delay = (currentHeroIndex === 0) ? 60000 : AUTO_PLAY_DELAY;
+      const delay = (currentHeroIndex === 0) ? 11500 : AUTO_PLAY_DELAY;
 
       heroAutoPlayTimer = setTimeout(() => {
 

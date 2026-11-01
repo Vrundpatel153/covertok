@@ -231,7 +231,7 @@
 }
 
 .search-result-row:hover {
-  background: #F8F5ED;
+  background: #F4F4F6;
 }
 
 .search-result-img {
@@ -1062,7 +1062,7 @@
 }
 
 .catalog-price-input:focus {
-  border-color: #A98135;
+  border-color: #E77242;
 }
 
 .catalog-stock-label {
@@ -1082,7 +1082,7 @@
 }
 
 .catalog-stock-label:hover {
-  border-color: #A98135;
+  border-color: #E77242;
 }
 
 .catalog-stock-label input[type="checkbox"] {
@@ -1587,7 +1587,7 @@
 }
 
 .qv-media-stage {
-  background: #F8F5ED;
+  background: #F7F7F8;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -1716,7 +1716,7 @@
 }
 
 .qv-color-swatch.active {
-  box-shadow: 0 0 0 2px #A98135;
+  box-shadow: 0 0 0 2px #E77242;
   transform: scale(1.12);
 }
 
@@ -1738,10 +1738,10 @@
 
 /* Trust Badges Banner */
 .trust-banner-section {
-  background: #F8F5ED;
-  border-top: 1px solid #EAE5DB;
-  border-bottom: 1px solid #EAE5DB;
-  padding: 44px 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 38px 0;
 }
 
 .trust-badges-grid {
@@ -1759,17 +1759,23 @@
 }
 
 .trust-badge-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   background: #FFFFFF;
-  border: 1.5px solid rgba(14, 165, 233, 0.35);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(231, 114, 66, 0.22);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0284C7;
+  color: #E77242;
   flex-shrink: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.trust-badge-item:hover .trust-badge-icon {
+  transform: translateY(-2px);
+  border-color: rgba(231, 114, 66, 0.45);
 }
 
 .trust-badge-title {
@@ -1783,7 +1789,7 @@
 
 .trust-badge-desc {
   font-size: 0.8rem;
-  color: #735238;
+  color: #726E67;
   margin: 0;
   line-height: 1.35;
 }
@@ -1792,7 +1798,7 @@
   /* Trust Badges Banner - Sleek 1-Row Grid on Mobile */
   .trust-banner-section {
     padding: 14px 0 !important;
-    background: #FAF7F2 !important;
+    background: #FFFFFF !important;
   }
 
   .trust-banner-section .page-container,

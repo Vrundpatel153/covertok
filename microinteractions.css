@@ -16,7 +16,7 @@
   --dur-fast: 0.18s;
   --dur-med: 0.28s;
   --dur-slow: 0.42s;
-  --gold-glow: 0 0 0 3px rgba(169, 129, 53, 0.22);
+  --gold-glow: 0 0 0 3px rgba(231, 114, 66, 0.22);
   --shadow-float: 0 16px 36px -6px rgba(23, 21, 19, 0.12), 0 4px 12px rgba(23, 21, 19, 0.04);
 }
 
@@ -1750,10 +1750,10 @@ body {
   background-attachment: fixed !important;
 }
 
-/* 3. UNIVERSAL LIQUID GLASS HEADERS & NAVIGATION (Every Page) */
-.site-header,
+/* 3. UNIVERSAL LIQUID GLASS HEADERS & NAVIGATION (Subpages) */
+body:not(.home-page) .site-header,
+body:not(.home-page) #siteHeader,
 .pdp-header,
-#siteHeader,
 .combo-discovery-header,
 .catalog-breadcrumb-strip {
   background: var(--liquid-glass-bg-elevated) !important;
