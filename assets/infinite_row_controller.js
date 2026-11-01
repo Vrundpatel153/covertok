@@ -98,6 +98,7 @@
       track.style.animationDelay = `${delay.toFixed(3)}s`;
       track.style.transform = '';
     }
+    track._resumeMarquee = resumeMarquee;
 
     function onPointerStart(clientX, clientY) {
       currentX = getCurrentTranslateX(track);
@@ -246,8 +247,49 @@
   }
 
   function initAllInfiniteRows() {
-    // 1. Curated Releases (#trendingDropsTrack) is now an architectural luxury grid (Desktop 4-col, Mobile 2-col)
+    // 1. Curated Releases (#trendingDropsTrack) Infinite Left-to-Right Loop
+    const dropsTrack = document.getElementById('trendingDropsTrack');
+    if (dropsTrack) {
+      setupInfiniteLTRSwipeRow(dropsTrack, {
+        animName: 'dropsMarqueeLTR',
+        duration: 48,
+        cloneMultiplier: 1
+      });
 
+      const prevBtn = document.getElementById('dropsPrevBtn');
+      const nextBtn = document.getElementById('dropsNextBtn');
+      const STEP = 300;
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const currX = getCurrentTranslateX(dropsTrack);
+          const newX = currX + STEP;
+          dropsTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+          dropsTrack.style.animation = 'none';
+          dropsTrack.style.transform = `translateX(${newX}px)`;
+          if (dropsTrack._resumeTimeout) clearTimeout(dropsTrack._resumeTimeout);
+          dropsTrack._resumeTimeout = setTimeout(() => {
+            if (dropsTrack._resumeMarquee) dropsTrack._resumeMarquee(newX);
+          }, 460);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const currX = getCurrentTranslateX(dropsTrack);
+          const newX = currX - STEP;
+          dropsTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+          dropsTrack.style.animation = 'none';
+          dropsTrack.style.transform = `translateX(${newX}px)`;
+          if (dropsTrack._resumeTimeout) clearTimeout(dropsTrack._resumeTimeout);
+          dropsTrack._resumeTimeout = setTimeout(() => {
+            if (dropsTrack._resumeMarquee) dropsTrack._resumeMarquee(newX);
+          }, 460);
+        });
+      }
+    }
 
     // 2. Popular Choices Row 1: iPhone Covers (.popular-row-covers .popular-slider-track)
     const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track');
