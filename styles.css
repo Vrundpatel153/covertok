@@ -31739,27 +31739,23 @@ a.footer-contact-main:hover {
 
 
 
-      rgba(250, 248, 245, 0.92) 0%,
+      rgba(8, 9, 12, 0.92) 0%,
 
 
 
-      rgba(250, 248, 245, 0.75) 24%,
+      rgba(8, 9, 12, 0.76) 24%,
 
 
 
-      rgba(250, 248, 245, 0.25) 38%,
+      rgba(8, 9, 12, 0.38) 44%,
 
 
 
-      rgba(250, 248, 245, 0) 48%,
+      rgba(8, 9, 12, 0.10) 60%,
 
 
 
-      rgba(17, 17, 19, 0) 75%,
-
-
-
-      rgba(17, 17, 19, 0.22) 100%
+      rgba(8, 9, 12, 0) 74%
 
 
 
@@ -53898,29 +53894,63 @@ a.footer-contact-main:hover {
 
 
   .hero-slide .hero-content {
-
     left: 16px !important;
-
     right: 16px !important;
-
     top: 22px !important;
-
     width: auto !important;
-
     max-width: 100% !important;
-
     text-align: center !important;
-
     align-items: center !important;
-
+    padding: 0 !important;
   }
 
+  .hero-slide .hero-kicker {
+    margin-bottom: 8px !important;
+    justify-content: center !important;
+  }
 
+  .hero-slide .hero-kicker-highlight,
+  .hero-slide .hero-kicker-gold {
+    color: #FF5A18 !important;
+    -webkit-text-fill-color: #FF5A18 !important;
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .hero-slide .hero-headline {
+    font-family: var(--font-heading, 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif) !important;
+    font-size: clamp(1.48rem, 6.2vw, 1.88rem) !important;
+    font-weight: 850 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-slide .hero-headline .hero-headline-line {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85) !important;
+    display: inline-block !important;
+    text-align: center !important;
+  }
+
+  .hero-slide .hero-headline .hero-headline-line-2 {
+    white-space: nowrap !important;
+  }
+
+  .hero-slide .hero-text-signature {
+    color: #FF5A18 !important;
+    -webkit-text-fill-color: #FF5A18 !important;
+    text-shadow: 0 0 22px rgba(255, 90, 24, 0.55), 0 2px 12px rgba(0, 0, 0, 0.8) !important;
+    font-weight: 850 !important;
+  }
 
   .hero-slide .hero-content .hero-editorial-desc {
-
     display: none !important;
-
   }
 
 
