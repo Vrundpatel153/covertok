@@ -42,7 +42,11 @@
 
     const pillBtn = document.querySelector('#heroDynamicCta');
     const pillRect = pillBtn ? pillBtn.getBoundingClientRect() : null;
-    const pillRight = pillRect ? (pillRect.right - cRect.left) : (ctaRect ? ctaRect.left - cRect.left + 172 : 196);
+    const arrowBtn = document.querySelector('#heroExploreArrow');
+    const arrowRect = arrowBtn ? arrowBtn.getBoundingClientRect() : null;
+
+    // Relative right edge of the entire action button group (pill + circular arrow button)
+    const arrowRight = arrowRect ? (arrowRect.right - cRect.left) : (pillRect ? pillRect.right - cRect.left + 64 : (ctaRect ? ctaRect.right - cRect.left : 260));
 
     // 1. Top riser curve (starts right after CONTACT US link, rises to y=yTopPeak)
     const topRiseX1 = Math.max(0.40, Math.min(0.55, (hlRight + 20) / cardW));
@@ -52,11 +56,11 @@
     const topDropX4 = Math.max(topRiseX2 + 0.12, Math.min(0.92, (hrLeft - 20) / cardW));
     const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
 
-    // 3. Bottom step curve (shelf sits over pill button, then curves down to bottom floor BEFORE arrow button)
-    const shelfEndPx = pillRight + 14;
-    const curveFloorPx = shelfEndPx + 18;
-    const botStepX2 = Math.max(0.10, Math.min(0.24, shelfEndPx / cardW));
-    const botStepX1 = Math.max(botStepX2 + 0.010, Math.min(0.28, curveFloorPx / cardW));
+    // 3. Bottom step curve (shelf envelopes BOTH pill and circular arrow button, then sweeps gracefully to the floor)
+    const shelfEndPx = arrowRight + 16;
+    const curveFloorPx = shelfEndPx + 62;
+    const botStepX2 = Math.max(0.18, Math.min(0.32, shelfEndPx / cardW));
+    const botStepX1 = Math.max(botStepX2 + 0.025, Math.min(0.38, curveFloorPx / cardW));
 
     // Vertical landmarks
     // Baseline y: under nav links (hlRect.bottom - cRect.top + 16px)
@@ -67,8 +71,8 @@
     const yTopPeakPx = 14;
     const yTopPeak = yTopPeakPx / cardH;
 
-    // Bottom shelf y: ~72px above bottom edge (clean space for 48px buttons)
-    const yBotShelf = Math.max(0.850, Math.min(0.900, (cardH - 72) / cardH));
+    // Bottom shelf y: ~86px above bottom edge (provides balanced ~20px vertical padding for 48px buttons)
+    const yBotShelf = Math.max(0.850, Math.min(0.895, (cardH - 86) / cardH));
     const yBotBase = 1.0000;
 
     // Tangent corner radii (approx 24px)

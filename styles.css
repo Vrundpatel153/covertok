@@ -54792,8 +54792,8 @@ body.home-page .hero-content {
 .hero-cta-group {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 36px !important;
-  padding-left: 20px !important;
+  gap: 12px !important;
+  padding-left: 24px !important;
   pointer-events: auto !important;
 }
 
@@ -54952,5 +54952,441 @@ body.home-page .hero-content {
     border: 1px solid rgba(255, 255, 255, 0.6) !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
     pointer-events: auto !important;
+  }
+}
+
+
+/* Bento Intro Orbit — High-Performance Mini Floating Covers (Zero Layout Load) */
+.bento-intro-card {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.bento-intro-card > *:not(.bento-intro-orbit) {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.bento-intro-orbit {
+  position: absolute !important;
+  inset: -20px -30px -20px -20px !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  overflow: visible !important;
+}
+
+.bento-mini-cover {
+  position: absolute !important;
+  pointer-events: none !important;
+  will-change: transform !important;
+  backface-visibility: hidden !important;
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.08)) !important;
+}
+
+.bento-mini-cover img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  user-select: none !important;
+}
+
+/* 6 Coordinates matching user uploaded red circles in media_1793526393885_12256543.jpg */
+/* Spot 1: Top Left */
+.bento-mini-cover.spot-1 {
+  width: 44px !important;
+  top: -24px !important;
+  left: -20px !important;
+  animation: miniOrbitFloat1 9s ease-in-out infinite alternate !important;
+}
+
+/* Spot 2: Top Center */
+.bento-mini-cover.spot-2 {
+  width: 36px !important;
+  top: -30px !important;
+  left: 48% !important;
+  animation: miniOrbitFloat2 11s ease-in-out infinite alternate !important;
+}
+
+/* Spot 3: Top Right */
+.bento-mini-cover.spot-3 {
+  width: 42px !important;
+  top: -20px !important;
+  right: -24px !important;
+  animation: miniOrbitFloat3 10s ease-in-out infinite alternate !important;
+}
+
+/* Spot 4: Right Mid */
+.bento-mini-cover.spot-4 {
+  width: 38px !important;
+  top: 44% !important;
+  right: -16px !important;
+  animation: miniOrbitFloat4 12s ease-in-out infinite alternate !important;
+}
+
+/* Spot 5: Bottom Right */
+.bento-mini-cover.spot-5 {
+  width: 40px !important;
+  top: 72% !important;
+  right: 32px !important;
+  animation: miniOrbitFloat5 8.5s ease-in-out infinite alternate !important;
+}
+
+/* Spot 6: Bottom Left */
+.bento-mini-cover.spot-6 {
+  width: 44px !important;
+  top: 70% !important;
+  left: 28px !important;
+  animation: miniOrbitFloat6 9.5s ease-in-out infinite alternate !important;
+}
+
+/* Pure GPU translate3d transforms - strictly zero layout/paint load */
+@keyframes miniOrbitFloat1 {
+  0% { transform: translate3d(0, 0, 0) rotate(-16deg); }
+  100% { transform: translate3d(8px, -12px, 0) rotate(-8deg); }
+}
+@keyframes miniOrbitFloat2 {
+  0% { transform: translate3d(0, 0, 0) rotate(8deg); }
+  100% { transform: translate3d(-10px, 8px, 0) rotate(18deg); }
+}
+@keyframes miniOrbitFloat3 {
+  0% { transform: translate3d(0, 0, 0) rotate(14deg); }
+  100% { transform: translate3d(6px, -10px, 0) rotate(22deg); }
+}
+@keyframes miniOrbitFloat4 {
+  0% { transform: translate3d(0, 0, 0) rotate(-10deg); }
+  100% { transform: translate3d(-8px, 10px, 0) rotate(-2deg); }
+}
+@keyframes miniOrbitFloat5 {
+  0% { transform: translate3d(0, 0, 0) rotate(-18deg); }
+  100% { transform: translate3d(10px, -8px, 0) rotate(-10deg); }
+}
+@keyframes miniOrbitFloat6 {
+  0% { transform: translate3d(0, 0, 0) rotate(12deg); }
+  100% { transform: translate3d(-6px, 10px, 0) rotate(4deg); }
+}
+
+@media (max-width: 767px) {
+  .bento-intro-orbit {
+    inset: -12px -16px -12px -12px !important;
+  }
+  .bento-mini-cover.spot-1 { width: 32px !important; top: -16px !important; left: -10px !important; }
+  .bento-mini-cover.spot-2 { width: 26px !important; top: -20px !important; }
+  .bento-mini-cover.spot-3 { width: 30px !important; top: -14px !important; right: -12px !important; }
+  .bento-mini-cover.spot-4 { width: 28px !important; right: -16px !important; }
+  .bento-mini-cover.spot-5 { width: 30px !important; bottom: -14px !important; }
+  .bento-mini-cover.spot-6 { width: 32px !important; bottom: -14px !important; left: 10px !important; }
+}
+
+
+/* ==========================================================================
+   Hardware & Screen Defense Section (Tempered Glass & Mobile Stands)
+   ========================================================================== */
+.hardware-section {
+  position: relative !important;
+  padding: 84px 0 !important;
+  background: #FAF8F5 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.hardware-header {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: space-between !important;
+  margin-bottom: 40px !important;
+  gap: 24px !important;
+}
+
+.hardware-eyebrow-tag {
+  display: inline-block !important;
+  color: #FF5A18 !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.76rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 10px !important;
+}
+
+.hardware-main-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem) !important;
+  font-weight: 800 !important;
+  color: #0A0A0C !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.hardware-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.95rem !important;
+  color: #6A6E7B !important;
+  max-width: 620px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+.hardware-view-all-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 22px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 999px !important;
+  color: #0A0A0C !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: all 0.22s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.hardware-view-all-btn:hover {
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  border-color: #0A0A0C !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+}
+
+.hardware-arrow-circle {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: currentColor !important;
+  transition: transform 0.22s ease !important;
+}
+
+.hardware-view-all-btn:hover .hardware-arrow-circle {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateX(3px) !important;
+}
+
+.hardware-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+}
+
+.hardware-card {
+  background: #FFFFFF !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.28s ease !important;
+}
+
+.hardware-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09) !important;
+  border-color: rgba(255, 90, 24, 0.3) !important;
+}
+
+.hardware-card-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  padding: 18px !important;
+  box-sizing: border-box !important;
+}
+
+.hardware-card-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 12px !important;
+  z-index: 2 !important;
+}
+
+.hardware-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 4px 10px !important;
+  background: #FAF8F5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 999px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #0A0A0C !important;
+}
+
+.hardware-card-visual {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  border-radius: 16px !important;
+  background: #F8F6F2 !important;
+  overflow: hidden !important;
+  margin-bottom: 16px !important;
+  text-decoration: none !important;
+}
+
+.hardware-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hardware-card:hover .hardware-card-img {
+  transform: scale(1.05) !important;
+}
+
+.hardware-discount-pill {
+  position: absolute !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  padding: 4px 8px !important;
+  background: #FF5A18 !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  border-radius: 6px !important;
+  letter-spacing: 0.02em !important;
+}
+
+.hardware-card-info {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+.hardware-meta-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 8px !important;
+}
+
+.hardware-category-label {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #8E92A0 !important;
+}
+
+.hardware-product-title {
+  margin: 0 0 6px 0 !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+}
+
+.hardware-product-title a {
+  color: #0A0A0C !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.hardware-product-title a:hover {
+  color: #FF5A18 !important;
+}
+
+.hardware-product-features {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.76rem !important;
+  color: #717584 !important;
+  line-height: 1.4 !important;
+  margin: 0 0 16px 0 !important;
+  flex-grow: 1 !important;
+}
+
+.hardware-card-footer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 12px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.hardware-price-stack {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 8px !important;
+}
+
+.hardware-price {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 1.15rem !important;
+  font-weight: 900 !important;
+  color: #0A0A0C !important;
+}
+
+.hardware-price-original {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.82rem !important;
+  color: #A0A4B2 !important;
+  text-decoration: line-through !important;
+}
+
+.hardware-add-btn {
+  height: 36px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.hardware-add-btn:hover {
+  background: #FF5A18 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(255, 90, 24, 0.35) !important;
+}
+
+@media (max-width: 1080px) {
+  .hardware-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hardware-section {
+    padding: 50px 0 !important;
+  }
+  .hardware-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  .hardware-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .hardware-card-inner {
+    padding: 14px !important;
+  }
+  .hardware-product-title {
+    font-size: 0.90rem !important;
   }
 }
