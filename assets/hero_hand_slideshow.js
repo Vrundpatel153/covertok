@@ -32,7 +32,7 @@
       prevIndex = oldIdx;
       currentIndex = idx;
 
-      // 1. Dual-phase in/out transition for hand frames
+      // 1. Seamless in/out transition for hand frames (hand remains stationary & 100% solid)
       frames.forEach((f, i) => {
         if (i === currentIndex) {
           f.classList.remove('exiting');
@@ -45,11 +45,15 @@
         }
       });
 
-      // Clear exiting state after transition duration (420ms)
+      // Clear exiting state after crossfade completes (380ms)
       if (exitClearTimer) clearTimeout(exitClearTimer);
       exitClearTimer = setTimeout(() => {
-        frames.forEach(f => f.classList.remove('exiting'));
-      }, 420);
+        frames.forEach(f => {
+          if (!f.classList.contains('active')) {
+            f.classList.remove('exiting');
+          }
+        });
+      }, 380);
 
       // 2. Switch PC & Mobile Studio Backgrounds with fluid crossfade
       pcBgs.forEach((bg, i) => {

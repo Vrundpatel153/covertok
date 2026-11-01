@@ -50,8 +50,8 @@
     const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
 
     // 3. Bottom step curve (starts at bottom baseline, rises to shelf above action buttons)
-    const botStepX1 = Math.max(0.20, Math.min(0.48, (ctaRight + 24) / cardW));
-    const botStepX2 = Math.max(0.16, Math.min(botStepX1 - 0.038, (ctaRight - 8) / cardW));
+    const botStepX1 = Math.max(0.14, Math.min(0.38, (ctaRight + 20) / cardW));
+    const botStepX2 = Math.max(0.10, Math.min(botStepX1 - 0.038, (ctaRight - 8) / cardW));
 
     // Vertical landmarks
     // Baseline y: under nav links (hlRect.bottom - cRect.top + 16px)
