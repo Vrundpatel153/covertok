@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=20261101_handfix_v1">
+  <link rel="stylesheet" href="styles.css?v=20261101_storyfix_v2">
 
   <link rel="stylesheet" href="catalog.css?v=20261101_palette_v2">
 
@@ -3832,125 +3832,77 @@
 
 
     <section class="story-section" id="story" aria-label="The Covertok Story: Our Story Our Style">
-
       <div class="story-container">
-
         
-
         <!-- Full-Width Hero Video Banner: Centered in Middle Proper -->
-
         <div class="story-video-banner" id="storyVideoBanner">
-
           
-
           <!-- Background Video & Atmospheric Backdrop -->
-
           <div class="story-banner-media">
-
-            <video class="story-bg-video" id="storyBgVideo" autoplay muted loop playsinline preload="auto" poster="assets/story/story_cases_backdrop.jpg">
-
-              <source src="assets/story/story_bg_video.mp4" type="video/mp4">
-
-              <source src="assets/community_videos/video_77297.mp4" type="video/mp4">
-
+            <video class="story-bg-video" id="storyBgVideo" autoplay muted loop playsinline preload="auto" poster="assets/story/story_cases_backdrop.jpg?v=20261101_v2">
+              <source src="assets/story/story_bg_video.mp4?v=20261101_v2" type="video/mp4">
+              <source src="assets/story/story_brand_cinematic.mp4" type="video/mp4">
             </video>
-
             <!-- Cinematic Dark Scrim Overlay to ensure optimal contrast & readability -->
-
             <div class="story-banner-overlay" aria-hidden="true"></div>
-
           </div>
-
-
 
           <!-- Story Narrative Written in Middle of Video -->
-
           <div class="story-center-content">
-
-            <!-- Main Heading Centered in Middle of Video -->
-
-            <h2 class="story-hero-title">
-
-              OUR STORY <span class="story-title-accent">OUR STYLE</span>
-
-            </h2>
-
-
-
-            <!-- Descriptive Narrative Body Text -->
-
-            <p class="story-hero-desc">
-
-              Premium protection blended with expressive design.
-
-            </p>
-
-
-
-            <!-- Actions Row -->
-
-            <div class="story-actions-group">
-
-              <a href="about.html" class="story-btn-primary" id="storyCtaLink" aria-label="Get to know us: Explore our story">
-
-                <span>Explore Story</span>
-
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-
-                  <polyline points="12 5 19 12 12 19"></polyline>
-
-                </svg>
-
-              </a>
-
+            <!-- Eyebrow Pill -->
+            <div class="story-eyebrow-pill">
+              <span class="story-eyebrow-dot" aria-hidden="true"></span>
+              <span class="story-eyebrow-text">BEHIND THE BRAND</span>
             </div>
 
+            <!-- Main Heading Centered in Middle of Video -->
+            <h2 class="story-hero-title">
+              OUR STORY <span class="story-title-accent">OUR STYLE</span>
+            </h2>
 
+            <!-- Descriptive Narrative Body Text -->
+            <p class="story-hero-desc">
+              Premium protection blended with expressive design.
+            </p>
+
+            <!-- Actions Row: Explore Story + Watch Full Film -->
+            <div class="story-actions-group">
+              <a href="about.html" class="story-btn-primary" id="storyCtaLink" aria-label="Get to know us: Explore our story">
+                <span>Explore Story</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <button type="button" class="story-btn-watch" id="storyPlayBtn" aria-label="Watch full brand story video in full screen">
+                <svg class="story-watch-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Watch Full Film</span>
+              </button>
+            </div>
 
           </div>
 
-
-
         </div>
 
-
-
       </div>
-
-
 
       <!-- Luxury Brand Video Modal Dialog -->
-
       <div class="story-video-modal" id="storyVideoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="The Covertok Story Video">
-
         <div class="story-modal-backdrop" id="storyModalBackdrop"></div>
-
         <div class="story-modal-dialog">
-
           <button type="button" class="story-modal-close" id="storyModalClose" aria-label="Close video dialog">&times;</button>
-
           <div class="story-modal-video-wrap">
-
-            <video class="story-modal-player" id="storyModalPlayer" controls preload="metadata" playsinline poster="assets/story/story_cases_backdrop.jpg">
-
-              <source src="assets/story/story_bg_video.mp4" type="video/mp4">
-
+            <video class="story-modal-player" id="storyModalPlayer" controls preload="metadata" playsinline poster="assets/story/story_cases_backdrop.jpg?v=20261101_v2">
               <source src="assets/story/story_brand_cinematic.mp4" type="video/mp4">
-
-              <source src="assets/community_videos/video_77297.mp4" type="video/mp4">
-
+              <source src="assets/story/story_bg_video.mp4?v=20261101_v2" type="video/mp4">
               Your browser does not support the video tag.
-
             </video>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
 

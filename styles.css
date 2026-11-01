@@ -23047,7 +23047,8 @@ a.footer-contact-main:hover {
 
 
 
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
+  max-height: 84vh;
 
 
 
@@ -24223,7 +24224,8 @@ a.footer-contact-main:hover {
 
 
 
-  max-width: 960px;
+  max-width: 440px;
+  max-height: 88vh;
 
 
 
@@ -44391,33 +44393,12 @@ a.footer-contact-main:hover {
 
 
 .story-container {
-
-
-
   width: 100%;
-
-
-
-  max-width: 1360px;
-
-
-
-  padding: 50px 24px;
-
-
-
+  max-width: 1400px;
+  padding: 32px clamp(16px, 2.5vw, 36px);
   margin: 0 auto;
-
-
-
   box-sizing: border-box;
-
-
-
   position: relative;
-
-
-
 }
 
 
@@ -44433,32 +44414,18 @@ a.footer-contact-main:hover {
 .story-video-banner {
   position: relative;
   width: 100%;
-  min-height: 380px;
-  max-height: 420px;
-  border-radius: 26px;
+  min-height: 520px;
+  height: clamp(500px, 58vh, 620px);
+  max-height: 640px;
+  border-radius: 28px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-
   background-color: #0b0c0f;
-
-
-
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16), 0 4px 16px rgba(0, 0, 0, 0.08);
-
-
-
-  border: 1px solid rgba(255, 255, 255, 0.09);
-
-
-
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.22), 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
-
-
-
 }
 
 
@@ -44536,10 +44503,7 @@ a.footer-contact-main:hover {
 
 
   object-fit: cover;
-
-
-
-  object-position: center 20%;
+  object-position: center 48%;
 
 
 
@@ -44584,29 +44548,11 @@ a.footer-contact-main:hover {
 
 
 .story-banner-overlay {
-
-
-
   position: absolute;
-
-
-
   inset: 0;
-
-
-
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.38) 50%, rgba(0, 0, 0, 0.58) 100%);
-
-
-
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.62) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.52) 100%);
   z-index: 2;
-
-
-
   pointer-events: none;
-
-
-
 }
 
 
@@ -45395,49 +45341,16 @@ a.footer-contact-main:hover {
 
 
 .story-modal-dialog {
-
-
-
   position: relative;
-
-
-
   z-index: 10;
-
-
-
-  width: 90%;
-
-
-
-  max-width: 960px;
-
-
-
+  width: 92%;
+  max-width: 440px;
   background: #000000;
-
-
-
-  border-radius: 20px;
-
-
-
+  border-radius: 24px;
   overflow: hidden;
-
-
-
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-
-
-
   transform: scale(0.92);
-
-
-
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-
-
-
 }
 
 
@@ -45563,25 +45476,11 @@ a.footer-contact-main:hover {
 
 
 .story-modal-video-wrap {
-
-
-
   position: relative;
-
-
-
   width: 100%;
-
-
-
-  aspect-ratio: 16 / 9;
-
-
-
+  aspect-ratio: 9 / 16;
+  max-height: 85vh;
   background: #000000;
-
-
-
 }
 
 
@@ -45647,9 +45546,10 @@ a.footer-contact-main:hover {
 
 
   .story-video-banner {
-    min-height: 340px;
-    max-height: 380px;
-    border-radius: 22px;
+    min-height: 480px;
+    height: 500px;
+    max-height: 540px;
+    border-radius: 24px;
   }
 
 
@@ -45735,9 +45635,10 @@ a.footer-contact-main:hover {
 
 
   .story-video-banner {
-    min-height: 290px;
-    max-height: 330px;
-    border-radius: 20px;
+    min-height: 480px;
+    height: clamp(450px, 68vh, 520px);
+    max-height: 540px;
+    border-radius: 24px;
     align-items: center;
     justify-content: center;
   }
