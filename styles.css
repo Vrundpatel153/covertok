@@ -55359,29 +55359,54 @@ body.home-page .hero-content {
   }
 }
 
-
 /* ==========================================================================
    ENLARGED POPULAR CHOICES, HARDWARE CARDS, COLOR PALETTES & ADD TO CART
    ========================================================================== */
+
+/* 1. Hide popular slider tags (IPHONE CASE, WATCH BAND) site-wide */
+.pop-slider-tag {
+  display: none !important;
+}
+
+/* 2. Popular Choices Section Dimensions */
+.popular-feature-card {
+  height: 420px !important;
+}
+
+.popular-slider-wrap {
+  height: 420px !important;
+}
+
+/* 3. Enlarged Slider Items & Cards */
 .pop-slider-item {
-  flex: 0 0 280px !important;
-  width: 280px !important;
-  height: auto !important;
-  min-height: 420px !important;
+  flex: 0 0 270px !important;
+  width: 270px !important;
+  height: 385px !important;
+  min-height: 385px !important;
 }
 
 .pop-slider-card {
   width: 100% !important;
   height: 100% !important;
-  padding: 14px !important;
+  padding: 14px 14px 16px !important;
   border-radius: 20px !important;
   box-sizing: border-box !important;
   display: flex !important;
   flex-direction: column !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #E5E7EB !important;
+  text-decoration: none !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.pop-slider-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: #0A0A0C !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09) !important;
 }
 
 .pop-slider-img-wrap {
-  height: 205px !important;
+  height: 215px !important;
   border-radius: 14px !important;
   background: #F8F6F2 !important;
   display: flex !important;
@@ -55392,7 +55417,7 @@ body.home-page .hero-content {
 }
 
 .pop-slider-img {
-  max-height: 180px !important;
+  max-height: 190px !important;
   max-width: 88% !important;
   object-fit: contain !important;
   transition: transform 0.25s ease !important;
@@ -55406,27 +55431,62 @@ body.home-page .hero-content {
   display: flex !important;
   flex-direction: column !important;
   flex: 1 !important;
+  min-width: 0 !important;
 }
 
+/* 4. Strictly Single-Line Truncated Title with Ellipsis */
 .pop-slider-title {
-  font-size: 0.92rem !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.94rem !important;
+  font-weight: 700 !important;
+  color: #111113 !important;
   line-height: 1.35 !important;
-  min-height: 2.7em !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important;
+  min-height: 0 !important;
+  white-space: nowrap !important;
   overflow: hidden !important;
-  margin-bottom: 6px !important;
+  text-overflow: ellipsis !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 6px !important;
 }
 
+/* 5. Color Palette in Popular Choices Cards */
+.pop-slider-card .product-color-palette {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  margin: 6px 0 10px !important;
+  padding: 0 !important;
+  min-height: 18px !important;
+}
+
+/* 6. Bottom Price & ADD TO CART Action Row */
 .pop-slider-bottom {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  gap: 10px !important;
+  gap: 8px !important;
   margin-top: auto !important;
   padding-top: 10px !important;
   border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.pop-slider-price {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.pop-price-now {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.98rem !important;
+  font-weight: 800 !important;
+  color: #111113 !important;
+}
+
+.pop-price-was {
+  font-size: 0.78rem !important;
+  color: #94A3B8 !important;
+  text-decoration: line-through !important;
 }
 
 .pop-quick-add-btn,
@@ -55439,7 +55499,7 @@ body.home-page .hero-content {
   color: #FFFFFF !important;
   border: 1px solid rgba(0, 0, 0, 0.15) !important;
   border-radius: 999px !important;
-  padding: 8px 16px !important;
+  padding: 7px 14px !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
   font-size: 0.72rem !important;
   font-weight: 700 !important;
@@ -55460,7 +55520,7 @@ body.home-page .hero-content {
   box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
 }
 
-/* Hardware Section Sizing */
+/* 7. Hardware Section Sizing */
 .hardware-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
@@ -55483,7 +55543,7 @@ body.home-page .hero-content {
   max-width: 88% !important;
 }
 
-/* Universal Product Color Palette */
+/* 8. Universal Product Color Palette */
 .product-color-palette {
   display: flex !important;
   align-items: center !important;
@@ -55534,7 +55594,7 @@ body.home-page .hero-content {
   justify-content: center !important;
 }
 
-/* Universal suppression of ratings on product cards site-wide */
+/* 9. Universal suppression of ratings on product cards site-wide */
 .drop-rating-tag,
 .drop-rating,
 .card-rating-badge,
@@ -55546,20 +55606,38 @@ body.home-page .hero-content {
   display: none !important;
 }
 
+/* 10. Mobile Responsiveness */
 @media (max-width: 640px) {
+  .popular-feature-card {
+    height: 290px !important;
+    width: 100% !important;
+    flex: 0 0 290px !important;
+  }
+  .popular-slider-wrap {
+    height: 330px !important;
+  }
   .pop-slider-item {
-    flex: 0 0 240px !important;
-    width: 240px !important;
-    min-height: 380px !important;
+    flex: 0 0 230px !important;
+    width: 230px !important;
+    height: 305px !important;
+    min-height: 305px !important;
   }
   .pop-slider-card {
     padding: 12px !important;
     border-radius: 16px !important;
   }
   .pop-slider-img-wrap {
-    height: 175px !important;
+    height: 160px !important;
+    margin-bottom: 8px !important;
   }
   .pop-slider-img {
-    max-height: 150px !important;
+    max-height: 140px !important;
+  }
+  .pop-slider-title {
+    font-size: 0.86rem !important;
+  }
+  .pop-quick-add-btn {
+    padding: 6px 10px !important;
+    font-size: 0.65rem !important;
   }
 }
