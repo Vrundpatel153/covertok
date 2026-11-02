@@ -37,10 +37,103 @@
   // 3. CART STATE
   const CART_KEY = 'covertok_cart_items_v2';
   
+  const BUNDLE_PRICE = 1199;
+  const ELIGIBLE_PRICE_LIMIT = 799;
+
+  function calculateCartOffer(cart) {
+    cart = Array.isArray(cart) ? cart : [];
+    let subtotal = 0;
+    let totalMrp = 0;
+    let totalQty = 0;
+    const allUnits = [];
+
+    cart.forEach((item, itemIdx) => {
+      const qty = Math.max(1, parseInt(item.qty, 10) || 1);
+      const price = Number(item.price) || 0;
+      const mrp = Number(item.original_price) || (price > 0 ? Math.round(price * 1.5) : 0);
+      const isEligible = price > 0 && price <= ELIGIBLE_PRICE_LIMIT;
+
+      subtotal += price * qty;
+      totalMrp += mrp * qty;
+      totalQty += qty;
+
+      for (let i = 0; i < qty; i++) {
+        allUnits.push({
+          itemIdx,
+          id: String(item.id),
+          title: item.title,
+          price,
+          mrp,
+          isEligible
+        });
+      }
+    });
+
+    const eligibleUnits = allUnits.filter(u => u.isEligible);
+    const eligibleCount = eligibleUnits.length;
+    const bundlesCount = Math.floor(eligibleCount / 3);
+    const remainder = eligibleCount % 3;
+    const neededForNext = (3 - remainder) % 3 || 3;
+
+    // Sort descending by price to maximize customer savings
+    eligibleUnits.sort((a, b) => b.price - a.price);
+
+    const bundledUnits = eligibleUnits.slice(0, bundlesCount * 3);
+    const bundledSum = bundledUnits.reduce((acc, u) => acc + u.price, 0);
+    const bundleOfferPrice = bundlesCount * BUNDLE_PRICE;
+    const bundleDiscount = Math.max(0, bundledSum - bundleOfferPrice);
+
+    const bundledCountsByItem = {};
+    bundledUnits.forEach(u => {
+      bundledCountsByItem[u.itemIdx] = (bundledCountsByItem[u.itemIdx] || 0) + 1;
+    });
+
+    const totalSavings = (totalMrp - subtotal) + bundleDiscount;
+
+    return {
+      subtotal,
+      totalMrp,
+      totalQty,
+      eligibleCount,
+      bundlesCount,
+      remainder,
+      neededForNext,
+      bundleDiscount,
+      totalSavings,
+      bundledCountsByItem
+    };
+  }
+
   function getCart() {
     try {
       const data = localStorage.getItem(CART_KEY);
-      return data ? JSON.parse(data) : [];
+      let items = data ? JSON.parse(data) : [];
+      // Unpack any legacy is_combo items into individual product items
+      let unpacked = false;
+      const cleanItems = [];
+      items.forEach(item => {
+        if (item && item.is_combo && Array.isArray(item.bundle_items) && item.bundle_items.length) {
+          unpacked = true;
+          item.bundle_items.forEach(b => {
+            cleanItems.push({
+              id: String(b.id || Date.now()),
+              title: b.title,
+              price: Number(b.price || 649),
+              qty: 1,
+              img: b.image || item.img || 'assets/phone_cream.webp',
+              color: '',
+              model: '',
+              original_price: Number(b.original_price || b.price || 999)
+            });
+          });
+        } else {
+          cleanItems.push(item);
+        }
+      });
+      if (unpacked) {
+        localStorage.setItem(CART_KEY, JSON.stringify(cleanItems));
+      }
+      return cleanItems;
     } catch (e) {
       return [];
     }
@@ -63,6 +156,12 @@
   window.CovertokStore = {
     getCart: getCart,
     getWishlist: function() { return []; },
+    calculateCartOffer: calculateCartOffer,
+    isEligibleForBundle: function(item) {
+      if (!item) return false;
+      const price = Number(item.price || 0);
+      return price > 0 && price <= ELIGIBLE_PRICE_LIMIT;
+    },
     
     addToCart: function(item) {
       const cart = getCart();
@@ -135,7 +234,9 @@
   function updateCartUI() {
     const cart = getCart();
     const count = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
-    const subtotal = cart.reduce((acc, item) => acc + (item.price * (item.qty || 1)), 0);
+    const offer = calculateCartOffer(cart);
+    const subtotal = offer.subtotal;
+    const finalTotal = Math.max(0, subtotal - offer.bundleDiscount);
 
     // Update badges
     document.querySelectorAll('#cartCount, .cart-badge, .cart-badge-count, .pdp-badge-count').forEach(el => {
@@ -154,13 +255,109 @@
       drawerBadge.textContent = count;
     }
 
-    // Update subtotal
-    document.querySelectorAll('#cartSubtotal, #cartTotal, #cartTotalDisplay').forEach(el => {
+    // Update subtotal and totals
+    document.querySelectorAll('#cartSubtotal, #cartDrawerSubtotal').forEach(el => {
       el.textContent = `Rs. ${subtotal.toLocaleString('en-IN')}.00`;
     });
+    document.querySelectorAll('#cartTotal, #cartDrawerTotal, #cartTotalDisplay').forEach(el => {
+      el.textContent = `Rs. ${finalTotal.toLocaleString('en-IN')}.00`;
+    });
+
+    // Bundle discount line in footer
+    const bundleRow = document.getElementById('cartBundleDiscountRow');
+    const bundleVal = document.getElementById('cartDrawerBundleDiscount');
+    if (bundleRow && bundleVal) {
+      if (offer.bundleDiscount > 0) {
+        bundleRow.style.setProperty('display', 'flex', 'important');
+        bundleRow.classList.remove('is-hidden');
+        bundleVal.textContent = `-Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}.00`;
+      } else {
+        bundleRow.style.setProperty('display', 'none', 'important');
+        bundleRow.classList.add('is-hidden');
+      }
+    }
+
+    // Original crossed-out total if savings exist
+    const origTotalEl = document.getElementById('cartDrawerOriginalTotal');
+    if (origTotalEl) {
+      if (offer.bundleDiscount > 0) {
+        origTotalEl.style.display = 'inline';
+        origTotalEl.textContent = `Rs. ${subtotal.toLocaleString('en-IN')}.00`;
+      } else {
+        origTotalEl.style.display = 'none';
+      }
+    }
+
+    // Celebratory Savings Strip
+    const savingsStrip = document.getElementById('cartSavingsStrip');
+    const savingsAmt = document.getElementById('cartSavingsAmount');
+    if (savingsStrip && savingsAmt) {
+      if (offer.totalSavings > 0) {
+        savingsStrip.style.display = 'block';
+        savingsAmt.textContent = `₹${offer.totalSavings.toLocaleString('en-IN')}`;
+      } else {
+        savingsStrip.style.display = 'none';
+      }
+    }
+
+    // Milestone Progress Tracker
+    const milestoneFill = document.getElementById('cartMilestoneFill');
+    const milestoneInstruction = document.getElementById('cartBundleInstruction');
+    const node1 = document.getElementById('milestoneNode1');
+    const node2 = document.getElementById('milestoneNode2');
+    const node3 = document.getElementById('milestoneNode3');
+
+    const eligibleCount = offer.eligibleCount;
+    const bundlesCount = offer.bundlesCount;
+    const remainder = offer.remainder;
+
+    if (milestoneFill && milestoneInstruction) {
+      if (bundlesCount === 0) {
+        if (eligibleCount === 0) {
+          milestoneFill.style.width = '0%';
+          milestoneInstruction.innerHTML = 'Add <strong>3 eligible items</strong> (under ₹799) to get <strong>3 for ₹1,199</strong>';
+          if (node1) node1.className = 'cart-milestone-node';
+          if (node2) node2.className = 'cart-milestone-node';
+          if (node3) node3.className = 'cart-milestone-node';
+        } else if (eligibleCount === 1) {
+          milestoneFill.style.width = '33%';
+          milestoneInstruction.innerHTML = 'Add <strong>2 more</strong> eligible items to get <strong>3 for ₹1,199</strong>';
+          if (node1) node1.className = 'cart-milestone-node is-completed is-active';
+          if (node2) node2.className = 'cart-milestone-node';
+          if (node3) node3.className = 'cart-milestone-node';
+        } else if (eligibleCount === 2) {
+          milestoneFill.style.width = '66%';
+          milestoneInstruction.innerHTML = 'Add <strong>1 more</strong> eligible item to get <strong>3 for ₹1,199</strong>';
+          if (node1) node1.className = 'cart-milestone-node is-completed';
+          if (node2) node2.className = 'cart-milestone-node is-completed is-active';
+          if (node3) node3.className = 'cart-milestone-node';
+        }
+      } else {
+        if (remainder === 0) {
+          milestoneFill.style.width = '100%';
+          const bundleWord = bundlesCount === 1 ? 'Bundle' : `${bundlesCount} Bundles`;
+          milestoneInstruction.innerHTML = `🎉 <strong>3 for ₹1,199 ${bundleWord} Unlocked!</strong> You save Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}`;
+          if (node1) node1.className = 'cart-milestone-node is-completed';
+          if (node2) node2.className = 'cart-milestone-node is-completed';
+          if (node3) node3.className = 'cart-milestone-node is-completed is-unlocked';
+        } else if (remainder === 1) {
+          milestoneFill.style.width = '33%';
+          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>2 more</strong> to unlock another 3 for ₹1,199`;
+          if (node1) node1.className = 'cart-milestone-node is-completed is-active';
+          if (node2) node2.className = 'cart-milestone-node';
+          if (node3) node3.className = 'cart-milestone-node';
+        } else if (remainder === 2) {
+          milestoneFill.style.width = '66%';
+          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>1 more</strong> to unlock another 3 for ₹1,199`;
+          if (node1) node1.className = 'cart-milestone-node is-completed';
+          if (node2) node2.className = 'cart-milestone-node is-completed is-active';
+          if (node3) node3.className = 'cart-milestone-node';
+        }
+      }
+    }
 
     // Update footer visibility based on cart emptiness
-    const footers = document.querySelectorAll('.cart-drawer-footer, .cart-footer');
+    const footers = document.querySelectorAll('.cart-drawer-footer, .cart-footer, #cartDrawerFooter');
     footers.forEach(f => {
       f.style.display = cart.length === 0 ? 'none' : 'block';
     });
@@ -190,71 +387,50 @@
       }
 
       cart.forEach((item, idx) => {
-        const row = document.createElement('div');
-        row.className = `cart-item-row ${item.is_combo ? 'cart-combo-item-row' : ''}`;
-        
-        const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
-        const bundleList = Array.isArray(item.bundle_items) ? item.bundle_items : [];
+        const price = Number(item.price || 0);
+        const isElig = price > 0 && price <= ELIGIBLE_PRICE_LIMIT;
+        const bundledCount = (offer.bundledCountsByItem && offer.bundledCountsByItem[idx]) || 0;
 
-        if (item.is_combo) {
-          row.innerHTML = `
-            <div class="cart-item-img-col">
-              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" class="cart-item-thumb">
-              <span class="cart-item-tag-badge">3-IN-1</span>
-            </div>
-            <div class="cart-item-details-col">
-              <div class="cart-item-header-line">
-                <span class="cart-combo-badge">3-Piece Combo</span>
-                <h4 class="cart-item-title">${item.title}</h4>
-              </div>
-              ${bundleList.length ? `
-                <div class="cart-combo-mini-bundle">
-                  ${bundleList.map((b) => `
-                    <div class="cart-combo-mini-item">
-                      <span class="cart-combo-mini-cat">${b.category || 'Item'}:</span>
-                      <span class="cart-combo-mini-name">${b.title}</span>
-                    </div>
-                  `).join('')}
-                </div>
-              ` : (variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : '')}
-              <div class="cart-item-actions-row">
-                <div class="cart-qty-stepper">
-                  <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" aria-label="Decrease quantity">−</button>
-                  <span class="cart-qty-num">${item.qty}</span>
-                  <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" aria-label="Increase quantity">+</button>
-                </div>
-                <div class="cart-item-price-wrap">
-                  <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-                  ${item.original_price ? `<span class="cart-item-old-price">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
-                </div>
-                <button type="button" class="cart-item-remove-btn cart-remove-btn" data-remove="${idx}" title="Remove item" aria-label="Remove item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                </button>
-              </div>
-            </div>
-          `;
+        let tagHtml = '';
+        if (bundledCount > 0) {
+          tagHtml = '<span class="cart-tag-deal">3 for ₹1,199 Deal</span>';
+        } else if (isElig) {
+          tagHtml = '<span class="cart-tag-eligible">Eligible for 3 @ ₹1,199</span>';
         } else {
-          row.innerHTML = `
-            <div class="cart-item-img-col">
-              <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" class="cart-item-thumb">
-            </div>
-            <div class="cart-item-details-col">
-              <h4 class="cart-item-title">${item.title}</h4>
-              ${variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : ''}
-              <div class="cart-item-actions-row">
-                <div class="cart-qty-stepper">
-                  <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" aria-label="Decrease quantity">−</button>
-                  <span class="cart-qty-num">${item.qty}</span>
-                  <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" aria-label="Increase quantity">+</button>
-                </div>
-                <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-                <button type="button" class="cart-item-remove-btn cart-remove-btn" data-remove="${idx}" title="Remove item" aria-label="Remove item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                </button>
-              </div>
-            </div>
-          `;
+          tagHtml = '<span class="cart-tag-standard">Standard Item</span>';
         }
+
+        const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
+        const originalPrice = Number(item.original_price) || (price > 0 ? Math.round(price * 1.5) : 0);
+
+        const row = document.createElement('div');
+        row.className = `cart-item-row ${bundledCount > 0 ? 'is-bundled' : ''}`;
+        row.innerHTML = `
+          <div class="cart-item-img-col">
+            <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" class="cart-item-thumb">
+          </div>
+          <div class="cart-item-details-col">
+            <div class="cart-item-meta-top">
+              ${tagHtml}
+            </div>
+            <h4 class="cart-item-title" title="${item.title}">${item.title}</h4>
+            ${variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : ''}
+            <div class="cart-item-actions-row">
+              <div class="cart-qty-stepper">
+                <button type="button" class="cart-qty-btn cart-qty-minus" data-idx="${idx}" aria-label="Decrease quantity">−</button>
+                <span class="cart-qty-num">${item.qty}</span>
+                <button type="button" class="cart-qty-btn cart-qty-plus" data-idx="${idx}" aria-label="Increase quantity">+</button>
+              </div>
+              <div class="cart-item-price-wrap">
+                <span class="cart-item-price">Rs. ${(price * item.qty).toLocaleString('en-IN')}.00</span>
+                ${originalPrice > price ? `<span class="cart-item-old-price">Rs. ${(originalPrice * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
+              </div>
+              <button type="button" class="cart-item-remove-btn cart-remove-btn" data-remove="${idx}" title="Remove item" aria-label="Remove item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              </button>
+            </div>
+          </div>
+        `;
 
         row.querySelector('.cart-qty-minus').addEventListener('click', () => {
           window.CovertokStore.updateCartQty(idx, -1);
@@ -271,7 +447,7 @@
     });
   }
 
-  // 5. DRAWER TOGGLES
+    // 5. DRAWER TOGGLES
   function openCartDrawer() {
     if (window.CovertokFlows && window.CovertokFlows.openCart) {
       window.CovertokFlows.openCart();

@@ -148,7 +148,22 @@
   function renderCartUI() {
     const cart = getCart();
     const count = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
-    const subtotal = cart.reduce((acc, item) => acc + (item.price * (item.qty || 1)), 0);
+    const offer = window.CovertokStore && window.CovertokStore.calculateCartOffer
+      ? window.CovertokStore.calculateCartOffer(cart)
+      : {
+          subtotal: cart.reduce((acc, item) => acc + (item.price * (item.qty || 1)), 0),
+          totalMrp: 0,
+          totalQty: count,
+          eligibleCount: 0,
+          bundlesCount: 0,
+          remainder: 0,
+          neededForNext: 3,
+          bundleDiscount: 0,
+          totalSavings: 0,
+          bundledCountsByItem: {}
+        };
+
+    const subtotal = offer.subtotal;
 
     // Header badge updates
     document.querySelectorAll('#cartCount, .cart-badge, .cart-badge-count, .pdp-badge-count').forEach(el => {
@@ -167,7 +182,63 @@
       drawerBadge.textContent = count;
     }
 
-    // Free Shipping Progress
+    // 1. 3 FOR ₹1,199 MILESTONE PROGRESS TRACKER
+    const milestoneFill = document.getElementById('cartMilestoneFill');
+    const milestoneInstruction = document.getElementById('cartBundleInstruction');
+    const node1 = document.getElementById('milestoneNode1');
+    const node2 = document.getElementById('milestoneNode2');
+    const node3 = document.getElementById('milestoneNode3');
+
+    const eligibleCount = offer.eligibleCount;
+    const bundlesCount = offer.bundlesCount;
+    const remainder = offer.remainder;
+
+    if (milestoneFill && milestoneInstruction) {
+      if (bundlesCount === 0) {
+        if (eligibleCount === 0) {
+          milestoneFill.style.width = '0%';
+          milestoneInstruction.innerHTML = 'Add <strong>3 eligible items</strong> (under ₹799) to get <strong>3 for ₹1,199</strong>';
+          if (node1) node1.className = 'cart-milestone-node';
+          if (node2) node2.className = 'cart-milestone-node';
+          if (node3) node3.className = 'cart-milestone-node';
+        } else if (eligibleCount === 1) {
+          milestoneFill.style.width = '33%';
+          milestoneInstruction.innerHTML = 'Add <strong>2 more</strong> eligible items to get <strong>3 for ₹1,199</strong>';
+          if (node1) node1.className = 'cart-milestone-node is-completed is-active';
+          if (node2) node2.className = 'cart-milestone-node';
+          if (node3) node3.className = 'cart-milestone-node';
+        } else if (eligibleCount === 2) {
+          milestoneFill.style.width = '66%';
+          milestoneInstruction.innerHTML = 'Add <strong>1 more</strong> eligible item to get <strong>3 for ₹1,199</strong>';
+          if (node1) node1.className = 'cart-milestone-node is-completed';
+          if (node2) node2.className = 'cart-milestone-node is-completed is-active';
+          if (node3) node3.className = 'cart-milestone-node';
+        }
+      } else {
+        if (remainder === 0) {
+          milestoneFill.style.width = '100%';
+          const bundleWord = bundlesCount === 1 ? 'Bundle' : `${bundlesCount} Bundles`;
+          milestoneInstruction.innerHTML = `🎉 <strong>3 for ₹1,199 ${bundleWord} Unlocked!</strong> You save Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}`;
+          if (node1) node1.className = 'cart-milestone-node is-completed';
+          if (node2) node2.className = 'cart-milestone-node is-completed';
+          if (node3) node3.className = 'cart-milestone-node is-completed is-unlocked';
+        } else if (remainder === 1) {
+          milestoneFill.style.width = '33%';
+          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>2 more</strong> to unlock another 3 for ₹1,199`;
+          if (node1) node1.className = 'cart-milestone-node is-completed is-active';
+          if (node2) node2.className = 'cart-milestone-node';
+          if (node3) node3.className = 'cart-milestone-node';
+        } else if (remainder === 2) {
+          milestoneFill.style.width = '66%';
+          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>1 more</strong> to unlock another 3 for ₹1,199`;
+          if (node1) node1.className = 'cart-milestone-node is-completed';
+          if (node2) node2.className = 'cart-milestone-node is-completed is-active';
+          if (node3) node3.className = 'cart-milestone-node';
+        }
+      }
+    }
+
+    // 2. Free Shipping Progress
     const progressFill = document.getElementById('cartProgressFill');
     const progressMsg = document.getElementById('cartProgressMsg');
     const shippingBar = progressMsg ? progressMsg.closest('.cart-free-shipping-bar') : null;
@@ -196,18 +267,33 @@
       }
     }
 
-    // Calculate discount if promo active
+    // 3. Discount & Coupon Calculations
+    const afterBundleTotal = Math.max(0, subtotal - offer.bundleDiscount);
     let discountAmount = 0;
     if (activeDiscount) {
       if (activeDiscount.percent) {
-        discountAmount = Math.round((subtotal * activeDiscount.percent) / 100);
+        discountAmount = Math.round((afterBundleTotal * activeDiscount.percent) / 100);
       } else if (activeDiscount.flat) {
         discountAmount = activeDiscount.flat;
       }
     }
-    const finalTotal = Math.max(0, subtotal - discountAmount);
+    const finalTotal = Math.max(0, afterBundleTotal - discountAmount);
 
-    // Discount line display
+    // Bundle discount line in footer
+    const bundleRow = document.getElementById('cartBundleDiscountRow');
+    const bundleVal = document.getElementById('cartDrawerBundleDiscount');
+    if (bundleRow && bundleVal) {
+      if (offer.bundleDiscount > 0) {
+        bundleRow.style.setProperty('display', 'flex', 'important');
+        bundleRow.classList.remove('is-hidden');
+        bundleVal.textContent = `-Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}.00`;
+      } else {
+        bundleRow.style.setProperty('display', 'none', 'important');
+        bundleRow.classList.add('is-hidden');
+      }
+    }
+
+    // Promo code discount line
     const discountLine = document.getElementById('cartDiscountLine');
     const discountCodeLabel = document.getElementById('cartDiscountCodeLabel');
     const discountValDisplay = document.getElementById('cartDiscountVal');
@@ -229,7 +315,31 @@
       el.textContent = `Rs. ${finalTotal.toLocaleString('en-IN')}.00`;
     });
 
-    // Render items list
+    // Original crossed-out total if savings exist
+    const origTotalEl = document.getElementById('cartDrawerOriginalTotal');
+    if (origTotalEl) {
+      if (offer.bundleDiscount > 0 || discountAmount > 0) {
+        origTotalEl.style.display = 'inline';
+        origTotalEl.textContent = `Rs. ${subtotal.toLocaleString('en-IN')}.00`;
+      } else {
+        origTotalEl.style.display = 'none';
+      }
+    }
+
+    // 4. Celebratory Savings Strip
+    const savingsStrip = document.getElementById('cartSavingsStrip');
+    const savingsAmt = document.getElementById('cartSavingsAmount');
+    const totalSavings = (offer.totalSavings || 0) + discountAmount;
+    if (savingsStrip && savingsAmt) {
+      if (totalSavings > 0) {
+        savingsStrip.style.display = 'block';
+        savingsAmt.textContent = `₹${totalSavings.toLocaleString('en-IN')}`;
+      } else {
+        savingsStrip.style.display = 'none';
+      }
+    }
+
+    // 5. Render items list
     const container = document.getElementById('cartDrawerItemsList') || document.getElementById('cartItemsContainer');
     if (!container) return;
 
@@ -255,55 +365,32 @@
     if (footer) footer.style.display = 'block';
 
     container.innerHTML = cart.map((item, idx) => {
-      const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
-      if (item.is_combo) {
-        const bundleList = Array.isArray(item.bundle_items) ? item.bundle_items : [];
-        return `
-          <div class="cart-item-row cart-combo-item-row">
-            <div class="cart-item-img-col">
-              <img src="${item.img || 'assets/combo/combo_master_stage.webp'}" onerror="this.onerror=null; this.src='assets/combo/combo_master_stage.webp';" alt="${item.title}" class="cart-item-thumb">
-              <span class="cart-item-tag-badge">3-IN-1</span>
-            </div>
-            <div class="cart-item-details-col">
-              <div class="cart-item-header-line">
-                <span class="cart-combo-badge">3-Piece Combo</span>
-                <h4 class="cart-item-title">${item.title}</h4>
-              </div>
-              ${bundleList.length ? `
-                <div class="cart-combo-mini-bundle">
-                  ${bundleList.map((b) => `
-                    <div class="cart-combo-mini-item">
-                      <span class="cart-combo-mini-cat">${b.category || 'Item'}:</span>
-                      <span class="cart-combo-mini-name">${b.title}</span>
-                    </div>
-                  `).join('')}
-                </div>
-              ` : (variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : '')}
-              <div class="cart-item-actions-row">
-                <div class="cart-qty-stepper">
-                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, -1)" aria-label="Decrease quantity">−</button>
-                  <span class="cart-qty-num">${item.qty}</span>
-                  <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" aria-label="Increase quantity">+</button>
-                </div>
-                <div class="cart-item-price-wrap">
-                  <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
-                  ${item.original_price ? `<span class="cart-item-old-price">Rs. ${(item.original_price * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
-                </div>
-                <button type="button" class="cart-item-remove-btn" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" aria-label="Remove item">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        `;
+      const price = Number(item.price || 0);
+      const isElig = price > 0 && price <= 799;
+      const bundledCount = (offer.bundledCountsByItem && offer.bundledCountsByItem[idx]) || 0;
+
+      let tagHtml = '';
+      if (bundledCount > 0) {
+        tagHtml = '<span class="cart-tag-deal">3 for ₹1,199 Deal</span>';
+      } else if (isElig) {
+        tagHtml = '<span class="cart-tag-eligible">Eligible for 3 @ ₹1,199</span>';
+      } else {
+        tagHtml = '<span class="cart-tag-standard">Standard Item</span>';
       }
+
+      const variantMeta = [item.color, item.model].filter(Boolean).join(' · ');
+      const originalPrice = Number(item.original_price) || (price > 0 ? Math.round(price * 1.5) : 0);
+
       return `
-        <div class="cart-item-row">
+        <div class="cart-item-row ${bundledCount > 0 ? 'is-bundled' : ''}">
           <div class="cart-item-img-col">
             <img src="${item.img || 'assets/phone_cream.webp'}" onerror="this.onerror=null; this.src='assets/phone_cream.webp';" alt="${item.title}" class="cart-item-thumb">
           </div>
           <div class="cart-item-details-col">
-            <h4 class="cart-item-title">${item.title}</h4>
+            <div class="cart-item-meta-top">
+              ${tagHtml}
+            </div>
+            <h4 class="cart-item-title" title="${item.title}">${item.title}</h4>
             ${variantMeta ? `<div class="cart-item-variant">${variantMeta}</div>` : ''}
             <div class="cart-item-actions-row">
               <div class="cart-qty-stepper">
@@ -311,7 +398,10 @@
                 <span class="cart-qty-num">${item.qty}</span>
                 <button type="button" class="cart-qty-btn" onclick="window.CovertokStore.updateCartQty(${idx}, 1)" aria-label="Increase quantity">+</button>
               </div>
-              <span class="cart-item-price">Rs. ${(item.price * item.qty).toLocaleString('en-IN')}.00</span>
+              <div class="cart-item-price-wrap">
+                <span class="cart-item-price">Rs. ${(price * item.qty).toLocaleString('en-IN')}.00</span>
+                ${originalPrice > price ? `<span class="cart-item-old-price">Rs. ${(originalPrice * item.qty).toLocaleString('en-IN')}.00</span>` : ''}
+              </div>
               <button type="button" class="cart-item-remove-btn" onclick="window.CovertokStore.removeFromCart(${idx})" title="Remove item" aria-label="Remove item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
               </button>
@@ -322,7 +412,7 @@
     }).join('');
   }
 
-  // Promo Code Handler
+    // Promo Code Handler
   window.applyPromoCode = function(code) {
     const c = (code || '').trim().toUpperCase();
     if (!c) return;
@@ -372,13 +462,17 @@
     // Update Checkout Summary line
     const cart = getCart();
     const count = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
-    const subtotal = cart.reduce((acc, item) => acc + (item.price * (item.qty || 1)), 0);
+    const offer = window.CovertokStore && window.CovertokStore.calculateCartOffer
+      ? window.CovertokStore.calculateCartOffer(cart)
+      : { subtotal: cart.reduce((acc, item) => acc + (item.price * (item.qty || 1)), 0), bundleDiscount: 0 };
+    const subtotal = offer.subtotal;
+    const afterBundleTotal = Math.max(0, subtotal - offer.bundleDiscount);
     let discountAmount = 0;
     if (activeDiscount) {
-      if (activeDiscount.percent) discountAmount = Math.round((subtotal * activeDiscount.percent) / 100);
+      if (activeDiscount.percent) discountAmount = Math.round((afterBundleTotal * activeDiscount.percent) / 100);
       else if (activeDiscount.flat) discountAmount = activeDiscount.flat;
     }
-    const finalTotal = Math.max(0, subtotal - discountAmount);
+    const finalTotal = Math.max(0, afterBundleTotal - discountAmount);
     const summaryEl = document.getElementById('checkoutSummaryTotal');
     if (summaryEl) summaryEl.textContent = `Rs. ${finalTotal.toLocaleString('en-IN')}.00 (${count} items)`;
 

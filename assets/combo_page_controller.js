@@ -12,10 +12,14 @@
   // 1. Identify and categorize eligible products only
   function classifyProduct(p) {
     if (!p) return null;
+    const price = Number(p.price || 0);
+    // 3 in 1199 Offer: strictly products under 799 only!
+    if (price > 799) return null;
+
     const cat = p.category || '';
     const title = (p.title || '').toLowerCase();
 
-    if (cat === 'iphone-cases') {
+    if (cat === 'iphone-cases' || cat === 'mens-cover' || cat === 'womens-cover') {
       return { key: 'mobile-cover', label: 'Phone Case' };
     }
     if (cat === 'watchbands') {
@@ -29,6 +33,9 @@
     }
     if (cat === 'airpod-covers') {
       return { key: 'airpod-cover', label: 'AirPod Case' };
+    }
+    if (cat === 'cover-charms' || cat === 'other-accessories') {
+      return { key: 'mobile-cover', label: 'Accessory' };
     }
     return null;
   }
@@ -752,32 +759,30 @@
         return;
       }
 
-      const [s1, s2, s3] = selectedItems;
-      const totalOriginal = (Number(s1.original_price || s1.price) + Number(s2.original_price || s2.price) + Number(s3.original_price || s3.price));
+      // Add each item individually into universal cart - 3 for ₹1,199 auto-applied
+      selectedItems.forEach(item => {
+        if (window.CovertokStore && window.CovertokStore.addToCart) {
+          window.CovertokStore.addToCart({
+            id: String(item.id),
+            title: item.title,
+            price: Number(item.price),
+            original_price: Number(item.original_price || item.price),
+            img: item.image || item.thumb || 'assets/phone_cream.webp',
+            qty: 1,
+            color: item.selectedColor || item.color || '',
+            model: item.selectedModel || item.model || ''
+          });
+        }
+      });
 
-      const comboBundle = {
-        id: `combo-3in1-${s1.id}-${s2.id}-${s3.id}`,
-        is_combo: true,
-        title: `3-Piece Luxury Combo Deal`,
-        price: BUNDLE_PRICE,
-        original_price: totalOriginal,
-        img: s1.image || 'assets/phone_cream.webp',
-        qty: 1,
-        bundle_items: [
-          { id: s1.id, title: s1.title, image: s1.image, price: s1.price, category: s1.category_label },
-          { id: s2.id, title: s2.title, image: s2.image, price: s2.price, category: s2.category_label },
-          { id: s3.id, title: s3.title, image: s3.image, price: s3.price, category: s3.category_label }
-        ],
-        color: '3 Items Bundle',
-        model: `${s1.category_label} + ${s2.category_label} + ${s3.category_label}`
-      };
+      state.slots = { 1: null, 2: null, 3: null };
+      saveSlots(state.slots);
+      renderStickyBarUI();
+      updateAllCardsCheckboxUI();
 
-      if (window.CovertokStore && window.CovertokStore.addToCart) {
-        window.CovertokStore.addToCart(comboBundle);
-      } else if (window.showToast) {
-        window.showToast('Added 3-Piece Combo to Cart for ₹1,199!', 'bag');
+      if (window.showToast) {
+        window.showToast('Added 3 items to Cart • 3 for ₹1,199 Bundle Applied!', 'bag');
       }
-
       if (window.renderCartUI) window.renderCartUI();
       if (window.CovertokFlows && window.CovertokFlows.openCart) {
         window.CovertokFlows.openCart();

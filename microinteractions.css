@@ -3326,3 +3326,699 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 
 
+
+/* ==========================================================================
+   UNIVERSAL CART DRAWER & 3 FOR ₹1,199 MILESTONE PROGRESS TRACKER
+   Covertok Clean Luxury Theme: Orange (#FF5500), White, Obsidian Black
+   ========================================================================== */
+
+/* Top Announcement Strip inside Cart Sheet */
+.cart-top-announcement {
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  text-align: center;
+  padding: 8px 12px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cart-top-announcement-text {
+  color: #FFFFFF;
+}
+
+/* 3 FOR ₹1,199 MILESTONE PROGRESS CARD */
+.cart-bundle-progress-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F5 100%) !important;
+  border: 1.5px solid #FFD9C6 !important;
+  border-radius: 14px !important;
+  padding: 13px 15px !important;
+  margin-bottom: 14px !important;
+  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.05), inset 0 1px 1.5px #FFFFFF !important;
+  position: relative;
+}
+
+.cart-bundle-tracker-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.cart-bundle-badge-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 800;
+  color: #FF5500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cart-bundle-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FF5500;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25);
+  animation: bundleDotPulse 2s infinite ease-in-out;
+}
+
+@keyframes bundleDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.cart-bundle-eligibility-note {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11px;
+  color: #71717A;
+  font-weight: 600;
+}
+
+.cart-bundle-instruction {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 13px;
+  color: #18181B;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.cart-bundle-instruction strong {
+  color: #0A0A0C;
+  font-weight: 700;
+}
+
+/* 3-Step Milestone Stepper */
+.cart-milestone-stepper {
+  position: relative;
+  padding: 4px 6px 0 6px;
+}
+
+.cart-milestone-track {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: #E4E4E7;
+  border-radius: 999px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cart-milestone-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF7733 0%, #FF5500 100%);
+  border-radius: 999px;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-milestone-nodes {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.cart-milestone-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-milestone-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #D4D4D8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: #71717A;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.cart-milestone-check {
+  display: none;
+}
+
+.cart-milestone-lbl {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  color: #71717A;
+  transition: color 0.2s ease;
+}
+
+.cart-milestone-lbl-bold {
+  color: #FF5500;
+  font-weight: 700;
+}
+
+/* Completed & Active Node States */
+.cart-milestone-node.is-completed .cart-milestone-circle {
+  background: #FF5500;
+  border-color: #FF5500;
+  color: #FFFFFF;
+}
+
+.cart-milestone-node.is-completed .cart-milestone-num {
+  display: none;
+}
+
+.cart-milestone-node.is-completed .cart-milestone-check {
+  display: block;
+  stroke: #FFFFFF;
+}
+
+.cart-milestone-node.is-completed .cart-milestone-lbl {
+  color: #0A0A0C;
+  font-weight: 700;
+}
+
+.cart-milestone-node.is-active .cart-milestone-circle {
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.25);
+}
+
+.cart-milestone-node.is-unlocked .cart-milestone-circle {
+  background: #FF5500;
+  border-color: #FF5500;
+  color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(255, 85, 0, 0.45);
+}
+
+/* Cart Item Tags */
+.cart-item-meta-top {
+  margin-bottom: 4px;
+}
+
+.cart-tag-deal {
+  display: inline-block;
+  background: #FFF0E8 !important;
+  color: #FF5500 !important;
+  border: 1px solid rgba(255, 85, 0, 0.4) !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 1.5px 7px !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.cart-tag-eligible {
+  display: inline-block;
+  background: #F4F4F5 !important;
+  color: #3F3F46 !important;
+  border: 1px solid #E4E4E7 !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 1.5px 7px !important;
+  border-radius: 4px !important;
+}
+
+.cart-tag-standard {
+  display: inline-block;
+  background: #FAFAFA !important;
+  color: #71717A !important;
+  border: 1px solid #E4E4E7 !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 9.5px !important;
+  font-weight: 500 !important;
+  padding: 1px 6px !important;
+  border-radius: 4px !important;
+}
+
+.cart-item-row.is-bundled {
+  border-color: rgba(255, 85, 0, 0.25) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 244, 0.8) 100%) !important;
+}
+
+/* Single-Line Product Title in Cart Drawer */
+.cart-item-title {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 220px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #0A0A0C !important;
+  line-height: 1.35 !important;
+  margin: 0 0 3px 0 !important;
+}
+
+/* Coupon Card Styling */
+.cart-coupon-card {
+  background: #F9F9FB;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin: 12px 0 14px 0;
+}
+
+.cart-coupon-quick {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EEEEF0;
+}
+
+.cart-coupon-quick-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-coupon-save-lbl {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: #16A34A;
+}
+
+.cart-coupon-code-pill {
+  background: #FFFFFF;
+  border: 1px dashed #D4D4D8;
+  padding: 1.5px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 11px;
+  color: #0A0A0C;
+}
+
+.cart-coupon-apply-btn {
+  background: #0A0A0C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 3.5px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.cart-coupon-apply-btn:hover {
+  background: #FF5500;
+}
+
+/* Live Celebratory Savings Strip */
+.cart-savings-strip {
+  background: linear-gradient(90deg, #ECFDF5 0%, #E6FBF0 100%) !important;
+  border: 1px solid #A7F3D0 !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+}
+
+.cart-savings-text {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #047857 !important;
+}
+
+.cart-savings-text strong {
+  color: #065F46 !important;
+}
+
+
+
+/* ==========================================================================
+   UNIVERSAL CART DRAWER & 3 FOR ₹1,199 MILESTONE PROGRESS TRACKER
+   Covertok Clean Luxury Theme: Orange (#FF5500), White, Obsidian Black
+   ========================================================================== */
+
+/* Top Announcement Strip inside Cart Sheet */
+.cart-top-announcement {
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  text-align: center !important;
+  padding: 8px 12px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.cart-top-announcement-text {
+  color: #FFFFFF !important;
+}
+
+/* 3 FOR ₹1,199 MILESTONE PROGRESS CARD */
+.cart-bundle-progress-card {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFF9F5 100%) !important;
+  border: 1.5px solid #FFD9C6 !important;
+  border-radius: 14px !important;
+  padding: 14px 16px !important;
+  margin-bottom: 14px !important;
+  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.05), inset 0 1px 1.5px #FFFFFF !important;
+  position: relative !important;
+}
+
+.cart-bundle-tracker-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 6px !important;
+}
+
+.cart-bundle-badge-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #FF5500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.cart-bundle-badge-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #FF5500 !important;
+  display: inline-block !important;
+  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25) !important;
+  animation: bundleDotPulse 2s infinite ease-in-out !important;
+}
+
+@keyframes bundleDotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.cart-bundle-eligibility-note {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 11px !important;
+  color: #71717A !important;
+  font-weight: 600 !important;
+}
+
+.cart-bundle-instruction {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 13px !important;
+  color: #18181B !important;
+  line-height: 1.4 !important;
+  margin-bottom: 14px !important;
+}
+
+.cart-bundle-instruction strong {
+  color: #0A0A0C !important;
+  font-weight: 700 !important;
+}
+
+/* 3-Step Milestone Stepper */
+.cart-milestone-stepper {
+  position: relative !important;
+  padding: 0 10px !important;
+  margin-top: 6px !important;
+}
+
+.cart-milestone-track {
+  position: absolute !important;
+  top: 32px !important;
+  left: 28px !important;
+  right: 28px !important;
+  height: 4px !important;
+  background: #E4E4E7 !important;
+  border-radius: 999px !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+}
+
+.cart-milestone-fill {
+  height: 100% !important;
+  background: linear-gradient(90deg, #FF7733 0%, #FF5500 100%) !important;
+  border-radius: 999px !important;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.cart-milestone-nodes {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.cart-milestone-node {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  width: 60px !important;
+  text-align: center !important;
+}
+
+.cart-milestone-top-lbl {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  color: #71717A !important;
+  white-space: nowrap !important;
+}
+
+.cart-milestone-circle {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: #FFFFFF !important;
+  border: 2px solid #D4D4D8 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #71717A !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+
+.cart-milestone-check {
+  display: none !important;
+}
+
+.cart-milestone-btm-lbl {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10.5px !important;
+  font-weight: 600 !important;
+  color: #71717A !important;
+  white-space: nowrap !important;
+}
+
+.cart-milestone-btm-highlight {
+  color: #FF5500 !important;
+  font-weight: 700 !important;
+}
+
+/* Completed & Active Node States */
+.cart-milestone-node.is-completed .cart-milestone-circle {
+  background: #FF5500 !important;
+  border-color: #FF5500 !important;
+  color: #FFFFFF !important;
+}
+
+.cart-milestone-node.is-completed .cart-milestone-num {
+  display: none !important;
+}
+
+.cart-milestone-node.is-completed .cart-milestone-check {
+  display: block !important;
+  stroke: #FFFFFF !important;
+}
+
+.cart-milestone-node.is-completed .cart-milestone-top-lbl,
+.cart-milestone-node.is-completed .cart-milestone-btm-lbl {
+  color: #0A0A0C !important;
+  font-weight: 700 !important;
+}
+
+.cart-milestone-node.is-active .cart-milestone-circle {
+  box-shadow: 0 0 0 4px rgba(255, 85, 0, 0.25) !important;
+}
+
+.cart-milestone-node.is-unlocked .cart-milestone-circle {
+  background: #FF5500 !important;
+  border-color: #FF5500 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 14px rgba(255, 85, 0, 0.5) !important;
+  animation: bundleUnlockedPulse 1.5s infinite ease-in-out !important;
+}
+
+@keyframes bundleUnlockedPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Cart Item Tags */
+.cart-item-meta-top {
+  margin-bottom: 4px !important;
+}
+
+.cart-tag-deal {
+  display: inline-block !important;
+  background: #FFF0E8 !important;
+  color: #FF5500 !important;
+  border: 1px solid rgba(255, 85, 0, 0.4) !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  padding: 1.5px 7px !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.cart-tag-eligible {
+  display: inline-block !important;
+  background: #F4F4F5 !important;
+  color: #3F3F46 !important;
+  border: 1px solid #E4E4E7 !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 1.5px 7px !important;
+  border-radius: 4px !important;
+}
+
+.cart-tag-standard {
+  display: inline-block !important;
+  background: #FAFAFA !important;
+  color: #71717A !important;
+  border: 1px solid #E4E4E7 !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 9.5px !important;
+  font-weight: 500 !important;
+  padding: 1px 6px !important;
+  border-radius: 4px !important;
+}
+
+.cart-item-row.is-bundled {
+  border-color: rgba(255, 85, 0, 0.25) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 244, 0.8) 100%) !important;
+}
+
+/* Single-Line Product Title in Cart Drawer */
+.cart-item-title {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 220px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #0A0A0C !important;
+  line-height: 1.35 !important;
+  margin: 0 0 3px 0 !important;
+}
+
+/* Coupon Card Styling */
+.cart-coupon-card {
+  background: #F9F9FB !important;
+  border: 1px solid #EAEAEA !important;
+  border-radius: 12px !important;
+  padding: 10px 12px !important;
+  margin: 12px 0 14px 0 !important;
+}
+
+.cart-coupon-quick {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid #EEEEF0 !important;
+}
+
+.cart-coupon-quick-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.cart-coupon-save-lbl {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #16A34A !important;
+}
+
+.cart-coupon-code-pill {
+  background: #FFFFFF !important;
+  border: 1px dashed #D4D4D8 !important;
+  padding: 1.5px 6px !important;
+  border-radius: 4px !important;
+  font-family: monospace !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  color: #0A0A0C !important;
+}
+
+.cart-coupon-apply-btn {
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 4px 10px !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease !important;
+}
+
+.cart-coupon-apply-btn:hover {
+  background: #FF5500 !important;
+}
+
+/* Live Celebratory Savings Strip */
+.cart-savings-strip {
+  background: linear-gradient(90deg, #ECFDF5 0%, #E6FBF0 100%) !important;
+  border: 1px solid #A7F3D0 !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+}
+
+.cart-savings-text {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: #047857 !important;
+}
+
+.cart-savings-text strong {
+  color: #065F46 !important;
+}
+
+#cartBundleDiscountRow.is-hidden, .cart-summary-row.is-hidden { display: none !important; }

@@ -5,9 +5,14 @@
 <!-- ========================================================================= -->
 
 <!-- 1. RICH CART DRAWER -->
-  <!-- 1. LUXURY EDITORIAL CART DRAWER -->
+      <!-- 1. LUXURY EDITORIAL CART DRAWER -->
   <div class="app-drawer-overlay" id="cartDrawerOverlay" aria-hidden="true">
     <aside class="app-drawer" id="cartDrawerSheet" aria-label="Shopping Cart Drawer">
+      <!-- Top Announcement -->
+      <div class="cart-top-announcement">
+        <span class="cart-top-announcement-text">Prepaid Order Ships within 2 Hrs ⚡</span>
+      </div>
+
       <!-- Header -->
       <div class="app-sheet-header">
         <div class="app-sheet-title-group">
@@ -24,6 +29,52 @@
 
       <!-- Body -->
       <div class="app-sheet-body">
+        <!-- 3 for ₹1,199 Milestone Tracker -->
+        <div class="cart-bundle-progress-card" id="cartBundleTracker">
+          <div class="cart-bundle-tracker-head">
+            <div class="cart-bundle-badge-label">
+              <span class="cart-bundle-badge-dot"></span>
+              <span>3 FOR ₹1,199 BUNDLE OFFER</span>
+            </div>
+            <span class="cart-bundle-eligibility-note">Eligible on items ≤ ₹799</span>
+          </div>
+          <div class="cart-bundle-instruction" id="cartBundleInstruction">
+            Add <strong>3 eligible items</strong> to get <strong>3 for ₹1,199</strong>
+          </div>
+          
+          <div class="cart-milestone-stepper">
+            <div class="cart-milestone-track">
+              <div class="cart-milestone-fill" id="cartMilestoneFill" style="width: 0%;"></div>
+            </div>
+            <div class="cart-milestone-nodes">
+              <div class="cart-milestone-node" id="milestoneNode1" data-step="1">
+                <span class="cart-milestone-top-lbl">1 Item</span>
+                <div class="cart-milestone-circle">
+                  <span class="cart-milestone-num">1</span>
+                  <svg class="cart-milestone-check" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="cart-milestone-btm-lbl">Step 1</span>
+              </div>
+              <div class="cart-milestone-node" id="milestoneNode2" data-step="2">
+                <span class="cart-milestone-top-lbl">2 Items</span>
+                <div class="cart-milestone-circle">
+                  <span class="cart-milestone-num">2</span>
+                  <svg class="cart-milestone-check" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="cart-milestone-btm-lbl">Step 2</span>
+              </div>
+              <div class="cart-milestone-node" id="milestoneNode3" data-step="3">
+                <span class="cart-milestone-top-lbl">3 Items</span>
+                <div class="cart-milestone-circle cart-milestone-deal">
+                  <span class="cart-milestone-num">🎉</span>
+                  <svg class="cart-milestone-check" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <span class="cart-milestone-btm-lbl cart-milestone-btm-highlight">₹1,199 Deal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Free Shipping Progress Tracker -->
         <div class="cart-free-shipping-bar" id="cartShippingBarContainer">
           <div class="cart-free-shipping-msg" id="cartProgressMsg">
@@ -41,10 +92,20 @@
           <!-- Populated dynamically by store_flows.js -->
         </div>
 
-        <!-- Promo Code Input -->
-        <div class="cart-promo-box">
-          <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Promo code (e.g. COVERTOK15)">
-          <button type="button" class="cart-promo-btn" id="cartApplyPromoBtn">Apply</button>
+        <!-- Promo Code Section -->
+        <div class="cart-coupon-card">
+          <div class="cart-coupon-quick">
+            <div class="cart-coupon-quick-left">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              <span class="cart-coupon-save-lbl">Save ₹200</span>
+              <span class="cart-coupon-code-pill">PAYDAY200</span>
+            </div>
+            <button type="button" class="cart-coupon-apply-btn" onclick="window.applyPromoCode('PAYDAY200')">Apply</button>
+          </div>
+          <div class="cart-promo-box">
+            <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Promo code (e.g. COVERTOK15)">
+            <button type="button" class="cart-promo-btn" id="cartApplyPromoBtn">Apply</button>
+          </div>
         </div>
 
         <!-- Active Discount Line -->
@@ -75,17 +136,32 @@
 
       <!-- Footer -->
       <div class="app-sheet-footer" id="cartDrawerFooter">
+        <!-- Live Savings Celebration Strip -->
+        <div class="cart-savings-strip" id="cartSavingsStrip" style="display: none;">
+          <span class="cart-savings-text">🎉 You're saving <strong id="cartSavingsAmount">₹0</strong> on this order!</span>
+        </div>
+
         <div class="cart-summary-row">
           <span>Subtotal</span>
           <span id="cartDrawerSubtotal" class="cart-summary-val">Rs. 0.00</span>
+        </div>
+        <div class="cart-summary-row" id="cartBundleDiscountRow" style="display: none; color: #FF5500;">
+          <span style="font-weight: 600;">3 for ₹1,199 Bundle Savings</span>
+          <span id="cartDrawerBundleDiscount" class="cart-summary-val" style="color: #FF5500; font-weight: 700;">-Rs. 0.00</span>
         </div>
         <div class="cart-summary-row">
           <span>Shipping (Express Air)</span>
           <span class="cart-shipping-free-tag">FREE</span>
         </div>
         <div class="cart-summary-total-row">
-          <span>Estimated Total</span>
-          <span id="cartDrawerTotal" class="cart-total-val">Rs. 0.00</span>
+          <div style="display: flex; flex-direction: column;">
+            <span style="font-weight: 700; color: #0A0A0C;">Estimated Total</span>
+            <span style="font-size: 11px; color: #71717A;">Inclusive of all taxes</span>
+          </div>
+          <div style="text-align: right; display: flex; align-items: baseline; gap: 6px;">
+            <span id="cartDrawerOriginalTotal" class="cart-original-total" style="display: none; font-size: 13px; color: #A1A1AA; text-decoration: line-through;">Rs. 0.00</span>
+            <span id="cartDrawerTotal" class="cart-total-val">Rs. 0.00</span>
+          </div>
         </div>
         <button type="button" class="btn-checkout-clean" id="cartDrawerCheckoutBtn" onclick="window.CovertokFlows.openCheckout();">
           <span>Proceed to Checkout</span>
