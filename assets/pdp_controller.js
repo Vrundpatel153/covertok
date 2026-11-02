@@ -213,6 +213,36 @@
       ratingCountEl.textContent = `${product.rating} / 5.0 (${product.reviews_count.toLocaleString()} Verified Reviews)`;
     }
 
+    // 2A. Dynamic Trust Badge: 10ft Drop Protection for mobile covers, 1-Year Warranty for other accessories
+    const warrantyTitle = document.getElementById('pdpWarrantyTitle');
+    const warrantyDesc = document.getElementById('pdpWarrantyDesc');
+    const warrantyIcon = document.getElementById('pdpWarrantyIcon');
+    if (warrantyTitle) {
+      const cat = (product.category || '').toLowerCase();
+      const catName = (product.category_name || '').toLowerCase();
+      const title = (product.title || '').toLowerCase();
+      const isMobileCover = (
+        cat === 'iphone-cases' || cat === 'womens-cover' || cat === 'mens-cover' ||
+        catName === 'iphone covers' || catName === 'women' || catName === 'men' ||
+        ((title.includes('phone case') || title.includes('case with')) &&
+         !title.includes('airpod') && !title.includes('charger') && !title.includes('watch') &&
+         !title.includes('strap') && !title.includes('mount') && !title.includes('stand') && !title.includes('glass'))
+      );
+      if (isMobileCover) {
+        warrantyTitle.textContent = '10ft Drop Protection';
+        if (warrantyDesc) warrantyDesc.textContent = 'Military-grade impact defense';
+        if (warrantyIcon) {
+          warrantyIcon.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 11 12 14 22 4"></polyline></svg>';
+        }
+      } else {
+        warrantyTitle.textContent = '1-Year Quality Warranty';
+        if (warrantyDesc) warrantyDesc.textContent = 'Guaranteed authentic protection';
+        if (warrantyIcon) {
+          warrantyIcon.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>';
+        }
+      }
+    }
+
     // 2B. Compact Authentic Product Description Overview with See More / See Less
     const overviewText = document.getElementById('pdpOverviewText');
     const overviewWrap = document.getElementById('pdpOverviewContentWrap');

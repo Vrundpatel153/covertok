@@ -3550,41 +3550,65 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 .covertok-live-trust-badges {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px 14px;
+  gap: 10px 12px;
   margin: 18px 0 14px;
-  padding: 16px;
-  background: #FFFFFF;
-  border: 1px solid #E4E4E7;
-  border-radius: 14px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .covertok-trust-item {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  background: #FFFFFF;
+  border: 1px solid #ECE7DF;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   min-width: 0;
 }
 
+.covertok-trust-item:hover {
+  border-color: #0A0A0A;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
 .covertok-trust-icon {
-  width: 34px;
-  height: 34px;
-  min-width: 34px;
-  border: 1px solid #E4E4E7;
-  border-radius: 9px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border: 1px solid #ECE7DF;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F4F4F5;
+  background: #F8F7F4;
   color: #0A0A0A;
   flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 
 .covertok-trust-icon svg {
   stroke: #0A0A0A;
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
+  transition: stroke 0.2s ease;
+}
+
+.covertok-trust-item:hover .covertok-trust-icon {
+  background: #0A0A0A;
+  border-color: #0A0A0A;
+  color: #FFFFFF;
+}
+
+.covertok-trust-item:hover .covertok-trust-icon svg {
+  stroke: #FFFFFF;
 }
 
 .covertok-trust-meta {
@@ -3596,10 +3620,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
 .covertok-trust-meta strong {
   font-family: var(--font-heading, 'Manrope', sans-serif);
-  font-size: 0.80rem;
+  font-size: 0.815rem;
   font-weight: 700;
   color: #0A0A0A;
   line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .covertok-trust-meta span {
@@ -3608,6 +3635,9 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   font-weight: 500;
   color: #71717A;
   line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 480px) {
@@ -3727,19 +3757,44 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
 @media (max-width: 600px) {
   .covertok-live-trust-badges {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 12px;
-    padding: 12px 14px;
-    scroll-snap-type: x mandatory;
-  }
-  .covertok-live-trust-badges::-webkit-scrollbar {
-    display: none;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    overflow-x: visible !important;
   }
   .covertok-trust-item {
-    flex: 0 0 auto;
-    min-width: max-content;
-    scroll-snap-align: start;
+    padding: 10px 8px !important;
+    gap: 8px !important;
+    border-radius: 12px !important;
+    flex: unset !important;
+    min-width: 0 !important;
+    align-items: flex-start !important;
+  }
+  .covertok-trust-icon {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    border-radius: 7px !important;
+    margin-top: 2px !important;
+  }
+  .covertok-trust-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .covertok-trust-meta strong {
+    font-size: 0.72rem !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+  .covertok-trust-meta span {
+    font-size: 0.63rem !important;
+    white-space: normal !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
   }
   .covertok-features-grid {
     grid-template-columns: 1fr;
