@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261101_palette_v2">
-  <link rel="stylesheet" href="catalog.css?v=20261101_palette_v2">
+  <link rel="stylesheet" href="styles.css?v=20261102_cards_v1">
+  <link rel="stylesheet" href="catalog.css?v=20261102_cards_v1">
   <link rel="stylesheet" href="pages.css?v=20261101_palette_v2">
   <link rel="stylesheet" href="microinteractions.css?v=20261101_palette_v2">
   <style>
@@ -1419,7 +1419,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/products_data.js"></script>
+  <script src="assets/products_data.js?v=20261102_cards_v1"></script>
   <script src="assets/store_core.js?v=20261028_contrast_v2"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
@@ -1566,18 +1566,33 @@
           badgeHtml = `<span class="card-micro-badge">-${product.discount_percent}%</span>`;
         }
 
-        let swatchesHtml = '';
-        if (product.has_colors && product.colors && product.colors.length > 0) {
-          const swatches = product.colors.slice(0, 4).map((c, i) => `
-            <button type="button" 
-              class="card-color-dot ${i === 0 ? 'active' : ''}" 
-              data-img="${c.image || product.primary_image}" 
-              style="background: ${c.hex};" 
-              title="${c.name}">
-            </button>
-          `).join('');
-          const more = product.colors.length > 4 ? `<span style="font-size: 0.6rem; font-weight: 700; color: #64748B;">+${product.colors.length - 4}</span>` : '';
-          swatchesHtml = `<div class="card-color-swatches" aria-label="Available Colors">${swatches}${more}</div>`;
+        // Color Swatches Palette (1 color -> 1 dot; 2-3 colors -> 2-3 dots; >3 colors -> 3 dots + +N pill)
+        let paletteHtml = '';
+        if (product.colors && product.colors.length > 0) {
+          const cols = product.colors;
+          if (cols.length === 1) {
+            paletteHtml = `
+              <div class="product-color-palette" aria-label="Available Colors">
+                <span class="color-dot active" style="background-color: ${cols[0].hex};" title="${cols[0].name}"></span>
+              </div>
+            `;
+          } else {
+            const visible = cols.slice(0, 3);
+            const remaining = cols.length - 3;
+            const dots = visible.map((c, i) => `
+              <span class="color-dot ${i === 0 ? 'active' : ''}" 
+                    style="background-color: ${c.hex};" 
+                    title="${c.name}"
+                    ${c.image ? `data-color-img="${c.image}"` : ''}></span>
+            `).join('');
+            const morePill = remaining > 0 ? `<span class="color-more-pill">+${remaining}</span>` : '';
+            paletteHtml = `
+              <div class="product-color-palette" aria-label="Available Colors">
+                ${dots}
+                ${morePill}
+              </div>
+            `;
+          }
         }
 
         const priceFormatted = `₹${Math.round(product.price).toLocaleString('en-IN')}`;
@@ -1587,12 +1602,11 @@
 
         return `
           <div class="catalog-card" data-product-id="${product.id}">
-            <div class="card-media-stage">
+            <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'" style="cursor: pointer;">
               ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
-              <div class="card-img-wrap" onclick="window.location.href='product.html?handle=${product.handle}'" style="cursor: pointer;">
+              <div class="card-img-wrap">
                 <img src="${product.primary_image}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
               </div>
-              ${swatchesHtml}
             </div>
 
             <div class="card-body-wrap">
@@ -1600,10 +1614,16 @@
                 ${product.title}
               </a>
 
-              <div class="card-price-row">
-                <span class="card-price-now">${priceFormatted}</span>
-                ${originalPriceHtml}
-                <span class="card-micro-rating">★ ${product.rating || '4.9'}</span>
+              ${paletteHtml}
+
+              <div class="card-action-row">
+                <div class="card-price-row">
+                  <span class="card-price-now">${priceFormatted}</span>
+                  ${originalPriceHtml}
+                </div>
+                <button type="button" class="card-add-btn" aria-label="Add ${product.title} to cart" onclick="event.stopPropagation(); window.CovertokStore && window.CovertokStore.addToCart({ id: '${product.id}', title: '${product.title.replace(/'/g, "\\'")}', price: ${product.price}, img: '${product.primary_image}', color: '${product.colors && product.colors[0] ? product.colors[0].name : ''}', qty: 1 });">
+                  <span>ADD TO CART</span>
+                </button>
               </div>
             </div>
           </div>

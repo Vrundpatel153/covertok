@@ -1471,26 +1471,75 @@
         ? `Rs. ${Number(p.original_price).toLocaleString('en-IN')}.00`
         : '';
 
+      // Color Swatches Palette (1 color -> 1 dot; 2-3 colors -> 2-3 dots; >3 colors -> 3 dots + +N pill)
+      let paletteHtml = '';
+      if (p.colors && p.colors.length > 0) {
+        const cols = p.colors;
+        if (cols.length === 1) {
+          paletteHtml = `
+            <div class="product-color-palette" aria-label="Available Colors">
+              <span class="color-dot active" style="background-color: ${cols[0].hex};" title="${cols[0].name}"></span>
+            </div>
+          `;
+        } else {
+          const visible = cols.slice(0, 3);
+          const remaining = cols.length - 3;
+          const dots = visible.map((c, i) => `
+            <span class="color-dot ${i === 0 ? 'active' : ''}" 
+                  style="background-color: ${c.hex};" 
+                  title="${c.name}"
+                  ${c.image ? `data-color-img="${c.image}"` : ''}></span>
+          `).join('');
+          const morePill = remaining > 0 ? `<span class="color-more-pill">+${remaining}</span>` : '';
+          paletteHtml = `
+            <div class="product-color-palette" aria-label="Available Colors">
+              ${dots}
+              ${morePill}
+            </div>
+          `;
+        }
+      }
+
       return `
         <div class="catalog-card" data-id="${p.id}">
-          <div class="card-media-stage">
+          <div class="card-media-stage" onclick="window.location.href='product.html?handle=${p.handle}'" style="cursor: pointer;">
             <div class="card-badges-row">${badgeHtml}</div>
-            <div class="card-img-wrap" style="cursor: pointer;" onclick="window.location.href='product.html?handle=${p.handle}'">
-              <img src="${initialImg}" alt="${p.title}" class="card-main-img" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+            <div class="card-img-wrap">
+              <img src="${initialImg}" alt="${p.title}" class="card-main-img" id="relatedImg_${p.id}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>
           </div>
           <div class="card-body-wrap">
             <a href="product.html?handle=${p.handle}" class="card-product-title" title="${p.title}">
               ${p.title}
             </a>
-            <div class="card-price-row">
-              ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
-              <span class="card-price-now">${priceFormatted}</span>
+            ${paletteHtml}
+            <div class="card-action-row">
+              <div class="card-price-row">
+                <span class="card-price-now">${priceFormatted}</span>
+                ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
+              </div>
+              <button type="button" class="card-add-btn" aria-label="Add ${p.title} to cart" onclick="event.stopPropagation(); window.CovertokStore && window.CovertokStore.addToCart({ id: '${p.id}', title: '${p.title.replace(/'/g, "\\'")}', price: ${p.price}, img: '${initialImg}', color: '${p.colors && p.colors[0] ? p.colors[0].name : ''}', qty: 1 });">
+                <span>ADD TO CART</span>
+              </button>
             </div>
           </div>
         </div>
       `;
     }).join('');
+
+    // Attach swatch switchers
+    container.querySelectorAll('.color-dot').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = dot.closest('.catalog-card');
+        if (!card) return;
+        card.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+        const imgUrl = dot.getAttribute('data-color-img');
+        const mainImg = card.querySelector('.card-main-img');
+        if (imgUrl && mainImg) mainImg.src = imgUrl;
+      });
+    });
   }
 
   // 3-Piece Combo Synchronization & Return Controller

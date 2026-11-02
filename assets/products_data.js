@@ -1,3 +1,4 @@
+// Covertok Authenticated Product Catalog Database
 window.CovertokProducts = [
   {
     "id": "10017625375018",
@@ -20,20 +21,25 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/10017625375018/1_51573025472810.webp",
+    "primary_image": "assets/products/10017625375018/1_51573025472810.png",
     "images": [
-      "assets/products/10017625375018/1_51573025472810.webp",
-      "assets/products/10017625375018/2_51573025538346.webp",
-      "assets/products/10017625375018/3_51573025440042.webp",
-      "assets/products/10017625375018/4_51573000044842.webp",
-      "assets/products/10017625375018/5_51573000012074.webp",
-      "assets/products/10017625375018/6_51572999979306.webp",
-      "assets/products/10017625375018/7_51573025505578.webp",
-      "assets/products/10017625375018/8_51573035335978.webp",
-      "assets/products/10017625375018/9_51573035368746.webp"
+      "assets/products/10017625375018/1_51573025472810.png",
+      "assets/products/10017625375018/2_51573025538346.jpg",
+      "assets/products/10017625375018/3_51573025440042.jpg",
+      "assets/products/10017625375018/4_51573000044842.jpg",
+      "assets/products/10017625375018/5_51573000012074.jpg",
+      "assets/products/10017625375018/6_51572999979306.jpg",
+      "assets/products/10017625375018/7_51573025505578.jpg",
+      "assets/products/10017625375018/8_51573035335978.jpg",
+      "assets/products/10017625375018/9_51573035368746.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Space Black",
+        "hex": "#1C1D1F"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance. Aluminum Alloy Build – Durable, rust-resistant, and premium finish",
@@ -139,28 +145,28 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/10005871362346/1_51425350811946.webp",
+    "primary_image": "assets/products/10005871362346/1_51425350811946.jpg",
     "images": [
-      "assets/products/10005871362346/1_51425350811946.webp",
-      "assets/products/10005871362346/2_51425351139626.webp",
-      "assets/products/10005871362346/3_51425351074090.webp",
-      "assets/products/10005871362346/4_51425351041322.webp",
-      "assets/products/10005871362346/5_51425351172394.webp",
-      "assets/products/10005871362346/6_51425350943018.webp",
-      "assets/products/10005871362346/7_51425455964458.webp",
-      "assets/products/10005871362346/8_51425350877482.webp",
-      "assets/products/10005871362346/9_51425456095530.webp",
-      "assets/products/10005871362346/10_51425455997226.webp",
-      "assets/products/10005871362346/11_51425456062762.webp",
-      "assets/products/10005871362346/12_51425350713642.webp",
-      "assets/products/10005871362346/13_51425351008554.webp",
-      "assets/products/10005871362346/14_51425351106858.webp",
-      "assets/products/10005871362346/15_51425455931690.webp",
-      "assets/products/10005871362346/16_51425350975786.webp",
-      "assets/products/10005871362346/17_51425350910250.webp",
-      "assets/products/10005871362346/18_51425350844714.webp",
-      "assets/products/10005871362346/19_51425456029994.webp",
-      "assets/products/10005871362346/20_51425350746410.webp"
+      "assets/products/10005871362346/1_51425350811946.jpg",
+      "assets/products/10005871362346/2_51425351139626.jpg",
+      "assets/products/10005871362346/3_51425351074090.jpg",
+      "assets/products/10005871362346/4_51425351041322.jpg",
+      "assets/products/10005871362346/5_51425351172394.png",
+      "assets/products/10005871362346/6_51425350943018.jpg",
+      "assets/products/10005871362346/7_51425455964458.jpg",
+      "assets/products/10005871362346/8_51425350877482.jpg",
+      "assets/products/10005871362346/9_51425456095530.jpg",
+      "assets/products/10005871362346/10_51425455997226.jpg",
+      "assets/products/10005871362346/11_51425456062762.jpg",
+      "assets/products/10005871362346/12_51425350713642.jpg",
+      "assets/products/10005871362346/13_51425351008554.jpg",
+      "assets/products/10005871362346/14_51425351106858.jpg",
+      "assets/products/10005871362346/15_51425455931690.jpg",
+      "assets/products/10005871362346/16_51425350975786.jpg",
+      "assets/products/10005871362346/17_51425350910250.jpg",
+      "assets/products/10005871362346/18_51425350844714.jpg",
+      "assets/products/10005871362346/19_51425456029994.jpg",
+      "assets/products/10005871362346/20_51425350746410.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -168,50 +174,50 @@ window.CovertokProducts = [
         "name": "Blue",
         "hex": "#2563EB",
         "price": 999.0,
-        "image": "assets/products/10005871362346/17_51425350910250.webp",
+        "image": "assets/products/10005871362346/17_51425350910250.jpg",
         "images": [
-          "assets/products/10005871362346/17_51425350910250.webp",
-          "assets/products/10005871362346/7_51425455964458.webp"
+          "assets/products/10005871362346/17_51425350910250.jpg",
+          "assets/products/10005871362346/7_51425455964458.jpg"
         ]
       },
       {
         "name": "Orange",
         "hex": "#F97316",
         "price": 999.0,
-        "image": "assets/products/10005871362346/1_51425350811946.webp",
+        "image": "assets/products/10005871362346/1_51425350811946.jpg",
         "images": [
-          "assets/products/10005871362346/1_51425350811946.webp",
-          "assets/products/10005871362346/4_51425351041322.webp"
+          "assets/products/10005871362346/1_51425350811946.jpg",
+          "assets/products/10005871362346/4_51425351041322.jpg"
         ]
       },
       {
         "name": "Pink",
         "hex": "#EC4899",
         "price": 999.0,
-        "image": "assets/products/10005871362346/8_51425350877482.webp",
+        "image": "assets/products/10005871362346/8_51425350877482.jpg",
         "images": [
-          "assets/products/10005871362346/8_51425350877482.webp",
-          "assets/products/10005871362346/10_51425455997226.webp"
+          "assets/products/10005871362346/8_51425350877482.jpg",
+          "assets/products/10005871362346/10_51425455997226.jpg"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/10005871362346/18_51425350844714.webp",
+        "image": "assets/products/10005871362346/18_51425350844714.jpg",
         "images": [
-          "assets/products/10005871362346/18_51425350844714.webp",
-          "assets/products/10005871362346/16_51425350975786.webp"
+          "assets/products/10005871362346/18_51425350844714.jpg",
+          "assets/products/10005871362346/16_51425350975786.jpg"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 999.0,
-        "image": "assets/products/10005871362346/12_51425350713642.webp",
+        "image": "assets/products/10005871362346/12_51425350713642.jpg",
         "images": [
-          "assets/products/10005871362346/12_51425350713642.webp",
-          "assets/products/10005871362346/13_51425351008554.webp"
+          "assets/products/10005871362346/12_51425350713642.jpg",
+          "assets/products/10005871362346/13_51425351008554.jpg"
         ]
       }
     ],
@@ -313,15 +319,15 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9989730304298/1_51224314347818.webp",
+    "primary_image": "assets/products/9989730304298/1_51224314347818.png",
     "images": [
-      "assets/products/9989730304298/1_51224314347818.webp",
-      "assets/products/9989730304298/2_51224314380586.webp",
-      "assets/products/9989730304298/3_51224314544426.webp",
-      "assets/products/9989730304298/4_51224314511658.webp",
-      "assets/products/9989730304298/5_51224314446122.webp",
-      "assets/products/9989730304298/6_51224314413354.webp",
-      "assets/products/9989730304298/7_51224314478890.webp"
+      "assets/products/9989730304298/1_51224314347818.png",
+      "assets/products/9989730304298/2_51224314380586.png",
+      "assets/products/9989730304298/3_51224314544426.jpg",
+      "assets/products/9989730304298/4_51224314511658.png",
+      "assets/products/9989730304298/5_51224314446122.png",
+      "assets/products/9989730304298/6_51224314413354.png",
+      "assets/products/9989730304298/7_51224314478890.png"
     ],
     "has_colors": true,
     "colors": [
@@ -329,20 +335,20 @@ window.CovertokProducts = [
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
         "price": 649.0,
-        "image": "assets/products/9989730304298/6_51224314413354.webp",
+        "image": "assets/products/9989730304298/6_51224314413354.png",
         "images": [
-          "assets/products/9989730304298/6_51224314413354.webp",
-          "assets/products/9989730304298/1_51224314347818.webp"
+          "assets/products/9989730304298/6_51224314413354.png",
+          "assets/products/9989730304298/1_51224314347818.png"
         ]
       },
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
         "price": 649.0,
-        "image": "assets/products/9989730304298/4_51224314511658.webp",
+        "image": "assets/products/9989730304298/4_51224314511658.png",
         "images": [
-          "assets/products/9989730304298/4_51224314511658.webp",
-          "assets/products/9989730304298/7_51224314478890.webp"
+          "assets/products/9989730304298/4_51224314511658.png",
+          "assets/products/9989730304298/7_51224314478890.png"
         ]
       }
     ],
@@ -455,13 +461,13 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9875589628202/1_49939894698282.webp",
+    "primary_image": "assets/products/9875589628202/1_49939894698282.jpg",
     "images": [
-      "assets/products/9875589628202/1_49939894698282.webp",
-      "assets/products/9875589628202/raspberry_case_view.webp",
-      "assets/products/9875589628202/raspberry_camera_detail.webp",
-      "assets/products/9875589628202/raspberry_box_detail.webp",
-      "assets/products/9875589628202/raspberry_tube_detail.webp"
+      "assets/products/9875589628202/1_49939894698282.jpg",
+      "assets/products/9875589628202/raspberry_case_view.jpg",
+      "assets/products/9875589628202/raspberry_camera_detail.jpg",
+      "assets/products/9875589628202/raspberry_box_detail.jpg",
+      "assets/products/9875589628202/raspberry_tube_detail.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -469,49 +475,49 @@ window.CovertokProducts = [
         "name": "Raspberry",
         "hex": "#9D174D",
         "price": 649.0,
-        "image": "assets/products/9875589628202/1_49939894698282.webp",
+        "image": "assets/products/9875589628202/1_49939894698282.jpg",
         "images": [
-          "assets/products/9875589628202/1_49939894698282.webp",
-          "assets/products/9875589628202/raspberry_case_view.webp",
-          "assets/products/9875589628202/raspberry_camera_detail.webp",
-          "assets/products/9875589628202/raspberry_box_detail.webp",
-          "assets/products/9875589628202/raspberry_tube_detail.webp"
+          "assets/products/9875589628202/1_49939894698282.jpg",
+          "assets/products/9875589628202/raspberry_case_view.jpg",
+          "assets/products/9875589628202/raspberry_camera_detail.jpg",
+          "assets/products/9875589628202/raspberry_box_detail.jpg",
+          "assets/products/9875589628202/raspberry_tube_detail.jpg"
         ]
       },
       {
         "name": "Salty Tan",
         "hex": "#B8977E",
         "price": 649.0,
-        "image": "assets/products/9875589628202/6_49939859046698.webp",
+        "image": "assets/products/9875589628202/6_49939859046698.jpg",
         "images": [
-          "assets/products/9875589628202/6_49939859046698.webp"
+          "assets/products/9875589628202/6_49939859046698.jpg"
         ]
       },
       {
         "name": "Unscented",
         "hex": "#CBD5E1",
         "price": 649.0,
-        "image": "assets/products/9875589628202/8_49939858948394.webp",
+        "image": "assets/products/9875589628202/8_49939858948394.jpg",
         "images": [
-          "assets/products/9875589628202/8_49939858948394.webp"
+          "assets/products/9875589628202/8_49939858948394.jpg"
         ]
       },
       {
         "name": "Shortcake",
         "hex": "#F2C4CE",
         "price": 649.0,
-        "image": "assets/products/9875589628202/5_49939797279018.webp",
+        "image": "assets/products/9875589628202/5_49939797279018.jpg",
         "images": [
-          "assets/products/9875589628202/5_49939797279018.webp"
+          "assets/products/9875589628202/5_49939797279018.jpg"
         ]
       },
       {
         "name": "Peach Pit",
         "hex": "#FDBA74",
         "price": 649.0,
-        "image": "assets/products/9875589628202/7_49939800129834.webp",
+        "image": "assets/products/9875589628202/7_49939800129834.jpg",
         "images": [
-          "assets/products/9875589628202/7_49939800129834.webp"
+          "assets/products/9875589628202/7_49939800129834.jpg"
         ]
       }
     ],
@@ -637,20 +643,25 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9982201299242/1_51142359679274.webp",
+    "primary_image": "assets/products/9982201299242/1_51142359679274.png",
     "images": [
-      "assets/products/9982201299242/1_51142359679274.webp",
-      "assets/products/9982201299242/2_51142268289322.webp",
-      "assets/products/9982201299242/3_51142359646506.webp",
-      "assets/products/9982201299242/4_51142268485930.webp",
-      "assets/products/9982201299242/5_51142268453162.webp",
-      "assets/products/9982201299242/6_51142268420394.webp",
-      "assets/products/9982201299242/7_51142268387626.webp",
-      "assets/products/9982201299242/8_51142268322090.webp",
-      "assets/products/9982201299242/9_51142268354858.webp"
+      "assets/products/9982201299242/1_51142359679274.png",
+      "assets/products/9982201299242/2_51142268289322.jpg",
+      "assets/products/9982201299242/3_51142359646506.png",
+      "assets/products/9982201299242/4_51142268485930.png",
+      "assets/products/9982201299242/5_51142268453162.jpg",
+      "assets/products/9982201299242/6_51142268420394.jpg",
+      "assets/products/9982201299242/7_51142268387626.jpg",
+      "assets/products/9982201299242/8_51142268322090.jpg",
+      "assets/products/9982201299242/9_51142268354858.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Cosmic Orange",
+        "hex": "#FF5500"
+      }
+    ],
     "models": [
       "iPhone 17 Pro",
       "iPhone 17 Pro Max"
@@ -749,18 +760,23 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9981786390826/1_51134092738858.webp",
+    "primary_image": "assets/products/9981786390826/1_51134092738858.png",
     "images": [
-      "assets/products/9981786390826/1_51134092738858.webp",
-      "assets/products/9981786390826/2_51134092706090.webp",
-      "assets/products/9981786390826/3_51134092673322.webp",
-      "assets/products/9981786390826/4_51134092640554.webp",
-      "assets/products/9981786390826/5_51134092607786.webp",
-      "assets/products/9981786390826/6_51134092575018.webp",
-      "assets/products/9981786390826/7_51134092542250.webp"
+      "assets/products/9981786390826/1_51134092738858.png",
+      "assets/products/9981786390826/2_51134092706090.png",
+      "assets/products/9981786390826/3_51134092673322.jpg",
+      "assets/products/9981786390826/4_51134092640554.jpg",
+      "assets/products/9981786390826/5_51134092607786.jpg",
+      "assets/products/9981786390826/6_51134092575018.jpg",
+      "assets/products/9981786390826/7_51134092542250.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Crystal Clear",
+        "hex": "#E2E8F0"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -876,21 +892,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9980484157738/1_51111526859050.webp",
+    "primary_image": "assets/products/9980484157738/1_51111526859050.jpg",
     "images": [
-      "assets/products/9980484157738/1_51111526859050.webp",
-      "assets/products/9980484157738/2_51111526760746.webp",
-      "assets/products/9980484157738/3_51111527088426.webp",
-      "assets/products/9980484157738/4_51111526990122.webp",
-      "assets/products/9980484157738/5_51111526826282.webp",
-      "assets/products/9980484157738/6_51111527153962.webp",
-      "assets/products/9980484157738/7_51111527121194.webp",
-      "assets/products/9980484157738/8_51111527055658.webp",
-      "assets/products/9980484157738/9_51111527022890.webp",
-      "assets/products/9980484157738/10_51111526957354.webp",
-      "assets/products/9980484157738/11_51111526924586.webp",
-      "assets/products/9980484157738/12_51111526891818.webp",
-      "assets/products/9980484157738/13_51111526727978.webp"
+      "assets/products/9980484157738/1_51111526859050.jpg",
+      "assets/products/9980484157738/2_51111526760746.jpg",
+      "assets/products/9980484157738/3_51111527088426.jpg",
+      "assets/products/9980484157738/4_51111526990122.jpg",
+      "assets/products/9980484157738/5_51111526826282.jpg",
+      "assets/products/9980484157738/6_51111527153962.jpg",
+      "assets/products/9980484157738/7_51111527121194.jpg",
+      "assets/products/9980484157738/8_51111527055658.jpg",
+      "assets/products/9980484157738/9_51111527022890.jpg",
+      "assets/products/9980484157738/10_51111526957354.jpg",
+      "assets/products/9980484157738/11_51111526924586.jpg",
+      "assets/products/9980484157738/12_51111526891818.jpg",
+      "assets/products/9980484157738/13_51111526727978.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -898,36 +914,36 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 849.0,
-        "image": "assets/products/9980484157738/3_51111527088426.webp",
+        "image": "assets/products/9980484157738/3_51111527088426.jpg",
         "images": [
-          "assets/products/9980484157738/3_51111527088426.webp"
+          "assets/products/9980484157738/3_51111527088426.jpg"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 849.0,
-        "image": "assets/products/9980484157738/1_51111526859050.webp",
+        "image": "assets/products/9980484157738/1_51111526859050.jpg",
         "images": [
-          "assets/products/9980484157738/1_51111526859050.webp"
+          "assets/products/9980484157738/1_51111526859050.jpg"
         ]
       },
       {
         "name": "Grey",
         "hex": "#6B7280",
         "price": 849.0,
-        "image": "assets/products/9980484157738/5_51111526826282.webp",
+        "image": "assets/products/9980484157738/5_51111526826282.jpg",
         "images": [
-          "assets/products/9980484157738/5_51111526826282.webp"
+          "assets/products/9980484157738/5_51111526826282.jpg"
         ]
       },
       {
         "name": "White",
         "hex": "#FFFFFF",
         "price": 849.0,
-        "image": "assets/products/9980484157738/4_51111526990122.webp",
+        "image": "assets/products/9980484157738/4_51111526990122.jpg",
         "images": [
-          "assets/products/9980484157738/4_51111526990122.webp"
+          "assets/products/9980484157738/4_51111526990122.jpg"
         ]
       }
     ],
@@ -1055,23 +1071,23 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9979941159210/1_51102857298218.webp",
+    "primary_image": "assets/products/9979941159210/1_51102857298218.png",
     "images": [
-      "assets/products/9979941159210/1_51102857298218.webp",
-      "assets/products/9979941159210/2_51102857265450.webp",
-      "assets/products/9979941159210/3_51102857167146.webp",
-      "assets/products/9979941159210/4_51102856839466.webp",
-      "assets/products/9979941159210/5_51102856905002.webp",
-      "assets/products/9979941159210/6_51102856872234.webp",
-      "assets/products/9979941159210/7_51102857232682.webp",
-      "assets/products/9979941159210/8_51102857199914.webp",
-      "assets/products/9979941159210/9_51102857134378.webp",
-      "assets/products/9979941159210/10_51102857101610.webp",
-      "assets/products/9979941159210/11_51102857068842.webp",
-      "assets/products/9979941159210/12_51102857036074.webp",
-      "assets/products/9979941159210/13_51102857003306.webp",
-      "assets/products/9979941159210/14_51102856970538.webp",
-      "assets/products/9979941159210/15_51102856937770.webp"
+      "assets/products/9979941159210/1_51102857298218.png",
+      "assets/products/9979941159210/2_51102857265450.png",
+      "assets/products/9979941159210/3_51102857167146.jpg",
+      "assets/products/9979941159210/4_51102856839466.jpg",
+      "assets/products/9979941159210/5_51102856905002.jpg",
+      "assets/products/9979941159210/6_51102856872234.jpg",
+      "assets/products/9979941159210/7_51102857232682.jpg",
+      "assets/products/9979941159210/8_51102857199914.jpg",
+      "assets/products/9979941159210/9_51102857134378.jpg",
+      "assets/products/9979941159210/10_51102857101610.jpg",
+      "assets/products/9979941159210/11_51102857068842.jpg",
+      "assets/products/9979941159210/12_51102857036074.jpg",
+      "assets/products/9979941159210/13_51102857003306.jpg",
+      "assets/products/9979941159210/14_51102856970538.jpg",
+      "assets/products/9979941159210/15_51102856937770.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -1079,29 +1095,29 @@ window.CovertokProducts = [
         "name": "Cosmic Orange",
         "hex": "#FF6A3D",
         "price": 999.0,
-        "image": "assets/products/9979941159210/3_51102857167146.webp",
+        "image": "assets/products/9979941159210/3_51102857167146.jpg",
         "images": [
-          "assets/products/9979941159210/3_51102857167146.webp",
-          "assets/products/9979941159210/1_51102857298218.webp"
+          "assets/products/9979941159210/3_51102857167146.jpg",
+          "assets/products/9979941159210/1_51102857298218.png"
         ]
       },
       {
         "name": "Deep Blue",
         "hex": "#1E40AF",
         "price": 999.0,
-        "image": "assets/products/9979941159210/2_51102857265450.webp",
+        "image": "assets/products/9979941159210/2_51102857265450.png",
         "images": [
-          "assets/products/9979941159210/2_51102857265450.webp",
-          "assets/products/9979941159210/6_51102856872234.webp"
+          "assets/products/9979941159210/2_51102857265450.png",
+          "assets/products/9979941159210/6_51102856872234.jpg"
         ]
       },
       {
         "name": "Silver",
         "hex": "#E4E4E7",
         "price": 999.0,
-        "image": "assets/products/9979941159210/5_51102856905002.webp",
+        "image": "assets/products/9979941159210/5_51102856905002.jpg",
         "images": [
-          "assets/products/9979941159210/5_51102856905002.webp"
+          "assets/products/9979941159210/5_51102856905002.jpg"
         ]
       }
     ],
@@ -1121,7 +1137,7 @@ window.CovertokProducts = [
       "iPhone 17 Pro",
       "iPhone 17 Pro Max"
     ],
-    "raw_html": "<p>Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series</p>\n<p>✨ Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 17 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p> Compatibility<br> • iPhone 17 Pro<br> • iPhone 17 Pro Max</p>",
+    "raw_html": "<p>Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series</p>\n<p>✨ Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 17 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p>📱 Compatibility<br> • iPhone 17 Pro<br> • iPhone 17 Pro Max</p>",
     "in_stock": true,
     "features": [
       {
@@ -1216,27 +1232,27 @@ window.CovertokProducts = [
       "Rose gold",
       "Silver"
     ],
-    "primary_image": "assets/products/9937879728426/1_50512140501290.webp",
+    "primary_image": "assets/products/9937879728426/1_50512140501290.png",
     "images": [
-      "assets/products/9937879728426/1_50512140501290.webp",
-      "assets/products/9937879728426/2_50512140534058.webp",
-      "assets/products/9937879728426/3_50512140730666.webp",
-      "assets/products/9937879728426/4_50512140599594.webp",
-      "assets/products/9937879728426/5_50512140468522.webp",
-      "assets/products/9937879728426/6_50512140665130.webp",
-      "assets/products/9937879728426/7_50512149774634.webp",
-      "assets/products/9937879728426/8_50512140632362.webp",
-      "assets/products/9937879728426/9_50512140697898.webp",
-      "assets/products/9937879728426/10_50512140763434.webp",
-      "assets/products/9937879728426/11_50512140566826.webp",
-      "assets/products/9937879728426/12_50512149709098.webp",
-      "assets/products/9937879728426/13_50512149643562.webp",
-      "assets/products/9937879728426/14_50512149578026.webp",
-      "assets/products/9937879728426/15_50512149676330.webp",
-      "assets/products/9937879728426/16_50512149610794.webp",
-      "assets/products/9937879728426/17_50512149741866.webp",
-      "assets/products/9937879728426/18_50512149872938.webp",
-      "assets/products/9937879728426/19_50512149807402.webp"
+      "assets/products/9937879728426/1_50512140501290.png",
+      "assets/products/9937879728426/2_50512140534058.png",
+      "assets/products/9937879728426/3_50512140730666.png",
+      "assets/products/9937879728426/4_50512140599594.png",
+      "assets/products/9937879728426/5_50512140468522.png",
+      "assets/products/9937879728426/6_50512140665130.png",
+      "assets/products/9937879728426/7_50512149774634.png",
+      "assets/products/9937879728426/8_50512140632362.png",
+      "assets/products/9937879728426/9_50512140697898.png",
+      "assets/products/9937879728426/10_50512140763434.png",
+      "assets/products/9937879728426/11_50512140566826.png",
+      "assets/products/9937879728426/12_50512149709098.png",
+      "assets/products/9937879728426/13_50512149643562.png",
+      "assets/products/9937879728426/14_50512149578026.png",
+      "assets/products/9937879728426/15_50512149676330.png",
+      "assets/products/9937879728426/16_50512149610794.png",
+      "assets/products/9937879728426/17_50512149741866.png",
+      "assets/products/9937879728426/18_50512149872938.png",
+      "assets/products/9937879728426/19_50512149807402.png"
     ],
     "has_colors": true,
     "colors": [
@@ -1244,81 +1260,81 @@ window.CovertokProducts = [
         "name": "Silver",
         "hex": "#E4E4E7",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/1_50512140501290.webp",
+        "image": "assets/products/9937879728426/1_50512140501290.png",
         "images": [
-          "assets/products/9937879728426/1_50512140501290.webp"
+          "assets/products/9937879728426/1_50512140501290.png"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/4_50512140599594.webp",
+        "image": "assets/products/9937879728426/4_50512140599594.png",
         "images": [
-          "assets/products/9937879728426/4_50512140599594.webp"
+          "assets/products/9937879728426/4_50512140599594.png"
         ]
       },
       {
         "name": "Rose gold",
         "hex": "#FDA4AF",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/6_50512140665130.webp",
+        "image": "assets/products/9937879728426/6_50512140665130.png",
         "images": [
-          "assets/products/9937879728426/6_50512140665130.webp"
+          "assets/products/9937879728426/6_50512140665130.png"
         ]
       },
       {
         "name": "Blue",
         "hex": "#2563EB",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/7_50512149774634.webp",
+        "image": "assets/products/9937879728426/7_50512149774634.png",
         "images": [
-          "assets/products/9937879728426/7_50512149774634.webp"
+          "assets/products/9937879728426/7_50512149774634.png"
         ]
       },
       {
         "name": "Titanium",
         "hex": "#D4D4D8",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/2_50512140534058.webp",
+        "image": "assets/products/9937879728426/2_50512140534058.png",
         "images": [
-          "assets/products/9937879728426/2_50512140534058.webp"
+          "assets/products/9937879728426/2_50512140534058.png"
         ]
       },
       {
         "name": "Natural",
         "hex": "#E2E8F0",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/1_50512140501290.webp",
+        "image": "assets/products/9937879728426/1_50512140501290.png",
         "images": [
-          "assets/products/9937879728426/1_50512140501290.webp"
+          "assets/products/9937879728426/1_50512140501290.png"
         ]
       },
       {
         "name": "Stone",
         "hex": "#A8A29E",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/3_50512140730666.webp",
+        "image": "assets/products/9937879728426/3_50512140730666.png",
         "images": [
-          "assets/products/9937879728426/3_50512140730666.webp"
+          "assets/products/9937879728426/3_50512140730666.png"
         ]
       },
       {
         "name": "Black/Red Stripe",
         "hex": "#18181B",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/8_50512140632362.webp",
+        "image": "assets/products/9937879728426/8_50512140632362.png",
         "images": [
-          "assets/products/9937879728426/8_50512140632362.webp"
+          "assets/products/9937879728426/8_50512140632362.png"
         ]
       },
       {
         "name": "Gold",
         "hex": "#EAB308",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/9_50512140697898.webp",
+        "image": "assets/products/9937879728426/9_50512140697898.png",
         "images": [
-          "assets/products/9937879728426/9_50512140697898.webp"
+          "assets/products/9937879728426/9_50512140697898.png"
         ]
       }
     ],
@@ -1425,14 +1441,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9904686924074/1_50151737622826.webp",
+    "primary_image": "assets/products/9904686924074/1_50151737622826.png",
     "images": [
-      "assets/products/9904686924074/1_50151737622826.webp",
-      "assets/products/9904686924074/2_50151737590058.webp",
-      "assets/products/9904686924074/3_50151737557290.webp"
+      "assets/products/9904686924074/1_50151737622826.png",
+      "assets/products/9904686924074/2_50151737590058.png",
+      "assets/products/9904686924074/3_50151737557290.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pearlescent White",
+        "hex": "#F8FAFC"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.",
@@ -1528,17 +1549,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9893318426922/1_50067404259626.webp",
+    "primary_image": "assets/products/9893318426922/1_50067404259626.jpg",
     "images": [
-      "assets/products/9893318426922/1_50067404259626.webp",
-      "assets/products/9893318426922/2_50067404226858.webp",
-      "assets/products/9893318426922/3_50067404194090.webp",
-      "assets/products/9893318426922/4_50067404128554.webp",
-      "assets/products/9893318426922/5_50067404161322.webp",
-      "assets/products/9893318426922/6_50067404292394.webp",
-      "assets/products/9893318426922/7_50067404030250.webp",
-      "assets/products/9893318426922/8_50067404063018.webp",
-      "assets/products/9893318426922/9_50067404095786.webp"
+      "assets/products/9893318426922/1_50067404259626.jpg",
+      "assets/products/9893318426922/2_50067404226858.jpg",
+      "assets/products/9893318426922/3_50067404194090.jpg",
+      "assets/products/9893318426922/4_50067404128554.jpg",
+      "assets/products/9893318426922/5_50067404161322.jpg",
+      "assets/products/9893318426922/6_50067404292394.jpg",
+      "assets/products/9893318426922/7_50067404030250.jpg",
+      "assets/products/9893318426922/8_50067404063018.jpg",
+      "assets/products/9893318426922/9_50067404095786.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -1546,45 +1567,45 @@ window.CovertokProducts = [
         "name": "Pink",
         "hex": "#EC4899",
         "price": 399.0,
-        "image": "assets/products/9893318426922/1_50067404259626.webp",
+        "image": "assets/products/9893318426922/1_50067404259626.jpg",
         "images": [
-          "assets/products/9893318426922/1_50067404259626.webp"
+          "assets/products/9893318426922/1_50067404259626.jpg"
         ]
       },
       {
         "name": "White",
         "hex": "#FFFFFF",
         "price": 399.0,
-        "image": "assets/products/9893318426922/2_50067404226858.webp",
+        "image": "assets/products/9893318426922/2_50067404226858.jpg",
         "images": [
-          "assets/products/9893318426922/2_50067404226858.webp"
+          "assets/products/9893318426922/2_50067404226858.jpg"
         ]
       },
       {
         "name": "lavender",
         "hex": "#DDD6FE",
         "price": 399.0,
-        "image": "assets/products/9893318426922/3_50067404194090.webp",
+        "image": "assets/products/9893318426922/3_50067404194090.jpg",
         "images": [
-          "assets/products/9893318426922/3_50067404194090.webp"
+          "assets/products/9893318426922/3_50067404194090.jpg"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 399.0,
-        "image": "assets/products/9893318426922/4_50067404128554.webp",
+        "image": "assets/products/9893318426922/4_50067404128554.jpg",
         "images": [
-          "assets/products/9893318426922/4_50067404128554.webp"
+          "assets/products/9893318426922/4_50067404128554.jpg"
         ]
       },
       {
         "name": "Light blue",
         "hex": "#60A5FA",
         "price": 399.0,
-        "image": "assets/products/9893318426922/5_50067404161322.webp",
+        "image": "assets/products/9893318426922/5_50067404161322.jpg",
         "images": [
-          "assets/products/9893318426922/5_50067404161322.webp"
+          "assets/products/9893318426922/5_50067404161322.jpg"
         ]
       }
     ],
@@ -1709,15 +1730,15 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9889169211690/1_50743956472106.webp",
+    "primary_image": "assets/products/9889169211690/1_50743956472106.png",
     "images": [
-      "assets/products/9889169211690/1_50743956472106.webp",
-      "assets/products/9889169211690/2_50037223391530.webp",
-      "assets/products/9889169211690/3_50037513584938.webp",
-      "assets/products/9889169211690/4_50037513617706.webp",
-      "assets/products/9889169211690/5_50037513552170.webp",
-      "assets/products/9889169211690/6_50037223358762.webp",
-      "assets/products/9889169211690/7_50037223293226.webp"
+      "assets/products/9889169211690/1_50743956472106.png",
+      "assets/products/9889169211690/2_50037223391530.png",
+      "assets/products/9889169211690/3_50037513584938.png",
+      "assets/products/9889169211690/4_50037513617706.png",
+      "assets/products/9889169211690/5_50037513552170.png",
+      "assets/products/9889169211690/6_50037223358762.png",
+      "assets/products/9889169211690/7_50037223293226.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -1725,72 +1746,72 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
       {
         "name": "Beige",
         "hex": "#F5F5DC",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
       {
         "name": "Pink",
         "hex": "#EC4899",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
       {
         "name": "Mint Green",
         "hex": "#4ADE80",
         "price": 299.0,
-        "image": "assets/products/9889169211690/7_50037223293226.webp",
+        "image": "assets/products/9889169211690/7_50037223293226.jpg",
         "images": [
-          "assets/products/9889169211690/7_50037223293226.webp"
+          "assets/products/9889169211690/7_50037223293226.jpg"
         ]
       },
       {
         "name": "Blue",
         "hex": "#2563EB",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
       {
         "name": "Peach",
         "hex": "#FDBA74",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
       {
         "name": "Lavender",
         "hex": "#DDD6FE",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/6_50037223358762.png",
         "images": [
-          "assets/products/9889169211690/6_50037223358762.webp"
+          "assets/products/9889169211690/6_50037223358762.png"
         ]
       }
     ],
@@ -1892,14 +1913,14 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9888955924778/1_50035509362986.webp",
+    "primary_image": "assets/products/9888955924778/1_50035509362986.png",
     "images": [
-      "assets/products/9888955924778/1_50035509362986.webp",
-      "assets/products/9888955924778/2_50035509330218.webp",
-      "assets/products/9888955924778/3_50035509297450.webp",
-      "assets/products/9888955924778/4_50035509264682.webp",
-      "assets/products/9888955924778/5_50035509231914.webp",
-      "assets/products/9888955924778/6_50035509199146.webp"
+      "assets/products/9888955924778/1_50035509362986.png",
+      "assets/products/9888955924778/2_50035509330218.png",
+      "assets/products/9888955924778/3_50035509297450.png",
+      "assets/products/9888955924778/4_50035509264682.png",
+      "assets/products/9888955924778/5_50035509231914.png",
+      "assets/products/9888955924778/6_50035509199146.png"
     ],
     "has_colors": true,
     "colors": [
@@ -1907,27 +1928,27 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 2099.0,
-        "image": "assets/products/9888955924778/2_50035509330218.webp",
+        "image": "assets/products/9888955924778/2_50035509330218.png",
         "images": [
-          "assets/products/9888955924778/2_50035509330218.webp"
+          "assets/products/9888955924778/2_50035509330218.png"
         ]
       },
       {
         "name": "Rose Gold",
         "hex": "#FDA4AF",
         "price": 2099.0,
-        "image": "assets/products/9888955924778/3_50035509297450.webp",
+        "image": "assets/products/9888955924778/3_50035509297450.png",
         "images": [
-          "assets/products/9888955924778/3_50035509297450.webp"
+          "assets/products/9888955924778/3_50035509297450.png"
         ]
       },
       {
         "name": "Grey",
         "hex": "#6B7280",
         "price": 2099.0,
-        "image": "assets/products/9888955924778/4_50035509264682.webp",
+        "image": "assets/products/9888955924778/4_50035509264682.png",
         "images": [
-          "assets/products/9888955924778/4_50035509264682.webp"
+          "assets/products/9888955924778/4_50035509264682.png"
         ]
       }
     ],
@@ -1943,10 +1964,10 @@ window.CovertokProducts = [
       "Digital LED Display – Real-time battery percentage indicator.",
       "Fast Charging Output – Quick and efficient charging whenever you need it.",
       "Premium Build Quality – Durable, elegant, and made for everyday use.",
-      " Magnetic Attachment – Snaps onto your phone securely.",
+      "📱 Magnetic Attachment – Snaps onto your phone securely.",
       "⚡ Wireless Charging – Say goodbye to messy cables."
     ],
-    "raw_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>✅ 5000mAh High Capacity – Enough to keep your devices powered all day.<br>✅ Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br>✅ Digital LED Display – Real-time battery percentage indicator.<br>✅ Fast Charging Output – Quick and efficient charging whenever you need it.<br>✅ Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>•  Magnetic Attachment – Snaps onto your phone securely.<br> • ⚡ Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>",
+    "raw_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>✅ 5000mAh High Capacity – Enough to keep your devices powered all day.<br>✅ Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br>✅ Digital LED Display – Real-time battery percentage indicator.<br>✅ Fast Charging Output – Quick and efficient charging whenever you need it.<br>✅ Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>• 📱 Magnetic Attachment – Snaps onto your phone securely.<br> • ⚡ Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>",
     "in_stock": true,
     "features": [
       {
@@ -2038,45 +2059,45 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9882472382762/1_49996946604330.webp",
+    "primary_image": "assets/products/9882472382762/1_49996946604330.jpg",
     "images": [
-      "assets/products/9882472382762/1_49996946604330.webp",
-      "assets/products/9882472382762/2_49996950962474.webp",
-      "assets/products/9882472382762/3_49996942868778.webp",
-      "assets/products/9882472382762/4_49996961022250.webp",
-      "assets/products/9882472382762/5_49996942836010.webp",
-      "assets/products/9882472382762/6_49996951126314.webp",
-      "assets/products/9882472382762/7_49996948537642.webp",
-      "assets/products/9882472382762/8_49996957221162.webp",
-      "assets/products/9882472382762/9_49996943032618.webp",
-      "assets/products/9882472382762/10_49996956205354.webp",
-      "assets/products/9882472382762/11_49996943098154.webp",
-      "assets/products/9882472382762/12_49996958925098.webp",
-      "assets/products/9882472382762/13_49996961120554.webp",
-      "assets/products/9882472382762/14_49996953387306.webp",
-      "assets/products/9882472382762/15_49996943065386.webp",
-      "assets/products/9882472382762/16_49996961710378.webp",
-      "assets/products/9882472382762/17_49996942999850.webp",
-      "assets/products/9882472382762/18_49996951191850.webp",
-      "assets/products/9882472382762/19_49996948570410.webp",
-      "assets/products/9882472382762/20_49996959514922.webp",
-      "assets/products/9882472382762/21_49996943130922.webp",
-      "assets/products/9882472382762/22_49996951093546.webp",
-      "assets/products/9882472382762/23_49996943163690.webp",
-      "assets/products/9882472382762/24_49996956336426.webp",
-      "assets/products/9882472382762/25_49996942901546.webp",
-      "assets/products/9882472382762/26_49996956565802.webp",
-      "assets/products/9882472382762/27_49996942934314.webp",
-      "assets/products/9882472382762/28_49996957450538.webp",
-      "assets/products/9882472382762/29_49996948504874.webp",
-      "assets/products/9882472382762/30_49996958499114.webp",
-      "assets/products/9882472382762/31_49997335494954.webp",
-      "assets/products/9882472382762/32_49997335462186.webp",
-      "assets/products/9882472382762/33_49997335429418.webp",
-      "assets/products/9882472382762/34_49997335396650.webp",
-      "assets/products/9882472382762/35_49997335363882.webp",
-      "assets/products/9882472382762/36_49997335331114.webp",
-      "assets/products/9882472382762/37_49997335265578.webp"
+      "assets/products/9882472382762/1_49996946604330.jpg",
+      "assets/products/9882472382762/2_49996950962474.jpg",
+      "assets/products/9882472382762/3_49996942868778.jpg",
+      "assets/products/9882472382762/4_49996961022250.jpg",
+      "assets/products/9882472382762/5_49996942836010.jpg",
+      "assets/products/9882472382762/6_49996951126314.jpg",
+      "assets/products/9882472382762/7_49996948537642.jpg",
+      "assets/products/9882472382762/8_49996957221162.jpg",
+      "assets/products/9882472382762/9_49996943032618.jpg",
+      "assets/products/9882472382762/10_49996956205354.jpg",
+      "assets/products/9882472382762/11_49996943098154.jpg",
+      "assets/products/9882472382762/12_49996958925098.jpg",
+      "assets/products/9882472382762/13_49996961120554.jpg",
+      "assets/products/9882472382762/14_49996953387306.jpg",
+      "assets/products/9882472382762/15_49996943065386.jpg",
+      "assets/products/9882472382762/16_49996961710378.jpg",
+      "assets/products/9882472382762/17_49996942999850.jpg",
+      "assets/products/9882472382762/18_49996951191850.jpg",
+      "assets/products/9882472382762/19_49996948570410.jpg",
+      "assets/products/9882472382762/20_49996959514922.jpg",
+      "assets/products/9882472382762/21_49996943130922.jpg",
+      "assets/products/9882472382762/22_49996951093546.jpg",
+      "assets/products/9882472382762/23_49996943163690.jpg",
+      "assets/products/9882472382762/24_49996956336426.jpg",
+      "assets/products/9882472382762/25_49996942901546.jpg",
+      "assets/products/9882472382762/26_49996956565802.jpg",
+      "assets/products/9882472382762/27_49996942934314.jpg",
+      "assets/products/9882472382762/28_49996957450538.jpg",
+      "assets/products/9882472382762/29_49996948504874.jpg",
+      "assets/products/9882472382762/30_49996958499114.jpg",
+      "assets/products/9882472382762/31_49997335494954.jpg",
+      "assets/products/9882472382762/32_49997335462186.jpg",
+      "assets/products/9882472382762/33_49997335429418.jpg",
+      "assets/products/9882472382762/34_49997335396650.jpg",
+      "assets/products/9882472382762/35_49997335363882.jpg",
+      "assets/products/9882472382762/36_49997335331114.jpg",
+      "assets/products/9882472382762/37_49997335265578.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -2084,118 +2105,118 @@ window.CovertokProducts = [
         "name": "Orange",
         "hex": "#F97316",
         "price": 799.0,
-        "image": "assets/products/9882472382762/10_49996956205354.webp",
+        "image": "assets/products/9882472382762/10_49996956205354.jpg",
         "images": [
-          "assets/products/9882472382762/10_49996956205354.webp"
+          "assets/products/9882472382762/10_49996956205354.jpg"
         ]
       },
       {
         "name": "Light blue",
         "hex": "#60A5FA",
         "price": 799.0,
-        "image": "assets/products/9882472382762/24_49996956336426.webp",
+        "image": "assets/products/9882472382762/24_49996956336426.jpg",
         "images": [
-          "assets/products/9882472382762/24_49996956336426.webp"
+          "assets/products/9882472382762/24_49996956336426.jpg"
         ]
       },
       {
         "name": "Stone Blue",
         "hex": "#64748B",
         "price": 799.0,
-        "image": "assets/products/9882472382762/26_49996956565802.webp",
+        "image": "assets/products/9882472382762/26_49996956565802.jpg",
         "images": [
-          "assets/products/9882472382762/26_49996956565802.webp"
+          "assets/products/9882472382762/26_49996956565802.jpg"
         ]
       },
       {
         "name": "Purple lilac",
         "hex": "#C084FC",
         "price": 799.0,
-        "image": "assets/products/9882472382762/8_49996957221162.webp",
+        "image": "assets/products/9882472382762/8_49996957221162.jpg",
         "images": [
-          "assets/products/9882472382762/8_49996957221162.webp"
+          "assets/products/9882472382762/8_49996957221162.jpg"
         ]
       },
       {
         "name": "fruit purple",
         "hex": "#7E22CE",
         "price": 799.0,
-        "image": "assets/products/9882472382762/28_49996957450538.webp",
+        "image": "assets/products/9882472382762/28_49996957450538.jpg",
         "images": [
-          "assets/products/9882472382762/28_49996957450538.webp"
+          "assets/products/9882472382762/28_49996957450538.jpg"
         ]
       },
       {
         "name": "Midnight blue",
         "hex": "#0F172A",
         "price": 799.0,
-        "image": "assets/products/9882472382762/30_49996958499114.webp",
+        "image": "assets/products/9882472382762/30_49996958499114.jpg",
         "images": [
-          "assets/products/9882472382762/30_49996958499114.webp"
+          "assets/products/9882472382762/30_49996958499114.jpg"
         ]
       },
       {
         "name": "Pine Needle Green",
         "hex": "#14532D",
         "price": 799.0,
-        "image": "assets/products/9882472382762/12_49996958925098.webp",
+        "image": "assets/products/9882472382762/12_49996958925098.jpg",
         "images": [
-          "assets/products/9882472382762/12_49996958925098.webp",
-          "assets/products/9882472382762/22_49996951093546.webp"
+          "assets/products/9882472382762/12_49996958925098.jpg",
+          "assets/products/9882472382762/22_49996951093546.jpg"
         ]
       },
       {
         "name": "Alfalfa",
         "hex": "#4D7C0F",
         "price": 799.0,
-        "image": "assets/products/9882472382762/20_49996959514922.webp",
+        "image": "assets/products/9882472382762/20_49996959514922.jpg",
         "images": [
-          "assets/products/9882472382762/20_49996959514922.webp"
+          "assets/products/9882472382762/20_49996959514922.jpg"
         ]
       },
       {
         "name": "Wine red",
         "hex": "#881337",
         "price": 799.0,
-        "image": "assets/products/9882472382762/18_49996951191850.webp",
+        "image": "assets/products/9882472382762/18_49996951191850.jpg",
         "images": [
-          "assets/products/9882472382762/18_49996951191850.webp"
+          "assets/products/9882472382762/18_49996951191850.jpg"
         ]
       },
       {
         "name": "starlight",
         "hex": "#F5EBE0",
         "price": 799.0,
-        "image": "assets/products/9882472382762/4_49996961022250.webp",
+        "image": "assets/products/9882472382762/4_49996961022250.jpg",
         "images": [
-          "assets/products/9882472382762/4_49996961022250.webp"
+          "assets/products/9882472382762/4_49996961022250.jpg"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 799.0,
-        "image": "assets/products/9882472382762/14_49996953387306.webp",
+        "image": "assets/products/9882472382762/14_49996953387306.jpg",
         "images": [
-          "assets/products/9882472382762/14_49996953387306.webp"
+          "assets/products/9882472382762/14_49996953387306.jpg"
         ]
       },
       {
         "name": "Red",
         "hex": "#DC2626",
         "price": 799.0,
-        "image": "assets/products/9882472382762/16_49996961710378.webp",
+        "image": "assets/products/9882472382762/16_49996961710378.jpg",
         "images": [
-          "assets/products/9882472382762/16_49996961710378.webp"
+          "assets/products/9882472382762/16_49996961710378.jpg"
         ]
       },
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
         "price": 799.0,
-        "image": "assets/products/9882472382762/12_49996958925098.webp",
+        "image": "assets/products/9882472382762/12_49996958925098.jpg",
         "images": [
-          "assets/products/9882472382762/12_49996958925098.webp"
+          "assets/products/9882472382762/12_49996958925098.jpg"
         ]
       }
     ],
@@ -2299,13 +2320,13 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9876014432554/1_49941765751082.webp",
+    "primary_image": "assets/products/9876014432554/1_49941765751082.png",
     "images": [
-      "assets/products/9876014432554/1_49941765751082.webp",
-      "assets/products/9876014432554/2_49941765783850.webp",
-      "assets/products/9876014432554/3_49941765816618.webp",
-      "assets/products/9876014432554/4_49941765718314.webp",
-      "assets/products/9876014432554/5_49941765849386.webp"
+      "assets/products/9876014432554/1_49941765751082.png",
+      "assets/products/9876014432554/2_49941765783850.png",
+      "assets/products/9876014432554/3_49941765816618.png",
+      "assets/products/9876014432554/4_49941765718314.png",
+      "assets/products/9876014432554/5_49941765849386.png"
     ],
     "has_colors": true,
     "colors": [
@@ -2313,9 +2334,9 @@ window.CovertokProducts = [
         "name": "Steel Blue",
         "hex": "#2563EB",
         "price": 499.0,
-        "image": "assets/products/9876014432554/1_49941765751082.webp",
+        "image": "assets/products/9876014432554/1_49941765751082.png",
         "images": [
-          "assets/products/9876014432554/1_49941765751082.webp"
+          "assets/products/9876014432554/1_49941765751082.png"
         ]
       }
     ],
@@ -2429,13 +2450,13 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9875994280234/1_49941561835818.webp",
+    "primary_image": "assets/products/9875994280234/1_49941561835818.png",
     "images": [
-      "assets/products/9875994280234/1_49941561835818.webp",
-      "assets/products/9875994280234/2_49941561770282.webp",
-      "assets/products/9875994280234/3_49941561868586.webp",
-      "assets/products/9875994280234/4_49941561737514.webp",
-      "assets/products/9875994280234/5_49941561803050.webp"
+      "assets/products/9875994280234/1_49941561835818.png",
+      "assets/products/9875994280234/2_49941561770282.png",
+      "assets/products/9875994280234/3_49941561868586.png",
+      "assets/products/9875994280234/4_49941561737514.png",
+      "assets/products/9875994280234/5_49941561803050.png"
     ],
     "has_colors": true,
     "colors": [
@@ -2443,36 +2464,36 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 799.0,
-        "image": "assets/products/9875994280234/4_49941561737514.webp",
+        "image": "assets/products/9875994280234/4_49941561737514.png",
         "images": [
-          "assets/products/9875994280234/4_49941561737514.webp"
+          "assets/products/9875994280234/4_49941561737514.png"
         ]
       },
       {
         "name": "Pink",
         "hex": "#EC4899",
         "price": 799.0,
-        "image": "assets/products/9875994280234/3_49941561868586.webp",
+        "image": "assets/products/9875994280234/3_49941561868586.png",
         "images": [
-          "assets/products/9875994280234/3_49941561868586.webp"
+          "assets/products/9875994280234/3_49941561868586.png"
         ]
       },
       {
         "name": "Off White",
         "hex": "#F3F4F6",
         "price": 799.0,
-        "image": "assets/products/9875994280234/1_49941561835818.webp",
+        "image": "assets/products/9875994280234/1_49941561835818.png",
         "images": [
-          "assets/products/9875994280234/1_49941561835818.webp"
+          "assets/products/9875994280234/1_49941561835818.png"
         ]
       },
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
         "price": 799.0,
-        "image": "assets/products/9875994280234/5_49941561803050.webp",
+        "image": "assets/products/9875994280234/5_49941561803050.png",
         "images": [
-          "assets/products/9875994280234/5_49941561803050.webp"
+          "assets/products/9875994280234/5_49941561803050.png"
         ]
       }
     ],
@@ -2590,16 +2611,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9875597623594/1_49938305941802.webp",
+    "primary_image": "assets/products/9875597623594/1_49938305941802.png",
     "images": [
-      "assets/products/9875597623594/1_49938305941802.webp",
-      "assets/products/9875597623594/2_49938305876266.webp",
-      "assets/products/9875597623594/3_49938305843498.webp",
-      "assets/products/9875597623594/4_49938305974570.webp",
-      "assets/products/9875597623594/5_49938305909034.webp"
+      "assets/products/9875597623594/1_49938305941802.png",
+      "assets/products/9875597623594/2_49938305876266.png",
+      "assets/products/9875597623594/3_49938305843498.jpg",
+      "assets/products/9875597623594/4_49938305974570.png",
+      "assets/products/9875597623594/5_49938305909034.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Ultra Clear",
+        "hex": "#E2E8F0"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Keep your smartphone screen safe and crystal clear with this Tempered Glass Screen Protector. Designed with 9H hardness, it provides superior protection against scratches, drops, and everyday wear. The ultra-thin design ensures HD clarity and smooth touch response, while the anti-fingerprint coating keeps your screen spotless. The package includes an easy alignment installation frame, making bubble-free application quick and hassle-free. Compatible with most smartphone models, this screen protector is the perfect blend of durability and elegance to keep your device looking brand new.",
@@ -2701,22 +2727,27 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9875054297386/1_49933917716778.webp",
+    "primary_image": "assets/products/9875054297386/1_49933917716778.jpg",
     "images": [
-      "assets/products/9875054297386/1_49933917716778.webp",
-      "assets/products/9875054297386/2_49933917651242.webp",
-      "assets/products/9875054297386/3_49933917749546.webp",
-      "assets/products/9875054297386/4_49933917454634.webp",
-      "assets/products/9875054297386/5_49933917421866.webp",
-      "assets/products/9875054297386/6_49933917487402.webp",
-      "assets/products/9875054297386/7_49933917520170.webp",
-      "assets/products/9875054297386/8_49933917552938.webp",
-      "assets/products/9875054297386/9_49933917585706.webp",
-      "assets/products/9875054297386/10_49933917618474.webp",
-      "assets/products/9875054297386/11_49933917684010.webp"
+      "assets/products/9875054297386/1_49933917716778.jpg",
+      "assets/products/9875054297386/2_49933917651242.png",
+      "assets/products/9875054297386/3_49933917749546.jpg",
+      "assets/products/9875054297386/4_49933917454634.jpg",
+      "assets/products/9875054297386/5_49933917421866.jpg",
+      "assets/products/9875054297386/6_49933917487402.png",
+      "assets/products/9875054297386/7_49933917520170.png",
+      "assets/products/9875054297386/8_49933917552938.png",
+      "assets/products/9875054297386/9_49933917585706.png",
+      "assets/products/9875054297386/10_49933917618474.png",
+      "assets/products/9875054297386/11_49933917684010.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Matte Privacy",
+        "hex": "#334155"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -2837,15 +2868,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873124557098/1_49921092157738.webp",
+    "primary_image": "assets/products/9873124557098/1_49921092157738.png",
     "images": [
-      "assets/products/9873124557098/1_49921092157738.webp",
-      "assets/products/9873124557098/2_49921090847018.webp",
-      "assets/products/9873124557098/3_49921093009706.webp",
-      "assets/products/9873124557098/4_49921089601834.webp"
+      "assets/products/9873124557098/1_49921092157738.png",
+      "assets/products/9873124557098/2_49921090847018.png",
+      "assets/products/9873124557098/3_49921093009706.png",
+      "assets/products/9873124557098/4_49921089601834.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Bold Orange",
+        "hex": "#FF5500"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44mm",
@@ -2952,15 +2988,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873120330026/4_49921040187690.webp",
+    "primary_image": "assets/products/9873120330026/4_49921040187690.jpg",
     "images": [
-      "assets/products/9873120330026/4_49921040187690.webp",
-      "assets/products/9873120330026/1_49921040089386.webp",
-      "assets/products/9873120330026/2_49921039925546.webp",
-      "assets/products/9873120330026/3_49921039991082.webp"
+      "assets/products/9873120330026/4_49921040187690.jpg",
+      "assets/products/9873120330026/1_49921040089386.png",
+      "assets/products/9873120330026/2_49921039925546.png",
+      "assets/products/9873120330026/3_49921039991082.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Bright Orange",
+        "hex": "#FF5500"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44m",
@@ -3066,15 +3107,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873118855466/1_49921023738154.webp",
+    "primary_image": "assets/products/9873118855466/1_49921023738154.png",
     "images": [
-      "assets/products/9873118855466/1_49921023738154.webp",
-      "assets/products/9873118855466/2_49921023934762.webp",
-      "assets/products/9873118855466/3_49921024295210.webp",
-      "assets/products/9873118855466/4_49921025311018.webp"
+      "assets/products/9873118855466/1_49921023738154.png",
+      "assets/products/9873118855466/2_49921023934762.png",
+      "assets/products/9873118855466/3_49921024295210.png",
+      "assets/products/9873118855466/4_49921025311018.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Clear Titanium",
+        "hex": "#94A3B8"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44mm",
@@ -3180,15 +3226,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873118101802/1_49921013219626.webp",
+    "primary_image": "assets/products/9873118101802/1_49921013219626.png",
     "images": [
-      "assets/products/9873118101802/1_49921013219626.webp",
-      "assets/products/9873118101802/2_49921012597034.webp",
-      "assets/products/9873118101802/3_49921014169898.webp",
-      "assets/products/9873118101802/4_49921013907754.webp"
+      "assets/products/9873118101802/1_49921013219626.png",
+      "assets/products/9873118101802/2_49921012597034.png",
+      "assets/products/9873118101802/3_49921014169898.png",
+      "assets/products/9873118101802/4_49921013907754.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Tactical Black",
+        "hex": "#1C1D1F"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44mm",
@@ -3294,14 +3345,14 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9873114038570/1_49920971211050.webp",
+    "primary_image": "assets/products/9873114038570/1_49920971211050.png",
     "images": [
-      "assets/products/9873114038570/1_49920971211050.webp",
-      "assets/products/9873114038570/2_49920971178282.webp",
-      "assets/products/9873114038570/3_49920971112746.webp",
-      "assets/products/9873114038570/4_49920969376042.webp",
-      "assets/products/9873114038570/5_49920970064170.webp",
-      "assets/products/9873114038570/6_49920971374890.webp"
+      "assets/products/9873114038570/1_49920971211050.png",
+      "assets/products/9873114038570/2_49920971178282.png",
+      "assets/products/9873114038570/3_49920971112746.png",
+      "assets/products/9873114038570/4_49920969376042.png",
+      "assets/products/9873114038570/5_49920970064170.png",
+      "assets/products/9873114038570/6_49920971374890.png"
     ],
     "has_colors": true,
     "colors": [
@@ -3309,27 +3360,27 @@ window.CovertokProducts = [
         "name": "Ivory hearts",
         "hex": "#6DB634",
         "price": 449.0,
-        "image": "assets/products/9873114038570/2_49920971178282.webp",
+        "image": "assets/products/9873114038570/2_49920971178282.png",
         "images": [
-          "assets/products/9873114038570/2_49920971178282.webp"
+          "assets/products/9873114038570/2_49920971178282.png"
         ]
       },
       {
         "name": "Blush pink",
         "hex": "#F472B6",
         "price": 449.0,
-        "image": "assets/products/9873114038570/1_49920971211050.webp",
+        "image": "assets/products/9873114038570/1_49920971211050.png",
         "images": [
-          "assets/products/9873114038570/1_49920971211050.webp"
+          "assets/products/9873114038570/1_49920971211050.png"
         ]
       },
       {
         "name": "Mint breeze",
         "hex": "#86EFAC",
         "price": 449.0,
-        "image": "assets/products/9873114038570/3_49920971112746.webp",
+        "image": "assets/products/9873114038570/3_49920971112746.png",
         "images": [
-          "assets/products/9873114038570/3_49920971112746.webp"
+          "assets/products/9873114038570/3_49920971112746.png"
         ]
       }
     ],
@@ -3446,20 +3497,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108828458/1_49984385122602.webp",
+    "primary_image": "assets/products/9873108828458/1_49984385122602.jpg",
     "images": [
-      "assets/products/9873108828458/1_49984385122602.webp",
-      "assets/products/9873108828458/2_49984385188138.webp",
-      "assets/products/9873108828458/3_49984385089834.webp",
-      "assets/products/9873108828458/4_49984385286442.webp",
-      "assets/products/9873108828458/5_49984385319210.webp",
-      "assets/products/9873108828458/6_49984384991530.webp",
-      "assets/products/9873108828458/7_49984385024298.webp",
-      "assets/products/9873108828458/8_49984385220906.webp",
-      "assets/products/9873108828458/9_49984385057066.webp",
-      "assets/products/9873108828458/10_49984385155370.webp",
-      "assets/products/9873108828458/11_49984385253674.webp",
-      "assets/products/9873108828458/12_49920832176426.webp"
+      "assets/products/9873108828458/1_49984385122602.jpg",
+      "assets/products/9873108828458/2_49984385188138.jpg",
+      "assets/products/9873108828458/3_49984385089834.jpg",
+      "assets/products/9873108828458/4_49984385286442.jpg",
+      "assets/products/9873108828458/5_49984385319210.jpg",
+      "assets/products/9873108828458/6_49984384991530.jpg",
+      "assets/products/9873108828458/7_49984385024298.jpg",
+      "assets/products/9873108828458/8_49984385220906.jpg",
+      "assets/products/9873108828458/9_49984385057066.jpg",
+      "assets/products/9873108828458/10_49984385155370.jpg",
+      "assets/products/9873108828458/11_49984385253674.jpg",
+      "assets/products/9873108828458/12_49920832176426.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -3467,9 +3518,9 @@ window.CovertokProducts = [
         "name": "Yellow",
         "hex": "#EAB308",
         "price": 1299.0,
-        "image": "assets/products/9873108828458/1_49984385122602.webp",
+        "image": "assets/products/9873108828458/1_49984385122602.jpg",
         "images": [
-          "assets/products/9873108828458/1_49984385122602.webp"
+          "assets/products/9873108828458/1_49984385122602.jpg"
         ]
       }
     ],
@@ -3575,21 +3626,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108435242/2_49984376144170.webp",
+    "primary_image": "assets/products/9873108435242/2_49984376144170.jpg",
     "images": [
-      "assets/products/9873108435242/2_49984376144170.webp",
-      "assets/products/9873108435242/1_49984376242474.webp",
-      "assets/products/9873108435242/3_49984376045866.webp",
-      "assets/products/9873108435242/4_49984376078634.webp",
-      "assets/products/9873108435242/5_49984375980330.webp",
-      "assets/products/9873108435242/6_49984376013098.webp",
-      "assets/products/9873108435242/7_49984376209706.webp",
-      "assets/products/9873108435242/8_49984376340778.webp",
-      "assets/products/9873108435242/9_49984376308010.webp",
-      "assets/products/9873108435242/10_49984376275242.webp",
-      "assets/products/9873108435242/11_49984376111402.webp",
-      "assets/products/9873108435242/12_49984376176938.webp",
-      "assets/products/9873108435242/13_49920832176426.webp"
+      "assets/products/9873108435242/2_49984376144170.jpg",
+      "assets/products/9873108435242/1_49984376242474.jpg",
+      "assets/products/9873108435242/3_49984376045866.jpg",
+      "assets/products/9873108435242/4_49984376078634.jpg",
+      "assets/products/9873108435242/5_49984375980330.jpg",
+      "assets/products/9873108435242/6_49984376013098.jpg",
+      "assets/products/9873108435242/7_49984376209706.jpg",
+      "assets/products/9873108435242/8_49984376340778.jpg",
+      "assets/products/9873108435242/9_49984376308010.jpg",
+      "assets/products/9873108435242/10_49984376275242.jpg",
+      "assets/products/9873108435242/11_49984376111402.jpg",
+      "assets/products/9873108435242/12_49984376176938.jpg",
+      "assets/products/9873108435242/13_49920832176426.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -3597,9 +3648,9 @@ window.CovertokProducts = [
         "name": "Grey+Black",
         "hex": "#18181B",
         "price": 1299.0,
-        "image": "assets/products/9873108435242/2_49984376144170.webp",
+        "image": "assets/products/9873108435242/2_49984376144170.jpg",
         "images": [
-          "assets/products/9873108435242/2_49984376144170.webp"
+          "assets/products/9873108435242/2_49984376144170.jpg"
         ]
       }
     ],
@@ -3705,21 +3756,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108238634/3_49984401539370.webp",
+    "primary_image": "assets/products/9873108238634/3_49984401539370.jpg",
     "images": [
-      "assets/products/9873108238634/3_49984401539370.webp",
-      "assets/products/9873108238634/1_49984401637674.webp",
-      "assets/products/9873108238634/2_49984401441066.webp",
-      "assets/products/9873108238634/4_49984401604906.webp",
-      "assets/products/9873108238634/5_49984401375530.webp",
-      "assets/products/9873108238634/6_49984401408298.webp",
-      "assets/products/9873108238634/7_49984401572138.webp",
-      "assets/products/9873108238634/8_49984401473834.webp",
-      "assets/products/9873108238634/9_49984401506602.webp",
-      "assets/products/9873108238634/10_49984401735978.webp",
-      "assets/products/9873108238634/11_49984401703210.webp",
-      "assets/products/9873108238634/12_49984401670442.webp",
-      "assets/products/9873108238634/13_49920832176426.webp"
+      "assets/products/9873108238634/3_49984401539370.jpg",
+      "assets/products/9873108238634/1_49984401637674.jpg",
+      "assets/products/9873108238634/2_49984401441066.jpg",
+      "assets/products/9873108238634/4_49984401604906.jpg",
+      "assets/products/9873108238634/5_49984401375530.jpg",
+      "assets/products/9873108238634/6_49984401408298.jpg",
+      "assets/products/9873108238634/7_49984401572138.jpg",
+      "assets/products/9873108238634/8_49984401473834.jpg",
+      "assets/products/9873108238634/9_49984401506602.jpg",
+      "assets/products/9873108238634/10_49984401735978.jpg",
+      "assets/products/9873108238634/11_49984401703210.jpg",
+      "assets/products/9873108238634/12_49984401670442.jpg",
+      "assets/products/9873108238634/13_49920832176426.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -3727,9 +3778,9 @@ window.CovertokProducts = [
         "name": "Orange+Grey",
         "hex": "#F97316",
         "price": 1299.0,
-        "image": "assets/products/9873108238634/3_49984401539370.webp",
+        "image": "assets/products/9873108238634/3_49984401539370.jpg",
         "images": [
-          "assets/products/9873108238634/3_49984401539370.webp"
+          "assets/products/9873108238634/3_49984401539370.jpg"
         ]
       }
     ],
@@ -3835,19 +3886,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108074794/2_49984412057898.webp",
+    "primary_image": "assets/products/9873108074794/2_49984412057898.jpg",
     "images": [
-      "assets/products/9873108074794/2_49984412057898.webp",
-      "assets/products/9873108074794/1_49984412090666.webp",
-      "assets/products/9873108074794/3_49984412188970.webp",
-      "assets/products/9873108074794/4_49984411861290.webp",
-      "assets/products/9873108074794/5_49984412123434.webp",
-      "assets/products/9873108074794/6_49984411894058.webp",
-      "assets/products/9873108074794/7_49984412221738.webp",
-      "assets/products/9873108074794/8_49984412254506.webp",
-      "assets/products/9873108074794/9_49984412156202.webp",
-      "assets/products/9873108074794/10_49984412352810.webp",
-      "assets/products/9873108074794/11_49920832176426.webp"
+      "assets/products/9873108074794/2_49984412057898.jpg",
+      "assets/products/9873108074794/1_49984412090666.jpg",
+      "assets/products/9873108074794/3_49984412188970.jpg",
+      "assets/products/9873108074794/4_49984411861290.jpg",
+      "assets/products/9873108074794/5_49984412123434.jpg",
+      "assets/products/9873108074794/6_49984411894058.jpg",
+      "assets/products/9873108074794/7_49984412221738.jpg",
+      "assets/products/9873108074794/8_49984412254506.jpg",
+      "assets/products/9873108074794/9_49984412156202.jpg",
+      "assets/products/9873108074794/10_49984412352810.jpg",
+      "assets/products/9873108074794/11_49920832176426.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -3855,9 +3906,9 @@ window.CovertokProducts = [
         "name": "Light Blue",
         "hex": "#60A5FA",
         "price": 1299.0,
-        "image": "assets/products/9873108074794/7_49984412221738.webp",
+        "image": "assets/products/9873108074794/7_49984412221738.jpg",
         "images": [
-          "assets/products/9873108074794/7_49984412221738.webp"
+          "assets/products/9873108074794/7_49984412221738.jpg"
         ]
       }
     ],
@@ -3963,19 +4014,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108042026/1_49984418054442.webp",
+    "primary_image": "assets/products/9873108042026/1_49984418054442.jpg",
     "images": [
-      "assets/products/9873108042026/1_49984418054442.webp",
-      "assets/products/9873108042026/2_49984417988906.webp",
-      "assets/products/9873108042026/3_49984417956138.webp",
-      "assets/products/9873108042026/4_49984417857834.webp",
-      "assets/products/9873108042026/5_49984418021674.webp",
-      "assets/products/9873108042026/6_49984418185514.webp",
-      "assets/products/9873108042026/7_49984417890602.webp",
-      "assets/products/9873108042026/8_49984418119978.webp",
-      "assets/products/9873108042026/9_49984418152746.webp",
-      "assets/products/9873108042026/10_49984418087210.webp",
-      "assets/products/9873108042026/11_49920832176426.webp"
+      "assets/products/9873108042026/1_49984418054442.jpg",
+      "assets/products/9873108042026/2_49984417988906.jpg",
+      "assets/products/9873108042026/3_49984417956138.jpg",
+      "assets/products/9873108042026/4_49984417857834.jpg",
+      "assets/products/9873108042026/5_49984418021674.jpg",
+      "assets/products/9873108042026/6_49984418185514.jpg",
+      "assets/products/9873108042026/7_49984417890602.jpg",
+      "assets/products/9873108042026/8_49984418119978.jpg",
+      "assets/products/9873108042026/9_49984418152746.jpg",
+      "assets/products/9873108042026/10_49984418087210.jpg",
+      "assets/products/9873108042026/11_49920832176426.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -3983,9 +4034,9 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 1299.0,
-        "image": "assets/products/9873108042026/1_49984418054442.webp",
+        "image": "assets/products/9873108042026/1_49984418054442.jpg",
         "images": [
-          "assets/products/9873108042026/1_49984418054442.webp"
+          "assets/products/9873108042026/1_49984418054442.jpg"
         ]
       }
     ],
@@ -4091,20 +4142,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9873108009258/1_49984422871338.webp",
+    "primary_image": "assets/products/9873108009258/1_49984422871338.jpg",
     "images": [
-      "assets/products/9873108009258/1_49984422871338.webp",
-      "assets/products/9873108009258/2_49984422707498.webp",
-      "assets/products/9873108009258/3_49984423002410.webp",
-      "assets/products/9873108009258/4_49984422773034.webp",
-      "assets/products/9873108009258/5_49984422969642.webp",
-      "assets/products/9873108009258/6_49984422936874.webp",
-      "assets/products/9873108009258/7_49984422904106.webp",
-      "assets/products/9873108009258/8_49984422838570.webp",
-      "assets/products/9873108009258/9_49984422641962.webp",
-      "assets/products/9873108009258/10_49984422674730.webp",
-      "assets/products/9873108009258/11_49984422805802.webp",
-      "assets/products/9873108009258/12_49920832176426.webp"
+      "assets/products/9873108009258/1_49984422871338.jpg",
+      "assets/products/9873108009258/2_49984422707498.jpg",
+      "assets/products/9873108009258/3_49984423002410.jpg",
+      "assets/products/9873108009258/4_49984422773034.jpg",
+      "assets/products/9873108009258/5_49984422969642.jpg",
+      "assets/products/9873108009258/6_49984422936874.jpg",
+      "assets/products/9873108009258/7_49984422904106.jpg",
+      "assets/products/9873108009258/8_49984422838570.jpg",
+      "assets/products/9873108009258/9_49984422641962.jpg",
+      "assets/products/9873108009258/10_49984422674730.jpg",
+      "assets/products/9873108009258/11_49984422805802.jpg",
+      "assets/products/9873108009258/12_49920832176426.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -4112,9 +4163,9 @@ window.CovertokProducts = [
         "name": "Starlight+Grey",
         "hex": "#F5EBE0",
         "price": 1299.0,
-        "image": "assets/products/9873108009258/1_49984422871338.webp",
+        "image": "assets/products/9873108009258/1_49984422871338.jpg",
         "images": [
-          "assets/products/9873108009258/1_49984422871338.webp"
+          "assets/products/9873108009258/1_49984422871338.jpg"
         ]
       }
     ],
@@ -4224,17 +4275,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9871368651050/1_49907231162666.webp",
+    "primary_image": "assets/products/9871368651050/1_49907231162666.png",
     "images": [
-      "assets/products/9871368651050/1_49907231162666.webp",
-      "assets/products/9871368651050/2_49907234046250.webp",
-      "assets/products/9871368651050/3_49907234865450.webp",
-      "assets/products/9871368651050/4_49907229425962.webp",
-      "assets/products/9871368651050/5_49907230179626.webp",
-      "assets/products/9871368651050/6_49907230310698.webp",
-      "assets/products/9871368651050/7_49907230376234.webp",
-      "assets/products/9871368651050/8_49907231195434.webp",
-      "assets/products/9871368651050/9_49907236765994.webp"
+      "assets/products/9871368651050/1_49907231162666.png",
+      "assets/products/9871368651050/2_49907234046250.png",
+      "assets/products/9871368651050/3_49907234865450.png",
+      "assets/products/9871368651050/4_49907229425962.png",
+      "assets/products/9871368651050/5_49907230179626.png",
+      "assets/products/9871368651050/6_49907230310698.png",
+      "assets/products/9871368651050/7_49907230376234.png",
+      "assets/products/9871368651050/8_49907231195434.png",
+      "assets/products/9871368651050/9_49907236765994.png"
     ],
     "has_colors": true,
     "colors": [
@@ -4242,27 +4293,27 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 699.0,
-        "image": "assets/products/9871368651050/2_49907234046250.webp",
+        "image": "assets/products/9871368651050/2_49907234046250.png",
         "images": [
-          "assets/products/9871368651050/2_49907234046250.webp"
+          "assets/products/9871368651050/2_49907234046250.png"
         ]
       },
       {
         "name": "White",
         "hex": "#FFFFFF",
         "price": 699.0,
-        "image": "assets/products/9871368651050/3_49907234865450.webp",
+        "image": "assets/products/9871368651050/3_49907234865450.png",
         "images": [
-          "assets/products/9871368651050/3_49907234865450.webp"
+          "assets/products/9871368651050/3_49907234865450.png"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 699.0,
-        "image": "assets/products/9871368651050/9_49907236765994.webp",
+        "image": "assets/products/9871368651050/9_49907236765994.png",
         "images": [
-          "assets/products/9871368651050/9_49907236765994.webp"
+          "assets/products/9871368651050/9_49907236765994.png"
         ]
       }
     ],
@@ -4291,7 +4342,7 @@ window.CovertokProducts = [
       "Available in White, Black, and Brown",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div> Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Adorable plush teddy bear design on the back</span></div>\n<div><span> • Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> • Shock-absorbing and scratch-resistant</span></div>\n<div><span> • Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> • Lightweight yet protective design</span></div>\n<div><span> • Available in White, Black, and Brown</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. </div>\n<p> </p>",
+    "raw_html": "<div>📝 Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Adorable plush teddy bear design on the back</span></div>\n<div><span> • Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> • Shock-absorbing and scratch-resistant</span></div>\n<div><span> • Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> • Lightweight yet protective design</span></div>\n<div><span> • Available in White, Black, and Brown</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. 🧸💖</div>\n<p> </p>",
     "in_stock": true,
     "features": [
       {
@@ -4384,17 +4435,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9871367274794/1_49905290379562.webp",
+    "primary_image": "assets/products/9871367274794/1_49905290379562.png",
     "images": [
-      "assets/products/9871367274794/1_49905290379562.webp",
-      "assets/products/9871367274794/2_49996993364266.webp",
-      "assets/products/9871367274794/3_49905292443946.webp",
-      "assets/products/9871367274794/4_49996993331498.webp",
-      "assets/products/9871367274794/5_49996993397034.webp",
-      "assets/products/9871367274794/6_49996993429802.webp",
-      "assets/products/9871367274794/7_49905294967082.webp",
-      "assets/products/9871367274794/8_49905294999850.webp",
-      "assets/products/9871367274794/9_49905295196458.webp"
+      "assets/products/9871367274794/1_49905290379562.png",
+      "assets/products/9871367274794/2_49996993364266.jpg",
+      "assets/products/9871367274794/3_49905292443946.png",
+      "assets/products/9871367274794/4_49996993331498.jpg",
+      "assets/products/9871367274794/5_49996993397034.jpg",
+      "assets/products/9871367274794/6_49996993429802.jpg",
+      "assets/products/9871367274794/7_49905294967082.jpg",
+      "assets/products/9871367274794/8_49905294999850.jpg",
+      "assets/products/9871367274794/9_49905295196458.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -4402,9 +4453,9 @@ window.CovertokProducts = [
         "name": "Starlight+Pink",
         "hex": "#F5EBE0",
         "price": 999.0,
-        "image": "assets/products/9871367274794/1_49905290379562.webp",
+        "image": "assets/products/9871367274794/1_49905290379562.png",
         "images": [
-          "assets/products/9871367274794/1_49905290379562.webp"
+          "assets/products/9871367274794/1_49905290379562.png"
         ]
       }
     ],
@@ -4512,24 +4563,24 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9871358624042/1_49997018792234.webp",
+    "primary_image": "assets/products/9871358624042/1_49997018792234.jpg",
     "images": [
-      "assets/products/9871358624042/1_49997018792234.webp",
-      "assets/products/9871358624042/2_49997018595626.webp",
-      "assets/products/9871358624042/3_49997018759466.webp",
-      "assets/products/9871358624042/4_49997018562858.webp",
-      "assets/products/9871358624042/5_49997018857770.webp",
-      "assets/products/9871358624042/6_49997018399018.webp",
-      "assets/products/9871358624042/7_49997018464554.webp",
-      "assets/products/9871358624042/8_49997018431786.webp",
-      "assets/products/9871358624042/9_49997018530090.webp",
-      "assets/products/9871358624042/10_49997018366250.webp",
-      "assets/products/9871358624042/11_49997018661162.webp",
-      "assets/products/9871358624042/12_49905292443946.webp",
-      "assets/products/9871358624042/13_49905294967082.webp",
-      "assets/products/9871358624042/14_49905295196458.webp",
-      "assets/products/9871358624042/15_49905295229226.webp",
-      "assets/products/9871358624042/16_49905294999850.webp"
+      "assets/products/9871358624042/1_49997018792234.jpg",
+      "assets/products/9871358624042/2_49997018595626.jpg",
+      "assets/products/9871358624042/3_49997018759466.jpg",
+      "assets/products/9871358624042/4_49997018562858.jpg",
+      "assets/products/9871358624042/5_49997018857770.jpg",
+      "assets/products/9871358624042/6_49997018399018.jpg",
+      "assets/products/9871358624042/7_49997018464554.jpg",
+      "assets/products/9871358624042/8_49997018431786.jpg",
+      "assets/products/9871358624042/9_49997018530090.jpg",
+      "assets/products/9871358624042/10_49997018366250.jpg",
+      "assets/products/9871358624042/11_49997018661162.jpg",
+      "assets/products/9871358624042/12_49905292443946.png",
+      "assets/products/9871358624042/13_49905294967082.jpg",
+      "assets/products/9871358624042/14_49905295196458.jpg",
+      "assets/products/9871358624042/15_49905295229226.jpg",
+      "assets/products/9871358624042/16_49905294999850.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -4537,9 +4588,9 @@ window.CovertokProducts = [
         "name": "Black+Grey",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/9871358624042/3_49997018759466.webp",
+        "image": "assets/products/9871358624042/3_49997018759466.jpg",
         "images": [
-          "assets/products/9871358624042/3_49997018759466.webp"
+          "assets/products/9871358624042/3_49997018759466.jpg"
         ]
       }
     ],
@@ -4646,22 +4697,22 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9871361442090/1_49905283760426.webp",
+    "primary_image": "assets/products/9871361442090/1_49905283760426.png",
     "images": [
-      "assets/products/9871361442090/1_49905283760426.webp",
-      "assets/products/9871361442090/2_49997006733610.webp",
-      "assets/products/9871361442090/3_49997006537002.webp",
-      "assets/products/9871361442090/4_49997006700842.webp",
-      "assets/products/9871361442090/5_49997006635306.webp",
-      "assets/products/9871361442090/6_49997006668074.webp",
-      "assets/products/9871361442090/7_49997006602538.webp",
-      "assets/products/9871361442090/8_49997006504234.webp",
-      "assets/products/9871361442090/9_49997006569770.webp",
-      "assets/products/9871361442090/10_49905295196458.webp",
-      "assets/products/9871361442090/11_49905295229226.webp",
-      "assets/products/9871361442090/12_49905292443946.webp",
-      "assets/products/9871361442090/13_49905294967082.webp",
-      "assets/products/9871361442090/14_49905294999850.webp"
+      "assets/products/9871361442090/1_49905283760426.png",
+      "assets/products/9871361442090/2_49997006733610.jpg",
+      "assets/products/9871361442090/3_49997006537002.jpg",
+      "assets/products/9871361442090/4_49997006700842.jpg",
+      "assets/products/9871361442090/5_49997006635306.jpg",
+      "assets/products/9871361442090/6_49997006668074.jpg",
+      "assets/products/9871361442090/7_49997006602538.jpg",
+      "assets/products/9871361442090/8_49997006504234.jpg",
+      "assets/products/9871361442090/9_49997006569770.jpg",
+      "assets/products/9871361442090/10_49905295196458.jpg",
+      "assets/products/9871361442090/11_49905295229226.jpg",
+      "assets/products/9871361442090/12_49905292443946.png",
+      "assets/products/9871361442090/13_49905294967082.jpg",
+      "assets/products/9871361442090/14_49905294999850.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -4669,9 +4720,9 @@ window.CovertokProducts = [
         "name": "Orange+Midnight Black",
         "hex": "#F97316",
         "price": 999.0,
-        "image": "assets/products/9871361442090/1_49905283760426.webp",
+        "image": "assets/products/9871361442090/1_49905283760426.png",
         "images": [
-          "assets/products/9871361442090/1_49905283760426.webp"
+          "assets/products/9871361442090/1_49905283760426.png"
         ]
       }
     ],
@@ -4778,18 +4829,18 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9871354528042/1_49905292443946.webp",
+    "primary_image": "assets/products/9871354528042/1_49905292443946.png",
     "images": [
-      "assets/products/9871354528042/1_49905292443946.webp",
-      "assets/products/9871354528042/2_49997038715178.webp",
-      "assets/products/9871354528042/3_49905294967082.webp",
-      "assets/products/9871354528042/4_49997038780714.webp",
-      "assets/products/9871354528042/5_49997038682410.webp",
-      "assets/products/9871354528042/6_49905294999850.webp",
-      "assets/products/9871354528042/7_49997038584106.webp",
-      "assets/products/9871354528042/8_49905295196458.webp",
-      "assets/products/9871354528042/9_49905295229226.webp",
-      "assets/products/9871354528042/10_49997038813482.webp"
+      "assets/products/9871354528042/1_49905292443946.png",
+      "assets/products/9871354528042/2_49997038715178.jpg",
+      "assets/products/9871354528042/3_49905294967082.jpg",
+      "assets/products/9871354528042/4_49997038780714.jpg",
+      "assets/products/9871354528042/5_49997038682410.jpg",
+      "assets/products/9871354528042/6_49905294999850.jpg",
+      "assets/products/9871354528042/7_49997038584106.jpg",
+      "assets/products/9871354528042/8_49905295196458.jpg",
+      "assets/products/9871354528042/9_49905295229226.jpg",
+      "assets/products/9871354528042/10_49997038813482.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -4797,9 +4848,9 @@ window.CovertokProducts = [
         "name": "Cloud Grey+Blue",
         "hex": "#2563EB",
         "price": 999.0,
-        "image": "assets/products/9871354528042/2_49997038715178.webp",
+        "image": "assets/products/9871354528042/2_49997038715178.jpg",
         "images": [
-          "assets/products/9871354528042/2_49997038715178.webp"
+          "assets/products/9871354528042/2_49997038715178.jpg"
         ]
       }
     ],
@@ -4906,21 +4957,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9871022719274/1_49997059686698.webp",
+    "primary_image": "assets/products/9871022719274/1_49997059686698.jpg",
     "images": [
-      "assets/products/9871022719274/1_49997059686698.webp",
-      "assets/products/9871022719274/2_49997059621162.webp",
-      "assets/products/9871022719274/3_49997059522858.webp",
-      "assets/products/9871022719274/4_49997059588394.webp",
-      "assets/products/9871022719274/5_49997059490090.webp",
-      "assets/products/9871022719274/6_49997059457322.webp",
-      "assets/products/9871022719274/7_49997059555626.webp",
-      "assets/products/9871022719274/8_49905292443946.webp",
-      "assets/products/9871022719274/9_49905294573866.webp",
-      "assets/products/9871022719274/10_49905294967082.webp",
-      "assets/products/9871022719274/11_49905294999850.webp",
-      "assets/products/9871022719274/12_49905295196458.webp",
-      "assets/products/9871022719274/13_49905295229226.webp"
+      "assets/products/9871022719274/1_49997059686698.jpg",
+      "assets/products/9871022719274/2_49997059621162.jpg",
+      "assets/products/9871022719274/3_49997059522858.jpg",
+      "assets/products/9871022719274/4_49997059588394.jpg",
+      "assets/products/9871022719274/5_49997059490090.jpg",
+      "assets/products/9871022719274/6_49997059457322.jpg",
+      "assets/products/9871022719274/7_49997059555626.jpg",
+      "assets/products/9871022719274/8_49905292443946.png",
+      "assets/products/9871022719274/9_49905294573866.jpg",
+      "assets/products/9871022719274/10_49905294967082.jpg",
+      "assets/products/9871022719274/11_49905294999850.jpg",
+      "assets/products/9871022719274/12_49905295196458.jpg",
+      "assets/products/9871022719274/13_49905295229226.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -4928,9 +4979,9 @@ window.CovertokProducts = [
         "name": "Blue+Midnight Black",
         "hex": "#2563EB",
         "price": 999.0,
-        "image": "assets/products/9871022719274/1_49997059686698.webp",
+        "image": "assets/products/9871022719274/1_49997059686698.jpg",
         "images": [
-          "assets/products/9871022719274/1_49997059686698.webp"
+          "assets/products/9871022719274/1_49997059686698.jpg"
         ]
       }
     ],
@@ -5016,7 +5067,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870560330026",
-    "handle": "glow-sand-airpods-cases-playful-luminous-✨",
+    "handle": "glow-sand-airpods-cases-playful-luminous-🌙✨",
     "title": "Glow In The Dark Sand AirPods Cases – Playful & Luminous",
     "price": 699,
     "price_formatted": "Rs. 699.00",
@@ -5036,19 +5087,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870560330026/6_49900011127082.webp",
+    "primary_image": "assets/products/9870560330026/6_49900011127082.png",
     "images": [
-      "assets/products/9870560330026/6_49900011127082.webp",
-      "assets/products/9870560330026/1_49900009357610.webp",
-      "assets/products/9870560330026/2_49900009718058.webp",
-      "assets/products/9870560330026/3_49900008669482.webp",
-      "assets/products/9870560330026/4_49900004540714.webp",
-      "assets/products/9870560330026/5_49900009947434.webp",
-      "assets/products/9870560330026/7_49900009750826.webp",
-      "assets/products/9870560330026/8_49900004573482.webp",
-      "assets/products/9870560330026/9_49900005884202.webp",
-      "assets/products/9870560330026/10_49900011782442.webp",
-      "assets/products/9870560330026/11_49945036914986.webp"
+      "assets/products/9870560330026/6_49900011127082.png",
+      "assets/products/9870560330026/1_49900009357610.png",
+      "assets/products/9870560330026/2_49900009718058.png",
+      "assets/products/9870560330026/3_49900008669482.png",
+      "assets/products/9870560330026/4_49900004540714.png",
+      "assets/products/9870560330026/5_49900009947434.png",
+      "assets/products/9870560330026/7_49900009750826.png",
+      "assets/products/9870560330026/8_49900004573482.png",
+      "assets/products/9870560330026/9_49900005884202.png",
+      "assets/products/9870560330026/10_49900011782442.png",
+      "assets/products/9870560330026/11_49945036914986.png"
     ],
     "has_colors": true,
     "colors": [
@@ -5056,55 +5107,55 @@ window.CovertokProducts = [
         "name": "Neon Orange",
         "hex": "#F97316",
         "price": 699.0,
-        "image": "assets/products/9870560330026/3_49900008669482.webp",
+        "image": "assets/products/9870560330026/3_49900008669482.png",
         "images": [
-          "assets/products/9870560330026/3_49900008669482.webp"
+          "assets/products/9870560330026/3_49900008669482.png"
         ]
       },
       {
         "name": "Hot Pink",
         "hex": "#DB2777",
         "price": 699.0,
-        "image": "assets/products/9870560330026/10_49900011782442.webp",
+        "image": "assets/products/9870560330026/10_49900011782442.png",
         "images": [
-          "assets/products/9870560330026/10_49900011782442.webp"
+          "assets/products/9870560330026/10_49900011782442.png"
         ]
       },
       {
         "name": "Lime Green",
         "hex": "#84CC16",
         "price": 699.0,
-        "image": "assets/products/9870560330026/4_49900004540714.webp",
+        "image": "assets/products/9870560330026/4_49900004540714.png",
         "images": [
-          "assets/products/9870560330026/4_49900004540714.webp"
+          "assets/products/9870560330026/4_49900004540714.png"
         ]
       },
       {
         "name": "Aqua Blue",
         "hex": "#06B6D4",
         "price": 699.0,
-        "image": "assets/products/9870560330026/5_49900009947434.webp",
+        "image": "assets/products/9870560330026/5_49900009947434.png",
         "images": [
-          "assets/products/9870560330026/5_49900009947434.webp"
+          "assets/products/9870560330026/5_49900009947434.png"
         ]
       },
       {
         "name": "Classic White",
         "hex": "#F1F5F9",
         "price": 699.0,
-        "image": "assets/products/9870560330026/6_49900011127082.webp",
+        "image": "assets/products/9870560330026/6_49900011127082.png",
         "images": [
-          "assets/products/9870560330026/6_49900011127082.webp"
+          "assets/products/9870560330026/6_49900011127082.png"
         ]
       },
       {
         "name": "Neon Pink",
         "hex": "#F43F5E",
         "price": 699.0,
-        "image": "assets/products/9870560330026/2_49900009718058.webp",
+        "image": "assets/products/9870560330026/2_49900009718058.png",
         "images": [
-          "assets/products/9870560330026/2_49900009718058.webp",
-          "assets/products/9870560330026/11_49945036914986.webp"
+          "assets/products/9870560330026/2_49900009718058.png",
+          "assets/products/9870560330026/11_49945036914986.png"
         ]
       }
     ],
@@ -5209,14 +5260,14 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870559183146/3_49899983831338.webp",
+    "primary_image": "assets/products/9870559183146/3_49899983831338.png",
     "images": [
-      "assets/products/9870559183146/3_49899983831338.webp",
-      "assets/products/9870559183146/1_49899984716074.webp",
-      "assets/products/9870559183146/2_49899983241514.webp",
-      "assets/products/9870559183146/4_49899983143210.webp",
-      "assets/products/9870559183146/5_49899984257322.webp",
-      "assets/products/9870559183146/6_49900075712810.webp"
+      "assets/products/9870559183146/3_49899983831338.png",
+      "assets/products/9870559183146/1_49899984716074.png",
+      "assets/products/9870559183146/2_49899983241514.png",
+      "assets/products/9870559183146/4_49899983143210.png",
+      "assets/products/9870559183146/5_49899984257322.png",
+      "assets/products/9870559183146/6_49900075712810.png"
     ],
     "has_colors": true,
     "colors": [
@@ -5224,18 +5275,18 @@ window.CovertokProducts = [
         "name": "Ocean Butterfly",
         "hex": "#38BDF8",
         "price": 249.0,
-        "image": "assets/products/9870559183146/2_49899983241514.webp",
+        "image": "assets/products/9870559183146/2_49899983241514.png",
         "images": [
-          "assets/products/9870559183146/2_49899983241514.webp"
+          "assets/products/9870559183146/2_49899983241514.png"
         ]
       },
       {
         "name": "Blush Butterfly",
         "hex": "#F472B6",
         "price": 249.0,
-        "image": "assets/products/9870559183146/3_49899983831338.webp",
+        "image": "assets/products/9870559183146/3_49899983831338.png",
         "images": [
-          "assets/products/9870559183146/3_49899983831338.webp"
+          "assets/products/9870559183146/3_49899983831338.png"
         ]
       }
     ],
@@ -5314,7 +5365,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870558363946",
-    "handle": "pastel-beaded-phone-charm-✨",
+    "handle": "pastel-beaded-phone-charm-✨🌸",
     "title": "Pastel Beaded Phone Charm",
     "price": 249,
     "price_formatted": "Rs. 249.00",
@@ -5335,14 +5386,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870558363946/1_49899965448490.webp",
+    "primary_image": "assets/products/9870558363946/1_49899965448490.png",
     "images": [
-      "assets/products/9870558363946/1_49899965448490.webp",
-      "assets/products/9870558363946/2_49899965874474.webp",
-      "assets/products/9870558363946/3_49899965940010.webp"
+      "assets/products/9870558363946/1_49899965448490.png",
+      "assets/products/9870558363946/2_49899965874474.png",
+      "assets/products/9870558363946/3_49899965940010.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pastel Rainbow",
+        "hex": "#FBCFE8"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Add a cute and aesthetic touch to your phone with our Pastel Beaded Phone Charm Strap. Designed with a mix of pastel pink beads, pearls, and decorative charms like a butterfly, cross, hearts, and flowers, this strap is both stylish and functional. It securely attaches to your phone case, making it easy to carry while adding a playful accessory vibe. Perfect for everyday use, this charm strap combines durability with pastel elegance.",
@@ -5439,17 +5495,22 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870558036266/1_49899952111914.webp",
+    "primary_image": "assets/products/9870558036266/1_49899952111914.jpg",
     "images": [
-      "assets/products/9870558036266/1_49899952111914.webp",
-      "assets/products/9870558036266/2_49899952406826.webp",
-      "assets/products/9870558036266/3_49899952832810.webp",
-      "assets/products/9870558036266/4_49899953750314.webp",
-      "assets/products/9870558036266/5_49899953783082.webp",
-      "assets/products/9870558036266/6_49899957256490.webp"
+      "assets/products/9870558036266/1_49899952111914.jpg",
+      "assets/products/9870558036266/2_49899952406826.png",
+      "assets/products/9870558036266/3_49899952832810.jpg",
+      "assets/products/9870558036266/4_49899953750314.png",
+      "assets/products/9870558036266/5_49899953783082.png",
+      "assets/products/9870558036266/6_49899957256490.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Crystal Glass",
+        "hex": "#E0E7FF"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Add a luxe edge to your phone with our Crystal Beaded Phone Charm Strap. Crafted with faceted smoky crystal beads that catch the light beautifully, this strap is both elegant and durable. The metallic ring clasp makes it easy to attach to your phone case, bag, or keys, offering both style and practicality. Perfect for elevating your everyday look with a chic, modern accessory that doubles as a secure hand strap.",
@@ -5525,8 +5586,8 @@ window.CovertokProducts = [
   },
   {
     "id": "9870555054378",
-    "handle": "pink-beaded-heart-phone-charm-",
-    "title": "Pink Beaded Heart Phone Charm ",
+    "handle": "pink-beaded-heart-phone-charm-🎀💖",
+    "title": "Pink Beaded Heart Phone Charm 🎀💖",
     "price": 249,
     "price_formatted": "Rs. 249.00",
     "original_price": 499,
@@ -5546,14 +5607,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870555054378/1_49899832312106.webp",
+    "primary_image": "assets/products/9870555054378/1_49899832312106.png",
     "images": [
-      "assets/products/9870555054378/1_49899832312106.webp",
-      "assets/products/9870555054378/2_49899832443178.webp",
-      "assets/products/9870555054378/3_49899832770858.webp"
+      "assets/products/9870555054378/1_49899832312106.png",
+      "assets/products/9870555054378/2_49899832443178.png",
+      "assets/products/9870555054378/3_49899832770858.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Blush Pink",
+        "hex": "#F472B6"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Add a touch of sweetness to your phone with our Pink Beaded Heart Charm . Made with delicate pink beads, sparkling crystal-like heart accents, and a satin bow detail, this strap is both cute and functional. Perfect for carrying your phone securely while adding a stylish, aesthetic vibe. Lightweight yet durable, it’s an adorable accessory for anyone who loves pastel, girly, and kawaii-inspired looks.",
@@ -5596,7 +5662,7 @@ window.CovertokProducts = [
       },
       {
         "label": "In The Box",
-        "value": "1 × Covertok Pink Beaded Heart Phone Charm "
+        "value": "1 × Covertok Pink Beaded Heart Phone Charm 🎀💖"
       },
       {
         "label": "Warranty",
@@ -5629,7 +5695,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870554038570",
-    "handle": "ice-cream-sprinkle-iphone-charger-case-set-✨",
+    "handle": "ice-cream-sprinkle-iphone-charger-case-set-🍦✨",
     "title": "Ice Cream Sprinkle iPhone Charger Case Set",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -5651,14 +5717,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870554038570/2_49899823497514.webp",
+    "primary_image": "assets/products/9870554038570/2_49899823497514.png",
     "images": [
-      "assets/products/9870554038570/2_49899823497514.webp",
-      "assets/products/9870554038570/1_49899823038762.webp",
-      "assets/products/9870554038570/3_49899823366442.webp"
+      "assets/products/9870554038570/2_49899823497514.png",
+      "assets/products/9870554038570/1_49899823038762.png",
+      "assets/products/9870554038570/3_49899823366442.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pastel Mint",
+        "hex": "#A7F3D0"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Turn your charger into a treat with our Ice Cream Sprinkle iPhone Charger Case Set. Designed with a playful pink ice cream look, complete with colorful sprinkle details and a bite-effect corner, this set adds sweetness to your daily charging routine. The durable silicone case protects your adapter from scratches and wear, while the matching cable cover and coiled wire protector keep your charging cable neat and long-lasting. Cute, fun, and practical—perfect for anyone who loves a dash of dessert-inspired style!",
@@ -5734,7 +5805,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870550761770",
-    "handle": "bow-pearl-iphone-charger-case-set-✨",
+    "handle": "bow-pearl-iphone-charger-case-set-✨🎀",
     "title": "Bow Pearl iPhone Charger Case Set",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -5755,14 +5826,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870550761770/1_49899764252970.webp",
+    "primary_image": "assets/products/9870550761770/1_49899764252970.png",
     "images": [
-      "assets/products/9870550761770/1_49899764252970.webp",
-      "assets/products/9870550761770/2_49899763859754.webp",
-      "assets/products/9870550761770/3_49899764416810.webp"
+      "assets/products/9870550761770/1_49899764252970.png",
+      "assets/products/9870550761770/2_49899763859754.png",
+      "assets/products/9870550761770/3_49899764416810.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pearl White",
+        "hex": "#FDF4FF"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Elevate your charging style with our Bow Pearl iPhone Charger Case Set. Featuring a glittery white base with delicate mini bow designs and pearl accents, this charger case transforms your regular adapter into a fashionable accessory. The set includes a matching cable cover and a stylish scrunchie-inspired cord protector, combining elegance with functionality. Durable, protective, and absolutely aesthetic—perfect for keeping your charger safe while adding a luxe touch to your everyday essentials.",
@@ -5838,7 +5914,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870548533546",
-    "handle": "heart-iphone-charger-case-set-with-matching-cable-✨",
+    "handle": "heart-iphone-charger-case-set-with-matching-cable-💖✨",
     "title": "Heart iPhone Charger Case Set with Matching Cable",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -5858,15 +5934,15 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870548533546/1_49905925554474.webp",
+    "primary_image": "assets/products/9870548533546/1_49905925554474.png",
     "images": [
-      "assets/products/9870548533546/1_49905925554474.webp",
-      "assets/products/9870548533546/2_49905926603050.webp",
-      "assets/products/9870548533546/3_49905927258410.webp",
-      "assets/products/9870548533546/4_49905925488938.webp",
-      "assets/products/9870548533546/5_49905925423402.webp",
-      "assets/products/9870548533546/6_49905925456170.webp",
-      "assets/products/9870548533546/7_49899739939114.webp"
+      "assets/products/9870548533546/1_49905925554474.png",
+      "assets/products/9870548533546/2_49905926603050.png",
+      "assets/products/9870548533546/3_49905927258410.png",
+      "assets/products/9870548533546/4_49905925488938.png",
+      "assets/products/9870548533546/5_49905925423402.png",
+      "assets/products/9870548533546/6_49905925456170.png",
+      "assets/products/9870548533546/7_49899739939114.png"
     ],
     "has_colors": true,
     "colors": [
@@ -5874,54 +5950,54 @@ window.CovertokProducts = [
         "name": "Yellow",
         "hex": "#EAB308",
         "price": 499.0,
-        "image": "assets/products/9870548533546/2_49905926603050.webp",
+        "image": "assets/products/9870548533546/2_49905926603050.png",
         "images": [
-          "assets/products/9870548533546/2_49905926603050.webp"
+          "assets/products/9870548533546/2_49905926603050.png"
         ]
       },
       {
         "name": "Violet",
         "hex": "#7C3AED",
         "price": 499.0,
-        "image": "assets/products/9870548533546/3_49905927258410.webp",
+        "image": "assets/products/9870548533546/3_49905927258410.png",
         "images": [
-          "assets/products/9870548533546/3_49905927258410.webp"
+          "assets/products/9870548533546/3_49905927258410.png"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 499.0,
-        "image": "assets/products/9870548533546/1_49905925554474.webp",
+        "image": "assets/products/9870548533546/1_49905925554474.png",
         "images": [
-          "assets/products/9870548533546/1_49905925554474.webp"
+          "assets/products/9870548533546/1_49905925554474.png"
         ]
       },
       {
         "name": "Green",
         "hex": "#16A34A",
         "price": 499.0,
-        "image": "assets/products/9870548533546/5_49905925423402.webp",
+        "image": "assets/products/9870548533546/5_49905925423402.png",
         "images": [
-          "assets/products/9870548533546/5_49905925423402.webp"
+          "assets/products/9870548533546/5_49905925423402.png"
         ]
       },
       {
         "name": "Blue",
         "hex": "#2563EB",
         "price": 499.0,
-        "image": "assets/products/9870548533546/4_49905925488938.webp",
+        "image": "assets/products/9870548533546/4_49905925488938.png",
         "images": [
-          "assets/products/9870548533546/4_49905925488938.webp"
+          "assets/products/9870548533546/4_49905925488938.png"
         ]
       },
       {
         "name": "Pink",
         "hex": "#EC4899",
         "price": 499.0,
-        "image": "assets/products/9870548533546/6_49905925456170.webp",
+        "image": "assets/products/9870548533546/6_49905925456170.png",
         "images": [
-          "assets/products/9870548533546/6_49905925456170.webp"
+          "assets/products/9870548533546/6_49905925456170.png"
         ]
       }
     ],
@@ -6000,7 +6076,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870544142634",
-    "handle": "glitter-bow-iphone-charger-case-✨",
+    "handle": "glitter-bow-iphone-charger-case-✨🎀",
     "title": "Glitter Bow iPhone Charger Case",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -6020,14 +6096,19 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870544142634/3_49899700289834.webp",
+    "primary_image": "assets/products/9870544142634/3_49899700289834.png",
     "images": [
-      "assets/products/9870544142634/3_49899700289834.webp",
-      "assets/products/9870544142634/1_49899700814122.webp",
-      "assets/products/9870544142634/2_49899699700010.webp"
+      "assets/products/9870544142634/3_49899700289834.png",
+      "assets/products/9870544142634/1_49899700814122.png",
+      "assets/products/9870544142634/2_49899699700010.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Rose Gold",
+        "hex": "#FDA4AF"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Give your charger a glamorous upgrade with our Glitter Bow iPhone Charger Case. Designed with sparkling glitter, elegant pearls, and mini black bow accents, this case turns your regular adapter into a stylish accessory. The durable protective shell keeps your charger safe from scratches, dust, and wear, while the coiled black cable adds extra durability and a sleek touch. Perfect for those who love mixing fashion with function—charging has never looked this pretty!",
@@ -6123,11 +6204,11 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870520320298/1_49899486576938.webp",
+    "primary_image": "assets/products/9870520320298/1_49899486576938.png",
     "images": [
-      "assets/products/9870520320298/1_49899486576938.webp",
-      "assets/products/9870520320298/2_49899485954346.webp",
-      "assets/products/9870520320298/3_49899486806314.webp"
+      "assets/products/9870520320298/1_49899486576938.png",
+      "assets/products/9870520320298/2_49899485954346.png",
+      "assets/products/9870520320298/3_49899486806314.png"
     ],
     "has_colors": true,
     "colors": [
@@ -6135,9 +6216,9 @@ window.CovertokProducts = [
         "name": "Bloom Edition",
         "hex": "#E19975",
         "price": 499.0,
-        "image": "assets/products/9870520320298/1_49899486576938.webp",
+        "image": "assets/products/9870520320298/1_49899486576938.png",
         "images": [
-          "assets/products/9870520320298/1_49899486576938.webp"
+          "assets/products/9870520320298/1_49899486576938.png"
         ]
       }
     ],
@@ -6216,7 +6297,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870514487594",
-    "handle": "blue-gingham-iphone-charger-case✨",
+    "handle": "blue-gingham-iphone-charger-case✨🔌",
     "title": "Blue Gingham iPhone Charger Case",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -6236,19 +6317,24 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870514487594/1_49899479007530.webp",
+    "primary_image": "assets/products/9870514487594/1_49899479007530.png",
     "images": [
-      "assets/products/9870514487594/1_49899479007530.webp",
-      "assets/products/9870514487594/2_49899483201834.webp",
-      "assets/products/9870514487594/3_49899483234602.webp"
+      "assets/products/9870514487594/1_49899479007530.png",
+      "assets/products/9870514487594/2_49899483201834.png",
+      "assets/products/9870514487594/3_49899483234602.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Sky Blue",
+        "hex": "#7DD3FC"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
-    "description": "Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! ",
+    "description": "Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! 💙🚗",
     "bullets": [],
-    "raw_html": "<p>Description:<br>Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! </p>",
+    "raw_html": "<p>Description:<br>Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! 💙🚗</p>",
     "in_stock": true,
     "features": [
       {
@@ -6340,12 +6426,12 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870500364586/2_49899385356586.webp",
+    "primary_image": "assets/products/9870500364586/2_49899385356586.png",
     "images": [
-      "assets/products/9870500364586/2_49899385356586.webp",
-      "assets/products/9870500364586/1_49899385323818.webp",
-      "assets/products/9870500364586/3_49899385585962.webp",
-      "assets/products/9870500364586/4_49899385618730.webp"
+      "assets/products/9870500364586/2_49899385356586.png",
+      "assets/products/9870500364586/1_49899385323818.png",
+      "assets/products/9870500364586/3_49899385585962.png",
+      "assets/products/9870500364586/4_49899385618730.png"
     ],
     "has_colors": true,
     "colors": [
@@ -6353,18 +6439,18 @@ window.CovertokProducts = [
         "name": "Red",
         "hex": "#DC2626",
         "price": 599.0,
-        "image": "assets/products/9870500364586/3_49899385585962.webp",
+        "image": "assets/products/9870500364586/3_49899385585962.png",
         "images": [
-          "assets/products/9870500364586/3_49899385585962.webp"
+          "assets/products/9870500364586/3_49899385585962.png"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 599.0,
-        "image": "assets/products/9870500364586/2_49899385356586.webp",
+        "image": "assets/products/9870500364586/2_49899385356586.png",
         "images": [
-          "assets/products/9870500364586/2_49899385356586.webp"
+          "assets/products/9870500364586/2_49899385356586.png"
         ]
       }
     ],
@@ -6378,7 +6464,7 @@ window.CovertokProducts = [
     "model_label": "Select Model",
     "description": "Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.",
     "bullets": [],
-    "raw_html": "<p>Description:Cute &amp; Protective <br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
+    "raw_html": "<p>Description:Cute &amp; Protective 🎀🎧<br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
     "in_stock": true,
     "features": [
       {
@@ -6469,16 +6555,16 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870484341034/1_49899317494058.webp",
+    "primary_image": "assets/products/9870484341034/1_49899317494058.png",
     "images": [
-      "assets/products/9870484341034/1_49899317494058.webp",
-      "assets/products/9870484341034/2_49899354456362.webp",
-      "assets/products/9870484341034/3_49899310809386.webp",
-      "assets/products/9870484341034/4_49899312546090.webp",
-      "assets/products/9870484341034/5_49899312578858.webp",
-      "assets/products/9870484341034/6_49899316576554.webp",
-      "assets/products/9870484341034/7_49899317133610.webp",
-      "assets/products/9870484341034/8_49899317231914.webp"
+      "assets/products/9870484341034/1_49899317494058.png",
+      "assets/products/9870484341034/2_49899354456362.png",
+      "assets/products/9870484341034/3_49899310809386.png",
+      "assets/products/9870484341034/4_49899312546090.png",
+      "assets/products/9870484341034/5_49899312578858.png",
+      "assets/products/9870484341034/6_49899316576554.png",
+      "assets/products/9870484341034/7_49899317133610.png",
+      "assets/products/9870484341034/8_49899317231914.png"
     ],
     "has_colors": true,
     "colors": [
@@ -6486,54 +6572,54 @@ window.CovertokProducts = [
         "name": "Mocha Brown",
         "hex": "#78350F",
         "price": 599.0,
-        "image": "assets/products/9870484341034/2_49899354456362.webp",
+        "image": "assets/products/9870484341034/2_49899354456362.png",
         "images": [
-          "assets/products/9870484341034/2_49899354456362.webp"
+          "assets/products/9870484341034/2_49899354456362.png"
         ]
       },
       {
         "name": "Caramel Tan",
         "hex": "#92400E",
         "price": 599.0,
-        "image": "assets/products/9870484341034/4_49899312546090.webp",
+        "image": "assets/products/9870484341034/4_49899312546090.png",
         "images": [
-          "assets/products/9870484341034/4_49899312546090.webp"
+          "assets/products/9870484341034/4_49899312546090.png"
         ]
       },
       {
         "name": "Blush Pink",
         "hex": "#F472B6",
         "price": 599.0,
-        "image": "assets/products/9870484341034/5_49899312578858.webp",
+        "image": "assets/products/9870484341034/5_49899312578858.png",
         "images": [
-          "assets/products/9870484341034/5_49899312578858.webp"
+          "assets/products/9870484341034/5_49899312578858.png"
         ]
       },
       {
         "name": "Sunshine Yellow",
         "hex": "#FACC15",
         "price": 599.0,
-        "image": "assets/products/9870484341034/6_49899316576554.webp",
+        "image": "assets/products/9870484341034/6_49899316576554.png",
         "images": [
-          "assets/products/9870484341034/6_49899316576554.webp"
+          "assets/products/9870484341034/6_49899316576554.png"
         ]
       },
       {
         "name": "Aqua Teal",
         "hex": "#14B8A6",
         "price": 599.0,
-        "image": "assets/products/9870484341034/3_49899310809386.webp",
+        "image": "assets/products/9870484341034/3_49899310809386.png",
         "images": [
-          "assets/products/9870484341034/3_49899310809386.webp"
+          "assets/products/9870484341034/3_49899310809386.png"
         ]
       },
       {
         "name": "Candy Pink",
         "hex": "#FDA4AF",
         "price": 599.0,
-        "image": "assets/products/9870484341034/7_49899317133610.webp",
+        "image": "assets/products/9870484341034/7_49899317133610.png",
         "images": [
-          "assets/products/9870484341034/7_49899317133610.webp"
+          "assets/products/9870484341034/7_49899317133610.png"
         ]
       }
     ],
@@ -6547,7 +6633,7 @@ window.CovertokProducts = [
     "model_label": "Select Model",
     "description": "Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.",
     "bullets": [],
-    "raw_html": "<p>Description:Colorful &amp; Durable ✨<br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
+    "raw_html": "<p>Description:Colorful &amp; Durable 🎧✨<br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
     "in_stock": true,
     "features": [
       {
@@ -6618,7 +6704,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870479524138",
-    "handle": "pearl-charm-bow-airpods-cases-✨-copy",
+    "handle": "pearl-charm-bow-airpods-cases-🎀✨-copy",
     "title": "Butterfly Charm AirPods Case",
     "price": 549,
     "price_formatted": "Rs. 549.00",
@@ -6639,13 +6725,13 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870479524138/1_49899266736426.webp",
+    "primary_image": "assets/products/9870479524138/1_49899266736426.png",
     "images": [
-      "assets/products/9870479524138/1_49899266736426.webp",
-      "assets/products/9870479524138/2_49899266801962.webp",
-      "assets/products/9870479524138/3_49899266933034.webp",
-      "assets/products/9870479524138/4_49899267293482.webp",
-      "assets/products/9870479524138/5_49899267555626.webp"
+      "assets/products/9870479524138/1_49899266736426.png",
+      "assets/products/9870479524138/2_49899266801962.png",
+      "assets/products/9870479524138/3_49899266933034.png",
+      "assets/products/9870479524138/4_49899267293482.png",
+      "assets/products/9870479524138/5_49899267555626.png"
     ],
     "has_colors": true,
     "colors": [
@@ -6653,18 +6739,18 @@ window.CovertokProducts = [
         "name": "Pink",
         "hex": "#EC4899",
         "price": 549.0,
-        "image": "assets/products/9870479524138/4_49899267293482.webp",
+        "image": "assets/products/9870479524138/4_49899267293482.png",
         "images": [
-          "assets/products/9870479524138/4_49899267293482.webp"
+          "assets/products/9870479524138/4_49899267293482.png"
         ]
       },
       {
         "name": "Blue",
         "hex": "#2563EB",
         "price": 549.0,
-        "image": "assets/products/9870479524138/2_49899266801962.webp",
+        "image": "assets/products/9870479524138/2_49899266801962.png",
         "images": [
-          "assets/products/9870479524138/2_49899266801962.webp"
+          "assets/products/9870479524138/2_49899266801962.png"
         ]
       }
     ],
@@ -6749,7 +6835,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870479425834",
-    "handle": "pearl-charm-bow-airpods-cases-✨",
+    "handle": "pearl-charm-bow-airpods-cases-🎀✨",
     "title": "Pearl Charm Bow AirPods Cases",
     "price": 549,
     "price_formatted": "Rs. 549.00",
@@ -6770,13 +6856,13 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870479425834/1_49899238752554.webp",
+    "primary_image": "assets/products/9870479425834/1_49899238752554.png",
     "images": [
-      "assets/products/9870479425834/1_49899238752554.webp",
-      "assets/products/9870479425834/2_49899238850858.webp",
-      "assets/products/9870479425834/3_49899239145770.webp",
-      "assets/products/9870479425834/4_49899240653098.webp",
-      "assets/products/9870479425834/5_49899240685866.webp"
+      "assets/products/9870479425834/1_49899238752554.png",
+      "assets/products/9870479425834/2_49899238850858.png",
+      "assets/products/9870479425834/3_49899239145770.png",
+      "assets/products/9870479425834/4_49899240653098.png",
+      "assets/products/9870479425834/5_49899240685866.png"
     ],
     "has_colors": true,
     "colors": [
@@ -6784,18 +6870,18 @@ window.CovertokProducts = [
         "name": "Sweet Pink",
         "hex": "#FBCFE8",
         "price": 549.0,
-        "image": "assets/products/9870479425834/5_49899240685866.webp",
+        "image": "assets/products/9870479425834/5_49899240685866.png",
         "images": [
-          "assets/products/9870479425834/5_49899240685866.webp"
+          "assets/products/9870479425834/5_49899240685866.png"
         ]
       },
       {
         "name": "Classic White",
         "hex": "#F1F5F9",
         "price": 549.0,
-        "image": "assets/products/9870479425834/1_49899238752554.webp",
+        "image": "assets/products/9870479425834/1_49899238752554.png",
         "images": [
-          "assets/products/9870479425834/1_49899238752554.webp"
+          "assets/products/9870479425834/1_49899238752554.png"
         ]
       }
     ],
@@ -6880,7 +6966,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870469464362",
-    "handle": "silicone-world-map-travel-phone-case✈️-copy",
+    "handle": "silicone-world-map-travel-phone-case✈️🌍-copy",
     "title": "Holographic Bow Glitter Case With Charm",
     "price": 799,
     "price_formatted": "Rs. 799.00",
@@ -6905,15 +6991,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9870469464362/3_49899201921322.webp",
+    "primary_image": "assets/products/9870469464362/3_49899201921322.png",
     "images": [
-      "assets/products/9870469464362/3_49899201921322.webp",
-      "assets/products/9870469464362/1_49899202085162.webp",
-      "assets/products/9870469464362/2_49899202117930.webp",
-      "assets/products/9870469464362/4_49899202806058.webp"
+      "assets/products/9870469464362/3_49899201921322.png",
+      "assets/products/9870469464362/1_49899202085162.jpg",
+      "assets/products/9870469464362/2_49899202117930.jpg",
+      "assets/products/9870469464362/4_49899202806058.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Holographic",
+        "hex": "#C4B5FD"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -7024,13 +7115,13 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870456357162/5_49899107844394.webp",
+    "primary_image": "assets/products/9870456357162/5_49899107844394.png",
     "images": [
-      "assets/products/9870456357162/5_49899107844394.webp",
-      "assets/products/9870456357162/1_49899114627370.webp",
-      "assets/products/9870456357162/2_49899115348266.webp",
-      "assets/products/9870456357162/3_49899118428458.webp",
-      "assets/products/9870456357162/4_49899113316650.webp"
+      "assets/products/9870456357162/5_49899107844394.png",
+      "assets/products/9870456357162/1_49899114627370.png",
+      "assets/products/9870456357162/2_49899115348266.png",
+      "assets/products/9870456357162/3_49899118428458.png",
+      "assets/products/9870456357162/4_49899113316650.png"
     ],
     "has_colors": true,
     "colors": [
@@ -7038,36 +7129,36 @@ window.CovertokProducts = [
         "name": "Wine Red",
         "hex": "#881337",
         "price": 499.0,
-        "image": "assets/products/9870456357162/1_49899114627370.webp",
+        "image": "assets/products/9870456357162/1_49899114627370.png",
         "images": [
-          "assets/products/9870456357162/1_49899114627370.webp"
+          "assets/products/9870456357162/1_49899114627370.png"
         ]
       },
       {
         "name": "Ivory White",
         "hex": "#F8FAFC",
         "price": 499.0,
-        "image": "assets/products/9870456357162/2_49899115348266.webp",
+        "image": "assets/products/9870456357162/2_49899115348266.png",
         "images": [
-          "assets/products/9870456357162/2_49899115348266.webp"
+          "assets/products/9870456357162/2_49899115348266.png"
         ]
       },
       {
         "name": "Earth Brown",
         "hex": "#713F12",
         "price": 499.0,
-        "image": "assets/products/9870456357162/3_49899118428458.webp",
+        "image": "assets/products/9870456357162/3_49899118428458.png",
         "images": [
-          "assets/products/9870456357162/3_49899118428458.webp"
+          "assets/products/9870456357162/3_49899118428458.png"
         ]
       },
       {
         "name": "Midnight Black",
         "hex": "#09090B",
         "price": 499.0,
-        "image": "assets/products/9870456357162/4_49899113316650.webp",
+        "image": "assets/products/9870456357162/4_49899113316650.png",
         "images": [
-          "assets/products/9870456357162/4_49899113316650.webp"
+          "assets/products/9870456357162/4_49899113316650.png"
         ]
       }
     ],
@@ -7184,19 +7275,19 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9870452588842/1_51157547090218.webp",
+    "primary_image": "assets/products/9870452588842/1_51157547090218.png",
     "images": [
-      "assets/products/9870452588842/1_51157547090218.webp",
-      "assets/products/9870452588842/2_51157546991914.webp",
-      "assets/products/9870452588842/3_49899077402922.webp",
-      "assets/products/9870452588842/4_49899077665066.webp",
-      "assets/products/9870452588842/5_49899077599530.webp",
-      "assets/products/9870452588842/6_49899078484266.webp",
-      "assets/products/9870452588842/7_49899079893290.webp",
-      "assets/products/9870452588842/8_49899079926058.webp",
-      "assets/products/9870452588842/9_51157547057450.webp",
-      "assets/products/9870452588842/10_51157547024682.webp",
-      "assets/products/9870452588842/11_51157546959146.webp"
+      "assets/products/9870452588842/1_51157547090218.png",
+      "assets/products/9870452588842/2_51157546991914.png",
+      "assets/products/9870452588842/3_49899077402922.png",
+      "assets/products/9870452588842/4_49899077665066.png",
+      "assets/products/9870452588842/5_49899077599530.png",
+      "assets/products/9870452588842/6_49899078484266.png",
+      "assets/products/9870452588842/7_49899079893290.png",
+      "assets/products/9870452588842/8_49899079926058.png",
+      "assets/products/9870452588842/9_51157547057450.png",
+      "assets/products/9870452588842/10_51157547024682.png",
+      "assets/products/9870452588842/11_51157546959146.png"
     ],
     "has_colors": true,
     "colors": [
@@ -7204,63 +7295,63 @@ window.CovertokProducts = [
         "name": "Frost Black",
         "hex": "#27272A",
         "price": 599.0,
-        "image": "assets/products/9870452588842/5_49899077599530.webp",
+        "image": "assets/products/9870452588842/5_49899077599530.png",
         "images": [
-          "assets/products/9870452588842/5_49899077599530.webp"
+          "assets/products/9870452588842/5_49899077599530.png"
         ]
       },
       {
         "name": "Rose Frost",
         "hex": "#FB7185",
         "price": 599.0,
-        "image": "assets/products/9870452588842/6_49899078484266.webp",
+        "image": "assets/products/9870452588842/6_49899078484266.png",
         "images": [
-          "assets/products/9870452588842/6_49899078484266.webp"
+          "assets/products/9870452588842/6_49899078484266.png"
         ]
       },
       {
         "name": "Ice White",
         "hex": "#F8FAFC",
         "price": 599.0,
-        "image": "assets/products/9870452588842/8_49899079926058.webp",
+        "image": "assets/products/9870452588842/8_49899079926058.png",
         "images": [
-          "assets/products/9870452588842/8_49899079926058.webp"
+          "assets/products/9870452588842/8_49899079926058.png"
         ]
       },
       {
         "name": "Pastel Purple",
         "hex": "#C084FC",
         "price": 599.0,
-        "image": "assets/products/9870452588842/4_49899077665066.webp",
+        "image": "assets/products/9870452588842/4_49899077665066.png",
         "images": [
-          "assets/products/9870452588842/4_49899077665066.webp"
+          "assets/products/9870452588842/4_49899077665066.png"
         ]
       },
       {
         "name": "Ice Blue",
         "hex": "#BAE6FD",
         "price": 599.0,
-        "image": "assets/products/9870452588842/5_49899077599530.webp",
+        "image": "assets/products/9870452588842/5_49899077599530.png",
         "images": [
-          "assets/products/9870452588842/5_49899077599530.webp"
+          "assets/products/9870452588842/5_49899077599530.png"
         ]
       },
       {
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
         "price": 599.0,
-        "image": "assets/products/9870452588842/6_49899078484266.webp",
+        "image": "assets/products/9870452588842/6_49899078484266.png",
         "images": [
-          "assets/products/9870452588842/6_49899078484266.webp"
+          "assets/products/9870452588842/6_49899078484266.png"
         ]
       },
       {
         "name": "Deep Blue",
         "hex": "#1E40AF",
         "price": 599.0,
-        "image": "assets/products/9870452588842/7_49899079893290.webp",
+        "image": "assets/products/9870452588842/7_49899079893290.png",
         "images": [
-          "assets/products/9870452588842/7_49899079893290.webp"
+          "assets/products/9870452588842/7_49899079893290.png"
         ]
       }
     ],
@@ -7380,12 +7471,12 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870449443114/1_49899074617642.webp",
+    "primary_image": "assets/products/9870449443114/1_49899074617642.png",
     "images": [
-      "assets/products/9870449443114/1_49899074617642.webp",
-      "assets/products/9870449443114/2_49899048304938.webp",
-      "assets/products/9870449443114/3_49899048370474.webp",
-      "assets/products/9870449443114/4_49899048337706.webp"
+      "assets/products/9870449443114/1_49899074617642.png",
+      "assets/products/9870449443114/2_49899048304938.png",
+      "assets/products/9870449443114/3_49899048370474.png",
+      "assets/products/9870449443114/4_49899048337706.png"
     ],
     "has_colors": true,
     "colors": [
@@ -7393,18 +7484,18 @@ window.CovertokProducts = [
         "name": "Caffeine Mood",
         "hex": "#78350F",
         "price": 449.0,
-        "image": "assets/products/9870449443114/1_49899074617642.webp",
+        "image": "assets/products/9870449443114/1_49899074617642.png",
         "images": [
-          "assets/products/9870449443114/1_49899074617642.webp"
+          "assets/products/9870449443114/1_49899074617642.png"
         ]
       },
       {
         "name": "Chill Mood",
         "hex": "#3B82F6",
         "price": 449.0,
-        "image": "assets/products/9870449443114/2_49899048304938.webp",
+        "image": "assets/products/9870449443114/2_49899048304938.png",
         "images": [
-          "assets/products/9870449443114/2_49899048304938.webp"
+          "assets/products/9870449443114/2_49899048304938.png"
         ]
       }
     ],
@@ -7423,9 +7514,9 @@ window.CovertokProducts = [
       "iPhone 16 Pro Max"
     ],
     "model_label": "Select Model",
-    "description": "Coffee & Cozy Vibes Phone Cases ☕✨ Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! ",
+    "description": "Coffee & Cozy Vibes Phone Cases ☕✨ Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! 🌸📱",
     "bullets": [],
-    "raw_html": "<p>Coffee &amp; Cozy Vibes Phone Cases ☕✨<br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! </p>",
+    "raw_html": "<p>Coffee &amp; Cozy Vibes Phone Cases ☕✨<br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! 🌸📱</p>",
     "in_stock": true,
     "features": [
       {
@@ -7519,15 +7610,15 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870445347114/1_49899017273642.webp",
+    "primary_image": "assets/products/9870445347114/1_49899017273642.png",
     "images": [
-      "assets/products/9870445347114/1_49899017273642.webp",
-      "assets/products/9870445347114/2_49899017896234.webp",
-      "assets/products/9870445347114/3_49899015930154.webp",
-      "assets/products/9870445347114/4_49899017830698.webp",
-      "assets/products/9870445347114/5_49899017077034.webp",
-      "assets/products/9870445347114/6_49899017568554.webp",
-      "assets/products/9870445347114/7_49899016519978.webp"
+      "assets/products/9870445347114/1_49899017273642.png",
+      "assets/products/9870445347114/2_49899017896234.png",
+      "assets/products/9870445347114/3_49899015930154.png",
+      "assets/products/9870445347114/4_49899017830698.png",
+      "assets/products/9870445347114/5_49899017077034.png",
+      "assets/products/9870445347114/6_49899017568554.png",
+      "assets/products/9870445347114/7_49899016519978.png"
     ],
     "has_colors": true,
     "colors": [
@@ -7535,54 +7626,54 @@ window.CovertokProducts = [
         "name": "Sunshine Yellow",
         "hex": "#FACC15",
         "price": 449.0,
-        "image": "assets/products/9870445347114/3_49899015930154.webp",
+        "image": "assets/products/9870445347114/3_49899015930154.png",
         "images": [
-          "assets/products/9870445347114/3_49899015930154.webp"
+          "assets/products/9870445347114/3_49899015930154.png"
         ]
       },
       {
         "name": "Bubblegum Pink",
         "hex": "#FB7185",
         "price": 449.0,
-        "image": "assets/products/9870445347114/6_49899017568554.webp",
+        "image": "assets/products/9870445347114/6_49899017568554.png",
         "images": [
-          "assets/products/9870445347114/6_49899017568554.webp"
+          "assets/products/9870445347114/6_49899017568554.png"
         ]
       },
       {
         "name": "Cool Teal",
         "hex": "#0D9488",
         "price": 449.0,
-        "image": "assets/products/9870445347114/5_49899017077034.webp",
+        "image": "assets/products/9870445347114/5_49899017077034.png",
         "images": [
-          "assets/products/9870445347114/5_49899017077034.webp"
+          "assets/products/9870445347114/5_49899017077034.png"
         ]
       },
       {
         "name": "Creamy White",
         "hex": "#FAF5FF",
         "price": 449.0,
-        "image": "assets/products/9870445347114/1_49899017273642.webp",
+        "image": "assets/products/9870445347114/1_49899017273642.png",
         "images": [
-          "assets/products/9870445347114/1_49899017273642.webp"
+          "assets/products/9870445347114/1_49899017273642.png"
         ]
       },
       {
         "name": "Jet Black",
         "hex": "#000000",
         "price": 449.0,
-        "image": "assets/products/9870445347114/4_49899017830698.webp",
+        "image": "assets/products/9870445347114/4_49899017830698.png",
         "images": [
-          "assets/products/9870445347114/4_49899017830698.webp"
+          "assets/products/9870445347114/4_49899017830698.png"
         ]
       },
       {
         "name": "Coral Crush",
         "hex": "#FB7185",
         "price": 449.0,
-        "image": "assets/products/9870445347114/2_49899017896234.webp",
+        "image": "assets/products/9870445347114/2_49899017896234.png",
         "images": [
-          "assets/products/9870445347114/2_49899017896234.webp"
+          "assets/products/9870445347114/2_49899017896234.png"
         ]
       }
     ],
@@ -7699,15 +7790,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869735723306/1_49887599722794.webp",
+    "primary_image": "assets/products/9869735723306/1_49887599722794.png",
     "images": [
-      "assets/products/9869735723306/1_49887599722794.webp",
-      "assets/products/9869735723306/2_49887599198506.webp",
-      "assets/products/9869735723306/3_49887599264042.webp",
-      "assets/products/9869735723306/4_49887599165738.webp"
+      "assets/products/9869735723306/1_49887599722794.png",
+      "assets/products/9869735723306/2_49887599198506.png",
+      "assets/products/9869735723306/3_49887599264042.png",
+      "assets/products/9869735723306/4_49887599165738.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Warm Caramel",
+        "hex": "#D97706"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -7732,7 +7828,7 @@ window.CovertokProducts = [
       "Lightweight and protective without bulk",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Cute bear sketch design with heart detail</span></div>\n<div><span> • Comes with a matching plush bear keychain</span></div>\n<div><span> • Soft-touch material with a comfortable grip</span></div>\n<div><span> • Shock-absorbent and scratch-resistant</span></div>\n<div><span> • Lightweight and protective without bulk</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. ✨</div>",
+    "raw_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Cute bear sketch design with heart detail</span></div>\n<div><span> • Comes with a matching plush bear keychain</span></div>\n<div><span> • Soft-touch material with a comfortable grip</span></div>\n<div><span> • Shock-absorbent and scratch-resistant</span></div>\n<div><span> • Lightweight and protective without bulk</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. 🐻✨</div>",
     "in_stock": true,
     "features": [
       {
@@ -7828,15 +7924,20 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869730382122/1_49887489556778.webp",
+    "primary_image": "assets/products/9869730382122/1_49887489556778.png",
     "images": [
-      "assets/products/9869730382122/1_49887489556778.webp",
-      "assets/products/9869730382122/2_49887490605354.webp",
-      "assets/products/9869730382122/3_49887491981610.webp",
-      "assets/products/9869730382122/4_49887492112682.webp"
+      "assets/products/9869730382122/1_49887489556778.png",
+      "assets/products/9869730382122/2_49887490605354.png",
+      "assets/products/9869730382122/3_49887491981610.png",
+      "assets/products/9869730382122/4_49887492112682.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Espresso Brown",
+        "hex": "#78350F"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -7954,13 +8055,13 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869729956138/1_49887448596778.webp",
+    "primary_image": "assets/products/9869729956138/1_49887448596778.png",
     "images": [
-      "assets/products/9869729956138/1_49887448596778.webp",
-      "assets/products/9869729956138/2_49887448826154.webp",
-      "assets/products/9869729956138/3_49887449055530.webp",
-      "assets/products/9869729956138/4_49887449383210.webp",
-      "assets/products/9869729956138/5_49887473664298.webp"
+      "assets/products/9869729956138/1_49887448596778.png",
+      "assets/products/9869729956138/2_49887448826154.png",
+      "assets/products/9869729956138/3_49887449055530.png",
+      "assets/products/9869729956138/4_49887449383210.png",
+      "assets/products/9869729956138/5_49887473664298.png"
     ],
     "has_colors": true,
     "colors": [
@@ -7968,27 +8069,27 @@ window.CovertokProducts = [
         "name": "Pink",
         "hex": "#EC4899",
         "price": 699.0,
-        "image": "assets/products/9869729956138/2_49887448826154.webp",
+        "image": "assets/products/9869729956138/2_49887448826154.png",
         "images": [
-          "assets/products/9869729956138/2_49887448826154.webp"
+          "assets/products/9869729956138/2_49887448826154.png"
         ]
       },
       {
         "name": "Off White",
         "hex": "#F3F4F6",
         "price": 699.0,
-        "image": "assets/products/9869729956138/3_49887449055530.webp",
+        "image": "assets/products/9869729956138/3_49887449055530.png",
         "images": [
-          "assets/products/9869729956138/3_49887449055530.webp"
+          "assets/products/9869729956138/3_49887449055530.png"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 699.0,
-        "image": "assets/products/9869729956138/4_49887449383210.webp",
+        "image": "assets/products/9869729956138/4_49887449383210.png",
         "images": [
-          "assets/products/9869729956138/4_49887449383210.webp"
+          "assets/products/9869729956138/4_49887449383210.png"
         ]
       }
     ],
@@ -8098,16 +8199,16 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869728907562/1_49887421661482.webp",
+    "primary_image": "assets/products/9869728907562/1_49887421661482.jpg",
     "images": [
-      "assets/products/9869728907562/1_49887421661482.webp",
-      "assets/products/9869728907562/2_49887421038890.webp",
-      "assets/products/9869728907562/3_49887422120234.webp",
-      "assets/products/9869728907562/4_49887421235498.webp",
-      "assets/products/9869728907562/5_49887421432106.webp",
-      "assets/products/9869728907562/6_49887423004970.webp",
-      "assets/products/9869728907562/7_49887423267114.webp",
-      "assets/products/9869728907562/8_49887423463722.webp"
+      "assets/products/9869728907562/1_49887421661482.jpg",
+      "assets/products/9869728907562/2_49887421038890.jpg",
+      "assets/products/9869728907562/3_49887422120234.jpg",
+      "assets/products/9869728907562/4_49887421235498.jpg",
+      "assets/products/9869728907562/5_49887421432106.jpg",
+      "assets/products/9869728907562/6_49887423004970.jpg",
+      "assets/products/9869728907562/7_49887423267114.jpg",
+      "assets/products/9869728907562/8_49887423463722.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -8115,18 +8216,18 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 899.0,
-        "image": "assets/products/9869728907562/2_49887421038890.webp",
+        "image": "assets/products/9869728907562/2_49887421038890.jpg",
         "images": [
-          "assets/products/9869728907562/2_49887421038890.webp"
+          "assets/products/9869728907562/2_49887421038890.jpg"
         ]
       },
       {
         "name": "Beige",
         "hex": "#F5F5DC",
         "price": 899.0,
-        "image": "assets/products/9869728907562/3_49887422120234.webp",
+        "image": "assets/products/9869728907562/3_49887422120234.jpg",
         "images": [
-          "assets/products/9869728907562/3_49887422120234.webp"
+          "assets/products/9869728907562/3_49887422120234.jpg"
         ]
       }
     ],
@@ -8250,16 +8351,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869725696298/1_49887235899690.webp",
+    "primary_image": "assets/products/9869725696298/1_49887235899690.jpg",
     "images": [
-      "assets/products/9869725696298/1_49887235899690.webp",
-      "assets/products/9869725696298/2_49887237439786.webp",
-      "assets/products/9869725696298/3_49887235866922.webp",
-      "assets/products/9869725696298/4_49887236718890.webp",
-      "assets/products/9869725696298/5_49887237833002.webp"
+      "assets/products/9869725696298/1_49887235899690.jpg",
+      "assets/products/9869725696298/2_49887237439786.jpg",
+      "assets/products/9869725696298/3_49887235866922.jpg",
+      "assets/products/9869725696298/4_49887236718890.jpg",
+      "assets/products/9869725696298/5_49887237833002.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Amber Leopard",
+        "hex": "#B45309"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -8380,14 +8486,14 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869724844330/3_49887215386922.webp",
+    "primary_image": "assets/products/9869724844330/3_49887215386922.png",
     "images": [
-      "assets/products/9869724844330/3_49887215386922.webp",
-      "assets/products/9869724844330/1_49887214960938.webp",
-      "assets/products/9869724844330/2_49887214633258.webp",
-      "assets/products/9869724844330/4_49887215485226.webp",
-      "assets/products/9869724844330/5_49887215517994.webp",
-      "assets/products/9869724844330/6_49887216271658.webp"
+      "assets/products/9869724844330/3_49887215386922.png",
+      "assets/products/9869724844330/1_49887214960938.png",
+      "assets/products/9869724844330/2_49887214633258.png",
+      "assets/products/9869724844330/4_49887215485226.png",
+      "assets/products/9869724844330/5_49887215517994.png",
+      "assets/products/9869724844330/6_49887216271658.png"
     ],
     "has_colors": true,
     "colors": [
@@ -8395,18 +8501,18 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 899.0,
-        "image": "assets/products/9869724844330/5_49887215517994.webp",
+        "image": "assets/products/9869724844330/5_49887215517994.png",
         "images": [
-          "assets/products/9869724844330/5_49887215517994.webp"
+          "assets/products/9869724844330/5_49887215517994.png"
         ]
       },
       {
         "name": "Beige",
         "hex": "#F5F5DC",
         "price": 899.0,
-        "image": "assets/products/9869724844330/3_49887215386922.webp",
+        "image": "assets/products/9869724844330/3_49887215386922.png",
         "images": [
-          "assets/products/9869724844330/3_49887215386922.webp"
+          "assets/products/9869724844330/3_49887215386922.png"
         ]
       }
     ],
@@ -8529,15 +8635,15 @@ window.CovertokProducts = [
       "suction grip pad",
       "suction pads"
     ],
-    "primary_image": "assets/products/9855468175658/2_49719325458730.webp",
+    "primary_image": "assets/products/9855468175658/2_49719325458730.png",
     "images": [
-      "assets/products/9855468175658/2_49719325458730.webp",
-      "assets/products/9855468175658/1_49719304421674.webp",
-      "assets/products/9855468175658/3_49719338172714.webp",
-      "assets/products/9855468175658/4_49719338959146.webp",
-      "assets/products/9855468175658/5_49719353606442.webp",
-      "assets/products/9855468175658/6_49719354655018.webp",
-      "assets/products/9855468175658/7_49719355179306.webp"
+      "assets/products/9855468175658/2_49719325458730.png",
+      "assets/products/9855468175658/1_49719304421674.png",
+      "assets/products/9855468175658/3_49719338172714.png",
+      "assets/products/9855468175658/4_49719338959146.png",
+      "assets/products/9855468175658/5_49719353606442.png",
+      "assets/products/9855468175658/6_49719354655018.png",
+      "assets/products/9855468175658/7_49719355179306.png"
     ],
     "has_colors": true,
     "colors": [
@@ -8545,27 +8651,27 @@ window.CovertokProducts = [
         "name": "Orange",
         "hex": "#F97316",
         "price": 149.0,
-        "image": "assets/products/9855468175658/2_49719325458730.webp",
+        "image": "assets/products/9855468175658/2_49719325458730.png",
         "images": [
-          "assets/products/9855468175658/2_49719325458730.webp"
+          "assets/products/9855468175658/2_49719325458730.png"
         ]
       },
       {
         "name": "Violet",
         "hex": "#7C3AED",
         "price": 149.0,
-        "image": "assets/products/9855468175658/3_49719338172714.webp",
+        "image": "assets/products/9855468175658/3_49719338172714.png",
         "images": [
-          "assets/products/9855468175658/3_49719338172714.webp"
+          "assets/products/9855468175658/3_49719338172714.png"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 149.0,
-        "image": "assets/products/9855468175658/4_49719338959146.webp",
+        "image": "assets/products/9855468175658/4_49719338959146.png",
         "images": [
-          "assets/products/9855468175658/4_49719338959146.webp"
+          "assets/products/9855468175658/4_49719338959146.png"
         ]
       }
     ],
@@ -8668,15 +8774,20 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9854428905770/3_49970058920234.webp",
+    "primary_image": "assets/products/9854428905770/3_49970058920234.png",
     "images": [
-      "assets/products/9854428905770/3_49970058920234.webp",
-      "assets/products/9854428905770/1_49704201290026.webp",
-      "assets/products/9854428905770/2_49704201322794.webp",
-      "assets/products/9854428905770/4_49970058887466.webp"
+      "assets/products/9854428905770/3_49970058920234.png",
+      "assets/products/9854428905770/1_49704201290026.png",
+      "assets/products/9854428905770/2_49704201322794.png",
+      "assets/products/9854428905770/4_49970058887466.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Clear Armor",
+        "hex": "#E2E8F0"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 pro",
@@ -8801,15 +8912,15 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853945741610/1_49692707586346.webp",
+    "primary_image": "assets/products/9853945741610/1_49692707586346.png",
     "images": [
-      "assets/products/9853945741610/1_49692707586346.webp",
-      "assets/products/9853945741610/2_49693181706538.webp",
-      "assets/products/9853945741610/3_49692688875818.webp",
-      "assets/products/9853945741610/4_49692796846378.webp",
-      "assets/products/9853945741610/5_49692796911914.webp",
-      "assets/products/9853945741610/6_49692728394026.webp",
-      "assets/products/9853945741610/7_49692796879146.webp"
+      "assets/products/9853945741610/1_49692707586346.png",
+      "assets/products/9853945741610/2_49693181706538.png",
+      "assets/products/9853945741610/3_49692688875818.png",
+      "assets/products/9853945741610/4_49692796846378.png",
+      "assets/products/9853945741610/5_49692796911914.png",
+      "assets/products/9853945741610/6_49692728394026.png",
+      "assets/products/9853945741610/7_49692796879146.png"
     ],
     "has_colors": true,
     "colors": [
@@ -8817,27 +8928,27 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 1099.0,
-        "image": "assets/products/9853945741610/3_49692688875818.webp",
+        "image": "assets/products/9853945741610/3_49692688875818.png",
         "images": [
-          "assets/products/9853945741610/3_49692688875818.webp"
+          "assets/products/9853945741610/3_49692688875818.png"
         ]
       },
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
         "price": 1099.0,
-        "image": "assets/products/9853945741610/1_49692707586346.webp",
+        "image": "assets/products/9853945741610/1_49692707586346.png",
         "images": [
-          "assets/products/9853945741610/1_49692707586346.webp"
+          "assets/products/9853945741610/1_49692707586346.png"
         ]
       },
       {
         "name": "Violet",
         "hex": "#7C3AED",
         "price": 1099.0,
-        "image": "assets/products/9853945741610/6_49692728394026.webp",
+        "image": "assets/products/9853945741610/6_49692728394026.png",
         "images": [
-          "assets/products/9853945741610/6_49692728394026.webp"
+          "assets/products/9853945741610/6_49692728394026.png"
         ]
       }
     ],
@@ -8847,7 +8958,7 @@ window.CovertokProducts = [
     "bullets": [
       "– Premium PU Leather: Smooth, durable finish with an elegant look."
     ],
-    "raw_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p> Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p> Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
+    "raw_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p>📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
     "in_stock": true,
     "features": [
       {
@@ -8941,15 +9052,15 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853944529194/1_49692656009514.webp",
+    "primary_image": "assets/products/9853944529194/1_49692656009514.png",
     "images": [
-      "assets/products/9853944529194/1_49692656009514.webp",
-      "assets/products/9853944529194/2_49693176889642.webp",
-      "assets/products/9853944529194/3_49692654207274.webp",
-      "assets/products/9853944529194/4_49692671377706.webp",
-      "assets/products/9853944529194/5_49692780658986.webp",
-      "assets/products/9853944529194/6_49692868706602.webp",
-      "assets/products/9853944529194/7_49692868641066.webp"
+      "assets/products/9853944529194/1_49692656009514.png",
+      "assets/products/9853944529194/2_49693176889642.png",
+      "assets/products/9853944529194/3_49692654207274.png",
+      "assets/products/9853944529194/4_49692671377706.png",
+      "assets/products/9853944529194/5_49692780658986.png",
+      "assets/products/9853944529194/6_49692868706602.png",
+      "assets/products/9853944529194/7_49692868641066.png"
     ],
     "has_colors": true,
     "colors": [
@@ -8957,27 +9068,27 @@ window.CovertokProducts = [
         "name": "Orange",
         "hex": "#F97316",
         "price": 999.0,
-        "image": "assets/products/9853944529194/3_49692654207274.webp",
+        "image": "assets/products/9853944529194/3_49692654207274.png",
         "images": [
-          "assets/products/9853944529194/3_49692654207274.webp"
+          "assets/products/9853944529194/3_49692654207274.png"
         ]
       },
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
         "price": 999.0,
-        "image": "assets/products/9853944529194/4_49692671377706.webp",
+        "image": "assets/products/9853944529194/4_49692671377706.png",
         "images": [
-          "assets/products/9853944529194/4_49692671377706.webp"
+          "assets/products/9853944529194/4_49692671377706.png"
         ]
       },
       {
         "name": "Black",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/9853944529194/7_49692868641066.webp",
+        "image": "assets/products/9853944529194/7_49692868641066.png",
         "images": [
-          "assets/products/9853944529194/7_49692868641066.webp"
+          "assets/products/9853944529194/7_49692868641066.png"
         ]
       }
     ],
@@ -8989,7 +9100,7 @@ window.CovertokProducts = [
       "– Premium Leather Finish: Smooth, durable, and elegant look.",
       "– Slim & Lightweight: Adds functionality without bulk."
     ],
-    "raw_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p> Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p> Color: Vibrant Orange (Available in multiple colors)</p>\n<p> Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
+    "raw_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p>🎨 Color: Vibrant Orange (Available in multiple colors)</p>\n<p>📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
     "in_stock": true,
     "features": [
       {
@@ -9082,13 +9193,18 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853542105386/1_49683451019562.webp",
+    "primary_image": "assets/products/9853542105386/1_49683451019562.png",
     "images": [
-      "assets/products/9853542105386/1_49683451019562.webp",
-      "assets/products/9853542105386/2_49683454230826.webp"
+      "assets/products/9853542105386/1_49683451019562.png",
+      "assets/products/9853542105386/2_49683454230826.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pure White",
+        "hex": "#F8FAFC"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "The MagSafe Wireless Charger (USB-C) offers seamless magnetic alignment for efficient and reliable wireless charging. Designed for compatibility with MagSafe-enabled devices, it ensures optimal power transfer while minimizing energy loss. Its USB-C connection supports fast charging and broad device compatibility, making it an essential accessory for professionals seeking convenience and performance in wireless power delivery. Compact and durable, this charger integrates effortlessly into any workspace or travel setup.",
@@ -9186,17 +9302,17 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853490954538/1_49923648618794.webp",
+    "primary_image": "assets/products/9853490954538/1_49923648618794.png",
     "images": [
-      "assets/products/9853490954538/1_49923648618794.webp",
-      "assets/products/9853490954538/2_49923648651562.webp",
-      "assets/products/9853490954538/3_49923732046122.webp",
-      "assets/products/9853490954538/4_49682253513002.webp",
-      "assets/products/9853490954538/5_49682198331690.webp",
-      "assets/products/9853490954538/6_49683693994282.webp",
-      "assets/products/9853490954538/7_49682209997098.webp",
-      "assets/products/9853490954538/8_49683507151146.webp",
-      "assets/products/9853490954538/9_49683667124522.webp"
+      "assets/products/9853490954538/1_49923648618794.png",
+      "assets/products/9853490954538/2_49923648651562.png",
+      "assets/products/9853490954538/3_49923732046122.png",
+      "assets/products/9853490954538/4_49682253513002.jpg",
+      "assets/products/9853490954538/5_49682198331690.png",
+      "assets/products/9853490954538/6_49683693994282.png",
+      "assets/products/9853490954538/7_49682209997098.png",
+      "assets/products/9853490954538/8_49683507151146.png",
+      "assets/products/9853490954538/9_49683667124522.png"
     ],
     "has_colors": true,
     "colors": [
@@ -9204,45 +9320,45 @@ window.CovertokProducts = [
         "name": "Neon blue",
         "hex": "#2563EB",
         "price": 799.0,
-        "image": "assets/products/9853490954538/5_49682198331690.webp",
+        "image": "assets/products/9853490954538/5_49682198331690.png",
         "images": [
-          "assets/products/9853490954538/5_49682198331690.webp"
+          "assets/products/9853490954538/5_49682198331690.png"
         ]
       },
       {
         "name": "Neon Green",
         "hex": "#22C55E",
         "price": 799.0,
-        "image": "assets/products/9853490954538/7_49682209997098.webp",
+        "image": "assets/products/9853490954538/7_49682209997098.png",
         "images": [
-          "assets/products/9853490954538/7_49682209997098.webp"
+          "assets/products/9853490954538/7_49682209997098.png"
         ]
       },
       {
         "name": "Neon Pink",
         "hex": "#F43F5E",
         "price": 799.0,
-        "image": "assets/products/9853490954538/9_49683667124522.webp",
+        "image": "assets/products/9853490954538/9_49683667124522.png",
         "images": [
-          "assets/products/9853490954538/9_49683667124522.webp"
+          "assets/products/9853490954538/9_49683667124522.png"
         ]
       },
       {
         "name": "Neon Orange",
         "hex": "#F97316",
         "price": 799.0,
-        "image": "assets/products/9853490954538/6_49683693994282.webp",
+        "image": "assets/products/9853490954538/6_49683693994282.png",
         "images": [
-          "assets/products/9853490954538/6_49683693994282.webp"
+          "assets/products/9853490954538/6_49683693994282.png"
         ]
       },
       {
         "name": "Neon Lime",
         "hex": "#A3E635",
         "price": 799.0,
-        "image": "assets/products/9853490954538/8_49683507151146.webp",
+        "image": "assets/products/9853490954538/8_49683507151146.png",
         "images": [
-          "assets/products/9853490954538/8_49683507151146.webp"
+          "assets/products/9853490954538/8_49683507151146.png"
         ]
       }
     ],
@@ -9358,14 +9474,14 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853436952874/1_49893803622698.webp",
+    "primary_image": "assets/products/9853436952874/1_49893803622698.png",
     "images": [
-      "assets/products/9853436952874/1_49893803622698.webp",
-      "assets/products/9853436952874/2_49893803589930.webp",
-      "assets/products/9853436952874/3_49923701506346.webp",
-      "assets/products/9853436952874/4_49893811323178.webp",
-      "assets/products/9853436952874/5_49893803557162.webp",
-      "assets/products/9853436952874/6_49681983701290.webp"
+      "assets/products/9853436952874/1_49893803622698.png",
+      "assets/products/9853436952874/2_49893803589930.png",
+      "assets/products/9853436952874/3_49923701506346.png",
+      "assets/products/9853436952874/4_49893811323178.png",
+      "assets/products/9853436952874/5_49893803557162.png",
+      "assets/products/9853436952874/6_49681983701290.png"
     ],
     "has_colors": true,
     "colors": [
@@ -9373,36 +9489,36 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 599.0,
-        "image": "assets/products/9853436952874/2_49893803589930.webp",
+        "image": "assets/products/9853436952874/2_49893803589930.png",
         "images": [
-          "assets/products/9853436952874/2_49893803589930.webp"
+          "assets/products/9853436952874/2_49893803589930.png"
         ]
       },
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
         "price": 599.0,
-        "image": "assets/products/9853436952874/5_49893803557162.webp",
+        "image": "assets/products/9853436952874/5_49893803557162.png",
         "images": [
-          "assets/products/9853436952874/5_49893803557162.webp"
+          "assets/products/9853436952874/5_49893803557162.png"
         ]
       },
       {
         "name": "Blue",
         "hex": "#2563EB",
         "price": 599.0,
-        "image": "assets/products/9853436952874/4_49893811323178.webp",
+        "image": "assets/products/9853436952874/4_49893811323178.png",
         "images": [
-          "assets/products/9853436952874/4_49893811323178.webp"
+          "assets/products/9853436952874/4_49893811323178.png"
         ]
       },
       {
         "name": "Desert titanium",
         "hex": "#D4A373",
         "price": 599.0,
-        "image": "assets/products/9853436952874/1_49893803622698.webp",
+        "image": "assets/products/9853436952874/1_49893803622698.png",
         "images": [
-          "assets/products/9853436952874/1_49893803622698.webp"
+          "assets/products/9853436952874/1_49893803622698.png"
         ]
       }
     ],
@@ -9520,14 +9636,14 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9848509006122/1_49619286753578.webp",
+    "primary_image": "assets/products/9848509006122/1_49619286753578.png",
     "images": [
-      "assets/products/9848509006122/1_49619286753578.webp",
-      "assets/products/9848509006122/2_49672833040682.webp",
-      "assets/products/9848509006122/3_49672837038378.webp",
-      "assets/products/9848509006122/4_49672886911274.webp",
-      "assets/products/9848509006122/5_49672880062762.webp",
-      "assets/products/9848509006122/6_49672972927274.webp"
+      "assets/products/9848509006122/1_49619286753578.png",
+      "assets/products/9848509006122/2_49672833040682.jpg",
+      "assets/products/9848509006122/3_49672837038378.jpg",
+      "assets/products/9848509006122/4_49672886911274.png",
+      "assets/products/9848509006122/5_49672880062762.png",
+      "assets/products/9848509006122/6_49672972927274.png"
     ],
     "has_colors": true,
     "colors": [
@@ -9535,45 +9651,45 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 699.0,
-        "image": "assets/products/9848509006122/1_49619286753578.webp",
+        "image": "assets/products/9848509006122/1_49619286753578.png",
         "images": [
-          "assets/products/9848509006122/1_49619286753578.webp"
+          "assets/products/9848509006122/1_49619286753578.png"
         ]
       },
       {
         "name": "White",
         "hex": "#FFFFFF",
         "price": 699.0,
-        "image": "assets/products/9848509006122/6_49672972927274.webp",
+        "image": "assets/products/9848509006122/6_49672972927274.png",
         "images": [
-          "assets/products/9848509006122/6_49672972927274.webp"
+          "assets/products/9848509006122/6_49672972927274.png"
         ]
       },
       {
         "name": "Neon Pink",
         "hex": "#F43F5E",
         "price": 699.0,
-        "image": "assets/products/9848509006122/4_49672886911274.webp",
+        "image": "assets/products/9848509006122/4_49672886911274.png",
         "images": [
-          "assets/products/9848509006122/4_49672886911274.webp"
+          "assets/products/9848509006122/4_49672886911274.png"
         ]
       },
       {
         "name": "Neon Orange",
         "hex": "#F97316",
         "price": 699.0,
-        "image": "assets/products/9848509006122/2_49672833040682.webp",
+        "image": "assets/products/9848509006122/2_49672833040682.jpg",
         "images": [
-          "assets/products/9848509006122/2_49672833040682.webp"
+          "assets/products/9848509006122/2_49672833040682.jpg"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 699.0,
-        "image": "assets/products/9848509006122/5_49672880062762.webp",
+        "image": "assets/products/9848509006122/5_49672880062762.png",
         "images": [
-          "assets/products/9848509006122/5_49672880062762.webp"
+          "assets/products/9848509006122/5_49672880062762.png"
         ]
       }
     ],
@@ -9695,12 +9811,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9851899576618/1_49658160218410.webp",
+    "primary_image": "assets/products/9851899576618/1_49658160218410.png",
     "images": [
-      "assets/products/9851899576618/1_49658160218410.webp"
+      "assets/products/9851899576618/1_49658160218410.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Space Grey",
+        "hex": "#374151"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Experience fast and efficient charging on-the-go with our 39W+ 7.1A Fast Car Charger. The compact design makes it perfect for travel, while the dual USB ports allow for simultaneous charging of multiple devices. With high-speed charging capabilities and universal compatibility, this charger is a must-have for any car trip.",
@@ -9798,12 +9919,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9851856716074/1_49657864749354.webp",
+    "primary_image": "assets/products/9851856716074/1_49657864749354.png",
     "images": [
-      "assets/products/9851856716074/1_49657864749354.webp"
+      "assets/products/9851856716074/1_49657864749354.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Titanium Black",
+        "hex": "#111827"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Hidden Dual Port Car Adapter with Pull Ring Design for Cigarette Lighter .Compact, Portable, Easy to Carry & Charger. Charge your devices quickly and easily on the go with our 100W Fast Charging Mini Alloy Car Charger. Featuring a hidden dual port car adapter with a convenient pull ring design for your cigarette lighter, this compact and portable charger is easy to carry and ensures a speedy charge every time.",
@@ -9900,17 +10026,22 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9851843182890/1_49657781420330.webp",
+    "primary_image": "assets/products/9851843182890/1_49657781420330.png",
     "images": [
-      "assets/products/9851843182890/1_49657781420330.webp",
-      "assets/products/9851843182890/2_49684268286250.webp",
-      "assets/products/9851843182890/3_49684270973226.webp",
-      "assets/products/9851843182890/4_49684272185642.webp",
-      "assets/products/9851843182890/5_49684271825194.webp",
-      "assets/products/9851843182890/6_49684272218410.webp"
+      "assets/products/9851843182890/1_49657781420330.png",
+      "assets/products/9851843182890/2_49684268286250.jpg",
+      "assets/products/9851843182890/3_49684270973226.jpg",
+      "assets/products/9851843182890/4_49684272185642.jpg",
+      "assets/products/9851843182890/5_49684271825194.jpg",
+      "assets/products/9851843182890/6_49684272218410.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Metallic Silver",
+        "hex": "#CBD5E1"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.",
@@ -10008,12 +10139,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9851840495914/1_49657745965354.webp",
+    "primary_image": "assets/products/9851840495914/1_49657745965354.png",
     "images": [
-      "assets/products/9851840495914/1_49657745965354.webp"
+      "assets/products/9851840495914/1_49657745965354.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Matte Black",
+        "hex": "#1F2937"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Charge all your Apple devices with ease using our 3-in-1 Wireless Charger MagSafe Compatible. With fast charging capabilities and compatibility with iPhone16/16 Plus/16 Pro/16 Pro Max, 15/15 Plus/15 Pro/15 Pro Max, 14/13/12 Series, AirPods 3rd/2nd Gen, Apple Watch Series 9/8/7/6/5/4/SE and AirPods models. You'll never have to deal with tangled cords again. Keep your devices powered up and ready to go with this sleek and efficient charging station.",
@@ -10111,14 +10247,14 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9848506057002/1_50743988650282.webp",
+    "primary_image": "assets/products/9848506057002/1_50743988650282.png",
     "images": [
-      "assets/products/9848506057002/1_50743988650282.webp",
-      "assets/products/9848506057002/2_49619358777642.webp",
-      "assets/products/9848506057002/3_49670271893802.webp",
-      "assets/products/9848506057002/4_49672468169002.webp",
-      "assets/products/9848506057002/5_49619453083946.webp",
-      "assets/products/9848506057002/6_49672566571306.webp"
+      "assets/products/9848506057002/1_50743988650282.png",
+      "assets/products/9848506057002/2_49619358777642.png",
+      "assets/products/9848506057002/3_49670271893802.jpg",
+      "assets/products/9848506057002/4_49672468169002.png",
+      "assets/products/9848506057002/5_49619453083946.png",
+      "assets/products/9848506057002/6_49672566571306.jpg"
     ],
     "has_colors": true,
     "colors": [
@@ -10126,45 +10262,45 @@ window.CovertokProducts = [
         "name": "Sky blue",
         "hex": "#38BDF8",
         "price": 699.0,
-        "image": "assets/products/9848506057002/4_49672468169002.webp",
+        "image": "assets/products/9848506057002/4_49672468169002.png",
         "images": [
-          "assets/products/9848506057002/4_49672468169002.webp"
+          "assets/products/9848506057002/4_49672468169002.png"
         ]
       },
       {
         "name": "Brown",
         "hex": "#854D0E",
         "price": 699.0,
-        "image": "assets/products/9848506057002/6_49672566571306.webp",
+        "image": "assets/products/9848506057002/6_49672566571306.jpg",
         "images": [
-          "assets/products/9848506057002/6_49672566571306.webp"
+          "assets/products/9848506057002/6_49672566571306.jpg"
         ]
       },
       {
         "name": "White",
         "hex": "#FFFFFF",
         "price": 699.0,
-        "image": "assets/products/9848506057002/3_49670271893802.webp",
+        "image": "assets/products/9848506057002/3_49670271893802.jpg",
         "images": [
-          "assets/products/9848506057002/3_49670271893802.webp"
+          "assets/products/9848506057002/3_49670271893802.jpg"
         ]
       },
       {
         "name": "Rusty orange",
         "hex": "#C2410C",
         "price": 699.0,
-        "image": "assets/products/9848506057002/5_49619453083946.webp",
+        "image": "assets/products/9848506057002/5_49619453083946.png",
         "images": [
-          "assets/products/9848506057002/5_49619453083946.webp"
+          "assets/products/9848506057002/5_49619453083946.png"
         ]
       },
       {
         "name": "Pink",
         "hex": "#EC4899",
         "price": 699.0,
-        "image": "assets/products/9848506057002/5_49619453083946.webp",
+        "image": "assets/products/9848506057002/5_49619453083946.png",
         "images": [
-          "assets/products/9848506057002/2_49619358777642.webp"
+          "assets/products/9848506057002/2_49619358777642.png"
         ]
       }
     ],
@@ -10275,30 +10411,30 @@ window.CovertokProducts = [
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9827998794026/7_50218796056874.webp",
+    "primary_image": "assets/products/9827998794026/7_50218796056874.png",
     "images": [
-      "assets/products/9827998794026/7_50218796056874.webp",
-      "assets/products/9827998794026/1_49945203212586.webp",
-      "assets/products/9827998794026/2_50090708631850.webp",
-      "assets/products/9827998794026/3_49950010671402.webp",
-      "assets/products/9827998794026/4_49680406249770.webp",
-      "assets/products/9827998794026/5_50218796024106.webp",
-      "assets/products/9827998794026/6_49676200804650.webp",
-      "assets/products/9827998794026/8_49676184846634.webp",
-      "assets/products/9827998794026/9_50218796089642.webp",
-      "assets/products/9827998794026/10_49676185239850.webp",
-      "assets/products/9827998794026/11_49676348621098.webp",
-      "assets/products/9827998794026/12_50090708730154.webp",
-      "assets/products/9827998794026/13_49680370368810.webp",
-      "assets/products/9827998794026/14_50090708697386.webp",
-      "assets/products/9827998794026/15_49990112018730.webp",
-      "assets/products/9827998794026/16_49990107693354.webp",
-      "assets/products/9827998794026/17_50090708762922.webp",
-      "assets/products/9827998794026/18_50218802643242.webp",
-      "assets/products/9827998794026/19_50218807656746.webp",
-      "assets/products/9827998794026/20_50218813653290.webp",
-      "assets/products/9827998794026/21_50218821484842.webp",
-      "assets/products/9827998794026/22_50218824204586.webp"
+      "assets/products/9827998794026/7_50218796056874.png",
+      "assets/products/9827998794026/1_49945203212586.png",
+      "assets/products/9827998794026/2_50090708631850.png",
+      "assets/products/9827998794026/3_49950010671402.png",
+      "assets/products/9827998794026/4_49680406249770.jpg",
+      "assets/products/9827998794026/5_50218796024106.png",
+      "assets/products/9827998794026/6_49676200804650.jpg",
+      "assets/products/9827998794026/8_49676184846634.jpg",
+      "assets/products/9827998794026/9_50218796089642.png",
+      "assets/products/9827998794026/10_49676185239850.jpg",
+      "assets/products/9827998794026/11_49676348621098.jpg",
+      "assets/products/9827998794026/12_50090708730154.png",
+      "assets/products/9827998794026/13_49680370368810.jpg",
+      "assets/products/9827998794026/14_50090708697386.png",
+      "assets/products/9827998794026/15_49990112018730.png",
+      "assets/products/9827998794026/16_49990107693354.png",
+      "assets/products/9827998794026/17_50090708762922.png",
+      "assets/products/9827998794026/18_50218802643242.png",
+      "assets/products/9827998794026/19_50218807656746.png",
+      "assets/products/9827998794026/20_50218813653290.png",
+      "assets/products/9827998794026/21_50218821484842.png",
+      "assets/products/9827998794026/22_50218824204586.png"
     ],
     "has_colors": true,
     "colors": [
@@ -10306,63 +10442,63 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 820.0,
-        "image": "assets/products/9827998794026/18_50218802643242.webp",
+        "image": "assets/products/9827998794026/18_50218802643242.png",
         "images": [
-          "assets/products/9827998794026/18_50218802643242.webp"
+          "assets/products/9827998794026/18_50218802643242.png"
         ]
       },
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
         "price": 820.0,
-        "image": "assets/products/9827998794026/16_49990107693354.webp",
+        "image": "assets/products/9827998794026/16_49990107693354.png",
         "images": [
-          "assets/products/9827998794026/16_49990107693354.webp"
+          "assets/products/9827998794026/16_49990107693354.png"
         ]
       },
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
         "price": 820.0,
-        "image": "assets/products/9827998794026/20_50218813653290.webp",
+        "image": "assets/products/9827998794026/20_50218813653290.png",
         "images": [
-          "assets/products/9827998794026/20_50218813653290.webp"
+          "assets/products/9827998794026/20_50218813653290.png"
         ]
       },
       {
         "name": "Desert titanium",
         "hex": "#D4A373",
         "price": 820.0,
-        "image": "assets/products/9827998794026/12_50090708730154.webp",
+        "image": "assets/products/9827998794026/12_50090708730154.png",
         "images": [
-          "assets/products/9827998794026/12_50090708730154.webp"
+          "assets/products/9827998794026/12_50090708730154.png"
         ]
       },
       {
         "name": "Dark red",
         "hex": "#991B1B",
         "price": 820.0,
-        "image": "assets/products/9827998794026/9_50218796089642.webp",
+        "image": "assets/products/9827998794026/9_50218796089642.png",
         "images": [
-          "assets/products/9827998794026/9_50218796089642.webp"
+          "assets/products/9827998794026/9_50218796089642.png"
         ]
       },
       {
         "name": "Sierra blue",
         "hex": "#93C5FD",
         "price": 820.0,
-        "image": "assets/products/9827998794026/21_50218821484842.webp",
+        "image": "assets/products/9827998794026/21_50218821484842.png",
         "images": [
-          "assets/products/9827998794026/21_50218821484842.webp"
+          "assets/products/9827998794026/21_50218821484842.png"
         ]
       },
       {
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
         "price": 820.0,
-        "image": "assets/products/9827998794026/22_50218824204586.webp",
+        "image": "assets/products/9827998794026/22_50218824204586.png",
         "images": [
-          "assets/products/9827998794026/22_50218824204586.webp"
+          "assets/products/9827998794026/22_50218824204586.png"
         ]
       }
     ],

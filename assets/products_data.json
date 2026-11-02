@@ -32,8 +32,13 @@
       "assets/products/10017625375018/8_51573035335978.jpg",
       "assets/products/10017625375018/9_51573035368746.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Space Black",
+        "hex": "#1C1D1F"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance. Aluminum Alloy Build – Durable, rust-resistant, and premium finish",
@@ -649,8 +654,13 @@
       "assets/products/9982201299242/8_51142268322090.jpg",
       "assets/products/9982201299242/9_51142268354858.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Cosmic Orange",
+        "hex": "#FF5500"
+      }
+    ],
     "models": [
       "iPhone 17 Pro",
       "iPhone 17 Pro Max"
@@ -759,8 +769,13 @@
       "assets/products/9981786390826/6_51134092575018.jpg",
       "assets/products/9981786390826/7_51134092542250.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Crystal Clear",
+        "hex": "#E2E8F0"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -1431,8 +1446,13 @@
       "assets/products/9904686924074/2_50151737590058.png",
       "assets/products/9904686924074/3_50151737557290.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pearlescent White",
+        "hex": "#F8FAFC"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.",
@@ -2598,8 +2618,13 @@
       "assets/products/9875597623594/4_49938305974570.png",
       "assets/products/9875597623594/5_49938305909034.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Ultra Clear",
+        "hex": "#E2E8F0"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Keep your smartphone screen safe and crystal clear with this Tempered Glass Screen Protector. Designed with 9H hardness, it provides superior protection against scratches, drops, and everyday wear. The ultra-thin design ensures HD clarity and smooth touch response, while the anti-fingerprint coating keeps your screen spotless. The package includes an easy alignment installation frame, making bubble-free application quick and hassle-free. Compatible with most smartphone models, this screen protector is the perfect blend of durability and elegance to keep your device looking brand new.",
@@ -2715,8 +2740,13 @@
       "assets/products/9875054297386/10_49933917618474.png",
       "assets/products/9875054297386/11_49933917684010.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Matte Privacy",
+        "hex": "#334155"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -2844,8 +2874,13 @@
       "assets/products/9873124557098/3_49921093009706.png",
       "assets/products/9873124557098/4_49921089601834.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Bold Orange",
+        "hex": "#FF5500"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44mm",
@@ -2959,8 +2994,13 @@
       "assets/products/9873120330026/2_49921039925546.png",
       "assets/products/9873120330026/3_49921039991082.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Bright Orange",
+        "hex": "#FF5500"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44m",
@@ -3073,8 +3113,13 @@
       "assets/products/9873118855466/3_49921024295210.png",
       "assets/products/9873118855466/4_49921025311018.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Clear Titanium",
+        "hex": "#94A3B8"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44mm",
@@ -3187,8 +3232,13 @@
       "assets/products/9873118101802/3_49921014169898.png",
       "assets/products/9873118101802/4_49921013907754.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Tactical Black",
+        "hex": "#1C1D1F"
+      }
+    ],
     "models": [
       "40mm/41mm/42mm",
       "44mm",
@@ -5341,8 +5391,13 @@
       "assets/products/9870558363946/2_49899965874474.png",
       "assets/products/9870558363946/3_49899965940010.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pastel Rainbow",
+        "hex": "#FBCFE8"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Add a cute and aesthetic touch to your phone with our Pastel Beaded Phone Charm Strap. Designed with a mix of pastel pink beads, pearls, and decorative charms like a butterfly, cross, hearts, and flowers, this strap is both stylish and functional. It securely attaches to your phone case, making it easy to carry while adding a playful accessory vibe. Perfect for everyday use, this charm strap combines durability with pastel elegance.",
@@ -5448,8 +5503,13 @@
       "assets/products/9870558036266/5_49899953783082.png",
       "assets/products/9870558036266/6_49899957256490.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Crystal Glass",
+        "hex": "#E0E7FF"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Add a luxe edge to your phone with our Crystal Beaded Phone Charm Strap. Crafted with faceted smoky crystal beads that catch the light beautifully, this strap is both elegant and durable. The metallic ring clasp makes it easy to attach to your phone case, bag, or keys, offering both style and practicality. Perfect for elevating your everyday look with a chic, modern accessory that doubles as a secure hand strap.",
@@ -5552,8 +5612,13 @@
       "assets/products/9870555054378/2_49899832443178.png",
       "assets/products/9870555054378/3_49899832770858.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Blush Pink",
+        "hex": "#F472B6"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Add a touch of sweetness to your phone with our Pink Beaded Heart Charm . Made with delicate pink beads, sparkling crystal-like heart accents, and a satin bow detail, this strap is both cute and functional. Perfect for carrying your phone securely while adding a stylish, aesthetic vibe. Lightweight yet durable, it’s an adorable accessory for anyone who loves pastel, girly, and kawaii-inspired looks.",
@@ -5657,8 +5722,13 @@
       "assets/products/9870554038570/1_49899823038762.png",
       "assets/products/9870554038570/3_49899823366442.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pastel Mint",
+        "hex": "#A7F3D0"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Turn your charger into a treat with our Ice Cream Sprinkle iPhone Charger Case Set. Designed with a playful pink ice cream look, complete with colorful sprinkle details and a bite-effect corner, this set adds sweetness to your daily charging routine. The durable silicone case protects your adapter from scratches and wear, while the matching cable cover and coiled wire protector keep your charging cable neat and long-lasting. Cute, fun, and practical—perfect for anyone who loves a dash of dessert-inspired style!",
@@ -5761,8 +5831,13 @@
       "assets/products/9870550761770/2_49899763859754.png",
       "assets/products/9870550761770/3_49899764416810.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pearl White",
+        "hex": "#FDF4FF"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Elevate your charging style with our Bow Pearl iPhone Charger Case Set. Featuring a glittery white base with delicate mini bow designs and pearl accents, this charger case transforms your regular adapter into a fashionable accessory. The set includes a matching cable cover and a stylish scrunchie-inspired cord protector, combining elegance with functionality. Durable, protective, and absolutely aesthetic—perfect for keeping your charger safe while adding a luxe touch to your everyday essentials.",
@@ -6026,8 +6101,13 @@
       "assets/products/9870544142634/1_49899700814122.png",
       "assets/products/9870544142634/2_49899699700010.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Rose Gold",
+        "hex": "#FDA4AF"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Give your charger a glamorous upgrade with our Glitter Bow iPhone Charger Case. Designed with sparkling glitter, elegant pearls, and mini black bow accents, this case turns your regular adapter into a stylish accessory. The durable protective shell keeps your charger safe from scratches, dust, and wear, while the coiled black cable adds extra durability and a sleek touch. Perfect for those who love mixing fashion with function—charging has never looked this pretty!",
@@ -6242,8 +6322,13 @@
       "assets/products/9870514487594/2_49899483201834.png",
       "assets/products/9870514487594/3_49899483234602.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Sky Blue",
+        "hex": "#7DD3FC"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! 💙🚗",
@@ -6912,8 +6997,13 @@
       "assets/products/9870469464362/2_49899202117930.jpg",
       "assets/products/9870469464362/4_49899202806058.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Holographic",
+        "hex": "#C4B5FD"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -7706,8 +7796,13 @@
       "assets/products/9869735723306/3_49887599264042.png",
       "assets/products/9869735723306/4_49887599165738.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Warm Caramel",
+        "hex": "#D97706"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -7835,8 +7930,13 @@
       "assets/products/9869730382122/3_49887491981610.png",
       "assets/products/9869730382122/4_49887492112682.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Espresso Brown",
+        "hex": "#78350F"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -8258,8 +8358,13 @@
       "assets/products/9869725696298/4_49887236718890.jpg",
       "assets/products/9869725696298/5_49887237833002.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Amber Leopard",
+        "hex": "#B45309"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 Pro",
@@ -8675,8 +8780,13 @@
       "assets/products/9854428905770/2_49704201322794.png",
       "assets/products/9854428905770/4_49970058887466.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Clear Armor",
+        "hex": "#E2E8F0"
+      }
+    ],
     "models": [
       "iPhone 13",
       "iPhone 13 pro",
@@ -9087,8 +9197,13 @@
       "assets/products/9853542105386/1_49683451019562.png",
       "assets/products/9853542105386/2_49683454230826.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Pure White",
+        "hex": "#F8FAFC"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "The MagSafe Wireless Charger (USB-C) offers seamless magnetic alignment for efficient and reliable wireless charging. Designed for compatibility with MagSafe-enabled devices, it ensures optimal power transfer while minimizing energy loss. Its USB-C connection supports fast charging and broad device compatibility, making it an essential accessory for professionals seeking convenience and performance in wireless power delivery. Compact and durable, this charger integrates effortlessly into any workspace or travel setup.",
@@ -9699,8 +9814,13 @@
     "images": [
       "assets/products/9851899576618/1_49658160218410.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Space Grey",
+        "hex": "#374151"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Experience fast and efficient charging on-the-go with our 39W+ 7.1A Fast Car Charger. The compact design makes it perfect for travel, while the dual USB ports allow for simultaneous charging of multiple devices. With high-speed charging capabilities and universal compatibility, this charger is a must-have for any car trip.",
@@ -9802,8 +9922,13 @@
     "images": [
       "assets/products/9851856716074/1_49657864749354.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Titanium Black",
+        "hex": "#111827"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Hidden Dual Port Car Adapter with Pull Ring Design for Cigarette Lighter .Compact, Portable, Easy to Carry & Charger. Charge your devices quickly and easily on the go with our 100W Fast Charging Mini Alloy Car Charger. Featuring a hidden dual port car adapter with a convenient pull ring design for your cigarette lighter, this compact and portable charger is easy to carry and ensures a speedy charge every time.",
@@ -9909,8 +10034,13 @@
       "assets/products/9851843182890/5_49684271825194.jpg",
       "assets/products/9851843182890/6_49684272218410.jpg"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Metallic Silver",
+        "hex": "#CBD5E1"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.",
@@ -10012,8 +10142,13 @@
     "images": [
       "assets/products/9851840495914/1_49657745965354.png"
     ],
-    "has_colors": false,
-    "colors": [],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Matte Black",
+        "hex": "#1F2937"
+      }
+    ],
     "models": [],
     "model_label": "Select Model",
     "description": "Charge all your Apple devices with ease using our 3-in-1 Wireless Charger MagSafe Compatible. With fast charging capabilities and compatibility with iPhone16/16 Plus/16 Pro/16 Pro Max, 15/15 Plus/15 Pro/15 Pro Max, 14/13/12 Series, AirPods 3rd/2nd Gen, Apple Watch Series 9/8/7/6/5/4/SE and AirPods models. You'll never have to deal with tangled cords again. Keep your devices powered up and ready to go with this sleek and efficient charging station.",

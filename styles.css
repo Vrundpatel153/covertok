@@ -55358,3 +55358,208 @@ body.home-page .hero-content {
     font-size: 0.90rem !important;
   }
 }
+
+
+/* ==========================================================================
+   ENLARGED POPULAR CHOICES, HARDWARE CARDS, COLOR PALETTES & ADD TO CART
+   ========================================================================== */
+.pop-slider-item {
+  flex: 0 0 280px !important;
+  width: 280px !important;
+  height: auto !important;
+  min-height: 420px !important;
+}
+
+.pop-slider-card {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 14px !important;
+  border-radius: 20px !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.pop-slider-img-wrap {
+  height: 205px !important;
+  border-radius: 14px !important;
+  background: #F8F6F2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  margin-bottom: 12px !important;
+}
+
+.pop-slider-img {
+  max-height: 180px !important;
+  max-width: 88% !important;
+  object-fit: contain !important;
+  transition: transform 0.25s ease !important;
+}
+
+.pop-slider-card:hover .pop-slider-img {
+  transform: scale(1.06) !important;
+}
+
+.pop-slider-info {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+
+.pop-slider-title {
+  font-size: 0.92rem !important;
+  line-height: 1.35 !important;
+  min-height: 2.7em !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  margin-bottom: 6px !important;
+}
+
+.pop-slider-bottom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  margin-top: auto !important;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.pop-quick-add-btn,
+.hardware-add-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border-radius: 999px !important;
+  padding: 8px 16px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.pop-quick-add-btn:hover,
+.hardware-add-btn:hover {
+  background: #FF5500 !important;
+  color: #FFFFFF !important;
+  border-color: #FF5500 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+}
+
+/* Hardware Section Sizing */
+.hardware-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.hardware-card {
+  border-radius: 20px !important;
+}
+
+.hardware-card-visual {
+  height: 220px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hardware-card-img {
+  max-height: 185px !important;
+  max-width: 88% !important;
+}
+
+/* Universal Product Color Palette */
+.product-color-palette {
+  display: flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  margin: 8px 0 12px !important;
+  padding: 0 !important;
+  min-height: 18px !important;
+  z-index: 3;
+  position: relative;
+}
+
+.product-color-palette .color-dot {
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+  min-height: 15px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  border: 1.5px solid #FFFFFF !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16) !important;
+  cursor: pointer !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
+}
+
+.product-color-palette .color-dot:hover {
+  transform: scale(1.22) !important;
+  box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #171513 !important;
+}
+
+.product-color-palette .color-dot.active {
+  transform: scale(1.18) !important;
+  box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3.5px #171513 !important;
+}
+
+.product-color-palette .color-more-pill {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  color: #64748B !important;
+  background: #F1F5F9 !important;
+  padding: 1px 6px !important;
+  border-radius: 999px !important;
+  line-height: 1.3 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Universal suppression of ratings on product cards site-wide */
+.drop-rating-tag,
+.drop-rating,
+.card-rating-badge,
+.card-micro-rating,
+.card-rating,
+.product-rating,
+.pop-slider-rating,
+.bestseller-rating {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .pop-slider-item {
+    flex: 0 0 240px !important;
+    width: 240px !important;
+    min-height: 380px !important;
+  }
+  .pop-slider-card {
+    padding: 12px !important;
+    border-radius: 16px !important;
+  }
+  .pop-slider-img-wrap {
+    height: 175px !important;
+  }
+  .pop-slider-img {
+    max-height: 150px !important;
+  }
+}

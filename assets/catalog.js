@@ -609,6 +609,35 @@
       ? `₹${Math.round(product.original_price).toLocaleString('en-IN')}`
       : '';
 
+    // Color Swatches Palette (1 color -> 1 dot; 2-3 colors -> 2-3 dots; >3 colors -> 3 dots + +N badge)
+    let paletteHtml = '';
+    if (hasColors) {
+      const cols = product.colors;
+      if (cols.length === 1) {
+        paletteHtml = `
+          <div class="product-color-palette" aria-label="Available Colors">
+            <span class="color-dot active" style="background-color: ${cols[0].hex};" title="${cols[0].name}"></span>
+          </div>
+        `;
+      } else {
+        const visible = cols.slice(0, 3);
+        const remaining = cols.length - 3;
+        const dots = visible.map((c, i) => `
+          <span class="color-dot ${i === 0 ? 'active' : ''}" 
+                style="background-color: ${c.hex};" 
+                title="${c.name}"
+                ${c.image ? `data-color-img="${c.image}"` : ''}></span>
+        `).join('');
+        const morePill = remaining > 0 ? `<span class="color-more-pill">+${remaining}</span>` : '';
+        paletteHtml = `
+          <div class="product-color-palette" aria-label="Available Colors">
+            ${dots}
+            ${morePill}
+          </div>
+        `;
+      }
+    }
+
     card.innerHTML = `
       <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'">
         ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
@@ -622,12 +651,31 @@
           ${product.title}
         </a>
 
-        <div class="card-price-row">
-          <span class="card-price-now">${priceFormatted}</span>
-          ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
+        ${paletteHtml}
+
+        <div class="card-action-row">
+          <div class="card-price-row">
+            <span class="card-price-now">${priceFormatted}</span>
+            ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
+          </div>
+          <button type="button" class="card-add-btn" aria-label="Add ${product.title} to cart">
+            <span>ADD TO CART</span>
+          </button>
         </div>
       </div>
     `;
+
+    // Interactive color swatch clicks
+    card.querySelectorAll('.color-dot').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        card.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+        const imgUrl = dot.getAttribute('data-color-img');
+        const mainImg = card.querySelector('.card-main-img');
+        if (imgUrl && mainImg) mainImg.src = imgUrl;
+      });
+    });
 
     // Wishlist Toggle
     const wishBtn = card.querySelector('.card-wishlist-btn');

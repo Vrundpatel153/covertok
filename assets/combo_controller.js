@@ -506,10 +506,7 @@
       <div class="card-body-wrap">
         <div class="card-cat-rating">
           <span class="card-cat-tag">${product.combo_label || product.category_name}</span>
-          <span class="card-rating-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            ${product.rating || 4.8} (${product.reviews_count || 120})
-          </span>
+          
         </div>
 
         <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-product-title" title="${product.title}">
