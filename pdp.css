@@ -674,6 +674,59 @@ html, body {
   gap: 0;
 }
 
+/* Upper Header Split Grid for Desktop */
+.pdp-header-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+
+.pdp-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.pdp-header-left .pdp-eyebrow-row {
+  margin-bottom: 0;
+}
+
+.pdp-header-left .pdp-product-title {
+  margin: 0;
+  font-size: clamp(1.75rem, 2.3vw, 2.15rem);
+  line-height: 1.18;
+}
+
+.pdp-header-left .pdp-product-subtitle {
+  margin: 2px 0 0 0;
+  font-size: 0.95rem;
+  color: #71717A;
+}
+
+.pdp-header-left .pdp-rating-row {
+  margin: 4px 0 0 0;
+  gap: 8px;
+}
+
+.pdp-header-right {
+  min-width: 0;
+}
+
+.pdp-header-right .pdp-price-card {
+  background: #FFFFFF;
+  border: 1px solid #ECE7DF;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .pdp-eyebrow-row {
   margin-bottom: 4px;
 }
@@ -2745,6 +2798,23 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     width: 100%;
     max-width: 100%;
     min-width: 0 !important;
+  }
+  .pdp-header-split {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 12px;
+  }
+  .pdp-header-left .pdp-rating-row {
+    margin: 4px 0 10px 0;
+  }
+  .pdp-header-right .pdp-price-card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    margin: 0 0 16px 0;
   }
   .pdp-details-specs-card {
     grid-template-columns: 1fr;

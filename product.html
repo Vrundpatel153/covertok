@@ -14,7 +14,7 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css?v=20261102_cards_v1">
   <link rel="stylesheet" href="catalog.css?v=20261101_palette_v2">
-  <link rel="stylesheet" href="pdp.css?v=20261102_cards_v1">
+  <link rel="stylesheet" href="pdp.css?v=20261102_split_v1">
   <link rel="stylesheet" href="microinteractions.css?v=20261102_cart_v10">
 
   <!-- Products Catalog Script -->
@@ -585,42 +585,49 @@
 
         <!-- RIGHT: PRODUCT CONFIGURATOR & BUY BOX -->
         <div class="pdp-config-col">
-          <!-- Kicker Tag -->
-          <div class="pdp-eyebrow-row">
-            <span class="pdp-brand-tag" id="pdpBrandTag">COVERTOK ORIGINAL</span>
-          </div>
+          <!-- Upper Header Split Grid (Title & Info on Left, Price & Value Card on Right on PC) -->
+          <div class="pdp-header-split">
+            <div class="pdp-header-left">
+              <!-- Kicker Tag -->
+              <div class="pdp-eyebrow-row">
+                <span class="pdp-brand-tag" id="pdpBrandTag">COVERTOK ORIGINAL</span>
+              </div>
 
-          <!-- Product Title & Subtitle -->
-          <h1 class="pdp-product-title" id="pdpProductTitle"></h1>
-          <h2 class="pdp-product-subtitle" id="pdpProductSubtitle" style="display: none;"></h2>
+              <!-- Product Title & Subtitle -->
+              <h1 class="pdp-product-title" id="pdpProductTitle"></h1>
+              <h2 class="pdp-product-subtitle" id="pdpProductSubtitle" style="display: none;"></h2>
 
-          <!-- Rating & Verified Choice Badge -->
-          <div class="pdp-rating-row">
-            <div class="pdp-stars">★★★★★</div>
-            <span class="pdp-rating-score" id="reviewBigScore">4.8</span>
-            <a href="#customerReviews" class="pdp-reviews-count-link">
-              <span class="pdp-review-count">(183 Verified Reviews)</span>
-            </a>
-          </div>
-
-          <!-- Price Block (Kept at top right below rating & title) -->
-          <div class="pdp-price-card">
-            <div class="pdp-price-row">
-              <span class="pdp-price-current" id="pdpPriceDisplay"></span>
-              <span class="pdp-price-original" id="pdpOriginalPrice"></span>
-              <span class="pdp-save-badge" id="pdpDiscountTag" style="display: none;"></span>
+              <!-- Rating & Verified Choice Badge -->
+              <div class="pdp-rating-row">
+                <div class="pdp-stars">★★★★★</div>
+                <span class="pdp-rating-score" id="reviewBigScore">4.8</span>
+                <a href="#customerReviews" class="pdp-reviews-count-link">
+                  <span class="pdp-review-count">(183 Verified Reviews)</span>
+                </a>
+              </div>
             </div>
-            <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
-            <!-- Integrated Urgency & Social Proof -->
-            <div class="pdp-urgency-row" id="pdpSocialProof">
-              <span class="pdp-urgency-fire">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-                <strong id="pdpSoldNumber">842</strong> sold in last <span id="pdpSoldHours">6</span> hours
-              </span>
-              <span class="pdp-urgency-stock">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                Only <strong id="pdpStockNumber">12</strong> left in stock!
-              </span>
+
+            <div class="pdp-header-right">
+              <!-- Price Block (Luxury Styled Panel on PC) -->
+              <div class="pdp-price-card">
+                <div class="pdp-price-row">
+                  <span class="pdp-price-current" id="pdpPriceDisplay"></span>
+                  <span class="pdp-price-original" id="pdpOriginalPrice"></span>
+                  <span class="pdp-save-badge" id="pdpDiscountTag" style="display: none;"></span>
+                </div>
+                <p class="pdp-price-note">Inclusive of all taxes. Free express delivery on prepaid orders.</p>
+                <!-- Integrated Urgency & Social Proof -->
+                <div class="pdp-urgency-row" id="pdpSocialProof">
+                  <span class="pdp-urgency-fire">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                    <strong id="pdpSoldNumber">842</strong> sold in last <span id="pdpSoldHours">6</span> hours
+                  </span>
+                  <span class="pdp-urgency-stock">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#71717A" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Only <strong id="pdpStockNumber">12</strong> left in stock!
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
