@@ -55632,3 +55632,66 @@ body.home-page .hero-content {
     font-size: 0.65rem !important;
   }
 }
+
+
+/* Popular Choices Interactive Navigation Buttons */
+.pop-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #0A0A0C;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.92;
+  user-select: none;
+}
+
+.popular-slider-wrap:hover .pop-nav-btn {
+  opacity: 1;
+}
+
+.pop-nav-btn:hover {
+  background: #0A0A0C;
+  color: #FFFFFF;
+  border-color: #0A0A0C;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
+}
+
+.pop-nav-btn:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.pop-nav-prev {
+  left: 14px;
+}
+
+.pop-nav-next {
+  right: 14px;
+}
+
+@media (max-width: 768px) {
+  .pop-nav-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .pop-nav-prev {
+    left: 8px;
+  }
+  .pop-nav-next {
+    right: 8px;
+  }
+}
+

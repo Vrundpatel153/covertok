@@ -274,13 +274,15 @@
       }
     }, { passive: true });
 
-    // Trackpad two-finger horizontal scroll & Shift+Wheel support
+    // Trackpad two-finger horizontal scroll & Mouse Wheel support
     const wrap = track.parentElement;
     if (wrap) {
       wrap.addEventListener('wheel', (e) => {
-        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+        // Convert any scroll: horizontal trackpad, shift+wheel, or direct vertical mouse wheel
+        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
         if (Math.abs(delta) > 1) {
           e.preventDefault();
+          currentX = getCurrentTranslateX(track);
           if (!isAutoScroll) {
             const maxScroll = getMaxScroll();
             currentX = Math.max(-maxScroll, Math.min(0, currentX - delta));
@@ -350,8 +352,8 @@
       }
     }
 
-    // 2. Popular Choices Row 1: iPhone Covers (Auto-Scroll Disabled)
-    const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track');
+    // 2. Popular Choices Row 1: iPhone Covers (Auto-Scroll Disabled, manual swipe & arrow buttons)
+    const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track, .popular-row-cases .popular-slider-track');
     if (popTrack1) {
       setupInfiniteLTRSwipeRow(popTrack1, {
         animName: 'popularMarqueeLTR',
@@ -359,10 +361,36 @@
         cloneMultiplier: 0,
         autoScroll: false
       });
+
+      const prevBtn1 = document.getElementById('popCoversPrevBtn');
+      const nextBtn1 = document.getElementById('popCoversNextBtn');
+      const STEP = 280;
+
+      if (prevBtn1) {
+        prevBtn1.addEventListener('click', (e) => {
+          e.preventDefault();
+          const currX = getCurrentTranslateX(popTrack1);
+          const newX = Math.min(0, currX + STEP);
+          popTrack1.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+          popTrack1.style.transform = `translate3d(${newX}px, 0, 0)`;
+        });
+      }
+
+      if (nextBtn1) {
+        nextBtn1.addEventListener('click', (e) => {
+          e.preventDefault();
+          const parentW = popTrack1.parentElement ? popTrack1.parentElement.clientWidth : window.innerWidth;
+          const maxScroll = Math.max(0, popTrack1.scrollWidth - parentW);
+          const currX = getCurrentTranslateX(popTrack1);
+          const newX = Math.max(-maxScroll, currX - STEP);
+          popTrack1.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+          popTrack1.style.transform = `translate3d(${newX}px, 0, 0)`;
+        });
+      }
     }
 
-    // 3. Popular Choices Row 2: Watch Bands (Auto-Scroll Disabled)
-    const popTrack2 = document.querySelector('.popular-row-watchbands .popular-slider-track');
+    // 3. Popular Choices Row 2: Watch Bands (Auto-Scroll Disabled, manual swipe & arrow buttons)
+    const popTrack2 = document.querySelector('.popular-row-bands .popular-slider-track, .popular-row-watchbands .popular-slider-track');
     if (popTrack2) {
       setupInfiniteLTRSwipeRow(popTrack2, {
         animName: 'popularMarqueeLTR',
@@ -370,6 +398,32 @@
         cloneMultiplier: 0,
         autoScroll: false
       });
+
+      const prevBtn2 = document.getElementById('popBandsPrevBtn');
+      const nextBtn2 = document.getElementById('popBandsNextBtn');
+      const STEP = 280;
+
+      if (prevBtn2) {
+        prevBtn2.addEventListener('click', (e) => {
+          e.preventDefault();
+          const currX = getCurrentTranslateX(popTrack2);
+          const newX = Math.min(0, currX + STEP);
+          popTrack2.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+          popTrack2.style.transform = `translate3d(${newX}px, 0, 0)`;
+        });
+      }
+
+      if (nextBtn2) {
+        nextBtn2.addEventListener('click', (e) => {
+          e.preventDefault();
+          const parentW = popTrack2.parentElement ? popTrack2.parentElement.clientWidth : window.innerWidth;
+          const maxScroll = Math.max(0, popTrack2.scrollWidth - parentW);
+          const currX = getCurrentTranslateX(popTrack2);
+          const newX = Math.max(-maxScroll, currX - STEP);
+          popTrack2.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+          popTrack2.style.transform = `translate3d(${newX}px, 0, 0)`;
+        });
+      }
     }
 
     // 4. Community Videos Track (#videosTrack) (Continuous Marquee)
