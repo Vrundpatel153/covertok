@@ -13272,7 +13272,7 @@ img {
 
 
 
-  margin-bottom: 8px !important;
+  margin-bottom: 6px !important;
 
 
 
@@ -15284,7 +15284,7 @@ a.footer-contact-main:hover {
 
 
 
-    padding-top: 24px !important;
+    padding-top: 20px !important;
 
 
 
@@ -25937,7 +25937,7 @@ a.footer-contact-main:hover {
 
 
 
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
 
 
 
@@ -28137,7 +28137,7 @@ a.footer-contact-main:hover {
 
   height: 48px !important;
 
-  margin-top: 24px !important;
+  margin-top: 20px !important;
 
 }
 
@@ -31945,7 +31945,7 @@ a.footer-contact-main:hover {
 
 
 
-    top: 24px !important;
+    top: 20px !important;
 
 
 
@@ -32049,7 +32049,7 @@ a.footer-contact-main:hover {
 
 
 
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
 
 
 
@@ -32221,7 +32221,7 @@ a.footer-contact-main:hover {
 
 
 
-    filter: drop-shadow(0 1px 3px rgba(255, 255, 255, 0.85)) !important;
+    filter: none !important;
 
 
 
@@ -36254,7 +36254,7 @@ a.footer-contact-main:hover {
 
 
 
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
 
 
 
@@ -36430,7 +36430,7 @@ a.footer-contact-main:hover {
 
 
 
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
 
 
 
@@ -53435,7 +53435,7 @@ a.footer-contact-main:hover {
 
   -webkit-text-fill-color: #FFFFFF !important;
 
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35) !important;
 
 }
 
@@ -53459,7 +53459,7 @@ a.footer-contact-main:hover {
 
   background: none !important;
 
-  text-shadow: 0 0 24px rgba(255, 90, 24, 0.4) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35) !important;
 
   font-weight: 800 !important;
 
@@ -53510,7 +53510,7 @@ a.footer-contact-main:hover {
 .hero-slide[data-theme="lipcase"] .hero-headline .hero-text-signature {
   color: #D0386E !important;
   -webkit-text-fill-color: #D0386E !important;
-  text-shadow: 0 0 20px rgba(208, 56, 110, 0.25) !important;
+  text-shadow: none !important;
 }
 
 .hero-slide[data-theme="lipcase"] .hero-kicker-highlight {
@@ -53720,21 +53720,20 @@ a.footer-contact-main:hover {
     -webkit-clip-path: none !important;
   }
 
-
-
   .hero-slide .hero-content {
     left: 16px !important;
     right: 16px !important;
-    top: 22px !important;
+    top: 20px !important;
     width: auto !important;
     max-width: 100% !important;
     text-align: center !important;
     align-items: center !important;
     padding: 0 !important;
+    filter: none !important;
   }
 
   .hero-slide .hero-kicker {
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
     justify-content: center !important;
   }
 
@@ -53742,27 +53741,31 @@ a.footer-contact-main:hover {
   .hero-slide .hero-kicker-gold {
     color: #FF5A18 !important;
     -webkit-text-fill-color: #FF5A18 !important;
-    font-size: 0.68rem !important;
+    font-size: 0.70rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.16em !important;
     text-transform: uppercase !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: none !important;
+    filter: none !important;
   }
 
   .hero-slide .hero-headline {
-    font-family: var(--font-heading, 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif) !important;
-    font-size: clamp(1.48rem, 6.2vw, 1.88rem) !important;
-    font-weight: 850 !important;
+    font-family: var(--font-heading, 'Outfit', 'Plus Jakarta Sans', sans-serif) !important;
+    font-size: clamp(1.62rem, 7.0vw, 2.05rem) !important;
+    font-weight: 800 !important;
     line-height: 1.15 !important;
     letter-spacing: -0.025em !important;
     margin: 0 !important;
     text-align: center !important;
+    text-shadow: none !important;
+    filter: none !important;
   }
 
   .hero-slide .hero-headline .hero-headline-line {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) !important;
+    filter: none !important;
     display: inline-block !important;
     text-align: center !important;
   }
@@ -53774,46 +53777,61 @@ a.footer-contact-main:hover {
   .hero-slide .hero-text-signature {
     color: #FF5A18 !important;
     -webkit-text-fill-color: #FF5A18 !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
-    font-weight: 850 !important;
-    transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) !important;
+    filter: none !important;
+    font-weight: 800 !important;
+    transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   .hero-slide .hero-content .hero-editorial-desc {
     display: block !important;
-    font-size: clamp(0.84rem, 2.7vw, 0.95rem) !important;
-    line-height: 1.44 !important;
-    max-width: 310px !important;
-    margin: 8px auto 0 auto !important;
-    color: rgba(255, 255, 255, 0.90) !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+    font-size: clamp(0.82rem, 2.7vw, 0.92rem) !important;
+    line-height: 1.45 !important;
+    max-width: 300px !important;
+    margin: 6px auto 0 auto !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    filter: none !important;
     text-align: center !important;
   }
 
-  .hero-slide[data-theme="lipcase"] .hero-headline .hero-headline-line {
-    color: #111111 !important;
-    -webkit-text-fill-color: #111111 !important;
-    text-shadow: none !important;
-  }
-  .hero-slide[data-theme="lipcase"] .hero-headline .hero-text-signature {
-    color: #D0386E !important;
-    -webkit-text-fill-color: #D0386E !important;
-    text-shadow: 0 0 20px rgba(208, 56, 110, 0.25) !important;
-  }
+  /* Slide 3: Rhode Lip Case - Editorial Light Theme */
   .hero-slide[data-theme="lipcase"] .hero-kicker-highlight {
-    color: #D0386E !important;
-    -webkit-text-fill-color: #D0386E !important;
+    color: #A81B53 !important;
+    -webkit-text-fill-color: #A81B53 !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.16em !important;
     text-shadow: none !important;
+    filter: none !important;
   }
+
+  .hero-slide[data-theme="lipcase"] .hero-headline {
+    color: #0F0F0F !important;
+    filter: none !important;
+  }
+
+  .hero-slide[data-theme="lipcase"] .hero-headline .hero-headline-line {
+    color: #0F0F0F !important;
+    -webkit-text-fill-color: #0F0F0F !important;
+    text-shadow: none !important;
+    filter: none !important;
+  }
+
+  .hero-slide[data-theme="lipcase"] .hero-headline .hero-text-signature {
+    color: #C02058 !important;
+    -webkit-text-fill-color: #C02058 !important;
+    text-shadow: none !important;
+    filter: none !important;
+  }
+
   .hero-slide[data-theme="lipcase"] .hero-content .hero-editorial-desc {
-    color: #2A2A2A !important;
-    -webkit-text-fill-color: #2A2A2A !important;
+    color: #1A1A1A !important;
+    -webkit-text-fill-color: #1A1A1A !important;
     text-shadow: none !important;
+    filter: none !important;
   }
 
-
-
-  .hero-slide .hero-feature-chips {
+  .hero-slide .hero-feature-chips.hero-slide .hero-feature-chips {
 
     display: none !important;
 
@@ -55230,7 +55248,7 @@ body.home-page .hero-content {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 6px !important;
 }
 
 .hardware-category-label {
@@ -55619,7 +55637,7 @@ body.home-page .hero-content {
   }
   .pop-slider-img-wrap {
     height: 160px !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
   }
   .pop-slider-img {
     max-height: 140px !important;
