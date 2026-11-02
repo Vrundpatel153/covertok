@@ -56014,3 +56014,279 @@ body.home-page .hero-content {
     font-size: 0.88rem !important;
   }
 }
+
+
+/* ==========================================================================
+   POPULAR CHOICES & HARDWARE MASTER LAYOUT (Bigger Images, Price Left, Swatches Right, 100% CTA)
+   ========================================================================== */
+
+/* 1. Popular Choices Showcase */
+.pop-slider-img-wrap {
+  width: 100% !important;
+  height: 230px !important;
+  border-radius: 16px !important;
+  background: #F8F6F2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+}
+
+.pop-slider-img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 205px !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.pop-slider-card:hover .pop-slider-img {
+  transform: scale(1.06) !important;
+}
+
+.pop-slider-info {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  padding: 10px 4px 4px !important;
+}
+
+.pop-pricing-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 8px 0 10px 0 !important;
+}
+
+.pop-slider-price {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 6px !important;
+  flex-shrink: 0 !important;
+}
+
+.pop-price-now {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #0A0A0C !important;
+  letter-spacing: -0.02em !important;
+}
+
+.pop-price-was {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  color: #94A3B8 !important;
+  text-decoration: line-through !important;
+}
+
+.pop-pricing-row .product-color-palette {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 4px !important;
+  margin: 0 !important;
+  flex-wrap: wrap !important;
+}
+
+.pop-quick-add-btn {
+  width: 100% !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  border: 1px solid #0A0A0C !important;
+  border-radius: 999px !important;
+  padding: 0 14px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.22s ease !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  margin-top: auto !important;
+  box-sizing: border-box !important;
+}
+
+.pop-quick-add-btn:hover {
+  background: #FF5500 !important;
+  border-color: #FF5500 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+}
+
+/* 2. Hardware / Essentials Showcase */
+.hardware-card-visual {
+  height: 230px !important;
+  border-radius: 16px !important;
+  background: #F8F6F2 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+}
+
+.hardware-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 205px !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hardware-card:hover .hardware-card-img {
+  transform: scale(1.06) !important;
+}
+
+.hardware-pricing-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 8px 0 10px 0 !important;
+}
+
+.hardware-price-stack {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 6px !important;
+  flex-shrink: 0 !important;
+}
+
+.hardware-price {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #0A0A0C !important;
+  letter-spacing: -0.02em !important;
+}
+
+.hardware-price-original {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  color: #94A3B8 !important;
+  text-decoration: line-through !important;
+}
+
+.hardware-pricing-row .product-color-palette {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 4px !important;
+  margin: 0 !important;
+  flex-wrap: wrap !important;
+}
+
+.hardware-add-btn {
+  width: 100% !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  border: 1px solid #0A0A0C !important;
+  border-radius: 999px !important;
+  padding: 0 14px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.22s ease !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  margin-top: auto !important;
+  box-sizing: border-box !important;
+}
+
+.hardware-add-btn:hover {
+  background: #FF5500 !important;
+  border-color: #FF5500 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+}
+
+/* 3. Mobile Overrides for Popular & Hardware (<= 640px) */
+@media (max-width: 640px) {
+  .pop-slider-img-wrap {
+    height: 180px !important;
+    border-radius: 12px !important;
+    padding: 6px !important;
+  }
+  .pop-slider-img {
+    max-height: 155px !important;
+  }
+  .pop-slider-title {
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+    min-height: 2.5em !important;
+    margin-bottom: 4px !important;
+  }
+  .pop-pricing-row {
+    margin: 4px 0 8px 0 !important;
+    gap: 4px !important;
+  }
+  .pop-price-now {
+    font-size: 0.88rem !important;
+  }
+  .pop-price-was {
+    font-size: 0.68rem !important;
+  }
+  .pop-quick-add-btn {
+    height: 34px !important;
+    font-size: 0.67rem !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .hardware-card-visual {
+    height: 180px !important;
+    border-radius: 12px !important;
+    padding: 6px !important;
+  }
+  .hardware-card-img {
+    max-height: 155px !important;
+  }
+  .hardware-product-title {
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+    min-height: 2.5em !important;
+    margin-bottom: 4px !important;
+  }
+  .hardware-pricing-row {
+    margin: 4px 0 8px 0 !important;
+    gap: 4px !important;
+  }
+  .hardware-price {
+    font-size: 0.88rem !important;
+  }
+  .hardware-price-original {
+    font-size: 0.68rem !important;
+  }
+  .hardware-add-btn {
+    height: 34px !important;
+    font-size: 0.67rem !important;
+    letter-spacing: 0.04em !important;
+  }
+}

@@ -716,17 +716,17 @@
           ${product.title}
         </a>
 
-        ${paletteHtml}
-
-        <div class="card-action-row">
+        <div class="card-price-swatch-row">
           <div class="card-price-row">
             <span class="card-price-now">${priceFormatted}</span>
             ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
           </div>
-          <button type="button" class="card-add-btn" aria-label="Add ${product.title} to cart">
-            <span>ADD TO CART</span>
-          </button>
+          ${paletteHtml}
         </div>
+
+        <button type="button" class="card-add-btn" aria-label="Add ${product.title} to cart">
+          <span>ADD TO CART</span>
+        </button>
       </div>
     `;
 

@@ -882,3 +882,117 @@
     white-space: nowrap !important;
   }
 }
+
+
+/* ==========================================================================
+   DROPS MASTER LAYOUT: Bigger Image Window, Price Left, Swatches Right, 100% CTA
+   ========================================================================== */
+.drop-card-visual {
+  height: 240px !important;
+  border-radius: 16px !important;
+  margin-bottom: 12px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(150deg, #F8F6F2 0%, #EFECE6 100%) !important;
+}
+
+.drop-product-img {
+  max-height: 200px !important;
+  max-width: 90% !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.1)) !important;
+}
+
+.drop-3d-card:hover .drop-product-img {
+  transform: translateY(-6px) scale(1.06) !important;
+}
+
+.drop-pricing-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 8px 0 10px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.drop-pricing-row .drop-price-wrap {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 5px !important;
+  flex-shrink: 0 !important;
+}
+
+.drop-pricing-row .product-color-palette {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 4px !important;
+  margin: 0 !important;
+  flex-wrap: wrap !important;
+}
+
+.drop-quick-add-btn {
+  width: 100% !important;
+  height: 38px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  background: #0C0B0A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #0C0B0A !important;
+  border-radius: 999px !important;
+  padding: 0 14px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.22s ease !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  box-sizing: border-box !important;
+  margin-top: auto !important;
+}
+
+.drop-quick-add-btn:hover {
+  background: #FF5500 !important;
+  border-color: #FF5500 !important;
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 6px 16px rgba(255, 85, 0, 0.35) !important;
+}
+
+@media (max-width: 640px) {
+  .drop-card-visual {
+    height: 180px !important;
+    border-radius: 12px !important;
+    margin-bottom: 8px !important;
+  }
+  .drop-product-img {
+    max-height: 155px !important;
+    max-width: 92% !important;
+  }
+  .drop-pricing-row {
+    margin: 4px 0 8px 0 !important;
+    gap: 4px !important;
+  }
+  .drop-price {
+    font-size: 0.88rem !important;
+  }
+  .drop-mrp {
+    font-size: 0.70rem !important;
+  }
+  .drop-quick-add-btn {
+    height: 34px !important;
+    font-size: 0.67rem !important;
+    letter-spacing: 0.04em !important;
+  }
+}

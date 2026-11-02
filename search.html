@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103_final">
-  <link rel="stylesheet" href="catalog.css?v=20261103_final">
+  <link rel="stylesheet" href="styles.css?v=20261103_cards_v4">
+  <link rel="stylesheet" href="catalog.css?v=20261103_cards_v4">
   <link rel="stylesheet" href="pages.css?v=20261101_palette_v2">
   <link rel="stylesheet" href="microinteractions.css?v=20261102_noshadow_v1">
   <style>
@@ -1323,7 +1323,7 @@
 
   <!-- Scripts -->
   <script src="assets/products_data.js?v=20261103_v3"></script>
-  <script src="assets/store_core.js?v=20261103_final"></script>
+  <script src="assets/store_core.js?v=20261103_cards_v4"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
   <script>
@@ -1517,17 +1517,17 @@
                 ${product.title}
               </a>
 
-              ${paletteHtml}
-
-              <div class="card-action-row">
+              <div class="card-price-swatch-row">
                 <div class="card-price-row">
                   <span class="card-price-now">${priceFormatted}</span>
                   ${originalPriceHtml}
                 </div>
-                <button type="button" class="card-add-btn" aria-label="Add ${product.title} to cart" onclick="event.stopPropagation(); window.CovertokStore && window.CovertokStore.addToCart({ id: '${product.id}', title: '${product.title.replace(/'/g, "\\'")}', price: ${product.price}, img: '${product.primary_image}', color: '${product.colors && product.colors[0] ? product.colors[0].name : ''}', qty: 1 });">
-                  <span>ADD TO CART</span>
-                </button>
+                ${paletteHtml}
               </div>
+
+              <button type="button" class="card-add-btn" aria-label="Add ${product.title} to cart" onclick="event.stopPropagation(); window.CovertokStore && window.CovertokStore.addToCart({ id: '${product.id}', title: '${product.title.replace(/'/g, "\\'")}', price: ${product.price}, img: '${product.primary_image}', color: '${product.colors && product.colors[0] ? product.colors[0].name : ''}', qty: 1 });">
+                <span>ADD TO CART</span>
+              </button>
             </div>
           </div>
         `;
