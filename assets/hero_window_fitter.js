@@ -2,10 +2,9 @@
  * Covertok Signature Architectural Hero Window Precision Fitter
  * Mathematically computes the exact Bezier silhouette matching Image 2 & User Request:
  * - Stepped top edge: lower baseline under nav & icons (y ~ 0.104), elevated plateau in center (y ~ 0.020)
- * - Recessed bottom-left shelf for the action pill ("SHOP COVERS") inside the notch
- * - Smooth organic S-curve dropping between the pill and the circular arrow button
- * - Extended bottom baseline (y = 1.000) enclosing the circular arrow button on the black card
- * - Tangent continuous rounded corners on all vertices (no sharp cuts)
+ * - Recessed bottom-left shelf enveloping BOTH the pill button ("SHOP COVERS") AND circular arrow button
+ * - Balanced 22px overhang past the arrow button with a sweeping, organic 88px S-curve to the card floor
+ * - Tangent continuous rounded corners on all vertices (no sharp cuts or cliffs)
  */
 (function() {
   'use strict';
@@ -46,9 +45,15 @@
 
     const pillBtn = document.querySelector('#heroDynamicCta');
     const pillRect = pillBtn ? pillBtn.getBoundingClientRect() : null;
+    const arrowRect = arrowBtn ? arrowBtn.getBoundingClientRect() : null;
 
-    // Relative right edge of the pill button inside the notch
-    const pillRight = pillRect ? (pillRect.right - cRect.left) : 224;
+    // Keep arrow button cleanly docked beside pill with CSS gap
+    if (arrowBtn) {
+      arrowBtn.style.marginLeft = '0px';
+    }
+
+    // Relative right edge of the action dock inside the notch
+    const dockRight = arrowRect ? (arrowRect.right - cRect.left) : (pillRect ? (pillRect.right - cRect.left + 60) : 260);
 
     // 1. Top riser curve (starts right after CONTACT US link, rises to y=yTopPeak)
     const topRiseX1 = Math.max(0.40, Math.min(0.55, (hlRight + 20) / cardW));
@@ -58,21 +63,14 @@
     const topDropX4 = Math.max(topRiseX2 + 0.12, Math.min(0.92, (hrLeft - 20) / cardW));
     const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
 
-    // 3. Bottom step curve (Shelf envelopes ONLY the pill, then smooth organic S-curve drops to floor right before the arrow button)
-    const shelfOverhang = 16;
-    const curveSpan = 48;
-    const arrowCurveMargin = 4;
+    // 3. Bottom step curve (Shelf envelopes BOTH pill & arrow button with balanced overhang, then sweeps gracefully to the floor)
+    const shelfOverhang = 22;
+    const curveSpan = 88;
 
-    const shelfEndPx = pillRight + shelfOverhang;
+    const shelfEndPx = dockRight + shelfOverhang;
     const curveFloorPx = shelfEndPx + curveSpan;
-    const botStepX2 = shelfEndPx / cardW;
-    const botStepX1 = curveFloorPx / cardW;
-
-    // Align the circular arrow button on the black card floor nestled against the curve
-    if (arrowBtn) {
-      const desiredMargin = Math.max(16, (curveFloorPx + arrowCurveMargin) - pillRight);
-      arrowBtn.style.marginLeft = desiredMargin + 'px';
-    }
+    const botStepX2 = Math.min(0.38, shelfEndPx / cardW);
+    const botStepX1 = Math.min(0.48, curveFloorPx / cardW);
 
     // Vertical landmarks
     // Baseline y: under nav links
@@ -129,8 +127,8 @@
       // Extended bottom baseline running left to the button step
       `L ${botStepX1.toFixed(4)} ${yBotBase.toFixed(4)}`,
       
-      // Bottom step-up organic S-curve curving around action buttons into shelf
-      `C ${(botStepX1 - (botStepX1 - botStepX2) * 0.48).toFixed(4)} ${yBotBase.toFixed(4)}, ${(botStepX2 + (botStepX1 - botStepX2) * 0.48).toFixed(4)} ${yBotShelf.toFixed(4)}, ${botStepX2.toFixed(4)} ${yBotShelf.toFixed(4)}`,
+      // Bottom step-up organic S-curve curving smoothly around action buttons into shelf
+      `C ${(botStepX1 - (botStepX1 - botStepX2) * 0.45).toFixed(4)} ${yBotBase.toFixed(4)}, ${(botStepX2 + (botStepX1 - botStepX2) * 0.45).toFixed(4)} ${yBotShelf.toFixed(4)}, ${botStepX2.toFixed(4)} ${yBotShelf.toFixed(4)}`,
       
       // Bottom shelf horizontal line above buttons
       `L ${rx.toFixed(4)} ${yBotShelf.toFixed(4)}`,
@@ -168,8 +166,10 @@
     const header = document.querySelector('.site-header');
     const heroSec = document.querySelector('.hero-section');
     const pill = document.querySelector('#heroDynamicCta');
+    const arrow = document.querySelector('#heroExploreArrow');
     if (header) ro.observe(header);
     if (heroSec) ro.observe(heroSec);
     if (pill) ro.observe(pill);
+    if (arrow) ro.observe(arrow);
   }
 })();

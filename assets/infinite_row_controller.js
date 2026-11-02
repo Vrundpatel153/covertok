@@ -8,11 +8,11 @@
  * - Customer Reviews Track (#reviewsTrack)
  *
  * Provides:
- * 1. Continuous smooth GPU-accelerated Left-to-Right linear marquee drift
- * 2. Touch & Mouse drag swiping with momentum & non-blocking vertical scroll
- * 3. Seamless modulo wrapping (never hits a boundary or wall)
- * 4. Phase-matched animation resume (zero visual jumps on drag release)
- * 5. Auto-pause on hover / touch, and click protection during swipe
+ * 1. Native-feeling smooth touch swiping on mobile & tablet
+ * 2. Mouse drag-to-swipe with momentum glide & image drag suppression
+ * 3. Two-finger horizontal trackpad and Shift+wheel support
+ * 4. Bound clamping with rubber-band resistance when autoScroll is disabled
+ * 5. Continuous marquee animation for community videos & reviews
  */
 
 (function () {
@@ -29,15 +29,13 @@
         const domMatrix = new DOMMatrixReadOnly(transform);
         return domMatrix.m41;
       }
-    } catch (e) {
-      // Fallback matrix parsing
-    }
+    } catch (e) {}
 
     const match = transform.match(/matrix.*\((.+)\)/);
     if (match && match[1]) {
       const parts = match[1].split(',').map(s => parseFloat(s.trim()));
-      if (parts.length === 6) return parts[4]; // 2D matrix m41
-      if (parts.length === 16) return parts[12]; // 3D matrix m41
+      if (parts.length === 6) return parts[4];
+      if (parts.length === 16) return parts[12];
     }
     return 0;
   }
@@ -48,9 +46,15 @@
     const animName = options.animName || 'popularMarqueeLTR';
     const duration = options.duration || 36;
     const cloneMultiplier = options.cloneMultiplier || 0;
+    const isAutoScroll = options.autoScroll !== false;
 
-    // 1. Auto-clone cards if needed so halfWidth boundary is seamless
-    if (cloneMultiplier > 0) {
+    // Suppress native browser image ghost-dragging so mouse swiping always works
+    track.addEventListener('dragstart', (e) => e.preventDefault());
+    track.style.touchAction = 'pan-y';
+    track.style.cursor = 'grab';
+
+    // 1. Auto-clone cards if continuous marquee loop is requested
+    if (cloneMultiplier > 0 && isAutoScroll) {
       const originalCards = Array.from(track.children);
       if (originalCards.length > 0) {
         for (let m = 0; m < cloneMultiplier; m++) {
@@ -76,24 +80,26 @@
     let lastClientX = 0;
 
     function getHalfWidth() {
-      // scrollWidth is total width; halfWidth is the single seamless loop span
       return track.scrollWidth / 2;
     }
 
+    function getMaxScroll() {
+      const parentW = track.parentElement ? track.parentElement.clientWidth : window.innerWidth;
+      return Math.max(0, track.scrollWidth - parentW);
+    }
+
     function resumeMarquee(xPos) {
-      if (options.autoScroll === false) {
+      if (!isAutoScroll) {
         track.style.animation = 'none';
         return;
       }
       const halfWidth = getHalfWidth();
       if (halfWidth <= 20) return;
 
-      // Wrap into [-halfWidth, 0]
       let normalized = xPos;
       while (normalized > 0) normalized -= halfWidth;
       while (normalized < -halfWidth) normalized += halfWidth;
 
-      // Progress from 0 (at -halfWidth) to 1 (at 0)
       const progress = (normalized + halfWidth) / halfWidth;
       const delay = -(progress * duration);
 
@@ -115,7 +121,8 @@
       hasDragged = false;
       lockedHorizontal = false;
 
-      // Pause CSS animation immediately at exact pixel position
+      track.classList.add('is-dragging');
+      track.style.cursor = 'grabbing';
       track.style.animation = 'none';
       track.style.transition = 'none';
       track.style.transform = `translate3d(${currentX}px, 0, 0)`;
@@ -128,18 +135,17 @@
       const deltaY = clientY - startY;
 
       if (!lockedHorizontal) {
-        // If vertical scrolling dominates, yield to browser vertical scroll
         if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
           isDragging = false;
           track.classList.remove('is-dragging');
+          track.style.cursor = 'grab';
           resumeMarquee(currentX);
           return;
         }
 
-        if (Math.abs(deltaX) > 8) {
+        if (Math.abs(deltaX) > 6) {
           lockedHorizontal = true;
           hasDragged = true;
-          track.classList.add('is-dragging');
         }
       }
 
@@ -149,11 +155,20 @@
         }
 
         let targetX = baseX + deltaX;
-        const halfWidth = getHalfWidth();
 
-        if (halfWidth > 20) {
-          while (targetX > 0) targetX -= halfWidth;
-          while (targetX < -halfWidth) targetX += halfWidth;
+        if (!isAutoScroll) {
+          const maxScroll = getMaxScroll();
+          if (targetX > 0) {
+            targetX = targetX * 0.32;
+          } else if (targetX < -maxScroll) {
+            targetX = -maxScroll + (targetX + maxScroll) * 0.32;
+          }
+        } else {
+          const halfWidth = getHalfWidth();
+          if (halfWidth > 20) {
+            while (targetX > 0) targetX -= halfWidth;
+            while (targetX < -halfWidth) targetX += halfWidth;
+          }
         }
 
         currentX = targetX;
@@ -166,40 +181,34 @@
       if (!isDragging) return;
       isDragging = false;
       track.classList.remove('is-dragging');
+      track.style.cursor = 'grab';
 
-      if (options.autoScroll === false) {
-        if (hasDragged) {
-          const durationMs = Math.max(1, Date.now() - startTime);
-          const diffX = lastClientX - startX;
-          const velocity = diffX / durationMs;
-          if (Math.abs(velocity) > 0.25) {
-            const glideDistance = Math.max(-320, Math.min(320, velocity * 160));
-            let finalX = currentX + glideDistance;
-            const halfWidth = getHalfWidth();
-            if (halfWidth > 20) {
-              while (finalX > 0) finalX -= halfWidth;
-              while (finalX < -halfWidth) finalX += halfWidth;
-            }
-            track.style.transition = 'transform 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
-            track.style.transform = `translate3d(${finalX}px, 0, 0)`;
-            currentX = finalX;
-            return;
-          }
+      if (!isAutoScroll) {
+        const maxScroll = getMaxScroll();
+        const durationMs = Math.max(1, Date.now() - startTime);
+        const diffX = lastClientX - startX;
+        const velocity = diffX / durationMs;
+
+        let finalX = currentX;
+        if (hasDragged && Math.abs(velocity) > 0.15) {
+          const glide = velocity * 220;
+          finalX += glide;
         }
-        track.style.animation = 'none';
-        track.style.transition = 'none';
-        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+
+        finalX = Math.max(-maxScroll, Math.min(0, finalX));
+        track.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+        track.style.transform = `translate3d(${finalX}px, 0, 0)`;
+        currentX = finalX;
         return;
       }
 
       if (hasDragged) {
         const durationMs = Math.max(1, Date.now() - startTime);
         const diffX = lastClientX - startX;
-        const velocity = diffX / durationMs; // px/ms
+        const velocity = diffX / durationMs;
 
-        // If flicked with enthusiasm, glide slightly
-        if (Math.abs(velocity) > 0.35) {
-          const glideDistance = Math.max(-280, Math.min(280, velocity * 140));
+        if (Math.abs(velocity) > 0.25) {
+          const glideDistance = Math.max(-320, Math.min(320, velocity * 160));
           let finalX = currentX + glideDistance;
           const halfWidth = getHalfWidth();
           if (halfWidth > 20) {
@@ -207,7 +216,7 @@
             while (finalX < -halfWidth) finalX += halfWidth;
           }
 
-          track.style.transition = 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+          track.style.transition = 'transform 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
           track.style.transform = `translate3d(${finalX}px, 0, 0)`;
 
           setTimeout(() => {
@@ -265,7 +274,31 @@
       }
     }, { passive: true });
 
-    // Prevent navigation / clicking if user was dragging
+    // Trackpad two-finger horizontal scroll & Shift+Wheel support
+    const wrap = track.parentElement;
+    if (wrap) {
+      wrap.addEventListener('wheel', (e) => {
+        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+        if (Math.abs(delta) > 1) {
+          e.preventDefault();
+          if (!isAutoScroll) {
+            const maxScroll = getMaxScroll();
+            currentX = Math.max(-maxScroll, Math.min(0, currentX - delta));
+            track.style.transition = 'none';
+            track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+          } else {
+            const halfWidth = getHalfWidth();
+            currentX -= delta;
+            while (currentX > 0) currentX -= halfWidth;
+            while (currentX < -halfWidth) currentX += halfWidth;
+            track.style.transition = 'none';
+            track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+          }
+        }
+      }, { passive: false });
+    }
+
+    // Prevent clicking a link/button if the user dragged
     track.addEventListener('click', (e) => {
       if (hasDragged) {
         e.preventDefault();
@@ -276,31 +309,28 @@
   }
 
   function initAllInfiniteRows() {
-    // 1. Curated Releases (#trendingDropsTrack) (Auto-Scroll Disabled, manual swipe & arrow navigation only)
+    // 1. Curated Releases (#trendingDropsTrack) (Auto-Scroll Disabled, manual swipe & arrow buttons)
     const dropsTrack = document.getElementById('trendingDropsTrack');
     if (dropsTrack) {
       setupInfiniteLTRSwipeRow(dropsTrack, {
         animName: 'dropsMarqueeLTR',
         duration: 48,
-        cloneMultiplier: 1,
+        cloneMultiplier: 0,
         autoScroll: false
       });
 
       const prevBtn = document.getElementById('dropsPrevBtn');
       const nextBtn = document.getElementById('dropsNextBtn');
-      const STEP = 300;
+      const STEP = 320;
 
       if (prevBtn) {
         prevBtn.addEventListener('click', (e) => {
           e.preventDefault();
+          const parentW = dropsTrack.parentElement ? dropsTrack.parentElement.clientWidth : window.innerWidth;
+          const maxScroll = Math.max(0, dropsTrack.scrollWidth - parentW);
           const currX = getCurrentTranslateX(dropsTrack);
-          let newX = currX + STEP;
-          const halfWidth = dropsTrack.scrollWidth / 2;
-          if (halfWidth > 20) {
-            while (newX > 0) newX -= halfWidth;
-            while (newX < -halfWidth) newX += halfWidth;
-          }
-          dropsTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+          const newX = Math.min(0, currX + STEP);
+          dropsTrack.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
           dropsTrack.style.animation = 'none';
           dropsTrack.style.transform = `translate3d(${newX}px, 0, 0)`;
         });
@@ -309,14 +339,11 @@
       if (nextBtn) {
         nextBtn.addEventListener('click', (e) => {
           e.preventDefault();
+          const parentW = dropsTrack.parentElement ? dropsTrack.parentElement.clientWidth : window.innerWidth;
+          const maxScroll = Math.max(0, dropsTrack.scrollWidth - parentW);
           const currX = getCurrentTranslateX(dropsTrack);
-          let newX = currX - STEP;
-          const halfWidth = dropsTrack.scrollWidth / 2;
-          if (halfWidth > 20) {
-            while (newX > 0) newX -= halfWidth;
-            while (newX < -halfWidth) newX += halfWidth;
-          }
-          dropsTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+          const newX = Math.max(-maxScroll, currX - STEP);
+          dropsTrack.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
           dropsTrack.style.animation = 'none';
           dropsTrack.style.transform = `translate3d(${newX}px, 0, 0)`;
         });
@@ -345,20 +372,19 @@
       });
     }
 
-    // 4. Community Videos Track (#videosTrack)
+    // 4. Community Videos Track (#videosTrack) (Continuous Marquee)
     const videosTrack = document.getElementById('videosTrack');
     if (videosTrack) {
       setupInfiniteLTRSwipeRow(videosTrack, {
         animName: 'videosMarqueeLTR',
         duration: 40,
-        cloneMultiplier: 0 // Already cloned in HTML
+        cloneMultiplier: 0
       });
     }
 
-    // 5. Customer Reviews Track (#reviewsTrack)
+    // 5. Customer Reviews Track (#reviewsTrack) (Continuous Marquee)
     const reviewsTrack = document.getElementById('reviewsTrack');
     if (reviewsTrack) {
-      // 5 cards originally; clone once to make 10 cards for seamless loop
       setupInfiniteLTRSwipeRow(reviewsTrack, {
         animName: 'reviewsMarqueeLTR',
         duration: 40,

@@ -32677,7 +32677,7 @@ a.footer-contact-main:hover {
 
 
 
-    gap: 0 !important;
+    gap: 12px !important;
 
 
 
@@ -44419,8 +44419,8 @@ a.footer-contact-main:hover {
 .story-video-banner {
   position: relative;
   width: 100%;
-  min-height: 520px;
-  height: clamp(500px, 58vh, 620px);
+  min-height: 400px;
+  height: clamp(400px, 48vh, 500px);
   max-height: 640px;
   border-radius: 28px;
   overflow: hidden;
@@ -44508,7 +44508,7 @@ a.footer-contact-main:hover {
 
 
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center 68% !important;
 
 
 
@@ -53271,9 +53271,9 @@ a.footer-contact-main:hover {
 
   position: absolute !important;
 
-  bottom: -32px !important;
+  bottom: 0 !important;
 
-  right: -28px !important;
+  right: 0 !important;
 
   left: auto !important;
 
@@ -54759,7 +54759,7 @@ body.home-page .hero-content {
 .hero-cta-group {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 0 !important;
+  gap: 12px !important;
   padding-left: 24px !important;
   pointer-events: auto !important;
 }
@@ -54794,7 +54794,7 @@ body.home-page .hero-content {
   width: 48px !important;
   height: 48px !important;
   min-width: 48px !important;
-  margin-left: 68px !important;
+  margin-left: 0 !important;
   border-radius: 50% !important;
   background: #E8BA87 !important; /* Authentic warm artisan sand from Image 2 */
   color: #0A0A0C !important;

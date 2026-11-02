@@ -1,41 +1,24 @@
 /**
  * Covertok Bestseller Section Controller
- * Seamless Infinite Left-to-Right Continuous Auto-Scroll Engine
- * Features:
- * - Continuous smooth Left-to-Right linear auto-scroll (marquee)
- * - Auto-pause on hover so users can browse and click without rush
- * - Touch & Mouse drag swiping with momentum & non-blocking vertical scroll
- * - Hotspot pin linking (focuses target card on the showcase phones)
+ * Provides:
+ * - Fluid manual left-right swiping on touch devices (mobile & tablet)
+ * - Mouse drag-to-swipe with momentum glide & image drag suppression
+ * - Two-finger horizontal trackpad and Shift+wheel support
  * - Add to Cart delegation with instant cart drawer integration
  */
 (function() {
   'use strict';
 
-  function initBestsellerInfiniteLTR() {
+  function initBestsellerSwipe() {
     const viewport = document.getElementById('bestsellerViewport');
     const track = document.getElementById('bestsellerTrack');
     if (!viewport || !track) return;
 
-    // 1. Gather original cards
-    const originalCards = Array.from(track.querySelectorAll('.bestseller-prod-card'));
-    const numOriginals = originalCards.length;
-    if (numOriginals === 0) return;
-
-    // 2. Clone cards for seamless 50% boundary infinite loop
-    // [Originals (N)] + [Clones (N)]
-    if (!track.querySelector('.bestseller-clone')) {
-      const cloneFrag = document.createDocumentFragment();
-      originalCards.forEach((card, idx) => {
-        const clone = card.cloneNode(true);
-        clone.classList.add('bestseller-clone');
-        clone.setAttribute('data-original-index', idx);
-        cloneFrag.appendChild(clone);
-      });
-      track.appendChild(cloneFrag);
-    }
-
-    const DURATION = 32; // 32 seconds per full seamless loop
-    const animName = 'bestsellerMarqueeLTR';
+    // Suppress native browser image ghost-dragging
+    track.addEventListener('dragstart', (e) => e.preventDefault());
+    viewport.style.touchAction = 'pan-y';
+    track.style.touchAction = 'pan-y';
+    track.style.cursor = 'grab';
 
     let isDragging = false;
     let hasDragged = false;
@@ -46,10 +29,6 @@
     let startTime = 0;
     let lockedHorizontal = false;
     let lastClientX = 0;
-
-    function getHalfWidth() {
-      return track.scrollWidth / 2;
-    }
 
     function getCurrentTranslateX() {
       const style = window.getComputedStyle(track);
@@ -69,30 +48,11 @@
       return 0;
     }
 
-    function resumeMarquee(xPos) {
-      const halfWidth = getHalfWidth();
-      if (halfWidth <= 20) return;
-
-      // Wrap into [-halfWidth, 0]
-      let normalized = xPos;
-      while (normalized > 0) normalized -= halfWidth;
-      while (normalized < -halfWidth) normalized += halfWidth;
-
-      // Progress from 0 (at -halfWidth) to 1 (at 0)
-      const progress = (normalized + halfWidth) / halfWidth;
-      const delay = -(progress * DURATION);
-
-      track.style.transition = 'none';
-      track.style.animation = `${animName} ${DURATION}s linear infinite`;
-      track.style.animationDelay = `${delay.toFixed(3)}s`;
-      track.style.transform = '';
+    function getMaxScroll() {
+      const parentW = viewport.clientWidth || window.innerWidth;
+      return Math.max(0, track.scrollWidth - parentW);
     }
 
-    // Start initial continuous marquee
-    track.style.animation = "none";
-    track.style.transform = "translate3d(0, 0, 0)";
-
-    // Pointer Drag Handlers
     function onPointerStart(clientX, clientY) {
       currentX = getCurrentTranslateX();
       baseX = currentX;
@@ -104,7 +64,8 @@
       hasDragged = false;
       lockedHorizontal = false;
 
-      // Pause CSS animation immediately at exact pixel position
+      viewport.classList.add('is-dragging');
+      track.style.cursor = 'grabbing';
       track.style.animation = 'none';
       track.style.transition = 'none';
       track.style.transform = `translate3d(${currentX}px, 0, 0)`;
@@ -120,14 +81,13 @@
         if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
           isDragging = false;
           viewport.classList.remove('is-dragging');
-          resumeMarquee(currentX);
+          track.style.cursor = 'grab';
           return;
         }
 
-        if (Math.abs(deltaX) > 8) {
+        if (Math.abs(deltaX) > 6) {
           lockedHorizontal = true;
           hasDragged = true;
-          viewport.classList.add('is-dragging');
         }
       }
 
@@ -137,11 +97,13 @@
         }
 
         let targetX = baseX + deltaX;
-        const halfWidth = getHalfWidth();
+        const maxScroll = getMaxScroll();
 
-        if (halfWidth > 20) {
-          while (targetX > 0) targetX -= halfWidth;
-          while (targetX < -halfWidth) targetX += halfWidth;
+        // Rubber-band resistance at boundaries
+        if (targetX > 0) {
+          targetX = targetX * 0.32;
+        } else if (targetX < -maxScroll) {
+          targetX = -maxScroll + (targetX + maxScroll) * 0.32;
         }
 
         currentX = targetX;
@@ -154,30 +116,23 @@
       if (!isDragging) return;
       isDragging = false;
       viewport.classList.remove('is-dragging');
+      track.style.cursor = 'grab';
 
-      if (hasDragged) {
-        const durationMs = Math.max(1, Date.now() - startTime);
-        const diffX = lastClientX - startX;
-        const velocity = diffX / durationMs;
+      const maxScroll = getMaxScroll();
+      const durationMs = Math.max(1, Date.now() - startTime);
+      const diffX = lastClientX - startX;
+      const velocity = diffX / durationMs;
 
-        if (Math.abs(velocity) > 0.25) {
-          const glideDistance = Math.max(-300, Math.min(300, velocity * 150));
-          let finalX = currentX + glideDistance;
-          const halfWidth = getHalfWidth();
-          if (halfWidth > 20) {
-            while (finalX > 0) finalX -= halfWidth;
-            while (finalX < -halfWidth) finalX += halfWidth;
-          }
-
-          track.style.transition = 'transform 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
-          track.style.transform = `translate3d(${finalX}px, 0, 0)`;
-          currentX = finalX;
-          return;
-        }
+      let finalX = currentX;
+      if (hasDragged && Math.abs(velocity) > 0.15) {
+        const glide = velocity * 220;
+        finalX += glide;
       }
-      track.style.animation = 'none';
-      track.style.transition = 'none';
-      track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+
+      finalX = Math.max(-maxScroll, Math.min(0, finalX));
+      track.style.transition = 'transform 0.42s cubic-bezier(0.16, 1, 0.3, 1)';
+      track.style.transform = `translate3d(${finalX}px, 0, 0)`;
+      currentX = finalX;
     }
 
     // Mouse Listeners
@@ -223,81 +178,26 @@
       }
     }, { passive: true });
 
+    // Trackpad two-finger horizontal scroll & Shift+Wheel support
+    viewport.addEventListener('wheel', (e) => {
+      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+      if (Math.abs(delta) > 1) {
+        e.preventDefault();
+        const maxScroll = getMaxScroll();
+        currentX = Math.max(-maxScroll, Math.min(0, currentX - delta));
+        track.style.transition = 'none';
+        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+      }
+    }, { passive: false });
+
     // Prevent navigation / clicking if user was dragging
-    viewport.addEventListener('click', (e) => {
+    track.addEventListener('click', (e) => {
       if (hasDragged) {
         e.preventDefault();
         e.stopPropagation();
         hasDragged = false;
       }
     }, true);
-
-    // Hotspot Pin Linking (Phone showcase on the left)
-    const hotspots = document.querySelectorAll('.bestseller-hotspot');
-    const tooltips = document.querySelectorAll('.bestseller-tooltip');
-    const phoneZones = document.querySelectorAll('.bestseller-phone-zone');
-
-    function focusCardByIndex(idx) {
-      const allCards = track.querySelectorAll('.bestseller-prod-card');
-      if (!allCards[idx]) return;
-
-      const card = allCards[idx];
-      const cardRect = card.getBoundingClientRect();
-      const viewportRect = viewport.getBoundingClientRect();
-      const currentTx = getCurrentTranslateX();
-      
-      // Calculate offset to center the card in viewport
-      const offset = (viewportRect.left + viewportRect.width / 2) - (cardRect.left + cardRect.width / 2);
-      let targetX = currentTx + offset;
-      const halfWidth = getHalfWidth();
-      if (halfWidth > 20) {
-        while (targetX > 0) targetX -= halfWidth;
-        while (targetX < -halfWidth) targetX += halfWidth;
-      }
-
-      track.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-      track.style.animation = 'none';
-      track.style.transform = `translate3d(${targetX}px, 0, 0)`;
-
-      // Subtle pulse highlight on card
-      card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-      card.style.transform = 'translateY(-6px)';
-      card.style.boxShadow = '0 16px 36px rgba(0, 0, 0, 0.12)';
-
-      setTimeout(() => {
-        card.style.transform = '';
-        card.style.boxShadow = '';
-      }, 1800);
-
-      // Resume auto scroll after 2.5s
-      setTimeout(() => {
-        resumeMarquee(targetX);
-      }, 2500);
-    }
-
-    hotspots.forEach((spot) => {
-      spot.addEventListener('click', (e) => {
-        e.preventDefault();
-        const idx = parseInt(spot.getAttribute('data-index')) || 0;
-        focusCardByIndex(idx);
-      });
-    });
-
-    tooltips.forEach((tt) => {
-      tt.addEventListener('click', (e) => {
-        const idx = parseInt(tt.getAttribute('data-index'));
-        if (!isNaN(idx)) {
-          focusCardByIndex(idx);
-        }
-      });
-    });
-
-    phoneZones.forEach((zone) => {
-      const idx = parseInt(zone.getAttribute('data-index')) || 0;
-      zone.addEventListener('click', () => {
-        focusCardByIndex(idx);
-      });
-    });
 
     // Add to Cart Event Delegation
     track.addEventListener('click', (e) => {
@@ -343,8 +243,8 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBestsellerInfiniteLTR);
+    document.addEventListener('DOMContentLoaded', initBestsellerSwipe);
   } else {
-    initBestsellerInfiniteLTR();
+    initBestsellerSwipe();
   }
 })();
