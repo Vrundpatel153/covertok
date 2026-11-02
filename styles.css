@@ -55695,3 +55695,200 @@ body.home-page .hero-content {
   }
 }
 
+
+/* ==========================================================================
+   HARDWARE & SCREEN DEFENSE: SHOWCASE BANNER & RESPONSIVE SINGLE ROW
+   ========================================================================== */
+
+/* Hardware Showcase Hero Banner */
+.hardware-banner-wrap {
+  width: 100% !important;
+  margin-bottom: 28px !important;
+}
+
+.hardware-banner-card {
+  position: relative !important;
+  width: 100% !important;
+  border-radius: 26px !important;
+  overflow: hidden !important;
+  background: #E8E5DF !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  min-height: 380px !important;
+  max-height: 480px !important;
+  aspect-ratio: 16 / 7 !important;
+}
+
+.hardware-banner-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 40% !important;
+  display: block !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hardware-banner-card:hover .hardware-banner-img {
+  transform: scale(1.03) !important;
+}
+
+.hardware-banner-overlay {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  padding: 40px 44px !important;
+  box-sizing: border-box !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(10, 10, 12, 0.78) 100%),
+              linear-gradient(90deg, rgba(10, 10, 12, 0.72) 0%, rgba(10, 10, 12, 0.25) 50%, rgba(0, 0, 0, 0) 80%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.hardware-banner-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 5px 14px !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 999px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #FFFFFF !important;
+  margin-bottom: 12px !important;
+}
+
+.hardware-banner-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 2.2rem !important;
+  font-weight: 900 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: #FFFFFF !important;
+  margin: 0 0 8px 0 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+.hardware-banner-subtitle {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.95rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.45 !important;
+  margin: 0 0 20px 0 !important;
+  max-width: 520px !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hardware-banner-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 24px !important;
+  background: #FFFFFF !important;
+  color: #0A0A0C !important;
+  border-radius: 999px !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25) !important;
+}
+
+.hardware-banner-btn:hover {
+  background: #FF5A18 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(255, 90, 24, 0.4) !important;
+}
+
+/* Desktop Hardware Product Row: Strictly 4 Columns Single Horizontal Line */
+@media (min-width: 769px) {
+  .hardware-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 22px !important;
+  }
+}
+
+/* Mobile Hardware View: Proper Swipeable Horizontal Row instead of vertical stacking! */
+@media (max-width: 768px) {
+  .hardware-banner-card {
+    min-height: 280px !important;
+    max-height: 340px !important;
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 20px !important;
+  }
+
+  .hardware-banner-overlay {
+    padding: 24px 20px !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 15%, rgba(10, 10, 12, 0.88) 90%) !important;
+  }
+
+  .hardware-banner-title {
+    font-size: 1.45rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hardware-banner-subtitle {
+    font-size: 0.82rem !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hardware-banner-btn {
+    padding: 10px 18px !important;
+    font-size: 0.76rem !important;
+  }
+
+  .hardware-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 14px !important;
+    padding: 6px 4px 20px 4px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .hardware-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .hardware-card {
+    flex: 0 0 260px !important;
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start !important;
+    margin: 0 !important;
+  }
+
+  .hardware-card-visual {
+    height: 180px !important;
+  }
+
+  .hardware-card-img {
+    max-height: 155px !important;
+  }
+
+  .hardware-card-inner {
+    padding: 14px !important;
+  }
+
+  .hardware-product-title {
+    font-size: 0.88rem !important;
+  }
+}
