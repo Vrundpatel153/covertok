@@ -53790,6 +53790,27 @@ a.footer-contact-main:hover {
     text-align: center !important;
   }
 
+  .hero-slide[data-theme="lipcase"] .hero-headline .hero-headline-line {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    text-shadow: none !important;
+  }
+  .hero-slide[data-theme="lipcase"] .hero-headline .hero-text-signature {
+    color: #D0386E !important;
+    -webkit-text-fill-color: #D0386E !important;
+    text-shadow: 0 0 20px rgba(208, 56, 110, 0.25) !important;
+  }
+  .hero-slide[data-theme="lipcase"] .hero-kicker-highlight {
+    color: #D0386E !important;
+    -webkit-text-fill-color: #D0386E !important;
+    text-shadow: none !important;
+  }
+  .hero-slide[data-theme="lipcase"] .hero-content .hero-editorial-desc {
+    color: #2A2A2A !important;
+    -webkit-text-fill-color: #2A2A2A !important;
+    text-shadow: none !important;
+  }
+
 
 
   .hero-slide .hero-feature-chips {
