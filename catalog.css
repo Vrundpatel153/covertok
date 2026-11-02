@@ -535,14 +535,14 @@
   background: rgba(255, 255, 255, 0.95);
   border-color: #0A0A0A;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .catalog-cat-card.active {
   background: #0A0A0A !important;
   border-color: #0A0A0A !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
 }
 
 .cat-pill-title {
@@ -577,7 +577,7 @@
 .catalog-cat-card.active .cat-pill-count {
   background: #FF5500 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 2px 8px rgba(255, 85, 0, 0.4) !important;
+  box-shadow: none !important;
 }
 
 .cat-pill-badge {

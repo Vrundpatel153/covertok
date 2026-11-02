@@ -268,7 +268,7 @@ body.combo-page-canvas {
   background: #171513;
   color: #FFFFFF;
   border-color: #171513;
-  box-shadow: 0 2px 8px rgba(23, 21, 19, 0.16);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .catalog-pill-count {
