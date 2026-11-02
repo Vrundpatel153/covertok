@@ -298,7 +298,7 @@
 
         shadowOffset: { x: 5, y: -195 },
 
-        shadowOpacity: 0.55
+        shadowOpacity: 0.0
 
       },
 
@@ -316,7 +316,7 @@
 
         shadowOffset: { x: 15, y: -230 },
 
-        shadowOpacity: 0.72
+        shadowOpacity: 0.0
 
       },
 
@@ -334,7 +334,7 @@
 
         shadowOffset: { x: 20, y: -205 },
 
-        shadowOpacity: 0.60
+        shadowOpacity: 0.0
 
       },
 
@@ -471,6 +471,7 @@
       });
 
       const shMesh = new THREE.Mesh(shadowGeom, shadowMat);
+      shMesh.visible = false;
 
       shMesh.position.set(15, -210, -10);
 
