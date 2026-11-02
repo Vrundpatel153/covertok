@@ -343,25 +343,85 @@
     const container = document.getElementById('cartDrawerItemsList') || document.getElementById('cartItemsContainer');
     if (!container) return;
 
+    const bundleTracker = document.getElementById('cartBundleTracker');
+    const shippingBarContainer = document.getElementById('cartShippingBarContainer');
+    const couponCard = document.querySelector('.cart-coupon-card');
+    const upsellSection = document.querySelector('.cart-upsell-section');
+    const footer = document.getElementById('cartDrawerFooter');
+
     if (cart.length === 0) {
+      if (bundleTracker) bundleTracker.style.display = 'none';
+      if (shippingBarContainer) shippingBarContainer.style.display = 'none';
+      if (couponCard) couponCard.style.display = 'none';
+      if (upsellSection) upsellSection.style.display = 'none';
+      if (footer) footer.style.display = 'none';
+
       container.innerHTML = `
-        <div style="text-align: center; padding: 48px 20px; color: #71717A;">
-          <div style="margin-bottom: 14px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A1A1AA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <div class="cart-empty-state-wrap">
+          <div class="cart-empty-icon-circle">
+            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-empty-zero-badge">0</span>
           </div>
-          <h4 style="font-family: var(--font-heading, 'Manrope', sans-serif); font-size: 1.1rem; font-weight: 700; color: #0A0A0A; margin-bottom: 6px;">Your cart is empty</h4>
-          <p style="font-size: 0.85rem; margin-bottom: 20px; color: #71717A;">Explore our curated collection of iPhone cases & accessories.</p>
-          <a href="collections.html" class="btn btn-pill-dark" onclick="window.CovertokFlows.closeCart();" style="display: inline-block; padding: 10px 24px; border-radius: 8px; font-weight: 600; font-size: 13px;">
-            Explore Products
+
+          <h3 class="cart-empty-title">Your cart is empty</h3>
+          <p class="cart-empty-desc">Discover trending cases, watch bands & everyday protection crafted with precision.</p>
+
+          <a href="collections.html" class="cart-empty-primary-btn" onclick="window.CovertokFlows.closeCart();">
+            <span>Explore All Products</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
           </a>
+
+          <!-- Quick Discovery Chips -->
+          <div class="cart-empty-quick-links">
+            <span class="cart-empty-quick-label">POPULAR CATEGORIES</span>
+            <div class="cart-empty-chips-row">
+              <a href="collections.html?cat=iphone-cases" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">📱 iPhone Cases</a>
+              <a href="collections.html?cat=watch-bands" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">⌚ Watch Straps</a>
+              <a href="collections.html?cat=cover-charms" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">✨ Charms & Sling</a>
+              <a href="collections.html?cat=hardware" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">🛡️ Screen & Desk</a>
+            </div>
+          </div>
+
+          <!-- Seamless Perks Strip -->
+          <div class="cart-empty-perks-box">
+            <div class="cart-empty-perk-row">
+              <span class="cart-perk-emoji">🚚</span>
+              <div class="cart-perk-info">
+                <strong>Free Express Shipping</strong>
+                <span>Auto-unlocked on orders above ₹999</span>
+              </div>
+            </div>
+            <div class="cart-empty-perk-row">
+              <span class="cart-perk-emoji">🎁</span>
+              <div class="cart-perk-info">
+                <strong>3 for ₹1,199 Bundle Offer</strong>
+                <span>Add any 3 eligible items to activate deal</span>
+              </div>
+            </div>
+            <div class="cart-empty-perk-row">
+              <span class="cart-perk-emoji">⚡</span>
+              <div class="cart-perk-info">
+                <strong>2-Hour Dispatch Guarantee</strong>
+                <span>Prepaid orders ship same day</span>
+              </div>
+            </div>
+          </div>
         </div>
       `;
-      const footer = document.getElementById('cartDrawerFooter');
-      if (footer) footer.style.display = 'none';
       return;
     }
 
-    const footer = document.getElementById('cartDrawerFooter');
+    if (bundleTracker) bundleTracker.style.display = 'block';
+    if (shippingBarContainer) shippingBarContainer.style.display = 'block';
+    if (couponCard) couponCard.style.display = 'block';
+    if (upsellSection) upsellSection.style.display = 'block';
     if (footer) footer.style.display = 'block';
 
     container.innerHTML = cart.map((item, idx) => {
