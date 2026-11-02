@@ -43073,7 +43073,7 @@ a.footer-contact-main:hover {
 
 
 
-  justify-content: space-between;
+  justify-content: flex-start !important;
 
 
 
@@ -55616,13 +55616,13 @@ body.home-page .hero-content {
 }
 
 .product-color-palette .color-dot:hover {
-  transform: scale(1.22) !important;
+  transform: none !important;
   box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #171513 !important;
 }
 
 .product-color-palette .color-dot.active {
-  transform: scale(1.18) !important;
-  box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3.5px #171513 !important;
+  transform: none !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3.5px #0A0A0C !important;
 }
 
 .product-color-palette .color-more-pill {
@@ -56023,7 +56023,7 @@ body.home-page .hero-content {
 /* 1. Popular Choices Showcase */
 .pop-slider-img-wrap {
   width: 100% !important;
-  height: 230px !important;
+  height: 240px !important;
   border-radius: 16px !important;
   background: #F8F6F2 !important;
   display: flex !important;
@@ -56037,7 +56037,7 @@ body.home-page .hero-content {
 .pop-slider-img {
   width: 100% !important;
   height: 100% !important;
-  max-height: 205px !important;
+  max-height: 215px !important;
   object-fit: contain !important;
   display: block !important;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -56050,6 +56050,7 @@ body.home-page .hero-content {
 .pop-slider-info {
   display: flex !important;
   flex-direction: column !important;
+  justify-content: flex-start !important;
   flex: 1 !important;
   padding: 10px 4px 4px !important;
 }
@@ -56060,7 +56061,8 @@ body.home-page .hero-content {
   justify-content: space-between !important;
   gap: 8px !important;
   width: 100% !important;
-  margin: 8px 0 10px 0 !important;
+  margin: 6px 0 10px 0 !important;
+  margin-top: 0 !important;
 }
 
 .pop-slider-price {
@@ -56068,6 +56070,9 @@ body.home-page .hero-content {
   align-items: baseline !important;
   gap: 6px !important;
   flex-shrink: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
 }
 
 .pop-price-now {
@@ -56090,14 +56095,17 @@ body.home-page .hero-content {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
-  gap: 4px !important;
+  gap: 8px !important;
   margin: 0 !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 .pop-quick-add-btn {
   width: 100% !important;
-  height: 38px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  flex-shrink: 0 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -56106,9 +56114,9 @@ body.home-page .hero-content {
   color: #FFFFFF !important;
   border: 1px solid #0A0A0C !important;
   border-radius: 999px !important;
-  padding: 0 14px !important;
+  padding: 0 16px !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.74rem !important;
+  font-size: 0.76rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
@@ -56160,7 +56168,8 @@ body.home-page .hero-content {
   justify-content: space-between !important;
   gap: 8px !important;
   width: 100% !important;
-  margin: 8px 0 10px 0 !important;
+  margin: 6px 0 10px 0 !important;
+  margin-top: 0 !important;
 }
 
 .hardware-price-stack {
@@ -56168,6 +56177,9 @@ body.home-page .hero-content {
   align-items: baseline !important;
   gap: 6px !important;
   flex-shrink: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
 }
 
 .hardware-price {
@@ -56190,14 +56202,17 @@ body.home-page .hero-content {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
-  gap: 4px !important;
+  gap: 8px !important;
   margin: 0 !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 .hardware-add-btn {
   width: 100% !important;
-  height: 38px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  flex-shrink: 0 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -56206,9 +56221,9 @@ body.home-page .hero-content {
   color: #FFFFFF !important;
   border: 1px solid #0A0A0C !important;
   border-radius: 999px !important;
-  padding: 0 14px !important;
+  padding: 0 16px !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.74rem !important;
+  font-size: 0.76rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
@@ -56238,6 +56253,9 @@ body.home-page .hero-content {
   .pop-slider-img {
     max-height: 155px !important;
   }
+  .pop-slider-info {
+    justify-content: flex-start !important;
+  }
   .pop-slider-title {
     font-size: 0.78rem !important;
     line-height: 1.25 !important;
@@ -56246,7 +56264,13 @@ body.home-page .hero-content {
   }
   .pop-pricing-row {
     margin: 4px 0 8px 0 !important;
+    margin-top: 0 !important;
     gap: 4px !important;
+  }
+  .pop-slider-price {
+    width: auto !important;
+    margin-top: 0 !important;
+    flex-shrink: 0 !important;
   }
   .pop-price-now {
     font-size: 0.88rem !important;
@@ -56255,9 +56279,13 @@ body.home-page .hero-content {
     font-size: 0.68rem !important;
   }
   .pop-quick-add-btn {
-    height: 34px !important;
-    font-size: 0.67rem !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    flex-shrink: 0 !important;
+    font-size: 0.70rem !important;
     letter-spacing: 0.04em !important;
+    padding: 0 8px !important;
+    margin-top: auto !important;
   }
 
   .hardware-card-visual {
@@ -56276,7 +56304,13 @@ body.home-page .hero-content {
   }
   .hardware-pricing-row {
     margin: 4px 0 8px 0 !important;
+    margin-top: 0 !important;
     gap: 4px !important;
+  }
+  .hardware-price-stack {
+    width: auto !important;
+    margin-top: 0 !important;
+    flex-shrink: 0 !important;
   }
   .hardware-price {
     font-size: 0.88rem !important;
@@ -56285,8 +56319,12 @@ body.home-page .hero-content {
     font-size: 0.68rem !important;
   }
   .hardware-add-btn {
-    height: 34px !important;
-    font-size: 0.67rem !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    flex-shrink: 0 !important;
+    font-size: 0.70rem !important;
     letter-spacing: 0.04em !important;
+    padding: 0 8px !important;
+    margin-top: auto !important;
   }
 }

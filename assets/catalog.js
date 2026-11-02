@@ -693,7 +693,7 @@
                 title="${c.name}"
                 ${c.image ? `data-color-img="${c.image}"` : ''}></span>
         `).join('');
-        const morePill = remaining > 0 ? `<span class="color-more-pill">+${remaining}</span>` : '';
+        const morePill = remaining > 0 ? `<span class="color-more-pill"><span class="more-pc">+${remaining} more</span><span class="more-mob">+${remaining}</span></span>` : '';
         paletteHtml = `
           <div class="product-color-palette" aria-label="Available Colors">
             ${dots}
