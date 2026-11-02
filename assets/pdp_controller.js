@@ -374,43 +374,31 @@
     }
   }
 
-  // Universal isolated gallery extractor: guarantees strictly only chosen color's images are in gallery
+  // Universal isolated gallery extractor: guarantees rich angles & color-specific coverage
   function getColorGallery(product, color) {
     if (!product) return [];
 
-    // If product has multiple colors, the gallery MUST strictly contain ONLY images of that selected color
-    if (product.colors && product.colors.length > 1) {
-      if (color) {
-        let colorImgs = [];
-        if (Array.isArray(color.images) && color.images.length > 0) {
-          colorImgs = color.images.filter(Boolean);
-        } else if (color.image) {
-          colorImgs = [color.image];
-        }
-
-        if (colorImgs.length > 0) {
-          return Array.from(new Set(colorImgs));
-        }
-      }
-
-      if (color && color.image) return [color.image];
-      return product.primary_image ? [product.primary_image] : [];
-    }
-
-    // Single-color or no-color product (e.g., power bank or cable)
-    if (color && Array.isArray(color.images) && color.images.length > 0) {
+    // If color has multiple dedicated images, use them
+    if (color && Array.isArray(color.images) && color.images.length > 1) {
       return Array.from(new Set(color.images.filter(Boolean)));
     }
+
+    // Combine color image with all product gallery images for full multi-angle coverage
+    let imgs = [];
     if (color && color.image) {
-      return [color.image];
+      imgs.push(color.image);
     }
     if (Array.isArray(product.images) && product.images.length > 0) {
-      return Array.from(new Set(product.images.filter(Boolean)));
+      imgs = imgs.concat(product.images.filter(Boolean));
+    } else if (product.primary_image) {
+      imgs.push(product.primary_image);
     }
-    return product.primary_image ? [product.primary_image] : [];
+
+    const unique = Array.from(new Set(imgs));
+    return unique.length > 0 ? unique : (product.primary_image ? [product.primary_image] : []);
   }
 
-  // Render Thumbnails Rail: Strictly shows ONLY the chosen color's image gallery below/beside the window
+  // Render Thumbnails Rail: Displays gallery below or beside the main showcase
   function renderThumbnails(product, activeSrc) {
     const strip = document.getElementById('pdpThumbnails');
     if (!strip) return;
@@ -442,7 +430,7 @@
     // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-        <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+        <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
       </button>
     `).join('');
 

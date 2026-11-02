@@ -870,7 +870,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================
 
-  if (searchBtn) {
+  if (searchBtn && searchModal && searchInput) {
 
     searchBtn.addEventListener('click', () => {
 

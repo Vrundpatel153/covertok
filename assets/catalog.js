@@ -12,6 +12,8 @@
   let minCustomPrice = null;
   let maxCustomPrice = null;
   let inStockOnly = false;
+  let currentModel = 'all';
+  let currentBadge = 'all';
 
   // Category display names & definitions with authentic preview thumbnails
   const CATEGORIES = [
@@ -42,9 +44,12 @@
     }
     if (params.has('cat')) currentCategory = params.get('cat');
     if (params.has('search')) currentSearch = params.get('search');
+    else if (params.has('q')) currentSearch = params.get('q');
     if (params.has('sort')) currentSort = params.get('sort');
     if (params.has('price')) currentPriceBracket = params.get('price');
     if (params.has('instock')) inStockOnly = params.get('instock') === 'true';
+    if (params.has('model')) currentModel = params.get('model');
+    if (params.has('badge')) currentBadge = params.get('badge');
 
     renderCategoryTabs();
     setupEventListeners();
@@ -161,15 +166,42 @@
       filtered = filtered.filter(p => p.in_stock);
     }
 
-    // 4. Filter by search
+    // 3b. Device / Phone Model Filter
+    if (currentModel && currentModel !== 'all') {
+      const qm = currentModel.toLowerCase();
+      filtered = filtered.filter(p => {
+        if (!p.models || !p.models.length) {
+          // Fallback to title or category check if models array empty
+          return p.title.toLowerCase().includes(qm) || (p.category && p.category.toLowerCase().includes(qm));
+        }
+        return p.models.some(m => m.toLowerCase().includes(qm)) || p.title.toLowerCase().includes(qm);
+      });
+    }
+
+    // 3c. Special Offers / Badge Filter
+    if (currentBadge === 'sale') {
+      filtered = filtered.filter(p => (p.discount_percent && p.discount_percent >= 20) || (p.compare_at_price && p.compare_at_price > p.price));
+    } else if (currentBadge === 'bestseller') {
+      filtered = filtered.filter(p => p.is_bestseller);
+    } else if (currentBadge === 'new') {
+      filtered = filtered.filter(p => p.is_new);
+    }
+
+    // 4. Filter by search (tokenized multi-field matching)
     if (currentSearch.trim()) {
       const q = currentSearch.trim().toLowerCase();
-      filtered = filtered.filter(p => 
-        p.title.toLowerCase().includes(q) ||
-        p.category_name.toLowerCase().includes(q) ||
-        (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
-        (p.models && p.models.some(m => m.toLowerCase().includes(q)))
-      );
+      const terms = q.split(/\s+/).filter(Boolean);
+      filtered = filtered.filter(p => {
+        const text = (
+          (p.title || '') + ' ' +
+          (p.category_name || '') + ' ' +
+          (p.category || '') + ' ' +
+          ((p.tags || []).join(' ')) + ' ' +
+          ((p.models || []).join(' ')) + ' ' +
+          ((p.colors || []).map(c => c.name).join(' '))
+        ).toLowerCase();
+        return terms.every(t => text.includes(t));
+      });
     }
 
     // 5. Sort
@@ -513,6 +545,31 @@
       });
     }
 
+    if (currentModel && currentModel !== 'all') {
+      chips.push({
+        label: `Model: ${currentModel}`,
+        onRemove: () => {
+          currentModel = 'all';
+          document.querySelectorAll('#catalogModelPills .catalog-filter-pill').forEach(b => b.classList.remove('active'));
+          document.querySelector('#catalogModelPills .catalog-filter-pill[data-model="all"]')?.classList.add('active');
+          filterAndRenderProducts();
+        }
+      });
+    }
+
+    if (currentBadge && currentBadge !== 'all') {
+      const badgeLabels = { 'sale': 'On Sale', 'bestseller': 'Bestsellers', 'new': 'New Drops' };
+      chips.push({
+        label: `Offer: ${badgeLabels[currentBadge] || currentBadge}`,
+        onRemove: () => {
+          currentBadge = 'all';
+          document.querySelectorAll('#catalogBadgePills .catalog-badge-btn').forEach(b => b.classList.remove('active'));
+          document.querySelector('#catalogBadgePills .catalog-badge-btn[data-badge="all"]')?.classList.add('active');
+          filterAndRenderProducts();
+        }
+      });
+    }
+
     if (chips.length === 0) {
       container.style.display = 'none';
       container.innerHTML = '';
@@ -551,6 +608,14 @@
     maxCustomPrice = null;
     inStockOnly = false;
     currentSearch = '';
+    currentModel = 'all';
+    currentBadge = 'all';
+
+    document.querySelectorAll('#catalogModelPills .catalog-filter-pill').forEach(b => b.classList.remove('active'));
+    document.querySelector('#catalogModelPills .catalog-filter-pill[data-model="all"]')?.classList.add('active');
+
+    document.querySelectorAll('#catalogBadgePills .catalog-badge-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('#catalogBadgePills .catalog-badge-btn[data-badge="all"]')?.classList.add('active');
 
     document.querySelectorAll('.catalog-nav-pill, .catalog-cat-card').forEach(el => {
       el.classList.remove('active');
@@ -642,7 +707,7 @@
       <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'">
         ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
         <div class="card-img-wrap">
-          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
         </div>
       </div>
 
@@ -958,12 +1023,12 @@
     const catalogSortOptions = document.querySelectorAll('#catalogSortDropdownMenu .luxury-sort-option');
 
     const sortLabelsMap = {
-      'featured': 'Featured',
-      'price-low': 'Price: Low',
-      'price-high': 'Price: High',
-      'rating': 'Top Rated',
+      'featured': 'Featured / Best Sellers',
+      'price-low': 'Price: Low to High',
+      'price-high': 'Price: High to Low',
+      'rating': 'Customer Rating',
       'newest': 'New Arrivals',
-      'title-az': 'Name: A-Z'
+      'title-az': 'Name: A to Z'
     };
 
     function syncCustomSortUI(val) {
@@ -1044,6 +1109,43 @@
         if (maxInput) maxInput.value = '';
         filterAndRenderProducts();
       });
+    });
+
+    // 3b. Device / Model Filter Pills
+    const modelPills = document.querySelectorAll('#catalogModelPills .catalog-filter-pill');
+    modelPills.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modelPills.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentModel = btn.getAttribute('data-model') || 'all';
+        filterAndRenderProducts();
+      });
+    });
+
+    // 3c. Special Offer & Deals Badges
+    const badgePills = document.querySelectorAll('#catalogBadgePills .catalog-badge-btn');
+    badgePills.forEach(btn => {
+      btn.addEventListener('click', () => {
+        badgePills.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentBadge = btn.getAttribute('data-badge') || 'all';
+        filterAndRenderProducts();
+      });
+    });
+
+    // 3d. Apply Filters Panel Action Button (Closes panel and scrolls to grid)
+    document.getElementById('catalogApplyFiltersPanelBtn')?.addEventListener('click', () => {
+      const panel = document.getElementById('catalogFiltersPanel');
+      if (panel) {
+        panel.classList.remove('show');
+        panel.style.display = 'none';
+      }
+      document.getElementById('catalogGrid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // 3e. Reset Filters Panel Action Button
+    document.getElementById('catalogResetFiltersPanelBtn')?.addEventListener('click', () => {
+      resetAllFilters();
     });
 
     // 4. Custom Min/Max Price Inputs
