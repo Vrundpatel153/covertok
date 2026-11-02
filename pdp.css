@@ -1558,6 +1558,58 @@ html, body {
   margin-top: 14px;
 }
 
+/* Policy Quick Action Buttons (Below Description Card) */
+.pdp-policy-buttons-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.pdp-policy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E7;
+  border-radius: 12px;
+  font-family: var(--pdp-font-head, 'Manrope', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #18181B;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  letter-spacing: -0.01em;
+}
+
+.pdp-policy-btn svg {
+  color: #71717A;
+  flex-shrink: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.pdp-policy-btn:hover {
+  border-color: #0A0A0A;
+  background: #FAFAFA;
+  color: #0A0A0A;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.pdp-policy-btn:hover svg {
+  color: #FF5500;
+  transform: scale(1.1);
+}
+
+.pdp-policy-btn:active {
+  transform: translateY(0);
+}
+
 .pdp-description-card:hover {
   border-color: #0A0A0A;
 }
