@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103_cards_v6">
-  <link rel="stylesheet" href="catalog.css?v=20261103_cards_v6">
+  <link rel="stylesheet" href="styles.css?v=20261103_cards_v7">
+  <link rel="stylesheet" href="catalog.css?v=20261103_cards_v7">
   <link rel="stylesheet" href="pages.css?v=20261101_palette_v2">
   <link rel="stylesheet" href="microinteractions.css?v=20261102_noshadow_v1">
   <style>
@@ -1323,7 +1323,7 @@
 
   <!-- Scripts -->
   <script src="assets/products_data.js?v=20261103_v3"></script>
-  <script src="assets/store_core.js?v=20261103_cards_v6"></script>
+  <script src="assets/store_core.js?v=20261103_cards_v7"></script>
   <script src="assets/store_modals.js"></script>
   <script src="assets/store_flows.js"></script>
   <script>
@@ -1690,16 +1690,16 @@
       // Event delegation for Color Swatches and Wishlist on dynamic contentArea
       if (contentArea) {
         contentArea.addEventListener('click', (e) => {
-          // Color dot switcher
-          const dot = e.target.closest('.card-color-dot');
+          // Color dot switcher (Universal support for .color-dot and .card-color-dot)
+          const dot = e.target.closest('.color-dot, .card-color-dot');
           if (dot) {
             e.stopPropagation();
             const parent = dot.closest('.catalog-card');
             if (parent) {
               const cardImg = parent.querySelector('.card-main-img');
-              parent.querySelectorAll('.card-color-dot').forEach(d => d.classList.remove('active'));
+              parent.querySelectorAll('.color-dot, .card-color-dot').forEach(d => d.classList.remove('active'));
               dot.classList.add('active');
-              const newSrc = dot.getAttribute('data-img');
+              const newSrc = dot.getAttribute('data-color-img') || dot.getAttribute('data-img');
               if (newSrc && cardImg) {
                 cardImg.style.opacity = '0.35';
                 cardImg.style.transform = 'scale(0.97)';
@@ -1707,7 +1707,7 @@
                   cardImg.src = newSrc;
                   cardImg.style.opacity = '1';
                   cardImg.style.transform = 'scale(1)';
-                }, 120);
+                }, 80);
               }
             }
             return;

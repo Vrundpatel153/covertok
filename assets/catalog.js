@@ -730,7 +730,7 @@
       </div>
     `;
 
-    // Interactive color swatch clicks
+    // Interactive color swatch clicks with smooth transition
     card.querySelectorAll('.color-dot').forEach(dot => {
       dot.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -738,7 +738,15 @@
         dot.classList.add('active');
         const imgUrl = dot.getAttribute('data-color-img');
         const mainImg = card.querySelector('.card-main-img');
-        if (imgUrl && mainImg) mainImg.src = imgUrl;
+        if (imgUrl && mainImg) {
+          mainImg.style.opacity = '0.35';
+          mainImg.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            mainImg.src = imgUrl;
+            mainImg.style.opacity = '1';
+            mainImg.style.transform = 'scale(1)';
+          }, 80);
+        }
       });
     });
 
@@ -758,11 +766,12 @@
     }
 
 
-    // Add To Cart button (if present)
+    // Add To Cart button (respects currently active color swatch)
     card.querySelector('.card-add-btn')?.addEventListener('click', (e) => {
       e.stopPropagation();
-      const chosenColor = product.colors && product.colors[0] ? product.colors[0].name : '';
-      const chosenImg = product.primary_image || (product.colors && product.colors[0] ? product.colors[0].image : '');
+      const activeDot = card.querySelector('.color-dot.active');
+      const chosenColor = activeDot ? activeDot.getAttribute('title') : (product.colors && product.colors[0] ? product.colors[0].name : '');
+      const chosenImg = (activeDot && activeDot.getAttribute('data-color-img')) || product.primary_image || (product.colors && product.colors[0] ? product.colors[0].image : '');
       const chosenModel = product.models && product.models[0] ? product.models[0] : '';
 
       window.CovertokStore.addToCart({
