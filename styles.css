@@ -54739,7 +54739,7 @@ body.home-page .hero-content {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 0 28px !important;
+  padding: 0 20px !important;
   z-index: 25 !important;
   pointer-events: none !important;
 }
@@ -54748,7 +54748,7 @@ body.home-page .hero-content {
   display: inline-flex !important;
   align-items: center !important;
   gap: 12px !important;
-  padding-left: 24px !important;
+  padding-left: 0 !important;
   pointer-events: auto !important;
 }
 
