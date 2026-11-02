@@ -64,8 +64,8 @@
     const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
 
     // 3. Bottom step curve (Shelf envelopes BOTH pill & arrow button with balanced overhang, then sweeps gracefully to the floor)
-    const shelfOverhang = 22;
-    const curveSpan = 88;
+    const shelfOverhang = 28;
+    const curveSpan = 100;
 
     const shelfEndPx = dockRight + shelfOverhang;
     const curveFloorPx = shelfEndPx + curveSpan;

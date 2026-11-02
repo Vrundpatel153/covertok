@@ -44496,50 +44496,17 @@ a.footer-contact-main:hover {
 
 
 .story-bg-video {
-
-
-
   width: 100%;
-
-
-
   height: 100%;
-
-
-
   object-fit: cover;
-  object-position: center 68% !important;
-
-
-
+  object-position: center bottom !important;
   display: block;
-
-
-
-  transform: scale(1.02);
-
-
-
+  transform: scale(1.16) translateY(3%);
   transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-
-
-
 }
 
-
-
-
-
-
-
 .story-video-banner:hover .story-bg-video {
-
-
-
-  transform: scale(1.05);
-
-
-
+  transform: scale(1.20) translateY(3%);
 }
 
 
@@ -55495,13 +55462,16 @@ body.home-page .hero-content {
   align-items: center !important;
   justify-content: center !important;
   gap: 6px !important;
+  width: auto !important;
+  min-width: max-content !important;
+  height: 32px !important;
   background: #0A0A0C !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(0, 0, 0, 0.15) !important;
   border-radius: 999px !important;
-  padding: 7px 14px !important;
+  padding: 6px 12px !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.70rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
