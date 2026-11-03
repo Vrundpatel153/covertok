@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css?v=20261103_trust_v24">
+  <link rel="stylesheet" href="styles.css?v=20261103_pdp_trust_v25">
   <link rel="stylesheet" href="catalog.css?v=20261103_rev_v20">
   <link rel="stylesheet" href="pdp.css?v=20261103_rev_v20">
   <link rel="stylesheet" href="microinteractions.css?v=20261102_noshadow_v1">
@@ -772,10 +772,24 @@
             var col = document.getElementById('colorGroup'); if (col) {
               col.style.display = (p.colors && p.colors.length > 0) ? 'block' : 'none';
             }
-            // Dynamic Warranty vs Drop Protection trust badge (Mobile covers get Drop Protection)
+            // Dynamic Warranty vs Drop Protection trust badge (Custom Luxury Badges)
             var wt = document.getElementById('pdpWarrantyTitle');
             var wd = document.getElementById('pdpWarrantyDesc');
             var wi = document.getElementById('pdpWarrantyIcon');
+            var svgDropArmor = '<svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+              '<defs><linearGradient id="pdp_grad_armor_dyn" x1="14" y1="2" x2="14" y2="26" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0EA5E9"/><stop offset="100%" stop-color="#2563EB"/></linearGradient></defs>' +
+              '<path d="M14 2.5L24 6.5V13.8C24 19.5 19.8 24.2 14 25.8C8.2 24.2 4 19.5 4 13.8V6.5L14 2.5Z" fill="url(#pdp_grad_armor_dyn)" fill-opacity="0.18" stroke="url(#pdp_grad_armor_dyn)" stroke-width="2" stroke-linejoin="round"/>' +
+              '<path d="M14 6.5L19.5 8.8V13.5C19.5 16.8 17.2 19.8 14 21C10.8 19.8 8.5 16.8 8.5 13.5V8.8L14 6.5Z" stroke="url(#pdp_grad_armor_dyn)" stroke-width="1.5" stroke-dasharray="2.5 1.5"/>' +
+              '<path d="M10.8 13.5L13 15.8L17.5 11" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>' +
+              '<circle cx="4" cy="6.5" r="1.5" fill="#0EA5E9"/><circle cx="24" cy="6.5" r="1.5" fill="#0EA5E9"/>' +
+              '</svg>';
+            var svgWarranty = '<svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+              '<defs><linearGradient id="pdp_grad_warr_dyn" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#F59E0B"/><stop offset="100%" stop-color="#D97706"/></linearGradient></defs>' +
+              '<path d="M14 2.5L24 6.5V14C24 19.5 19.8 24 14 25.5C8.2 24 4 19.5 4 14V6.5L14 2.5Z" fill="url(#pdp_grad_warr_dyn)" fill-opacity="0.18" stroke="url(#pdp_grad_warr_dyn)" stroke-width="2" stroke-linejoin="round"/>' +
+              '<circle cx="14" cy="13.5" r="4.5" stroke="url(#pdp_grad_warr_dyn)" stroke-width="1.5"/>' +
+              '<path d="M11.8 13.5L13.2 14.8L16.2 12" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+              '</svg>';
+
             if (wt) {
               var cat = (p.category || '').toLowerCase();
               var catName = (p.category_name || '').toLowerCase();
@@ -788,13 +802,19 @@
                  !title.includes('strap') && !title.includes('mount') && !title.includes('stand') && !title.includes('glass'))
               );
               if (isMobileCover) {
-                wt.textContent = '10ft Drop Protection';
-                if (wd) wd.textContent = 'Military-grade impact defense';
-                if (wi) wi.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 11 12 14 22 4"></polyline></svg>';
+                wt.textContent = '10ft Drop Certified';
+                if (wd) wd.textContent = 'MIL-STD 810G air-cushion defense';
+                if (wi) {
+                  wi.className = 'covertok-trust-icon trust-icon-armor';
+                  wi.innerHTML = svgDropArmor;
+                }
               } else {
-                wt.textContent = '1-Year Quality Warranty';
-                if (wd) wd.textContent = 'Guaranteed authentic protection';
-                if (wi) wi.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>';
+                wt.textContent = '1-Year Full Warranty';
+                if (wd) wd.textContent = '100% authentic quality guarantee';
+                if (wi) {
+                  wi.className = 'covertok-trust-icon trust-icon-warranty';
+                  wi.innerHTML = svgWarranty;
+                }
               }
             }
             var sticky = document.getElementById('stickyTitle'); if (sticky) sticky.textContent = p.title;
@@ -1402,7 +1422,7 @@
   <script src="assets/store_core.js?v=20261103_cards_v7"></script>
   <script src="assets/store_modals.js?v=20261102_cartclean_v1"></script>
   <script src="assets/store_flows.js?v=20261102_cartclean_v1"></script>
-  <script src="assets/pdp_controller.js?v=20261103_rev_v20"></script>
+  <script src="assets/pdp_controller.js?v=20261103_pdp_v26"></script>
   <script src="assets/community_reviews_controller.js"></script>
 
   <script>

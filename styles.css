@@ -56910,3 +56910,86 @@ p,
     flex-shrink: 0 !important;
   }
 }
+
+
+/* ==========================================================================
+   PDP LUXURY 2X2 REASSURANCE GRID (DESKTOP & MOBILE)
+   ========================================================================== */
+.covertok-live-trust-badges {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+  margin: 20px 0 !important;
+}
+
+.covertok-trust-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 14px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.22s ease !important;
+  box-sizing: border-box !important;
+}
+
+.covertok-trust-item:hover {
+  border-color: rgba(255, 85, 0, 0.25) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+.covertok-trust-icon {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
+  transition: transform 0.2s ease !important;
+}
+
+.covertok-trust-item:hover .covertok-trust-icon {
+  transform: scale(1.08) !important;
+}
+
+.covertok-trust-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  overflow: hidden !important;
+}
+
+.covertok-trust-meta strong {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  line-height: 1.25 !important;
+  margin-bottom: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.covertok-trust-meta span {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.72rem !important;
+  color: #64748B !important;
+  line-height: 1.35 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.trust-icon-warranty {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.05)) !important;
+  border: 1px solid rgba(245, 158, 11, 0.24) !important;
+}
