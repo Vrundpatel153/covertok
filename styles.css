@@ -29008,6 +29008,18 @@ a.footer-contact-main:hover {
 
 
 
+    scroll-padding: 0 16px;
+
+
+
+    scroll-padding-inline: 16px;
+
+
+
+    scroll-padding-left: 16px;
+
+
+
     -webkit-overflow-scrolling: touch;
 
 
@@ -54131,6 +54143,9 @@ a.footer-contact-main:hover {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     scroll-snap-type: x mandatory !important;
+    scroll-padding: 0 16px !important;
+    scroll-padding-inline: 16px !important;
+    scroll-padding-left: 16px !important;
     scrollbar-width: none !important;
     padding: 4px 16px 14px 16px !important;
     margin: 0 -16px !important;
