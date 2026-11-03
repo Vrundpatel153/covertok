@@ -361,7 +361,7 @@ html, body {
 
 .pdp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(400px, 520px) 1fr;
+  grid-template-columns: minmax(420px, 480px) minmax(0, 1fr);
   gap: clamp(28px, 3.5vw, 48px);
   align-items: start;
 }
@@ -676,29 +676,39 @@ html, body {
 }
 
 /* Upper Header Split Grid for Desktop */
+/* Upper Header for Desktop (Unified Full-Width Luxury Layout) */
 .pdp-header-split {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 1fr);
-  gap: 28px;
-  align-items: start;
-  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ECE7DF;
 }
 
 .pdp-header-left {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 }
 
 .pdp-header-left .pdp-eyebrow-row {
-  margin-bottom: 0;
+  margin-bottom: 2px;
 }
 
-.pdp-header-left .pdp-product-title {
-  margin: 0;
-  font-size: clamp(1.75rem, 2.3vw, 2.15rem);
-  line-height: 1.18;
+.pdp-header-left .pdp-product-title,
+.pdp-product-title {
+  margin: 0 0 6px 0;
+  font-family: var(--pdp-font-head, 'Manrope', sans-serif);
+  font-size: clamp(1.85rem, 2.2vw, 2.25rem);
+  font-weight: 800;
+  color: #0A0A0A;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  width: 100%;
 }
 
 .pdp-header-left .pdp-product-subtitle {
@@ -708,24 +718,28 @@ html, body {
 }
 
 .pdp-header-left .pdp-rating-row {
-  margin: 4px 0 0 0;
+  margin: 2px 0 12px 0;
   gap: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .pdp-header-right {
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 }
 
 .pdp-header-right .pdp-price-card {
-  background: #FFFFFF;
-  border: 1px solid #ECE7DF;
-  border-radius: 16px;
-  padding: 18px 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .pdp-eyebrow-row {
@@ -4449,4 +4463,26 @@ html body #siteHeader,
 .card-color-dot:only-child,
 .product-color-palette:empty {
   display: none !important;
+}
+
+/* Desktop Ergonomic Sizing & Refinements */
+@media (min-width: 769px) {
+  .pdp-model-select-wrap {
+    max-width: 380px !important;
+  }
+  .pdp-dropdown-menu {
+    max-width: 380px !important;
+  }
+  .pdp-actions-top-row {
+    max-width: 480px !important;
+  }
+  .btn-pdp-buynow {
+    max-width: 480px !important;
+  }
+  .btn-pdp-combo-add {
+    max-width: 480px !important;
+  }
+  .covertok-live-trust-badges {
+    max-width: 520px !important;
+  }
 }

@@ -224,7 +224,16 @@
     // 2. Rating & Review Count
     const ratingCountEl = document.querySelector('.pdp-review-count');
     if (ratingCountEl) {
-      ratingCountEl.textContent = `${product.rating} / 5.0 (${product.reviews_count.toLocaleString()} Verified Reviews)`;
+      const starsEl = document.querySelector('.pdp-rating-row .pdp-stars');
+    if (starsEl) {
+      const starSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+      starsEl.innerHTML = starSvg.repeat(5);
+    }
+    const scoreBigEl = document.getElementById('reviewBigScore');
+    if (scoreBigEl) {
+      scoreBigEl.textContent = (product.rating || 4.9).toFixed(1);
+    }
+    ratingCountEl.textContent = `(${product.reviews_count.toLocaleString()} Verified Reviews)`;
     }
 
     // 2A. Dynamic Trust Badge: 10ft Drop Protection for mobile covers, 1-Year Warranty for other accessories
@@ -269,18 +278,18 @@
       </svg>`;
 
       if (isMobileCover) {
-        warrantyTitle.textContent = '10ft Drop Tested';
-        if (warrantyDesc) warrantyDesc.textContent = 'Air-cushion defense';
+        warrantyTitle.textContent = '10ft Drop Protection';
+        if (warrantyDesc) warrantyDesc.textContent = 'Military-grade defense';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3L27 7.5V15.5C27 22.2 22.3 27.8 16 29.5C9.7 27.8 5 22.2 5 15.5V7.5L16 3Z" stroke="#FF5500" stroke-width="2.2" stroke-linejoin="round" fill="rgba(255, 85, 0, 0.08)"/><path d="M16 7.5L23 10.5V15.2C23 19.8 19.8 23.8 16 25.2C12.2 23.8 9 19.8 9 15.2V10.5L16 7.5Z" stroke="#FF5500" stroke-width="1.4" stroke-dasharray="2 2" stroke-linejoin="round"/><path d="M12.5 15.5L15 18L20 13" stroke="#FF5500" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 5.5V11.5C4 16.5 7.4 20.8 12 22C16.6 20.8 20 16.5 20 11.5V5.5L12 2Z" fill="rgba(255, 85, 0, 0.08)" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11.5L11 14L15.5 9.5" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
         }
       } else {
         warrantyTitle.textContent = 'Precision Fit';
         if (warrantyDesc) warrantyDesc.textContent = '100% device match';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="9" y="5" width="14" height="22" rx="3.5" stroke="#FF5500" stroke-width="2.2" fill="rgba(255, 85, 0, 0.08)"/><path d="M5 9V5H9" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 5H27V9" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 23V27H9" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 27H27V23" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="3" stroke="#FF5500" stroke-width="1.8"/><path d="M14 16L15.5 17.5L18.5 14.5" stroke="#FF5500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 5.5V11.5C4 16.5 7.4 20.8 12 22C16.6 20.8 20 16.5 20 11.5V5.5L12 2Z" fill="rgba(255, 85, 0, 0.08)" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11.5L11 14L15.5 9.5" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
         }
       }
     }
