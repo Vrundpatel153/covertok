@@ -87,6 +87,12 @@ body.combo-page-canvas {
   flex-wrap: wrap;
 }
 
+.combo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .combo-headline {
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 1.35rem;
@@ -591,13 +597,18 @@ body.combo-page-canvas {
     display: inline !important;
   }
 
-  /* Responsive Header & Search on Mobile */
+  /* Responsive Header & Search on Mobile - Compact OCD Layout */
+  .combo-discovery-header {
+    padding: 10px 0 8px !important;
+    margin-bottom: 8px !important;
+  }
+
   .combo-row-primary {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    gap: 12px !important;
-    margin-bottom: 14px !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
   }
 
   .combo-title-group {
@@ -606,25 +617,49 @@ body.combo-page-canvas {
 
   .combo-heading-wrap {
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2px !important;
+  }
+
+  .combo-title-row {
+    display: flex !important;
     align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
     gap: 8px !important;
   }
 
   .combo-headline {
-    font-size: 1.45rem !important;
+    font-size: 1.15rem !important;
     line-height: 1.2 !important;
-    letter-spacing: -0.025em !important;
+    letter-spacing: -0.02em !important;
+    font-weight: 800 !important;
     margin: 0 !important;
+    white-space: nowrap !important;
   }
 
   .combo-bundle-pill {
-    padding: 4px 10px !important;
-    font-size: 0.76rem !important;
+    padding: 3px 9px !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
   }
 
   .combo-count-pill {
-    font-size: 0.74rem !important;
+    font-size: 0.70rem !important;
+    font-weight: 600 !important;
+    color: #8C827A !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    display: block !important;
   }
 
   .combo-search-wrap {
@@ -632,21 +667,39 @@ body.combo-page-canvas {
     max-width: 100% !important;
     flex: none !important;
     height: auto !important;
-    margin-top: 2px !important;
+    margin-top: 0 !important;
   }
 
   .combo-search-box {
     width: 100% !important;
-    height: 42px !important;
+    height: 36px !important;
     background: #FFFFFF !important;
-    border: 1.5px solid #E2E8F0 !important;
+    border: 1px solid #E2DCD4 !important;
     border-radius: 999px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  .combo-search-icon {
+    left: 12px !important;
+  }
+
+  .combo-search-icon svg {
+    width: 15px !important;
+    height: 15px !important;
   }
 
   .combo-search-input {
-    font-size: 0.88rem !important;
+    font-size: 0.82rem !important;
+    height: 36px !important;
+    padding: 0 32px 0 34px !important;
     width: 100% !important;
+  }
+
+  .combo-search-clear-btn {
+    right: 8px !important;
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 14px !important;
   }
 
   body.combo-page-canvas {
@@ -662,7 +715,7 @@ body.combo-page-canvas {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    gap: 10px !important;
+    gap: 6px !important;
     width: 100% !important;
   }
 
@@ -670,7 +723,7 @@ body.combo-page-canvas {
     width: auto !important;
     flex: none !important;
     margin: 0 -16px !important;
-    padding: 4px 16px 6px 16px !important;
+    padding: 2px 16px 2px 16px !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none !important;
@@ -683,17 +736,19 @@ body.combo-page-canvas {
   .catalog-nav-bar {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 6px !important;
     width: max-content !important;
     flex-wrap: nowrap !important;
     padding: 0 !important;
   }
 
   .catalog-nav-pill {
-    padding: 6px 14px !important;
-    font-size: 0.78rem !important;
+    padding: 5px 12px !important;
+    height: 30px !important;
+    font-size: 0.75rem !important;
     flex-shrink: 0 !important;
     white-space: nowrap !important;
+    border-radius: 999px !important;
   }
 
   .combo-row-secondary .luxury-custom-sort {
@@ -701,22 +756,22 @@ body.combo-page-canvas {
     align-items: center !important;
     justify-content: flex-end !important;
     width: 100% !important;
-    margin-top: 2px !important;
-    gap: 8px !important;
+    margin-top: 0 !important;
+    gap: 6px !important;
   }
 
   .catalog-sort-label {
     display: inline-block !important;
     font-family: var(--font-body, 'Inter', sans-serif) !important;
-    font-size: 0.76rem !important;
-    color: #786B61 !important;
+    font-size: 0.72rem !important;
+    color: #8C827A !important;
     font-weight: 700 !important;
   }
 
   .luxury-sort-trigger {
-    padding: 6px 14px !important;
-    height: 35px !important;
-    font-size: 0.78rem !important;
+    padding: 4px 12px !important;
+    height: 30px !important;
+    font-size: 0.74rem !important;
     border-radius: 999px !important;
   }
 
@@ -1227,5 +1282,20 @@ body.combo-page-canvas {
     bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
     right: 16px !important;
     z-index: 10000 !important;
+  }
+}
+
+
+/* Ultra-compact Mobile Viewports (Samsung Galaxy S8/S9/S20, 360px & below) */
+@media (max-width: 380px) {
+  .combo-headline {
+    font-size: 1.05rem !important;
+  }
+  .combo-bundle-pill {
+    font-size: 0.68rem !important;
+    padding: 2.5px 7px !important;
+  }
+  .combo-search-input {
+    font-size: 0.78rem !important;
   }
 }
