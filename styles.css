@@ -56993,3 +56993,21 @@ p,
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.05)) !important;
   border: 1px solid rgba(245, 158, 11, 0.24) !important;
 }
+
+
+/* ==========================================================================
+   PDP SUBTITLE CLEANUP: HIDE EMPTY/RAW CATEGORY LEAKS
+   ========================================================================== */
+.pdp-product-subtitle {
+  display: none !important;
+}
+
+.pdp-product-subtitle:not(:empty) {
+  display: block !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.88rem !important;
+  color: #64748B !important;
+  font-weight: 500 !important;
+  margin: -4px 0 10px 0 !important;
+  line-height: 1.4 !important;
+}

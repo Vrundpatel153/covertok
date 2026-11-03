@@ -12,7 +12,7 @@ window.CovertokProducts = [
     "rating": 4.9,
     "reviews_count": 318,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "other-accessories"
     ],
@@ -136,7 +136,7 @@ window.CovertokProducts = [
     "rating": 4.8,
     "reviews_count": 206,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "other-accessories",
       "our-bestsellers"
@@ -1733,7 +1733,7 @@ window.CovertokProducts = [
     "rating": 4.7,
     "reviews_count": 290,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "new-arrivals",
       "other-accessories",
@@ -2618,7 +2618,7 @@ window.CovertokProducts = [
     "rating": 4.9,
     "reviews_count": 474,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "on-top-collections",
       "other-accessories"
@@ -2734,7 +2734,7 @@ window.CovertokProducts = [
     "rating": 4.8,
     "reviews_count": 166,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "on-top-collections",
       "other-accessories"
@@ -7931,8 +7931,8 @@ window.CovertokProducts = [
     "discount_percent": 10,
     "rating": 4.8,
     "reviews_count": 422,
-    "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category": "iphone-cases",
+    "category_name": "iPhone Covers",
     "collections": [
       "buy-three",
       "covers",
@@ -8221,8 +8221,8 @@ window.CovertokProducts = [
     "discount_percent": 10,
     "rating": 4.8,
     "reviews_count": 262,
-    "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category": "iphone-cases",
+    "category_name": "iPhone Covers",
     "collections": [
       "buy-three",
       "covers",
@@ -8661,7 +8661,7 @@ window.CovertokProducts = [
     "rating": 4.9,
     "reviews_count": 318,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "buy-three",
       "other-accessories"
@@ -10042,7 +10042,7 @@ window.CovertokProducts = [
     "rating": 4.7,
     "reviews_count": 450,
     "category": "other-accessories",
-    "category_name": "Other Accessories",
+    "category_name": "Tech Essentials",
     "collections": [
       "new-arrivals",
       "other-accessories",

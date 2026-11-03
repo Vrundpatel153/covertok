@@ -188,11 +188,25 @@
     } else {
       if (pdpTitle) pdpTitle.textContent = product.title;
       if (pdpSubtitle) {
-        pdpSubtitle.textContent = product.category_name || '';
-        pdpSubtitle.style.display = product.category_name ? 'block' : 'none';
+        if (product.subtitle) {
+          pdpSubtitle.textContent = product.subtitle;
+          pdpSubtitle.style.display = 'block';
+        } else {
+          pdpSubtitle.textContent = '';
+          pdpSubtitle.style.display = 'none';
+        }
+      } else {
+          pdpSubtitle.textContent = '';
+          pdpSubtitle.style.display = 'none';
+        }
       }
-      if (brandTag) brandTag.textContent = `${(product.category_name || 'COVERTOK').toUpperCase()} · COVERTOK ORIGINAL`;
-    }
+      if (brandTag) {
+        const cat = (product.category_name || '').toUpperCase();
+        const displayTag = (cat === 'OTHER ACCESSORIES' || cat === 'OTHER-ACCESSORIES') 
+          ? 'TECH ESSENTIALS' 
+          : (cat || 'COVERTOK');
+        brandTag.textContent = `${displayTag} • COVERTOK ORIGINAL`;
+      }
     if (stickyTitle) stickyTitle.textContent = product.title;
 
     // Toggle Capacity Group (Power Bank only)

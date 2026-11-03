@@ -12,13 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css?v=20261103_warr_v27">
+  <link rel="stylesheet" href="styles.css?v=20261103_sub_v28">
   <link rel="stylesheet" href="catalog.css?v=20261103_rev_v20">
   <link rel="stylesheet" href="pdp.css?v=20261103_rev_v20">
   <link rel="stylesheet" href="microinteractions.css?v=20261102_noshadow_v1">
 
   <!-- Products Catalog Script -->
-  <script src="assets/products_data.js?v=20261103_rev_v20"></script>
+  <script src="assets/products_data.js?v=20261103_sub_v28"></script>
   <script>
     // Synchronous Pre-Bootstrap: Universal Product Resolver supporting paths, handles, slugs, and IDs
     (function() {
@@ -729,17 +729,18 @@
               if (String(p.id) === '9888955924778') {
                 s.textContent = 'Ultra Sleek 5000mAh/10000 mAh';
                 s.style.display = 'block';
-              } else if (p.category_name) {
-                s.textContent = p.category_name;
+              } else if (p.subtitle) {
+                s.textContent = p.subtitle;
                 s.style.display = 'block';
               } else {
+                s.textContent = '';
                 s.style.display = 'none';
               }
             }
             var brandTag = document.getElementById('pdpBrandTag'); if (brandTag) {
-              brandTag.textContent = (String(p.id) === '9888955924778')
-                ? 'COVERTOK ORIGINAL'
-                : ((p.category_name || 'COVERTOK').toUpperCase() + ' · COVERTOK ORIGINAL');
+              var catTag = (p.category_name || '').toUpperCase();
+              var displayTag = (catTag === 'OTHER ACCESSORIES' || catTag === 'OTHER-ACCESSORIES') ? 'TECH ESSENTIALS' : (catTag || 'COVERTOK');
+              brandTag.textContent = displayTag + ' • COVERTOK ORIGINAL';
             }
             var pr = document.getElementById('pdpPriceDisplay'); if (pr) pr.textContent = p.price_formatted || ('₹' + (p.price || 0).toLocaleString('en-IN'));
             var op = document.getElementById('pdpOriginalPrice'); if (op) {
@@ -1426,7 +1427,7 @@
   <script src="assets/store_core.js?v=20261103_cards_v7"></script>
   <script src="assets/store_modals.js?v=20261102_cartclean_v1"></script>
   <script src="assets/store_flows.js?v=20261102_cartclean_v1"></script>
-  <script src="assets/pdp_controller.js?v=20261103_warr_v27"></script>
+  <script src="assets/pdp_controller.js?v=20261103_sub_v28"></script>
   <script src="assets/community_reviews_controller.js"></script>
 
   <script>
