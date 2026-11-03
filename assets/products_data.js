@@ -55,7 +55,7 @@ window.CovertokProducts = [
       "Smooth scrolling and tapping while mounted",
       "Daily use with a stylish, modern look"
     ],
-    "raw_html": "<p><span>Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance.</span></p>\n<p>Key Features<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>Strong Magnetic Hold \u2013 Securely attaches your phone to metal surfaces without slipping</span></li>\n<li><span>Aluminum Alloy Build \u2013 Durable, rust-resistant, and premium finish</span></li>\n<li><span>360\u00b0 Rotation \u2013 Easily adjust your phone to any viewing angle</span></li>\n<li><span>Borderless Occlusion Design \u2013 Does not block the screen or interfere with usage</span></li>\n<li><span>Metal Trend Protective Shell \u2013 Adds protection while enhancing aesthetics</span></li>\n<li><span>Slim &amp; Lightweight \u2013 No bulk, just smart functionality</span></li>\n</ul>\n<p>Perfect For<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u2714 Hands-free video watching<br><span></span></p>\n<p>\u00a0</p>\n<p><span>\u2714 Kitchen, gym, or workspace use</span></p>\n<p><span>\u2714 Smooth scrolling and tapping while mounted</span></p>\n<p><span>\u2714 Daily use with a stylish, modern look</span></p>\n<p>Enjoy your life with smarter phone protection and effortless mounting.<br><span></span></p>",
+    "raw_html": "<p><span>Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance.</span></p>\n<p>Key Features<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>Strong Magnetic Hold \u2013 Securely attaches your phone to metal surfaces without slipping</span></li>\n<li><span>Aluminum Alloy Build \u2013 Durable, rust-resistant, and premium finish</span></li>\n<li><span>360\u00b0 Rotation \u2013 Easily adjust your phone to any viewing angle</span></li>\n<li><span>Borderless Occlusion Design \u2013 Does not block the screen or interfere with usage</span></li>\n<li><span>Metal Trend Protective Shell \u2013 Adds protection while enhancing aesthetics</span></li>\n<li><span>Slim &amp; Lightweight \u2013 No bulk, just smart functionality</span></li>\n</ul>\n<p>Perfect For<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p> Hands-free video watching<br><span></span></p>\n<p>\u00a0</p>\n<p><span> Kitchen, gym, or workspace use</span></p>\n<p><span> Smooth scrolling and tapping while mounted</span></p>\n<p><span> Daily use with a stylish, modern look</span></p>\n<p>Enjoy your life with smarter phone protection and effortless mounting.<br><span></span></p>",
     "in_stock": true,
     "features": [
       {
@@ -559,7 +559,7 @@ window.CovertokProducts = [
       "Sleek and minimal design with the Rhode aesthetic",
       "Compatible with various iPhone models"
     ],
-    "raw_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function \u2013 a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> \u2022 Slim, protective cover for everyday use</span></div>\n<div><span> \u2022 Available in multiple colors to match your vibe</span></div>\n<div><span> \u2022 Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> \u2022 Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades \u2013 Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso\u2013 to keep your phone case as stylish as your lips.</div>",
+    "raw_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function \u2013 a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div> Features:</div>\n<div><span> \u2022 Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> \u2022 Slim, protective cover for everyday use</span></div>\n<div><span> \u2022 Available in multiple colors to match your vibe</span></div>\n<div><span> \u2022 Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> \u2022 Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades \u2013 Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso\u2013 to keep your phone case as stylish as your lips.</div>",
     "in_stock": true,
     "features": [
       {
@@ -986,7 +986,7 @@ window.CovertokProducts = [
       "\ufe0f Easy snap-on installation",
       "\ufe0f Ideal for daily use"
     ],
-    "raw_html": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>\u2714\ufe0f Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>\u2714\ufe0f Slim &amp; lightweight design</span></li>\n<li><span>\u2714\ufe0f Metal camera ring for lens protection</span></li>\n<li><span>\u2714\ufe0f Scratch &amp; fingerprint resistant</span></li>\n<li><span>\u2714\ufe0f Precise cut-outs for camera &amp; ports</span></li>\n<li><span>\u2714\ufe0f Easy snap-on installation</span></li>\n<li><span>\u2714\ufe0f Ideal for daily use</span></li>\n</ul>\n<p>\u00a0</p>\n<p>Protection Level<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p>\u00a0</p>",
+    "raw_html": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>\ufe0f Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>\ufe0f Slim &amp; lightweight design</span></li>\n<li><span>\ufe0f Metal camera ring for lens protection</span></li>\n<li><span>\ufe0f Scratch &amp; fingerprint resistant</span></li>\n<li><span>\ufe0f Precise cut-outs for camera &amp; ports</span></li>\n<li><span>\ufe0f Easy snap-on installation</span></li>\n<li><span>\ufe0f Ideal for daily use</span></li>\n</ul>\n<p>\u00a0</p>\n<p>Protection Level<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p>\u00a0</p>",
     "in_stock": true,
     "features": [
       {
@@ -1155,7 +1155,7 @@ window.CovertokProducts = [
       "iPhone 16 Pro",
       "iPhone 16 Pro Max"
     ],
-    "raw_html": "<p>Give your iPhone 16 Pro or 17 Pro Max the protection it deserves\u2014without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 16 & 15 series</p>\n<p>\u2728 Key Features<br> \u2022 Premium Aluminium Body Frame \u2013 Strong, durable, and stylish<br> \u2022 Transparent Middle Back \u2013 Keeps the original iPhone 16 Pro/Pro Max design visible<br> \u2022 Perfect Fit \u2013 Designed exclusively for iPhone 16 Pro &amp; 17 Pro Max<br> \u2022 Sleek &amp; Lightweight \u2013 Protection without bulk<br> \u2022 Raised Camera Protection \u2013 Prevents scratches on lens<br> \u2022 Anti-Slip Grip \u2013 Comfortable and secure to hold</p>\n<p>\ud83d\udcf1 Compatibility<br> \u2022 iPhone 16 Pro<br> \u2022 iPhone 16 Pro Max</p>",
+    "raw_html": "<p>Give your iPhone 16 Pro or 17 Pro Max the protection it deserves\u2014without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 16 & 15 series</p>\n<p> Key Features<br> \u2022 Premium Aluminium Body Frame \u2013 Strong, durable, and stylish<br> \u2022 Transparent Middle Back \u2013 Keeps the original iPhone 16 Pro/Pro Max design visible<br> \u2022 Perfect Fit \u2013 Designed exclusively for iPhone 16 Pro &amp; 17 Pro Max<br> \u2022 Sleek &amp; Lightweight \u2013 Protection without bulk<br> \u2022 Raised Camera Protection \u2013 Prevents scratches on lens<br> \u2022 Anti-Slip Grip \u2013 Comfortable and secure to hold</p>\n<p> Compatibility<br> \u2022 iPhone 16 Pro<br> \u2022 iPhone 16 Pro Max</p>",
     "in_stock": true,
     "features": [
       {
@@ -1369,7 +1369,7 @@ window.CovertokProducts = [
       "Lightweight, flexible & skin-friendly",
       "Available in multiple elegant shades"
     ],
-    "raw_html": "<p>Upgrade your smartwatch look with our Premium Stainless Steel Milanese Loop Strap and magnetic adjustable band \u2013 a perfect blend of elegance, durability, and comfort. Crafted from high-grade stainless steel mesh, this magnetic loop band ensures a secure fit while adding a touch of luxury to your wrist.</p>\n<p>Available in stunning colors \u2013 Rose Gold, Gold, Black, Silver, and more \u2013 this strap complements every outfit and occasion.<br>Compatible with major smartwatch models, it features easy installation, strong magnetic closure, and a breathable mesh design for all-day comfort.</p>\n<p>\u2705 Premium stainless steel material<br>\u2705 Magnetic adjustable clasp for a perfect fit<br>\u2705 Lightweight, flexible &amp; skin-friendly<br>\u2705 Available in multiple elegant shades</p>\n<p>Perfect for both men and women who value style and quality.</p>",
+    "raw_html": "<p>Upgrade your smartwatch look with our Premium Stainless Steel Milanese Loop Strap and magnetic adjustable band \u2013 a perfect blend of elegance, durability, and comfort. Crafted from high-grade stainless steel mesh, this magnetic loop band ensures a secure fit while adding a touch of luxury to your wrist.</p>\n<p>Available in stunning colors \u2013 Rose Gold, Gold, Black, Silver, and more \u2013 this strap complements every outfit and occasion.<br>Compatible with major smartwatch models, it features easy installation, strong magnetic closure, and a breathable mesh design for all-day comfort.</p>\n<p> Premium stainless steel material<br> Magnetic adjustable clasp for a perfect fit<br> Lightweight, flexible &amp; skin-friendly<br> Available in multiple elegant shades</p>\n<p>Perfect for both men and women who value style and quality.</p>",
     "in_stock": true,
     "features": [
       {
@@ -1652,7 +1652,7 @@ window.CovertokProducts = [
       "Scratch-resistant back to keep your phone looking new",
       "Available in trendy pastel shades \u2013 pink, blue, cream, lilac & more"
     ],
-    "raw_html": "<p>Upgrade your iPhone with the Wavy Edge Transparent Case \u2013 a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone\u2019s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection.</p>\n<p>\u2714 Transparent clear case for iPhone (various models available)<br>\u2714 Shockproof pastel bumper with stylish wavy edges<br>\u2714 Lightweight, slim-fit &amp; comfortable to hold<br>\u2714 Scratch-resistant back to keep your phone looking new<br>\u2714 Available in trendy pastel shades \u2013 pink, blue, cream, lilac &amp; more</p>\n<p>Perfect for those who love a chic, minimal, and protective iPhone case.</p>",
+    "raw_html": "<p>Upgrade your iPhone with the Wavy Edge Transparent Case \u2013 a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone\u2019s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection.</p>\n<p> Transparent clear case for iPhone (various models available)<br> Shockproof pastel bumper with stylish wavy edges<br> Lightweight, slim-fit &amp; comfortable to hold<br> Scratch-resistant back to keep your phone looking new<br> Available in trendy pastel shades \u2013 pink, blue, cream, lilac &amp; more</p>\n<p>Perfect for those who love a chic, minimal, and protective iPhone case.</p>",
     "in_stock": true,
     "features": [
       {
@@ -1978,10 +1978,10 @@ window.CovertokProducts = [
       "Digital LED Display \u2013 Real-time battery percentage indicator.",
       "Fast Charging Output \u2013 Quick and efficient charging whenever you need it.",
       "Premium Build Quality \u2013 Durable, elegant, and made for everyday use.",
-      "\ud83d\udcf1 Magnetic Attachment \u2013 Snaps onto your phone securely.",
-      "\u26a1 Wireless Charging \u2013 Say goodbye to messy cables."
+      " Magnetic Attachment \u2013 Snaps onto your phone securely.",
+      " Wireless Charging \u2013 Say goodbye to messy cables."
     ],
-    "raw_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles \u2013 lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>\u2705 5000mAh High Capacity \u2013 Enough to keep your devices powered all day.<br>\u2705 Slim &amp; Stylish Design \u2013 Fits easily in your pocket or bag.<br>\u2705 Digital LED Display \u2013 Real-time battery percentage indicator.<br>\u2705 Fast Charging Output \u2013 Quick and efficient charging whenever you need it.<br>\u2705 Premium Build Quality \u2013 Durable, elegant, and made for everyday use.</p>\n<p>\u2022 \ud83d\udcf1 Magnetic Attachment \u2013 Snaps onto your phone securely.<br> \u2022 \u26a1 Wireless Charging \u2013 Say goodbye to messy cables.</p>\n<p>\u00a0</p>\n<ul>\n<li><span>1-Month Warranty \u2013 your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p>\u00a0</p>",
+    "raw_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles \u2013 lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p> 5000mAh High Capacity \u2013 Enough to keep your devices powered all day.<br> Slim &amp; Stylish Design \u2013 Fits easily in your pocket or bag.<br> Digital LED Display \u2013 Real-time battery percentage indicator.<br> Fast Charging Output \u2013 Quick and efficient charging whenever you need it.<br> Premium Build Quality \u2013 Durable, elegant, and made for everyday use.</p>\n<p>\u2022  Magnetic Attachment \u2013 Snaps onto your phone securely.<br> \u2022  Wireless Charging \u2013 Say goodbye to messy cables.</p>\n<p>\u00a0</p>\n<ul>\n<li><span>1-Month Warranty \u2013 your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p>\u00a0</p>",
     "in_stock": true,
     "features": [
       {
@@ -2537,7 +2537,7 @@ window.CovertokProducts = [
       "Lightweight yet durable build",
       "Perfect gift for fashion lovers"
     ],
-    "raw_html": "<p>Elevate your phone\u2019s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling.</p>\n<div><br></div>\n<div>\u2705 Features:</div>\n<div><span> \u2022 Unique textured leather-style back with 3D bow design</span></div>\n<div><span> \u2022 Detachable pearl bracelet holder for a chic look &amp; secure grip</span></div>\n<div><span> \u2022 Shockproof edges for daily protection</span></div>\n<div><span> \u2022 Lightweight yet durable build</span></div>\n<div><span> \u2022 Perfect gift for fashion lovers</span></div>\n<div><br></div>\n<div>Available in multiple colors \u2013 Black, Gold, Pink, and White \u2013 to match your style.</div>",
+    "raw_html": "<p>Elevate your phone\u2019s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling.</p>\n<div><br></div>\n<div> Features:</div>\n<div><span> \u2022 Unique textured leather-style back with 3D bow design</span></div>\n<div><span> \u2022 Detachable pearl bracelet holder for a chic look &amp; secure grip</span></div>\n<div><span> \u2022 Shockproof edges for daily protection</span></div>\n<div><span> \u2022 Lightweight yet durable build</span></div>\n<div><span> \u2022 Perfect gift for fashion lovers</span></div>\n<div><br></div>\n<div>Available in multiple colors \u2013 Black, Gold, Pink, and White \u2013 to match your style.</div>",
     "in_stock": true,
     "features": [
       {
@@ -2913,7 +2913,7 @@ window.CovertokProducts = [
       "Easy to install with secure screw-lock frame",
       "Ideal for sports, fitness, and daily use"
     ],
-    "raw_html": "<p>Description:<br>Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch\u2019s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection.</p>\n<p>\u2705 360\u00b0 rugged shockproof protection<br>\u2705 Transparent case with stylish orange strap<br>\u2705 Comfortable, sweat-resistant silicone band<br>\u2705 Easy to install with secure screw-lock frame<br>\u2705 Ideal for sports, fitness, and daily use</p>",
+    "raw_html": "<p>Description:<br>Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch\u2019s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection.</p>\n<p> 360\u00b0 rugged shockproof protection<br> Transparent case with stylish orange strap<br> Comfortable, sweat-resistant silicone band<br> Easy to install with secure screw-lock frame<br> Ideal for sports, fitness, and daily use</p>",
     "in_stock": true,
     "features": [
       {
@@ -3031,7 +3031,7 @@ window.CovertokProducts = [
       "Sweat-resistant & comfortable for long wear",
       "Easy to install with screw-secured frame"
     ],
-    "raw_html": "<p>Description:<br>Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch\u2019s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge.</p>\n<p>\u2705 Shockproof &amp; scratch-resistant protective case<br>\u2705 Transparent body with striking orange strap<br>\u2705 Sweat-resistant &amp; comfortable for long wear<br>\u2705 Easy to install with screw-secured frame<br>\u2705 Perfect for sports, fitness &amp; daily use</p>\n<p>\u00a0</p>",
+    "raw_html": "<p>Description:<br>Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch\u2019s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge.</p>\n<p> Shockproof &amp; scratch-resistant protective case<br> Transparent body with striking orange strap<br> Sweat-resistant &amp; comfortable for long wear<br> Easy to install with screw-secured frame<br> Perfect for sports, fitness &amp; daily use</p>\n<p>\u00a0</p>",
     "in_stock": true,
     "features": [
       {
@@ -3149,7 +3149,7 @@ window.CovertokProducts = [
       "Easy installation with screw-secured frame",
       "Compatible with multiple Apple Watch sizes"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch\u2019s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360\u00b0 protection and premium comfort.</p>\n<p>\u2705 Shockproof &amp; Scratch-resistant<br>\u2705 Transparent modern design<br>\u2705 Easy installation with screw-secured frame<br>\u2705 Compatible with multiple Apple Watch sizes</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch\u2019s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360\u00b0 protection and premium comfort.</p>\n<p> Shockproof &amp; Scratch-resistant<br> Transparent modern design<br> Easy installation with screw-secured frame<br> Compatible with multiple Apple Watch sizes</p>",
     "in_stock": true,
     "features": [
       {
@@ -3262,13 +3262,13 @@ window.CovertokProducts = [
     "model_label": "Select Case Size:",
     "description": "Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear. The transparent case highlights the watch\u2019s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit\u2014perfect for workouts, outdoor adventures, or daily use.",
     "bullets": [
-      "\u26a1 Sleek. Strong. Built to last. Protect your smartwatch in style."
+      " Sleek. Strong. Built to last. Protect your smartwatch in style."
     ],
-    "raw_html": "<p>Description:<br>Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear.</p>\n<p>The transparent case highlights the watch\u2019s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit\u2014perfect for workouts, outdoor adventures, or daily use.</p>\n<p>\u26a1 Sleek. Strong. Built to last. Protect your smartwatch in style.</p>",
+    "raw_html": "<p>Description:<br>Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear.</p>\n<p>The transparent case highlights the watch\u2019s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit\u2014perfect for workouts, outdoor adventures, or daily use.</p>\n<p> Sleek. Strong. Built to last. Protect your smartwatch in style.</p>",
     "in_stock": true,
     "features": [
       {
-        "title": "\u26a1 Sleek. Strong.",
+        "title": " Sleek. Strong.",
         "subtitle": "Built to last. Protect your smartwatch in style.",
         "icon": "shield"
       },
@@ -3417,7 +3417,7 @@ window.CovertokProducts = [
     "bullets": [
       "Available in multiple pastel colors to match your mood and style."
     ],
-    "raw_html": "<p>Description:<br>Add a touch of charm to your phone with our pastel heart print silicone case. Designed in soothing shades of cream, pink, and mint green, this case blends elegance with everyday protection. The minimalist heart pattern gives it a cute and stylish vibe, perfect for anyone who loves soft, aesthetic accessories.</p>\n<p>Made from high-quality silicone, it provides a comfortable grip, anti-scratch protection, and shock resistance against everyday bumps and drops. Slim and lightweight, it fits snugly on your phone while keeping all buttons and ports easily accessible.</p>\n<p>\u2728 Available in multiple pastel colors to match your mood and style.</p>",
+    "raw_html": "<p>Description:<br>Add a touch of charm to your phone with our pastel heart print silicone case. Designed in soothing shades of cream, pink, and mint green, this case blends elegance with everyday protection. The minimalist heart pattern gives it a cute and stylish vibe, perfect for anyone who loves soft, aesthetic accessories.</p>\n<p>Made from high-quality silicone, it provides a comfortable grip, anti-scratch protection, and shock resistance against everyday bumps and drops. Slim and lightweight, it fits snugly on your phone while keeping all buttons and ports easily accessible.</p>\n<p> Available in multiple pastel colors to match your mood and style.</p>",
     "in_stock": true,
     "features": [
       {
@@ -3547,7 +3547,7 @@ window.CovertokProducts = [
       "Strong magnetic clasp for secure fit",
       "Durable, flexible, and comfortable for everyday wear"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
     "in_stock": true,
     "features": [
       {
@@ -3678,7 +3678,7 @@ window.CovertokProducts = [
       "Strong magnetic clasp for secure fit",
       "Durable, flexible, and comfortable for everyday wear"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
     "in_stock": true,
     "features": [
       {
@@ -3809,7 +3809,7 @@ window.CovertokProducts = [
       "Strong magnetic clasp for secure fit",
       "Durable, flexible, and comfortable for everyday wear"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
     "in_stock": true,
     "features": [
       {
@@ -3938,7 +3938,7 @@ window.CovertokProducts = [
       "Strong magnetic clasp for secure fit",
       "Durable, flexible, and comfortable for everyday wear"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
     "in_stock": true,
     "features": [
       {
@@ -4067,7 +4067,7 @@ window.CovertokProducts = [
       "Strong magnetic clasp for secure fit",
       "Durable, flexible, and comfortable for everyday wear"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
     "in_stock": true,
     "features": [
       {
@@ -4197,7 +4197,7 @@ window.CovertokProducts = [
       "Strong magnetic clasp for secure fit",
       "Durable, flexible, and comfortable for everyday wear"
     ],
-    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
     "in_stock": true,
     "features": [
       {
@@ -4360,7 +4360,7 @@ window.CovertokProducts = [
       "Available in White, Black, and Brown",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div>\ud83d\udcdd Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Adorable plush teddy bear design on the back</span></div>\n<div><span> \u2022 Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> \u2022 Shock-absorbing and scratch-resistant</span></div>\n<div><span> \u2022 Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> \u2022 Lightweight yet protective design</span></div>\n<div><span> \u2022 Available in White, Black, and Brown</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. \ud83e\uddf8\ud83d\udc96</div>\n<p>\u00a0</p>",
+    "raw_html": "<div> Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div> Features:</div>\n<div><span> \u2022 Adorable plush teddy bear design on the back</span></div>\n<div><span> \u2022 Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> \u2022 Shock-absorbing and scratch-resistant</span></div>\n<div><span> \u2022 Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> \u2022 Lightweight yet protective design</span></div>\n<div><span> \u2022 Available in White, Black, and Brown</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. </div>\n<p>\u00a0</p>",
     "in_stock": true,
     "features": [
       {
@@ -4489,7 +4489,7 @@ window.CovertokProducts = [
       "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
       "Comfortable, durable, and easy to snap on/off"
     ],
-    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
     "in_stock": true,
     "features": [
       {
@@ -4625,7 +4625,7 @@ window.CovertokProducts = [
       "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
       "Comfortable, durable, and easy to snap on/off"
     ],
-    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
     "in_stock": true,
     "features": [
       {
@@ -4758,7 +4758,7 @@ window.CovertokProducts = [
       "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
       "Comfortable, durable, and easy to snap on/off"
     ],
-    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
     "in_stock": true,
     "features": [
       {
@@ -4887,7 +4887,7 @@ window.CovertokProducts = [
       "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
       "Comfortable, durable, and easy to snap on/off"
     ],
-    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
     "in_stock": true,
     "features": [
       {
@@ -5019,7 +5019,7 @@ window.CovertokProducts = [
       "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
       "Comfortable, durable, and easy to snap on/off"
     ],
-    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
     "in_stock": true,
     "features": [
       {
@@ -5090,7 +5090,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870560330026",
-    "handle": "glow-sand-airpods-cases-playful-luminous-\ud83c\udf19\u2728",
+    "handle": "glow-sand-airpods-cases-playful-luminous-",
     "title": "Glow In The Dark Sand AirPods Cases \u2013 Playful & Luminous",
     "price": 699,
     "price_formatted": "Rs. 699.00",
@@ -5262,7 +5262,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870559183146",
-    "handle": "crystal-butterfly-beaded-phone-charm-\u2728",
+    "handle": "crystal-butterfly-beaded-phone-charm-",
     "title": "Crystal Butterfly Beaded Phone Charm",
     "price": 249,
     "price_formatted": "Rs. 249.00",
@@ -5388,7 +5388,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870558363946",
-    "handle": "pastel-beaded-phone-charm-\u2728\ud83c\udf38",
+    "handle": "pastel-beaded-phone-charm-",
     "title": "Pastel Beaded Phone Charm",
     "price": 249,
     "price_formatted": "Rs. 249.00",
@@ -5497,7 +5497,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870558036266",
-    "handle": "crystal-beaded-phone-charm-\u2728",
+    "handle": "crystal-beaded-phone-charm-",
     "title": "Crystal Phone Charm",
     "price": 249,
     "price_formatted": "Rs. 249.00",
@@ -5609,8 +5609,8 @@ window.CovertokProducts = [
   },
   {
     "id": "9870555054378",
-    "handle": "pink-beaded-heart-phone-charm-\ud83c\udf80\ud83d\udc96",
-    "title": "Pink Beaded Heart Phone Charm \ud83c\udf80\ud83d\udc96",
+    "handle": "pink-beaded-heart-phone-charm-",
+    "title": "Pink Beaded Heart Phone Charm ",
     "price": 249,
     "price_formatted": "Rs. 249.00",
     "original_price": 499,
@@ -5685,7 +5685,7 @@ window.CovertokProducts = [
       },
       {
         "label": "In The Box",
-        "value": "1 \u00d7 Covertok Pink Beaded Heart Phone Charm \ud83c\udf80\ud83d\udc96"
+        "value": "1 \u00d7 Covertok Pink Beaded Heart Phone Charm "
       },
       {
         "label": "Warranty",
@@ -5718,7 +5718,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870554038570",
-    "handle": "ice-cream-sprinkle-iphone-charger-case-set-\ud83c\udf66\u2728",
+    "handle": "ice-cream-sprinkle-iphone-charger-case-set-",
     "title": "Ice Cream Sprinkle iPhone Charger Case Set",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -5828,7 +5828,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870550761770",
-    "handle": "bow-pearl-iphone-charger-case-set-\u2728\ud83c\udf80",
+    "handle": "bow-pearl-iphone-charger-case-set-",
     "title": "Bow Pearl iPhone Charger Case Set",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -5937,7 +5937,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870548533546",
-    "handle": "heart-iphone-charger-case-set-with-matching-cable-\ud83d\udc96\u2728",
+    "handle": "heart-iphone-charger-case-set-with-matching-cable-",
     "title": "Heart iPhone Charger Case Set with Matching Cable",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -6099,7 +6099,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870544142634",
-    "handle": "glitter-bow-iphone-charger-case-\u2728\ud83c\udf80",
+    "handle": "glitter-bow-iphone-charger-case-",
     "title": "Glitter Bow iPhone Charger Case",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -6207,7 +6207,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870520320298",
-    "handle": "metallic-coil-iphone-charger-case\u26a1\u2728",
+    "handle": "metallic-coil-iphone-charger-case",
     "title": "Metallic Coil iPhone Charger Case",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -6320,7 +6320,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870514487594",
-    "handle": "blue-gingham-iphone-charger-case\u2728\ud83d\udd0c",
+    "handle": "blue-gingham-iphone-charger-case",
     "title": "Blue Gingham iPhone Charger Case",
     "price": 499,
     "price_formatted": "Rs. 499.00",
@@ -6355,9 +6355,9 @@ window.CovertokProducts = [
     ],
     "models": [],
     "model_label": "Select Model",
-    "description": "Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag\u2014charging has never looked this good! \ud83d\udc99\ud83d\ude97",
+    "description": "Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag\u2014charging has never looked this good! ",
     "bullets": [],
-    "raw_html": "<p>Description:<br>Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag\u2014charging has never looked this good! \ud83d\udc99\ud83d\ude97</p>",
+    "raw_html": "<p>Description:<br>Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag\u2014charging has never looked this good! </p>",
     "in_stock": true,
     "features": [
       {
@@ -6487,7 +6487,7 @@ window.CovertokProducts = [
     "model_label": "Select Model",
     "description": "Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.",
     "bullets": [],
-    "raw_html": "<p>Description:Cute &amp; Protective \ud83c\udf80\ud83c\udfa7<br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
+    "raw_html": "<p>Description:Cute &amp; Protective <br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
     "in_stock": true,
     "features": [
       {
@@ -6558,7 +6558,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870484341034",
-    "handle": "title-butterfly-charm-airpods-case-\u2728-copy",
+    "handle": "title-butterfly-charm-airpods-case--copy",
     "title": "Silicone AirPods Cases with Rope Strap \u2013",
     "price": 599,
     "price_formatted": "Rs. 599.00",
@@ -6654,7 +6654,7 @@ window.CovertokProducts = [
     "model_label": "Select Case Size:",
     "description": "Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.",
     "bullets": [],
-    "raw_html": "<p>Description:Colorful &amp; Durable \ud83c\udfa7\u2728<br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
+    "raw_html": "<p>Description:Colorful &amp; Durable <br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
     "in_stock": true,
     "features": [
       {
@@ -6725,7 +6725,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870479524138",
-    "handle": "pearl-charm-bow-airpods-cases-\ud83c\udf80\u2728-copy",
+    "handle": "pearl-charm-bow-airpods-cases--copy",
     "title": "Butterfly Charm AirPods Case",
     "price": 549,
     "price_formatted": "Rs. 549.00",
@@ -6856,7 +6856,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870479425834",
-    "handle": "pearl-charm-bow-airpods-cases-\ud83c\udf80\u2728",
+    "handle": "pearl-charm-bow-airpods-cases-",
     "title": "Pearl Charm Bow AirPods Cases",
     "price": 549,
     "price_formatted": "Rs. 549.00",
@@ -6987,7 +6987,7 @@ window.CovertokProducts = [
   },
   {
     "id": "9870469464362",
-    "handle": "silicone-world-map-travel-phone-case\u2708\ufe0f\ud83c\udf0d-copy",
+    "handle": "silicone-world-map-travel-phone-case\ufe0f-copy",
     "title": "Holographic Bow Glitter Case With Charm",
     "price": 799,
     "price_formatted": "Rs. 799.00",
@@ -7535,9 +7535,9 @@ window.CovertokProducts = [
       "iPhone 13"
     ],
     "model_label": "Select Device Model:",
-    "description": "Coffee & Cozy Vibes Phone Cases \u2615\u2728 Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood\u2014whether it\u2019s \u201cNo Coffee, No Workie\u201d for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! \ud83c\udf38\ud83d\udcf1",
+    "description": "Coffee & Cozy Vibes Phone Cases  Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood\u2014whether it\u2019s \u201cNo Coffee, No Workie\u201d for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! ",
     "bullets": [],
-    "raw_html": "<p>Coffee &amp; Cozy Vibes Phone Cases \u2615\u2728<br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood\u2014whether it\u2019s \u201cNo Coffee, No Workie\u201d for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! \ud83c\udf38\ud83d\udcf1</p>",
+    "raw_html": "<p>Coffee &amp; Cozy Vibes Phone Cases <br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood\u2014whether it\u2019s \u201cNo Coffee, No Workie\u201d for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! </p>",
     "in_stock": true,
     "features": [
       {
@@ -7851,7 +7851,7 @@ window.CovertokProducts = [
       "Lightweight and protective without bulk",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Cute bear sketch design with heart detail</span></div>\n<div><span> \u2022 Comes with a matching plush bear keychain</span></div>\n<div><span> \u2022 Soft-touch material with a comfortable grip</span></div>\n<div><span> \u2022 Shock-absorbent and scratch-resistant</span></div>\n<div><span> \u2022 Lightweight and protective without bulk</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. \ud83d\udc3b\u2728</div>",
+    "raw_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div> Features:</div>\n<div><span> \u2022 Cute bear sketch design with heart detail</span></div>\n<div><span> \u2022 Comes with a matching plush bear keychain</span></div>\n<div><span> \u2022 Soft-touch material with a comfortable grip</span></div>\n<div><span> \u2022 Shock-absorbent and scratch-resistant</span></div>\n<div><span> \u2022 Lightweight and protective without bulk</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. </div>",
     "in_stock": true,
     "features": [
       {
@@ -7986,7 +7986,7 @@ window.CovertokProducts = [
       "Compatible with multiple iPhone models",
       "This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag."
     ],
-    "raw_html": "<div>Cream with Gold Chain &amp; Mini Pocket,</div>\n<div>Stay stylish and organized with the Luxury Crossbody Wallet Phone Case. Designed in a chic cream finish with a contrasting brown mini pocket and gold hardware, this case is the perfect blend of fashion and function. The attached gold chain lets you wear it crossbody or over the shoulder, keeping your phone and essentials close at all times.</div>\n<div></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Elegant cream case with brown pocket and gold clasp</span></div>\n<div><span> \u2022 Built-in mini wallet pocket for cards, cash, or small items</span></div>\n<div><span> \u2022 Detachable gold chain for hands-free carrying</span></div>\n<div><span> \u2022 Durable, protective design against scratches and drops</span></div>\n<div><span> \u2022 Perfect for casual outings, shopping trips, or nights out</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag.</div>",
+    "raw_html": "<div>Cream with Gold Chain &amp; Mini Pocket,</div>\n<div>Stay stylish and organized with the Luxury Crossbody Wallet Phone Case. Designed in a chic cream finish with a contrasting brown mini pocket and gold hardware, this case is the perfect blend of fashion and function. The attached gold chain lets you wear it crossbody or over the shoulder, keeping your phone and essentials close at all times.</div>\n<div></div>\n<div> Features:</div>\n<div><span> \u2022 Elegant cream case with brown pocket and gold clasp</span></div>\n<div><span> \u2022 Built-in mini wallet pocket for cards, cash, or small items</span></div>\n<div><span> \u2022 Detachable gold chain for hands-free carrying</span></div>\n<div><span> \u2022 Durable, protective design against scratches and drops</span></div>\n<div><span> \u2022 Perfect for casual outings, shopping trips, or nights out</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag.</div>",
     "in_stock": true,
     "features": [
       {
@@ -8141,7 +8141,7 @@ window.CovertokProducts = [
       "Available in Pink, Black, and Cream White",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div>Stylish Protective Cover with 3D Heart Accents</div>\n<div>Add a touch of elegance and playfulness to your phone with the Silver Love Heart Phone Case. Featuring raised metallic-effect heart designs, this case blends fashion and protection in one. Its slim fit provides a comfortable grip while keeping your phone safe from scratches, drops, and dust.</div>\n<div></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Unique 3D silver heart accents for a trendy look</span></div>\n<div><span> \u2022 Durable and protective against everyday bumps</span></div>\n<div><span> \u2022 Slim, lightweight, and comfortable to hold</span></div>\n<div><span> \u2022 Available in Pink, Black, and Cream White</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves chic, girly, and fashion-forward accessories, this case is both protective and eye-catching \u2013 a must-have for your phone.</div>",
+    "raw_html": "<div>Stylish Protective Cover with 3D Heart Accents</div>\n<div>Add a touch of elegance and playfulness to your phone with the Silver Love Heart Phone Case. Featuring raised metallic-effect heart designs, this case blends fashion and protection in one. Its slim fit provides a comfortable grip while keeping your phone safe from scratches, drops, and dust.</div>\n<div></div>\n<div> Features:</div>\n<div><span> \u2022 Unique 3D silver heart accents for a trendy look</span></div>\n<div><span> \u2022 Durable and protective against everyday bumps</span></div>\n<div><span> \u2022 Slim, lightweight, and comfortable to hold</span></div>\n<div><span> \u2022 Available in Pink, Black, and Cream White</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves chic, girly, and fashion-forward accessories, this case is both protective and eye-catching \u2013 a must-have for your phone.</div>",
     "in_stock": true,
     "features": [
       {
@@ -8294,7 +8294,7 @@ window.CovertokProducts = [
       "Elegant and practical \u2013 perfect for daily wear or special outings",
       "Compatible with various iPhone models"
     ],
-    "raw_html": "<div>Quilted Design with Chain Strap,</div>\n<div>Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience.</div>\n<div><br></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Quilted faux-leather design with luxe gold hardware</span></div>\n<div><span> \u2022 Detachable crossbody chain strap for hands-free carry</span></div>\n<div><span> \u2022 Built-in mini wallet pocket with secure clasp</span></div>\n<div><span> \u2022 Shock-resistant protective phone cover</span></div>\n<div><span> \u2022 Elegant and practical \u2013 perfect for daily wear or special outings</span></div>\n<div><span> \u2022 Compatible with various iPhone models</span></div>\n<div><br></div>\n<div>This case doubles as a stylish mini bag and a protective phone cover \u2013 the perfect blend of fashion and function for modern lifestyles.</div>",
+    "raw_html": "<div>Quilted Design with Chain Strap,</div>\n<div>Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience.</div>\n<div><br></div>\n<div> Features:</div>\n<div><span> \u2022 Quilted faux-leather design with luxe gold hardware</span></div>\n<div><span> \u2022 Detachable crossbody chain strap for hands-free carry</span></div>\n<div><span> \u2022 Built-in mini wallet pocket with secure clasp</span></div>\n<div><span> \u2022 Shock-resistant protective phone cover</span></div>\n<div><span> \u2022 Elegant and practical \u2013 perfect for daily wear or special outings</span></div>\n<div><span> \u2022 Compatible with various iPhone models</span></div>\n<div><br></div>\n<div>This case doubles as a stylish mini bag and a protective phone cover \u2013 the perfect blend of fashion and function for modern lifestyles.</div>",
     "in_stock": true,
     "features": [
       {
@@ -8429,7 +8429,7 @@ window.CovertokProducts = [
       "Perfect blend of fashion and functionality",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div>Unleash your wild side with the Leopard Print Transparent Phone Case. Designed with a bold black leopard pattern on a clear base, this case adds a trendy and fierce look to your phone while keeping its natural beauty visible. Made with durable material, it offers everyday protection against scratches, drops, and dust \u2013 without compromising on style.</div>\n<div><br></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Stylish black leopard print design on a transparent case</span></div>\n<div><span> \u2022 Slim, lightweight &amp; comfortable grip</span></div>\n<div><span> \u2022 Scratch-resistant &amp; shock-absorbent protection</span></div>\n<div><span> \u2022 Raised edges to protect camera &amp; screen</span></div>\n<div><span> \u2022 Perfect blend of fashion and functionality</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>",
+    "raw_html": "<div>Unleash your wild side with the Leopard Print Transparent Phone Case. Designed with a bold black leopard pattern on a clear base, this case adds a trendy and fierce look to your phone while keeping its natural beauty visible. Made with durable material, it offers everyday protection against scratches, drops, and dust \u2013 without compromising on style.</div>\n<div><br></div>\n<div> Features:</div>\n<div><span> \u2022 Stylish black leopard print design on a transparent case</span></div>\n<div><span> \u2022 Slim, lightweight &amp; comfortable grip</span></div>\n<div><span> \u2022 Scratch-resistant &amp; shock-absorbent protection</span></div>\n<div><span> \u2022 Raised edges to protect camera &amp; screen</span></div>\n<div><span> \u2022 Perfect blend of fashion and functionality</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>",
     "in_stock": true,
     "features": [
       {
@@ -8580,7 +8580,7 @@ window.CovertokProducts = [
       "Available in Black & Beige \u2013 timeless and versatile shades",
       "Compatible with multiple iPhone models"
     ],
-    "raw_html": "<div>Turn your phone into a fashion statement with the Luxury Bow Pearl Chain Phone Case. Designed with a chic faux-leather texture, oversized bow, and elegant pearl chain, this case blends style with practicality. The hand strap doubles as a decorative charm and provides a secure grip, making it perfect for both everyday use and special occasions.</div>\n<div><br></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Elegant bow design with pearl chain detailing</span></div>\n<div><span> \u2022 Premium faux-leather texture for a classy finish</span></div>\n<div><span> \u2022 Protective, durable, and shock-resistant</span></div>\n<div><span> \u2022 Comfortable hand strap for secure grip &amp; easy carrying</span></div>\n<div><span> \u2022 Available in Black &amp; Beige \u2013 timeless and versatile shades</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for fashion lovers who want their phone case to match their outfit, vibe, and luxury lifestyle.</div>",
+    "raw_html": "<div>Turn your phone into a fashion statement with the Luxury Bow Pearl Chain Phone Case. Designed with a chic faux-leather texture, oversized bow, and elegant pearl chain, this case blends style with practicality. The hand strap doubles as a decorative charm and provides a secure grip, making it perfect for both everyday use and special occasions.</div>\n<div><br></div>\n<div> Features:</div>\n<div><span> \u2022 Elegant bow design with pearl chain detailing</span></div>\n<div><span> \u2022 Premium faux-leather texture for a classy finish</span></div>\n<div><span> \u2022 Protective, durable, and shock-resistant</span></div>\n<div><span> \u2022 Comfortable hand strap for secure grip &amp; easy carrying</span></div>\n<div><span> \u2022 Available in Black &amp; Beige \u2013 timeless and versatile shades</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for fashion lovers who want their phone case to match their outfit, vibe, and luxury lifestyle.</div>",
     "in_stock": true,
     "features": [
       {
@@ -8852,7 +8852,7 @@ window.CovertokProducts = [
       "Slim Fit & Lightweight \u2013 Easy to hold, pocket-friendly",
       "Perfect Cutouts for camera and buttons"
     ],
-    "raw_html": "<p>Showcase your phone\u2019s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models.</p>\n<p>\u00a0\u2022 \u2705 MagSafe Ring for magnetic charging and accessory support</p>\n<p>\u00a0\u2022 \u2705 Crystal Clear Back \u2013 Anti-yellowing and scratch-resistant</p>\n<p>\u00a0\u2022 \u2705 Shockproof Corners for reliable drop protection</p>\n<p>\u00a0\u2022 \u2705 Slim Fit &amp; Lightweight \u2013 Easy to hold, pocket-friendly</p>\n<p>\u00a0\u2022 \u2705 Perfect Cutouts for camera and buttons</p>",
+    "raw_html": "<p>Showcase your phone\u2019s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models.</p>\n<p>\u00a0\u2022  MagSafe Ring for magnetic charging and accessory support</p>\n<p>\u00a0\u2022  Crystal Clear Back \u2013 Anti-yellowing and scratch-resistant</p>\n<p>\u00a0\u2022  Shockproof Corners for reliable drop protection</p>\n<p>\u00a0\u2022  Slim Fit &amp; Lightweight \u2013 Easy to hold, pocket-friendly</p>\n<p>\u00a0\u2022  Perfect Cutouts for camera and buttons</p>",
     "in_stock": true,
     "features": [
       {
@@ -8992,7 +8992,7 @@ window.CovertokProducts = [
     "bullets": [
       "\u2013 Premium PU Leather: Smooth, durable finish with an elegant look."
     ],
-    "raw_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p>\ud83e\uddf2 Key Features:</p>\n<p>\u2013 MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>\u2013 Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>\u2013 Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>\u2013 Slim Design: Pocket-friendly without compromising space.</p>\n<p>\u2013 Secure Card Slot: Holds 1\u20132 cards snugly.</p>\n<p><br></p>\n<p>\ud83d\udcf1 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
+    "raw_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p> Key Features:</p>\n<p>\u2013 MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>\u2013 Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>\u2013 Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>\u2013 Slim Design: Pocket-friendly without compromising space.</p>\n<p>\u2013 Secure Card Slot: Holds 1\u20132 cards snugly.</p>\n<p><br></p>\n<p> Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
     "in_stock": true,
     "features": [
       {
@@ -9134,7 +9134,7 @@ window.CovertokProducts = [
       "\u2013 Premium Leather Finish: Smooth, durable, and elegant look.",
       "\u2013 Slim & Lightweight: Adds functionality without bulk."
     ],
-    "raw_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p>\ud83e\uddf2 Key Features:</p>\n<p>\u2013 MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>\u2013 Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>\u2013 Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>\u2013 Secure Card Slot: Holds 1\u20132 cards safely with easy access.</p>\n<p>\u2013 Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p>\ud83c\udfa8 Color: Vibrant Orange (Available in multiple colors)</p>\n<p>\ud83d\udcf1 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
+    "raw_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p> Key Features:</p>\n<p>\u2013 MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>\u2013 Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>\u2013 Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>\u2013 Secure Card Slot: Holds 1\u20132 cards safely with easy access.</p>\n<p>\u2013 Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p> Color: Vibrant Orange (Available in multiple colors)</p>\n<p> Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
     "in_stock": true,
     "features": [
       {
@@ -9746,7 +9746,7 @@ window.CovertokProducts = [
       "Slim & Lightweight \u2013 Adds protection without bulk, keeping your iPhone sleek.",
       "Precise Cutouts \u2013 Easy access to buttons, speakers, and charging port."
     ],
-    "raw_html": "<p><span>Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360\u00b0 protection from scratches, drops, and shocks.</span></p>\n<p>\u00a0</p>\n<p><span>\u2728 Key Features:</span></p>\n<p>\u00a0</p>\n<ul>\n<li><span>MagSafe Compatible \u2013 Strong magnetic alignment for effortless charging &amp; accessory support.</span></li>\n<li><span>Anti-Yellow Technology \u2013 Maintains clarity and freshness for long-lasting use.</span></li>\n<li><span>Shockproof &amp; Durable \u2013 Protects against accidental drops and daily wear.</span></li>\n<li><span>Slim &amp; Lightweight \u2013 Adds protection without bulk, keeping your iPhone sleek.</span></li>\n<li><span>Precise Cutouts \u2013 Easy access to buttons, speakers, and charging port.</span></li>\n</ul>\n<p>\u00a0</p>",
+    "raw_html": "<p><span>Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360\u00b0 protection from scratches, drops, and shocks.</span></p>\n<p>\u00a0</p>\n<p><span> Key Features:</span></p>\n<p>\u00a0</p>\n<ul>\n<li><span>MagSafe Compatible \u2013 Strong magnetic alignment for effortless charging &amp; accessory support.</span></li>\n<li><span>Anti-Yellow Technology \u2013 Maintains clarity and freshness for long-lasting use.</span></li>\n<li><span>Shockproof &amp; Durable \u2013 Protects against accidental drops and daily wear.</span></li>\n<li><span>Slim &amp; Lightweight \u2013 Adds protection without bulk, keeping your iPhone sleek.</span></li>\n<li><span>Precise Cutouts \u2013 Easy access to buttons, speakers, and charging port.</span></li>\n</ul>\n<p>\u00a0</p>",
     "in_stock": true,
     "features": [
       {
