@@ -57571,3 +57571,99 @@ html body #siteHeader,
 .product-color-palette:empty {
   display: none !important;
 }
+
+
+/* ==========================================================================
+   CART DRAWER UPSELL & RECOMMENDED FOR YOUR CASE - MOBILE BULLETPROOFING
+   ========================================================================== */
+.cart-upsell-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 10px 12px !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+.cart-upsell-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.cart-upsell-img {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  border-radius: 8px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+}
+
+.cart-upsell-info,
+.cart-upsell-left > div:not(.cart-upsell-img) {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.cart-upsell-name {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.80rem !important;
+  font-weight: 700 !important;
+  color: #0A0A0A !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+.cart-upsell-price {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.775rem !important;
+  font-weight: 800 !important;
+  color: #FF5500 !important;
+  margin-top: 2px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.cart-upsell-add-btn {
+  flex-shrink: 0 !important;
+  margin-left: 8px !important;
+  padding: 6px 14px !important;
+  height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #0A0A0A !important;
+  border-radius: 999px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  color: #0A0A0A !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
+.cart-upsell-add-btn:hover {
+  background: #0A0A0A !important;
+  color: #FFFFFF !important;
+}
