@@ -57095,3 +57095,10 @@ html body #siteHeader,
     pointer-events: auto !important;
   }
 }
+
+/* Prevent any duplicate floating WhatsApp button from appearing */
+.floating-whatsapp-btn ~ .floating-whatsapp-btn,
+#floatingWhatsappBtn ~ #floatingWhatsappBtn,
+.floating-whatsapp-btn + .floating-whatsapp-btn {
+  display: none !important;
+}

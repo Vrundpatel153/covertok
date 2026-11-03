@@ -1432,7 +1432,7 @@
   // Appears when scrolling down just a little past the product heading
   function setupStickyBar() {
     const bar = document.getElementById('pdpStickyBar');
-    const wa = document.getElementById('floatingWhatsAppBtn');
+    const wa = document.getElementById('floatingWhatsappBtn') || document.getElementById('floatingWhatsAppBtn') || document.querySelector('.floating-whatsapp-btn');
     if (!bar) return;
 
     const getTriggerScrollY = () => {

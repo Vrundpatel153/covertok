@@ -2045,8 +2045,8 @@ html, body {
 
 .pdp-reviews-box-content {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 36px;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
   align-items: center;
 }
 
@@ -2056,9 +2056,15 @@ html, body {
   gap: 4px;
 }
 
+.pdp-rating-meta-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .pdp-rating-big-number {
   font-family: var(--pdp-font-head);
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 900;
   line-height: 1;
   color: #0A0A0A;
@@ -2066,31 +2072,49 @@ html, body {
 
 .pdp-stars-gold {
   color: #F59E0B;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
+  font-size: 1.05rem;
+  letter-spacing: 1.5px;
 }
 
 .pdp-rating-verified-text {
   font-size: 0.8rem;
   color: #64748B;
   font-weight: 600;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .pdp-reviews-cards-feed {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
   gap: 16px;
+  padding: 4px 4px 10px 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #E2E8F0 transparent;
+}
+
+.pdp-reviews-cards-feed::-webkit-scrollbar {
+  height: 4px;
+}
+
+.pdp-reviews-cards-feed::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 4px;
 }
 
 .pdp-user-card {
+  flex: 0 0 300px;
+  min-width: 280px;
+  max-width: 320px;
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
 .pdp-user-card-header {
@@ -3391,31 +3415,97 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     border-radius: 14px;
   }
 
+  /* 8. CUSTOMER REVIEWS (ONE HORIZONTAL ROW - SPACE OPTIMIZED) */
+  .pdp-reviews-arrows {
+    display: none !important; /* Hide left-right buttons on mobile (native touch swiping) */
+  }
+
+  .pdp-reviews-outer-card {
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .pdp-reviews-box-header {
+    margin-bottom: 12px !important;
+  }
+
   .pdp-reviews-box-title {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
+    font-weight: 850 !important;
   }
 
   .pdp-reviews-box-content {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  .pdp-rating-summary-col {
-    text-align: center;
-    align-items: center;
-  }
-
-  .pdp-rating-big-number {
-    font-size: 2.8rem;
-  }
-
-  .pdp-reviews-cards-feed {
-    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 12px !important;
   }
 
+  /* Compact Horizontal Rating Summary */
+  .pdp-rating-summary-col {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 14px !important;
+    text-align: left !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #F1F5F9 !important;
+  }
+
+  .pdp-rating-big-number {
+    font-size: 2.25rem !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    font-weight: 850 !important;
+    color: #0A0A0C !important;
+  }
+
+  .pdp-rating-meta-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+  }
+
+  .pdp-stars-gold {
+    font-size: 0.95rem !important;
+    letter-spacing: 1.5px !important;
+    margin: 0 !important;
+  }
+
+  .pdp-rating-verified-text {
+    font-size: 0.78rem !important;
+    color: #64748B !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
+  }
+
+  /* Horizontal Review Cards in One Swipeable Row */
+  .pdp-reviews-cards-feed {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 12px !important;
+    padding: 2px 2px 6px 2px !important;
+    margin: 0 -4px !important;
+    scrollbar-width: none !important;
+  }
+
+  .pdp-reviews-cards-feed::-webkit-scrollbar {
+    display: none !important;
+  }
+
   .pdp-user-card {
-    padding: 14px;
+    flex: 0 0 82% !important;
+    min-width: 250px !important;
+    max-width: 300px !important;
+    scroll-snap-align: start !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    box-sizing: border-box !important;
   }
 
   /* 9. FLOATING WHATSAPP BUTTON (Compact Mobile FAB) */
@@ -4013,4 +4103,11 @@ html body #siteHeader,
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
     pointer-events: auto !important;
   }
+}
+
+/* Prevent any duplicate floating WhatsApp button from appearing */
+.floating-whatsapp-btn ~ .floating-whatsapp-btn,
+#floatingWhatsappBtn ~ #floatingWhatsappBtn,
+.floating-whatsapp-btn + .floating-whatsapp-btn {
+  display: none !important;
 }
