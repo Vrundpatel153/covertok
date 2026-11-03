@@ -218,19 +218,19 @@
         if (remainder === 0) {
           milestoneFill.style.width = '100%';
           const bundleWord = bundlesCount === 1 ? 'Bundle' : `${bundlesCount} Bundles`;
-          milestoneInstruction.innerHTML = `🎉 <strong>3 for ₹1,199 ${bundleWord} Unlocked!</strong> You save Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}`;
+          milestoneInstruction.innerHTML = `<strong>3 for ₹1,199 ${bundleWord} Unlocked!</strong> You save Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}`;
           if (node1) node1.className = 'cart-milestone-node is-completed';
           if (node2) node2.className = 'cart-milestone-node is-completed';
           if (node3) node3.className = 'cart-milestone-node is-completed is-unlocked';
         } else if (remainder === 1) {
           milestoneFill.style.width = '33%';
-          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>2 more</strong> to unlock another 3 for ₹1,199`;
+          milestoneInstruction.innerHTML = `<strong>${bundlesCount} Bundle Active!</strong> Add <strong>2 more</strong> to unlock another 3 for ₹1,199`;
           if (node1) node1.className = 'cart-milestone-node is-completed is-active';
           if (node2) node2.className = 'cart-milestone-node';
           if (node3) node3.className = 'cart-milestone-node';
         } else if (remainder === 2) {
           milestoneFill.style.width = '66%';
-          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>1 more</strong> to unlock another 3 for ₹1,199`;
+          milestoneInstruction.innerHTML = `<strong>${bundlesCount} Bundle Active!</strong> Add <strong>1 more</strong> to unlock another 3 for ₹1,199`;
           if (node1) node1.className = 'cart-milestone-node is-completed';
           if (node2) node2.className = 'cart-milestone-node is-completed is-active';
           if (node3) node3.className = 'cart-milestone-node';
@@ -382,31 +382,31 @@
           <div class="cart-empty-quick-links">
             <span class="cart-empty-quick-label">POPULAR CATEGORIES</span>
             <div class="cart-empty-chips-row">
-              <a href="collections.html?cat=iphone-cases" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">📱 iPhone Cases</a>
-              <a href="collections.html?cat=watch-bands" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">⌚ Watch Straps</a>
-              <a href="collections.html?cat=cover-charms" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">✨ Charms & Sling</a>
-              <a href="collections.html?cat=hardware" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();">🛡️ Screen & Desk</a>
+              <a href="collections.html?cat=iphone-cases" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><rect x="5" y="2" width="14" height="20" rx="3"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>iPhone Cases</a>
+              <a href="collections.html?cat=watch-bands" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><rect x="6" y="7" width="12" height="10" rx="2"></rect><path d="M9 7V3h6v4M9 17v4h6v-4"></path></svg>Watch Straps</a>
+              <a href="collections.html?cat=cover-charms" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><path d="M6 3h12l4 6-10 13L2 9z"></path><path d="M2 9h20"></path></svg>Charms &amp; Sling</a>
+              <a href="collections.html?cat=hardware" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Screen &amp; Desk</a>
             </div>
           </div>
 
           <!-- Seamless Perks Strip -->
           <div class="cart-empty-perks-box">
             <div class="cart-empty-perk-row">
-              <span class="cart-perk-emoji">🚚</span>
+              <span class="cart-perk-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span>
               <div class="cart-perk-info">
                 <strong>Free Express Shipping</strong>
                 <span>Auto-unlocked on orders above ₹999</span>
               </div>
             </div>
             <div class="cart-empty-perk-row">
-              <span class="cart-perk-emoji">🎁</span>
+              <span class="cart-perk-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg></span>
               <div class="cart-perk-info">
                 <strong>3 for ₹1,199 Bundle Offer</strong>
                 <span>Add any 3 eligible items to activate deal</span>
               </div>
             </div>
             <div class="cart-empty-perk-row">
-              <span class="cart-perk-emoji">⚡</span>
+              <span class="cart-perk-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
               <div class="cart-perk-info">
                 <strong>2-Hour Dispatch Guarantee</strong>
                 <span>Prepaid orders ship same day</span>

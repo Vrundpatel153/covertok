@@ -1194,3 +1194,191 @@ body.combo-page-canvas {
     align-self: flex-start !important;
   }
 }
+
+
+/* ==========================================================================
+   FLOATING CENTERED CAPSULE ACTION BAR (UNOBSTRUCTED WHATSAPP & NO HARSH BANNERS)
+   ========================================================================== */
+.combo-sticky-bar {
+  position: fixed !important;
+  bottom: 24px !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  width: calc(100% - 32px) !important;
+  max-width: 480px !important;
+  z-index: 9990 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-radius: 999px !important;
+  padding: 8px 14px !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+}
+
+.combo-sticky-bar-inner {
+  max-width: 100% !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  flex-wrap: nowrap !important;
+}
+
+.combo-sticky-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 1 !important;
+  min-width: 0 !important;
+}
+
+.combo-sticky-slots-status {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+}
+
+.combo-slots-badge {
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #18181B !important;
+}
+
+.combo-sticky-pricing {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 6px !important;
+  padding-left: 10px !important;
+  border-left: 1px solid #E2E8F0 !important;
+}
+
+.combo-sticky-price-label {
+  display: none !important;
+}
+
+.combo-sticky-price {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: #0A0A0C !important;
+}
+
+.combo-sticky-mrp,
+.combo-sticky-save {
+  display: none !important;
+}
+
+.combo-sticky-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.combo-sticky-reset {
+  height: 38px !important;
+  padding: 0 12px !important;
+  border-radius: 999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  background: #F4F4F5 !important;
+  color: #71717A !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.combo-sticky-checkout-btn {
+  height: 38px !important;
+  padding: 0 16px !important;
+  border-radius: 999px !important;
+  font-size: 0.80rem !important;
+  font-weight: 800 !important;
+  background: #FF5500 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 12px rgba(255, 85, 0, 0.3) !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+@media (max-width: 768px) {
+  .combo-sticky-bar {
+    bottom: 20px !important;
+    left: 14px !important;
+    right: 86px !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: none !important;
+    border-radius: 999px !important;
+    padding: 6px 12px !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16) !important;
+    height: 48px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+  }
+
+  .combo-sticky-bar-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+  }
+
+  .combo-sticky-left {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .combo-sticky-slots-status {
+    display: none !important;
+  }
+
+  .combo-sticky-pricing {
+    display: inline-flex !important;
+    align-items: baseline !important;
+    gap: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .combo-sticky-price {
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    color: #FF5500 !important;
+  }
+
+  .combo-sticky-reset {
+    display: none !important;
+  }
+
+  .combo-sticky-right {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .combo-sticky-checkout-btn {
+    height: 36px !important;
+    padding: 0 10px !important; max-width: 135px !important; text-overflow: ellipsis !important; overflow: hidden !important;
+    font-size: 0.74rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    border-radius: 999px !important;
+    white-space: nowrap !important;
+  }
+}

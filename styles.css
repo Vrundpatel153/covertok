@@ -57078,3 +57078,386 @@ html body #siteHeader,
 .floating-whatsapp-btn + .floating-whatsapp-btn {
   display: none !important;
 }
+
+
+/* ==========================================================================
+   HOMEPAGE DESKTOP STEPPED HERO WINDOW NESTING & UNIVERSAL NAVBAR
+   ========================================================================== */
+@media (min-width: 992px) {
+  html body.home-page .site-header,
+  html body.home-page #siteHeader,
+  body.home-page .site-header,
+  body.home-page #siteHeader {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 16px 0 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
+  }
+
+  body.home-page .site-header .header-inner,
+  body.home-page #siteHeader .header-inner {
+    max-width: 100% !important;
+    padding: 0 clamp(20px, 3.2vw, 48px) !important;
+    height: 52px !important;
+    min-height: 52px !important;
+    background: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    box-sizing: border-box !important;
+    pointer-events: none !important;
+  }
+
+  body.home-page .site-header .header-left,
+  body.home-page .site-header .main-nav,
+  body.home-page .site-header .header-right {
+    pointer-events: auto !important;
+  }
+
+  body.home-page .hero-section {
+    position: relative !important;
+    width: 100% !important;
+    margin-top: -68px !important;
+    padding: 0 clamp(20px, 3.2vw, 48px) 16px !important;
+    margin-bottom: 0 !important;
+    display: block !important;
+    background: var(--bg-stone, #FAF9F6) !important;
+    z-index: 10 !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+
+  body.home-page .hero-card {
+    clip-path: url(#heroCardClip) !important;
+    -webkit-clip-path: url(#heroCardClip) !important;
+  }
+}
+
+/* ==========================================================================
+   DIRECT FOOTER BRAND COLORS (PERMANENTLY VISIBLE, NO HOVER REQUIRED)
+   ========================================================================== */
+.footer-social-btn[aria-label="Instagram"] {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(225, 48, 108, 0.35) !important;
+}
+.footer-social-btn[aria-label="Instagram"] svg {
+  stroke: #FFFFFF !important;
+}
+
+.footer-social-btn[aria-label="WhatsApp"] {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35) !important;
+}
+.footer-social-btn[aria-label="WhatsApp"] svg {
+  stroke: #FFFFFF !important;
+}
+
+.footer-social-btn[aria-label="Facebook"] {
+  background: #1877F2 !important;
+  border-color: #1877F2 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.35) !important;
+}
+.footer-social-btn[aria-label="Facebook"] svg {
+  stroke: #FFFFFF !important;
+}
+
+.footer-social-btn[aria-label="YouTube"] {
+  background: #FF0000 !important;
+  border-color: #FF0000 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35) !important;
+}
+.footer-social-btn[aria-label="YouTube"] svg {
+  stroke: #FFFFFF !important;
+}
+
+.footer-social-btn[aria-label="Email Us"] {
+  background: #EA4335 !important;
+  border-color: #EA4335 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.35) !important;
+}
+.footer-social-btn[aria-label="Email Us"] svg {
+  stroke: #FFFFFF !important;
+}
+
+/* Contact Badges Direct Brand Accents */
+.footer-contact-item a.footer-contact-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+  color: #FFFFFF !important;
+  transition: transform 0.2s ease !important;
+}
+.footer-contact-item:nth-child(1) a.footer-contact-badge {
+  background: #25D366 !important; /* WhatsApp Green */
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3) !important;
+}
+.footer-contact-item:nth-child(2) a.footer-contact-badge {
+  background: #3B82F6 !important; /* Phone Blue */
+  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3) !important;
+}
+.footer-contact-item:nth-child(3) a.footer-contact-badge {
+  background: #EA4335 !important; /* Email Red */
+  box-shadow: 0 3px 10px rgba(234, 67, 53, 0.3) !important;
+}
+.footer-contact-item:nth-child(4) a.footer-contact-badge {
+  background: #F59E0B !important; /* Hours Amber */
+  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3) !important;
+}
+.footer-contact-item a.footer-contact-badge svg {
+  stroke: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   MOBILE BURGER MENU PILL (MATCHING SEARCH & CART BUTTONS)
+   ========================================================================== */
+.mobile-toggle-btn,
+#mobileMenuToggle,
+#mobileNavOpen {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
+  background: #F4F4F5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #18181B !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.mobile-toggle-btn:hover,
+#mobileMenuToggle:hover,
+#mobileNavOpen:hover {
+  background: #E4E4E7 !important;
+  transform: scale(1.05) !important;
+}
+
+/* ==========================================================================
+   TRUST BADGES SEPARATION & ELEVATION (DISTINCT BOXES WITH ACCENT BORDER & SHADOW)
+   ========================================================================== */
+.trust-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+  align-items: stretch !important;
+}
+
+.trust-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 16px 18px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 85, 0, 0.16) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+}
+
+.trust-item:hover {
+  border-color: rgba(255, 85, 0, 0.36) !important;
+  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.08) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Mobile Trust Cards: OCD Precision Alignment & Equal Heights */
+@media (max-width: 768px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .trust-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    padding: 12px 10px !important;
+    border-radius: 12px !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid rgba(255, 85, 0, 0.16) !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04) !important;
+    min-height: 72px !important;
+    height: 100% !important;
+  }
+
+  .trust-item .trust-icon {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    border-radius: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .trust-item .trust-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+
+  .trust-item .trust-title {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: #18181B !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .trust-item .trust-desc {
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+    color: #71717A !important;
+    margin: 2px 0 0 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .trust-item .trust-badge-tag {
+    display: none !important;
+  }
+
+  /* PDP Reassurance 2x2 Badges on Mobile */
+  .covertok-live-trust-badges {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .covertok-trust-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px 12px !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid rgba(255, 85, 0, 0.16) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04) !important;
+    min-height: 64px !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .covertok-trust-meta {
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+
+  .covertok-trust-meta strong {
+    font-size: 0.80rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+  }
+
+  .covertok-trust-meta span {
+    font-size: 0.70rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL INTER-SECTION SPACING TIGHTENING (ELIMINATE USELESS EMPTY SPACE)
+   ========================================================================== */
+.trust-banner-section {
+  padding: 24px 0 !important;
+}
+
+.support-faq-section {
+  padding: 36px 0 48px !important;
+}
+
+.support-faq-section .section-container,
+.contact-section .section-container {
+  padding-bottom: 32px !important;
+}
+
+.trending-drops-section,
+.bento-section,
+.popular-choices-section,
+.story-section {
+  padding: 36px 0 !important;
+}
+
+/* Male Model Slide 2 Hero Banner: fill from bottom without gaps */
+.hero-mob-img.hero-mob-img-1 {
+  object-fit: cover !important;
+  object-position: center bottom !important;
+}
+
+
+/* Ensure Inactive Hero Slides and Backgrounds are 100% Hidden with Zero Overlap */
+.hero-slide:not(.active),
+.hero-mob-bg:not(.active),
+.hero-slide-bg:not(.active) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.hero-slide.active,
+.hero-mob-bg.active,
+.hero-slide-bg.active {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Hide Hand Model Slideshow on non-zero hero slides */
+.hero-card:has(.hero-slide[data-slide-index="1"].active) .hero-hand-slideshow,
+.hero-card:has(.hero-slide[data-slide-index="2"].active) .hero-hand-slideshow,
+.hero-card:has(.hero-slide.active:not(:first-child)) .hero-hand-slideshow {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

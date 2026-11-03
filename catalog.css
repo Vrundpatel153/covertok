@@ -5318,3 +5318,89 @@
     margin-top: auto !important;
   }
 }
+
+
+/* ==========================================================================
+   CATALOG BATCH PAGINATION CONTROLS (MATCH REFERENCE MOCKUP)
+   ========================================================================== */
+.catalog-pagination-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 36px 0 24px 0 !important;
+  flex-wrap: wrap !important;
+}
+
+.catalog-page-btn {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  border-radius: 8px !important;
+  border: 1px solid #E4E4E7 !important;
+  background: #FFFFFF !important;
+  color: #71717A !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.2s ease !important;
+}
+
+.catalog-page-btn:hover {
+  border-color: #A1A1AA !important;
+  color: #18181B !important;
+}
+
+.catalog-page-btn.active {
+  border: 1.5px solid #18181B !important;
+  color: #18181B !important;
+  font-weight: 800 !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.catalog-page-dots {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 42px !important;
+  color: #A1A1AA !important;
+  font-size: 14px !important;
+  letter-spacing: 0.1em !important;
+}
+
+.catalog-page-next {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 8px !important;
+  border: 1px solid #E4E4E7 !important;
+  background: #FFFFFF !important;
+  color: #71717A !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.2s ease !important;
+}
+
+.catalog-page-next:hover:not(:disabled) {
+  border-color: #18181B !important;
+  color: #18181B !important;
+  transform: translateX(2px) !important;
+}
+
+.catalog-page-next:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed !important;
+}
+
+.catalog-products-grid {
+  margin-bottom: 24px !important;
+}

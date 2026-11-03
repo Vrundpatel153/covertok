@@ -1440,6 +1440,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       });
 
+      // Strictly show hand slideshow ONLY on slide 0
+      const heroHandShow = document.querySelector('.hero-hand-slideshow');
+      if (heroHandShow) {
+        if (currentHeroIndex === 0) {
+          heroHandShow.style.setProperty('display', 'flex', 'important');
+          heroHandShow.style.setProperty('opacity', '1', 'important');
+          heroHandShow.style.setProperty('visibility', 'visible', 'important');
+          heroHandShow.style.setProperty('pointer-events', 'auto', 'important');
+        } else {
+          heroHandShow.style.setProperty('display', 'none', 'important');
+          heroHandShow.style.setProperty('opacity', '0', 'important');
+          heroHandShow.style.setProperty('visibility', 'hidden', 'important');
+          heroHandShow.style.setProperty('pointer-events', 'none', 'important');
+        }
+      }
+
     };
 
 
@@ -1540,6 +1556,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+    window.switchHeroSlide = switchHeroSlide;
     // Pause on hover
 
     if (heroCarousel) {

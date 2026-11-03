@@ -336,19 +336,19 @@
         if (remainder === 0) {
           milestoneFill.style.width = '100%';
           const bundleWord = bundlesCount === 1 ? 'Bundle' : `${bundlesCount} Bundles`;
-          milestoneInstruction.innerHTML = `🎉 <strong>3 for ₹1,199 ${bundleWord} Unlocked!</strong> You save Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}`;
+          milestoneInstruction.innerHTML = `<strong>3 for ₹1,199 ${bundleWord} Unlocked!</strong> You save Rs. ${offer.bundleDiscount.toLocaleString('en-IN')}`;
           if (node1) node1.className = 'cart-milestone-node is-completed';
           if (node2) node2.className = 'cart-milestone-node is-completed';
           if (node3) node3.className = 'cart-milestone-node is-completed is-unlocked';
         } else if (remainder === 1) {
           milestoneFill.style.width = '33%';
-          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>2 more</strong> to unlock another 3 for ₹1,199`;
+          milestoneInstruction.innerHTML = `<strong>${bundlesCount} Bundle Active!</strong> Add <strong>2 more</strong> to unlock another 3 for ₹1,199`;
           if (node1) node1.className = 'cart-milestone-node is-completed is-active';
           if (node2) node2.className = 'cart-milestone-node';
           if (node3) node3.className = 'cart-milestone-node';
         } else if (remainder === 2) {
           milestoneFill.style.width = '66%';
-          milestoneInstruction.innerHTML = `🎉 <strong>${bundlesCount} Bundle Active!</strong> Add <strong>1 more</strong> to unlock another 3 for ₹1,199`;
+          milestoneInstruction.innerHTML = `<strong>${bundlesCount} Bundle Active!</strong> Add <strong>1 more</strong> to unlock another 3 for ₹1,199`;
           if (node1) node1.className = 'cart-milestone-node is-completed';
           if (node2) node2.className = 'cart-milestone-node is-completed is-active';
           if (node3) node3.className = 'cart-milestone-node';

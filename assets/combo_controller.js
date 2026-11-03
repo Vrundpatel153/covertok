@@ -294,7 +294,7 @@
     const filledCount = getFilledCount();
     if (window.showToast) {
       if (filledCount === 3) {
-        window.showToast('✨ 3 of 3 Selected! Suite is ready to add to bag.', 'bag');
+        window.showToast('3 of 3 Selected! Suite is ready to add to bag.', 'bag');
       } else {
         window.showToast(`Added to Slot ${emptySlot} (${filledCount}/3 Selected)`, 'bag');
       }

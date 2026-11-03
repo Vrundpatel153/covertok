@@ -14,6 +14,8 @@
   let inStockOnly = false;
   let currentModel = 'all';
   let currentBadge = 'all';
+  let catalogCurrentPage = 1;
+  const CATALOG_PAGE_SIZE = 16;
 
   // Category display names & definitions with authentic preview thumbnails
   const CATEGORIES = [
@@ -99,6 +101,7 @@
           return;
         }
         currentCategory = cat.id;
+        catalogCurrentPage = 1;
         document.querySelectorAll('.catalog-cat-card').forEach(el => {
           el.classList.remove('active');
           el.setAttribute('aria-selected', 'false');
@@ -313,8 +316,19 @@
     // Update Active Filter Chips
     renderActiveFilterChips(chipsContainer);
 
+    // Batch & Pagination Calculation
+    const totalPages = Math.ceil(filtered.length / CATALOG_PAGE_SIZE);
+    if (catalogCurrentPage > totalPages) catalogCurrentPage = Math.max(1, totalPages);
+    if (catalogCurrentPage < 1) catalogCurrentPage = 1;
+
+    const startIdx = (catalogCurrentPage - 1) * CATALOG_PAGE_SIZE;
+    const pagedProducts = filtered.slice(startIdx, startIdx + CATALOG_PAGE_SIZE);
+
     // Render Grid with Cinematic Rearrangement
-    cinematicGridRender(grid, filtered, createProductCard);
+    cinematicGridRender(grid, pagedProducts, createProductCard);
+
+    // Render Batch Pagination Controls
+    renderCatalogPagination(totalPages, filtered.length);
   }
 
   // Cinematic FLIP & Staggered Rearrangement Engine
@@ -1190,6 +1204,85 @@
       inStockCheckbox.addEventListener('change', (e) => {
         inStockOnly = e.target.checked;
         filterAndRenderProducts();
+      });
+    }
+  }
+
+// Render Clean Luxury Batch Pagination Controls
+  function renderCatalogPagination(totalPages, totalItems) {
+    const container = document.getElementById('catalogPagination');
+    if (!container) return;
+
+    if (totalPages <= 1) {
+      container.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+    const current = catalogCurrentPage;
+    const pages = [];
+
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      if (current > 3) pages.push('...');
+      
+      const start = Math.max(2, current - 1);
+      const end = Math.min(totalPages - 1, current + 1);
+      for (let i = start; i <= end; i++) {
+        if (!pages.includes(i)) pages.push(i);
+      }
+
+      if (current < totalPages - 2) pages.push('...');
+      if (!pages.includes(totalPages)) pages.push(totalPages);
+    }
+
+    pages.forEach(p => {
+      if (p === '...') {
+        html += '<span class="catalog-page-dots">...</span>';
+      } else {
+        const activeClass = p === current ? 'active' : '';
+        html += `<button type="button" class="catalog-page-btn ${activeClass}" data-page="${p}">${p}</button>`;
+      }
+    });
+
+    const hasNext = current < totalPages;
+    html += `
+      <button type="button" class="catalog-page-next" ${hasNext ? '' : 'disabled'} aria-label="Next batch">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </button>
+    `;
+
+    container.innerHTML = html;
+
+    container.querySelectorAll('.catalog-page-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetPage = parseInt(btn.getAttribute('data-page'), 10);
+        if (targetPage !== catalogCurrentPage) {
+          catalogCurrentPage = targetPage;
+          filterAndRenderProducts();
+          const grid = document.getElementById('catalogGrid');
+          if (grid) {
+            const rect = grid.getBoundingClientRect();
+            window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    const nextBtn = container.querySelector('.catalog-page-next');
+    if (nextBtn && hasNext) {
+      nextBtn.addEventListener('click', () => {
+        catalogCurrentPage++;
+        filterAndRenderProducts();
+        const grid = document.getElementById('catalogGrid');
+        if (grid) {
+          const rect = grid.getBoundingClientRect();
+          window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
+        }
       });
     }
   }

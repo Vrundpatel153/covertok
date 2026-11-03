@@ -4191,3 +4191,34 @@ html body #siteHeader,
     object-fit: contain !important;
   }
 }
+
+
+/* ==========================================================================
+   PDP TEXT CONTRAST BOOST (PREVENT GREY MERGING INTO BACKGROUND)
+   ========================================================================== */
+.pdp-price-note {
+  color: #27272A !important;
+  font-weight: 500 !important;
+  font-size: 0.82rem !important;
+}
+
+.pdp-urgency-row {
+  color: #18181B !important;
+}
+
+.pdp-urgency-fire,
+.pdp-urgency-stock {
+  color: #27272A !important;
+  font-weight: 600 !important;
+}
+
+.pdp-urgency-fire svg,
+.pdp-urgency-stock svg {
+  stroke: #FF5500 !important;
+}
+
+.pdp-meta-row,
+.pdp-meta-item,
+.pdp-reviews-count {
+  color: #27272A !important;
+}
