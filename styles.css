@@ -57121,9 +57121,11 @@ html body #siteHeader,
     padding: 18px 0 !important;
   }
 
-  .trust-grid {
+  .trust-grid,
+  .trust-banner-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 8px !important;
+    width: 100% !important;
   }
 
   .trust-item {
@@ -57131,23 +57133,36 @@ html body #siteHeader,
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 10px !important;
-    padding: 12px 10px !important;
-    border-radius: 14px !important;
+    gap: 8px !important;
+    padding: 0 10px !important;
+    border-radius: 12px !important;
     background: #FFFFFF !important;
     border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
-    box-shadow: 0 4px 14px rgba(255, 85, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04) !important;
-    min-height: 68px !important;
-    height: 100% !important;
+    box-shadow: 0 2px 8px rgba(255, 85, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .trust-item .trust-icon {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
-    border-radius: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 85, 0, 0.08) !important;
+    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .trust-item .trust-icon svg {
+    width: 18px !important;
+    height: 18px !important;
     flex-shrink: 0 !important;
   }
 
@@ -57157,29 +57172,32 @@ html body #siteHeader,
     justify-content: center !important;
     min-width: 0 !important;
     flex: 1 !important;
+    overflow: hidden !important;
   }
 
   .trust-item .trust-title {
-    font-size: 0.74rem !important;
-    line-height: 1.22 !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+    font-size: 0.76rem !important;
+    line-height: 1.2 !important;
     font-weight: 700 !important;
     color: #18181B !important;
     margin: 0 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
   }
 
   .trust-item .trust-desc {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
     font-size: 0.65rem !important;
-    line-height: 1.22 !important;
+    line-height: 1.2 !important;
     color: #71717A !important;
     margin: 2px 0 0 0 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
+    white-space: nowrap !important;
     overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
   }
 
   .trust-item .trust-badge-tag {
@@ -57190,35 +57208,39 @@ html body #siteHeader,
   .covertok-live-trust-badges {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 8px !important;
     width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 14px 0 !important;
   }
 
   .covertok-trust-item {
     display: flex !important;
     align-items: center !important;
-    gap: 10px !important;
-    padding: 12px 10px !important;
+    gap: 8px !important;
+    padding: 0 10px !important;
     background: #FFFFFF !important;
     border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
-    border-radius: 14px !important;
-    box-shadow: 0 4px 14px rgba(255, 85, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04) !important;
-    min-height: 64px !important;
-    height: 100% !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px rgba(255, 85, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .covertok-trust-item:hover {
     border-color: #FF5500 !important;
-    box-shadow: 0 8px 20px rgba(255, 85, 0, 0.16) !important;
+    box-shadow: 0 6px 16px rgba(255, 85, 0, 0.16) !important;
   }
 
   .covertok-trust-icon {
-    width: 34px !important;
-    height: 34px !important;
-    min-width: 34px !important;
-    max-width: 34px !important;
-    border-radius: 10px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    border-radius: 8px !important;
     background: rgba(255, 85, 0, 0.08) !important;
     border: 1px solid rgba(255, 85, 0, 0.22) !important;
     display: flex !important;
@@ -57227,13 +57249,28 @@ html body #siteHeader,
     flex-shrink: 0 !important;
   }
 
+  .covertok-trust-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0 !important;
+  }
+
   .covertok-trust-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
     min-width: 0 !important;
     flex: 1 !important;
+    overflow: hidden !important;
   }
 
   .covertok-trust-meta strong {
-    font-size: 0.78rem !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    color: #0A0A0A !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -57241,7 +57278,13 @@ html body #siteHeader,
   }
 
   .covertok-trust-meta span {
-    font-size: 0.68rem !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
+    font-size: 0.65rem !important;
+    font-weight: 500 !important;
+    color: #71717A !important;
+    line-height: 1.2 !important;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;

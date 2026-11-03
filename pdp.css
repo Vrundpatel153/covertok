@@ -3916,49 +3916,84 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     border: none !important;
     overflow-x: visible !important;
   }
+  .covertok-live-trust-badges {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 14px 0 !important;
+  }
   .covertok-trust-item {
     display: flex !important;
     align-items: center !important;
-    padding: 12px 10px !important;
-    gap: 10px !important;
-    border-radius: 14px !important;
+    gap: 8px !important;
+    padding: 0 10px !important;
+    border-radius: 12px !important;
     border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
-    box-shadow: 0 4px 14px rgba(255, 85, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 2px 8px rgba(255, 85, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
     background: #FFFFFF !important;
-    flex: unset !important;
-    min-width: 0 !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    max-height: 56px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
   }
   .covertok-trust-icon {
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    max-width: 26px !important;
-    border: none !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    margin-top: 1px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 85, 0, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
   .covertok-trust-icon img,
   .trust-badge-icon-img {
-    width: 24px !important;
-    height: 24px !important;
+    width: 20px !important;
+    height: 20px !important;
   }
   .covertok-trust-icon svg {
-    width: 22px !important;
-    height: 22px !important;
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0 !important;
+  }
+  .covertok-trust-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+    overflow: hidden !important;
   }
   .covertok-trust-meta strong {
-    font-size: 0.72rem !important;
-    white-space: normal !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    color: #0A0A0A !important;
     line-height: 1.2 !important;
-    word-break: break-word !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
   }
   .covertok-trust-meta span {
-    font-size: 0.63rem !important;
-    white-space: normal !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
+    font-size: 0.65rem !important;
+    font-weight: 500 !important;
+    color: #71717A !important;
     line-height: 1.2 !important;
-    word-break: break-word !important;
+    margin-top: 2px !important;
+    margin-bottom: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
   }
   .covertok-features-grid {
     grid-template-columns: 1fr;
