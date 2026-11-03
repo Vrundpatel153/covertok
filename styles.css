@@ -21624,18 +21624,10 @@ a.footer-contact-main:hover {
 
 
   padding: 48px 0 44px 44px;
-
-
-
   display: flex;
-
-
-
   flex-direction: column;
-
-
-
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
 
 
 
@@ -21648,10 +21640,7 @@ a.footer-contact-main:hover {
 
 
 .fl-header-group {
-
-
-
-  margin-bottom: 24px;
+  margin-bottom: 0;
 
 
 
@@ -21835,11 +21824,8 @@ a.footer-contact-main:hover {
 
 
 
-  gap: 16px;
-
-
-
-  margin-bottom: 32px;
+  gap: 14px;
+  margin-bottom: 0;
 
 
 
@@ -22021,7 +22007,38 @@ a.footer-contact-main:hover {
 
 /* Coded Offer Card (Rs 1199 Bundle Deal) */
 
-.fl-mobile-cta-btn { display: none; }
+/* Desktop & Universal Base: Frameless Single Case Direct CTA Pill */
+.fl-mobile-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: fit-content !important;
+  height: 38px !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: #0A0A0C !important;
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.80rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.fl-mobile-cta-btn:hover {
+  background: #0A0A0C !important;
+  color: #FFFFFF !important;
+  border-color: #0A0A0C !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14) !important;
+}
 .fl-offer-card {
   background: linear-gradient(145deg, #181715 0%, #0E0D0C 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
