@@ -54497,60 +54497,141 @@ a.footer-contact-main:hover {
 
 
 
-/* Mobile Overrides */
-
-@media (max-width: 767px) {
-
+/* ==========================================================================
+   BENTO COLLECTIONS: MOBILE REFINED (<= 768px)
+   - Zero squeezing: Card 01 hero has proportional height and breathing room
+   - Perfect circular buttons: 38px x 38px, flex-shrink: 0, aspect-ratio: 1/1
+   - Title & body padding: 22px 20px, balanced typography
+   - Swipeable reel: 240px snap cards with clean horizontal scroll
+   ========================================================================== */
+@media (max-width: 768px) {
   .bento-collections-section {
-
     padding: 24px 0 36px 0 !important;
-
   }
 
   .bento-collections-section .bento-grid {
-
     display: flex !important;
-
     flex-direction: column !important;
-
     gap: 14px !important;
-
   }
 
   .bento-intro-card {
-
     width: 100% !important;
-
     padding: 0 0 4px 0 !important;
-
   }
 
+  /* Card 01 - Hero iPhone Covers (Spacious, Un-squeezed) */
   .bento-card-01 {
-
     width: 100% !important;
-
-    height: 236px !important;
-
+    height: 290px !important;
+    min-height: 290px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+    position: relative !important;
   }
 
-  .bento-card-02,
-
-  .bento-card-03,
-
-  .bento-card-04,
-
-  .bento-card-05,
-
-  .bento-card-06,
-
-  .bento-card-07 {
-
+  .bento-card-01 .bento-card-bg {
+    position: absolute !important;
+    inset: 0 !important;
     width: 100% !important;
-
-    height: 220px !important;
-
+    height: 100% !important;
   }
 
+  .bento-card-01 .bento-card-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: 85% center !important;
+  }
+
+  .bento-card-01 .bento-card-body {
+    max-width: 60% !important;
+    padding: 22px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .bento-card-01 .bento-card-title {
+    font-size: 1.65rem !important;
+    font-weight: 850 !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.025em !important;
+    margin: 8px 0 6px 0 !important;
+    color: #0A0A0C !important;
+  }
+
+  .bento-card-01 .bento-card-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    color: #475569 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* Bento Buttons: Enforce exact 1:1 circle, no flex-shrink distortion */
+  .bento-card-01 .bento-card-btn,
+  .bento-card .bento-card-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    margin-top: 14px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    background: #0A0A0C !important;
+    border: 1.5px solid #0A0A0C !important;
+    color: #FFFFFF !important;
+  }
+
+  .bento-card-01 .bento-card-btn svg,
+  .bento-card .bento-card-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Reel Cards 02 through 07: Horizontal snap reel preserved */
+  .bento-reel-wrap {
+    display: flex !important;
+    gap: 14px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+    padding: 4px 16px 14px 16px !important;
+    margin: 0 -16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .bento-reel-wrap::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .bento-reel-wrap .bento-card {
+    flex: 0 0 240px !important;
+    width: 240px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    height: 250px !important;
+    scroll-snap-align: start !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  }
 }
 
 
