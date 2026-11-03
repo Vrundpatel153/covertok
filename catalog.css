@@ -5210,15 +5210,21 @@
     min-height: 20px !important;
   }
   .card-price-swatch-row .card-price-row {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 3px !important;
     width: auto !important;
     margin-top: 0 !important;
     flex-shrink: 0 !important;
+    min-width: 0 !important;
   }
   .card-price-now {
-    font-size: 0.88rem !important;
+    font-size: 0.86rem !important;
+    font-weight: 800 !important;
   }
   .card-price-was {
-    font-size: 0.68rem !important;
+    font-size: 0.66rem !important;
+    margin-left: 2px !important;
   }
   .product-color-palette {
     gap: 4px !important;
@@ -5237,8 +5243,12 @@
     border: 1.5px solid #FFFFFF !important;
     box-shadow: 0 0 0 1.5px #0A0A0C !important;
   }
-  .product-color-palette:has(.color-more-pill) .color-dot:nth-of-type(3) {
+  .product-color-palette:has(.color-more-pill) .color-dot:nth-of-type(n+3) {
     display: none !important;
+  }
+  .product-color-palette .color-more-pill {
+    font-size: 0.60rem !important;
+    padding: 1px 4px !important;
   }
   .card-add-btn {
     height: 38px !important;

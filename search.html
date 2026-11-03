@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261103_trust_restored_v25">
-  <link rel="stylesheet" href="catalog.css?v=20261104_swatch_round_v2">
+  <link rel="stylesheet" href="catalog.css?v=20261104_swatch_perfect_v3">
   <link rel="stylesheet" href="pages.css?v=20261104_search_unified_v1">
   <link rel="stylesheet" href="microinteractions.css?v=20261103_curved_v5">
   <style>
@@ -587,6 +587,21 @@
         min-height: 20px !important;
         overflow: visible !important;
       }
+      .card-price-row {
+        display: flex !important;
+        align-items: baseline !important;
+        gap: 3px !important;
+        flex-shrink: 0 !important;
+        min-width: 0 !important;
+      }
+      .card-price-now {
+        font-size: 0.86rem !important;
+        font-weight: 800 !important;
+      }
+      .card-price-was {
+        font-size: 0.66rem !important;
+        margin-left: 2px !important;
+      }
       .product-color-palette {
         gap: 4px !important;
         padding: 2px 1px !important;
@@ -603,8 +618,12 @@
         border: 1.5px solid #FFFFFF !important;
         box-shadow: 0 0 0 1.5px #0A0A0C !important;
       }
-      .product-color-palette:has(.color-more-pill) .color-dot:nth-of-type(3) {
+      .product-color-palette:has(.color-more-pill) .color-dot:nth-of-type(n+3) {
         display: none !important;
+      }
+      .product-color-palette .color-more-pill {
+        font-size: 0.60rem !important;
+        padding: 1px 4px !important;
       }
     }
 
