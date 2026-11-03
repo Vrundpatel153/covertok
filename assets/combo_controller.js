@@ -459,7 +459,7 @@
 
     const initialImg = product.primary_image || product.image || 'assets/phone_cream.webp';
     const isEager = (typeof idx === 'number' && idx < 12);
-    const hasColors = Array.isArray(product.colors) && product.colors.length > 0;
+    const hasColors = Array.isArray(product.colors) && product.colors.length > 1;
 
     let badgeHtml = '';
     if (product.badge) {

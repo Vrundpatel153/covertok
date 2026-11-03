@@ -57542,3 +57542,12 @@ html body #siteHeader,
 .catalog-products-grid {
   margin-bottom: 20px !important;
 }
+
+
+/* Hide single-dot palettes and empty color swatch wrappers */
+.product-color-palette:has(> .color-dot:only-child),
+.product-color-palette > .color-dot:only-child,
+.card-color-dot:only-child,
+.product-color-palette:empty {
+  display: none !important;
+}

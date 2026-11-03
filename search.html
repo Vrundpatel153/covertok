@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261103_ocd_v1">
-  <link rel="stylesheet" href="catalog.css?v=20261103_contrast_v21">
+  <link rel="stylesheet" href="catalog.css?v=20261103_swatch_fix_v1">
   <link rel="stylesheet" href="pages.css?v=20261103_spacing_v3">
   <link rel="stylesheet" href="microinteractions.css?v=20261103_curved_v5">
   <style>
@@ -1796,31 +1796,23 @@
         }
 
         let paletteHtml = '';
-        if (product.colors && product.colors.length > 0) {
+        if (product.colors && product.colors.length > 1) {
           const cols = product.colors;
-          if (cols.length === 1) {
-            paletteHtml = `
-              <div class="product-color-palette" aria-label="Available Colors">
-                <span class="color-dot active" style="background-color: ${cols[0].hex};" title="${cols[0].name}"></span>
-              </div>
-            `;
-          } else {
-            const visible = cols.slice(0, 3);
-            const remaining = cols.length - 3;
-            const dots = visible.map((c, i) => `
-              <span class="color-dot ${i === 0 ? 'active' : ''}" 
-                    style="background-color: ${c.hex};" 
-                    title="${c.name}"
-                    ${c.image ? `data-color-img="${c.image}"` : ''}></span>
-            `).join('');
-            const morePill = remaining > 0 ? `<span class="color-more-pill"><span class="more-pc">+${remaining} more</span><span class="more-mob">+${remaining}</span></span>` : '';
-            paletteHtml = `
-              <div class="product-color-palette" aria-label="Available Colors">
-                ${dots}
-                ${morePill}
-              </div>
-            `;
-          }
+          const visible = cols.slice(0, 3);
+          const remaining = cols.length - 3;
+          const dots = visible.map((c, i) => `
+            <span class="color-dot ${i === 0 ? 'active' : ''}" 
+                  style="background-color: ${c.hex};" 
+                  title="${c.name}"
+                  ${c.image ? `data-color-img="${c.image}"` : ''}></span>
+          `).join('');
+          const morePill = remaining > 0 ? `<span class="color-more-pill"><span class="more-pc">+${remaining} more</span><span class="more-mob">+${remaining}</span></span>` : '';
+          paletteHtml = `
+            <div class="product-color-palette" aria-label="Available Colors">
+              ${dots}
+              ${morePill}
+            </div>
+          `;
         }
 
         const priceFormatted = `₹${Math.round(product.price).toLocaleString('en-IN')}`;

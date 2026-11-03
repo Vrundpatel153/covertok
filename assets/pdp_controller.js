@@ -1550,33 +1550,25 @@
         ? `Rs. ${Number(p.original_price).toLocaleString('en-IN')}.00`
         : '';
 
-      // Color Swatches Palette (1 color -> 1 dot; 2-3 colors -> 2-3 dots; >3 colors -> 3 dots + +N pill)
+      // Color Swatches Palette: Only show when product has multiple colors (> 1)
       let paletteHtml = '';
-      if (p.colors && p.colors.length > 0) {
+      if (p.colors && p.colors.length > 1) {
         const cols = p.colors;
-        if (cols.length === 1) {
-          paletteHtml = `
-            <div class="product-color-palette" aria-label="Available Colors">
-              <span class="color-dot active" style="background-color: ${cols[0].hex};" title="${cols[0].name}"></span>
-            </div>
-          `;
-        } else {
-          const visible = cols.slice(0, 3);
-          const remaining = cols.length - 3;
-          const dots = visible.map((c, i) => `
-            <span class="color-dot ${i === 0 ? 'active' : ''}" 
-                  style="background-color: ${c.hex};" 
-                  title="${c.name}"
-                  ${c.image ? `data-color-img="${c.image}"` : ''}></span>
-          `).join('');
-          const morePill = remaining > 0 ? `<span class="color-more-pill">+${remaining}</span>` : '';
-          paletteHtml = `
-            <div class="product-color-palette" aria-label="Available Colors">
-              ${dots}
-              ${morePill}
-            </div>
-          `;
-        }
+        const visible = cols.slice(0, 3);
+        const remaining = cols.length - 3;
+        const dots = visible.map((c, i) => `
+          <span class="color-dot ${i === 0 ? 'active' : ''}" 
+                style="background-color: ${c.hex};" 
+                title="${c.name}"
+                ${c.image ? `data-color-img="${c.image}"` : ''}></span>
+        `).join('');
+        const morePill = remaining > 0 ? `<span class="color-more-pill">+${remaining}</span>` : '';
+        paletteHtml = `
+          <div class="product-color-palette" aria-label="Available Colors">
+            ${dots}
+            ${morePill}
+          </div>
+        `;
       }
 
       return `

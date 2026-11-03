@@ -4441,3 +4441,12 @@ html body #siteHeader,
   color: #111827 !important;
   font-weight: 600 !important;
 }
+
+
+/* Hide single-dot palettes and empty color swatch wrappers */
+.product-color-palette:has(> .color-dot:only-child),
+.product-color-palette > .color-dot:only-child,
+.card-color-dot:only-child,
+.product-color-palette:empty {
+  display: none !important;
+}
