@@ -56206,3 +56206,24 @@ body.home-page .hero-content {
     margin-top: auto !important;
   }
 }
+
+/* ==========================================================================
+   GLOBAL MOBILE VIEWPORT AUDIT: UNIFORM 16PX GUTTER ACROSS ALL SECTIONS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .section-container,
+  .trending-drops-container,
+  .bento-container,
+  .popular-choices-container,
+  .story-container,
+  .frameless-showcase-container,
+  .instagram-container,
+  .community-section-container,
+  .reviews-section-container,
+  .support-faq-section .section-container,
+  .site-footer .section-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+}

@@ -538,15 +538,17 @@
 
 /* ==========================================================================
    RESPONSIVENESS: MOBILE (<= 640px)
-   Pixel-Aligned 2-Column Luxury Grid (Exact Equal Height, No Drifting, No Overflow)
+   Pixel-Aligned Luxury Slider (16px Global Gutter, Fixed Heights, Price Left, Palette Right)
    ========================================================================== */
 @media (max-width: 640px) {
   .trending-drops-section {
-    padding: 30px 0 20px;
+    padding: 30px 0 20px !important;
   }
 
   .trending-drops-container {
-    padding: 0 14px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
   }
 
   /* 1. Mobile Header: Hide slider arrows, elegant grid layout with full-width subtitle */
@@ -658,115 +660,170 @@
     margin: 6px 0 0 !important;
   }
 
+  /* Trending Drops Slider wrap & track */
   .trending-drops-slider-wrap {
-    overflow: hidden !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
     padding: 4px 0 16px !important;
     margin: 0 !important;
-    mask-image: linear-gradient(90deg, transparent 0%, black 2.5%, black 97.5%, transparent 100%) !important;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 2.5%, black 97.5%, transparent 100%) !important;
   }
-
+  .trending-drops-slider-wrap::-webkit-scrollbar {
+    display: none !important;
+  }
   .trending-drops-grid {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
-    gap: 12px !important;
-    width: max-content !important;
-    max-width: none !important;
+    gap: 14px !important;
+    padding: 4px 16px 14px 16px !important;
     margin: 0 !important;
-    padding: 4px 2px 10px !important;
-    animation: none !important;
+    width: max-content !important;
+    box-sizing: border-box !important;
   }
 
+  /* Card sizing & geometry */
   .trending-drops-grid .drop-3d-card {
-    width: 220px !important;
-    min-width: 220px !important;
-    max-width: 220px !important;
+    width: 215px !important;
+    min-width: 215px !important;
+    max-width: 215px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .drop-card-inner {
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: 18px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+  }
+  .drop-card-visual {
+    height: 165px !important;
+    border-radius: 14px !important;
+    margin-bottom: 10px !important;
+    background: linear-gradient(150deg, #F8F6F2 0%, #EFECE6 100%) !important;
+  }
+  .drop-product-img {
+    max-height: 140px !important;
+    max-width: 90% !important;
+  }
+
+  /* Info & Fixed Title Height */
+  .drop-card-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    justify-content: flex-start !important;
+  }
+  .drop-meta-row {
+    margin-bottom: 4px !important;
+  }
+  .drop-cat-tag {
+    font-size: 8.5px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+  }
+  .drop-title {
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    margin: 0 0 8px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* Pricing Row: Price Left, Swatches Right */
+  .drop-pricing-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    margin-top: 0 !important;
+  }
+  .drop-price-wrap {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 4px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+  .drop-price {
+    font-size: 0.92rem !important;
+    font-weight: 800 !important;
+    color: #0C0B0A !important;
+  }
+  .drop-mrp {
+    font-size: 0.72rem !important;
+    color: #94A3B8 !important;
+  }
+
+  /* Palette */
+  .product-color-palette {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    margin: 0 !important;
     flex-shrink: 0 !important;
   }
-
-  .drop-3d-card {
-    border-radius: 16px;
+  .product-color-palette .color-dot {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    min-height: 12px !important;
+    border-radius: 50% !important;
+    border: 1.5px solid #FFFFFF !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25) !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+  }
+  .product-color-palette .color-dot.active {
+    box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #0A0A0C !important;
   }
 
-  .drop-card-inner {
-    padding: 10px;
-    border-radius: 16px;
-  }
-
-  .drop-card-top {
-    margin-bottom: 6px;
-  }
-
-  .drop-luxury-badge {
-    font-size: 7.5px;
-    padding: 2px 6px;
-    gap: 3px;
-  }
-
-  .drop-wishlist-btn {
-    width: 26px;
-    height: 26px;
-  }
-
-  .drop-card-visual {
-    height: 135px;
-    border-radius: 12px;
-    margin-bottom: 8px;
-  }
-
-  .drop-product-img {
-    max-height: 110px;
-    max-width: 82%;
-  }
-
-  .drop-discount-pill {
-    font-size: 8px;
-    padding: 2px 5px;
-    bottom: 6px;
-    right: 6px;
-  }
-
-  .drop-meta-row {
-    margin-bottom: 3px;
-  }
-
-  .drop-cat-tag {
-    font-size: 8px;
-    letter-spacing: 0.05em;
-  }
-
-  .drop-rating-tag {
-    font-size: 8.5px;
-  }
-
-  .drop-title {
-    font-size: 11px;
-    line-height: 1.25;
-    height: 28px;
-    margin-bottom: 6px;
-  }
-
-  .drop-pricing-row {
-    padding-top: 6px;
-  }
-
-  .drop-price {
-    font-size: 13.5px;
-  }
-
-  .drop-mrp {
-    font-size: 10px;
-  }
-
+  /* Add to Cart full-width pill button */
   .drop-quick-add-btn {
-    padding: 4px 8px;
-    font-size: 9.5px;
-    gap: 3px;
+    width: 100% !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    margin-top: auto !important;
+    padding: 0 12px !important;
+    font-size: 0.70rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    border-radius: 999px !important;
+    background: #0C0B0A !important;
+    color: #FFFFFF !important;
+    border: 1px solid #0C0B0A !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    white-space: nowrap !important;
   }
 }
-
-
 /* ==========================================================================
    ENLARGED PRODUCT CARDS, COLOR PALETTE & QUICK ADD SYSTEM
    ========================================================================== */
@@ -875,88 +932,7 @@
   }
 }
 
-@media (max-width: 640px) {
-  .trending-drops-grid .drop-3d-card {
-    width: 220px !important;
-    min-width: 220px !important;
-    max-width: 220px !important;
-    flex-shrink: 0 !important;
-  }
-  .drop-card-inner {
-    padding: 10px !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  .drop-card-visual {
-    height: 160px !important;
-    border-radius: 12px !important;
-    margin-bottom: 8px !important;
-  }
-  .drop-product-img {
-    max-height: 135px !important;
-    max-width: 90% !important;
-  }
-  .drop-title {
-    font-size: 0.82rem !important;
-    line-height: 1.28 !important;
-    min-height: 2.55em !important;
-    margin-bottom: 4px !important;
-  }
-  .drop-pricing-row {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    margin: 4px 0 8px 0 !important;
-    gap: 4px !important;
-    width: 100% !important;
-  }
-  .drop-price-wrap {
-    display: flex !important;
-    align-items: baseline !important;
-    gap: 5px !important;
-    width: auto !important;
-    flex-shrink: 0 !important;
-  }
-  .drop-price {
-    font-size: 0.88rem !important;
-    font-weight: 800 !important;
-  }
-  .drop-mrp {
-    font-size: 0.70rem !important;
-  }
-  .product-color-palette {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    gap: 5px !important;
-    margin: 0 !important;
-    flex-shrink: 0 !important;
-  }
-  .product-color-palette .color-dot {
-    width: 12px !important;
-    height: 12px !important;
-    min-width: 12px !important;
-    min-height: 12px !important;
-  }
-  .drop-quick-add-btn {
-    width: 100% !important;
-    height: 38px !important;
-    min-height: 38px !important;
-    padding: 0 8px !important;
-    font-size: 0.70rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
-    border-radius: 999px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 4px !important;
-    box-sizing: border-box !important;
-    white-space: nowrap !important;
-    margin-top: auto !important;
-  }
-}
+
 
 
 /* ==========================================================================
@@ -1107,46 +1083,291 @@
   box-shadow: 0 6px 16px rgba(255, 85, 0, 0.35) !important;
 }
 
+/* ==========================================================================
+   RESPONSIVENESS: MOBILE (<= 640px)
+   Pixel-Aligned Luxury Slider (16px Global Gutter, Fixed Heights, Price Left, Palette Right)
+   ========================================================================== */
 @media (max-width: 640px) {
+  .trending-drops-section {
+    padding: 30px 0 20px !important;
+  }
+
+  .trending-drops-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 1. Mobile Header: Hide slider arrows, elegant grid layout with full-width subtitle */
+  .drops-nav-controls {
+    display: none !important;
+  }
+
+  .trending-drops-header {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto auto !important;
+    align-items: center !important;
+    row-gap: 3px !important;
+    column-gap: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .drops-header-left {
+    display: contents !important;
+  }
+
+  .drops-eyebrow-wrap {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 2 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .drops-eyebrow-tag,
+  .drops-eyebrow-pill {
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: #FF5500 !important;
+    display: inline-block !important;
+  }
+
+  .drops-headline {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 / 3 !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+    color: #0A0A0A !important;
+    margin: 0 !important;
+  }
+
+  .drops-header-right {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+  }
+
+  .drops-view-all-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 7px 14px !important;
+    font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+    font-size: 10.5px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    color: #0A0A0C !important;
+    background: #FFFFFF !important;
+    border: 1.5px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .drops-view-all-text {
+    display: inline !important;
+  }
+
+  .drops-arrow-circle {
+    width: 18px !important;
+    height: 18px !important;
+    background: #0A0A0C !important;
+    color: #FFFFFF !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .drops-arrow-circle svg {
+    stroke: #FFFFFF !important;
+  }
+
+  .drops-subtitle {
+    grid-column: 1 / 3 !important;
+    grid-row: 3 / 4 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    font-family: var(--font-body, 'Inter', sans-serif) !important;
+    font-size: 0.82rem !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+    color: #64748B !important;
+    margin: 6px 0 0 !important;
+  }
+
+  /* Trending Drops Slider wrap & track */
+  .trending-drops-slider-wrap {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    padding: 4px 0 16px !important;
+    margin: 0 !important;
+  }
+  .trending-drops-slider-wrap::-webkit-scrollbar {
+    display: none !important;
+  }
+  .trending-drops-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 14px !important;
+    padding: 4px 16px 14px 16px !important;
+    margin: 0 !important;
+    width: max-content !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Card sizing & geometry */
+  .trending-drops-grid .drop-3d-card {
+    width: 215px !important;
+    min-width: 215px !important;
+    max-width: 215px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .drop-card-inner {
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: 18px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+  }
   .drop-card-visual {
-    height: 180px !important;
-    border-radius: 12px !important;
-    margin-bottom: 8px !important;
+    height: 165px !important;
+    border-radius: 14px !important;
+    margin-bottom: 10px !important;
+    background: linear-gradient(150deg, #F8F6F2 0%, #EFECE6 100%) !important;
   }
   .drop-product-img {
-    max-height: 155px !important;
-    max-width: 92% !important;
+    max-height: 140px !important;
+    max-width: 90% !important;
   }
+
+  /* Info & Fixed Title Height */
   .drop-card-info {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
     justify-content: flex-start !important;
   }
+  .drop-meta-row {
+    margin-bottom: 4px !important;
+  }
+  .drop-cat-tag {
+    font-size: 8.5px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+  }
+  .drop-title {
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    max-height: 34px !important;
+    margin: 0 0 8px 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* Pricing Row: Price Left, Swatches Right */
   .drop-pricing-row {
-    margin: 4px 0 8px 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    border: none !important;
     margin-top: 0 !important;
+  }
+  .drop-price-wrap {
+    display: flex !important;
+    align-items: baseline !important;
     gap: 4px !important;
+    width: auto !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
   }
   .drop-price {
-    font-size: 0.88rem !important;
+    font-size: 0.92rem !important;
+    font-weight: 800 !important;
+    color: #0C0B0A !important;
   }
   .drop-mrp {
-    font-size: 0.70rem !important;
+    font-size: 0.72rem !important;
+    color: #94A3B8 !important;
   }
+
+  /* Palette */
   .product-color-palette {
-    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
   }
   .product-color-palette .color-dot {
-    width: 11px !important;
-    height: 11px !important;
-    min-width: 11px !important;
-    min-height: 11px !important;
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    min-height: 12px !important;
+    border-radius: 50% !important;
+    border: 1.5px solid #FFFFFF !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25) !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
   }
+  .product-color-palette .color-dot.active {
+    box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #0A0A0C !important;
+  }
+
+  /* Add to Cart full-width pill button */
   .drop-quick-add-btn {
+    width: 100% !important;
     height: 38px !important;
     min-height: 38px !important;
-    flex-shrink: 0 !important;
-    font-size: 0.70rem !important;
-    letter-spacing: 0.04em !important;
-    padding: 0 8px !important;
     margin-top: auto !important;
+    padding: 0 12px !important;
+    font-size: 0.70rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    border-radius: 999px !important;
+    background: #0C0B0A !important;
+    color: #FFFFFF !important;
+    border: 1px solid #0C0B0A !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    white-space: nowrap !important;
   }
 }
