@@ -11095,7 +11095,7 @@ img {
 
 
 
-  grid-template-columns: 1fr 1fr 1.6fr;
+  grid-template-columns: 1fr;
 
 
 
@@ -57762,5 +57762,39 @@ html body #siteHeader,
   .hero-slide.active .hero-editorial-desc {
     animation: none !important;
     transform: none !important;
+  }
+}
+
+
+.promo-card-photo {
+  width: 100% !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+}
+.promo-card-photo .showcase-photo-box {
+  width: 100% !important;
+  min-height: 400px !important;
+  max-height: 520px !important;
+  border-radius: 28px !important;
+  overflow: hidden !important;
+}
+.promo-card-photo .showcase-photo-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 28px !important;
+}
+@media (max-width: 991px) {
+  .promo-card-photo {
+    border-radius: 20px !important;
+  }
+  .promo-card-photo .showcase-photo-box {
+    min-height: 280px !important;
+    height: 320px !important;
+    max-height: 340px !important;
+    border-radius: 20px !important;
+  }
+  .promo-card-photo .showcase-photo-img {
+    border-radius: 20px !important;
   }
 }
