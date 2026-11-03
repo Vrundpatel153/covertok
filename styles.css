@@ -34889,14 +34889,15 @@ a.footer-contact-main:hover {
   .fl-features-list {
     order: 3 !important;
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 6px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 10px 8px !important;
-    background: rgba(255, 255, 255, 0.82) !important;
-    border-radius: 16px !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    padding: 12px 8px !important;
+    background: #FFFFFF !important;
+    border-radius: 18px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
     box-sizing: border-box !important;
   }
   .fl-feat-item {
@@ -34904,45 +34905,55 @@ a.footer-contact-main:hover {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    gap: 4px !important;
-    padding: 2px !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    min-width: 0 !important;
   }
   .fl-feat-icon {
-    width: 28px !important;
-    height: 28px !important;
-    min-width: 28px !important;
-    min-height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
     border-radius: 50% !important;
-    background: #FFFFFF !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+    background: #F8F9FA !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     color: #0A0A0C !important;
     flex-shrink: 0 !important;
+    margin-bottom: 2px !important;
   }
   .fl-feat-icon svg {
-    width: 14px !important;
-    height: 14px !important;
+    width: 15px !important;
+    height: 15px !important;
   }
   .fl-feat-info {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: center !important;
     width: 100% !important;
+    min-width: 0 !important;
+    gap: 2px !important;
   }
   .fl-feat-title {
-    font-size: 0.68rem !important;
+    font-size: 0.72rem !important;
     font-weight: 800 !important;
-    line-height: 1.2 !important;
+    line-height: 1.25 !important;
     color: #0A0A0C !important;
     white-space: nowrap !important;
+    text-align: center !important;
+    letter-spacing: -0.01em !important;
   }
   .fl-feat-desc {
-    font-size: 0.58rem !important;
+    font-size: 0.62rem !important;
+    font-weight: 500 !important;
     color: #64748B !important;
     line-height: 1.2 !important;
     white-space: nowrap !important;
+    text-align: center !important;
   }
 
   /* 4. Hide Useless Bundle Deal on Mobile */
