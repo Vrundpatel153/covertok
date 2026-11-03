@@ -384,8 +384,8 @@
             <div class="cart-empty-chips-row">
               <a href="collections.html?cat=iphone-cases" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><rect x="5" y="2" width="14" height="20" rx="3"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>iPhone Cases</a>
               <a href="collections.html?cat=watch-bands" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><rect x="6" y="7" width="12" height="10" rx="2"></rect><path d="M9 7V3h6v4M9 17v4h6v-4"></path></svg>Watch Straps</a>
-              <a href="collections.html?cat=cover-charms" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><path d="M6 3h12l4 6-10 13L2 9z"></path><path d="M2 9h20"></path></svg>Charms &amp; Sling</a>
-              <a href="collections.html?cat=hardware" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Screen &amp; Desk</a>
+              <a href="collections.html?cat=cover-charms" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><circle cx="12" cy="7" r="4.5"></circle><path d="M12 11.5v8.5"></path><circle cx="12" cy="18" r="2"></circle></svg>Charms &amp; Sling</a>
+              <a href="collections.html?cat=hardware" class="cart-quick-chip" onclick="window.CovertokFlows.closeCart();"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 5px;"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>Screen &amp; Desk</a>
             </div>
           </div>
 
@@ -406,7 +406,7 @@
               </div>
             </div>
             <div class="cart-empty-perk-row">
-              <span class="cart-perk-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+              <span class="cart-perk-icon-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
               <div class="cart-perk-info">
                 <strong>2-Hour Dispatch Guarantee</strong>
                 <span>Prepaid orders ship same day</span>

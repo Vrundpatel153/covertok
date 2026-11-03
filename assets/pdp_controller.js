@@ -273,14 +273,14 @@
         if (warrantyDesc) warrantyDesc.textContent = 'MIL-STD 810G air-cushion defense';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<img src="assets/icons/trust_armor.svg" width="28" height="28" alt="10ft Drop Certified" class="trust-badge-icon-img">`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3L27 7.5V15.5C27 22.2 22.3 27.8 16 29.5C9.7 27.8 5 22.2 5 15.5V7.5L16 3Z" stroke="#FF5500" stroke-width="2.2" stroke-linejoin="round" fill="rgba(255, 85, 0, 0.08)"/><path d="M16 7.5L23 10.5V15.2C23 19.8 19.8 23.8 16 25.2C12.2 23.8 9 19.8 9 15.2V10.5L16 7.5Z" stroke="#FF5500" stroke-width="1.4" stroke-dasharray="2 2" stroke-linejoin="round"/><path d="M12.5 15.5L15 18L20 13" stroke="#FF5500" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
         }
       } else {
         warrantyTitle.textContent = 'Universal Precision Fit';
         if (warrantyDesc) warrantyDesc.textContent = 'Engineered device compatibility';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<img src="assets/icons/trust_fit.svg" width="28" height="28" alt="Universal Precision Fit" class="trust-badge-icon-img">`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="9" y="5" width="14" height="22" rx="3.5" stroke="#FF5500" stroke-width="2.2" fill="rgba(255, 85, 0, 0.08)"/><path d="M5 9V5H9" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 5H27V9" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 23V27H9" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 27H27V23" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="3" stroke="#FF5500" stroke-width="1.8"/><path d="M14 16L15.5 17.5L18.5 14.5" stroke="#FF5500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
         }
       }
     }
