@@ -2211,7 +2211,7 @@
 
   gap: 24px 20px;
 
-  margin-bottom: 64px;
+  margin-bottom: 18px !important;
 
 }
 
@@ -3395,7 +3395,7 @@
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
-  padding: 38px 0;
+  padding: 20px 0 !important;
 
 }
 
@@ -3983,7 +3983,7 @@
 
 .category-shelf-section {
 
-  margin-bottom: 36px;
+  margin-bottom: 22px !important;
 
   position: relative;
 

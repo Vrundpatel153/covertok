@@ -7377,10 +7377,7 @@ img {
 
 
 .style-section {
-
-
-
-  padding: 50px 20px 80px;
+  padding: 30px 20px 38px;
 
 
 
@@ -8213,10 +8210,7 @@ img {
 
 
 .brands-section {
-
-
-
-  padding: 70px 0 80px;
+  padding: 28px 0 34px;
 
 
 
@@ -8797,10 +8791,7 @@ img {
 
 
 .glass-section {
-
-
-
-  padding: 40px 0 60px;
+  padding: 28px 0 34px;
 
 
 
@@ -11025,10 +11016,7 @@ img {
 
 
 .shop-dual-section {
-
-
-
-  padding: 60px 0 80px;
+  padding: 32px 0 38px;
 
 
 
@@ -11737,18 +11725,8 @@ img {
 
 
 .support-faq-section {
-
-
-
   background: var(--dark-section-bg);
-
-
-
-  color: #FFFFFF;
-
-
-
-  padding: 80px 0 100px;
+  padding: 36px 0 44px;
 
 
 
@@ -12821,7 +12799,7 @@ img {
 
 
 .trust-banner-section {
-  padding: 38px 0;
+  padding: 20px 0 !important;
   background: #FFFFFF;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -12915,18 +12893,9 @@ img {
 
 
 .site-footer {
-
-
-
   background-color: #0A0A0A !important;
-
-
-
   color: #EDE8DF !important;
-
-
-
-  padding: 64px 0 36px !important;
+  padding: 36px 0 28px !important;
 
 
 
@@ -18589,10 +18558,7 @@ a.footer-contact-main:hover {
 
 
   .collections-section {
-
-
-
-    padding: 44px 0 54px;
+  padding: 32px 0 38px;
 
 
 
@@ -20761,14 +20727,7 @@ a.footer-contact-main:hover {
 
 
 .frameless-section {
-
-
-
-  position: relative;
-
-
-
-  padding: 60px 0 76px;
+  padding: 32px 0 38px;
 
 
 
@@ -26476,10 +26435,7 @@ a.footer-contact-main:hover {
 
 
 .collections-section {
-
-
-
-  padding: 80px 0 90px;
+  padding: 36px 0 44px;
 
 
 
@@ -40612,22 +40568,7 @@ a.footer-contact-main:hover {
 
 
 .popular-choices-section {
-
-
-
-  position: relative;
-
-
-
-  width: 100%;
-
-
-
-  background: #FFFFFF;
-
-
-
-  padding: 80px 0 90px;
+  padding: 36px 0 44px;
 
 
 
@@ -43307,10 +43248,7 @@ a.footer-contact-main:hover {
 
 
   .popular-choices-section {
-
-
-
-    padding: 48px 0 60px;
+    padding: 26px 0 32px;
 
 
 
@@ -45550,14 +45488,7 @@ a.footer-contact-main:hover {
 
 
 .instagram-community-section {
-
-
-
-  background-color: #F6F4EF;
-
-
-
-  padding: 96px 0 108px 0;
+  padding: 36px 0 44px 0;
 
 
 
@@ -47682,10 +47613,7 @@ a.footer-contact-main:hover {
 
 
   .instagram-community-section {
-
-
-
-    padding: 64px 0 76px 0;
+    padding: 24px 0 32px 0;
 
 
 
@@ -48070,18 +47998,7 @@ a.footer-contact-main:hover {
 
 
 .community-videos-section {
-
-
-
-  position: relative;
-
-
-
-  background: #FBF8F4;
-
-
-
-  padding: 80px 0 36px 0;
+  padding: 32px 0 28px 0;
 
 
 
@@ -48102,18 +48019,7 @@ a.footer-contact-main:hover {
 
 
 .customer-reviews-section {
-
-
-
-  position: relative;
-
-
-
-  background: #FBF8F4;
-
-
-
-  padding: 36px 0 90px 0;
+  padding: 28px 0 36px 0;
 
 
 
@@ -50842,10 +50748,7 @@ a.footer-contact-main:hover {
 
 
   .community-videos-section {
-
-
-
-    padding: 50px 0 36px 0;
+    padding: 24px 0 24px 0;
 
 
 
@@ -50854,10 +50757,7 @@ a.footer-contact-main:hover {
 
 
   .customer-reviews-section {
-
-
-
-    padding: 36px 0 60px 0;
+    padding: 22px 0 28px 0;
 
 
 
@@ -53461,10 +53361,7 @@ a.footer-contact-main:hover {
 
 /* Bento Everyday Essentials Full-Background Kinetic Ambient Stream */
 .bento-collections-section {
-  position: relative !important;
-  overflow: hidden !important;
-  background: #FFFFFF !important;
-  padding: 40px 0 60px 0 !important;
+    padding: 24px 0 32px 0 !important;
 }
 
 .bento-ambient-canvas {
@@ -54681,8 +54578,7 @@ body.home-page .hero-content {
    Hardware & Screen Defense Section (Tempered Glass & Mobile Stands)
    ========================================================================== */
 .hardware-section {
-  position: relative !important;
-  padding: 84px 0 !important;
+  padding: 36px 0 44px !important;
   background: #FAF8F5 !important;
   border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
@@ -54969,7 +54865,7 @@ body.home-page .hero-content {
 
 @media (max-width: 640px) {
   .hardware-section {
-    padding: 50px 0 !important;
+    padding: 24px 0 30px !important;
   }
   .hardware-header {
     flex-direction: column !important;
@@ -56349,9 +56245,7 @@ body.home-page .hero-content {
    SUPPORT FAQ SECTION: CLEAN, PURPOSEFUL & COMPACT SPACING (PC & MOBILE)
    ========================================================================== */
 .support-faq-section {
-  background: #0A0A0C !important;
-  color: #FFFFFF !important;
-  padding: 64px 0 72px !important;
+  padding: 36px 0 44px !important;
   position: relative !important;
 }
 
@@ -56504,7 +56398,7 @@ body.home-page .hero-content {
 /* Mobile Spacing Optimization */
 @media (max-width: 768px) {
   .support-faq-section {
-    padding: 40px 0 48px !important;
+    padding: 24px 0 30px !important;
   }
 
   .support-faq-grid {
@@ -56715,7 +56609,7 @@ p,
    ========================================================================== */
 
 .trust-banner-section {
-  padding: 42px 0 !important;
+  padding: 20px 0 !important;
   background: #FFFFFF !important;
   border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;

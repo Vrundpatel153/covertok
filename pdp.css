@@ -1993,7 +1993,7 @@ html, body {
 
 /* 9. CUSTOMER REVIEWS SECTION */
 .pdp-reviews-box-section {
-  padding: 16px 0 60px;
+  padding: 16px 0 28px;
 }
 
 .pdp-reviews-outer-card {
@@ -2298,7 +2298,7 @@ html, body {
 
 /* 5. COVERTOK PROMISE SECTION */
 .pdp-promise-section {
-  padding: 50px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--pdp-border);
   background: #FFFFFF;
 }
@@ -2381,7 +2381,7 @@ html, body {
 
 /* 6. COMMUNITY VIDEO REELS SECTION (On PDP) */
 .pdp-reels-section {
-  padding: 60px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--pdp-border);
   background: var(--pdp-bg);
 }
@@ -2473,7 +2473,7 @@ html, body {
 
 /* 7. AUTHENTIC CUSTOMER REVIEWS SECTION */
 .pdp-reviews-section {
-  padding: 60px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--pdp-border);
   background: #FFFFFF;
 }
@@ -2584,7 +2584,7 @@ html, body {
 
 /* 8. FAQ ACCORDION SECTION */
 .pdp-faq-section {
-  padding: 60px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--pdp-border);
   background: var(--pdp-bg);
 }
@@ -2599,7 +2599,7 @@ html, body {
 
 /* 9. YOU MAY ALSO LIKE (RELATED PRODUCTS) */
 .pdp-related-section {
-  padding: 60px 0;
+  padding: 28px 0;
   border-top: 1px solid var(--pdp-border);
   background: #FFFFFF;
 }
