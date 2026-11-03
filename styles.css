@@ -52191,38 +52191,15 @@ a.footer-contact-main:hover {
 
 
 .videos-track {
-
-
-
   display: flex !important;
-
-
-
   gap: 18px !important;
-
-
-
   width: max-content !important;
-
-
-
-  overflow: visible !important;
-
-
-
+  overflow: hidden !important;
   scroll-snap-type: none !important;
-
-
-
-  animation: videosMarqueeLTR 40s linear infinite !important;
-
-
-
-  will-change: transform;
-
-
-
-  cursor: grab;
+  animation: none !important;
+  cursor: default !important;
+  user-select: none;
+  -webkit-user-select: none;
 
 
 

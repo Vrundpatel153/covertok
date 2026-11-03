@@ -725,15 +725,8 @@
       }
     }
 
-    // 4. Community Videos Track (#videosTrack) (Continuous Marquee)
-    const videosTrack = document.getElementById('videosTrack');
-    if (videosTrack) {
-      setupInfiniteLTRSwipeRow(videosTrack, {
-        animName: 'videosMarqueeLTR',
-        duration: 40,
-        cloneMultiplier: 0
-      });
-    }
+    // 4. Community Videos Track (#videosTrack) - Auto sliding removed as requested
+    // Reels section is kept static and not auto-sliding
 
     // 5. Customer Reviews Track (#reviewsTrack) (Continuous Marquee)
     const reviewsTrack = document.getElementById('reviewsTrack');

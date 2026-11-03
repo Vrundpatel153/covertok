@@ -253,13 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') loadAndPlayVideo(currentVideoIndex + 1);
   });
 
-  // "View More" button links to local collections.html
-  const viewMoreVideosBtn = document.getElementById('viewMoreVideosBtn');
-  if (viewMoreVideosBtn) {
-    viewMoreVideosBtn.addEventListener('click', () => {
-      window.location.href = 'collections.html';
-    });
-  }
+// "View More" button removed as requested
 
   // --------------------------------------------------------------------------
   // 4. Reviews Slider Navigation & Looping
