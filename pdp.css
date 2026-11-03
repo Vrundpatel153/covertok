@@ -4111,3 +4111,83 @@ html body #siteHeader,
 .floating-whatsapp-btn + .floating-whatsapp-btn {
   display: none !important;
 }
+
+/* ==========================================================================
+   UNIVERSAL FOOTER MOBILE OVERRIDES (CENTERED BACK TO TOP & 1-ROW PAYMENTS)
+   ========================================================================== */
+.footer-back-to-top {
+  justify-content: center !important;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+
+  .footer-legal-block {
+    text-align: center !important;
+  }
+
+  .footer-legal-block p {
+    text-align: center !important;
+    margin: 0 0 4px 0 !important;
+  }
+
+  .footer-back-to-top {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: auto !important;
+    min-width: 170px !important;
+    max-width: 220px !important;
+    padding: 9px 22px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-back-to-top span {
+    text-align: center !important;
+  }
+
+  .footer-payment-badges {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: clamp(4px, 1.2vw, 6px) !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: visible !important;
+  }
+
+  .pay-badge-pill {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    max-width: 54px !important;
+    height: 28px !important;
+    padding: 0 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+    background: #181716 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .pay-badge-pill svg {
+    max-width: 88% !important;
+    max-height: 14px !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+}
