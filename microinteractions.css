@@ -1770,7 +1770,10 @@ body:not(.home-page) #siteHeader,
 .pdp-action-icon-btn,
 .header-right .icon-btn,
 .pdp-header-actions .pdp-action-icon-btn,
-.drops-arrow-circle {
+.drops-arrow-circle,
+.mobile-toggle-btn,
+#mobileMenuBtn,
+.header-right .mobile-toggle-btn {
   width: 42px !important;
   height: 42px !important;
   border-radius: 50% !important;
@@ -1792,7 +1795,10 @@ body:not(.home-page) #siteHeader,
 .icon-btn svg,
 .pdp-action-icon-btn svg,
 .header-right .icon-btn svg,
-.drops-arrow-circle svg {
+.drops-arrow-circle svg,
+.mobile-toggle-btn svg,
+#mobileMenuBtn svg,
+.header-right .mobile-toggle-btn svg {
   width: 20px !important;
   height: 20px !important;
   stroke: #0A0A0A !important;
@@ -1804,7 +1810,10 @@ body:not(.home-page) #siteHeader,
 .pdp-action-icon-btn:hover,
 .header-right .icon-btn:hover,
 .pdp-header-actions .pdp-action-icon-btn:hover,
-.drops-arrow-circle:hover {
+.drops-arrow-circle:hover,
+.mobile-toggle-btn:hover,
+#mobileMenuBtn:hover,
+.header-right .mobile-toggle-btn:hover {
   background: #0A0A0A !important;
   border-color: #0A0A0A !important;
   color: #FFFFFF !important;
@@ -1815,13 +1824,18 @@ body:not(.home-page) #siteHeader,
 .icon-btn:hover svg,
 .pdp-action-icon-btn:hover svg,
 .header-right .icon-btn:hover svg,
-.drops-arrow-circle:hover svg {
+.drops-arrow-circle:hover svg,
+.mobile-toggle-btn:hover svg,
+#mobileMenuBtn:hover svg,
+.header-right .mobile-toggle-btn:hover svg {
   stroke: #FFFFFF !important;
 }
 
 .icon-btn:active,
 .pdp-action-icon-btn:active,
-.drops-arrow-circle:active {
+.drops-arrow-circle:active,
+.mobile-toggle-btn:active,
+#mobileMenuBtn:active {
   transform: scale(0.94) !important;
 }
 

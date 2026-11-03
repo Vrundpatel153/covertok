@@ -57345,32 +57345,115 @@ html body #siteHeader,
 }
 
 /* ==========================================================================
-   MOBILE BURGER MENU PILL (MATCHING SEARCH & CART BUTTONS)
+   MOBILE BURGER MENU PILL (IDENTICAL MATCH TO SEARCH & CART BUTTONS)
    ========================================================================== */
 .mobile-toggle-btn,
+#mobileMenuBtn,
 #mobileMenuToggle,
 #mobileNavOpen {
-  width: 40px !important;
-  height: 40px !important;
-  min-width: 40px !important;
-  min-height: 40px !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
   border-radius: 50% !important;
-  background: #F4F4F5 !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  color: #18181B !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-  transition: all 0.2s ease !important;
+  color: #0A0A0A !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
   padding: 0 !important;
+  outline: none !important;
+  flex-shrink: 0 !important;
+}
+
+.mobile-toggle-btn svg,
+#mobileMenuBtn svg,
+#mobileMenuToggle svg,
+#mobileNavOpen svg {
+  stroke: #0A0A0A !important;
+  color: #0A0A0A !important;
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
+  transition: stroke 0.2s ease !important;
 }
 
 .mobile-toggle-btn:hover,
+#mobileMenuBtn:hover,
 #mobileMenuToggle:hover,
 #mobileNavOpen:hover {
-  background: #E4E4E7 !important;
-  transform: scale(1.05) !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) scale(1.04) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.mobile-toggle-btn:hover svg,
+#mobileMenuBtn:hover svg,
+#mobileMenuToggle:hover svg,
+#mobileNavOpen:hover svg {
+  stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+
+.mobile-toggle-btn:active,
+#mobileMenuBtn:active,
+#mobileMenuToggle:active,
+#mobileNavOpen:active {
+  transform: scale(0.94) !important;
+}
+
+@media (max-width: 768px) {
+  .header-right .icon-btn,
+  .header-right .mobile-toggle-btn,
+  #mobileMenuBtn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 50% !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .header-right .icon-btn svg,
+  .header-right .mobile-toggle-btn svg,
+  #mobileMenuBtn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-right .icon-btn,
+  .header-right .mobile-toggle-btn,
+  #mobileMenuBtn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 50% !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .header-right .icon-btn svg,
+  .header-right .mobile-toggle-btn svg,
+  #mobileMenuBtn svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
 }
 
 /* ==========================================================================
