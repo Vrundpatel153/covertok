@@ -582,8 +582,8 @@
             </a>
           `).join('')}
         </div>
-        <div style="text-align: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid #E4E4E7;">
-          <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" style="font-size: 0.85rem; font-weight: 700; color: #0A0A0A; display: inline-flex; align-items: center; gap: 6px;">
+        <div class="search-results-footer">
+          <a href="collections.html${q ? `?search=${encodeURIComponent(q)}` : ''}" class="search-view-all-link">
             <span>View All Products in Catalog</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
