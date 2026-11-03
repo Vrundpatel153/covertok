@@ -12799,8 +12799,8 @@ img {
 
 
 .trust-banner-section {
-  padding: 20px 0 !important;
-  background: #FFFFFF;
+  padding: 24px 0 !important;
+  background: #FAF8F5 !important;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -19746,11 +19746,11 @@ a.footer-contact-main:hover {
 
 
 
-    padding: 14px 0 !important;
+    padding: 18px 0 !important;
 
 
 
-    background: #FFFFFF !important;
+    background: #FAF8F5 !important;
 
 
 
@@ -56605,311 +56605,6 @@ p,
 
 
 /* ==========================================================================
-   CUSTOM, MEANINGFUL & BEAUTIFUL TRUST BADGES (DESKTOP & 2X2 MOBILE)
-   ========================================================================== */
-
-.trust-banner-section {
-  padding: 20px 0 !important;
-  background: #FFFFFF !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-  position: relative !important;
-}
-
-.trust-grid {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 20px !important;
-  align-items: stretch !important;
-}
-
-.trust-item {
-  display: flex !important;
-  align-items: center !important;
-  gap: 16px !important;
-  padding: 16px 18px !important;
-  background: #FFFFFF !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-sizing: border-box !important;
-}
-
-.trust-item:hover {
-  border-color: rgba(255, 85, 0, 0.28) !important;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
-  transform: translateY(-2px) !important;
-}
-
-/* Trust Badge Icons - Clean Transparent Brand Icons Without Background */
-.trust-icon {
-  width: 36px !important;
-  height: 36px !important;
-  min-width: 36px !important;
-  min-height: 36px !important;
-  border: none !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  padding: 0 !important;
-  transition: transform 0.25s ease !important;
-}
-
-.trust-icon img,
-.trust-icon svg,
-.trust-badge-icon-img,
-.trust-badge-icon-svg {
-  width: 32px !important;
-  height: 32px !important;
-  display: block !important;
-  flex-shrink: 0 !important;
-  filter: drop-shadow(0 1px 2px rgba(255, 85, 0, 0.12)) !important;
-}
-
-.trust-item:hover .trust-icon {
-  transform: scale(1.08) !important;
-}
-
-.trust-icon-express,
-.trust-icon-armor,
-.trust-icon-swap,
-.trust-icon-uv,
-.trust-icon-warranty {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.trust-info {
-  display: flex !important;
-  flex-direction: column !important;
-  text-align: left !important;
-}
-
-.trust-badge-tag {
-  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.65rem !important;
-  font-weight: 850 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-  color: #FF5500 !important;
-  display: block !important;
-  margin-bottom: 2px !important;
-  line-height: 1.2 !important;
-}
-
-.trust-badge-tag.tag-armor {
-  color: #0284C7 !important;
-}
-
-.trust-badge-tag.tag-swap {
-  color: #059669 !important;
-}
-
-.trust-badge-tag.tag-uv {
-  color: #7C3AED !important;
-}
-
-.trust-title {
-  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.94rem !important;
-  font-weight: 800 !important;
-  color: #0F172A !important;
-  margin: 0 0 3px 0 !important;
-  line-height: 1.25 !important;
-  letter-spacing: -0.015em !important;
-}
-
-.trust-desc {
-  font-family: var(--font-body, 'Inter', sans-serif) !important;
-  font-size: 0.78rem !important;
-  color: #64748B !important;
-  margin: 0 !important;
-  line-height: 1.4 !important;
-}
-
-/* ==========================================================================
-   MOBILE VIEW: BALANCED, COMFORTABLE 2X2 REASSURANCE GRID
-   ========================================================================== */
-@media (max-width: 768px) {
-  .trust-banner-section {
-    padding: 24px 0 !important;
-    background: #FAFAFC !important;
-  }
-
-  .trust-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-    align-items: stretch !important;
-  }
-
-  .trust-item {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    padding: 14px 12px !important;
-    gap: 8px !important;
-    border-radius: 14px !important;
-    background: #FFFFFF !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
-  }
-
-  .trust-icon {
-    width: 30px !important;
-    height: 30px !important;
-    min-width: 30px !important;
-    min-height: 30px !important;
-    border: none !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .trust-icon img,
-  .trust-badge-icon-img {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .trust-badge-tag {
-    font-size: 0.58rem !important;
-    letter-spacing: 0.06em !important;
-  }
-
-  .trust-title {
-    font-size: 0.82rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 2px !important;
-  }
-
-  .trust-desc {
-    font-size: 0.70rem !important;
-    line-height: 1.35 !important;
-  }
-
-  /* PDP Trust Badges in product.html */
-  .covertok-live-trust-badges {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-    margin: 18px 0 !important;
-  }
-
-  .covertok-trust-item {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 10px 12px !important;
-    background: #FFFFFF !important;
-    border: 1px solid rgba(0, 0, 0, 0.06) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
-  }
-
-  .covertok-trust-icon {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    border-radius: 10px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    flex-shrink: 0 !important;
-  }
-}
-
-
-/* ==========================================================================
-   PDP LUXURY 2X2 REASSURANCE GRID (DESKTOP & MOBILE)
-   ========================================================================== */
-.covertok-live-trust-badges {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 12px !important;
-  margin: 20px 0 !important;
-}
-
-.covertok-trust-item {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  padding: 12px 14px !important;
-  background: #FFFFFF !important;
-  border: 1px solid rgba(0, 0, 0, 0.07) !important;
-  border-radius: 14px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
-  transition: all 0.22s ease !important;
-  box-sizing: border-box !important;
-}
-
-.covertok-trust-item:hover {
-  border-color: rgba(255, 85, 0, 0.25) !important;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
-  transform: translateY(-1px) !important;
-}
-
-.covertok-trust-icon {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  min-height: 42px !important;
-  border-radius: 12px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-  aspect-ratio: 1 / 1 !important;
-  box-sizing: border-box !important;
-  transition: transform 0.2s ease !important;
-}
-
-.covertok-trust-item:hover .covertok-trust-icon {
-  transform: scale(1.08) !important;
-}
-
-.covertok-trust-meta {
-  display: flex !important;
-  flex-direction: column !important;
-  text-align: left !important;
-  overflow: hidden !important;
-}
-
-.covertok-trust-meta strong {
-  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.84rem !important;
-  font-weight: 800 !important;
-  color: #0F172A !important;
-  line-height: 1.25 !important;
-  margin-bottom: 2px !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-.covertok-trust-meta span {
-  font-family: var(--font-body, 'Inter', sans-serif) !important;
-  font-size: 0.72rem !important;
-  color: #64748B !important;
-  line-height: 1.35 !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-.trust-icon-warranty {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.05)) !important;
-  border: 1px solid rgba(245, 158, 11, 0.24) !important;
-}
-
-
-/* ==========================================================================
    PDP SUBTITLE CLEANUP: HIDE EMPTY/RAW CATEGORY LEAKS
    ========================================================================== */
 .pdp-product-subtitle {
@@ -57363,10 +57058,17 @@ html body #siteHeader,
 /* ==========================================================================
    TRUST BADGES SEPARATION & ELEVATION (DISTINCT BOXES WITH ACCENT BORDER & SHADOW)
    ========================================================================== */
+.trust-banner-section {
+  background: #FAF8F5 !important;
+  border-top: 1px solid rgba(255, 85, 0, 0.14) !important;
+  border-bottom: 1px solid rgba(255, 85, 0, 0.14) !important;
+  padding: 24px 0 !important;
+}
+
 .trust-grid {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
-  gap: 16px !important;
+  gap: 20px !important;
   align-items: stretch !important;
 }
 
@@ -57376,24 +57078,52 @@ html body #siteHeader,
   gap: 14px !important;
   padding: 16px 18px !important;
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 85, 0, 0.16) !important;
-  border-radius: 14px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+  border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-sizing: border-box !important;
+  height: 100% !important;
 }
 
 .trust-item:hover {
-  border-color: rgba(255, 85, 0, 0.36) !important;
-  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.08) !important;
-  transform: translateY(-2px) !important;
+  border-color: #FF5500 !important;
+  box-shadow: 0 10px 28px rgba(255, 85, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-2.5px) !important;
+}
+
+.trust-icon {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 85, 0, 0.08) !important;
+  border: 1px solid rgba(255, 85, 0, 0.22) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  color: #FF5500 !important;
+  flex-shrink: 0 !important;
+  transition: all 0.25s ease !important;
+}
+
+.trust-item:hover .trust-icon {
+  border-color: #FF5500 !important;
+  background: rgba(255, 85, 0, 0.14) !important;
+  transform: scale(1.06) !important;
 }
 
 /* Mobile Trust Cards: OCD Precision Alignment & Equal Heights */
 @media (max-width: 768px) {
+  .trust-banner-section {
+    background: #FAF8F5 !important;
+    padding: 18px 0 !important;
+  }
+
   .trust-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 12px !important;
   }
 
   .trust-item {
@@ -57403,19 +57133,20 @@ html body #siteHeader,
     justify-content: flex-start !important;
     gap: 10px !important;
     padding: 12px 10px !important;
-    border-radius: 12px !important;
+    border-radius: 14px !important;
     background: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 85, 0, 0.16) !important;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04) !important;
-    min-height: 72px !important;
+    border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+    box-shadow: 0 4px 14px rgba(255, 85, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    min-height: 68px !important;
     height: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .trust-item .trust-icon {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    min-height: 38px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
     border-radius: 10px !important;
     flex-shrink: 0 !important;
   }
@@ -57429,24 +57160,26 @@ html body #siteHeader,
   }
 
   .trust-item .trust-title {
-    font-size: 0.82rem !important;
-    line-height: 1.25 !important;
+    font-size: 0.74rem !important;
+    line-height: 1.22 !important;
     font-weight: 700 !important;
     color: #18181B !important;
     margin: 0 !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    white-space: normal !important;
+    word-break: break-word !important;
   }
 
   .trust-item .trust-desc {
-    font-size: 0.72rem !important;
-    line-height: 1.25 !important;
+    font-size: 0.65rem !important;
+    line-height: 1.22 !important;
     color: #71717A !important;
     margin: 2px 0 0 0 !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
     overflow: hidden !important;
-    text-overflow: ellipsis !important;
   }
 
   .trust-item .trust-badge-tag {
@@ -57457,7 +57190,7 @@ html body #siteHeader,
   .covertok-live-trust-badges {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 12px !important;
     width: 100% !important;
   }
 
@@ -57465,14 +57198,33 @@ html body #siteHeader,
     display: flex !important;
     align-items: center !important;
     gap: 10px !important;
-    padding: 10px 12px !important;
+    padding: 12px 10px !important;
     background: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 85, 0, 0.16) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04) !important;
+    border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 14px rgba(255, 85, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04) !important;
     min-height: 64px !important;
     height: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .covertok-trust-item:hover {
+    border-color: #FF5500 !important;
+    box-shadow: 0 8px 20px rgba(255, 85, 0, 0.16) !important;
+  }
+
+  .covertok-trust-icon {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 85, 0, 0.08) !important;
+    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
   }
 
   .covertok-trust-meta {
@@ -57481,7 +57233,7 @@ html body #siteHeader,
   }
 
   .covertok-trust-meta strong {
-    font-size: 0.80rem !important;
+    font-size: 0.78rem !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -57489,7 +57241,7 @@ html body #siteHeader,
   }
 
   .covertok-trust-meta span {
-    font-size: 0.70rem !important;
+    font-size: 0.68rem !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
