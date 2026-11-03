@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Clear MagSafe Shockproof Case',
       quote: '“Crystal clear protection — strong, slim, and MagSafe-ready.”',
       desc: 'Shock-absorbing transparent case with scratch resistance and a premium grip.',
-      priceCurrent: 'Rs. 499.00',
-      priceOld: 'Rs. 999.00',
-      productUrl: 'collections.html?cat=iphone-cases',
+      priceCurrent: '₹499.00',
+      priceOld: '₹999.00',
+      productUrl: 'product.html?id=9854428905770',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/modal/view_01_lifestyle.webp',
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Leather Wallet Card Holder With Kickstand',
       quote: '“Everything I need in one sleek pocket. Cards stay locked in securely.”',
       desc: 'Top-grain textured vegan leather case with magnetic folding kickstand and MagSafe card pocket.',
-      priceCurrent: 'Rs. 1,099.00',
-      priceOld: 'Rs. 1,699.00',
-      productUrl: 'collections.html',
+      priceCurrent: '₹1,099.00',
+      priceOld: '₹1,699.00',
+      productUrl: 'product.html?id=9853945741610',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_02_leather_wallets.webp',
@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Wild Leopard MagSafe Case',
       quote: '“The gloss finish and deep animal print turn heads everywhere I go.”',
       desc: 'Dual-layer shockproof armor with raised camera lip and high-gloss scratch-resistant clear coating.',
-      priceCurrent: 'Rs. 699.00',
-      priceOld: 'Rs. 1,299.00',
-      productUrl: 'collections.html',
+      priceCurrent: '₹699.00',
+      priceOld: '₹1,299.00',
+      productUrl: 'product.html?id=9869725696298',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_03_leopard_case.webp',
@@ -87,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Silver Bow Beaded Phone Charm',
       quote: '“Obsessed with the heavy metallic feel and mirror shine of these beads!”',
       desc: 'Handcrafted chrome alloy spherical beads with an elegant sculpted metallic bow and reinforced tether.',
-      priceCurrent: 'Rs. 399.00',
-      priceOld: 'Rs. 699.00',
-      productUrl: 'collections.html',
+      priceCurrent: '₹399.00',
+      priceOld: '₹699.00',
+      productUrl: 'product.html?id=9904686924074',
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_04_silver_bow_charm.webp',
@@ -196,19 +196,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Event Listeners for Cards and Tag Buttons
+  // Event Listeners for Cards and Tag Buttons - Direct Product Redirection
   const cards = document.querySelectorAll('.instagram-card');
   cards.forEach((card) => {
     card.addEventListener('click', (e) => {
-      const idx = parseInt(card.getAttribute('data-post-index')) || 0;
-      openModal(idx);
+      const href = card.getAttribute('href');
+      if (href) {
+        window.location.href = href;
+      }
     });
 
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        const idx = parseInt(card.getAttribute('data-post-index')) || 0;
-        openModal(idx);
+        const href = card.getAttribute('href');
+        if (href) {
+          window.location.href = href;
+        }
       }
     });
   });
@@ -216,9 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tagBtns = document.querySelectorAll('.instagram-tag-btn');
   tagBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent double trigger
-      const idx = parseInt(btn.getAttribute('data-post-index')) || 0;
-      openModal(idx);
+      const card = btn.closest('.instagram-card');
+      const href = card ? card.getAttribute('href') : null;
+      if (href) {
+        window.location.href = href;
+      }
     });
   });
 

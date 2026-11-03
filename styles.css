@@ -56248,3 +56248,84 @@ body.home-page .hero-content {
     bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }
+
+
+/* ==========================================================================
+   COMMUNITY / SEEN OUT THERE: RESPONSIVE REFINEMENT & REDIRECTION ENFORCEMENT
+   ========================================================================== */
+.instagram-card {
+  display: block !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.instagram-card:hover .instagram-card-img {
+  transform: scale(1.05) !important;
+}
+
+.instagram-eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  margin-bottom: 6px !important;
+}
+
+.instagram-eyebrow-text {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  color: #FF5500 !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.instagram-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-weight: 850 !important;
+  color: #111113 !important;
+  letter-spacing: -0.03em !important;
+}
+
+@media (min-width: 641px) {
+  .instagram-title {
+    font-size: 2.8rem !important;
+    line-height: 1.12 !important;
+    margin: 10px 0 8px 0 !important;
+  }
+  .instagram-subtitle {
+    font-size: 1.05rem !important;
+    color: #64748B !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .instagram-header {
+    margin-bottom: 24px !important;
+  }
+  .instagram-eyebrow {
+    gap: 0 !important;
+  }
+  .instagram-eyebrow-line {
+    display: none !important; /* Hide rigid horizontal lines on mobile to prevent wrapping */
+  }
+  .instagram-eyebrow-text {
+    font-size: 0.70rem !important;
+    letter-spacing: 0.08em !important;
+    background: rgba(255, 85, 0, 0.08) !important;
+    padding: 4px 12px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+  }
+  .instagram-title {
+    font-size: 1.85rem !important;
+    line-height: 1.18 !important;
+    margin: 8px 0 6px 0 !important;
+  }
+  .instagram-subtitle {
+    font-size: 0.84rem !important;
+    line-height: 1.4 !important;
+    color: #64748B !important;
+  }
+}
