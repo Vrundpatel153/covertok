@@ -16,6 +16,9 @@
   let currentBadge = 'all';
   let catalogCurrentPage = 1;
   const CATALOG_PAGE_SIZE = 16;
+  let isCatalogInfiniteLoading = false;
+  let catalogInfiniteObserver = null;
+  let currentFilteredProducts = [];
 
   // Category display names & definitions with authentic preview thumbnails
   const CATEGORIES = [
@@ -337,6 +340,7 @@
     // Update Active Filter Chips
     renderActiveFilterChips(chipsContainer);
 
+    currentFilteredProducts = filtered;
     // Batch & Pagination Calculation
     const totalPages = Math.ceil(filtered.length / CATALOG_PAGE_SIZE);
     if (catalogCurrentPage > totalPages) catalogCurrentPage = Math.max(1, totalPages);
@@ -350,6 +354,9 @@
 
     // Render Batch Pagination Controls
     renderCatalogPagination(totalPages, filtered.length);
+
+    // Setup Infinite Loading on scroll
+    setupCatalogInfiniteScroll(totalPages);
   }
 
   // Cinematic FLIP & Staggered Rearrangement Engine
@@ -1294,18 +1301,113 @@
       });
     });
 
-    const nextBtn = container.querySelector('.catalog-page-next');
-    if (nextBtn && hasNext) {
-      nextBtn.addEventListener('click', () => {
-        catalogCurrentPage++;
-        filterAndRenderProducts();
-        const grid = document.getElementById('catalogGrid');
-        if (grid) {
-          const rect = grid.getBoundingClientRect();
-          window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
+    const prevBtn = container.querySelector('.catalog-page-prev');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (catalogCurrentPage > 1) {
+          jumpToCatalogPage(catalogCurrentPage - 1, totalPages);
         }
       });
     }
+
+    container.querySelectorAll('.catalog-page-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetPage = parseInt(btn.getAttribute('data-page'), 10);
+        if (targetPage !== catalogCurrentPage) {
+          jumpToCatalogPage(targetPage, totalPages);
+        }
+      });
+    });
+
+    const nextBtn = container.querySelector('.catalog-page-next');
+    if (nextBtn && hasNext) {
+      nextBtn.addEventListener('click', () => {
+        if (catalogCurrentPage < totalPages) {
+          jumpToCatalogPage(catalogCurrentPage + 1, totalPages);
+        }
+      });
+    }
+  }
+
+  function jumpToCatalogPage(targetPage, totalPages) {
+    catalogCurrentPage = targetPage;
+    const grid = document.getElementById('catalogGrid');
+    if (grid) {
+      const startIdx = (catalogCurrentPage - 1) * CATALOG_PAGE_SIZE;
+      const pagedProducts = currentFilteredProducts.slice(startIdx, startIdx + CATALOG_PAGE_SIZE);
+      cinematicGridRender(grid, pagedProducts, createProductCard);
+      const rect = grid.getBoundingClientRect();
+      window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
+    }
+    renderCatalogPagination(totalPages, currentFilteredProducts.length);
+    setupCatalogInfiniteScroll(totalPages);
+  }
+
+  function setupCatalogInfiniteScroll(totalPages) {
+    if (catalogInfiniteObserver) {
+      catalogInfiniteObserver.disconnect();
+      catalogInfiniteObserver = null;
+    }
+
+    const sentinel = document.getElementById('catalogInfiniteSentinel');
+    const loader = document.getElementById('catalogInfiniteLoader');
+    const grid = document.getElementById('catalogGrid');
+
+    if (!sentinel || !grid) return;
+
+    if (catalogCurrentPage >= totalPages) {
+      if (loader) loader.classList.remove('active');
+      return;
+    }
+
+    catalogInfiniteObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting && !isCatalogInfiniteLoading && catalogCurrentPage < totalPages) {
+        isCatalogInfiniteLoading = true;
+        if (loader) loader.classList.add('active');
+
+        setTimeout(() => {
+          catalogCurrentPage++;
+          const startIdx = (catalogCurrentPage - 1) * CATALOG_PAGE_SIZE;
+          const nextBatch = currentFilteredProducts.slice(startIdx, startIdx + CATALOG_PAGE_SIZE);
+
+          if (grid && nextBatch.length > 0) {
+            const fragment = document.createDocumentFragment();
+            nextBatch.forEach(prod => {
+              const card = createProductCard(prod);
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(16px)';
+              fragment.appendChild(card);
+            });
+            grid.appendChild(fragment);
+
+            requestAnimationFrame(() => {
+              const cards = grid.querySelectorAll('.catalog-card');
+              cards.forEach(card => {
+                card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              });
+            });
+          }
+
+          renderCatalogPagination(totalPages, currentFilteredProducts.length);
+
+          if (loader) loader.classList.remove('active');
+          isCatalogInfiniteLoading = false;
+
+          if (catalogCurrentPage >= totalPages && catalogInfiniteObserver) {
+            catalogInfiniteObserver.disconnect();
+            catalogInfiniteObserver = null;
+          }
+        }, 180);
+      }
+    }, {
+      rootMargin: '260px 0px 260px 0px',
+      threshold: 0.05
+    });
+
+    catalogInfiniteObserver.observe(sentinel);
   }
 
   if (document.readyState === 'loading') {

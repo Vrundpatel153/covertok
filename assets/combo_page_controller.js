@@ -8,6 +8,11 @@
 
   const STORAGE_KEY = 'covertok_custom_combo_slots';
   const BUNDLE_PRICE = 1199;
+  // Pagination & Infinite Loading State
+  const COMBO_PAGE_SIZE = 16;
+  let comboCurrentPage = 1;
+  let isComboInfiniteLoading = false;
+  let comboInfiniteObserver = null;
 
   // 1. Identify and categorize eligible products only
   function classifyProduct(p) {
@@ -235,6 +240,7 @@
     }
 
     state.filteredProducts = list;
+    comboCurrentPage = 1;
 
     const totalLabel = document.getElementById('comboCountLabel');
     if (totalLabel) {
@@ -388,8 +394,8 @@
     }
   });
 
-  // 8. Render Products Grid with Cinematic Rearrangement
-  function renderProductsGrid() {
+  // 8. Render Products Grid with Infinite Loading & Batch Selection
+  function renderProductsGrid(isJump) {
     const grid = document.getElementById('comboProductsGrid');
     if (!grid) return;
 
@@ -404,140 +410,209 @@
           <button type="button" class="btn btn-pill-dark" onclick="window.clearComboFilters()" style="margin-top: 16px; padding: 10px 24px; cursor: pointer; border-radius: 999px; background: #0A0A0A; color: #FFFFFF; font-weight: 800;">View All Products</button>
         </div>
       `;
+      const pContainer = document.getElementById('comboPagination');
+      if (pContainer) pContainer.innerHTML = '';
       return;
     }
 
-    const currentCards = Array.from(grid.children).filter(el => el.classList && el.classList.contains('combo-catalog-card'));
+    const totalPages = Math.ceil(state.filteredProducts.length / COMBO_PAGE_SIZE);
+    if (comboCurrentPage > totalPages) comboCurrentPage = Math.max(1, totalPages);
+    if (comboCurrentPage < 1) comboCurrentPage = 1;
 
-    // First render: Staggered cinematic entrance
-    if (currentCards.length === 0) {
-      grid.innerHTML = '';
-      const fragment = document.createDocumentFragment();
-      state.filteredProducts.forEach(prod => {
-        const card = createComboProductCard(prod);
+    const startIdx = isJump ? (comboCurrentPage - 1) * COMBO_PAGE_SIZE : 0;
+    const endIdx = isJump ? startIdx + COMBO_PAGE_SIZE : comboCurrentPage * COMBO_PAGE_SIZE;
+    const pagedProducts = state.filteredProducts.slice(startIdx, endIdx);
+
+    grid.innerHTML = '';
+    const fragment = document.createDocumentFragment();
+    pagedProducts.forEach((prod, idx) => {
+      const card = createComboProductCard(prod);
+      if (!isJump) {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(24px) scale(0.93)';
-        card.style.filter = 'blur(6px)';
-        fragment.appendChild(card);
-      });
-      grid.appendChild(fragment);
+        card.style.transform = 'translateY(16px)';
+      }
+      fragment.appendChild(card);
+    });
+    grid.appendChild(fragment);
 
+    if (!isJump) {
       requestAnimationFrame(() => {
         const cards = grid.querySelectorAll('.combo-catalog-card');
         cards.forEach((card, idx) => {
-          const delay = Math.min(idx * 30, 240);
-          card.style.transition = `transform 0.5s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.4s ease ${delay}ms, filter 0.4s ease ${delay}ms`;
+          const delay = Math.min(idx * 24, 200);
+          card.style.transition = `transform 0.45s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.35s ease ${delay}ms`;
           card.style.opacity = '1';
-          card.style.transform = 'translateY(0) scale(1)';
-          card.style.filter = 'blur(0)';
+          card.style.transform = 'translateY(0)';
         });
-        setTimeout(() => {
-          cards.forEach(card => {
-            card.style.transform = '';
-            card.style.transition = '';
-            card.style.filter = '';
-            card.style.opacity = '';
-          });
-        }, 650);
       });
+    }
+
+    renderComboPagination(totalPages, state.filteredProducts.length);
+    setupComboInfiniteScroll(totalPages);
+  }
+
+  function setupComboInfiniteScroll(totalPages) {
+    if (comboInfiniteObserver) {
+      comboInfiniteObserver.disconnect();
+      comboInfiniteObserver = null;
+    }
+
+    const sentinel = document.getElementById('comboInfiniteSentinel');
+    const loader = document.getElementById('comboInfiniteLoader');
+    const grid = document.getElementById('comboProductsGrid');
+    if (!sentinel || !grid) return;
+
+    if (comboCurrentPage >= totalPages) {
+      if (loader) loader.classList.remove('active');
       return;
     }
 
-    // FLIP Step 1: Record initial rects
-    const firstRects = new Map();
-    const existingCardsMap = new Map();
-    currentCards.forEach(card => {
-      const id = card.getAttribute('data-id');
-      if (id) {
-        firstRects.set(id, card.getBoundingClientRect());
-        existingCardsMap.set(id, card);
+    comboInfiniteObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting && !isComboInfiniteLoading && comboCurrentPage < totalPages) {
+        isComboInfiniteLoading = true;
+        if (loader) loader.classList.add('active');
+
+        setTimeout(() => {
+          comboCurrentPage++;
+          const startIdx = (comboCurrentPage - 1) * COMBO_PAGE_SIZE;
+          const nextBatch = state.filteredProducts.slice(startIdx, startIdx + COMBO_PAGE_SIZE);
+
+          if (grid && nextBatch.length > 0) {
+            const fragment = document.createDocumentFragment();
+            nextBatch.forEach(prod => {
+              const card = createComboProductCard(prod);
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(16px)';
+              fragment.appendChild(card);
+            });
+            grid.appendChild(fragment);
+
+            requestAnimationFrame(() => {
+              const cards = grid.querySelectorAll('.combo-catalog-card');
+              cards.forEach(card => {
+                card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              });
+            });
+          }
+
+          renderComboPagination(totalPages, state.filteredProducts.length);
+
+          if (loader) loader.classList.remove('active');
+          isComboInfiniteLoading = false;
+
+          if (comboCurrentPage >= totalPages && comboInfiniteObserver) {
+            comboInfiniteObserver.disconnect();
+            comboInfiniteObserver = null;
+          }
+        }, 180);
+      }
+    }, {
+      rootMargin: '260px 0px 260px 0px',
+      threshold: 0.05
+    });
+
+    comboInfiniteObserver.observe(sentinel);
+  }
+
+  function renderComboPagination(totalPages, totalItems) {
+    const container = document.getElementById('comboPagination');
+    if (!container) return;
+
+    if (totalPages <= 1) {
+      container.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+    const current = comboCurrentPage;
+    const pages = [];
+
+    if (current > 1) {
+      html += `
+        <button type="button" class="catalog-page-prev" aria-label="Previous batch">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <polygon points="18 4 4 12 18 20 18 4"/>
+          </svg>
+        </button>
+      `;
+    }
+
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      if (current > 3) pages.push('...');
+      
+      const start = Math.max(2, current - 1);
+      const end = Math.min(totalPages - 1, current + 1);
+      for (let i = start; i <= end; i++) {
+        if (!pages.includes(i)) pages.push(i);
+      }
+
+      if (current < totalPages - 2) pages.push('...');
+      if (!pages.includes(totalPages)) pages.push(totalPages);
+    }
+
+    pages.forEach(p => {
+      if (p === '...') {
+        html += '<span class="catalog-page-dots">...</span>';
+      } else {
+        const activeClass = p === current ? 'active' : '';
+        html += `<button type="button" class="catalog-page-btn ${activeClass}" data-page="${p}">${p}</button>`;
       }
     });
 
-    const nextIds = new Set(state.filteredProducts.map(p => String(p.id)));
-    const leavingCards = currentCards.filter(card => {
-      const id = card.getAttribute('data-id');
-      return !nextIds.has(id);
-    });
+    const hasNext = current < totalPages;
+    html += `
+      <button type="button" class="catalog-page-next" ${hasNext ? '' : 'disabled'} aria-label="Next batch">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <polygon points="6 4 20 12 6 20 6 4"/>
+        </svg>
+      </button>
+    `;
 
-    // Animate leaving cards out
-    leavingCards.forEach(card => {
-      card.style.pointerEvents = 'none';
-      card.style.transition = 'transform 0.24s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s ease, filter 0.2s ease';
-      card.style.opacity = '0';
-      card.style.transform = 'scale(0.88) translateY(12px)';
-      card.style.filter = 'blur(6px)';
-    });
+    container.innerHTML = html;
 
-    setTimeout(() => {
-      grid.innerHTML = '';
-      const fragment = document.createDocumentFragment();
-      const animatedCards = [];
-
-      state.filteredProducts.forEach((prod, idx) => {
-        const sId = String(prod.id);
-        let card = existingCardsMap.get(sId);
-        const isExisting = Boolean(card);
-
-        if (!card) {
-          card = createComboProductCard(prod);
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(28px) scale(0.92)';
-          card.style.filter = 'blur(8px)';
-        } else {
-          card.style.pointerEvents = '';
-          card.style.filter = '';
-          card.style.opacity = '1';
-          card.style.transform = '';
+    const prevBtn = container.querySelector('.catalog-page-prev');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (comboCurrentPage > 1) {
+          comboCurrentPage--;
+          jumpToComboPage(comboCurrentPage, totalPages);
         }
-
-        fragment.appendChild(card);
-        animatedCards.push({ card, isExisting, id: sId, idx });
       });
+    }
 
-      grid.appendChild(fragment);
-
-      // FLIP Step 2 & 3: Last & Invert
-      requestAnimationFrame(() => {
-        animatedCards.forEach(({ card, isExisting, id, idx }) => {
-          if (isExisting && firstRects.has(id)) {
-            const first = firstRects.get(id);
-            const last = card.getBoundingClientRect();
-            const dx = first.left - last.left;
-            const dy = first.top - last.top;
-
-            if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
-              card.style.transition = 'none';
-              card.style.transform = `translate(${dx}px, ${dy}px) scale(1)`;
-
-              requestAnimationFrame(() => {
-                const delay = Math.min(idx * 18, 160);
-                card.style.transition = `transform 0.52s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms`;
-                card.style.transform = 'translate(0, 0) scale(1)';
-              });
-            }
-          } else {
-            const delay = Math.min(idx * 30, 280);
-            card.style.transition = `transform 0.55s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.45s ease ${delay}ms, filter 0.45s ease ${delay}ms`;
-            requestAnimationFrame(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0) scale(1)';
-              card.style.filter = 'blur(0)';
-            });
-          }
-        });
-
-        // Cleanup inline styles after animation so CSS hover transitions resume naturally
-        setTimeout(() => {
-          animatedCards.forEach(({ card }) => {
-            card.style.transform = '';
-            card.style.transition = '';
-            card.style.filter = '';
-            card.style.opacity = '';
-          });
-        }, 650);
+    container.querySelectorAll('.catalog-page-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetPage = parseInt(btn.getAttribute('data-page'), 10);
+        if (targetPage !== comboCurrentPage) {
+          jumpToComboPage(targetPage, totalPages);
+        }
       });
-    }, leavingCards.length > 0 ? 150 : 0);
+    });
+
+    const nextBtn = container.querySelector('.catalog-page-next');
+    if (nextBtn && hasNext) {
+      nextBtn.addEventListener('click', () => {
+        if (comboCurrentPage < totalPages) {
+          jumpToComboPage(comboCurrentPage + 1, totalPages);
+        }
+      });
+    }
+  }
+
+  function jumpToComboPage(targetPage, totalPages) {
+    comboCurrentPage = targetPage;
+    renderProductsGrid(true);
+    const grid = document.getElementById('comboProductsGrid');
+    if (grid) {
+      const rect = grid.getBoundingClientRect();
+      window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
+    }
   }
 
   window.clearComboFilters = function() {

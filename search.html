@@ -1884,6 +1884,16 @@
         const current = activePage;
         const pages = [];
 
+        if (current > 1) {
+          html += `
+            <button type="button" class="catalog-page-prev" aria-label="Previous batch">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <polygon points="18 4 4 12 18 20 18 4"/>
+              </svg>
+            </button>
+          `;
+        }
+
         if (totalPages <= 5) {
           for (let i = 1; i <= totalPages; i++) pages.push(i);
         } else {
@@ -1912,8 +1922,8 @@
         const hasNext = current < totalPages;
         html += `
           <button type="button" class="catalog-page-next" ${hasNext ? '' : 'disabled'} aria-label="Next batch">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-              <polygon points="5 3 19 12 5 21 5 3"/>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <polygon points="6 4 20 12 6 20 6 4"/>
             </svg>
           </button>
         `;
@@ -1929,10 +1939,17 @@
           });
         });
 
+        const prevBtn = container.querySelector('.catalog-page-prev');
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            if (currentPage > 1) onPageSelect(currentPage - 1);
+          });
+        }
+
         const nextBtn = container.querySelector('.catalog-page-next');
         if (nextBtn && hasNext) {
           nextBtn.addEventListener('click', () => {
-            onPageSelect(currentPage + 1);
+            if (currentPage < totalPages) onPageSelect(currentPage + 1);
           });
         }
       }
@@ -2112,9 +2129,9 @@
             <div class="catalog-products-grid" id="searchResultsGrid">
               ${initialBatch.map(p => renderCard(p)).join('')}
             </div>
-            <div class="search-infinite-sentinel" id="searchInfiniteSentinel">
-              <div class="search-infinite-loader" id="searchInfiniteLoader">
-                <span class="search-infinite-spinner"></span>
+            <div class="catalog-infinite-sentinel" id="searchInfiniteSentinel">
+              <div class="catalog-infinite-loader" id="searchInfiniteLoader">
+                <span class="catalog-infinite-spinner"></span>
                 <span>Loading more styles...</span>
               </div>
             </div>
@@ -2168,9 +2185,9 @@
             <div class="catalog-products-grid" id="searchResultsGrid">
               ${initialBatch.map(p => renderCard(p)).join('')}
             </div>
-            <div class="search-infinite-sentinel" id="searchInfiniteSentinel">
-              <div class="search-infinite-loader" id="searchInfiniteLoader">
-                <span class="search-infinite-spinner"></span>
+            <div class="catalog-infinite-sentinel" id="searchInfiniteSentinel">
+              <div class="catalog-infinite-loader" id="searchInfiniteLoader">
+                <span class="catalog-infinite-spinner"></span>
                 <span>Loading more styles...</span>
               </div>
             </div>

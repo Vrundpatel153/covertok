@@ -57338,3 +57338,164 @@ html body #siteHeader,
   min-width: 0 !important;
   overflow: hidden !important;
 }
+
+
+/* ==========================================================================
+   PRODUCT GALLERY BATCH PAGINATION & INFINITE LOADING
+   ========================================================================== */
+.catalog-pagination-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 36px 0 28px 0 !important;
+  flex-wrap: wrap !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.catalog-page-btn,
+.catalog-page-dots,
+.catalog-page-next,
+.catalog-page-prev {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  max-width: 38px !important;
+  border-radius: 6px !important;
+  border: 1px solid #D4D4D8 !important;
+  background: #FFFFFF !important;
+  color: #71717A !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  user-select: none !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+.catalog-page-btn:hover:not(.active),
+.catalog-page-next:hover:not(:disabled),
+.catalog-page-prev:hover:not(:disabled) {
+  border-color: #71717A !important;
+  color: #18181B !important;
+  background: #F4F4F5 !important;
+  transform: translateY(-1px) !important;
+}
+
+.catalog-page-btn.active {
+  border: 1.5px solid #18181B !important;
+  color: #18181B !important;
+  font-weight: 700 !important;
+  background: #FFFFFF !important;
+  cursor: default !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+.catalog-page-dots {
+  border: 1px solid #E4E4E7 !important;
+  color: #71717A !important;
+  cursor: default !important;
+  background: #FFFFFF !important;
+  letter-spacing: 0.05em !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+.catalog-page-next svg,
+.catalog-page-prev svg {
+  width: 10px !important;
+  height: 10px !important;
+  fill: #71717A !important;
+  display: block !important;
+  transition: transform 0.2s ease, fill 0.2s ease !important;
+}
+
+.catalog-page-next:hover:not(:disabled) svg {
+  fill: #18181B !important;
+  transform: translateX(1.5px) !important;
+}
+
+.catalog-page-prev:hover:not(:disabled) svg {
+  fill: #18181B !important;
+  transform: translateX(-1.5px) !important;
+}
+
+.catalog-page-next:disabled,
+.catalog-page-prev:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed !important;
+  border-color: #E4E4E7 !important;
+  background: #FAFAFA !important;
+}
+
+/* Infinite Loading Sentinel & Animated Luxury Loader */
+.catalog-infinite-sentinel {
+  width: 100% !important;
+  height: 24px !important;
+  pointer-events: none !important;
+  margin: 12px 0 !important;
+}
+
+.catalog-infinite-loader {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  padding: 14px 22px !important;
+  margin: 14px auto !important;
+  max-width: 260px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  color: #18181B !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  opacity: 0 !important;
+  transform: translateY(8px) !important;
+  transition: opacity 0.25s ease, transform 0.25s ease !important;
+  pointer-events: none !important;
+}
+
+.catalog-infinite-loader.active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.catalog-infinite-spinner {
+  width: 16px !important;
+  height: 16px !important;
+  border: 2px solid rgba(255, 85, 0, 0.2) !important;
+  border-top-color: #FF5500 !important;
+  border-radius: 50% !important;
+  animation: catalogSpinner 0.65s linear infinite !important;
+  flex-shrink: 0 !important;
+}
+
+@keyframes catalogSpinner {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .catalog-page-btn,
+  .catalog-page-dots,
+  .catalog-page-next,
+  .catalog-page-prev {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    max-width: 36px !important;
+    font-size: 13px !important;
+  }
+}
+
+.catalog-products-grid {
+  margin-bottom: 20px !important;
+}
