@@ -45,6 +45,11 @@
     return null;
   }
 
+  function cleanEmojiText(str) {
+    if (!str) return '';
+    return str.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}\u{203C}\u{2049}\u{2139}\u{2194}-\u{21AA}\u{2934}\u{2935}\u{2B05}-\u{2B07}\u{2B1B}\u{2B1C}\u{2B50}\u{2B55}\u{2728}\u{2714}\u{2705}]/gu, '').trim();
+  }
+
   // 2. Persistent State
   function normalizeSlotItem(item) {
     if (!item) return null;
@@ -706,8 +711,8 @@
           
         </div>
 
-        <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-product-title" title="${product.title}">
-          ${product.title}
+        <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(cleanEmojiText(product.handle || product.id))}" class="card-product-title" title="${cleanEmojiText(product.title)}">
+          ${cleanEmojiText(product.title)}
         </a>
 
         <div class="card-price-row">
