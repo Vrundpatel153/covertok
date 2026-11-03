@@ -9,6 +9,9 @@
 .page-canvas {
   background-color: transparent;
   min-height: 100vh;
+}
+
+.page-canvas main {
   padding-bottom: 80px;
 }
 
@@ -203,8 +206,8 @@
 /* --- Main Layout Section (2 Column: Sticky TOC + Content) --- */
 .page-main-layout {
   max-width: 1200px;
-  margin: 48px auto 0;
-  padding: 0 24px;
+  margin: 48px auto 80px;
+  padding: 0 24px 24px;
   display: grid;
   grid-template-columns: 290px 1fr;
   gap: 48px;
@@ -609,6 +612,7 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 36px;
   align-items: start;
+  margin-bottom: 80px;
 }
 
 .contact-form-card {
@@ -1138,6 +1142,8 @@
   .page-main-layout {
     grid-template-columns: 1fr;
     gap: 32px;
+    margin: 36px auto 64px;
+    padding: 0 20px 20px;
   }
 
   .page-sidebar {
@@ -1167,6 +1173,7 @@
   .contact-form-section {
     grid-template-columns: 1fr;
     gap: 28px;
+    margin-bottom: 64px;
   }
 
   .search-results-grid {
@@ -1209,6 +1216,15 @@
 
   .policy-highlights-grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-main-layout {
+    margin: 24px auto 56px;
+    padding: 0 16px 16px;
+  }
+
+  .contact-form-section {
+    margin-bottom: 56px;
   }
 
   .page-content-card {
