@@ -662,329 +662,240 @@
 
 
 
+/* Full-Bleed Curated Editorial Hero Banner (PC Desktop) */
 .catalog-curated-banner {
-
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.58) 100%) !important;
-
-  backdrop-filter: blur(28px) saturate(200%) contrast(102%) !important;
-
-  -webkit-backdrop-filter: blur(28px) saturate(200%) contrast(102%) !important;
-
-  border: 1.5px solid rgba(255, 255, 255, 0.92) !important;
-
-  border-radius: 26px !important;
-
-  overflow: hidden;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.06), 0 0 1px 1px rgba(255, 255, 255, 0.95), inset 0 2px 2px #FFFFFF !important;
-
-  position: relative;
-
-  min-height: 156px;
-
-  margin-bottom: 22px;
-
+  position: relative !important;
+  width: 100% !important;
+  height: clamp(190px, 16vw, 240px) !important;
+  min-height: 190px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  margin-bottom: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  background: #0E0F12 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
 }
 
+.catalog-banner-picture {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
+.catalog-banner-bg-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right center !important;
+  display: block !important;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.catalog-banner-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  background: linear-gradient(90deg, rgba(10, 10, 12, 0.90) 0%, rgba(10, 10, 12, 0.76) 42%, rgba(10, 10, 12, 0.28) 75%, rgba(10, 10, 12, 0.04) 100%) !important;
+}
 
 .catalog-curated-content {
-
-  flex: 1;
-
-  padding: 24px 30px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  max-width: 620px;
-
-  z-index: 2;
-
+  position: relative !important;
+  z-index: 3 !important;
+  padding: 24px 36px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  max-width: 580px !important;
 }
-
-
 
 .catalog-curated-eyebrow {
-
   display: inline-flex !important;
-
   align-items: center !important;
-
-  gap: 7px !important;
-
-  padding: 0 !important;
-
-  background: transparent !important;
-
-  border: none !important;
-
-  color: #71717A !important;
-
-  font-family: var(--font-body, 'Inter', sans-serif) !important;
-
-  font-size: 0.72rem !important;
-
-  font-weight: 600 !important;
-
-  letter-spacing: 0.12em !important;
-
-  text-transform: uppercase !important;
-
-  margin-bottom: 6px !important;
-
+  gap: 8px !important;
+  margin-bottom: 8px !important;
   width: fit-content !important;
-
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
-
-
-.eyebrow-accent-dot {
-
-  width: 5px;
-
-  height: 5px;
-
-  border-radius: 50%;
-
-  background: #0A0A0A;
-
-  display: inline-block;
-
-  flex-shrink: 0;
-
+.eyebrow-accent-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 3px 8px !important;
+  border-radius: 5px !important;
+  background: #FF5500 !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.65rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1.2 !important;
 }
 
+.eyebrow-sep {
+  color: rgba(255, 255, 255, 0.45) !important;
+  font-size: 0.72rem !important;
+  font-weight: 400 !important;
+}
 
+.eyebrow-edition-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
 
 .catalog-headline {
-
   font-family: var(--font-heading, 'Manrope', 'Plus Jakarta Sans', sans-serif) !important;
-
-  font-size: clamp(1.8rem, 3vw, 2.6rem) !important;
-
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem) !important;
   font-weight: 800 !important;
-
   letter-spacing: -0.025em !important;
-
-  color: #0A0A0A !important;
-
+  color: #FFFFFF !important;
   line-height: 1.15 !important;
-
-  margin: 0 0 8px !important;
-
+  margin: 0 0 6px !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35) !important;
 }
-
-
-
-.copper-accent {
-
-  color: inherit !important;
-
-  background: none !important;
-
-  -webkit-text-fill-color: initial !important;
-
-  filter: none !important;
-
-  font-weight: inherit !important;
-
-}
-
-
 
 .catalog-subtext {
-
   font-family: var(--font-body, 'Inter', sans-serif) !important;
-
-  font-size: 0.88rem !important;
-
-  color: #475569 !important;
-
+  font-size: 0.84rem !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   margin: 0 !important;
-
-  line-height: 1.55 !important;
-
-  max-width: 580px !important;
-
+  line-height: 1.45 !important;
+  max-width: 480px !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
 }
-
-
 
 .catalog-curated-media {
-
-  flex: 0 0 auto;
-
-  width: 340px;
-
-  max-width: 44%;
-
-  height: 100%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: flex-end;
-
-  position: relative;
-
-  overflow: hidden;
-
-  padding: 10px 28px 10px 0;
-
-  box-sizing: border-box;
-
+  display: none !important;
 }
 
-
-
-.catalog-curated-img {
-
-  max-height: 142px;
-
-  width: auto;
-
-  max-width: 100%;
-
-  object-fit: contain;
-
-  object-position: right center;
-
-  display: block;
-
-  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.05));
-
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-
-}
-
-
-
-/* Mobile: Elegant Compact Liquid Glass Header Card */
-
+/* Mobile & Tablet: Compact Full-Bleed Photographic Header */
 @media (max-width: 768px) {
-
   .catalog-hero-section {
-
-    padding: 10px 0 6px;
-
+    padding: 10px 0 6px !important;
   }
 
   .catalog-curated-banner {
-
-    flex-direction: row;
-
-    min-height: auto;
-
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 244, 0.90) 100%) !important;
-
-    backdrop-filter: blur(24px) saturate(200%) !important;
-
-    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
-
-    border: 1px solid rgba(255, 255, 255, 0.95) !important;
-
-    border-radius: 18px !important;
-
-    padding: 14px 18px !important;
-
+    position: relative !important;
+    width: 100% !important;
+    height: 135px !important;
+    min-height: 135px !important;
+    max-height: 135px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
     margin-bottom: 14px !important;
-
-    box-shadow: 0 6px 20px -4px rgba(23, 21, 19, 0.05), inset 0 1px 1px #FFFFFF !important;
-
+    display: flex !important;
+    align-items: center !important;
+    background: #0E0F12 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.15) !important;
   }
 
-  .catalog-curated-media {
-
-    display: none !important;
-
+  .catalog-banner-picture {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 
-  .catalog-subtext {
+  .catalog-banner-bg-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: right center !important;
+  }
 
-    display: none !important;
-
+  .catalog-banner-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    background: linear-gradient(90deg, rgba(10, 10, 12, 0.90) 0%, rgba(10, 10, 12, 0.74) 50%, rgba(10, 10, 12, 0.22) 80%, rgba(10, 10, 12, 0.05) 100%) !important;
   }
 
   .catalog-curated-content {
-
-    max-width: 100%;
-
-    padding: 0;
-
-    gap: 3px;
-
+    position: relative !important;
+    z-index: 3 !important;
+    padding: 14px 18px !important;
+    max-width: 65% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 4px !important;
   }
 
   .catalog-breadcrumb-strip,
-
   .catalog-breadcrumb {
-
     display: none !important;
-
   }
 
   .catalog-curated-eyebrow {
+    font-size: 0.6rem !important;
+    gap: 6px !important;
+    margin-bottom: 4px !important;
+  }
 
-    font-size: 0.65rem !important;
+  .eyebrow-accent-badge {
+    padding: 2px 6px !important;
+    font-size: 0.58rem !important;
+    border-radius: 4px !important;
+  }
 
-    padding: 2.5px 9px !important;
+  .eyebrow-sep {
+    font-size: 0.62rem !important;
+  }
 
-    margin-bottom: 5px !important;
-
-    letter-spacing: 0.1em !important;
-
+  .eyebrow-edition-label {
+    font-size: 0.6rem !important;
   }
 
   .catalog-headline {
-
-    font-size: 1.3rem !important;
-
+    font-size: 1.15rem !important;
     font-weight: 800 !important;
-
-    line-height: 1.2 !important;
-
+    line-height: 1.18 !important;
     margin: 0 !important;
-
     letter-spacing: -0.02em !important;
-
-    color: #171513 !important;
-
+    color: #FFFFFF !important;
   }
 
+  .catalog-subtext {
+    display: none !important;
+  }
+
+  .catalog-curated-media {
+    display: none !important;
+  }
 }
-
-
 
 @media (max-width: 360px) {
-
   .catalog-curated-banner {
+    height: 125px !important;
+    min-height: 125px !important;
+    max-height: 125px !important;
+    border-radius: 14px !important;
+  }
 
-    padding: 12px 14px !important;
-
-    border-radius: 16px !important;
-
+  .catalog-curated-content {
+    padding: 10px 14px !important;
+    max-width: 70% !important;
   }
 
   .catalog-headline {
-
-    font-size: 1.18rem !important;
-
+    font-size: 1.05rem !important;
   }
-
 }
-
-
 
 /* 4. CATEGORY CARDS NAVIGATION TRACK (Sleek Luxury Category Capsule Pills) */
 

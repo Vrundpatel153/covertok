@@ -232,23 +232,41 @@
     const eyebrowTag = document.getElementById('catalogEyebrowTag');
     const mainHeading = document.getElementById('catalogMainHeading');
     const categoryDesc = document.getElementById('catalogCategoryDesc');
+    const bannerImg = document.getElementById('catalogBannerImg');
+    const bannerSourceMob = document.getElementById('catalogBannerSourceMob');
+
+    const eyebrowMap = {
+      'all': { badge: 'COVERTOK ATELIER', label: 'CURATED ARCHIVE' },
+      'iphone-cases': { badge: 'COVERTOK ATELIER', label: 'PRECISION ARMOR' },
+      'airpod-covers': { badge: 'COVERTOK ATELIER', label: 'AIRPODS SUITE' },
+      'watchbands': { badge: 'COVERTOK ATELIER', label: 'APPLE WATCH BANDS' },
+      'charger-covers': { badge: 'COVERTOK ATELIER', label: 'POWER & HARDWARE' },
+      'charger-and-cables': { badge: 'COVERTOK ATELIER', label: 'CHARGING ESSENTIALS' },
+      'cover-charms': { badge: 'COVERTOK ATELIER', label: 'TECH CHARMS' },
+      'other-accessories': { badge: 'COVERTOK ATELIER', label: 'DAILY ESSENTIALS' },
+      'our-bestsellers': { badge: 'COVERTOK ATELIER', label: 'MOST LOVED EDITIONS' },
+      'new-arrivals': { badge: 'COVERTOK ATELIER', label: 'SEASONAL RELEASES' }
+    };
 
     if (eyebrowTag) {
-      eyebrowTag.innerHTML = currentCategory === 'all' 
-        ? `<span class="eyebrow-accent-dot"></span> Official Catalog &bull; 2026 Edition` 
-        : `<span class="eyebrow-accent-dot"></span> Covertok Studio &bull; ${activeCatObj.title}`;
+      const activeEyebrow = eyebrowMap[currentCategory] || { badge: 'COVERTOK ATELIER', label: activeCatObj.title.toUpperCase() };
+      eyebrowTag.innerHTML = `
+        <span class="eyebrow-accent-badge">${activeEyebrow.badge}</span>
+        <span class="eyebrow-sep">/</span>
+        <span class="eyebrow-edition-label">${activeEyebrow.label}</span>
+      `;
     }
 
     if (mainHeading) {
       const headingMap = {
-        'all': `Signature Collection`,
-        'iphone-cases': `iPhone Cases`,
-        'airpod-covers': `AirPods Cases`,
-        'watchbands': `Apple Watch Bands`,
-        'charger-covers': `MagSafe Charger Covers`,
-        'charger-and-cables': `Cables &amp; Fast Charging`,
-        'cover-charms': `Phone Charms &amp; Straps`,
-        'other-accessories': `Everyday Tech Accessories`,
+        'all': `Luxury Tech Armor`,
+        'iphone-cases': `iPhone Precision Cases`,
+        'airpod-covers': `AirPods Armor Cases`,
+        'watchbands': `Apple Watch Precision Bands`,
+        'charger-covers': `MagSafe Charging Armor`,
+        'charger-and-cables': `High-Speed Fast Charging`,
+        'cover-charms': `Phone Charms &amp; Lanyards`,
+        'other-accessories': `Everyday Tech Essentials`,
         'our-bestsellers': `Most Loved Bestsellers`,
         'new-arrivals': `New Arrivals`
       };
@@ -257,43 +275,46 @@
 
     if (categoryDesc) {
       const descMap = {
-        'all': `Explore our curated range of precision cases, watch bands, and everyday charging essentials.`,
-        'iphone-cases': `Engineered for impact protection, tactile grip, and seamless MagSafe compatibility.`,
-        'airpod-covers': `Lightweight, scratch-resistant cases with secure carabiner clips for everyday carry.`,
-        'watchbands': `Comfortable silicone, rugged loops, and titanium-finish bands for Apple Watch.`,
-        'charger-covers': `Slim silicone bumpers and protective dock covers for Apple MagSafe chargers.`,
-        'charger-and-cables': `Fast, durable braided cables and high-efficiency power adapters.`,
-        'cover-charms': `Handcrafted wrist lanyards and decorative bead charms for personal style.`,
-        'other-accessories': `Lens protectors, desktop phone stands, and daily mobile accessories.`,
-        'our-bestsellers': `Our top customer favorites, tried and tested for daily durability and style.`,
-        'new-arrivals': `The latest additions to the Covertok collection, updated weekly.`
+        'all': `Aerospace titanium, hand-finished leather, and MagSafe precision engineering.`,
+        'iphone-cases': `Engineered for impact defense, tactile ergonomic grip, and seamless MagSafe alignment.`,
+        'airpod-covers': `Lightweight, scratch-resistant armor with high-grade aluminum carabiner hardware.`,
+        'watchbands': `Aerospace titanium link bracelets, fluoroelastomer sport loops, and rugged alpine weave straps.`,
+        'charger-covers': `Precision silicone bumpers and docking stations designed for official Apple MagSafe chargers.`,
+        'charger-and-cables': `Fast 100W GaN charging hubs and ballistic-braided reinforced silicone cables.`,
+        'cover-charms': `Handcrafted wrist lanyards, tactile paracords, and minimal aesthetic hardware.`,
+        'other-accessories': `Sapphire lens shields, magnetic folding desktop stands, and daily mobile accessories.`,
+        'our-bestsellers': `Our highest-rated customer favorites, engineered for long-lasting durability and style.`,
+        'new-arrivals': `The latest technical gear additions to the Covertok portfolio, updated weekly.`
       };
       categoryDesc.innerHTML = descMap[currentCategory] || `Curated authentic Covertok accessories designed to elevate your everyday setup.`;
     }
 
-    const curatedImg = document.getElementById('catalogCuratedImg');
-    if (curatedImg) {
-      const imgMap = {
-        'all': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok Signature Collection - Precision Cases & Accessories' },
-        'iphone-cases': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok iPhone Precision Cases' },
-        'airpod-covers': { src: 'assets/collections/card_03_airpods_bg.webp', alt: 'Covertok AirPods Protective Cases' },
-        'watchbands': { src: 'assets/collections/card_02_watch_bg.webp', alt: 'Covertok Apple Watch Bands' },
-        'charger-covers': { src: 'assets/collections/card_05_power_bg.webp', alt: 'Covertok MagSafe Chargers and Power Bank' },
-        'charger-and-cables': { src: 'assets/collections/card_04_cables_bg.webp', alt: 'Covertok High-Speed Braided Cables' },
-        'cover-charms': { src: 'assets/collections/card_07_charms_bg.webp', alt: 'Covertok Phone Charms and Wrist Lanyards' },
-        'other-accessories': { src: 'assets/collections/card_06_accessories_bg.webp', alt: 'Covertok Everyday Tech Accessories' },
-        'our-bestsellers': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok Most Loved Bestsellers' },
-        'new-arrivals': { src: 'assets/collections/card_01_iphone_bg.webp', alt: 'Covertok New Arrivals' }
+    if (bannerImg) {
+      const bannerMap = {
+        'all': { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok Curated Hardware Collection' },
+        'iphone-cases': { pc: 'assets/collections/banner_cases_pc.webp', mob: 'assets/collections/banner_cases_mob.webp', alt: 'Covertok iPhone Precision Cases' },
+        'airpod-covers': { pc: 'assets/collections/banner_airpods_pc.webp', mob: 'assets/collections/banner_airpods_mob.webp', alt: 'Covertok AirPods Protective Cases' },
+        'watchbands': { pc: 'assets/collections/banner_watch_pc.webp', mob: 'assets/collections/banner_watch_mob.webp', alt: 'Covertok Apple Watch Bands' },
+        'charger-covers': { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok MagSafe Chargers and Hardware' },
+        'charger-and-cables': { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok High-Speed Braided Fast Charging' },
+        'cover-charms': { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Phone Charms and Daily Hardware' },
+        'other-accessories': { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Everyday Tech Accessories' },
+        'our-bestsellers': { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok Most Loved Bestsellers' },
+        'new-arrivals': { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok New Arrivals' }
       };
-      const activeImg = imgMap[currentCategory] || imgMap['all'];
-      if (!curatedImg.src.endsWith(activeImg.src)) {
-        curatedImg.style.opacity = '0';
-        curatedImg.style.transform = 'scale(0.96)';
+
+      const activeBanner = bannerMap[currentCategory] || bannerMap['all'];
+      if (!bannerImg.src.endsWith(activeBanner.pc)) {
+        bannerImg.style.opacity = '0';
+        bannerImg.style.transform = 'scale(0.98)';
         setTimeout(() => {
-          curatedImg.src = activeImg.src;
-          curatedImg.alt = activeImg.alt;
-          curatedImg.style.opacity = '1';
-          curatedImg.style.transform = 'scale(1)';
+          bannerImg.src = activeBanner.pc;
+          bannerImg.alt = activeBanner.alt;
+          if (bannerSourceMob) {
+            bannerSourceMob.srcset = activeBanner.mob;
+          }
+          bannerImg.style.opacity = '1';
+          bannerImg.style.transform = 'scale(1)';
         }, 120);
       }
     }
