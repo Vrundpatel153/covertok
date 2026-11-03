@@ -56521,3 +56521,176 @@ body.home-page .hero-content {
     padding: 0 16px 16px 16px !important;
   }
 }
+
+
+/* ==========================================================================
+   UNIFIED MOBILE HARDENING & ANTI-REGRESSION SYSTEM
+   1. Anti-Stretch Protection for Buttons & Circular Icons
+   2. Typography Balancing & Orphan Prevention (text-wrap: balance)
+   3. Product Card Grid Uniformity & Aligned CTAs
+   4. Scoped 16px Gutters & Responsive Touch Targets
+   ========================================================================== */
+
+/* 1. UNIVERSAL BUTTON & ICON ANTI-STRETCH PROTECTION */
+.faq-chevron,
+.btn-circle-arrow,
+.close-btn,
+.announcement-close-btn,
+.mobile-toggle-btn,
+.drops-nav-btn,
+.pop-nav-btn,
+.reviews-nav-btn,
+.footer-social-btn,
+.color-swatch,
+.swatch-btn,
+.counter-btn,
+.qty-btn,
+.icon-circle,
+.filter-icon-btn {
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+/* FAQ Chevron: exactly 32x32px circle, never stretched into oval */
+.faq-chevron {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  align-self: center !important;
+}
+
+/* FAQ Question Button: ensure cross-axis alignment is center */
+.faq-question-btn {
+  align-items: center !important;
+}
+
+/* CTA & Pill Buttons Anti-Distortion */
+.add-to-cart-btn,
+.fl-mobile-cta-btn,
+.combo-pill-cta-btn,
+.faq-support-btn,
+.btn-pill-dark,
+.btn-pill-arrow,
+.modal-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+/* 2. TYPOGRAPHY BALANCING & ORPHAN PREVENTION (MOBILE & DESKTOP) */
+h1, h2, h3, h4,
+.section-title,
+.hero-title,
+.faq-main-title,
+.faq-question-text,
+.bento-title,
+.card-title,
+.product-card-title,
+.catalog-title {
+  text-wrap: balance !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+}
+
+p,
+.faq-lead-desc,
+.hero-subtitle,
+.product-card-desc,
+.section-subtitle {
+  text-wrap: pretty !important;
+}
+
+/* 3. MOBILE VIEWPORT ENHANCEMENTS & GRID HARMONIZATION */
+@media (max-width: 768px) {
+  h1, .hero-title {
+    font-size: clamp(1.85rem, 5.5vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  h2, .section-title, .faq-main-title {
+    font-size: clamp(1.45rem, 4.8vw, 1.95rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h3, .card-title, .bento-title {
+    font-size: clamp(1.05rem, 3.8vw, 1.3rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Product Cards Grid Alignment: Uniform Heights & Aligned CTAs */
+  .product-card,
+  .drop-card,
+  .curated-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .product-card-info,
+  .card-info-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+    justify-content: space-between !important;
+  }
+
+  /* Clamp titles to 2 uniform lines so adjacent card heights never stagger */
+  .product-card-title,
+  .drop-card-title {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    min-height: 2.5em !important;
+    line-height: 1.25 !important;
+    font-size: 0.84rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Add to Cart button pinned to bottom of every card with consistent sizing */
+  .product-card .add-to-cart-btn,
+  .drop-card .add-to-cart-btn {
+    width: 100% !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    border-radius: 999px !important;
+    font-size: 0.76rem !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.04em !important;
+    margin-top: 8px !important;
+  }
+
+  /* Quantity Stepper in PDP */
+  .qty-stepper,
+  .pdp-qty-wrap {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    height: 44px !important;
+  }
+
+  .qty-btn,
+  .stepper-btn {
+    width: 36px !important;
+    height: 36px !important;
+    aspect-ratio: 1 / 1 !important;
+    flex-shrink: 0 !important;
+  }
+}
