@@ -1744,8 +1744,9 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9889169211690/1_50743956472106.webp",
+    "primary_image": "assets/products/9889169211690/packshot_white_1.webp",
     "images": [
+      "assets/products/9889169211690/packshot_white_1.webp",
       "assets/products/9889169211690/1_50743956472106.webp",
       "assets/products/9889169211690/2_50037223391530.webp",
       "assets/products/9889169211690/3_50037513584938.webp",
@@ -1927,8 +1928,9 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9888955924778/1_50035509362986.webp",
+    "primary_image": "assets/products/9888955924778/packshot_white_1.webp",
     "images": [
+      "assets/products/9888955924778/packshot_white_1.webp",
       "assets/products/9888955924778/1_50035509362986.webp",
       "assets/products/9888955924778/2_50035509330218.webp",
       "assets/products/9888955924778/3_50035509297450.webp",
@@ -2335,8 +2337,9 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9876014432554/1_49941765751082.webp",
+    "primary_image": "assets/products/9876014432554/packshot_white_1.webp",
     "images": [
+      "assets/products/9876014432554/packshot_white_1.webp",
       "assets/products/9876014432554/1_49941765751082.webp",
       "assets/products/9876014432554/2_49941765783850.webp",
       "assets/products/9876014432554/3_49941765816618.webp",
@@ -2466,8 +2469,9 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9875994280234/1_49941561835818.webp",
+    "primary_image": "assets/products/9875994280234/packshot_white_1.webp",
     "images": [
+      "assets/products/9875994280234/packshot_white_1.webp",
       "assets/products/9875994280234/1_49941561835818.webp",
       "assets/products/9875994280234/2_49941561770282.webp",
       "assets/products/9875994280234/3_49941561868586.webp",
