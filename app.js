@@ -1388,7 +1388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (activeSlide) {
 
-        void activeSlide.offsetWidth; // Force CSS animation restart for staggered text entrance
+        // Staggered text entrance disabled - smooth static transition
 
         activeSlide.classList.add('active');
 
