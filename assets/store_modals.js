@@ -94,28 +94,6 @@
           <!-- Populated dynamically by store_flows.js -->
         </div>
 
-        <!-- Promo Code Section -->
-        <div class="cart-coupon-card">
-          <div class="cart-coupon-quick">
-            <div class="cart-coupon-quick-left">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-              <span class="cart-coupon-save-lbl">Save ₹200</span>
-              <span class="cart-coupon-code-pill">PAYDAY200</span>
-            </div>
-            <button type="button" class="cart-coupon-apply-btn" onclick="window.applyPromoCode('PAYDAY200')">Apply</button>
-          </div>
-          <div class="cart-promo-box">
-            <input type="text" class="cart-promo-input" id="cartPromoInput" placeholder="Promo code (e.g. COVERTOK15)">
-            <button type="button" class="cart-promo-btn" id="cartApplyPromoBtn">Apply</button>
-          </div>
-        </div>
-
-        <!-- Active Discount Line -->
-        <div class="cart-discount-badge-line" id="cartDiscountLine" style="display: none;">
-          <span id="cartDiscountCodeLabel">Promo Code Applied</span>
-          <span id="cartDiscountVal">-Rs. 0.00</span>
-        </div>
-
         <!-- Frequently Bought Together / Upsell Section -->
         <div class="cart-upsell-section">
           <div class="cart-upsell-title">
