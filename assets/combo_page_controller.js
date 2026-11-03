@@ -686,9 +686,9 @@
     const badgeEl = document.getElementById('comboStickyBadge');
     if (badgeEl) {
       if (isReady) {
-        badgeEl.textContent = '3 of 3 Selected • Suite Complete';
+        badgeEl.textContent = '3/3 Complete';
       } else {
-        badgeEl.textContent = `${filledCount} of 3 Selected`;
+        badgeEl.textContent = `${filledCount}/3 Selected`;
       }
     }
 
@@ -727,19 +727,28 @@
       if (isReady) {
         addBtn.disabled = false;
         addBtn.innerHTML = `
-          <span class="combo-cta-desktop">Add 3-Piece Suite to Cart • ₹1,199</span>
-          <span class="combo-cta-mobile">Add Suite to Cart • ₹1,199</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
-            <polyline points="9 18 15 12 9 6"></polyline>
+          <span class="combo-cta-desktop">Add 3 Items to Cart • ₹1,199</span>
+          <span class="combo-cta-mobile">Add Suite • ₹1,199</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 4px;">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
           </svg>
         `;
       } else {
         addBtn.disabled = true;
         const remaining = 3 - filledCount;
-        addBtn.innerHTML = `
-          <span class="combo-cta-desktop">Select ${remaining} More ${remaining === 1 ? 'Item' : 'Items'} (${filledCount}/3)</span>
-          <span class="combo-cta-mobile">Select ${remaining} More (${filledCount}/3)</span>
-        `;
+        if (filledCount === 0) {
+          addBtn.innerHTML = `
+            <span class="combo-cta-desktop">Select 3 Items for Combo</span>
+            <span class="combo-cta-mobile">Select 3 Items</span>
+          `;
+        } else {
+          addBtn.innerHTML = `
+            <span class="combo-cta-desktop">Select ${remaining} More ${remaining === 1 ? 'Item' : 'Items'}</span>
+            <span class="combo-cta-mobile">Select ${remaining} More</span>
+          `;
+        }
       }
     }
   }

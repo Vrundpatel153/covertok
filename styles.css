@@ -56249,9 +56249,17 @@ body.home-page .hero-content {
     height: 26px !important;
   }
 
+  .floating-whatsapp-btn {
+    z-index: 10000 !important;
+  }
+
   body.sticky-bar-visible .floating-whatsapp-btn,
-  body:has(.sticky-bottom-bar) .floating-whatsapp-btn {
+  body:has(.sticky-bottom-bar) .floating-whatsapp-btn,
+  body.combo-page-canvas .floating-whatsapp-btn,
+  body:has(.combo-sticky-bar) .floating-whatsapp-btn,
+  body:has(#comboStickyBar) .floating-whatsapp-btn {
     bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    z-index: 10000 !important;
   }
 }
 

@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261103_no_emojis_v40">
   <link rel="stylesheet" href="catalog.css?v=20261103_contrast_v21">
-  <link rel="stylesheet" href="combo.css?v=20261103_capsule_v3">
-  <link rel="stylesheet" href="microinteractions.css?v=20261103_curved_v5">
+  <link rel="stylesheet" href="combo.css?v=20261103_capsule_v6">
+  <link rel="stylesheet" href="microinteractions.css?v=20261103_curved_v6">
 </head>
 <body class="combo-page">
 
@@ -480,7 +480,7 @@
                   <svg class="option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
               </div>
-              <!-- Hidden native select for script synchronization with combo_page_controller.js -->
+              <!-- Hidden native select for script synchronization with combo_page_controller.js?v=20261103_capsule_v6 -->
               <select id="comboSortSelect" style="display: none;" aria-hidden="true">
                 <option value="featured" selected>Featured / Best Sellers</option>
                 <option value="price-low">Price: Low to High</option>
@@ -498,7 +498,7 @@
     <!-- Products Grid Section: Starts Immediately Here -->
     <section class="section-container" style="padding-top: 6px; padding-bottom: 24px; position: relative; z-index: 1;">
       <div class="catalog-products-grid" id="comboProductsGrid">
-        <!-- Rendered dynamically by combo_page_controller.js -->
+        <!-- Rendered dynamically by combo_page_controller.js?v=20261103_capsule_v6 -->
       </div>
     </section>
 
@@ -559,34 +559,31 @@
     </section>
   </main>
 
-  <!-- Clean Plain White Sticky Floating Bottom Bar (Zero Clutter) -->
-  <div class="combo-sticky-bar" id="comboStickyBar">
+  <!-- Floating Centered Luxury Capsule (Zero Clutter, Unobstructed WhatsApp) -->
+  <aside class="combo-sticky-bar" id="comboStickyBar" aria-label="Combo selection status and cart action">
     <div class="combo-sticky-bar-inner">
       <div class="combo-sticky-left">
         <div class="combo-sticky-slots-status">
-          <span class="combo-slots-badge" id="comboStickyBadge">0 of 3 Selected</span>
-          <div class="combo-dots-indicator" id="comboDotsIndicator">
+          <span class="combo-slots-badge" id="comboStickyBadge">0/3 Selected</span>
+          <div class="combo-dots-indicator" id="comboDotsIndicator" aria-hidden="true">
             <span class="combo-dot" data-dot="1"></span>
             <span class="combo-dot" data-dot="2"></span>
             <span class="combo-dot" data-dot="3"></span>
           </div>
         </div>
         <div class="combo-sticky-pricing">
-          <span class="combo-sticky-price-label">Bundle Deal:</span>
           <span class="combo-sticky-price">₹1,199</span>
-          <span class="combo-sticky-mrp" id="comboStickyMrp">₹2,799</span>
-          <span class="combo-sticky-save" id="comboStickySave">Save ~60%</span>
         </div>
       </div>
 
       <div class="combo-sticky-right">
-        <button type="button" class="combo-sticky-reset" onclick="window.resetComboSlots()">Reset</button>
-        <button type="button" class="combo-sticky-checkout-btn" id="comboStickyAddBtn" disabled>
-          <span>Select 3 Items for Combo (0/3)</span>
+        <button type="button" class="combo-sticky-checkout-btn" id="comboStickyAddBtn" disabled aria-label="Add Combo Suite to Cart">
+          <span class="combo-cta-desktop">Select 3 Items for Combo</span>
+          <span class="combo-cta-mobile">Select 3 Items</span>
         </button>
       </div>
     </div>
-  </div>
+  </aside>
 
 
   
@@ -963,7 +960,7 @@
   <script src="assets/store_core.js?v=20261103_cards_v7"></script>
   <script src="assets/store_modals.js?v=20261102_cart_v10"></script>
   <script src="assets/store_flows.js?v=20261103_no_emojis_v3"></script>
-  <script src="assets/combo_page_controller.js"></script>
+  <script src="assets/combo_page_controller.js?v=20261103_capsule_v6"></script>
   <script>
     (function() {
       // Luxury Custom Sort Dropdown Handler for Combo Page

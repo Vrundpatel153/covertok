@@ -2205,7 +2205,6 @@ body:not(.home-page) #siteHeader,
 }
 
 /* 7. UNIVERSAL STICKY ACTION BARS (Mobile & Desktop) */
-.combo-sticky-bar,
 .combo-homepage-bar,
 .sticky-atc-bar,
 .floating-quick-bar {
@@ -2222,9 +2221,6 @@ body:not(.home-page) #siteHeader,
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), inset 0 1.5px 1.5px 0 #FFFFFF !important;
 }
 
-.combo-sticky-slots-status,
-.combo-sticky-pricing,
-.combo-slots-badge,
 .combo-sticky-save,
 .combo-count-pill,
 .combo-bundle-pill,
@@ -2244,7 +2240,6 @@ body:not(.home-page) #siteHeader,
   box-shadow: var(--liquid-glass-dark-shadow) !important;
 }
 
-.combo-sticky-checkout-btn,
 .combo-sticky-cta,
 .sticky-atc-btn {
   background: var(--liquid-glass-dark) !important;
