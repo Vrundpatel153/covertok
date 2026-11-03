@@ -2949,7 +2949,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   .pdp-main-section {
-    padding: 12px 0 40px;
+    padding: 12px 0 12px;
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
@@ -3333,7 +3333,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
   /* 6. DETAILS & TECHNICAL SPECIFICATIONS (Single Column Luxury Card) */
   .pdp-details-specs-section {
-    padding: 12px 0 20px;
+    padding: 0 0 20px;
   }
 
   .pdp-details-specs-card {
