@@ -296,7 +296,7 @@
       if (product.raw_html && product.raw_html.trim().length > 20) {
         let cleanHtml = product.raw_html
           // Purge all AI emojis (sparkles, stars, checks, fire, lightning, etc.)
-          .replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}✨⭐✔✅🔥⚡💥🌟💫🎉]/gu, '')
+          .replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}\u{203C}\u{2049}\u{2139}\u{2194}-\u{21AA}\u{2934}\u{2935}\u{2B05}-\u{2B07}\u{2B1B}\u{2B1C}\u{2B50}\u{2B55}\u{2728}\u{2714}\u{2705}]/gu, '')
           // Clean empty tags and whitespace
           .replace(/<p>\s*(&nbsp;|\u00a0|\s)*<\/p>/gi, '')
           .replace(/<p>\s*<br\s*\/?>\s*<\/p>/gi, '')
@@ -304,7 +304,7 @@
           .trim();
         overviewText.innerHTML = cleanHtml;
       } else if (product.description) {
-        const cleanDesc = product.description.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}✨⭐✔✅🔥⚡💥🌟💫🎉]/gu, '');
+        const cleanDesc = product.description.replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1FA00}-\u{1FAFF}\u{203C}\u{2049}\u{2139}\u{2194}-\u{21AA}\u{2934}\u{2935}\u{2B05}-\u{2B07}\u{2B1B}\u{2B1C}\u{2B50}\u{2B55}\u{2728}\u{2714}\u{2705}]/gu, '');
         const paras = cleanDesc.split(/\n\n+/);
         overviewText.innerHTML = paras.map(p => `<p class="pdp-desc-lead">${p.replace(/\n/g, '<br>')}</p>`).join('');
       } else {
