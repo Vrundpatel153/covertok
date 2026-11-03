@@ -56694,3 +56694,219 @@ p,
     flex-shrink: 0 !important;
   }
 }
+
+
+/* ==========================================================================
+   CUSTOM, MEANINGFUL & BEAUTIFUL TRUST BADGES (DESKTOP & 2X2 MOBILE)
+   ========================================================================== */
+
+.trust-banner-section {
+  padding: 42px 0 !important;
+  background: #FFFFFF !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  position: relative !important;
+}
+
+.trust-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+.trust-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding: 16px 18px !important;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: border-box !important;
+}
+
+.trust-item:hover {
+  border-color: rgba(255, 85, 0, 0.28) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Distinctive Luxury Icon Badge Containers */
+.trust-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  transition: transform 0.25s ease !important;
+  box-sizing: border-box !important;
+}
+
+.trust-item:hover .trust-icon {
+  transform: scale(1.06) !important;
+}
+
+/* Theme Gradients for each specific Guarantee */
+.trust-icon-express {
+  background: linear-gradient(135deg, rgba(255, 107, 0, 0.12), rgba(255, 56, 0, 0.05)) !important;
+  border: 1px solid rgba(255, 107, 0, 0.24) !important;
+}
+
+.trust-icon-armor {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(37, 99, 235, 0.05)) !important;
+  border: 1px solid rgba(14, 165, 233, 0.24) !important;
+}
+
+.trust-icon-swap {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(5, 150, 105, 0.05)) !important;
+  border: 1px solid rgba(16, 185, 129, 0.24) !important;
+}
+
+.trust-icon-uv {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.05)) !important;
+  border: 1px solid rgba(139, 92, 246, 0.24) !important;
+}
+
+.trust-info {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+}
+
+.trust-badge-tag {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.65rem !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #FF5500 !important;
+  display: block !important;
+  margin-bottom: 2px !important;
+  line-height: 1.2 !important;
+}
+
+.trust-badge-tag.tag-armor {
+  color: #0284C7 !important;
+}
+
+.trust-badge-tag.tag-swap {
+  color: #059669 !important;
+}
+
+.trust-badge-tag.tag-uv {
+  color: #7C3AED !important;
+}
+
+.trust-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.94rem !important;
+  font-weight: 800 !important;
+  color: #0F172A !important;
+  margin: 0 0 3px 0 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em !important;
+}
+
+.trust-desc {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.78rem !important;
+  color: #64748B !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* ==========================================================================
+   MOBILE VIEW: BALANCED, COMFORTABLE 2X2 REASSURANCE GRID
+   ========================================================================== */
+@media (max-width: 768px) {
+  .trust-banner-section {
+    padding: 24px 0 !important;
+    background: #FAFAFC !important;
+  }
+
+  .trust-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+
+  .trust-item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 14px 12px !important;
+    gap: 8px !important;
+    border-radius: 14px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  .trust-icon {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    border-radius: 11px !important;
+  }
+
+  .trust-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .trust-badge-tag {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  .trust-title {
+    font-size: 0.82rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .trust-desc {
+    font-size: 0.70rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* PDP Trust Badges in product.html */
+  .covertok-live-trust-badges {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    margin: 18px 0 !important;
+  }
+
+  .covertok-trust-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 10px 12px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
+  }
+
+  .covertok-trust-icon {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+}
