@@ -12,7 +12,11 @@
 }
 
 .page-canvas main {
-  padding-bottom: 80px;
+  padding-bottom: 0;
+}
+
+.page-canvas main:not(:has(.trust-banner-section)) {
+  padding-bottom: 60px;
 }
 
 /* --- Hero Banner Section --- */
