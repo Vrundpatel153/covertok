@@ -375,7 +375,7 @@
   }
 
   // Universal isolated gallery extractor: Shopify-standard variant image filtering
-  // When a color is selected, gallery ONLY contains this color's images and non-color shared detail shots
+  // When a color is selected, gallery ONLY contains this color's images!
   function getColorGallery(product, color) {
     if (!product) return [];
 
@@ -387,52 +387,34 @@
       return filename.replace(/\.(webp|png|jpg|jpeg|gif)$/i, '').toLowerCase();
     }
 
-    // 1. Identify all image IDs that explicitly belong to OTHER colors
-    const otherColorBaseIds = new Set();
-    if (Array.isArray(product.colors) && product.colors.length > 1 && color && color.name) {
-      product.colors.forEach(c => {
-        if (c.name.toLowerCase() !== color.name.toLowerCase()) {
-          if (c.image) otherColorBaseIds.add(getBaseId(c.image));
-          if (Array.isArray(c.images)) {
-            c.images.forEach(img => otherColorBaseIds.add(getBaseId(img)));
-          }
-        }
-      });
+    if (!color) {
+      if (Array.isArray(product.images) && product.images.length > 0) return product.images;
+      return product.primary_image ? [product.primary_image] : [];
     }
 
-    // 2. Collect this selected color's dedicated images
+    // 1. Collect this selected color's dedicated images
     const colorImgs = [];
-    if (color) {
-      if (color.image) colorImgs.push(color.image);
-      if (Array.isArray(color.images)) {
-        color.images.forEach(img => {
-          if (img && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img))) {
-            colorImgs.push(img);
-          }
-        });
-      }
-    }
-
-    // 3. Collect shared product images, strictly excluding images that belong to other colors
-    const sharedImgs = [];
-    if (Array.isArray(product.images)) {
-      product.images.forEach(img => {
-        if (!img) return;
-        const base = getBaseId(img);
-        // Exclude if it belongs to another color
-        if (otherColorBaseIds.has(base)) return;
-        // Exclude if already in colorImgs
-        if (colorImgs.some(ci => getBaseId(ci) === base)) return;
-        if (!sharedImgs.some(si => getBaseId(si) === base)) {
-          sharedImgs.push(img);
+    if (color.image) colorImgs.push(color.image);
+    if (Array.isArray(color.images)) {
+      color.images.forEach(img => {
+        if (img && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img))) {
+          colorImgs.push(img);
         }
       });
     }
 
-    const finalGallery = [...colorImgs, ...sharedImgs];
-    if (finalGallery.length > 0) return finalGallery;
-    if (product.primary_image) return [product.primary_image];
-    return [];
+    // Strict Shopify Variant Isolation:
+    // If this color has its own image(s), STRICTLY show only this color's gallery!
+    // Never leak other variant or unassigned images into this color's gallery.
+    if (colorImgs.length > 0) {
+      return colorImgs;
+    }
+
+    // Fallback if product has no color-specific images
+    if (Array.isArray(product.images) && product.images.length > 0) {
+      return product.images;
+    }
+    return product.primary_image ? [product.primary_image] : [];
   }
 
   // Render Thumbnails Rail: Displays gallery below or beside the main showcase

@@ -55551,30 +55551,63 @@ body.home-page .hero-content {
 /* Mobile Hardware View: Proper Swipeable Horizontal Row instead of vertical stacking! */
 @media (max-width: 768px) {
   .hardware-banner-card {
-    min-height: 280px !important;
-    max-height: 340px !important;
-    aspect-ratio: 4 / 3 !important;
+    min-height: 290px !important;
+    max-height: 330px !important;
+    height: 300px !important;
+    aspect-ratio: auto !important;
     border-radius: 20px !important;
   }
 
+  .hardware-banner-img {
+    object-position: center 30% !important;
+  }
+
   .hardware-banner-overlay {
-    padding: 24px 20px !important;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 15%, rgba(10, 10, 12, 0.88) 90%) !important;
+    padding: 16px 16px !important;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(10, 10, 12, 0.90) 85%) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+  }
+
+  .hardware-banner-badge {
+    background: rgba(10, 10, 12, 0.92) !important;
+    color: #FF5500 !important;
+    border: 1px solid rgba(255, 85, 0, 0.35) !important;
+    font-size: 0.62rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.1em !important;
+    padding: 3px 9px !important;
+    border-radius: 999px !important;
+    margin-bottom: 4px !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
   }
 
   .hardware-banner-title {
-    font-size: 1.45rem !important;
+    font-size: 1.15rem !important;
+    font-weight: 850 !important;
     line-height: 1.2 !important;
+    color: #FFFFFF !important;
+    margin: 4px 0 10px 0 !important;
   }
 
   .hardware-banner-subtitle {
-    font-size: 0.82rem !important;
-    margin-bottom: 14px !important;
+    display: none !important; /* Hide cluttered subtitle on mobile so tabletop hardware products are 100% visible */
   }
 
   .hardware-banner-btn {
-    padding: 10px 18px !important;
-    font-size: 0.76rem !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    padding: 0 16px !important;
+    font-size: 0.70rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
   }
 
   .hardware-grid {
@@ -56098,5 +56131,120 @@ body.home-page .hero-content {
     max-width: 100% !important;
     border-radius: 24px !important;
     overflow: hidden !important;
+  }
+}
+
+
+/* ==========================================================================
+   PRECISION CARD TIGHTENING, ZERO-OVERLAP SWATCHES & MOBILE WHATSAPP ENFORCER
+   ========================================================================== */
+
+/* 1. Tighten Card Info Spacing (Eliminate big gaps under title) */
+.pop-slider-info,
+.drop-card-info,
+.hardware-card-body,
+.col-prod-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.pop-slider-title,
+.drop-title,
+.hardware-product-title {
+  margin-bottom: 6px !important;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.pop-pricing-row,
+.drop-pricing-row,
+.hardware-pricing-row {
+  margin: 4px 0 10px 0 !important;
+  margin-top: 0 !important;
+}
+
+.pop-quick-add-btn,
+.drop-quick-add-btn,
+.hardware-add-btn {
+  height: 40px !important;
+  min-height: 40px !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  margin-top: auto !important;
+}
+
+/* 2. Color Swatches: Zero scaling, zero overlapping */
+.product-color-palette .color-dot {
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+  min-height: 15px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #FFFFFF !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16) !important;
+  cursor: pointer !important;
+  transform: none !important;
+  transition: box-shadow 0.16s ease !important;
+  padding: 0 !important;
+}
+
+.product-color-palette .color-dot:hover {
+  transform: none !important;
+  box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #52525B !important;
+}
+
+.product-color-palette .color-dot.active {
+  transform: none !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3.5px #0A0A0C !important;
+}
+
+@media (min-width: 641px) {
+  .color-more-pill .more-pc { display: inline !important; }
+  .color-more-pill .more-mob { display: none !important; }
+}
+
+@media (max-width: 640px) {
+  .color-more-pill .more-pc { display: none !important; }
+  .color-more-pill .more-mob { display: inline !important; }
+
+  .pop-quick-add-btn,
+  .drop-quick-add-btn,
+  .hardware-add-btn {
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+}
+
+/* 3. Floating WhatsApp: Clean circular icon on mobile that never covers full buttons */
+@media (max-width: 768px) {
+  .floating-whatsapp-btn {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 990 !important;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4) !important;
+  }
+
+  .floating-whatsapp-label {
+    display: none !important;
+  }
+
+  .floating-whatsapp-icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  body.sticky-bar-visible .floating-whatsapp-btn,
+  body:has(.sticky-bottom-bar) .floating-whatsapp-btn {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
   }
 }

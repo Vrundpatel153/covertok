@@ -1197,24 +1197,35 @@ html, body {
 }
 
 .pdp-color-swatch {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 3px solid #FFFFFF;
-  box-shadow: 0 0 0 1.5px var(--pdp-border), 0 2px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  position: relative;
-  transition: var(--pdp-transition);
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 50% !important;
+  border: 2.5px solid #FFFFFF !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.20) !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: box-shadow 0.18s ease !important;
+  transform: none !important;
+  padding: 0 !important;
+  background: transparent !important;
 }
 
 .pdp-color-swatch:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 2px var(--pdp-gold-light), 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: none !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3px #52525B !important;
 }
 
 .pdp-color-swatch.active {
-  transform: scale(1.12);
-  box-shadow: 0 0 0 2.5px var(--pdp-gold), 0 6px 14px rgba(255, 85, 0, 0.35);
+  transform: none !important;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3.5px #0A0A0C !important;
+}
+
+.pdp-color-swatch .swatch-circle {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  display: block !important;
 }
 
 /* Overview / Description Expandable */
