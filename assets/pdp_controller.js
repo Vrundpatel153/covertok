@@ -236,7 +236,7 @@
     ratingCountEl.textContent = `(${product.reviews_count.toLocaleString()} Verified Reviews)`;
     }
 
-    // 2A. Dynamic Trust Badge: 10ft Drop Protection for mobile covers, 1-Year Warranty for other accessories
+    // 2A. Dynamic Trust Badge: 10ft Drop Protection for mobile covers, Precision Fit for other accessories
     const warrantyTitle = document.getElementById('pdpWarrantyTitle');
     const warrantyDesc = document.getElementById('pdpWarrantyDesc');
     const warrantyIcon = document.getElementById('pdpWarrantyIcon');
@@ -251,45 +251,20 @@
          !title.includes('airpod') && !title.includes('charger') && !title.includes('watch') &&
          !title.includes('strap') && !title.includes('mount') && !title.includes('stand') && !title.includes('glass'))
       );
-      const svgDropArmor = `<svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="pdp_grad_armor_dyn" x1="14" y1="2" x2="14" y2="26" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#0EA5E9"/>
-            <stop offset="100%" stop-color="#2563EB"/>
-          </linearGradient>
-        </defs>
-        <path d="M14 2.5L24 6.5V13.8C24 19.5 19.8 24.2 14 25.8C8.2 24.2 4 19.5 4 13.8V6.5L14 2.5Z" fill="url(#pdp_grad_armor_dyn)" fill-opacity="0.18" stroke="url(#pdp_grad_armor_dyn)" stroke-width="2" stroke-linejoin="round"/>
-        <path d="M14 6.5L19.5 8.8V13.5C19.5 16.8 17.2 19.8 14 21C10.8 19.8 8.5 16.8 8.5 13.5V8.8L14 6.5Z" stroke="url(#pdp_grad_armor_dyn)" stroke-width="1.5" stroke-dasharray="2.5 1.5"/>
-        <path d="M10.8 13.5L13 15.8L17.5 11" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="4" cy="6.5" r="1.5" fill="#0EA5E9"/>
-        <circle cx="24" cy="6.5" r="1.5" fill="#0EA5E9"/>
-      </svg>`;
-
-      const svgWarranty = `<svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="pdp_grad_warr_dyn" x1="3" y1="3" x2="25" y2="25" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#F59E0B"/>
-            <stop offset="100%" stop-color="#D97706"/>
-          </linearGradient>
-        </defs>
-        <path d="M14 2.5L24 6.5V14C24 19.5 19.8 24 14 25.5C8.2 24 4 19.5 4 14V6.5L14 2.5Z" fill="url(#pdp_grad_warr_dyn)" fill-opacity="0.18" stroke="url(#pdp_grad_warr_dyn)" stroke-width="2" stroke-linejoin="round"/>
-        <circle cx="14" cy="13.5" r="4.5" stroke="url(#pdp_grad_warr_dyn)" stroke-width="1.5"/>
-        <path d="M11.8 13.5L13.2 14.8L16.2 12" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>`;
 
       if (isMobileCover) {
         warrantyTitle.textContent = '10ft Drop Protection';
         if (warrantyDesc) warrantyDesc.textContent = 'Military-grade defense';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 5.5V11.5C4 16.5 7.4 20.8 12 22C16.6 20.8 20 16.5 20 11.5V5.5L12 2Z" fill="rgba(255, 85, 0, 0.08)" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11.5L11 14L15.5 9.5" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`;
         }
       } else {
         warrantyTitle.textContent = 'Precision Fit';
         if (warrantyDesc) warrantyDesc.textContent = '100% device match';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 5.5V11.5C4 16.5 7.4 20.8 12 22C16.6 20.8 20 16.5 20 11.5V5.5L12 2Z" fill="rgba(255, 85, 0, 0.08)" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11.5L11 14L15.5 9.5" stroke="#FF5500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><polyline points="9 11 11 13 15 9"/></svg>`;
         }
       }
     }
