@@ -57107,6 +57107,32 @@ html body #siteHeader,
   background: rgba(255, 85, 0, 0.14) !important;
   transform: scale(1.06) !important;
 }
+.trust-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+}
+
+.trust-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: #151413 !important;
+  margin: 0 0 3px 0 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.trust-desc {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  color: #726E67 !important;
+  margin: 0 !important;
+  line-height: 1.35 !important;
+}
+
 
 /* Mobile Trust Cards: OCD Precision Alignment & Equal Heights */
 @media (max-width: 768px) {
