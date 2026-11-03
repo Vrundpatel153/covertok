@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261103_trust_restored_v25">
-  <link rel="stylesheet" href="catalog.css?v=20261103_swatch_fix_v1">
+  <link rel="stylesheet" href="catalog.css?v=20261104_swatch_round_v2">
   <link rel="stylesheet" href="pages.css?v=20261104_search_unified_v1">
   <link rel="stylesheet" href="microinteractions.css?v=20261103_curved_v5">
   <style>
@@ -534,7 +534,8 @@
       align-items: center !important;
       justify-content: space-between !important;
       gap: 6px !important;
-      overflow: hidden !important;
+      overflow: visible !important;
+      min-height: 22px !important;
     }
 
     .card-price-row {
@@ -546,7 +547,65 @@
       flex-shrink: 0 !important;
       display: inline-flex !important;
       align-items: center !important;
-      gap: 4px !important;
+      gap: 5px !important;
+      overflow: visible !important;
+      padding: 3px 2px !important;
+      min-height: 20px !important;
+    }
+
+    .product-color-palette .color-dot {
+      width: 13px !important;
+      height: 13px !important;
+      min-width: 13px !important;
+      min-height: 13px !important;
+      border-radius: 50% !important;
+      border: 1px solid rgba(0, 0, 0, 0.12) !important;
+      box-shadow: none !important;
+      cursor: pointer !important;
+      transition: transform 0.16s ease, box-shadow 0.16s ease !important;
+      transform: none !important;
+      flex-shrink: 0 !important;
+      box-sizing: border-box !important;
+      padding: 0 !important;
+    }
+
+    .product-color-palette .color-dot:hover {
+      transform: none !important;
+      border: 1.5px solid #FFFFFF !important;
+      box-shadow: 0 0 0 1.5px #0A0A0C !important;
+    }
+
+    .product-color-palette .color-dot.active {
+      transform: none !important;
+      border: 1.5px solid #FFFFFF !important;
+      box-shadow: 0 0 0 1.5px #0A0A0C !important;
+    }
+
+    @media (max-width: 768px) {
+      .card-price-swatch-row {
+        gap: 4px !important;
+        min-height: 20px !important;
+        overflow: visible !important;
+      }
+      .product-color-palette {
+        gap: 4px !important;
+        padding: 2px 1px !important;
+        min-height: 18px !important;
+      }
+      .product-color-palette .color-dot {
+        width: 12px !important;
+        height: 12px !important;
+        min-width: 12px !important;
+        min-height: 12px !important;
+      }
+      .product-color-palette .color-dot.active {
+        transform: none !important;
+        border: 1.5px solid #FFFFFF !important;
+        box-shadow: 0 0 0 1.5px #0A0A0C !important;
+      }
+      .product-color-palette:has(.color-more-pill) .color-dot:nth-of-type(3) {
+        display: none !important;
+      }
     }
 
     .card-add-btn {
