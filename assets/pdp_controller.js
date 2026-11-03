@@ -272,15 +272,15 @@
         warrantyTitle.textContent = '10ft Drop Certified';
         if (warrantyDesc) warrantyDesc.textContent = 'MIL-STD 810G air-cushion defense';
         if (warrantyIcon) {
-          warrantyIcon.className = 'covertok-trust-icon trust-icon-armor';
-          warrantyIcon.innerHTML = svgDropArmor;
+          warrantyIcon.className = 'covertok-trust-icon';
+          warrantyIcon.innerHTML = `<img src="assets/icons/trust_armor.svg" width="28" height="28" alt="10ft Drop Certified" class="trust-badge-icon-img">`;
         }
       } else {
         warrantyTitle.textContent = 'Universal Precision Fit';
         if (warrantyDesc) warrantyDesc.textContent = 'Engineered device compatibility';
         if (warrantyIcon) {
-          warrantyIcon.className = 'covertok-trust-icon trust-icon-warranty';
-          warrantyIcon.innerHTML = svgWarranty;
+          warrantyIcon.className = 'covertok-trust-icon';
+          warrantyIcon.innerHTML = `<img src="assets/icons/trust_fit.svg" width="28" height="28" alt="Universal Precision Fit" class="trust-badge-icon-img">`;
         }
       }
     }
