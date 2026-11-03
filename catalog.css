@@ -2639,7 +2639,7 @@
 
   font-size: 0.82rem;
 
-  color: #8C827A;
+  color: #52525B;
 
   text-decoration: line-through;
 
@@ -3249,7 +3249,7 @@
 
   font-size: 1rem;
 
-  color: #94A3B8;
+  color: #52525B;
 
   text-decoration: line-through;
 
@@ -3879,7 +3879,7 @@
 
     font-size: 0.78rem !important;
 
-    color: #8C827A !important;
+    color: #52525B !important;
 
     text-decoration: line-through !important;
 
@@ -5063,7 +5063,7 @@
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.78rem !important;
   font-weight: 500 !important;
-  color: #94A3B8 !important;
+  color: #52525B !important;
   text-decoration: line-through !important;
 }
 

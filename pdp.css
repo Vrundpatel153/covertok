@@ -4251,31 +4251,154 @@ html body #siteHeader,
 
 
 /* ==========================================================================
-   PDP TEXT CONTRAST BOOST (PREVENT GREY MERGING INTO BACKGROUND)
+   PDP HIGH-CONTRAST TEXT & SCARCITY OPTIMIZATION (ZERO WASHED-OUT TEXT)
    ========================================================================== */
-.pdp-price-note {
-  color: #27272A !important;
-  font-weight: 500 !important;
-  font-size: 0.82rem !important;
+/* 1. Strikethrough Original Price: Crisp Slate with strong contrast */
+.pdp-price-original,
+#pdpOriginalPrice {
+  color: #4B5563 !important; /* Slate-600 (contrast ratio ~6.5:1 against #FAF8F5) */
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  text-decoration: line-through !important;
+  letter-spacing: -0.01em !important;
+  opacity: 0.9 !important;
+  display: inline-block !important;
 }
 
+/* 2. Tax & Express Delivery Subtitle */
+.pdp-price-note {
+  color: #1F2937 !important; /* Gray-800: crisp, readable, never blends into background */
+  font-weight: 550 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
+  margin: 6px 0 0 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* 3. Rating & Reviews Link */
+.pdp-rating-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.pdp-rating-score {
+  color: #0A0A0A !important;
+  font-weight: 800 !important;
+}
+
+.pdp-review-count,
+.pdp-reviews-count-link,
+.pdp-reviews-count-link span,
+.pdp-reviews-count {
+  color: #1F2937 !important; /* Dark charcoal text */
+  font-weight: 600 !important;
+  font-size: 0.84rem !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2.5px !important;
+  transition: color 0.2s ease !important;
+}
+
+.pdp-reviews-count-link:hover span {
+  color: #FF5500 !important;
+}
+
+/* 4. Scarcity & Social Proof Badges */
 .pdp-urgency-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  width: 100% !important;
+  margin-top: 14px !important;
+  padding-top: 14px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.pdp-urgency-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+  font-family: var(--pdp-font-body, 'Inter', sans-serif) !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  box-sizing: border-box !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+
+/* Flame / Sold item */
+.pdp-urgency-fire {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(255, 85, 0, 0.28) !important;
+  box-shadow: 0 1px 4px rgba(255, 85, 0, 0.06) !important;
   color: #18181B !important;
 }
 
-.pdp-urgency-fire,
-.pdp-urgency-stock {
-  color: #27272A !important;
+.pdp-urgency-fire svg {
+  stroke: #FF5500 !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0 !important;
+}
+
+.pdp-urgency-fire strong {
+  color: #0A0A0A !important;
+  font-weight: 800 !important;
+}
+
+.pdp-urgency-fire span {
+  color: #18181B !important;
   font-weight: 600 !important;
 }
 
-.pdp-urgency-fire svg,
-.pdp-urgency-stock svg {
-  stroke: #FF5500 !important;
+/* Stock item */
+.pdp-urgency-stock {
+  background: #FFF7ED !important;
+  border: 1px solid rgba(234, 88, 12, 0.32) !important;
+  box-shadow: 0 1px 4px rgba(234, 88, 12, 0.06) !important;
+  color: #9A3412 !important;
 }
 
-.pdp-meta-row,
-.pdp-meta-item,
-.pdp-reviews-count {
-  color: #27272A !important;
+.pdp-urgency-stock svg {
+  stroke: #EA580C !important;
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0 !important;
+}
+
+.pdp-urgency-stock strong {
+  color: #7C2D12 !important;
+  font-weight: 800 !important;
+}
+
+.pdp-urgency-stock span {
+  color: #9A3412 !important;
+  font-weight: 700 !important;
+}
+
+/* 5. Brand Eyebrow Tag & Option Titles */
+.pdp-brand-tag {
+  color: #FF5500 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  font-size: 0.72rem !important;
+}
+
+.pdp-option-title {
+  color: #0A0A0A !important;
+  font-weight: 800 !important;
+  font-size: 0.88rem !important;
+}
+
+.specs-label {
+  color: #374151 !important;
+  font-weight: 650 !important;
+}
+
+.specs-value {
+  color: #111827 !important;
+  font-weight: 600 !important;
 }
