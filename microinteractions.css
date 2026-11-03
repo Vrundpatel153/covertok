@@ -1908,18 +1908,20 @@ body:not(.home-page) #siteHeader,
 .search-product-card,
 .catalog-product-card,
 .catalog-card,
+.combo-catalog-card,
 .combo-card,
 .drop-3d-card .drop-card-inner,
 .drop-card-inner,
 .popular-choice-card {
-  background: var(--liquid-glass-bg) !important;
-  backdrop-filter: var(--liquid-glass-blur) !important;
-  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
-  border: var(--liquid-glass-border) !important;
-  border-radius: 22px !important;
-  box-shadow: var(--liquid-glass-shadow) !important;
+  background: #FFFFFF !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #141416 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
   transition: var(--liquid-glass-transition) !important;
   box-sizing: border-box !important;
+  overflow: hidden !important;
 }
 
 .bestseller-prod-card:hover,
