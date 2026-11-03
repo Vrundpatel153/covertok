@@ -2632,8 +2632,9 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9875597623594/1_49938305941802.webp",
+    "primary_image": "assets/products/9875597623594/packshot_white_1.webp",
     "images": [
+      "assets/products/9875597623594/packshot_white_1.webp",
       "assets/products/9875597623594/1_49938305941802.webp",
       "assets/products/9875597623594/2_49938305876266.webp",
       "assets/products/9875597623594/3_49938305843498.webp",
@@ -4296,8 +4297,9 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9871368651050/1_49907231162666.webp",
+    "primary_image": "assets/products/9871368651050/packshot_white_1.webp",
     "images": [
+      "assets/products/9871368651050/packshot_white_1.webp",
       "assets/products/9871368651050/1_49907231162666.webp",
       "assets/products/9871368651050/2_49907234046250.webp",
       "assets/products/9871368651050/3_49907234865450.webp",
