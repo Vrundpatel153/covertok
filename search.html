@@ -176,20 +176,27 @@
       align-items: center;
       gap: 10px;
       min-width: 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow: hidden;
     }
 
-    .discovery-controls-heading {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.12rem;
-      font-weight: 800;
-      color: #171513;
-      letter-spacing: -0.015em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-      line-height: 1.2;
+    /* Strict override to eliminate h1 font-size word-break bug across all viewports */
+    html body #mainContent .catalog-discovery-header h1.discovery-controls-heading,
+    html body .catalog-discovery-header #searchHeroTitle,
+    .discovery-controls-heading,
+    #searchHeroTitle {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      font-size: 1.15rem !important;
+      font-weight: 800 !important;
+      color: #171513 !important;
+      letter-spacing: -0.015em !important;
+      margin: 0 !important;
+      line-height: 1.25 !important;
+      white-space: nowrap !important;
+      text-wrap: nowrap !important;
+      word-break: normal !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
     }
 
     .discovery-count-chip {
@@ -201,6 +208,7 @@
       padding: 3px 10px;
       border-radius: 999px;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .discovery-back-pill-btn {
@@ -226,6 +234,124 @@
       background: #000000;
       color: #FFFFFF;
       transform: translateX(-2px);
+    }
+
+    /* Search Query Tag Chip */
+    .search-query-tag-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      max-width: 170px;
+    }
+
+    .search-query-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FFF3EB;
+      border: 1px solid #FFD8C2;
+      color: #FF5500;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .query-remove-btn {
+      background: none;
+      border: none;
+      color: #FF5500;
+      font-size: 14px;
+      line-height: 1;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2px;
+    }
+
+    .query-remove-btn:hover {
+      color: #000000;
+    }
+
+    /* Tactile Category Filter Pills Bar */
+    .search-category-pills-wrap {
+      margin: 10px 0 14px;
+      position: relative;
+    }
+
+    .search-category-pills {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 2px 2px 6px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .search-category-pills::-webkit-scrollbar {
+      display: none;
+    }
+
+    .search-cat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #FAF8F5;
+      border: 1.5px solid #EAE5DB;
+      color: #5C5249;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .search-cat-pill:hover {
+      background: #FFFFFF;
+      border-color: #FF5500;
+      color: #0A0A0A;
+      transform: translateY(-1px);
+    }
+
+    .search-cat-pill.active {
+      background: #171513 !important;
+      border-color: #171513 !important;
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    .search-cat-pill .pill-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.06);
+      color: inherit;
+      padding: 1px 6px;
+      border-radius: 999px;
+      line-height: 1.2;
+    }
+
+    .search-cat-pill.active .pill-count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
     }
 
     .discovery-controls-right {
@@ -371,6 +497,108 @@
       color: #FFFFFF !important;
     }
 
+    /* Product Card Anti-Overflow Containment & Polish */
+    .catalog-card {
+      contain: layout paint !important;
+      overflow: hidden !important;
+    }
+
+    .card-product-title {
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      line-height: 1.25 !important;
+    }
+
+    .card-price-swatch-row {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 6px !important;
+      overflow: hidden !important;
+    }
+
+    .card-price-row {
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+
+    .product-color-palette {
+      flex-shrink: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+    }
+
+    .card-add-btn {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+    /* Shelf Cards Row Polish */
+    .shelf-cards-row {
+      display: flex !important;
+      gap: 14px !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+      padding: 4px 2px 14px !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+
+    .shelf-cards-row::-webkit-scrollbar {
+      display: none !important;
+    }
+
+    .shelf-cards-row .catalog-card {
+      flex: 0 0 220px !important;
+      max-width: 220px !important;
+      scroll-snap-align: start !important;
+    }
+
+    /* Infinite Scroll Sentinel & Batch Loading */
+    .search-infinite-sentinel {
+      width: 100%;
+      height: 24px;
+      margin: 16px 0 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-infinite-loader {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #786B61;
+      padding: 6px 16px;
+      background: #FAF8F5;
+      border: 1px solid #EAE5DB;
+      border-radius: 999px;
+    }
+
+    .search-infinite-loader.active {
+      display: inline-flex;
+    }
+
+    .search-infinite-spinner {
+      width: 14px;
+      height: 14px;
+      border: 2px solid #CBD5E1;
+      border-top-color: #FF5500;
+      border-radius: 50%;
+      animation: spinLoader 0.7s linear infinite;
+    }
+
+    @keyframes spinLoader {
+      to { transform: rotate(360deg); }
+    }
+
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .catalog-discovery-header {
@@ -382,7 +610,7 @@
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
       .page-breadcrumb {
@@ -408,31 +636,36 @@
       }
 
       .discovery-controls-left {
-        gap: 8px;
-        flex-wrap: nowrap;
-        overflow: hidden;
+        gap: 8px !important;
+        flex-wrap: nowrap !important;
+        overflow: hidden !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
       }
 
-      .discovery-controls-heading {
-        font-size: 0.96rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      .desktop-query-label {
-        display: none !important;
+      html body #mainContent .catalog-discovery-header h1.discovery-controls-heading,
+      html body .catalog-discovery-header #searchHeroTitle,
+      .discovery-controls-heading,
+      #searchHeroTitle {
+        font-size: 0.98rem !important;
+        max-width: 175px !important;
+        white-space: nowrap !important;
+        text-wrap: nowrap !important;
+        word-break: normal !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
       }
 
       .discovery-count-chip {
-        font-size: 0.72rem;
-        padding: 2px 7px;
-        flex-shrink: 0;
+        font-size: 0.72rem !important;
+        padding: 2px 7px !important;
+        flex-shrink: 0 !important;
       }
 
       .discovery-back-pill-btn {
-        padding: 5px 10px;
-        font-size: 0.74rem;
+        padding: 5px 10px !important;
+        font-size: 0.74rem !important;
+        flex-shrink: 0 !important;
       }
 
       .catalog-sort-label {
@@ -443,18 +676,39 @@
         padding: 4px 10px !important;
         height: 34px !important;
         font-size: 0.76rem !important;
+        max-width: 125px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .shelf-cards-row {
+        gap: 12px !important;
+      }
+
+      .shelf-cards-row .catalog-card {
+        flex: 0 0 178px !important;
+        max-width: 178px !important;
       }
     }
 
-    @media (max-width: 360px) {
-      .discovery-controls-heading {
-        font-size: 0.88rem;
+    @media (max-width: 380px) {
+      html body #mainContent .catalog-discovery-header h1.discovery-controls-heading,
+      html body .catalog-discovery-header #searchHeroTitle,
+      .discovery-controls-heading,
+      #searchHeroTitle {
+        font-size: 0.90rem !important;
+        max-width: 140px !important;
       }
 
       .luxury-sort-trigger {
         padding: 3px 8px !important;
         height: 32px !important;
         font-size: 0.72rem !important;
+        max-width: 105px !important;
+      }
+
+      .shelf-cards-row .catalog-card {
+        flex: 0 0 160px !important;
+        max-width: 160px !important;
       }
     }
   </style>
@@ -814,7 +1068,7 @@
   </div>
 
   <main id="mainContent">
-    <!-- Professional 2-Row Luxury Discovery Header -->
+    <!-- Professional 3-Row Luxury Discovery Header -->
     <header class="catalog-discovery-header">
       <div class="page-container">
         
@@ -848,7 +1102,40 @@
           </div>
         </div>
 
-        <!-- ROW 2: Navigation & Status Action (Left) | Luxury Sort Dropdown (Right) -->
+        <!-- ROW 2: Tactile Category Quick Filter Pills -->
+        <div class="search-category-pills-wrap">
+          <nav class="search-category-pills" id="searchCategoryPills" aria-label="Category Filters">
+            <button type="button" class="search-cat-pill active" data-filter="all-shelves">
+              <span>All Shelves</span>
+            </button>
+            <button type="button" class="search-cat-pill" data-filter="all">
+              <span>All Products</span>
+              <span class="pill-count">75</span>
+            </button>
+            <button type="button" class="search-cat-pill" data-filter="iphone-cases">
+              <span>iPhone Covers</span>
+              <span class="pill-count">30</span>
+            </button>
+            <button type="button" class="search-cat-pill" data-filter="watchbands">
+              <span>Watch Bands</span>
+              <span class="pill-count">18</span>
+            </button>
+            <button type="button" class="search-cat-pill" data-filter="airpod-covers">
+              <span>AirPods</span>
+              <span class="pill-count">8</span>
+            </button>
+            <button type="button" class="search-cat-pill" data-filter="charger-and-cables">
+              <span>Chargers</span>
+              <span class="pill-count">11</span>
+            </button>
+            <button type="button" class="search-cat-pill" data-filter="other-accessories">
+              <span>Accessories</span>
+              <span class="pill-count">8</span>
+            </button>
+          </nav>
+        </div>
+
+        <!-- ROW 3: Navigation & Status Action (Left) | Luxury Sort Dropdown (Right) -->
         <div class="discovery-controls-bar">
           <div class="discovery-controls-left" id="discoveryNavAction">
             <h1 class="discovery-controls-heading" id="searchHeroTitle">Explore Collections</h1>
@@ -865,7 +1152,7 @@
                 aria-haspopup="listbox" 
                 aria-expanded="false" 
                 aria-label="Sort by">
-                <span class="sort-trigger-text" id="sortSelectedLabel">Featured / Best Sellers</span>
+                <span class="sort-trigger-text" id="sortSelectedLabel">Featured</span>
                 <svg class="sort-trigger-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="6 9 12 15 18 9"/>
                 </svg>
@@ -1399,9 +1686,13 @@
   <script>
     (function() {
       let products = window.CovertokProducts || [];
-      let activeFilter = 'all';
+      let activeFilter = 'all-shelves';
       let activeQuery = '';
       let activeSort = 'featured';
+      let currentPage = 1;
+      const PAGE_SIZE = 16;
+      let isInfiniteLoading = false;
+      let infiniteObserver = null;
 
       const input = document.getElementById('pageSearchInput');
       const clearBtn = document.getElementById('clearSearchBtn');
@@ -1411,11 +1702,6 @@
       const sortTrigger = document.getElementById('sortDropdownTrigger');
       const sortSelectedLabel = document.getElementById('sortSelectedLabel');
       const sortOptions = document.querySelectorAll('.luxury-sort-option');
-      const heroTitle = document.getElementById('searchHeroTitle');
-      const heroSubtitle = document.getElementById('searchHeroSubtitle');
-      const countBadge = document.getElementById('searchCountBadge');
-      const metaCountBold = document.getElementById('catalogCountBold');
-      const discoveryStatusLabel = document.getElementById('discoveryStatusLabel');
 
       const CATEGORY_ROWS = [
         {
@@ -1459,9 +1745,21 @@
         'title-az': 'Name: A to Z'
       };
 
+      const sortLabelsMobileMap = {
+        'featured': 'Featured',
+        'price-low': 'Price: Low',
+        'price-high': 'Price: High',
+        'rating': 'Rating',
+        'newest': 'Newest',
+        'title-az': 'A-Z'
+      };
+
       function updateSortDropdownUI(val) {
+        const isMobile = window.innerWidth <= 768;
         if (sortSelectedLabel) {
-          sortSelectedLabel.textContent = sortLabelsMap[val] || 'Featured';
+          sortSelectedLabel.textContent = isMobile 
+            ? (sortLabelsMobileMap[val] || 'Featured') 
+            : (sortLabelsMap[val] || 'Featured / Best Sellers');
         }
         sortOptions.forEach(opt => {
           if (opt.getAttribute('data-value') === val) {
@@ -1473,6 +1771,10 @@
         if (sortSelect) sortSelect.value = val;
       }
 
+      window.addEventListener('resize', () => {
+        updateSortDropdownUI(activeSort);
+      });
+
       function setSortValue(val) {
         activeSort = val;
         updateSortDropdownUI(val);
@@ -1481,6 +1783,7 @@
           if (sortTrigger) sortTrigger.setAttribute('aria-expanded', 'false');
         }
         updateUrlParams();
+        currentPage = 1;
         filterAndRender();
       }
 
@@ -1532,14 +1835,16 @@
         return copy;
       }
 
+      function escapeSearchText(str) {
+        return String(str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
       function renderCard(product) {
-        // Single clean micro-badge if discounted; no clutter over image
         let badgeHtml = '';
         if (product.discount_percent > 0) {
           badgeHtml = `<span class="card-micro-badge">-${product.discount_percent}%</span>`;
         }
 
-        // Color Swatches Palette (1 color -> 1 dot; 2-3 colors -> 2-3 dots; >3 colors -> 3 dots + +N pill)
         let paletteHtml = '';
         if (product.colors && product.colors.length > 0) {
           const cols = product.colors;
@@ -1603,8 +1908,161 @@
         `;
       }
 
-      function escapeSearchText(str) {
-        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      function syncCategoryPillsUI() {
+        const pills = document.querySelectorAll('.search-cat-pill');
+        pills.forEach(p => {
+          const cat = p.getAttribute('data-filter');
+          if (!activeQuery && cat === activeFilter) {
+            p.classList.add('active');
+            p.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          } else {
+            p.classList.remove('active');
+          }
+        });
+      }
+
+      function renderCatalogPagination(totalPages, totalItems, activePage, onPageSelect) {
+        const container = document.getElementById('catalogPagination');
+        if (!container) return;
+
+        if (totalPages <= 1) {
+          container.innerHTML = '';
+          return;
+        }
+
+        let html = '';
+        const current = activePage;
+        const pages = [];
+
+        if (totalPages <= 5) {
+          for (let i = 1; i <= totalPages; i++) pages.push(i);
+        } else {
+          pages.push(1);
+          if (current > 3) pages.push('...');
+          
+          const start = Math.max(2, current - 1);
+          const end = Math.min(totalPages - 1, current + 1);
+          for (let i = start; i <= end; i++) {
+            if (!pages.includes(i)) pages.push(i);
+          }
+
+          if (current < totalPages - 2) pages.push('...');
+          if (!pages.includes(totalPages)) pages.push(totalPages);
+        }
+
+        pages.forEach(p => {
+          if (p === '...') {
+            html += '<span class="catalog-page-dots">...</span>';
+          } else {
+            const activeClass = p === current ? 'active' : '';
+            html += `<button type="button" class="catalog-page-btn ${activeClass}" data-page="${p}">${p}</button>`;
+          }
+        });
+
+        const hasNext = current < totalPages;
+        html += `
+          <button type="button" class="catalog-page-next" ${hasNext ? '' : 'disabled'} aria-label="Next batch">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </button>
+        `;
+
+        container.innerHTML = html;
+
+        container.querySelectorAll('.catalog-page-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetPage = parseInt(btn.getAttribute('data-page'), 10);
+            if (targetPage !== currentPage) {
+              onPageSelect(targetPage);
+            }
+          });
+        });
+
+        const nextBtn = container.querySelector('.catalog-page-next');
+        if (nextBtn && hasNext) {
+          nextBtn.addEventListener('click', () => {
+            onPageSelect(currentPage + 1);
+          });
+        }
+      }
+
+      function setupInfiniteScroll(filteredList, totalPages) {
+        if (infiniteObserver) {
+          infiniteObserver.disconnect();
+          infiniteObserver = null;
+        }
+
+        const sentinel = document.getElementById('searchInfiniteSentinel');
+        const loader = document.getElementById('searchInfiniteLoader');
+        if (!sentinel) return;
+
+        if (currentPage >= totalPages) {
+          if (loader) loader.classList.remove('active');
+          return;
+        }
+
+        infiniteObserver = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          if (entry.isIntersecting && !isInfiniteLoading && currentPage < totalPages) {
+            isInfiniteLoading = true;
+            if (loader) loader.classList.add('active');
+
+            setTimeout(() => {
+              currentPage++;
+              const startIdx = (currentPage - 1) * PAGE_SIZE;
+              const nextBatch = filteredList.slice(startIdx, startIdx + PAGE_SIZE);
+
+              const grid = document.getElementById('searchResultsGrid');
+              if (grid && nextBatch.length > 0) {
+                const tempWrap = document.createElement('div');
+                tempWrap.innerHTML = nextBatch.map(p => renderCard(p)).join('');
+                while (tempWrap.firstChild) {
+                  grid.appendChild(tempWrap.firstChild);
+                }
+              }
+
+              // Update pagination active button
+              renderCatalogPagination(totalPages, filteredList.length, currentPage, (page) => {
+                jumpToPage(page, filteredList, totalPages);
+              });
+
+              if (loader) loader.classList.remove('active');
+              isInfiniteLoading = false;
+
+              if (currentPage >= totalPages && infiniteObserver) {
+                infiniteObserver.disconnect();
+                infiniteObserver = null;
+              }
+            }, 180);
+          }
+        }, {
+          rootMargin: '240px 0px 240px 0px',
+          threshold: 0.05
+        });
+
+        infiniteObserver.observe(sentinel);
+      }
+
+      function jumpToPage(targetPage, filteredList, totalPages) {
+        currentPage = targetPage;
+        const grid = document.getElementById('searchResultsGrid');
+        if (grid) {
+          const startIdx = (currentPage - 1) * PAGE_SIZE;
+          const pagedItems = filteredList.slice(startIdx, startIdx + PAGE_SIZE);
+          grid.innerHTML = pagedItems.map(p => renderCard(p)).join('');
+        }
+
+        renderCatalogPagination(totalPages, filteredList.length, currentPage, (page) => {
+          jumpToPage(page, filteredList, totalPages);
+        });
+
+        setupInfiniteScroll(filteredList, totalPages);
+
+        if (contentArea) {
+          const rect = contentArea.getBoundingClientRect();
+          window.scrollTo({ top: window.scrollY + rect.top - 100, behavior: 'smooth' });
+        }
       }
 
       function filterAndRender() {
@@ -1617,7 +2075,9 @@
         const navAction = document.getElementById('discoveryNavAction');
         const q = activeQuery.toLowerCase().trim();
 
-        // 1. Search Query active: Render Search Results Grid
+        syncCategoryPillsUI();
+
+        // 1. ACTIVE SEARCH QUERY
         if (q) {
           const terms = q.split(/\s+/).filter(Boolean);
           let list = products.filter(p => {
@@ -1635,17 +2095,24 @@
 
           list = sortProductList(list, activeSort);
 
+          const isMobile = window.innerWidth <= 768;
+
           if (list.length === 0) {
+            if (infiniteObserver) { infiniteObserver.disconnect(); infiniteObserver = null; }
             if (navAction) {
               navAction.innerHTML = `
                 <button type="button" class="discovery-back-pill-btn" onclick="resetToCategoryRows()">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                  <span>All Shelves</span>
+                  <span>Shelves</span>
                 </button>
-                <h1 class="discovery-controls-heading" id="searchHeroTitle">
-                  No Results for <span style="color: #0A0A0A; font-weight: 900;">"${escapeSearchText(activeQuery)}"</span>
-                </h1>
-                <span class="discovery-count-chip" id="searchCountBadge">0 Products</span>
+                ${isMobile ? '' : '<h1 class="discovery-controls-heading" id="searchHeroTitle">No Results</h1>'}
+                <div class="search-query-tag-wrap">
+                  <span class="search-query-pill">
+                    <span>"${escapeSearchText(activeQuery)}"</span>
+                    <button type="button" class="query-remove-btn" onclick="clearSearch()" aria-label="Clear query">&times;</button>
+                  </span>
+                </div>
+                <span class="discovery-count-chip" id="searchCountBadge">0 Styles</span>
               `;
             }
             contentArea.innerHTML = `
@@ -1660,74 +2127,124 @@
                   We couldn't find any items matching "${escapeSearchText(activeQuery)}". Try searching for cases, bands, or chargers:
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px;">
-                  <button type="button" class="filter-pill" onclick="quickSearch('Titanium')">Titanium</button>
-                  <button type="button" class="filter-pill" onclick="quickSearch('Magnetic')">Magnetic Holder</button>
-                  <button type="button" class="filter-pill" onclick="quickSearch('AirPods')">AirPods</button>
-                  <button type="button" class="filter-pill" onclick="resetToCategoryRows()">Browse Category Rows</button>
+                  <button type="button" class="search-cat-pill" onclick="quickSearch('Titanium')">Titanium</button>
+                  <button type="button" class="search-cat-pill" onclick="quickSearch('Magnetic')">Magnetic Holder</button>
+                  <button type="button" class="search-cat-pill" onclick="quickSearch('AirPods')">AirPods</button>
+                  <button type="button" class="search-cat-pill" onclick="resetToCategoryRows()">Browse Category Rows</button>
                 </div>
               </div>
             `;
             return;
           }
 
+          const totalPages = Math.ceil(list.length / PAGE_SIZE);
+          if (currentPage > totalPages) currentPage = 1;
+          const initialBatch = list.slice(0, currentPage * PAGE_SIZE);
+
           if (navAction) {
             navAction.innerHTML = `
               <button type="button" class="discovery-back-pill-btn" onclick="resetToCategoryRows()">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                <span>All Shelves</span>
+                <span>Shelves</span>
               </button>
-              <h1 class="discovery-controls-heading" id="searchHeroTitle">
-                <span class="desktop-query-label">Results for <span style="color: #0A0A0A; font-weight: 900;">"${escapeSearchText(activeQuery)}"</span></span>
-              </h1>
-              <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}</span>
+              ${isMobile ? '' : '<h1 class="discovery-controls-heading" id="searchHeroTitle">Results</h1>'}
+              <div class="search-query-tag-wrap">
+                <span class="search-query-pill">
+                  <span>"${escapeSearchText(activeQuery)}"</span>
+                  <button type="button" class="query-remove-btn" onclick="clearSearch()" aria-label="Clear query">&times;</button>
+                </span>
+              </div>
+              <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num">${list.length}</span> Styles</span>
             `;
           }
 
           contentArea.innerHTML = `
             <div class="catalog-products-grid" id="searchResultsGrid">
-              ${list.map(p => renderCard(p)).join('')}
+              ${initialBatch.map(p => renderCard(p)).join('')}
             </div>
+            <div class="search-infinite-sentinel" id="searchInfiniteSentinel">
+              <div class="search-infinite-loader" id="searchInfiniteLoader">
+                <span class="search-infinite-spinner"></span>
+                <span>Loading more styles...</span>
+              </div>
+            </div>
+            <div class="catalog-pagination-container" id="catalogPagination"></div>
           `;
+
+          renderCatalogPagination(totalPages, list.length, currentPage, (page) => {
+            jumpToPage(page, list, totalPages);
+          });
+
+          setupInfiniteScroll(list, totalPages);
           return;
         }
 
-        // 2. Specific Category active: Render that category's full grid
-        if (activeFilter !== 'all') {
-          const categoryObj = CATEGORY_ROWS.find(c => c.id === activeFilter);
+        // 2. SPECIFIC CATEGORY FILTER OR ALL PRODUCTS GRID
+        if (activeFilter !== 'all-shelves') {
           let list = [];
-          if (categoryObj) {
-            list = products.filter(categoryObj.filter);
+          let catTitle = 'All Products';
+
+          if (activeFilter === 'all') {
+            list = products.slice();
+            catTitle = 'All Products';
           } else {
-            list = products.filter(p => p.category === activeFilter || (p.collections && p.collections.includes(activeFilter)));
+            const categoryObj = CATEGORY_ROWS.find(c => c.id === activeFilter);
+            if (categoryObj) {
+              list = products.filter(categoryObj.filter);
+              catTitle = categoryObj.title;
+            } else {
+              list = products.filter(p => p.category === activeFilter || (p.collections && p.collections.includes(activeFilter)));
+              catTitle = 'Category Items';
+            }
           }
 
           list = sortProductList(list, activeSort);
+          const totalPages = Math.ceil(list.length / PAGE_SIZE);
+          if (currentPage > totalPages) currentPage = 1;
+          const initialBatch = list.slice(0, currentPage * PAGE_SIZE);
 
-          const catTitle = categoryObj ? categoryObj.title : 'Category Items';
           if (navAction) {
             navAction.innerHTML = `
               <button type="button" class="discovery-back-pill-btn" onclick="resetToCategoryRows()">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-                <span>All Shelves</span>
+                <span>Shelves</span>
               </button>
               <h1 class="discovery-controls-heading" id="searchHeroTitle">${catTitle}</h1>
-              <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${list.length}</span> ${list.length === 1 ? 'Product' : 'Products'}</span>
+              <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num">${list.length}</span> Styles</span>
             `;
           }
 
           contentArea.innerHTML = `
             <div class="catalog-products-grid" id="searchResultsGrid">
-              ${list.map(p => renderCard(p)).join('')}
+              ${initialBatch.map(p => renderCard(p)).join('')}
             </div>
+            <div class="search-infinite-sentinel" id="searchInfiniteSentinel">
+              <div class="search-infinite-loader" id="searchInfiniteLoader">
+                <span class="search-infinite-spinner"></span>
+                <span>Loading more styles...</span>
+              </div>
+            </div>
+            <div class="catalog-pagination-container" id="catalogPagination"></div>
           `;
+
+          renderCatalogPagination(totalPages, list.length, currentPage, (page) => {
+            jumpToPage(page, list, totalPages);
+          });
+
+          setupInfiniteScroll(list, totalPages);
           return;
         }
 
-        // 3. Default Browse: Dedicated Rows per Each Category
+        // 3. DEFAULT BROWSE: CURATED CATEGORY SHELVES VIEW
+        if (infiniteObserver) {
+          infiniteObserver.disconnect();
+          infiniteObserver = null;
+        }
+
         if (navAction) {
           navAction.innerHTML = `
             <h1 class="discovery-controls-heading" id="searchHeroTitle">Explore Collections</h1>
-            <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num" id="countNumber">${products.length}</span> Styles</span>
+            <span class="discovery-count-chip" id="searchCountBadge"><span class="catalog-count-num">${products.length}</span> Styles</span>
           `;
         }
 
@@ -1742,7 +2259,7 @@
                   <h2 class="shelf-title">${cat.title}</h2>
                   <span class="shelf-count-chip">${catProducts.length} Styles</span>
                 </div>
-                <button type="button" class="shelf-view-all-btn" onclick="viewCategoryAll('${cat.id}')">
+                <button type="button" class="shelf-view-all-btn" onclick="selectCategoryFilter('${cat.id}')">
                   View All (${catProducts.length})
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
                 </button>
@@ -1757,10 +2274,9 @@
         contentArea.innerHTML = shelvesHtml;
       }
 
-      // Event delegation for Color Swatches and Wishlist on dynamic contentArea
+      // Event delegation for Color Swatches on dynamic contentArea
       if (contentArea) {
         contentArea.addEventListener('click', (e) => {
-          // Color dot switcher (Universal support for .color-dot and .card-color-dot)
           const dot = e.target.closest('.color-dot, .card-color-dot');
           if (dot) {
             e.stopPropagation();
@@ -1785,28 +2301,33 @@
         });
       }
 
-      // URL search params init
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('q')) {
-        activeQuery = urlParams.get('q').trim();
-        if (input) input.value = activeQuery;
-        if (clearBtn && activeQuery) clearBtn.classList.add('visible');
-      }
-      if (urlParams.has('filter')) {
-        activeFilter = urlParams.get('filter');
-      }
-      if (urlParams.has('sort')) {
-        activeSort = urlParams.get('sort');
-        updateSortDropdownUI(activeSort);
-      } else {
-        updateSortDropdownUI('featured');
-      }
+      // Category Pill Button Handlers
+      document.querySelectorAll('.search-cat-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          const cat = pill.getAttribute('data-filter');
+          selectCategoryFilter(cat);
+        });
+      });
+
+      window.selectCategoryFilter = function(catId) {
+        activeFilter = catId;
+        activeQuery = '';
+        currentPage = 1;
+        if (input) input.value = '';
+        if (clearBtn) clearBtn.classList.remove('visible');
+        updateUrlParams();
+        filterAndRender();
+        if (catId !== 'all-shelves') {
+          window.scrollTo({ top: 120, behavior: 'smooth' });
+        }
+      };
 
       // Search input handler
       let debounceTimeout = null;
       if (input) {
         input.addEventListener('input', (e) => {
           activeQuery = e.target.value;
+          currentPage = 1;
           if (clearBtn) {
             if (activeQuery.length > 0) clearBtn.classList.add('visible');
             else clearBtn.classList.remove('visible');
@@ -1815,28 +2336,29 @@
           debounceTimeout = setTimeout(() => {
             updateUrlParams();
             filterAndRender();
-          }, 120);
+          }, 110);
         });
       }
 
+      window.clearSearch = function() {
+        if (input) {
+          input.value = '';
+          input.focus();
+        }
+        activeQuery = '';
+        currentPage = 1;
+        if (clearBtn) clearBtn.classList.remove('visible');
+        updateUrlParams();
+        filterAndRender();
+      };
+
       if (clearBtn) {
-        clearBtn.addEventListener('click', () => {
-          if (input) {
-            input.value = '';
-            input.focus();
-          }
-          activeQuery = '';
-          clearBtn.classList.remove('visible');
-          updateUrlParams();
-          filterAndRender();
-        });
+        clearBtn.addEventListener('click', clearSearch);
       }
 
       if (sortSelect) {
         sortSelect.addEventListener('change', (e) => {
-          activeSort = e.target.value;
-          updateUrlParams();
-          filterAndRender();
+          setSortValue(e.target.value);
         });
       }
 
@@ -1845,7 +2367,7 @@
         if (activeQuery) url.searchParams.set('q', activeQuery);
         else url.searchParams.delete('q');
 
-        if (activeFilter && activeFilter !== 'all') url.searchParams.set('filter', activeFilter);
+        if (activeFilter && activeFilter !== 'all-shelves') url.searchParams.set('filter', activeFilter);
         else url.searchParams.delete('filter');
 
         if (activeSort && activeSort !== 'featured') url.searchParams.set('sort', activeSort);
@@ -1858,29 +2380,33 @@
         if (input) input.value = query;
         if (clearBtn) clearBtn.classList.add('visible');
         activeQuery = query;
+        currentPage = 1;
         updateUrlParams();
         filterAndRender();
       };
 
       window.viewCategoryAll = function(catId) {
-        activeFilter = catId;
-        activeQuery = '';
-        if (input) input.value = '';
-        if (clearBtn) clearBtn.classList.remove('visible');
-        updateUrlParams();
-        filterAndRender();
-        window.scrollTo({ top: 180, behavior: 'smooth' });
+        selectCategoryFilter(catId);
       };
 
       window.resetToCategoryRows = function() {
-        activeFilter = 'all';
-        activeQuery = '';
-        if (input) input.value = '';
-        if (clearBtn) clearBtn.classList.remove('visible');
-        updateUrlParams();
-        filterAndRender();
-        window.scrollTo({ top: 180, behavior: 'smooth' });
+        selectCategoryFilter('all-shelves');
       };
+
+      // URL search params init
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('q')) {
+        activeQuery = urlParams.get('q').trim();
+        if (input) input.value = activeQuery;
+        if (clearBtn && activeQuery) clearBtn.classList.add('visible');
+      }
+      if (urlParams.has('filter')) {
+        activeFilter = urlParams.get('filter');
+      }
+      if (urlParams.has('sort')) {
+        activeSort = urlParams.get('sort');
+      }
+      updateSortDropdownUI(activeSort);
 
       // Initial execution
       filterAndRender();
