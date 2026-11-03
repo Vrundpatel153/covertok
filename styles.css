@@ -55764,15 +55764,12 @@ body.home-page .hero-content {
 }
 
 @media (max-width: 768px) {
-  .pop-nav-btn {
-    width: 34px;
-    height: 34px;
-  }
-  .pop-nav-prev {
-    left: 8px;
-  }
+  .pop-nav-btn,
+  .pop-nav-prev,
   .pop-nav-next {
-    right: 8px;
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 }
 
@@ -56306,5 +56303,47 @@ body.home-page .hero-content {
     padding-left: 16px !important;
     padding-right: 16px !important;
     box-sizing: border-box !important;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE GLOBAL POLICY: STRICTLY HIDE ALL SLIDER / CAROUSEL LEFT/RIGHT BUTTONS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .pop-nav-btn,
+  .pop-nav-prev,
+  .pop-nav-next,
+  #popCoversPrevBtn,
+  #popCoversNextBtn,
+  #popBandsPrevBtn,
+  #popBandsNextBtn,
+  .drops-nav-controls,
+  .drops-nav-btn,
+  .drops-nav-prev,
+  .drops-nav-next,
+  #dropsPrevBtn,
+  #dropsNextBtn,
+  .reviews-nav-btn,
+  .reviews-nav-prev,
+  .reviews-nav-next,
+  #reviewsPrevBtn,
+  #reviewsNextBtn,
+  .pdp-rev-arrow-btn,
+  #revPrevBtn,
+  #revNextBtn,
+  .video-nav-btn,
+  .video-nav-prev,
+  .video-nav-next,
+  .prod-prev-btn,
+  .prod-next-btn,
+  .slider-arrow-btn,
+  .carousel-nav-btn,
+  .slider-nav-prev,
+  .slider-nav-next {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
   }
 }
