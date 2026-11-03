@@ -1557,6 +1557,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     window.switchHeroSlide = switchHeroSlide;
+    window.stopHeroAutoPlay = stopHeroAutoPlay;
+    window.startHeroAutoPlay = startHeroAutoPlay;
     // Pause on hover
 
     if (heroCarousel) {
