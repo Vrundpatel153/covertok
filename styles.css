@@ -57184,87 +57184,164 @@ html body #siteHeader,
 }
 
 /* ==========================================================================
-   DIRECT FOOTER BRAND COLORS (PERMANENTLY VISIBLE, NO HOVER REQUIRED)
+   DIRECT FOOTER BRAND COLORS (PERMANENTLY VISIBLE ACROSS ALL PAGES, NO HOVER REQUIRED)
    ========================================================================== */
+.footer-social-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.footer-social-btn {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+  text-decoration: none !important;
+}
+
+.footer-social-btn:hover {
+  transform: translateY(-2px) scale(1.08) !important;
+}
+
+/* Instagram Vivid Sunset Gradient */
 .footer-social-btn[aria-label="Instagram"] {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
-  border-color: transparent !important;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 12px rgba(225, 48, 108, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(225, 48, 108, 0.4) !important;
 }
 .footer-social-btn[aria-label="Instagram"] svg {
   stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
+/* WhatsApp Emerald Green */
 .footer-social-btn[aria-label="WhatsApp"] {
   background: #25D366 !important;
   border-color: #25D366 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
 }
 .footer-social-btn[aria-label="WhatsApp"] svg {
   stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
+/* Facebook Royal Azure */
 .footer-social-btn[aria-label="Facebook"] {
   background: #1877F2 !important;
   border-color: #1877F2 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(24, 119, 242, 0.4) !important;
 }
 .footer-social-btn[aria-label="Facebook"] svg {
   stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
+/* YouTube Crimson Red */
 .footer-social-btn[aria-label="YouTube"] {
   background: #FF0000 !important;
   border-color: #FF0000 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(255, 0, 0, 0.4) !important;
 }
 .footer-social-btn[aria-label="YouTube"] svg {
   stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
+/* Email Covertok Flame Red */
 .footer-social-btn[aria-label="Email Us"] {
   background: #EA4335 !important;
   border-color: #EA4335 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.4) !important;
 }
 .footer-social-btn[aria-label="Email Us"] svg {
   stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
 }
 
-/* Contact Badges Direct Brand Accents */
-.footer-contact-item a.footer-contact-badge {
+/* --------------------------------------------------------------------------
+   Contact Badges Direct Brand Accents (Applies to both <a> and <div> badges)
+   -------------------------------------------------------------------------- */
+.footer-contact-item .footer-contact-badge {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 38px !important;
-  height: 38px !important;
-  border-radius: 10px !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
   color: #FFFFFF !important;
-  transition: transform 0.2s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+  text-decoration: none !important;
 }
-.footer-contact-item:nth-child(1) a.footer-contact-badge {
-  background: #25D366 !important; /* WhatsApp Green */
-  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3) !important;
+
+.footer-contact-item a.footer-contact-badge:hover {
+  transform: translateY(-2px) scale(1.08) !important;
 }
-.footer-contact-item:nth-child(2) a.footer-contact-badge {
-  background: #3B82F6 !important; /* Phone Blue */
-  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3) !important;
+
+/* 1. WhatsApp Support: Emerald Green */
+.footer-contact-item:nth-child(1) .footer-contact-badge {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4) !important;
 }
-.footer-contact-item:nth-child(3) a.footer-contact-badge {
-  background: #EA4335 !important; /* Email Red */
-  box-shadow: 0 3px 10px rgba(234, 67, 53, 0.3) !important;
+
+/* 2. Phone Support: Azure Blue */
+.footer-contact-item:nth-child(2) .footer-contact-badge {
+  background: #3B82F6 !important;
+  border-color: #3B82F6 !important;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4) !important;
 }
-.footer-contact-item:nth-child(4) a.footer-contact-badge {
-  background: #F59E0B !important; /* Hours Amber */
-  box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3) !important;
+
+/* 3. Email Support: Vibrant Coral/Red */
+.footer-contact-item:nth-child(3) .footer-contact-badge {
+  background: #EA4335 !important;
+  border-color: #EA4335 !important;
+  box-shadow: 0 4px 14px rgba(234, 67, 53, 0.4) !important;
 }
-.footer-contact-item a.footer-contact-badge svg {
+
+/* 4. Support Hours: Amber / Gold Warmth */
+.footer-contact-item:nth-child(4) .footer-contact-badge {
+  background: #F59E0B !important;
+  border-color: #F59E0B !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4) !important;
+}
+
+.footer-contact-item .footer-contact-badge svg {
   stroke: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+
+.footer-contact-item .footer-contact-badge svg[fill="currentColor"] {
+  fill: #FFFFFF !important;
+}
+
+@media (max-width: 768px) {
+  .footer-social-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+  .footer-contact-item .footer-contact-badge {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
 }
 
 /* ==========================================================================
