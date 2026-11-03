@@ -43,7 +43,8 @@ html, body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
 }
 
 /* 1. TOP ANNOUNCEMENT MARQUEE */
@@ -2903,9 +2904,10 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 @media (max-width: 768px) {
   /* Prevent Any Horizontal Viewport Shift */
   html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
+    overflow-y: visible !important;
     width: 100% !important;
-    max-width: 100vw !important;
+    max-width: 100% !important;
   }
 
   .pdp-main-section {
@@ -3939,4 +3941,76 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 .pop-slider-rating,
 .bestseller-rating {
   display: none !important;
+}
+
+
+/* ==========================================================================
+   UNIVERSAL STICKY NAVBAR OVERRIDE FOR PDP
+   ========================================================================== */
+html {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+html body .site-header,
+html body #siteHeader,
+.site-header,
+#siteHeader {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  pointer-events: auto !important;
+}
+
+@media (max-width: 768px) {
+  html {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body {
+    overflow-x: clip !important;
+    overflow-y: visible !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  html body .site-header,
+  html body #siteHeader,
+  .site-header,
+  #siteHeader {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    z-index: 1000 !important;
+    background: #FFFFFF !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    pointer-events: auto !important;
+  }
 }
