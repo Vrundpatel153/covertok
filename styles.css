@@ -35408,13 +35408,15 @@ a.footer-contact-main:hover {
 
 
   .combo-section {
-
-
-
-    padding: 36px 0 48px !important;
-
-
-
+    padding: 28px 16px 36px !important;
+    box-sizing: border-box !important;
+  }
+  .combo-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
 
 
@@ -54494,7 +54496,7 @@ body.home-page .hero-content {
   body.home-page .hero-section,
   .hero-section {
     margin-top: 0 !important;
-    padding: 0 12px 14px !important;
+    padding: 0 16px 14px !important;
   }
 
   body.home-page .hero-card,
@@ -55933,22 +55935,62 @@ body.home-page .hero-content {
 }
 
 /* ==========================================================================
-   GLOBAL MOBILE VIEWPORT AUDIT: UNIFORM 16PX GUTTER ACROSS ALL SECTIONS
+   GLOBAL MOBILE VIEWPORT AUDIT: STRICT UNIFORM 16PX GUTTER ACROSS ALL PAGES
    ========================================================================== */
 @media (max-width: 768px) {
+  /* 1. All Section Containers & Grid Wrappers */
   .section-container,
   .trending-drops-container,
   .bento-container,
   .popular-choices-container,
   .story-container,
   .frameless-showcase-container,
+  .hardware-section .section-container,
+  .shop-dual-section .section-container,
   .instagram-container,
   .community-section-container,
   .reviews-section-container,
   .support-faq-section .section-container,
-  .site-footer .section-container {
+  .trust-banner-section .section-container,
+  .pdp-container,
+  .page-main-layout,
+  .page-hero-container,
+  .catalog-hero-section .section-container,
+  .site-footer .section-container,
+  .footer-inner-wrap {
     padding-left: 16px !important;
     padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Site Header Inner across all pages */
+  .site-header .header-inner,
+  #siteHeader .header-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. Hero Section Container */
+  .hero-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. Combo Section & Black Card Container (Eliminates edge-touching 0-margin) */
+  .combo-section {
+    padding-top: 28px !important;
+    padding-bottom: 36px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box !important;
+  }
+  .combo-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
     box-sizing: border-box !important;
   }
 }
@@ -55992,5 +56034,69 @@ body.home-page .hero-content {
     visibility: hidden !important;
     pointer-events: none !important;
     opacity: 0 !important;
+  }
+}
+
+
+/* ==========================================================================
+   GLOBAL 16PX MOBILE GUTTER ENFORCER (MAXIMUM SPECIFICITY)
+   ========================================================================== */
+@media (max-width: 768px) {
+  html body body.home-page .hero-section,
+  html body .hero-section,
+  html body .site-header .header-inner,
+  html body #siteHeader .header-inner,
+  html body .trust-banner-section .section-container,
+  html body .combo-section,
+  html body .combo-section .combo-container,
+  html body .frameless-showcase-container,
+  html body .trending-drops-container,
+  html body .bento-container,
+  html body .popular-choices-container,
+  html body .story-container,
+  html body .hardware-section .section-container,
+  html body .shop-dual-section .section-container,
+  html body .instagram-container,
+  html body .community-section-container,
+  html body .reviews-section-container,
+  html body .support-faq-section .section-container,
+  html body .pdp-container,
+  html body .page-main-layout,
+  html body .page-hero-container,
+  html body .catalog-hero-section .section-container,
+  html body .site-footer .section-container,
+  html body .site-footer .footer-inner-wrap {
+    box-sizing: border-box !important;
+  }
+
+  html body body.home-page .hero-section,
+  html body .hero-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  html body .site-header .header-inner,
+  html body #siteHeader .header-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  html body .trust-banner-section .section-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  html body .combo-section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 28px !important;
+    padding-bottom: 36px !important;
+  }
+
+  html body .combo-section .combo-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
   }
 }

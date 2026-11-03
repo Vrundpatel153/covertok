@@ -3510,7 +3510,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
 @media (max-width: 380px) {
   .pdp-container {
-    padding: 0 12px !important;
+    padding: 0 16px !important;
   }
   .pdp-product-title {
     font-size: 1.25rem !important;
