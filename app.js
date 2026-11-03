@@ -722,50 +722,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // Promo arrow buttons
-
-  document.querySelectorAll('.promo-arrow-btn').forEach(btn => {
-
-    btn.addEventListener('click', () => {
-
-      const productType = btn.getAttribute('data-product');
-
-      if (productType === 'mint') {
-
-        addToCart({
-
-          id: 'promo-mint',
-
-          name: '20% OFF Mint Green Silicone Shock Case',
-
-          price: 14.40,
-
-          img: 'assets/promo_mint_case.webp'
-
-        }, 1);
-
-      } else {
-
-        addToCart({
-
-          id: 'promo-blue',
-
-          name: 'Superior Protect Slate Blue Impact Case',
-
-          price: 18.00,
-
-          img: 'assets/promo_blue_case.webp'
-
-        }, 1);
-
-      }
-
-    });
-
-  });
-
-
-
   // ==========================================
 
   // 6. CATEGORY FILTER TABS
