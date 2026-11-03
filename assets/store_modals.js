@@ -36,12 +36,12 @@
           <div class="cart-bundle-tracker-head">
             <div class="cart-bundle-badge-label">
               <span class="cart-bundle-badge-dot"></span>
-              <span>3 FOR ₹1,199 BUNDLE OFFER</span>
+              <span>3 FOR ₹1,199 BUNDLE</span>
             </div>
-            <span class="cart-bundle-eligibility-note">Eligible on items ≤ ₹799</span>
+            <span class="cart-bundle-eligibility-note">Items ≤ ₹799</span>
           </div>
           <div class="cart-bundle-instruction" id="cartBundleInstruction">
-            Add <strong>3 eligible items</strong> to get <strong>3 for ₹1,199</strong>
+            Add <strong>3 eligible items</strong> to get <span style="white-space: nowrap;">3 for ₹1,199</span>
           </div>
           
           <div class="cart-milestone-stepper">

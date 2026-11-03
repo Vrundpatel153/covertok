@@ -57667,3 +57667,80 @@ html body #siteHeader,
   background: #0A0A0A !important;
   color: #FFFFFF !important;
 }
+
+
+/* ==========================================================================
+   CART BUNDLE PROGRESS TRACKER - ANTI-COLLISION & RESPONSIVE POLISH
+   ========================================================================== */
+.cart-bundle-progress-card {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.cart-bundle-tracker-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 6px 8px !important;
+  margin-bottom: 8px !important;
+  width: 100% !important;
+}
+
+.cart-bundle-badge-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #FF5500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.cart-bundle-badge-dot {
+  width: 7px !important;
+  height: 7px !important;
+  min-width: 7px !important;
+  border-radius: 50% !important;
+  background: #FF5500 !important;
+  display: inline-block !important;
+  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25) !important;
+  flex-shrink: 0 !important;
+}
+
+.cart-bundle-eligibility-note {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 10px !important;
+  color: #71717A !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 2px 7px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 85, 0, 0.18) !important;
+  box-sizing: border-box !important;
+}
+
+.cart-bundle-instruction {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 12.5px !important;
+  color: #18181B !important;
+  line-height: 1.45 !important;
+  margin-bottom: 12px !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  width: 100% !important;
+}
+
+.cart-bundle-instruction strong {
+  color: #0A0A0C !important;
+  font-weight: 700 !important;
+}

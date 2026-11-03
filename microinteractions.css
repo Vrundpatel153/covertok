@@ -3727,11 +3727,14 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  margin-bottom: 6px !important;
+  flex-wrap: wrap !important;
+  gap: 6px 8px !important;
+  margin-bottom: 8px !important;
+  width: 100% !important;
 }
 
 .cart-bundle-badge-label {
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
@@ -3740,6 +3743,8 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   color: #FF5500 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 .cart-bundle-badge-dot {
@@ -3759,9 +3764,16 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 .cart-bundle-eligibility-note {
   font-family: var(--font-body, 'Inter', sans-serif) !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   color: #71717A !important;
   font-weight: 600 !important;
+  white-space: nowrap !important;
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  padding: 2px 7px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 85, 0, 0.18) !important;
 }
 
 .cart-bundle-instruction {
@@ -4245,11 +4257,13 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .cart-bundle-badge-label {
   white-space: nowrap !important;
   font-size: 11px !important;
+  flex-shrink: 0 !important;
 }
 
 .cart-bundle-eligibility-note {
   white-space: nowrap !important;
-  font-size: 10.5px !important;
+  font-size: 10px !important;
+  flex-shrink: 0 !important;
 }
 
 .cart-free-shipping-bar {
