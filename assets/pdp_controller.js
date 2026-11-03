@@ -262,8 +262,8 @@
           warrantyIcon.innerHTML = svgDropArmor;
         }
       } else {
-        warrantyTitle.textContent = '1-Year Full Warranty';
-        if (warrantyDesc) warrantyDesc.textContent = '100% authentic quality guarantee';
+        warrantyTitle.textContent = 'Universal Precision Fit';
+        if (warrantyDesc) warrantyDesc.textContent = 'Engineered device compatibility';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon trust-icon-warranty';
           warrantyIcon.innerHTML = svgWarranty;

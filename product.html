@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css?v=20261103_pdp_trust_v25">
+  <link rel="stylesheet" href="styles.css?v=20261103_warr_v27">
   <link rel="stylesheet" href="catalog.css?v=20261103_rev_v20">
   <link rel="stylesheet" href="pdp.css?v=20261103_rev_v20">
   <link rel="stylesheet" href="microinteractions.css?v=20261102_noshadow_v1">
@@ -658,28 +658,32 @@
                   <span>100% fit model guarantee</span>
                 </div>
               </div>
-              <div class="covertok-trust-item" id="pdpTrustBadge4">
-                <div class="covertok-trust-icon trust-icon-uv">
-                  <svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="covertok-trust-item" id="pdpTrustBadge4">
+                <div class="covertok-trust-icon trust-icon-warranty" id="pdpBadge4Icon">
+                  <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                      <linearGradient id="pdp_grad_uv" x1="4" y1="3" x2="24" y2="25" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#8B5CF6"/>
-                        <stop offset="100%" stop-color="#EC4899"/>
+                      <linearGradient id="pdp_grad_warr_gold" x1="4" y1="2" x2="24" y2="26" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#F59E0B"/>
+                        <stop offset="50%" stop-color="#EAB308"/>
+                        <stop offset="100%" stop-color="#D97706"/>
+                      </linearGradient>
+                      <linearGradient id="pdp_grad_warr_shield" x1="14" y1="4" x2="14" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#F59E0B"/>
+                        <stop offset="100%" stop-color="#B45309"/>
                       </linearGradient>
                     </defs>
-                    <path d="M14 2.5L23.5 9.5L14 25.5L4.5 9.5L14 2.5Z" fill="url(#pdp_grad_uv)" fill-opacity="0.16" stroke="url(#pdp_grad_uv)" stroke-width="1.8" stroke-linejoin="round"/>
-                    <path d="M4.5 9.5H23.5" stroke="url(#pdp_grad_uv)" stroke-width="1.5"/>
-                    <circle cx="23" cy="5" r="1.5" fill="#EC4899"/>
+                    <path d="M14 2L17.5 4.5L22 4L23 8.5L27 11L25.5 15.5L27 20L22.5 21.5L21 26L16.5 25L14 27.5L11.5 25L7 26L5.5 21.5L1 20L2.5 15.5L1 11L5 8.5L6 4L10.5 4.5L14 2Z" fill="url(#pdp_grad_warr_gold)" fill-opacity="0.18" stroke="url(#pdp_grad_warr_gold)" stroke-width="1.6" stroke-linejoin="round"/>
+                    <circle cx="14" cy="14" r="7.5" stroke="url(#pdp_grad_warr_shield)" stroke-width="1.5" stroke-dasharray="2.5 1.5"/>
+                    <path d="M10.5 14L12.8 16.3L17.5 11.5" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="14" cy="9.2" r="1.2" fill="#D97706"/>
                   </svg>
                 </div>
                 <div class="covertok-trust-meta">
-                  <strong>Bayer UV Anti-Yellow</strong>
-                  <span>HD ink will never fade</span>
+                  <strong id="pdpBadge4Title">1-Year Quality Warranty</strong>
+                  <span id="pdpBadge4Desc">Guaranteed authentic protection</span>
                 </div>
               </div>
-            </div>
-
-            <!-- Integrated Product Description & Overview Card -->
+            </div><!-- Integrated Product Description & Overview Card -->
             <div class="pdp-description-card" id="pdpOverviewBox">
               <div class="pdp-description-header">
                 <h3 class="pdp-description-title">
@@ -809,8 +813,8 @@
                   wi.innerHTML = svgDropArmor;
                 }
               } else {
-                wt.textContent = '1-Year Full Warranty';
-                if (wd) wd.textContent = '100% authentic quality guarantee';
+                wt.textContent = 'Universal Precision Fit';
+                if (wd) wd.textContent = 'Engineered device compatibility';
                 if (wi) {
                   wi.className = 'covertok-trust-icon trust-icon-warranty';
                   wi.innerHTML = svgWarranty;
@@ -1422,7 +1426,7 @@
   <script src="assets/store_core.js?v=20261103_cards_v7"></script>
   <script src="assets/store_modals.js?v=20261102_cartclean_v1"></script>
   <script src="assets/store_flows.js?v=20261102_cartclean_v1"></script>
-  <script src="assets/pdp_controller.js?v=20261103_pdp_v26"></script>
+  <script src="assets/pdp_controller.js?v=20261103_warr_v27"></script>
   <script src="assets/community_reviews_controller.js"></script>
 
   <script>
