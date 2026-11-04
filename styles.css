@@ -51484,24 +51484,30 @@ a.footer-contact-main:hover {
 .videos-track {
   display: flex !important;
   gap: 18px !important;
-  width: max-content !important;
-  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-snap-type: x mandatory !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-x pan-y !important;
+  cursor: grab !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  padding: 10px 4px 16px 4px !important;
+}
+
+.videos-track::-webkit-scrollbar {
+  display: none !important;
+}
+
+.videos-track.is-dragging {
+  cursor: grabbing !important;
   scroll-snap-type: none !important;
-  animation: none !important;
-  cursor: default !important;
-  user-select: none;
-  -webkit-user-select: none;
-
-
-
-  user-select: none;
-
-
-
-  -webkit-user-select: none;
-
-
-
+  scroll-behavior: auto !important;
 }
 
 

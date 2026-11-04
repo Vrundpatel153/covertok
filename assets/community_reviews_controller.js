@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // --------------------------------------------------------------------------
-  // 2. Videos Horizontal Track Navigation
+  // 2. Videos Horizontal Track Swipe & Mouse Drag Navigation
   // --------------------------------------------------------------------------
   const videosTrack = document.getElementById('videosTrack');
   const videoPrevBtn = document.getElementById('videoPrevBtn');
@@ -108,10 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const firstCard = videosTrack.querySelector('.video-reel-card');
       if (firstCard) {
         const style = window.getComputedStyle(firstCard);
-        const margin = parseInt(style.marginRight, 10) || 16;
+        const margin = parseInt(style.marginRight, 10) || 18;
         return firstCard.offsetWidth + margin;
       }
-      return 236;
+      return 234;
     };
 
     const updateVideoNavButtons = () => {
@@ -137,6 +137,56 @@ document.addEventListener('DOMContentLoaded', () => {
         videosTrack.scrollBy({ left: step, behavior: 'smooth' });
       });
     }
+
+    // Interactive Drag to Swipe (Desktop Mouse & Pointer)
+    let isDown = false;
+    let startX = 0;
+    let initialScrollLeft = 0;
+    let isDragging = false;
+    const dragThreshold = 6;
+
+    videosTrack.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('button, a')) return;
+      isDown = true;
+      isDragging = false;
+      startX = e.pageX - videosTrack.offsetLeft;
+      initialScrollLeft = videosTrack.scrollLeft;
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if (!isDown) return;
+      const x = e.pageX - videosTrack.offsetLeft;
+      const walk = (x - startX) * 1.3;
+      if (Math.abs(walk) > dragThreshold) {
+        if (!isDragging) {
+          isDragging = true;
+          videosTrack.classList.add('is-dragging');
+        }
+        videosTrack.scrollLeft = initialScrollLeft - walk;
+      }
+    });
+
+    const endDrag = () => {
+      if (!isDown) return;
+      isDown = false;
+      setTimeout(() => {
+        isDragging = false;
+        videosTrack.classList.remove('is-dragging');
+      }, 60);
+    };
+
+    window.addEventListener('pointerup', endDrag);
+    window.addEventListener('pointercancel', endDrag);
+
+    // Prevent modal opening when dragging
+    videosTrack.querySelectorAll('.video-reel-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (isDragging) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    });
 
     videosTrack.addEventListener('scroll', updateVideoNavButtons, { passive: true });
     updateVideoNavButtons();
