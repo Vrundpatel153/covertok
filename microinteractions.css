@@ -1871,24 +1871,24 @@ body:not(.home-page) #siteHeader,
   border-color: #0A0A0A !important;
 }
 
-/* Mega Dropdown Menus */
+/* Mega Dropdown Menus: Solid Luxury White */
 .mega-dropdown-menu,
 .pdp-nav .mega-dropdown-menu {
-  background: var(--liquid-glass-bg-elevated) !important;
-  backdrop-filter: var(--liquid-glass-blur-heavy) !important;
-  -webkit-backdrop-filter: var(--liquid-glass-blur-heavy) !important;
-  border: var(--liquid-glass-border) !important;
-  box-shadow: 0 35px 85px -15px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 2px 2px #FFFFFF !important;
-  border-radius: 26px !important;
+  background: #FFFFFF !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.07), 0 6px 16px -4px rgba(0, 0, 0, 0.04) !important;
+  border-radius: 20px !important;
 }
 
 .mega-showcase-card {
-  background: var(--liquid-glass-bg-subtle) !important;
-  backdrop-filter: var(--liquid-glass-blur) !important;
-  -webkit-backdrop-filter: var(--liquid-glass-blur) !important;
-  border: var(--liquid-glass-border) !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04), inset 0 1.5px 1px #FFFFFF !important;
-  border-radius: 20px !important;
+  background: #F9FAFB !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  border-radius: 14px !important;
 }
 
 /* Mobile Nav Drawer */
