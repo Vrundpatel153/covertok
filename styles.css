@@ -1008,7 +1008,7 @@ img {
 
 
 
-  max-width: 1360px;
+  max-width: 1520px !important;
 
 
 
@@ -1016,7 +1016,7 @@ img {
 
 
 
-  padding: 0 24px;
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
 
 
 
@@ -1721,41 +1721,14 @@ img {
 
 
 .header-inner {
-
-
-
-  max-width: 1720px;
-
-
-
+  max-width: 1540px !important;
   margin: 0 auto;
-
-
-
   height: 74px;
-
-
-
-  padding: 0 clamp(20px, 3.2vw, 48px);
-
-
-
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   display: flex;
-
-
-
   align-items: center;
-
-
-
   justify-content: space-between;
-
-
-
   box-sizing: border-box;
-
-
-
 }
 
 
@@ -20679,21 +20652,10 @@ a.footer-contact-main:hover {
 
 
 .frameless-showcase-container {
-
-
-
-  max-width: 1360px;
-
-
-
+  max-width: 1520px !important;
   margin: 0 auto;
-
-
-
-  padding: 0 24px;
-
-
-
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
+  box-sizing: border-box;
 }
 
 
@@ -22896,7 +22858,7 @@ a.footer-contact-main:hover {
 
 
 
-  padding: 40px clamp(16px, 3vw, 48px) 64px clamp(16px, 3vw, 48px);
+  padding: 40px clamp(10px, 1.2vw, 20px) 64px clamp(10px, 1.2vw, 20px);
 
 
 
@@ -22936,7 +22898,7 @@ a.footer-contact-main:hover {
 
 
 
-  max-width: 1360px;
+  max-width: 1520px !important;
 
 
 
@@ -26812,25 +26774,10 @@ a.footer-contact-main:hover {
 
 
 .bento-container {
-
-
-
-  max-width: 1672px;
-
-
-
+  max-width: 1540px !important;
   margin: 0 auto;
-
-
-
-  padding: 0 45px;
-
-
-
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   box-sizing: border-box;
-
-
-
 }
 
 
@@ -40560,33 +40507,12 @@ a.footer-contact-main:hover {
 
 
 .popular-choices-container {
-
-
-
-  max-width: 1440px;
-
-
-
+  max-width: 1540px !important;
   margin: 0 auto;
-
-
-
   width: 100%;
-
-
-
-  padding: 0 32px;
-
-
-
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   box-sizing: border-box;
-
-
-
   position: relative;
-
-
-
 }
 
 
@@ -42227,11 +42153,11 @@ a.footer-contact-main:hover {
 
 
 
-  mask-image: linear-gradient(to right, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%) !important;
 
 
 
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%) !important;
 
 
 
@@ -43948,11 +43874,10 @@ a.footer-contact-main:hover {
 
 .story-container {
   width: 100%;
-  max-width: 1400px;
-  padding: 32px clamp(16px, 2.5vw, 36px);
+  max-width: 1520px !important;
+  padding: 32px clamp(10px, 1.2vw, 20px) !important;
   margin: 0 auto;
   box-sizing: border-box;
-  position: relative;
 }
 
 
@@ -45484,29 +45409,11 @@ a.footer-contact-main:hover {
 
 
 .instagram-container {
-
-
-
   width: 100%;
-
-
-
-  max-width: 1440px;
-
-
-
+  max-width: 1540px !important;
   margin: 0 auto;
-
-
-
-  padding: 0 44px;
-
-
-
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   box-sizing: border-box;
-
-
-
 }
 
 
@@ -48019,29 +47926,12 @@ a.footer-contact-main:hover {
 
 
 .reviews-section-container {
-
-
-
-  max-width: 1400px;
-
-
-
+  max-width: 1520px !important;
   margin: 0 auto;
-
-
-
-  padding: 0 32px;
-
-
-
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   position: relative;
-
-
-
   z-index: 2;
-
-
-
+  box-sizing: border-box;
 }
 
 
@@ -53504,7 +53394,8 @@ a.footer-contact-main:hover {
 
   margin: 0 auto !important;
 
-  padding: 0 clamp(20px, 3.2vw, 45px) !important;
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
+  max-width: 1540px !important;
 
 }
 
@@ -54162,7 +54053,7 @@ body.home-page #siteHeader {
 body.home-page .site-header .header-inner,
 body.home-page #siteHeader .header-inner {
   max-width: 100% !important;
-  padding: 0 clamp(20px, 3.2vw, 48px) !important;
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   height: 52px !important;
   min-height: 52px !important;
   background: transparent !important;
@@ -54188,7 +54079,7 @@ body.home-page .hero-section {
   position: relative !important;
   width: 100% !important;
   margin-top: 0 !important;
-  padding: 0 clamp(20px, 3.2vw, 48px) 16px !important;
+  padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
   margin-bottom: 0 !important;
   display: block !important;
   background: var(--bg-stone, #FAF9F6) !important;
@@ -54324,7 +54215,7 @@ body.home-page .hero-content {
   body.home-page .hero-section,
   .hero-section {
     margin-top: 0 !important;
-    padding: 12px 16px 14px !important;
+    padding: 12px 10px 14px !important;
   }
 
   body.home-page .hero-card,
@@ -55844,23 +55735,23 @@ body.home-page .hero-content {
   .catalog-hero-section .section-container,
   .site-footer .section-container,
   .footer-inner-wrap {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     box-sizing: border-box !important;
   }
 
   /* 2. Site Header Inner across all pages */
   .site-header .header-inner,
   #siteHeader .header-inner {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     box-sizing: border-box !important;
   }
 
   /* 3. Hero Section Container */
   .hero-section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     box-sizing: border-box !important;
   }
 
@@ -55868,8 +55759,8 @@ body.home-page .hero-content {
   .combo-section {
     padding-top: 28px !important;
     padding-bottom: 36px !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     box-sizing: border-box !important;
   }
   .combo-container {
@@ -55957,24 +55848,24 @@ body.home-page .hero-content {
 
   html body body.home-page .hero-section,
   html body .hero-section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   html body .site-header .header-inner,
   html body #siteHeader .header-inner {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   html body .trust-banner-section .section-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   html body .combo-section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     padding-top: 28px !important;
     padding-bottom: 36px !important;
   }
@@ -56692,7 +56583,7 @@ html body #siteHeader,
   body.home-page .site-header .header-inner,
   body.home-page #siteHeader .header-inner {
     max-width: 100% !important;
-    padding: 0 clamp(20px, 3.2vw, 48px) !important;
+    padding: 0 clamp(10px, 1.2vw, 20px) !important;
     height: 52px !important;
     min-height: 52px !important;
     background: transparent !important;
@@ -56718,7 +56609,7 @@ html body #siteHeader,
     position: relative !important;
     width: 100% !important;
     margin-top: -68px !important;
-    padding: 0 clamp(20px, 3.2vw, 48px) 16px !important;
+    padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
     margin-bottom: 0 !important;
     display: block !important;
     background: var(--bg-stone, #FAF9F6) !important;

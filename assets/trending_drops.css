@@ -13,9 +13,9 @@
 
 .trending-drops-container {
   width: 100%;
-  max-width: 1440px !important;
+  max-width: 1540px !important;
   margin: 0 auto;
-  padding: 0 32px !important;
+  padding: 0 clamp(10px, 1.2vw, 20px) !important;
   box-sizing: border-box;
 }
 
@@ -136,8 +136,8 @@
   overflow: hidden;
   padding: 8px 0 24px;
   cursor: grab;
-  mask-image: linear-gradient(90deg, black 0%, black calc(100% - 60px), transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, black 0%, black calc(100% - 60px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
 }
 
 .trending-drops-slider-wrap:active {
@@ -547,8 +547,8 @@
   }
 
   .trending-drops-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     box-sizing: border-box !important;
   }
 
@@ -680,7 +680,7 @@
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     gap: 14px !important;
-    padding: 4px 16px 14px 16px !important;
+    padding: 4px 10px 14px 10px !important;
     margin: 0 !important;
     width: max-content !important;
     box-sizing: border-box !important;
@@ -1094,8 +1094,8 @@
   }
 
   .trending-drops-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     box-sizing: border-box !important;
   }
 
@@ -1227,7 +1227,7 @@
     flex-direction: row !important;
     flex-wrap: nowrap !important;
     gap: 14px !important;
-    padding: 4px 16px 14px 16px !important;
+    padding: 4px 10px 14px 10px !important;
     margin: 0 !important;
     width: max-content !important;
     box-sizing: border-box !important;
