@@ -11373,11 +11373,15 @@ img {
 
 
 
-  top: 18px;
+  top: 50% !important;
 
 
 
-  left: 18px;
+  left: 50% !important;
+
+
+
+  transform: translate(-50%, -50%) !important;
 
 
 
@@ -35551,11 +35555,15 @@ a.footer-contact-main:hover {
 
 
 
-    top: 14px !important;
+    top: 50% !important;
 
 
 
-    left: 14px !important;
+    left: 50% !important;
+
+
+
+    transform: translate(-50%, -50%) !important;
 
 
 
