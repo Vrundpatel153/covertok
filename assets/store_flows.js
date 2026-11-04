@@ -145,6 +145,119 @@
   // --------------------------------------------------------------------------
   // 3. CART UI & PROMO CODES
   // --------------------------------------------------------------------------
+  // Curated Upsell Addons for Cart Drawer
+  const CART_UPSELL_ADDONS = [
+    {
+      id: 'lens-protector',
+      title: '2x 9H Diamond Camera Lens Protector',
+      shortTitle: '2× 9H Diamond Lens Protector',
+      price: 299,
+      img: 'assets/bundle_lens_protector.webp'
+    },
+    {
+      id: 'usbc-cable',
+      title: 'Braided Fast-Charging USB-C Cable (1m)',
+      shortTitle: 'Braided Fast USB-C Cable',
+      price: 249,
+      img: 'assets/bundle_usbc_cable.webp'
+    },
+    {
+      id: 'airpods-case',
+      title: 'Luxury Silicone AirPods Pro Protective Case',
+      shortTitle: 'Silicone AirPods Case',
+      price: 349,
+      img: 'assets/cat_thumb_airpods.webp'
+    },
+    {
+      id: 'phone-charm',
+      title: 'Handmade Beaded Phone Charm Wristlet',
+      shortTitle: 'Beaded Charm Wristlet',
+      price: 199,
+      img: 'assets/cat_thumb_charms.webp'
+    }
+  ];
+
+  // Curated Bestselling Recommendations for Empty Cart State
+  const EMPTY_CART_RECOMMENDATIONS = [
+    {
+      id: '1',
+      title: 'Cream Minimalist Case',
+      fullTitle: 'iPhone 15 Cream Color Men Design Mobile Cover',
+      price: 399,
+      mrp: 799,
+      badge: '3 for ₹1,199',
+      img: 'assets/phone_cream.webp',
+      url: 'product.html?id=1'
+    },
+    {
+      id: 'glass16',
+      title: '9H Glass Armor Case',
+      fullTitle: 'Tempered Glass Mobile Back Cover',
+      price: 499,
+      mrp: 999,
+      badge: '3 for ₹1,199',
+      img: 'assets/exact_exploded_glass.webp',
+      url: 'product.html?id=glass16'
+    },
+    {
+      id: 'prod_01',
+      title: 'Crystal Luxe MagSafe',
+      fullTitle: 'Crystal Studded Luxe Case - Orbit MagSafe',
+      price: 949,
+      mrp: 1299,
+      badge: 'Top Rated',
+      img: 'assets/bestseller/prod_01_clear_case.webp',
+      url: 'product.html?id=prod_01'
+    },
+    {
+      id: '4',
+      title: 'Mandala Leather Series',
+      fullTitle: 'Bohemian Mandala Series iPhone Cover',
+      price: 599,
+      mrp: 1199,
+      badge: '3 for ₹1,199',
+      img: 'assets/mandala_phone_top.webp',
+      url: 'product.html?id=4'
+    }
+  ];
+
+  function renderCartUpsells(cart) {
+    const upsellContainer = document.querySelector('.cart-upsell-section');
+    if (!upsellContainer) return;
+
+    upsellContainer.innerHTML = `
+      <div class="cart-upsell-title">
+        <span>Recommended for your case</span>
+      </div>
+      <div class="cart-upsell-list" id="cartUpsellList">
+        ${CART_UPSELL_ADDONS.map(addon => {
+          const inCart = (cart || []).some(item => item.id === addon.id);
+          return `
+            <div class="cart-upsell-item ${inCart ? 'is-in-cart' : ''}">
+              <div class="cart-upsell-left">
+                <img src="${addon.img}" alt="${addon.title}" class="cart-upsell-img" loading="lazy">
+                <div class="cart-upsell-info">
+                  <div class="cart-upsell-name" title="${addon.title}">${addon.shortTitle}</div>
+                  <div class="cart-upsell-price">+₹${addon.price}.00</div>
+                </div>
+              </div>
+              ${inCart ? `
+                <button type="button" class="cart-upsell-add-btn is-added" disabled aria-label="Added to cart">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Added
+                </button>
+              ` : `
+                <button type="button" class="cart-upsell-add-btn" onclick="window.CovertokStore.addToCart({ id: '${addon.id}', title: '${addon.title.replace(/'/g, "\\'")}', price: ${addon.price}, img: '${addon.img}', qty: 1 });" aria-label="Add to cart">
+                  + Add
+                </button>
+              `}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
   function renderCartUI() {
     const cart = getCart();
     const count = cart.reduce((acc, item) => acc + (item.qty || 1), 0);
@@ -359,7 +472,7 @@
       container.innerHTML = `
         <div class="cart-empty-state-wrap">
           <div class="cart-empty-icon-circle">
-            <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#18181B" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
@@ -369,6 +482,34 @@
 
           <h3 class="cart-empty-title">Your cart is empty</h3>
           <p class="cart-empty-desc">Discover trending cases, watch bands & everyday protection crafted with precision.</p>
+
+          <!-- Recommended For You Section -->
+          <div class="cart-empty-recommendations">
+            <div class="cart-empty-rec-head">
+              <span class="cart-empty-rec-label">POPULAR PICKS FOR YOU</span>
+              <span class="cart-empty-rec-tag">3 FOR ₹1,199 ELIGIBLE</span>
+            </div>
+            <div class="cart-empty-rec-grid">
+              ${EMPTY_CART_RECOMMENDATIONS.map(item => `
+                <div class="cart-empty-rec-card">
+                  <div class="cart-empty-rec-img-wrap" onclick="window.CovertokFlows.closeCart(); window.location.href='${item.url}';">
+                    <img src="${item.img}" alt="${item.title}" class="cart-empty-rec-img" loading="lazy">
+                    <span class="cart-empty-deal-badge">${item.badge}</span>
+                  </div>
+                  <div class="cart-empty-rec-details">
+                    <div class="cart-empty-rec-title" title="${item.fullTitle}" onclick="window.CovertokFlows.closeCart(); window.location.href='${item.url}';">${item.title}</div>
+                    <div class="cart-empty-rec-pricing">
+                      <span class="cart-empty-rec-price">₹${item.price}</span>
+                      <span class="cart-empty-rec-mrp">₹${item.mrp}</span>
+                    </div>
+                    <button type="button" class="cart-empty-rec-add-btn" onclick="window.CovertokStore.addToCart({ id: '${item.id}', title: '${item.fullTitle.replace(/'/g, "\\'")}', price: ${item.price}, original_price: ${item.mrp}, img: '${item.img}', qty: 1 });">
+                      + Add
+                    </button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
 
           <a href="collections.html" class="cart-empty-primary-btn" onclick="window.CovertokFlows.closeCart();">
             <span>Explore All Products</span>
@@ -470,6 +611,9 @@
         </div>
       `;
     }).join('');
+
+    // Render dynamic upsell suggestions with added status
+    renderCartUpsells(cart);
   }
 
     // Promo Code Handler
