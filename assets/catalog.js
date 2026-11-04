@@ -718,7 +718,7 @@
 
     // Color Swatches Palette: Only show when product has multiple colors (> 1)
     let paletteHtml = '';
-    if (hasColors && product.colors.length > 1) {
+    if (hasColors && product.colors.length >= 1) {
       const cols = product.colors;
       const visible = cols.slice(0, 3);
       const remaining = cols.length - 3;
@@ -947,7 +947,7 @@
     }
 
     // Color Swatches
-    if (product.colors && product.colors.length > 1) {
+    if (product.colors && product.colors.length >= 1) {
       colorGroup.style.display = 'block';
       colorNameEl.textContent = product.colors[0].name;
       selectedColor = product.colors[0].name;

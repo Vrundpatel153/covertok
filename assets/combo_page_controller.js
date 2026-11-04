@@ -648,7 +648,7 @@
       card.classList.add('is-selected');
     }
 
-    const hasColors = product.colors && product.colors.length > 1;
+    const hasColors = product.colors && product.colors.length >= 1;
     const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : 'assets/phone_cream.webp');
 
     // Badges HTML

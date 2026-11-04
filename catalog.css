@@ -5425,10 +5425,7 @@
 }
 
 
-/* Hide single-dot palettes and empty color swatch wrappers */
-.product-color-palette:has(> .color-dot:only-child),
-.product-color-palette > .color-dot:only-child,
-.card-color-dot:only-child,
+/* Clean color palette display - hide empty wrappers, allow single color dots */
 .product-color-palette:empty {
   display: none !important;
 }

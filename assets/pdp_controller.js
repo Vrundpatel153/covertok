@@ -527,7 +527,7 @@
 
     if (!colorGrid) return;
 
-    if (product.colors && product.colors.length > 1) {
+    if (product.colors && product.colors.length >= 1) {
       if (colorGroup) colorGroup.style.display = 'block';
       const initialColorName = selectedColor ? selectedColor.name : product.colors[0].name;
       if (colorLabel) colorLabel.textContent = initialColorName;
@@ -1516,7 +1516,7 @@
     const related = window.CovertokProducts.filter(p => p.id !== currentProduct.id && (p.category === currentProduct.category || p.is_bestseller)).slice(0, 4);
 
     container.innerHTML = related.map(p => {
-      const hasC = p.colors && p.colors.length > 1;
+      const hasC = p.colors && p.colors.length >= 1;
       const initialImg = p.primary_image || (hasC ? p.colors[0].image : '');
 
       let badgeHtml = '';
@@ -1536,7 +1536,7 @@
 
       // Color Swatches Palette: Only show when product has multiple colors (> 1)
       let paletteHtml = '';
-      if (p.colors && p.colors.length > 1) {
+      if (p.colors && p.colors.length >= 1) {
         const cols = p.colors;
         const visible = cols.slice(0, 3);
         const remaining = cols.length - 3;
