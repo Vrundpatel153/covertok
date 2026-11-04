@@ -186,17 +186,24 @@
       const deltaY = clientY - startY;
 
       if (!lockedHorizontal) {
-        // If vertical scrolling dominates, yield to native page scroll
-        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+        const absX = Math.abs(deltaX);
+        const absY = Math.abs(deltaY);
+
+        // If vertical movement dominates or user is scrolling the page, release immediately to native page scroll
+        if (absY >= absX && absY > 5) {
           isDragging = false;
           track.classList.remove('is-dragging');
           track.style.cursor = 'grab';
           return;
         }
 
-        if (Math.abs(deltaX) > 6) {
+        // Only lock into horizontal carousel swiping when horizontal movement clearly dominates
+        if (absX > absY && absX > 10) {
           lockedHorizontal = true;
           hasDragged = true;
+        } else {
+          // Gesture direction ambiguous: yield and do not move track or preventDefault
+          return;
         }
       }
 
@@ -302,11 +309,14 @@
       if (isDragging) onEnd();
     }, { passive: true });
 
-    // Two-Finger Trackpad & Mouse Wheel
+    // Two-Finger Trackpad & Shift+Mouse Wheel (Strictly Horizontal Only)
     const wrap = track.parentElement;
     if (wrap) {
       wrap.addEventListener('wheel', (e) => {
-        const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+        // Intercept ONLY if the gesture is predominantly horizontal or if Shift is held
+        const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+        const delta = isHorizontal ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+
         if (Math.abs(delta) > 1) {
           e.preventDefault();
           if (isTransitioning) {
@@ -318,6 +328,7 @@
           normalizePosition();
           track.style.transform = `translate3d(${currentX}px, 0, 0)`;
         }
+        // If vertical scroll (delta === 0): do nothing, let browser natively scroll the page vertically!
       }, { passive: false });
     }
 
@@ -446,7 +457,10 @@
       const deltaY = clientY - startY;
 
       if (!lockedHorizontal) {
-        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+        const absX = Math.abs(deltaX);
+        const absY = Math.abs(deltaY);
+
+        if (absY >= absX && absY > 5) {
           isDragging = false;
           track.classList.remove('is-dragging');
           track.style.cursor = 'grab';
@@ -454,9 +468,11 @@
           return;
         }
 
-        if (Math.abs(deltaX) > 6) {
+        if (absX > absY && absX > 10) {
           lockedHorizontal = true;
           hasDragged = true;
+        } else {
+          return;
         }
       }
 

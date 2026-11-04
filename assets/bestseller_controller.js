@@ -78,16 +78,23 @@
       const deltaY = clientY - startY;
 
       if (!lockedHorizontal) {
-        if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+        const absX = Math.abs(deltaX);
+        const absY = Math.abs(deltaY);
+
+        // If vertical movement dominates or user is scrolling the page, release immediately to native page scroll
+        if (absY >= absX && absY > 5) {
           isDragging = false;
           viewport.classList.remove('is-dragging');
           track.style.cursor = 'grab';
           return;
         }
 
-        if (Math.abs(deltaX) > 6) {
+        // Only lock into horizontal carousel swiping when horizontal movement clearly dominates
+        if (absX > absY && absX > 10) {
           lockedHorizontal = true;
           hasDragged = true;
+        } else {
+          return;
         }
       }
 
@@ -178,9 +185,10 @@
       }
     }, { passive: true });
 
-    // Trackpad two-finger horizontal scroll & Shift+Wheel support
+    // Trackpad two-finger horizontal scroll & Shift+Wheel support (Strictly Horizontal Only)
     viewport.addEventListener('wheel', (e) => {
-      const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
+      const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+      const delta = isHorizontal ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
       if (Math.abs(delta) > 1) {
         e.preventDefault();
         const maxScroll = getMaxScroll();
@@ -188,6 +196,7 @@
         track.style.transition = 'none';
         track.style.transform = `translate3d(${currentX}px, 0, 0)`;
       }
+      // If vertical scroll (delta === 0): do nothing, let browser natively scroll the page vertically!
     }, { passive: false });
 
     // Prevent navigation / clicking if user was dragging

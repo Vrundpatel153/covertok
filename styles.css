@@ -57798,3 +57798,22 @@ html body #siteHeader,
     border-radius: 20px !important;
   }
 }
+
+/* Universal Native Vertical Scroll Guarantee on All Product Rows & Carousels */
+.trending-drops-slider-wrap,
+.trending-drops-grid,
+#trendingDropsTrack,
+.popular-slider-wrap,
+.popular-slider-track,
+.popular-row-covers,
+.popular-row-bands,
+.bestseller-cards-viewport,
+.bestseller-cards-track,
+.shelf-cards-row,
+#videosTrack,
+#reviewsTrack,
+.marquee-row-track,
+.products-scroll-container,
+.product-slider-wrapper {
+  touch-action: pan-y !important;
+}
