@@ -2122,6 +2122,17 @@ body:not(.home-page) #siteHeader,
   transform: translateY(-6px) scale(1.008) !important;
 }
 
+/* Bento Collections Section - Persistent Warm Accent Borders */
+.bento-collections-section .bento-card {
+  border: 1.5px solid rgba(255, 85, 0, 0.45) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(255, 85, 0, 0.06) !important;
+}
+
+.bento-collections-section .bento-card:hover {
+  border-color: rgba(255, 85, 0, 0.85) !important;
+  box-shadow: 0 16px 40px rgba(255, 85, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+}
+
 /* Dedicated Collection Header Banner */
 .catalog-curated-banner {
   background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F5 100%) !important;
