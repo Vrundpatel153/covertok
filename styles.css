@@ -53590,10 +53590,33 @@ body.home-page .hero-content {
 @media (max-width: 991px) {
   body.home-page .site-header,
   body.home-page #siteHeader {
-    padding: 8px 0 !important;
+    padding: 0 !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    display: flex !important;
+    align-items: center !important;
     background: #FFFFFF !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
     pointer-events: auto !important;
+  }
+
+  body.home-page .site-header .header-inner,
+  body.home-page #siteHeader .header-inner {
+    height: 100% !important;
+    min-height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 clamp(10px, 3vw, 16px) !important;
+    box-sizing: border-box !important;
+  }
+
+  body.home-page .site-header .header-right,
+  body.home-page #siteHeader .header-right {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
   }
 
   body.home-page .hero-section,
@@ -55947,6 +55970,7 @@ html body #siteHeader,
     width: 100% !important;
     height: 56px !important;
     min-height: 56px !important;
+    padding: 0 !important;
     z-index: 1000 !important;
     background: #FFFFFF !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;

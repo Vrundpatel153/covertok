@@ -4804,3 +4804,22 @@ body.mobile-nav-open {
   color: #FF5500 !important;
   transform: translateX(3px) !important;
 }
+
+
+@media (max-width: 768px) {
+  .header-right .icon-btn,
+  .header-right .mobile-toggle-btn,
+  #mobileMenuBtn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .header-right .icon-btn svg,
+  .header-right .mobile-toggle-btn svg,
+  #mobileMenuBtn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
