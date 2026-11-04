@@ -4709,3 +4709,98 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
     font-size: 11.5px !important;
   }
 }
+
+/* ==========================================================================
+   MOBILE NAV DRAWER - CATEGORY OPTIONS, THIN SCROLLBAR & SCROLL ISOLATION
+   ========================================================================== */
+html.mobile-nav-open,
+body.mobile-nav-open {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  touch-action: none !important;
+}
+
+.mobile-nav-drawer,
+#mobileDrawer {
+  overscroll-behavior: contain !important;
+  -ms-scroll-chaining: none !important;
+}
+
+.mobile-nav-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior: contain !important;
+  -ms-scroll-chaining: none !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(0, 0, 0, 0.22) transparent !important;
+}
+
+/* Luxury Thin Scrollbar for Drawer Body */
+.mobile-nav-body::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.mobile-nav-body::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.mobile-nav-body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.22) !important;
+  border-radius: 999px !important;
+}
+
+.mobile-nav-body::-webkit-scrollbar-thumb:hover {
+  background: #FF5500 !important;
+}
+
+/* Category section divider & label in mobile drawer */
+.mobile-nav-section-title {
+  padding: 12px 16px 6px 16px !important;
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  color: #A1A1AA !important;
+  text-transform: uppercase !important;
+  list-style: none !important;
+}
+
+.mobile-nav-divider {
+  height: 1px !important;
+  background: #F4EFE6 !important;
+  margin: 8px 16px !important;
+  list-style: none !important;
+}
+
+.mobile-cat-link {
+  font-size: 0.90rem !important;
+  font-weight: 600 !important;
+  padding: 10px 16px !important;
+  color: #27272A !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-radius: 12px !important;
+  transition: all 0.2s ease !important;
+}
+
+.mobile-cat-link:hover,
+.mobile-cat-link:active {
+  background: #FFFBF9 !important;
+  color: #FF5500 !important;
+  padding-left: 20px !important;
+}
+
+.mobile-cat-arrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: #D4D4D8 !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+}
+
+.mobile-cat-link:hover .mobile-cat-arrow {
+  color: #FF5500 !important;
+  transform: translateX(3px) !important;
+}

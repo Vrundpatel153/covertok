@@ -913,6 +913,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
 
       mobileDrawer.classList.add('open');
+      document.body.classList.add('mobile-nav-open');
+      document.documentElement.classList.add('mobile-nav-open');
 
     });
 
@@ -925,6 +927,8 @@ document.addEventListener('DOMContentLoaded', () => {
     closeMobileDrawer.addEventListener('click', () => {
 
       mobileDrawer.classList.remove('open');
+      document.body.classList.remove('mobile-nav-open');
+      document.documentElement.classList.remove('mobile-nav-open');
 
     });
 

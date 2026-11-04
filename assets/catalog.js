@@ -24,12 +24,14 @@
   const CATEGORIES = [
     { id: 'all', title: 'All Products', thumb: 'assets/black_frameless_assembled.webp' },
     { id: 'iphone-cases', title: 'Phone Cases', thumb: 'assets/bundle_clear_case.webp' },
+    { id: 'mens-cover', title: "Men's Covers", thumb: 'assets/phone_cream.webp' },
+    { id: 'womens-cover', title: "Women's Covers", thumb: 'assets/phone_fire_blue.webp' },
+    { id: 'watchbands', title: 'Watch Bands', thumb: 'assets/popular_choice/card2_watch_bands_clean.webp' },
     { id: 'airpod-covers', title: 'AirPods Covers', thumb: 'assets/cat_thumb_airpods.webp' },
-    { id: 'charger-and-cables', title: 'Cables & Power', thumb: 'assets/cat_thumb_cables.webp' },
     { id: 'charger-covers', title: 'Charger Cases', thumb: 'assets/cat_thumb_chargers.webp' },
+    { id: 'charger-and-cables', title: 'Cables & Power', thumb: 'assets/cat_thumb_cables.webp' },
     { id: 'cover-charms', title: 'Cover Charms', thumb: 'assets/cat_thumb_charms.webp' },
     { id: 'other-accessories', title: 'Accessories', thumb: 'assets/cat_thumb_accessories.webp' },
-    { id: 'watchbands', title: 'Watch Bands', thumb: 'assets/popular_choice/card2_watch_bands_clean.webp' },
     { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/bundle_clear_case.webp', isCombo: true }
   ];
 
@@ -42,12 +44,15 @@
 
     // Read initial URL params
     const params = new URLSearchParams(window.location.search);
-    const catParam = params.get('cat') || params.get('category');
+    let catParam = params.get('cat') || params.get('category');
     if (catParam === 'buy-three') {
       window.location.replace('combo.html');
       return;
     }
-    if (params.has('cat')) currentCategory = params.get('cat');
+    if (catParam === 'watch-bands' || catParam === 'iwatch-bands') catParam = 'watchbands';
+    if (catParam === 'cables-chargers') catParam = 'charger-covers';
+    if (catParam === 'power-accessories') catParam = 'charger-and-cables';
+    if (catParam) currentCategory = catParam;
     if (params.has('search')) currentSearch = params.get('search');
     else if (params.has('q')) currentSearch = params.get('q');
     if (params.has('sort')) currentSort = params.get('sort');
@@ -141,6 +146,8 @@
         filtered = filtered.filter(p => p.is_bestseller);
       } else if (currentCategory === 'new-arrivals') {
         filtered = filtered.filter(p => p.is_new);
+      } else if (currentCategory === 'covers') {
+        filtered = filtered.filter(p => p.category === 'iphone-cases' || p.category === 'mens-cover' || p.category === 'womens-cover');
       } else {
         filtered = filtered.filter(p => p.category === currentCategory || (p.collections && p.collections.includes(currentCategory)));
       }
@@ -241,6 +248,8 @@
     const eyebrowMap = {
       'all': { badge: 'COVERTOK ATELIER', label: 'CURATED ARCHIVE' },
       'iphone-cases': { badge: 'COVERTOK ATELIER', label: 'PRECISION ARMOR' },
+      'mens-cover': { badge: 'COVERTOK ATELIER', label: 'MEN’S COLLECTION' },
+      'womens-cover': { badge: 'COVERTOK ATELIER', label: 'WOMEN’S COLLECTION' },
       'airpod-covers': { badge: 'COVERTOK ATELIER', label: 'AIRPODS SUITE' },
       'watchbands': { badge: 'COVERTOK ATELIER', label: 'APPLE WATCH BANDS' },
       'charger-covers': { badge: 'COVERTOK ATELIER', label: 'POWER & HARDWARE' },
