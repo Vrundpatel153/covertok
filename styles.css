@@ -52389,7 +52389,7 @@ a.footer-contact-main:hover {
   .hero-slide .hero-content {
     left: 16px !important;
     right: 16px !important;
-    top: 20px !important;
+    top: clamp(48px, 8vh, 64px) !important;
     width: auto !important;
     max-width: 100% !important;
     text-align: center !important;
@@ -57037,7 +57037,7 @@ html body #siteHeader,
 
   body.home-page .hero-content,
   .hero-content {
-    padding-top: 24px !important;
+    padding-top: 0 !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
