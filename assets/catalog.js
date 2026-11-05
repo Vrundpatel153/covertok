@@ -15,7 +15,7 @@
   let currentModel = 'all';
   let currentBadge = 'all';
   let catalogCurrentPage = 1;
-  const CATALOG_PAGE_SIZE = 16;
+  const CATALOG_PAGE_SIZE = 8;
   let isCatalogInfiniteLoading = false;
   let catalogInfiniteObserver = null;
   let currentFilteredProducts = [];
@@ -60,6 +60,26 @@
     if (params.has('instock')) inStockOnly = params.get('instock') === 'true';
     if (params.has('model')) currentModel = params.get('model');
     if (params.has('badge')) currentBadge = params.get('badge');
+    if (params.has('page')) {
+      const pageVal = parseInt(params.get('page'), 10);
+      if (!isNaN(pageVal) && pageVal > 0) catalogCurrentPage = pageVal;
+    }
+
+    window.addEventListener('popstate', () => {
+      const p = new URLSearchParams(window.location.search);
+      const pg = parseInt(p.get('page') || '1', 10);
+      catalogCurrentPage = (!isNaN(pg) && pg > 0) ? pg : 1;
+      const cat = p.get('cat') || p.get('category') || 'all';
+      if (cat !== currentCategory) {
+        currentCategory = cat;
+        document.querySelectorAll('.catalog-cat-card').forEach(el => {
+          const isActive = el.getAttribute('data-cat') === currentCategory;
+          el.classList.toggle('active', isActive);
+          el.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+      }
+      filterAndRenderProducts();
+    });
 
     renderCategoryTabs();
     setupEventListeners();
@@ -423,101 +443,39 @@
       return;
     }
 
-    // FLIP Step 1: Record initial rects
-    const firstRects = new Map();
-    const existingCardsMap = new Map();
-    currentCards.forEach(card => {
-      const id = card.getAttribute('data-id');
-      if (id) {
-        firstRects.set(id, card.getBoundingClientRect());
-        existingCardsMap.set(id, card);
-      }
-    });
-
-    const nextIds = new Set(newProducts.map(p => String(p.id)));
-    const leavingCards = currentCards.filter(card => {
-      const id = card.getAttribute('data-id');
-      return !nextIds.has(id);
-    });
-
-    // Animate leaving cards out
-    leavingCards.forEach(card => {
-      card.style.pointerEvents = 'none';
-      card.style.transition = 'transform 0.24s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s ease, filter 0.2s ease';
-      card.style.opacity = '0';
-      card.style.transform = 'scale(0.88) translateY(12px)';
-      card.style.filter = 'blur(6px)';
-    });
+    // Stabilized in-place transition: Lock minHeight so layout never collapses or jumps
+    const currentHeight = gridEl.offsetHeight;
+    if (currentHeight > 80) {
+      gridEl.style.minHeight = `${currentHeight}px`;
+    }
+    gridEl.style.transition = 'opacity 0.12s ease';
+    gridEl.style.opacity = '0.35';
 
     setTimeout(() => {
       gridEl.innerHTML = '';
       const fragment = document.createDocumentFragment();
-      const animatedCards = [];
-
-      newProducts.forEach((prod, idx) => {
-        const sId = String(prod.id);
-        let card = existingCardsMap.get(sId);
-        const isExisting = Boolean(card);
-
-        if (!card) {
-          card = createCardFn(prod);
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(28px) scale(0.92)';
-          card.style.filter = 'blur(8px)';
-        } else {
-          card.style.pointerEvents = '';
-          card.style.filter = '';
-          card.style.opacity = '1';
-          card.style.transform = '';
-        }
-
+      newProducts.forEach((prod) => {
+        const card = createCardFn(prod);
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(12px)';
         fragment.appendChild(card);
-        animatedCards.push({ card, isExisting, id: sId, idx });
       });
-
       gridEl.appendChild(fragment);
 
-      // FLIP Step 2 & 3: Last & Invert
       requestAnimationFrame(() => {
-        animatedCards.forEach(({ card, isExisting, id, idx }) => {
-          if (isExisting && firstRects.has(id)) {
-            const first = firstRects.get(id);
-            const last = card.getBoundingClientRect();
-            const dx = first.left - last.left;
-            const dy = first.top - last.top;
-
-            if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
-              card.style.transition = 'none';
-              card.style.transform = `translate(${dx}px, ${dy}px) scale(1)`;
-
-              requestAnimationFrame(() => {
-                const delay = Math.min(idx * 18, 160);
-                card.style.transition = `transform 0.52s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms`;
-                card.style.transform = 'translate(0, 0) scale(1)';
-              });
-            }
-          } else {
-            const delay = Math.min(idx * 30, 280);
-            card.style.transition = `transform 0.55s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.45s ease ${delay}ms, filter 0.45s ease ${delay}ms`;
-            requestAnimationFrame(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0) scale(1)';
-              card.style.filter = 'blur(0)';
-            });
-          }
+        gridEl.style.opacity = '1';
+        const cards = gridEl.querySelectorAll('.catalog-card');
+        cards.forEach((card, idx) => {
+          const delay = Math.min(idx * 20, 140);
+          card.style.transition = `transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.3s ease ${delay}ms`;
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
         });
-
-        // Cleanup inline styles after animation so CSS hover transitions resume naturally
         setTimeout(() => {
-          animatedCards.forEach(({ card }) => {
-            card.style.transform = '';
-            card.style.transition = '';
-            card.style.filter = '';
-            card.style.opacity = '';
-          });
-        }, 650);
+          gridEl.style.minHeight = '';
+        }, 250);
       });
-    }, leavingCards.length > 0 ? 150 : 0);
+    }, 120);
   }
 
   // Render Active Filter Chips
@@ -1237,7 +1195,7 @@
     }
   }
 
-// Render Clean Luxury Batch Pagination Controls
+  // Render Clean Luxury Batch Pagination Controls
   function renderCatalogPagination(totalPages, totalItems) {
     const container = document.getElementById('catalogPagination');
     if (!container) return;
@@ -1249,22 +1207,40 @@
 
     let html = '';
     const current = catalogCurrentPage;
-    const pages = [];
+    const hasPrev = current > 1;
+    const hasNext = current < totalPages;
 
-    if (totalPages <= 5) {
+    // Previous Button
+    html += `
+      <button type="button" class="catalog-page-prev" ${hasPrev ? '' : 'disabled'} aria-label="Previous page">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <polygon points="19 21 5 12 19 3 19 21"/>
+        </svg>
+      </button>
+    `;
+
+    // Dynamic Page Number Window (Always shows up to 5 contiguous numbers + extremes)
+    const pages = [];
+    if (totalPages <= 7) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
-      pages.push(1);
-      if (current > 3) pages.push('...');
-      
-      const start = Math.max(2, current - 1);
-      const end = Math.min(totalPages - 1, current + 1);
-      for (let i = start; i <= end; i++) {
-        if (!pages.includes(i)) pages.push(i);
+      if (current <= 4) {
+        for (let i = 1; i <= 5; i++) pages.push(i);
+        pages.push('...');
+        pages.push(totalPages);
+      } else if (current >= totalPages - 3) {
+        pages.push(1);
+        pages.push('...');
+        for (let i = totalPages - 4; i <= totalPages; i++) pages.push(i);
+      } else {
+        pages.push(1);
+        pages.push('...');
+        pages.push(current - 1);
+        pages.push(current);
+        pages.push(current + 1);
+        pages.push('...');
+        pages.push(totalPages);
       }
-
-      if (current < totalPages - 2) pages.push('...');
-      if (!pages.includes(totalPages)) pages.push(totalPages);
     }
 
     pages.forEach(p => {
@@ -1272,13 +1248,13 @@
         html += '<span class="catalog-page-dots">...</span>';
       } else {
         const activeClass = p === current ? 'active' : '';
-        html += `<button type="button" class="catalog-page-btn ${activeClass}" data-page="${p}">${p}</button>`;
+        html += `<button type="button" class="catalog-page-btn ${activeClass}" data-page="${p}" aria-label="Page ${p}" ${p === current ? 'aria-current="page"' : ''}>${p}</button>`;
       }
     });
 
-    const hasNext = current < totalPages;
+    // Next Button
     html += `
-      <button type="button" class="catalog-page-next" ${hasNext ? '' : 'disabled'} aria-label="Next batch">
+      <button type="button" class="catalog-page-next" ${hasNext ? '' : 'disabled'} aria-label="Next page">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
           <polygon points="5 3 19 12 5 21 5 3"/>
         </svg>
@@ -1287,34 +1263,20 @@
 
     container.innerHTML = html;
 
-    container.querySelectorAll('.catalog-page-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetPage = parseInt(btn.getAttribute('data-page'), 10);
-        if (targetPage !== catalogCurrentPage) {
-          catalogCurrentPage = targetPage;
-          filterAndRenderProducts();
-          const grid = document.getElementById('catalogGrid');
-          if (grid) {
-            const rect = grid.getBoundingClientRect();
-            window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
-          }
-        }
-      });
-    });
-
+    // Single Clean Event Listeners (No duplicate handlers)
     const prevBtn = container.querySelector('.catalog-page-prev');
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        if (catalogCurrentPage > 1) {
-          jumpToCatalogPage(catalogCurrentPage - 1, totalPages);
-        }
+    if (prevBtn && hasPrev) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        jumpToCatalogPage(catalogCurrentPage - 1, totalPages);
       });
     }
 
     container.querySelectorAll('.catalog-page-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         const targetPage = parseInt(btn.getAttribute('data-page'), 10);
-        if (targetPage !== catalogCurrentPage) {
+        if (targetPage && targetPage !== catalogCurrentPage) {
           jumpToCatalogPage(targetPage, totalPages);
         }
       });
@@ -1322,93 +1284,51 @@
 
     const nextBtn = container.querySelector('.catalog-page-next');
     if (nextBtn && hasNext) {
-      nextBtn.addEventListener('click', () => {
-        if (catalogCurrentPage < totalPages) {
-          jumpToCatalogPage(catalogCurrentPage + 1, totalPages);
-        }
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        jumpToCatalogPage(catalogCurrentPage + 1, totalPages);
       });
     }
   }
 
   function jumpToCatalogPage(targetPage, totalPages) {
+    if (targetPage < 1 || targetPage > totalPages || targetPage === catalogCurrentPage) return;
     catalogCurrentPage = targetPage;
+
+    // Update URL query in address bar without full page reload
+    const url = new URL(window.location);
+    if (catalogCurrentPage > 1) {
+      url.searchParams.set('page', catalogCurrentPage);
+    } else {
+      url.searchParams.delete('page');
+    }
+    window.history.pushState({}, '', url);
+
     const grid = document.getElementById('catalogGrid');
     if (grid) {
       const startIdx = (catalogCurrentPage - 1) * CATALOG_PAGE_SIZE;
       const pagedProducts = currentFilteredProducts.slice(startIdx, startIdx + CATALOG_PAGE_SIZE);
       cinematicGridRender(grid, pagedProducts, createProductCard);
-      const rect = grid.getBoundingClientRect();
-      window.scrollTo({ top: window.scrollY + rect.top - 120, behavior: 'smooth' });
+
+      // Smooth scroll back to top of product grid
+      const anchor = document.getElementById('catalogSection') || grid;
+      if (anchor) {
+        const rect = anchor.getBoundingClientRect();
+        const targetScroll = window.scrollY + rect.top - 90;
+        window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+      }
     }
     renderCatalogPagination(totalPages, currentFilteredProducts.length);
-    setupCatalogInfiniteScroll(totalPages);
   }
 
   function setupCatalogInfiniteScroll(totalPages) {
+    // Numbered pagination replaces infinite scroll to prevent layout fluctuation
     if (catalogInfiniteObserver) {
       catalogInfiniteObserver.disconnect();
       catalogInfiniteObserver = null;
     }
-
-    const sentinel = document.getElementById('catalogInfiniteSentinel');
     const loader = document.getElementById('catalogInfiniteLoader');
-    const grid = document.getElementById('catalogGrid');
-
-    if (!sentinel || !grid) return;
-
-    if (catalogCurrentPage >= totalPages) {
-      if (loader) loader.classList.remove('active');
-      return;
-    }
-
-    catalogInfiniteObserver = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      if (entry.isIntersecting && !isCatalogInfiniteLoading && catalogCurrentPage < totalPages) {
-        isCatalogInfiniteLoading = true;
-        if (loader) loader.classList.add('active');
-
-        setTimeout(() => {
-          catalogCurrentPage++;
-          const startIdx = (catalogCurrentPage - 1) * CATALOG_PAGE_SIZE;
-          const nextBatch = currentFilteredProducts.slice(startIdx, startIdx + CATALOG_PAGE_SIZE);
-
-          if (grid && nextBatch.length > 0) {
-            const fragment = document.createDocumentFragment();
-            nextBatch.forEach(prod => {
-              const card = createProductCard(prod);
-              card.style.opacity = '0';
-              card.style.transform = 'translateY(16px)';
-              fragment.appendChild(card);
-            });
-            grid.appendChild(fragment);
-
-            requestAnimationFrame(() => {
-              const cards = grid.querySelectorAll('.catalog-card');
-              cards.forEach(card => {
-                card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-              });
-            });
-          }
-
-          renderCatalogPagination(totalPages, currentFilteredProducts.length);
-
-          if (loader) loader.classList.remove('active');
-          isCatalogInfiniteLoading = false;
-
-          if (catalogCurrentPage >= totalPages && catalogInfiniteObserver) {
-            catalogInfiniteObserver.disconnect();
-            catalogInfiniteObserver = null;
-          }
-        }, 180);
-      }
-    }, {
-      rootMargin: '260px 0px 260px 0px',
-      threshold: 0.05
-    });
-
-    catalogInfiniteObserver.observe(sentinel);
+    if (loader) loader.style.display = 'none';
   }
 
   if (document.readyState === 'loading') {
