@@ -759,6 +759,31 @@
       link.addEventListener('click', closeMobileNav);
     });
 
+    // Mobile Nav Categories Dropdown Accordion Toggle
+    if (!window._hasCategoriesAccordionInit) {
+      window._hasCategoriesAccordionInit = true;
+      document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('#mobileCategoriesToggle, .mobile-nav-accordion-trigger');
+        if (!trigger) return;
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        const nextState = !isExpanded;
+        trigger.setAttribute('aria-expanded', String(nextState));
+        trigger.classList.toggle('is-open', nextState);
+
+        const accordionItem = trigger.closest('.mobile-nav-accordion-item');
+        const collapseEl = accordionItem
+          ? accordionItem.querySelector('.mobile-nav-accordion-collapse')
+          : document.getElementById('mobileCategoriesSubmenu');
+
+        if (collapseEl) {
+          collapseEl.classList.toggle('is-open', nextState);
+        }
+      });
+    }
+
     // Mega Dropdown Interactive Toggle & Hover Support
     document.querySelectorAll('.has-mega-menu').forEach(menuItem => {
       menuItem.addEventListener('mouseenter', () => menuItem.classList.add('is-open'));

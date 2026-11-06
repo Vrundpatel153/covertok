@@ -937,14 +937,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   document.querySelectorAll('.mobile-link').forEach(link => {
-
     link.addEventListener('click', () => {
-
       mobileDrawer.classList.remove('open');
-
     });
-
   });
+
+  // Mobile Nav Categories Dropdown Accordion Toggle
+  if (!window._hasCategoriesAccordionInit) {
+    window._hasCategoriesAccordionInit = true;
+    document.addEventListener('click', (e) => {
+      const trigger = e.target.closest('#mobileCategoriesToggle, .mobile-nav-accordion-trigger');
+      if (!trigger) return;
+      e.preventDefault();
+      e.stopPropagation();
+
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      const nextState = !isExpanded;
+      trigger.setAttribute('aria-expanded', String(nextState));
+      trigger.classList.toggle('is-open', nextState);
+
+      const accordionItem = trigger.closest('.mobile-nav-accordion-item');
+      const collapseEl = accordionItem
+        ? accordionItem.querySelector('.mobile-nav-accordion-collapse')
+        : document.getElementById('mobileCategoriesSubmenu');
+
+      if (collapseEl) {
+        collapseEl.classList.toggle('is-open', nextState);
+      }
+    });
+  }
 
 
 
