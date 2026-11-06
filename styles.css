@@ -51869,7 +51869,10 @@ a.footer-contact-main:hover {
 
 
 
-/* Slide 1 & 2 Scrim: Smooth dark gradient over left side for 100% text contrast */
+/* Slide 1 (Frameless Series / Titanium): Model position shifted down & framed with full headroom */
+.hero-slide-bg[data-bg-index="1"] .hero-bg-img {
+  object-position: 82% 8% !important;
+}
 
 .hero-slide-bg[data-bg-index="1"] .hero-bg-scrim {
   background: linear-gradient(
