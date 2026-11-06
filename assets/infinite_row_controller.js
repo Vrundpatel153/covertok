@@ -47,7 +47,9 @@
 
   /**
    * TRUE INFINITE LOOP SWIPING ENGINE FOR PRODUCT CARD ROWS
-   * Allows endless swiping to the left and to the right without ever hitting an end wall.
+   * Continuous virtual coordinate system with GPU-accelerated RAF spring animation.
+   * Mathematically wraps on every single frame: cards NEVER run out or show empty space,
+   * no matter how fast or how many times the user taps or swipes.
    */
   function setupInfiniteLoopSwipeRow(track, options = {}) {
     if (!track) return null;
@@ -88,6 +90,7 @@
     track.style.webkitUserSelect = 'none';
     track.style.willChange = 'transform';
     track.style.animation = 'none';
+    track.style.transition = 'none';
 
     function getCardStep() {
       const children = track.children;
@@ -110,98 +113,91 @@
       return getCardStep() * uniqueCount;
     }
 
-    // Start in Cycle 2 (center cycle) so user has at least 16 cards of headroom in both directions
-    const initialStep = getCardStep();
-    const initialCycle = getCycleWidth();
     const initialOffsetIndex = options.initialOffsetIndex || 0;
 
-    let currentX = -2 * initialCycle - (initialOffsetIndex * initialStep);
-    let targetX = currentX;
-    let isAnimating = false;
-    let settleTimer = null;
+    // Continuous virtual position coordinates
+    let currentX = 0;
+    let targetX = 0;
 
-    track.style.transition = 'none';
-    track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-
-    // Normalization logic: smoothly fold currentX and targetX back into the safe central cycles [-3 * cycle, -1 * cycle]
-    function normalizeCenter() {
+    function render(x) {
       const cycle = getCycleWidth();
+      if (cycle <= 0) return;
+      // Project any real x continuously into [-2 * cycle, -cycle)
+      const offset = (((-x) % cycle) + cycle) % cycle;
+      const domX = -cycle - offset;
+      track.style.transform = `translate3d(${domX}px, 0, 0)`;
+    }
+
+    // Initialize position
+    function initPosition() {
       const step = getCardStep();
-      if (cycle <= 0 || step <= 0) return;
+      currentX = -(initialOffsetIndex * step);
+      targetX = currentX;
+      render(currentX);
+    }
+    initPosition();
 
-      let normalized = Math.round(targetX / step) * step;
-      while (normalized < -3 * cycle) {
-        normalized += cycle;
-      }
-      while (normalized > -1 * cycle) {
-        normalized -= cycle;
+    // High performance frame-rate independent RAF spring loop
+    let animId = null;
+    let lastAnimTime = 0;
+
+    function tick(now) {
+      if (!lastAnimTime) lastAnimTime = now;
+      const dt = Math.min(32, now - lastAnimTime);
+      lastAnimTime = now;
+
+      const diff = targetX - currentX;
+
+      if (Math.abs(diff) < 0.4) {
+        currentX = targetX;
+        render(currentX);
+        animId = null;
+        lastAnimTime = 0;
+
+        // At rest, normalize currentX and targetX into single cycle to keep numbers tidy
+        const cycle = getCycleWidth();
+        if (cycle > 0) {
+          const offset = (((-currentX) % cycle) + cycle) % cycle;
+          currentX = -offset;
+          targetX = currentX;
+        }
+        return;
       }
 
-      if (normalized !== targetX) {
-        currentX = normalized;
-        targetX = normalized;
-        track.style.transition = 'none';
-        track.style.transform = `translate3d(${normalized}px, 0, 0)`;
-        void track.offsetHeight;
+      // Smooth decay curve (lambda = 15 yields ~200-240ms buttery-smooth glide)
+      const factor = 1 - Math.exp(-15 * (dt / 1000));
+      currentX += diff * factor;
+      render(currentX);
+
+      animId = requestAnimationFrame(tick);
+    }
+
+    function startAnimation() {
+      if (!animId) {
+        lastAnimTime = performance.now();
+        animId = requestAnimationFrame(tick);
       }
     }
 
-    function onSettle() {
-      if (settleTimer) {
-        clearTimeout(settleTimer);
-        settleTimer = null;
+    function stopAnimation() {
+      if (animId) {
+        cancelAnimationFrame(animId);
+        animId = null;
+        lastAnimTime = 0;
       }
-      isAnimating = false;
-      currentX = targetX;
-      normalizeCenter();
     }
 
-    function animateTo(destX, durationSec = 0.30) {
-      isAnimating = true;
-      targetX = destX;
-      track.style.transition = `transform ${durationSec}s cubic-bezier(0.22, 1, 0.36, 1)`;
-      track.style.transform = `translate3d(${targetX}px, 0, 0)`;
-
-      if (settleTimer) clearTimeout(settleTimer);
-      settleTimer = setTimeout(onSettle, (durationSec * 1000) + 40);
-    }
-
-    track.addEventListener('transitionend', (e) => {
-      if (e.target !== track || e.propertyName !== 'transform') return;
-      onSettle();
-    });
-
-    // Resize listener: snap cleanly to card boundaries without fractional distortion
-    window.addEventListener('resize', () => {
-      const step = getCardStep();
-      if (step > 0) {
-        currentX = Math.round(currentX / step) * step;
-        targetX = currentX;
-        track.style.transition = 'none';
-        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-        normalizeCenter();
-      }
-    });
-
-    // Prev / Next button controllers (Deterministic, rapid-click queuing, 0 latency)
+    // Step navigation
     function stepPrev() {
       const step = getCardStep();
-      if (settleTimer) {
-        clearTimeout(settleTimer);
-        settleTimer = null;
-      }
       targetX = Math.round(targetX / step) * step + step;
-      animateTo(targetX, 0.30);
+      startAnimation();
     }
 
     function stepNext() {
       const step = getCardStep();
-      if (settleTimer) {
-        clearTimeout(settleTimer);
-        settleTimer = null;
-      }
       targetX = Math.round(targetX / step) * step - step;
-      animateTo(targetX, 0.30);
+      startAnimation();
     }
 
     // Touch & Mouse Drag Handlers
@@ -209,38 +205,26 @@
     let hasDragged = false;
     let startX = 0;
     let startY = 0;
-    let baseX = 0;
-    let lastX = 0;
-    let lastTime = 0;
+    let dragBaseX = 0;
+    let lastDragX = 0;
+    let lastDragTime = 0;
     let velocity = 0;
     let lockedHorizontal = false;
 
     function onStart(clientX, clientY) {
-      if (settleTimer) {
-        clearTimeout(settleTimer);
-        settleTimer = null;
-      }
-      if (isAnimating) {
-        currentX = getCurrentTranslateX(track);
-        targetX = currentX;
-        track.style.transition = 'none';
-        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-        isAnimating = false;
-      }
-
-      startX = clientX;
-      startY = clientY;
-      baseX = currentX;
-      lastX = clientX;
-      lastTime = Date.now();
-      velocity = 0;
+      stopAnimation();
       isDragging = true;
       hasDragged = false;
       lockedHorizontal = false;
+      startX = clientX;
+      startY = clientY;
+      dragBaseX = currentX;
+      lastDragX = clientX;
+      lastDragTime = performance.now();
+      velocity = 0;
 
       track.classList.add('is-dragging');
       track.style.cursor = 'grabbing';
-      track.style.transition = 'none';
     }
 
     function onMove(clientX, clientY, e) {
@@ -271,30 +255,17 @@
       if (lockedHorizontal) {
         if (e && e.cancelable) e.preventDefault();
 
-        const now = Date.now();
-        const dt = Math.max(1, now - lastTime);
-        const dx = clientX - lastX;
+        const now = performance.now();
+        const dt = Math.max(1, now - lastDragTime);
+        const dx = clientX - lastDragX;
         const instantV = dx / dt;
         velocity = 0.75 * instantV + 0.25 * velocity;
-        lastX = clientX;
-        lastTime = now;
+        lastDragX = clientX;
+        lastDragTime = now;
 
-        let newX = baseX + deltaX;
-        const cycle = getCycleWidth();
-        if (cycle > 0) {
-          while (newX < -3 * cycle) {
-            newX += cycle;
-            baseX += cycle;
-          }
-          while (newX > -1 * cycle) {
-            newX -= cycle;
-            baseX -= cycle;
-          }
-        }
-
-        currentX = newX;
-        targetX = newX;
-        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+        currentX = dragBaseX + deltaX;
+        targetX = currentX;
+        render(currentX);
       }
     }
 
@@ -306,21 +277,16 @@
 
       const step = getCardStep();
       if (hasDragged) {
-        if (Date.now() - lastTime > 120) {
+        if (performance.now() - lastDragTime > 100) {
           velocity = 0;
         }
-        const glide = Math.max(-650, Math.min(650, velocity * 220));
-        let dest = currentX + glide;
-        if (step > 0) {
-          dest = Math.round(dest / step) * step;
-        }
-        animateTo(dest, 0.36);
+        const momentum = Math.max(-800, Math.min(800, velocity * 220));
+        targetX = Math.round((currentX + momentum) / step) * step;
+        startAnimation();
       } else {
-        if (step > 0) {
-          const dest = Math.round(currentX / step) * step;
-          if (Math.abs(dest - currentX) > 1) {
-            animateTo(dest, 0.22);
-          }
+        targetX = Math.round(currentX / step) * step;
+        if (Math.abs(targetX - currentX) > 0.4) {
+          startAnimation();
         }
       }
     }
@@ -358,20 +324,26 @@
       if (isDragging) onEnd();
     }, { passive: true });
 
+    // Trackpad horizontal wheel support
     const wrap = track.parentElement;
     if (wrap) {
+      let wheelTimer = null;
       wrap.addEventListener('wheel', (e) => {
         const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
         const delta = isHorizontal ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
         if (Math.abs(delta) > 1) {
           e.preventDefault();
-          if (settleTimer) clearTimeout(settleTimer);
-          track.style.transition = 'none';
-          isAnimating = false;
+          stopAnimation();
           currentX -= delta;
           targetX = currentX;
-          normalizeCenter();
-          track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+          render(currentX);
+
+          clearTimeout(wheelTimer);
+          wheelTimer = setTimeout(() => {
+            const step = getCardStep();
+            targetX = Math.round(currentX / step) * step;
+            startAnimation();
+          }, 120);
         }
       }, { passive: false });
     }
@@ -384,11 +356,19 @@
       }
     }, true);
 
+    window.addEventListener('resize', () => {
+      const step = getCardStep();
+      if (step > 0) {
+        targetX = Math.round(targetX / step) * step;
+        currentX = targetX;
+        render(currentX);
+      }
+    });
+
     track._stepPrev = stepPrev;
     track._stepNext = stepNext;
-    track._normalizePosition = normalizeCenter;
 
-    return { stepPrev, stepNext, normalizePosition: normalizeCenter };
+    return { stepPrev, stepNext };
   }
 
   /**
