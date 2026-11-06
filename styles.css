@@ -52094,27 +52094,29 @@ a.footer-contact-main:hover {
   color: #FFFFFF !important;
   -webkit-text-fill-color: #FFFFFF !important;
   font-weight: 900 !important;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45) !important;
+  text-shadow: none !important;
 }
 
 .hero-slide .hero-text-shine {
   color: #FFFFFF !important;
   -webkit-text-fill-color: #FFFFFF !important;
   font-weight: 900 !important;
+  text-shadow: none !important;
 }
 
 .hero-slide .hero-text-signature {
   color: #FF5A18 !important;
   -webkit-text-fill-color: #FF5A18 !important;
   background: none !important;
-  text-shadow: 0 2px 14px rgba(255, 90, 24, 0.4) !important;
+  text-shadow: none !important;
   font-weight: 900 !important;
-  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .hero-slide .hero-kicker-highlight,
 .hero-slide .hero-kicker-gold {
-  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1), text-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-shadow: none !important;
+  transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .hero-slide .hero-editorial-desc {
@@ -52124,7 +52126,7 @@ a.footer-contact-main:hover {
   line-height: 1.58 !important;
   letter-spacing: 0.015em !important;
   color: rgba(255, 255, 255, 0.85) !important;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35) !important;
+  text-shadow: none !important;
   margin: 0 !important;
   max-width: clamp(480px, 44vw, 560px) !important;
   -webkit-font-smoothing: antialiased !important;
@@ -52405,7 +52407,7 @@ a.footer-contact-main:hover {
   .hero-slide .hero-headline .hero-headline-line {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) !important;
+    text-shadow: none !important;
     filter: none !important;
     display: inline-block !important;
     text-align: center !important;
@@ -52418,7 +52420,7 @@ a.footer-contact-main:hover {
   .hero-slide .hero-text-signature {
     color: #FF5A18 !important;
     -webkit-text-fill-color: #FF5A18 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45) !important;
+    text-shadow: none !important;
     filter: none !important;
     font-weight: 800 !important;
     transition: color 0.45s cubic-bezier(0.4, 0, 0.2, 1), -webkit-text-fill-color 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -52431,7 +52433,7 @@ a.footer-contact-main:hover {
     max-width: 300px !important;
     margin: 6px auto 0 auto !important;
     color: rgba(255, 255, 255, 0.92) !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    text-shadow: none !important;
     filter: none !important;
     text-align: center !important;
   }
@@ -54651,7 +54653,7 @@ body.home-page .hero-content {
   letter-spacing: -0.02em !important;
   color: #FFFFFF !important;
   margin: 0 0 8px 0 !important;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35) !important;
+  text-shadow: none !important;
 }
 
 .hardware-banner-subtitle {
@@ -54661,7 +54663,7 @@ body.home-page .hero-content {
   line-height: 1.45 !important;
   margin: 0 0 20px 0 !important;
   max-width: 520px !important;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3) !important;
+  text-shadow: none !important;
 }
 
 .hardware-banner-btn {

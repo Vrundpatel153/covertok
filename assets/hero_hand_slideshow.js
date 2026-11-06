@@ -84,18 +84,18 @@
       const theme = CASE_THEMES[idx] || CASE_THEMES[0];
       if (slide0) {
         slide0.style.setProperty('--hero-case-accent', theme.hex);
-        slide0.style.setProperty('--hero-case-glow', theme.glow);
+        slide0.style.setProperty('--hero-case-glow', 'none');
       }
       sigTexts.forEach(el => {
         el.style.setProperty('color', theme.hex, 'important');
         el.style.setProperty('-webkit-text-fill-color', theme.hex, 'important');
-        el.style.setProperty('text-shadow', theme.glow, 'important');
+        el.style.setProperty('text-shadow', 'none', 'important');
         el.style.setProperty('background', 'none', 'important');
       });
       kickers.forEach(el => {
         el.style.setProperty('color', theme.hex, 'important');
         el.style.setProperty('-webkit-text-fill-color', theme.hex, 'important');
-        el.style.setProperty('text-shadow', theme.glowSmall, 'important');
+        el.style.setProperty('text-shadow', 'none', 'important');
       });
     }
 
