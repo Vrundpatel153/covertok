@@ -13,7 +13,8 @@
     const arrowBtn = document.querySelector('#heroExploreArrow');
 
     // Only apply desktop architectural silhouette on screens >= 992px
-    if (window.innerWidth < 992) {
+    const effectiveWidth = Math.max(window.innerWidth || 0, document.documentElement.clientWidth || 0);
+    if (effectiveWidth > 0 && effectiveWidth < 992) {
       const clipPathEl = document.querySelector('#heroCardClip path');
       if (clipPathEl) {
         clipPathEl.setAttribute('d', 'M 0 0 L 1 0 L 1 1 L 0 1 Z');
@@ -23,6 +24,7 @@
       }
       return;
     }
+    if (effectiveWidth < 992) return;
 
     const heroCard = document.querySelector('.hero-card');
     const clipPathEl = document.querySelector('#heroCardClip path');
@@ -40,7 +42,7 @@
     const hrRect = headerRight ? headerRight.getBoundingClientRect() : null;
 
     // Relative X positions in pixels from hero card left edge
-    const hlRight = hlRect ? (hlRect.right - cRect.left) : (cardW * 0.50);
+    const hlRight = hlRect ? (hlRect.right - cRect.left) : (cardW * 0.44);
     const hrLeft = hrRect ? (hrRect.left - cRect.left) : (cardW * 0.88);
 
     const pillBtn = document.querySelector('#heroDynamicCta');
@@ -53,26 +55,24 @@
     }
 
     // Relative right edge of the action dock inside the notch
-    const dockRight = arrowRect ? (arrowRect.right - cRect.left) : (pillRect ? (pillRect.right - cRect.left + 60) : 260);
+    const dockRight = arrowRect ? (arrowRect.right - cRect.left) : (pillRect ? (pillRect.right - cRect.left + 54) : 240);
 
-    // 1. Top riser curve (starts right after CONTACT US link, rises to y=yTopPeak)
-    // On ultra-wide screens (1920px+), anchor around 0.50 for spacious symmetry.
-    // On 15.6" laptops (1280px-1536px), dynamically adapt past CONTACT US with clean 32px breathing room.
-    const topRiseX1 = Math.max(0.50, Math.min(0.72, (hlRight + 32) / cardW));
-    const topRiseX2 = Math.min(topRiseX1 + 0.038, 0.78);
+    // 1. Top riser curve (starts right after CONTACT US link with comfortable 24px breathing room)
+    const topRiseX1 = Math.max(0.38, Math.min(0.66, (hlRight + 24) / cardW));
+    const topRiseX2 = Math.min(topRiseX1 + 0.038, 0.70);
 
     // 2. Top drop curve (starts before utility icons, drops to y=yTopBase)
-    const topDropX4 = Math.min(0.96, Math.max(topRiseX2 + 0.06, (hrLeft - 24) / cardW));
-    const topDropX3 = Math.max(topRiseX2 + 0.03, topDropX4 - 0.038);
+    const topDropX4 = Math.min(0.96, Math.max(topRiseX2 + 0.08, (hrLeft - 20) / cardW));
+    const topDropX3 = Math.max(topRiseX2 + 0.04, topDropX4 - 0.038);
 
-    // 3. Bottom step curve (Shelf envelopes BOTH pill & arrow button with balanced 32px overhang, then sweeps gracefully to the floor)
-    const shelfOverhang = 32;
-    const curveSpan = 54;
+    // 3. Bottom step curve (Shelf envelopes BOTH pill & arrow button with balanced 24px overhang, then sweeps gracefully to the floor)
+    const shelfOverhang = 24;
+    const curveSpan = 64;
 
     const shelfEndPx = dockRight + shelfOverhang;
     const curveFloorPx = shelfEndPx + curveSpan;
-    const botStepX2 = Math.max(0.19, Math.min(0.40, shelfEndPx / cardW));
-    const botStepX1 = Math.max(botStepX2 + 0.03, Math.min(0.46, curveFloorPx / cardW));
+    const botStepX2 = Math.min(0.36, shelfEndPx / cardW);
+    const botStepX1 = Math.min(0.44, curveFloorPx / cardW);
 
     // Vertical landmarks
     // Baseline y: under nav links

@@ -2093,7 +2093,7 @@
           const currentHeight = grid.offsetHeight;
           if (currentHeight > 80) grid.style.minHeight = `${currentHeight}px`;
           grid.style.transition = 'opacity 0.12s ease';
-          grid.style.opacity = '0.35';
+          grid.style.opacity = '0.2';
 
           setTimeout(() => {
             const startIdx = (currentPage - 1) * PAGE_SIZE;
@@ -2101,9 +2101,9 @@
             grid.innerHTML = pagedItems.map(p => renderCard(p)).join('');
             grid.style.opacity = '1';
             setTimeout(() => {
-              grid.style.minHeight = '';
-            }, 200);
-          }, 120);
+              if (grid.offsetHeight > 80) grid.style.minHeight = `${grid.offsetHeight}px`;
+            }, 150);
+          }, 100);
         }
 
         renderCatalogPagination(totalPages, filteredList.length, currentPage, (page) => {
@@ -2112,8 +2112,10 @@
 
         if (contentArea) {
           const rect = contentArea.getBoundingClientRect();
-          const targetScroll = window.scrollY + rect.top - 90;
-          window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+          if (rect.top < -60 || rect.top > window.innerHeight) {
+            const targetScroll = window.scrollY + rect.top - 80;
+            window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+          }
         }
       }
 

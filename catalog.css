@@ -2204,43 +2204,17 @@
 /* 6. PRODUCT GRID & CARDS (Editorial Curated Styling) */
 
 .catalog-products-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 24px 20px;
-
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px 20px !important;
   margin-bottom: 18px !important;
-
 }
 
-
-
-@media (max-width: 1200px) {
-
+@media (max-width: 991px) {
   .catalog-products-grid {
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px 16px;
-
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px 10px !important;
   }
-
-}
-
-
-
-@media (max-width: 820px) {
-
-  .catalog-products-grid {
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 16px 12px;
-
-  }
-
 }
 
 
@@ -4442,13 +4416,16 @@
    ========================================================================== */
 
 .catalog-products-grid {
-
   display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px 20px !important;
+}
 
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
-
-  gap: 26px 20px !important;
-
+@media (max-width: 991px) {
+  .catalog-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px 10px !important;
+  }
 }
 
 

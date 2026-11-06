@@ -37,7 +37,11 @@
     "colors": [
       {
         "name": "Space Black",
-        "hex": "#1C1D1F"
+        "hex": "#1C1D1F",
+        "image": "assets/products/10017625375018/packshot_white_1.webp",
+        "images": [
+          "assets/products/10017625375018/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -175,8 +179,9 @@
         "name": "Blue",
         "hex": "#2563EB",
         "price": 999.0,
-        "image": "assets/products/10005871362346/17_51425350910250.webp",
+        "image": "assets/products/10005871362346/packshot_white_1.webp",
         "images": [
+          "assets/products/10005871362346/packshot_white_1.webp",
           "assets/products/10005871362346/17_51425350910250.jpg",
           "assets/products/10005871362346/7_51425455964458.jpg"
         ]
@@ -320,8 +325,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9989730304298/1_51224314347818.webp",
+    "primary_image": "assets/products/9989730304298/packshot_white_1.webp",
     "images": [
+      "assets/products/9989730304298/packshot_white_1.webp",
       "assets/products/9989730304298/1_51224314347818.webp",
       "assets/products/9989730304298/2_51224314380586.webp",
       "assets/products/9989730304298/3_51224314544426.webp",
@@ -336,8 +342,9 @@
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
         "price": 649.0,
-        "image": "assets/products/9989730304298/6_51224314413354.webp",
+        "image": "assets/products/9989730304298/packshot_white_1.webp",
         "images": [
+          "assets/products/9989730304298/packshot_white_1.webp",
           "assets/products/9989730304298/6_51224314413354.png",
           "assets/products/9989730304298/1_51224314347818.png"
         ]
@@ -488,8 +495,9 @@
         "name": "Raspberry",
         "hex": "#9D174D",
         "price": 649.0,
-        "image": "assets/products/9875589628202/1_49939894698282.webp",
+        "image": "assets/products/9875589628202/packshot_white_1.webp",
         "images": [
+          "assets/products/9875589628202/packshot_white_1.webp",
           "assets/products/9875589628202/1_49939894698282.jpg",
           "assets/products/9875589628202/raspberry_case_view.jpg",
           "assets/products/9875589628202/raspberry_camera_detail.jpg",
@@ -650,8 +658,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9982201299242/1_51142359679274.webp",
+    "primary_image": "assets/products/9982201299242/packshot_white_1.webp",
     "images": [
+      "assets/products/9982201299242/packshot_white_1.webp",
       "assets/products/9982201299242/1_51142359679274.webp",
       "assets/products/9982201299242/2_51142268289322.webp",
       "assets/products/9982201299242/3_51142359646506.webp",
@@ -666,7 +675,11 @@
     "colors": [
       {
         "name": "Cosmic Orange",
-        "hex": "#FF5500"
+        "hex": "#FF5500",
+        "image": "assets/products/9982201299242/packshot_white_1.webp",
+        "images": [
+          "assets/products/9982201299242/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -778,8 +791,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9981786390826/1_51134092738858.webp",
+    "primary_image": "assets/products/9981786390826/packshot_white_1.webp",
     "images": [
+      "assets/products/9981786390826/packshot_white_1.webp",
       "assets/products/9981786390826/1_51134092738858.webp",
       "assets/products/9981786390826/2_51134092706090.webp",
       "assets/products/9981786390826/3_51134092673322.webp",
@@ -792,7 +806,11 @@
     "colors": [
       {
         "name": "Crystal Clear",
-        "hex": "#E2E8F0"
+        "hex": "#E2E8F0",
+        "image": "assets/products/9981786390826/packshot_white_1.webp",
+        "images": [
+          "assets/products/9981786390826/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -904,8 +922,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9980484157738/1_51111526859050.webp",
+    "primary_image": "assets/products/9980484157738/packshot_white_1.webp",
     "images": [
+      "assets/products/9980484157738/packshot_white_1.webp",
       "assets/products/9980484157738/1_51111526859050.webp",
       "assets/products/9980484157738/2_51111526760746.webp",
       "assets/products/9980484157738/3_51111527088426.webp",
@@ -926,8 +945,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 849.0,
-        "image": "assets/products/9980484157738/3_51111527088426.webp",
+        "image": "assets/products/9980484157738/packshot_white_1.webp",
         "images": [
+          "assets/products/9980484157738/packshot_white_1.webp",
           "assets/products/9980484157738/3_51111527088426.jpg"
         ]
       },
@@ -1102,8 +1122,9 @@
         "name": "Cosmic Orange",
         "hex": "#FF6A3D",
         "price": 999.0,
-        "image": "assets/products/9979941159210/3_51102857167146.webp",
+        "image": "assets/products/9979941159210/packshot_white_1.webp",
         "images": [
+          "assets/products/9979941159210/packshot_white_1.webp",
           "assets/products/9979941159210/3_51102857167146.jpg",
           "assets/products/9979941159210/1_51102857298218.png"
         ]
@@ -1279,8 +1300,9 @@
         "name": "Silver",
         "hex": "#E4E4E7",
         "price": 1099.0,
-        "image": "assets/products/9937879728426/1_50512140501290.webp",
+        "image": "assets/products/9937879728426/packshot_white_1.webp",
         "images": [
+          "assets/products/9937879728426/packshot_white_1.webp",
           "assets/products/9937879728426/1_50512140501290.png"
         ]
       },
@@ -1461,8 +1483,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9904686924074/1_50151737622826.webp",
+    "primary_image": "assets/products/9904686924074/packshot_white_1.webp",
     "images": [
+      "assets/products/9904686924074/packshot_white_1.webp",
       "assets/products/9904686924074/1_50151737622826.webp",
       "assets/products/9904686924074/2_50151737590058.webp",
       "assets/products/9904686924074/3_50151737557290.webp"
@@ -1471,7 +1494,11 @@
     "colors": [
       {
         "name": "Pearlescent White",
-        "hex": "#F8FAFC"
+        "hex": "#F8FAFC",
+        "image": "assets/products/9904686924074/packshot_white_1.webp",
+        "images": [
+          "assets/products/9904686924074/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -1569,8 +1596,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9893318426922/1_50067404259626.webp",
+    "primary_image": "assets/products/9893318426922/packshot_white_1.webp",
     "images": [
+      "assets/products/9893318426922/packshot_white_1.webp",
       "assets/products/9893318426922/1_50067404259626.webp",
       "assets/products/9893318426922/2_50067404226858.webp",
       "assets/products/9893318426922/3_50067404194090.webp",
@@ -1587,8 +1615,9 @@
         "name": "Pink",
         "hex": "#EC4899",
         "price": 399.0,
-        "image": "assets/products/9893318426922/1_50067404259626.webp",
+        "image": "assets/products/9893318426922/packshot_white_1.webp",
         "images": [
+          "assets/products/9893318426922/packshot_white_1.webp",
           "assets/products/9893318426922/1_50067404259626.jpg"
         ]
       },
@@ -1762,8 +1791,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 299.0,
-        "image": "assets/products/9889169211690/6_50037223358762.webp",
+        "image": "assets/products/9889169211690/packshot_white_1.webp",
         "images": [
+          "assets/products/9889169211690/packshot_white_1.webp",
           "assets/products/9889169211690/6_50037223358762.png"
         ]
       },
@@ -1945,8 +1975,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 2099.0,
-        "image": "assets/products/9888955924778/2_50035509330218.webp",
+        "image": "assets/products/9888955924778/packshot_white_1.webp",
         "images": [
+          "assets/products/9888955924778/packshot_white_1.webp",
           "assets/products/9888955924778/2_50035509330218.png"
         ]
       },
@@ -2123,8 +2154,9 @@
         "name": "Orange",
         "hex": "#F97316",
         "price": 799.0,
-        "image": "assets/products/9882472382762/10_49996956205354.webp",
+        "image": "assets/products/9882472382762/packshot_white_1.webp",
         "images": [
+          "assets/products/9882472382762/packshot_white_1.webp",
           "assets/products/9882472382762/10_49996956205354.jpg"
         ]
       },
@@ -2354,8 +2386,9 @@
         "name": "Steel Blue",
         "hex": "#2563EB",
         "price": 499.0,
-        "image": "assets/products/9876014432554/1_49941765751082.webp",
+        "image": "assets/products/9876014432554/packshot_white_1.webp",
         "images": [
+          "assets/products/9876014432554/packshot_white_1.webp",
           "assets/products/9876014432554/1_49941765751082.png"
         ]
       }
@@ -2486,8 +2519,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 799.0,
-        "image": "assets/products/9875994280234/4_49941561737514.webp",
+        "image": "assets/products/9875994280234/packshot_white_1.webp",
         "images": [
+          "assets/products/9875994280234/packshot_white_1.webp",
           "assets/products/9875994280234/4_49941561737514.png"
         ]
       },
@@ -2647,7 +2681,11 @@
     "colors": [
       {
         "name": "Ultra Clear",
-        "hex": "#E2E8F0"
+        "hex": "#E2E8F0",
+        "image": "assets/products/9875597623594/packshot_white_1.webp",
+        "images": [
+          "assets/products/9875597623594/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -2751,8 +2789,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9875054297386/1_49933917716778.webp",
+    "primary_image": "assets/products/9875054297386/packshot_white_1.webp",
     "images": [
+      "assets/products/9875054297386/packshot_white_1.webp",
       "assets/products/9875054297386/1_49933917716778.webp",
       "assets/products/9875054297386/2_49933917651242.webp",
       "assets/products/9875054297386/3_49933917749546.webp",
@@ -2769,7 +2808,11 @@
     "colors": [
       {
         "name": "Matte Privacy",
-        "hex": "#334155"
+        "hex": "#334155",
+        "image": "assets/products/9875054297386/packshot_white_1.webp",
+        "images": [
+          "assets/products/9875054297386/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -2904,7 +2947,11 @@
     "colors": [
       {
         "name": "Bold Orange",
-        "hex": "#FF5500"
+        "hex": "#FF5500",
+        "image": "assets/products/9873124557098/packshot_white_1.webp",
+        "images": [
+          "assets/products/9873124557098/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -3024,7 +3071,11 @@
     "colors": [
       {
         "name": "Bright Orange",
-        "hex": "#FF5500"
+        "hex": "#FF5500",
+        "image": "assets/products/9873120330026/packshot_white_1.webp",
+        "images": [
+          "assets/products/9873120330026/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -3143,7 +3194,11 @@
     "colors": [
       {
         "name": "Clear Titanium",
-        "hex": "#94A3B8"
+        "hex": "#94A3B8",
+        "image": "assets/products/9873118855466/packshot_white_1.webp",
+        "images": [
+          "assets/products/9873118855466/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -3262,7 +3317,11 @@
     "colors": [
       {
         "name": "Tactical Black",
-        "hex": "#1C1D1F"
+        "hex": "#1C1D1F",
+        "image": "assets/products/9873118101802/packshot_white_1.webp",
+        "images": [
+          "assets/products/9873118101802/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -3385,8 +3444,9 @@
         "name": "Ivory hearts",
         "hex": "#6DB634",
         "price": 449.0,
-        "image": "assets/products/9873114038570/2_49920971178282.webp",
+        "image": "assets/products/9873114038570/packshot_white_1.webp",
         "images": [
+          "assets/products/9873114038570/packshot_white_1.webp",
           "assets/products/9873114038570/2_49920971178282.png"
         ]
       },
@@ -3542,8 +3602,9 @@
         "name": "Yellow",
         "hex": "#EAB308",
         "price": 1299.0,
-        "image": "assets/products/9873108828458/1_49984385122602.webp",
+        "image": "assets/products/9873108828458/packshot_white_1.webp",
         "images": [
+          "assets/products/9873108828458/packshot_white_1.webp",
           "assets/products/9873108828458/1_49984385122602.jpg"
         ]
       }
@@ -3674,8 +3735,9 @@
         "name": "Grey+Black",
         "hex": "#18181B",
         "price": 1299.0,
-        "image": "assets/products/9873108435242/2_49984376144170.webp",
+        "image": "assets/products/9873108435242/packshot_white_1.webp",
         "images": [
+          "assets/products/9873108435242/packshot_white_1.webp",
           "assets/products/9873108435242/2_49984376144170.jpg"
         ]
       }
@@ -3806,8 +3868,9 @@
         "name": "Orange+Grey",
         "hex": "#F97316",
         "price": 1299.0,
-        "image": "assets/products/9873108238634/3_49984401539370.webp",
+        "image": "assets/products/9873108238634/packshot_white_1.webp",
         "images": [
+          "assets/products/9873108238634/packshot_white_1.webp",
           "assets/products/9873108238634/3_49984401539370.jpg"
         ]
       }
@@ -3936,8 +3999,9 @@
         "name": "Light Blue",
         "hex": "#60A5FA",
         "price": 1299.0,
-        "image": "assets/products/9873108074794/7_49984412221738.webp",
+        "image": "assets/products/9873108074794/packshot_white_1.webp",
         "images": [
+          "assets/products/9873108074794/packshot_white_1.webp",
           "assets/products/9873108074794/7_49984412221738.jpg"
         ]
       }
@@ -4066,8 +4130,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 1299.0,
-        "image": "assets/products/9873108042026/1_49984418054442.webp",
+        "image": "assets/products/9873108042026/packshot_white_1.webp",
         "images": [
+          "assets/products/9873108042026/packshot_white_1.webp",
           "assets/products/9873108042026/1_49984418054442.jpg"
         ]
       }
@@ -4197,8 +4262,9 @@
         "name": "Starlight+Grey",
         "hex": "#F5EBE0",
         "price": 1299.0,
-        "image": "assets/products/9873108009258/1_49984422871338.webp",
+        "image": "assets/products/9873108009258/packshot_white_1.webp",
         "images": [
+          "assets/products/9873108009258/packshot_white_1.webp",
           "assets/products/9873108009258/1_49984422871338.jpg"
         ]
       }
@@ -4329,8 +4395,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 699.0,
-        "image": "assets/products/9871368651050/2_49907234046250.webp",
+        "image": "assets/products/9871368651050/packshot_white_1.webp",
         "images": [
+          "assets/products/9871368651050/packshot_white_1.webp",
           "assets/products/9871368651050/2_49907234046250.png"
         ]
       },
@@ -4491,8 +4558,9 @@
         "name": "Starlight+Pink",
         "hex": "#F5EBE0",
         "price": 999.0,
-        "image": "assets/products/9871367274794/1_49905290379562.webp",
+        "image": "assets/products/9871367274794/packshot_white_1.webp",
         "images": [
+          "assets/products/9871367274794/packshot_white_1.webp",
           "assets/products/9871367274794/1_49905290379562.png"
         ]
       }
@@ -4628,8 +4696,9 @@
         "name": "Black+Grey",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/9871358624042/3_49997018759466.webp",
+        "image": "assets/products/9871358624042/packshot_white_1.webp",
         "images": [
+          "assets/products/9871358624042/packshot_white_1.webp",
           "assets/products/9871358624042/3_49997018759466.jpg"
         ]
       }
@@ -4762,8 +4831,9 @@
         "name": "Orange+Midnight Black",
         "hex": "#F97316",
         "price": 999.0,
-        "image": "assets/products/9871361442090/1_49905283760426.webp",
+        "image": "assets/products/9871361442090/packshot_white_1.webp",
         "images": [
+          "assets/products/9871361442090/packshot_white_1.webp",
           "assets/products/9871361442090/1_49905283760426.png"
         ]
       }
@@ -4892,8 +4962,9 @@
         "name": "Cloud Grey+Blue",
         "hex": "#2563EB",
         "price": 999.0,
-        "image": "assets/products/9871354528042/2_49997038715178.webp",
+        "image": "assets/products/9871354528042/packshot_white_1.webp",
         "images": [
+          "assets/products/9871354528042/packshot_white_1.webp",
           "assets/products/9871354528042/2_49997038715178.jpg"
         ]
       }
@@ -5025,8 +5096,9 @@
         "name": "Blue+Midnight Black",
         "hex": "#2563EB",
         "price": 999.0,
-        "image": "assets/products/9871022719274/1_49997059686698.webp",
+        "image": "assets/products/9871022719274/packshot_white_1.webp",
         "images": [
+          "assets/products/9871022719274/packshot_white_1.webp",
           "assets/products/9871022719274/1_49997059686698.jpg"
         ]
       }
@@ -5155,8 +5227,9 @@
         "name": "Neon Orange",
         "hex": "#F97316",
         "price": 699.0,
-        "image": "assets/products/9870560330026/3_49900008669482.webp",
+        "image": "assets/products/9870560330026/packshot_white_1.webp",
         "images": [
+          "assets/products/9870560330026/packshot_white_1.webp",
           "assets/products/9870560330026/3_49900008669482.png"
         ]
       },
@@ -5324,8 +5397,9 @@
         "name": "Ocean Butterfly",
         "hex": "#38BDF8",
         "price": 249.0,
-        "image": "assets/products/9870559183146/2_49899983241514.webp",
+        "image": "assets/products/9870559183146/packshot_white_1.webp",
         "images": [
+          "assets/products/9870559183146/packshot_white_1.webp",
           "assets/products/9870559183146/2_49899983241514.png"
         ]
       },
@@ -5435,8 +5509,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870558363946/1_49899965448490.webp",
+    "primary_image": "assets/products/9870558363946/packshot_white_1.webp",
     "images": [
+      "assets/products/9870558363946/packshot_white_1.webp",
       "assets/products/9870558363946/1_49899965448490.webp",
       "assets/products/9870558363946/2_49899965874474.webp",
       "assets/products/9870558363946/3_49899965940010.webp"
@@ -5445,7 +5520,11 @@
     "colors": [
       {
         "name": "Pastel Rainbow",
-        "hex": "#FBCFE8"
+        "hex": "#FBCFE8",
+        "image": "assets/products/9870558363946/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870558363946/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -5544,8 +5623,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870558036266/1_49899952111914.webp",
+    "primary_image": "assets/products/9870558036266/packshot_white_1.webp",
     "images": [
+      "assets/products/9870558036266/packshot_white_1.webp",
       "assets/products/9870558036266/1_49899952111914.webp",
       "assets/products/9870558036266/2_49899952406826.webp",
       "assets/products/9870558036266/3_49899952832810.webp",
@@ -5557,7 +5637,11 @@
     "colors": [
       {
         "name": "Crystal Glass",
-        "hex": "#E0E7FF"
+        "hex": "#E0E7FF",
+        "image": "assets/products/9870558036266/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870558036266/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -5656,8 +5740,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870555054378/1_49899832312106.webp",
+    "primary_image": "assets/products/9870555054378/packshot_white_1.webp",
     "images": [
+      "assets/products/9870555054378/packshot_white_1.webp",
       "assets/products/9870555054378/1_49899832312106.webp",
       "assets/products/9870555054378/2_49899832443178.webp",
       "assets/products/9870555054378/3_49899832770858.webp"
@@ -5666,7 +5751,11 @@
     "colors": [
       {
         "name": "Blush Pink",
-        "hex": "#F472B6"
+        "hex": "#F472B6",
+        "image": "assets/products/9870555054378/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870555054378/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -5777,7 +5866,11 @@
     "colors": [
       {
         "name": "Pastel Mint",
-        "hex": "#A7F3D0"
+        "hex": "#A7F3D0",
+        "image": "assets/products/9870554038570/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870554038570/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -5876,8 +5969,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870550761770/1_49899764252970.webp",
+    "primary_image": "assets/products/9870550761770/packshot_white_1.webp",
     "images": [
+      "assets/products/9870550761770/packshot_white_1.webp",
       "assets/products/9870550761770/1_49899764252970.webp",
       "assets/products/9870550761770/2_49899763859754.webp",
       "assets/products/9870550761770/3_49899764416810.webp"
@@ -5886,7 +5980,11 @@
     "colors": [
       {
         "name": "Pearl White",
-        "hex": "#FDF4FF"
+        "hex": "#FDF4FF",
+        "image": "assets/products/9870550761770/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870550761770/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -6001,8 +6099,9 @@
         "name": "Yellow",
         "hex": "#EAB308",
         "price": 499.0,
-        "image": "assets/products/9870548533546/2_49905926603050.webp",
+        "image": "assets/products/9870548533546/packshot_white_1.webp",
         "images": [
+          "assets/products/9870548533546/packshot_white_1.webp",
           "assets/products/9870548533546/2_49905926603050.png"
         ]
       },
@@ -6147,8 +6246,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870544142634/3_49899700289834.webp",
+    "primary_image": "assets/products/9870544142634/packshot_white_1.webp",
     "images": [
+      "assets/products/9870544142634/packshot_white_1.webp",
       "assets/products/9870544142634/3_49899700289834.webp",
       "assets/products/9870544142634/1_49899700814122.webp",
       "assets/products/9870544142634/2_49899699700010.webp"
@@ -6157,7 +6257,11 @@
     "colors": [
       {
         "name": "Rose Gold",
-        "hex": "#FDA4AF"
+        "hex": "#FDA4AF",
+        "image": "assets/products/9870544142634/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870544142634/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -6255,8 +6359,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870520320298/1_49899486576938.webp",
+    "primary_image": "assets/products/9870520320298/packshot_white_1.webp",
     "images": [
+      "assets/products/9870520320298/packshot_white_1.webp",
       "assets/products/9870520320298/1_49899486576938.webp",
       "assets/products/9870520320298/2_49899485954346.webp",
       "assets/products/9870520320298/3_49899486806314.webp"
@@ -6267,8 +6372,9 @@
         "name": "Bloom Edition",
         "hex": "#E19975",
         "price": 499.0,
-        "image": "assets/products/9870520320298/1_49899486576938.webp",
+        "image": "assets/products/9870520320298/packshot_white_1.webp",
         "images": [
+          "assets/products/9870520320298/packshot_white_1.webp",
           "assets/products/9870520320298/1_49899486576938.png"
         ]
       }
@@ -6368,8 +6474,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870514487594/1_49899479007530.webp",
+    "primary_image": "assets/products/9870514487594/packshot_white_1.webp",
     "images": [
+      "assets/products/9870514487594/packshot_white_1.webp",
       "assets/products/9870514487594/1_49899479007530.webp",
       "assets/products/9870514487594/2_49899483201834.webp",
       "assets/products/9870514487594/3_49899483234602.webp"
@@ -6378,7 +6485,11 @@
     "colors": [
       {
         "name": "Sky Blue",
-        "hex": "#7DD3FC"
+        "hex": "#7DD3FC",
+        "image": "assets/products/9870514487594/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870514487594/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -6491,8 +6602,9 @@
         "name": "Red",
         "hex": "#DC2626",
         "price": 599.0,
-        "image": "assets/products/9870500364586/3_49899385585962.webp",
+        "image": "assets/products/9870500364586/packshot_white_1.webp",
         "images": [
+          "assets/products/9870500364586/packshot_white_1.webp",
           "assets/products/9870500364586/3_49899385585962.png"
         ]
       },
@@ -6607,8 +6719,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870484341034/1_49899317494058.webp",
+    "primary_image": "assets/products/9870484341034/packshot_white_1.webp",
     "images": [
+      "assets/products/9870484341034/packshot_white_1.webp",
       "assets/products/9870484341034/1_49899317494058.webp",
       "assets/products/9870484341034/2_49899354456362.webp",
       "assets/products/9870484341034/3_49899310809386.webp",
@@ -6624,8 +6737,9 @@
         "name": "Mocha Brown",
         "hex": "#78350F",
         "price": 599.0,
-        "image": "assets/products/9870484341034/2_49899354456362.webp",
+        "image": "assets/products/9870484341034/packshot_white_1.webp",
         "images": [
+          "assets/products/9870484341034/packshot_white_1.webp",
           "assets/products/9870484341034/2_49899354456362.png"
         ]
       },
@@ -6775,8 +6889,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870479524138/1_49899266736426.webp",
+    "primary_image": "assets/products/9870479524138/packshot_white_1.webp",
     "images": [
+      "assets/products/9870479524138/packshot_white_1.webp",
       "assets/products/9870479524138/1_49899266736426.webp",
       "assets/products/9870479524138/2_49899266801962.webp",
       "assets/products/9870479524138/3_49899266933034.webp",
@@ -6789,8 +6904,9 @@
         "name": "Pink",
         "hex": "#EC4899",
         "price": 549.0,
-        "image": "assets/products/9870479524138/4_49899267293482.webp",
+        "image": "assets/products/9870479524138/packshot_white_1.webp",
         "images": [
+          "assets/products/9870479524138/packshot_white_1.webp",
           "assets/products/9870479524138/4_49899267293482.png"
         ]
       },
@@ -6906,8 +7022,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870479425834/1_49899238752554.webp",
+    "primary_image": "assets/products/9870479425834/packshot_white_1.webp",
     "images": [
+      "assets/products/9870479425834/packshot_white_1.webp",
       "assets/products/9870479425834/1_49899238752554.webp",
       "assets/products/9870479425834/2_49899238850858.webp",
       "assets/products/9870479425834/3_49899239145770.webp",
@@ -6920,8 +7037,9 @@
         "name": "Sweet Pink",
         "hex": "#FBCFE8",
         "price": 549.0,
-        "image": "assets/products/9870479425834/5_49899240685866.webp",
+        "image": "assets/products/9870479425834/packshot_white_1.webp",
         "images": [
+          "assets/products/9870479425834/packshot_white_1.webp",
           "assets/products/9870479425834/5_49899240685866.png"
         ]
       },
@@ -7053,7 +7171,11 @@
     "colors": [
       {
         "name": "Holographic",
-        "hex": "#C4B5FD"
+        "hex": "#C4B5FD",
+        "image": "assets/products/9870469464362/packshot_white_1.webp",
+        "images": [
+          "assets/products/9870469464362/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -7182,8 +7304,9 @@
         "name": "Wine Red",
         "hex": "#881337",
         "price": 499.0,
-        "image": "assets/products/9870456357162/1_49899114627370.webp",
+        "image": "assets/products/9870456357162/packshot_white_1.webp",
         "images": [
+          "assets/products/9870456357162/packshot_white_1.webp",
           "assets/products/9870456357162/1_49899114627370.png"
         ]
       },
@@ -7329,8 +7452,9 @@
     "is_mens": true,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9870452588842/1_51157547090218.webp",
+    "primary_image": "assets/products/9870452588842/packshot_white_1.webp",
     "images": [
+      "assets/products/9870452588842/packshot_white_1.webp",
       "assets/products/9870452588842/1_51157547090218.webp",
       "assets/products/9870452588842/2_51157546991914.webp",
       "assets/products/9870452588842/3_49899077402922.webp",
@@ -7349,8 +7473,9 @@
         "name": "Frost Black",
         "hex": "#27272A",
         "price": 599.0,
-        "image": "assets/products/9870452588842/5_49899077599530.webp",
+        "image": "assets/products/9870452588842/packshot_white_1.webp",
         "images": [
+          "assets/products/9870452588842/packshot_white_1.webp",
           "assets/products/9870452588842/5_49899077599530.png"
         ]
       },
@@ -7522,8 +7647,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870449443114/1_49899074617642.webp",
+    "primary_image": "assets/products/9870449443114/packshot_white_1.webp",
     "images": [
+      "assets/products/9870449443114/packshot_white_1.webp",
       "assets/products/9870449443114/1_49899074617642.webp",
       "assets/products/9870449443114/2_49899048304938.webp",
       "assets/products/9870449443114/3_49899048370474.webp",
@@ -7535,8 +7661,9 @@
         "name": "Caffeine Mood",
         "hex": "#78350F",
         "price": 449.0,
-        "image": "assets/products/9870449443114/1_49899074617642.webp",
+        "image": "assets/products/9870449443114/packshot_white_1.webp",
         "images": [
+          "assets/products/9870449443114/packshot_white_1.webp",
           "assets/products/9870449443114/1_49899074617642.png"
         ]
       },
@@ -7662,8 +7789,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9870445347114/1_49899017273642.webp",
+    "primary_image": "assets/products/9870445347114/packshot_white_1.webp",
     "images": [
+      "assets/products/9870445347114/packshot_white_1.webp",
       "assets/products/9870445347114/1_49899017273642.webp",
       "assets/products/9870445347114/2_49899017896234.webp",
       "assets/products/9870445347114/3_49899015930154.webp",
@@ -7678,8 +7806,9 @@
         "name": "Sunshine Yellow",
         "hex": "#FACC15",
         "price": 449.0,
-        "image": "assets/products/9870445347114/3_49899015930154.webp",
+        "image": "assets/products/9870445347114/packshot_white_1.webp",
         "images": [
+          "assets/products/9870445347114/packshot_white_1.webp",
           "assets/products/9870445347114/3_49899015930154.png"
         ]
       },
@@ -7843,8 +7972,9 @@
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869735723306/1_49887599722794.webp",
+    "primary_image": "assets/products/9869735723306/packshot_white_1.webp",
     "images": [
+      "assets/products/9869735723306/packshot_white_1.webp",
       "assets/products/9869735723306/1_49887599722794.webp",
       "assets/products/9869735723306/2_49887599198506.webp",
       "assets/products/9869735723306/3_49887599264042.webp",
@@ -7854,7 +7984,11 @@
     "colors": [
       {
         "name": "Warm Caramel",
-        "hex": "#D97706"
+        "hex": "#D97706",
+        "image": "assets/products/9869735723306/packshot_white_1.webp",
+        "images": [
+          "assets/products/9869735723306/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -7978,8 +8112,9 @@
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869730382122/1_49887489556778.webp",
+    "primary_image": "assets/products/9869730382122/packshot_white_1.webp",
     "images": [
+      "assets/products/9869730382122/packshot_white_1.webp",
       "assets/products/9869730382122/1_49887489556778.webp",
       "assets/products/9869730382122/2_49887490605354.webp",
       "assets/products/9869730382122/3_49887491981610.webp",
@@ -7989,7 +8124,11 @@
     "colors": [
       {
         "name": "Espresso Brown",
-        "hex": "#78350F"
+        "hex": "#78350F",
+        "image": "assets/products/9869730382122/packshot_white_1.webp",
+        "images": [
+          "assets/products/9869730382122/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -8110,8 +8249,9 @@
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869729956138/1_49887448596778.webp",
+    "primary_image": "assets/products/9869729956138/packshot_white_1.webp",
     "images": [
+      "assets/products/9869729956138/packshot_white_1.webp",
       "assets/products/9869729956138/1_49887448596778.webp",
       "assets/products/9869729956138/2_49887448826154.webp",
       "assets/products/9869729956138/3_49887449055530.webp",
@@ -8124,8 +8264,9 @@
         "name": "Pink",
         "hex": "#EC4899",
         "price": 699.0,
-        "image": "assets/products/9869729956138/2_49887448826154.webp",
+        "image": "assets/products/9869729956138/packshot_white_1.webp",
         "images": [
+          "assets/products/9869729956138/packshot_white_1.webp",
           "assets/products/9869729956138/2_49887448826154.png"
         ]
       },
@@ -8268,8 +8409,9 @@
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869728907562/1_49887421661482.webp",
+    "primary_image": "assets/products/9869728907562/packshot_white_1.webp",
     "images": [
+      "assets/products/9869728907562/packshot_white_1.webp",
       "assets/products/9869728907562/1_49887421661482.webp",
       "assets/products/9869728907562/2_49887421038890.webp",
       "assets/products/9869728907562/3_49887422120234.webp",
@@ -8285,8 +8427,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 899.0,
-        "image": "assets/products/9869728907562/2_49887421038890.webp",
+        "image": "assets/products/9869728907562/packshot_white_1.webp",
         "images": [
+          "assets/products/9869728907562/packshot_white_1.webp",
           "assets/products/9869728907562/2_49887421038890.jpg"
         ]
       },
@@ -8420,8 +8563,9 @@
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869725696298/1_49887235899690.webp",
+    "primary_image": "assets/products/9869725696298/packshot_white_1.webp",
     "images": [
+      "assets/products/9869725696298/packshot_white_1.webp",
       "assets/products/9869725696298/1_49887235899690.webp",
       "assets/products/9869725696298/2_49887237439786.webp",
       "assets/products/9869725696298/3_49887235866922.webp",
@@ -8432,7 +8576,11 @@
     "colors": [
       {
         "name": "Amber Leopard",
-        "hex": "#B45309"
+        "hex": "#B45309",
+        "image": "assets/products/9869725696298/packshot_white_1.webp",
+        "images": [
+          "assets/products/9869725696298/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -8556,8 +8704,9 @@
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/9869724844330/3_49887215386922.webp",
+    "primary_image": "assets/products/9869724844330/packshot_white_1.webp",
     "images": [
+      "assets/products/9869724844330/packshot_white_1.webp",
       "assets/products/9869724844330/3_49887215386922.webp",
       "assets/products/9869724844330/1_49887214960938.webp",
       "assets/products/9869724844330/2_49887214633258.webp",
@@ -8571,8 +8720,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 899.0,
-        "image": "assets/products/9869724844330/5_49887215517994.webp",
+        "image": "assets/products/9869724844330/packshot_white_1.webp",
         "images": [
+          "assets/products/9869724844330/packshot_white_1.webp",
           "assets/products/9869724844330/5_49887215517994.png"
         ]
       },
@@ -8723,8 +8873,9 @@
         "name": "Orange",
         "hex": "#F97316",
         "price": 149.0,
-        "image": "assets/products/9855468175658/2_49719325458730.webp",
+        "image": "assets/products/9855468175658/packshot_white_1.webp",
         "images": [
+          "assets/products/9855468175658/packshot_white_1.webp",
           "assets/products/9855468175658/2_49719325458730.png"
         ]
       },
@@ -8858,7 +9009,11 @@
     "colors": [
       {
         "name": "Clear Armor",
-        "hex": "#E2E8F0"
+        "hex": "#E2E8F0",
+        "image": "assets/products/9854428905770/packshot_white_1.webp",
+        "images": [
+          "assets/products/9854428905770/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [
@@ -8979,8 +9134,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853945741610/1_49692707586346.webp",
+    "primary_image": "assets/products/9853945741610/packshot_white_1.webp",
     "images": [
+      "assets/products/9853945741610/packshot_white_1.webp",
       "assets/products/9853945741610/1_49692707586346.webp",
       "assets/products/9853945741610/2_49693181706538.webp",
       "assets/products/9853945741610/3_49692688875818.webp",
@@ -8995,8 +9151,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 1099.0,
-        "image": "assets/products/9853945741610/3_49692688875818.webp",
+        "image": "assets/products/9853945741610/packshot_white_1.webp",
         "images": [
+          "assets/products/9853945741610/packshot_white_1.webp",
           "assets/products/9853945741610/3_49692688875818.png"
         ]
       },
@@ -9119,8 +9276,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853944529194/1_49692656009514.webp",
+    "primary_image": "assets/products/9853944529194/packshot_white_1.webp",
     "images": [
+      "assets/products/9853944529194/packshot_white_1.webp",
       "assets/products/9853944529194/1_49692656009514.webp",
       "assets/products/9853944529194/2_49693176889642.webp",
       "assets/products/9853944529194/3_49692654207274.webp",
@@ -9135,8 +9293,9 @@
         "name": "Orange",
         "hex": "#F97316",
         "price": 999.0,
-        "image": "assets/products/9853944529194/3_49692654207274.webp",
+        "image": "assets/products/9853944529194/packshot_white_1.webp",
         "images": [
+          "assets/products/9853944529194/packshot_white_1.webp",
           "assets/products/9853944529194/3_49692654207274.png"
         ]
       },
@@ -9260,8 +9419,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853542105386/1_49683451019562.webp",
+    "primary_image": "assets/products/9853542105386/packshot_white_1.webp",
     "images": [
+      "assets/products/9853542105386/packshot_white_1.webp",
       "assets/products/9853542105386/1_49683451019562.webp",
       "assets/products/9853542105386/2_49683454230826.webp"
     ],
@@ -9269,7 +9429,11 @@
     "colors": [
       {
         "name": "Pure White",
-        "hex": "#F8FAFC"
+        "hex": "#F8FAFC",
+        "image": "assets/products/9853542105386/packshot_white_1.webp",
+        "images": [
+          "assets/products/9853542105386/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -9369,8 +9533,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853490954538/1_49923648618794.webp",
+    "primary_image": "assets/products/9853490954538/packshot_white_1.webp",
     "images": [
+      "assets/products/9853490954538/packshot_white_1.webp",
       "assets/products/9853490954538/1_49923648618794.webp",
       "assets/products/9853490954538/2_49923648651562.webp",
       "assets/products/9853490954538/3_49923732046122.webp",
@@ -9387,8 +9552,9 @@
         "name": "Neon blue",
         "hex": "#2563EB",
         "price": 799.0,
-        "image": "assets/products/9853490954538/5_49682198331690.webp",
+        "image": "assets/products/9853490954538/packshot_white_1.webp",
         "images": [
+          "assets/products/9853490954538/packshot_white_1.webp",
           "assets/products/9853490954538/5_49682198331690.png"
         ]
       },
@@ -9539,8 +9705,9 @@
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9853436952874/1_49893803622698.webp",
+    "primary_image": "assets/products/9853436952874/packshot_white_1.webp",
     "images": [
+      "assets/products/9853436952874/packshot_white_1.webp",
       "assets/products/9853436952874/1_49893803622698.webp",
       "assets/products/9853436952874/2_49893803589930.webp",
       "assets/products/9853436952874/3_49923701506346.webp",
@@ -9554,8 +9721,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 599.0,
-        "image": "assets/products/9853436952874/2_49893803589930.webp",
+        "image": "assets/products/9853436952874/packshot_white_1.webp",
         "images": [
+          "assets/products/9853436952874/packshot_white_1.webp",
           "assets/products/9853436952874/2_49893803589930.png"
         ]
       },
@@ -9699,8 +9867,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9848509006122/1_49619286753578.webp",
+    "primary_image": "assets/products/9848509006122/packshot_white_1.webp",
     "images": [
+      "assets/products/9848509006122/packshot_white_1.webp",
       "assets/products/9848509006122/1_49619286753578.webp",
       "assets/products/9848509006122/2_49672833040682.webp",
       "assets/products/9848509006122/3_49672837038378.webp",
@@ -9714,8 +9883,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 699.0,
-        "image": "assets/products/9848509006122/1_49619286753578.webp",
+        "image": "assets/products/9848509006122/packshot_white_1.webp",
         "images": [
+          "assets/products/9848509006122/packshot_white_1.webp",
           "assets/products/9848509006122/1_49619286753578.png"
         ]
       },
@@ -9880,7 +10050,11 @@
     "colors": [
       {
         "name": "Space Grey",
-        "hex": "#374151"
+        "hex": "#374151",
+        "image": "assets/products/9851899576618/packshot_white_1.webp",
+        "images": [
+          "assets/products/9851899576618/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -9989,7 +10163,11 @@
     "colors": [
       {
         "name": "Titanium Black",
-        "hex": "#111827"
+        "hex": "#111827",
+        "image": "assets/products/9851856716074/packshot_white_1.webp",
+        "images": [
+          "assets/products/9851856716074/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -10102,7 +10280,11 @@
     "colors": [
       {
         "name": "Metallic Silver",
-        "hex": "#CBD5E1"
+        "hex": "#CBD5E1",
+        "image": "assets/products/9851843182890/packshot_white_1.webp",
+        "images": [
+          "assets/products/9851843182890/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -10211,7 +10393,11 @@
     "colors": [
       {
         "name": "Matte Black",
-        "hex": "#1F2937"
+        "hex": "#1F2937",
+        "image": "assets/products/9851840495914/packshot_white_1.webp",
+        "images": [
+          "assets/products/9851840495914/packshot_white_1.webp"
+        ]
       }
     ],
     "models": [],
@@ -10311,8 +10497,9 @@
     "is_mens": true,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/9848506057002/1_50743988650282.webp",
+    "primary_image": "assets/products/9848506057002/packshot_white_1.webp",
     "images": [
+      "assets/products/9848506057002/packshot_white_1.webp",
       "assets/products/9848506057002/1_50743988650282.webp",
       "assets/products/9848506057002/2_49619358777642.webp",
       "assets/products/9848506057002/3_49670271893802.webp",
@@ -10326,8 +10513,9 @@
         "name": "Sky blue",
         "hex": "#38BDF8",
         "price": 699.0,
-        "image": "assets/products/9848506057002/4_49672468169002.webp",
+        "image": "assets/products/9848506057002/packshot_white_1.webp",
         "images": [
+          "assets/products/9848506057002/packshot_white_1.webp",
           "assets/products/9848506057002/4_49672468169002.png"
         ]
       },
@@ -10513,8 +10701,9 @@
         "name": "Black",
         "hex": "#18181B",
         "price": 820.0,
-        "image": "assets/products/9827998794026/18_50218802643242.webp",
+        "image": "assets/products/9827998794026/packshot_white_1.webp",
         "images": [
+          "assets/products/9827998794026/packshot_white_1.webp",
           "assets/products/9827998794026/18_50218802643242.png"
         ]
       },

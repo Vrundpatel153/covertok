@@ -449,33 +449,26 @@
       gridEl.style.minHeight = `${currentHeight}px`;
     }
     gridEl.style.transition = 'opacity 0.12s ease';
-    gridEl.style.opacity = '0.35';
+    gridEl.style.opacity = '0.2';
 
     setTimeout(() => {
       gridEl.innerHTML = '';
       const fragment = document.createDocumentFragment();
       newProducts.forEach((prod) => {
         const card = createCardFn(prod);
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(12px)';
         fragment.appendChild(card);
       });
       gridEl.appendChild(fragment);
 
       requestAnimationFrame(() => {
         gridEl.style.opacity = '1';
-        const cards = gridEl.querySelectorAll('.catalog-card');
-        cards.forEach((card, idx) => {
-          const delay = Math.min(idx * 20, 140);
-          card.style.transition = `transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.3s ease ${delay}ms`;
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        });
         setTimeout(() => {
-          gridEl.style.minHeight = '';
-        }, 250);
+          if (gridEl.offsetHeight > 80) {
+            gridEl.style.minHeight = `${gridEl.offsetHeight}px`;
+          }
+        }, 150);
       });
-    }, 120);
+    }, 100);
   }
 
   // Render Active Filter Chips
@@ -665,7 +658,7 @@
     card.setAttribute('data-id', product.id);
 
     const hasColors = product.colors && product.colors.length > 0;
-    const initialImg = product.primary_image || (hasColors && product.colors[0].image ? product.colors[0].image : '');
+    const initialImg = (hasColors && product.colors[0].image) ? product.colors[0].image : (product.primary_image || '');
 
     // Single Minimalist Luxury Badge (No clutter or duplicate pills)
     let badgeHtml = '';
@@ -1310,12 +1303,14 @@
       const pagedProducts = currentFilteredProducts.slice(startIdx, startIdx + CATALOG_PAGE_SIZE);
       cinematicGridRender(grid, pagedProducts, createProductCard);
 
-      // Smooth scroll back to top of product grid
+      // Intelligent non-jolting scroll: only smooth-scroll if grid top is scrolled far above viewport
       const anchor = document.getElementById('catalogSection') || grid;
       if (anchor) {
         const rect = anchor.getBoundingClientRect();
-        const targetScroll = window.scrollY + rect.top - 90;
-        window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+        if (rect.top < -60 || rect.top > window.innerHeight) {
+          const targetScroll = window.scrollY + rect.top - 80;
+          window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+        }
       }
     }
     renderCatalogPagination(totalPages, currentFilteredProducts.length);

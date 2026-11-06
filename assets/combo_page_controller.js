@@ -441,7 +441,7 @@
     const currentHeight = grid.offsetHeight;
     if (currentHeight > 80) grid.style.minHeight = `${currentHeight}px`;
     grid.style.transition = 'opacity 0.12s ease';
-    grid.style.opacity = '0.35';
+    grid.style.opacity = '0.2';
 
     setTimeout(() => {
       grid.innerHTML = '';
@@ -454,18 +454,13 @@
 
       requestAnimationFrame(() => {
         grid.style.opacity = '1';
-        const cards = grid.querySelectorAll('.combo-catalog-card');
-        cards.forEach((card, idx) => {
-          const delay = Math.min(idx * 20, 140);
-          card.style.transition = `transform 0.35s cubic-bezier(0.19, 1, 0.22, 1) ${delay}ms, opacity 0.3s ease ${delay}ms`;
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        });
         setTimeout(() => {
-          grid.style.minHeight = '';
-        }, 250);
+          if (grid.offsetHeight > 80) {
+            grid.style.minHeight = `${grid.offsetHeight}px`;
+          }
+        }, 150);
       });
-    }, 120);
+    }, 100);
 
     renderComboPagination(totalPages, state.filteredProducts.length);
     setupComboInfiniteScroll(totalPages);
@@ -588,8 +583,10 @@
     const anchor = document.getElementById('comboProductsGrid') || document.querySelector('.combo-builder-layout');
     if (anchor) {
       const rect = anchor.getBoundingClientRect();
-      const targetScroll = window.scrollY + rect.top - 90;
-      window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+      if (rect.top < -60 || rect.top > window.innerHeight) {
+        const targetScroll = window.scrollY + rect.top - 80;
+        window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' });
+      }
     }
   }
 
