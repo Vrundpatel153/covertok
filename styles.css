@@ -4956,11 +4956,11 @@ img {
 
 
 
-  clip-path: url(#heroCardClip);
+  clip-path: url(#heroCurveClip);
 
 
 
-  -webkit-clip-path: url(#heroCardClip);
+  -webkit-clip-path: url(#heroCurveClip);
 
 
 
@@ -52261,9 +52261,9 @@ a.footer-contact-main:hover {
 
   border-radius: 0 !important;
 
-  clip-path: url(#heroCardClip) !important;
+  clip-path: url(#heroCurveClip) !important;
 
-  -webkit-clip-path: url(#heroCardClip) !important;
+  -webkit-clip-path: url(#heroCurveClip) !important;
 
   padding: 0 !important;
 
@@ -53481,8 +53481,8 @@ body.home-page .hero-card {
   margin: 0 !important;
   background: #0A0A0C !important;
   border-radius: 0 !important;
-  clip-path: url(#heroCardClip) !important;
-  -webkit-clip-path: url(#heroCardClip) !important;
+  clip-path: url(#heroCurveClip) !important;
+  -webkit-clip-path: url(#heroCurveClip) !important;
   padding: 0 !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12) !important;
   border: none !important;
@@ -56044,7 +56044,7 @@ html body #siteHeader,
   body.home-page .hero-section {
     position: relative !important;
     width: 100% !important;
-    margin-top: -68px !important;
+    margin-top: 0 !important;
     padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
     margin-bottom: 0 !important;
     display: block !important;
@@ -56055,8 +56055,8 @@ html body #siteHeader,
   }
 
   body.home-page .hero-card {
-    clip-path: url(#heroCardClip) !important;
-    -webkit-clip-path: url(#heroCardClip) !important;
+    clip-path: url(#heroCurveClip) !important;
+    -webkit-clip-path: url(#heroCurveClip) !important;
   }
 }
 
