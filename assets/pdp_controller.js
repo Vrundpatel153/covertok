@@ -1534,9 +1534,9 @@
         ? `Rs. ${Number(p.original_price).toLocaleString('en-IN')}.00`
         : '';
 
-      // Color Swatches Palette: Only show when product has multiple colors (> 1)
+      // Color Swatches Palette: Strictly only show when product has multiple colors (> 1)
       let paletteHtml = '';
-      if (p.colors && p.colors.length >= 1) {
+      if (p.colors && p.colors.length > 1) {
         const cols = p.colors;
         const visible = cols.slice(0, 3);
         const remaining = cols.length - 3;

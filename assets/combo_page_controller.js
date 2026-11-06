@@ -618,8 +618,8 @@
       card.classList.add('is-selected');
     }
 
-    const hasColors = product.colors && product.colors.length >= 1;
-    const initialImg = product.primary_image || ((hasColors && product.colors[0].image) ? product.colors[0].image : 'assets/phone_cream.webp');
+    const hasColors = product.colors && product.colors.length > 1;
+    const initialImg = product.primary_image || ((product.colors && product.colors.length > 0 && product.colors[0].image) ? product.colors[0].image : 'assets/phone_cream.webp');
 
     // Badges HTML
     let badgeHtml = '';
@@ -630,7 +630,7 @@
       badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
     }
 
-    // Color Swatches HTML
+    // Color Swatches HTML: Strictly only show when product has multiple colors (> 1)
     let swatchesHtml = '';
     if (hasColors) {
       const swatches = product.colors.slice(0, 5).map((c) => `

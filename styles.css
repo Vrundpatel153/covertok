@@ -56859,8 +56859,14 @@ html body #siteHeader,
 }
 
 
-/* Clean color palette display - hide empty wrappers, allow single color dots */
-.product-color-palette:empty {
+/* Clean color palette display - hide empty wrappers and single color dots */
+.product-color-palette:empty,
+.product-color-palette:has(> .color-dot:only-child) {
+  display: none !important;
+}
+
+.card-color-swatches:empty,
+.card-color-swatches:has(> .card-color-dot:only-child) {
   display: none !important;
 }
 
