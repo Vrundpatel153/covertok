@@ -56845,7 +56845,17 @@ html body #siteHeader,
 }
 
 .catalog-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px 20px !important;
   margin-bottom: 20px !important;
+}
+
+@media (max-width: 991px) {
+  .catalog-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px 10px !important;
+  }
 }
 
 
