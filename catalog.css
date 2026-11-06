@@ -2343,7 +2343,7 @@
 
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 
   display: block;
 
@@ -3733,7 +3733,7 @@
 
     height: 100% !important;
 
-    object-fit: cover !important;
+    object-fit: contain !important;
 
     display: block !important;
 
@@ -4990,7 +4990,7 @@
   width: 100% !important;
   height: 100% !important;
   max-height: 100% !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   display: block !important;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
 }
@@ -5479,7 +5479,7 @@
   width: 100% !important;
   height: 100% !important;
   max-height: 100% !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   display: block !important;
 }
 

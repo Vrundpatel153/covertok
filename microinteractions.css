@@ -1940,21 +1940,33 @@ body:not(.home-page) #siteHeader,
   box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
 }
 
-/* Card Image Stages & Media Frames */
-.bestseller-card-img-wrap,
-.product-card-media,
-.catalog-card-image-wrap,
+/* Card Image Stages & Media Frames - Pure White Studio Presentation, Zero Cream Borders */
 .card-media-stage,
 .card-img-wrap,
+.catalog-card .card-media-stage,
+.catalog-card .card-img-wrap,
+.combo-catalog-card .card-media-stage,
+.combo-catalog-card .card-img-wrap,
+.product-card-media,
+.catalog-card-image-wrap,
 .combo-card-image-wrap,
-.drop-card-media,
 .popular-card-img-wrap {
-  background: linear-gradient(135deg, rgba(248, 246, 242, 0.72) 0%, rgba(238, 234, 227, 0.52) 100%) !important;
-  backdrop-filter: var(--liquid-glass-blur-soft) !important;
-  -webkit-backdrop-filter: var(--liquid-glass-blur-soft) !important;
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  background: #FFFFFF !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 17px 17px 0 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.bestseller-card-img-wrap,
+.drop-card-media {
+  background: #FFFFFF !important;
+  border: none !important;
   border-radius: 18px !important;
-  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02) !important;
 }
 
 /* Card Floating Badges & Selection Chips */
