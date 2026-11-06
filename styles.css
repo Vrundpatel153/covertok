@@ -51976,17 +51976,17 @@ a.footer-contact-main:hover {
 
   bottom: 0 !important;
 
-  right: 0 !important;
+  right: clamp(20px, 3vw, 54px) !important;
 
   left: auto !important;
 
   transform: none !important;
 
-  height: clamp(460px, 86%, 600px) !important;
+  height: clamp(420px, 82%, 560px) !important;
 
-  max-height: calc(100% - 68px) !important;
+  max-height: calc(100% - 88px) !important;
 
-  width: clamp(330px, 34vw, 500px) !important;
+  width: clamp(320px, 32vw, 480px) !important;
 
   z-index: 4 !important;
 
@@ -52292,17 +52292,17 @@ a.footer-contact-main:hover {
 
     bottom: 0 !important;
 
-    right: clamp(10px, 2vw, 36px) !important;
+    right: clamp(20px, 3vw, 54px) !important;
 
     left: auto !important;
 
     transform: none !important;
 
-    height: clamp(460px, 86%, 600px) !important;
+    height: clamp(420px, 82%, 560px) !important;
 
-    max-height: calc(100% - 68px) !important;
+    max-height: calc(100% - 88px) !important;
 
-    width: clamp(330px, 34vw, 500px) !important;
+    width: clamp(320px, 32vw, 480px) !important;
 
     z-index: 4 !important;
 
@@ -55722,7 +55722,6 @@ body.home-page .hero-content {
 .btn-circle-arrow,
 .close-btn,
 .announcement-close-btn,
-.mobile-toggle-btn,
 .drops-nav-btn,
 .pop-nav-btn,
 .reviews-nav-btn,
@@ -55739,6 +55738,26 @@ body.home-page .hero-content {
   align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
+}
+
+/* Mobile Toggle Hamburger Button: Strictly hidden on desktop (>= 992px), styled on mobile (<= 991px) */
+@media (min-width: 992px) {
+  .mobile-toggle-btn,
+  #mobileMenuBtn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .mobile-toggle-btn,
+  #mobileMenuBtn {
+    flex-shrink: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* FAQ Chevron: exactly 32x32px circle, never stretched into oval */
@@ -56225,67 +56244,78 @@ html body #siteHeader,
 /* ==========================================================================
    MOBILE BURGER MENU PILL (IDENTICAL MATCH TO SEARCH & CART BUTTONS)
    ========================================================================== */
-.mobile-toggle-btn,
-#mobileMenuBtn,
-#mobileMenuToggle,
-#mobileNavOpen {
-  width: 42px !important;
-  height: 42px !important;
-  min-width: 42px !important;
-  min-height: 42px !important;
-  border-radius: 50% !important;
-  background: #FFFFFF !important;
-  background-color: #FFFFFF !important;
-  border: 1px solid #E5E7EB !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  color: #0A0A0A !important;
-  cursor: pointer !important;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  padding: 0 !important;
-  outline: none !important;
-  flex-shrink: 0 !important;
+@media (min-width: 992px) {
+  .mobile-toggle-btn,
+  #mobileMenuBtn,
+  #mobileMenuToggle,
+  #mobileNavOpen {
+    display: none !important;
+  }
 }
 
-.mobile-toggle-btn svg,
-#mobileMenuBtn svg,
-#mobileMenuToggle svg,
-#mobileNavOpen svg {
-  stroke: #0A0A0A !important;
-  color: #0A0A0A !important;
-  width: 20px !important;
-  height: 20px !important;
-  display: block !important;
-  transition: stroke 0.2s ease !important;
-}
+@media (max-width: 991px) {
+  .mobile-toggle-btn,
+  #mobileMenuBtn,
+  #mobileMenuToggle,
+  #mobileNavOpen {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    border-radius: 50% !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #0A0A0A !important;
+    cursor: pointer !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    padding: 0 !important;
+    outline: none !important;
+    flex-shrink: 0 !important;
+  }
 
-.mobile-toggle-btn:hover,
-#mobileMenuBtn:hover,
-#mobileMenuToggle:hover,
-#mobileNavOpen:hover {
-  background: #000000 !important;
-  background-color: #000000 !important;
-  border-color: #000000 !important;
-  color: #FFFFFF !important;
-  transform: translateY(-2px) scale(1.04) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-}
+  .mobile-toggle-btn svg,
+  #mobileMenuBtn svg,
+  #mobileMenuToggle svg,
+  #mobileNavOpen svg {
+    stroke: #0A0A0A !important;
+    color: #0A0A0A !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+    transition: stroke 0.2s ease !important;
+  }
 
-.mobile-toggle-btn:hover svg,
-#mobileMenuBtn:hover svg,
-#mobileMenuToggle:hover svg,
-#mobileNavOpen:hover svg {
-  stroke: #FFFFFF !important;
-  color: #FFFFFF !important;
-}
+  .mobile-toggle-btn:hover,
+  #mobileMenuBtn:hover,
+  #mobileMenuToggle:hover,
+  #mobileNavOpen:hover {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) scale(1.04) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
 
-.mobile-toggle-btn:active,
-#mobileMenuBtn:active,
-#mobileMenuToggle:active,
-#mobileNavOpen:active {
-  transform: scale(0.94) !important;
+  .mobile-toggle-btn:hover svg,
+  #mobileMenuBtn:hover svg,
+  #mobileMenuToggle:hover svg,
+  #mobileNavOpen:hover svg {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
+  }
+
+  .mobile-toggle-btn:active,
+  #mobileMenuBtn:active,
+  #mobileMenuToggle:active,
+  #mobileNavOpen:active {
+    transform: scale(0.94) !important;
+  }
 }
 
 @media (max-width: 768px) {
