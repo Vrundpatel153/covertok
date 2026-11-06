@@ -97,100 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // --------------------------------------------------------------------------
-  // 2. Videos Horizontal Track Swipe & Mouse Drag Navigation
+  // 2. Videos Track Infinite Swiping & PC Buttons Managed by InfiniteRowController
   // --------------------------------------------------------------------------
-  const videosTrack = document.getElementById('videosTrack');
-  const videoPrevBtn = document.getElementById('videoPrevBtn');
-  const videoNextBtn = document.getElementById('videoNextBtn');
-
-  if (videosTrack) {
-    const getVideoCardWidth = () => {
-      const firstCard = videosTrack.querySelector('.video-reel-card');
-      if (firstCard) {
-        const style = window.getComputedStyle(firstCard);
-        const margin = parseInt(style.marginRight, 10) || 18;
-        return firstCard.offsetWidth + margin;
-      }
-      return 234;
-    };
-
-    const updateVideoNavButtons = () => {
-      if (!videoPrevBtn || !videoNextBtn) return;
-      const atStart = videosTrack.scrollLeft <= 5;
-      const atEnd = videosTrack.scrollLeft + videosTrack.clientWidth >= videosTrack.scrollWidth - 5;
-      videoPrevBtn.style.opacity = atStart ? '0.4' : '1';
-      videoPrevBtn.style.pointerEvents = atStart ? 'none' : 'auto';
-      videoNextBtn.style.opacity = atEnd ? '0.4' : '1';
-      videoNextBtn.style.pointerEvents = atEnd ? 'none' : 'auto';
-    };
-
-    if (videoPrevBtn) {
-      videoPrevBtn.addEventListener('click', () => {
-        const step = getVideoCardWidth();
-        videosTrack.scrollBy({ left: -step, behavior: 'smooth' });
-      });
-    }
-
-    if (videoNextBtn) {
-      videoNextBtn.addEventListener('click', () => {
-        const step = getVideoCardWidth();
-        videosTrack.scrollBy({ left: step, behavior: 'smooth' });
-      });
-    }
-
-    // Interactive Drag to Swipe (Desktop Mouse & Pointer)
-    let isDown = false;
-    let startX = 0;
-    let initialScrollLeft = 0;
-    let isDragging = false;
-    const dragThreshold = 6;
-
-    videosTrack.addEventListener('pointerdown', (e) => {
-      if (e.target.closest('button, a')) return;
-      isDown = true;
-      isDragging = false;
-      startX = e.pageX - videosTrack.offsetLeft;
-      initialScrollLeft = videosTrack.scrollLeft;
-    });
-
-    window.addEventListener('pointermove', (e) => {
-      if (!isDown) return;
-      const x = e.pageX - videosTrack.offsetLeft;
-      const walk = (x - startX) * 1.3;
-      if (Math.abs(walk) > dragThreshold) {
-        if (!isDragging) {
-          isDragging = true;
-          videosTrack.classList.add('is-dragging');
-        }
-        videosTrack.scrollLeft = initialScrollLeft - walk;
-      }
-    });
-
-    const endDrag = () => {
-      if (!isDown) return;
-      isDown = false;
-      setTimeout(() => {
-        isDragging = false;
-        videosTrack.classList.remove('is-dragging');
-      }, 60);
-    };
-
-    window.addEventListener('pointerup', endDrag);
-    window.addEventListener('pointercancel', endDrag);
-
-    // Prevent modal opening when dragging
-    videosTrack.querySelectorAll('.video-reel-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        if (isDragging) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-      }, true);
-    });
-
-    videosTrack.addEventListener('scroll', updateVideoNavButtons, { passive: true });
-    updateVideoNavButtons();
-  }
 
   // --------------------------------------------------------------------------
   // 3. Interactive Video Reel Modal Lightbox
@@ -257,15 +165,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Attach click listeners to all video cards
-  document.querySelectorAll('.video-reel-card').forEach((card, idx) => {
-    card.addEventListener('click', (e) => {
-      // Allow direct link clicks if any
-      if (e.target.closest('a')) return;
-      const indexAttr = card.getAttribute('data-video-index');
-      const targetIndex = indexAttr !== null ? parseInt(indexAttr, 10) : idx;
+  // Delegated click and keyboard activation for all video cards (both original & cloned in infinite track)
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.video-reel-card');
+    if (!card) return;
+    if (e.target.closest('a, button')) return;
+    const indexAttr = card.getAttribute('data-video-index');
+    const targetIndex = indexAttr !== null ? parseInt(indexAttr, 10) : 0;
+    if (!isNaN(targetIndex)) {
       openReelModal(targetIndex);
-    });
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === 'Enter' || e.key === ' ') && !e.target.closest('a, button')) {
+      const card = e.target.closest('.video-reel-card');
+      if (card && (!reelModal || !reelModal.classList.contains('active'))) {
+        e.preventDefault();
+        const indexAttr = card.getAttribute('data-video-index');
+        const targetIndex = indexAttr !== null ? parseInt(indexAttr, 10) : 0;
+        if (!isNaN(targetIndex)) {
+          openReelModal(targetIndex);
+        }
+      }
+    }
   });
 
   if (modalShopBtn) {

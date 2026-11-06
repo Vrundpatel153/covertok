@@ -47335,33 +47335,67 @@ a.footer-contact-main:hover {
 
 
 .community-header-row,
-
-
-
 .reviews-header-row {
-
-
-
   display: flex;
-
-
-
   align-items: flex-end;
-
-
-
   justify-content: space-between;
-
-
-
   gap: 24px;
-
-
-
   margin-bottom: 34px;
+}
 
+/* Community Videos PC Nav Controls */
+.community-nav-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
 
+.community-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: #0A0A0C;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
 
+.community-nav-btn::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  pointer-events: auto;
+}
+
+.community-nav-btn svg {
+  pointer-events: none;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.community-nav-btn:hover {
+  background: #0A0A0C;
+  color: #FFFFFF;
+  border-color: #0A0A0C;
+  transform: scale(1.06);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.community-nav-btn:active,
+.community-nav-btn.btn-clicked {
+  transform: scale(0.94);
+  background: #0A0A0C;
+  color: #FFFFFF;
 }
 
 
@@ -47747,61 +47781,38 @@ a.footer-contact-main:hover {
 
 
 .videos-slider-wrapper {
-
-
-
   position: relative;
-
-
-
   width: 100%;
-
-
-
+  overflow: hidden !important;
+  cursor: grab;
 }
 
-
-
-
-
-
+.videos-slider-wrapper:active {
+  cursor: grabbing;
+}
 
 .videos-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 18px !important;
+  width: max-content !important;
+  max-width: none !important;
+  overflow: visible !important;
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+  touch-action: pan-y !important;
+  will-change: transform !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  padding: 10px 4px 16px 4px !important;
+  margin: 0 !important;
+  cursor: grab !important;
+}
 
-
-
-  display: flex;
-
-
-
-  gap: 16px;
-
-
-
-  overflow-x: auto;
-
-
-
-  scroll-snap-type: x mandatory;
-
-
-
-  scroll-behavior: smooth;
-
-
-
-  scrollbar-width: none;
-
-
-
-  -webkit-overflow-scrolling: touch;
-
-
-
-  padding: 10px 4px 16px 4px;
-
-
-
+.videos-track.is-dragging {
+  cursor: grabbing !important;
 }
 
 
@@ -50109,18 +50120,12 @@ a.footer-contact-main:hover {
 
 
   .video-reel-card {
-
-
-
-    flex: 0 0 175px;
-
-
-
-    min-width: 175px;
-
-
-
-    border-radius: 16px;
+    flex: 0 0 175px !important;
+    width: 175px !important;
+    min-width: 175px !important;
+    max-width: 175px !important;
+    border-radius: 16px !important;
+  }
 
 
 
@@ -51568,9 +51573,16 @@ a.footer-contact-main:hover {
 
 
   transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease !important;
+}
 
-
-
+@media (max-width: 768px) {
+  .video-reel-card {
+    flex: 0 0 175px !important;
+    width: 175px !important;
+    min-width: 175px !important;
+    max-width: 175px !important;
+    border-radius: 16px !important;
+  }
 }
 
 
@@ -55214,6 +55226,12 @@ body.home-page .hero-content {
   .drops-nav-next,
   #dropsPrevBtn,
   #dropsNextBtn,
+  .community-nav-controls,
+  .community-nav-btn,
+  .community-nav-prev,
+  .community-nav-next,
+  #videoPrevBtn,
+  #videoNextBtn,
   .reviews-nav-btn,
   .reviews-nav-prev,
   .reviews-nav-next,

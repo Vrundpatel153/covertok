@@ -82,6 +82,19 @@
       track.appendChild(frag);
     }
 
+    // Ensure all videos in track (originals and clones) play continuously
+    const inlineVideos = track.querySelectorAll('video');
+    if (inlineVideos.length > 0) {
+      inlineVideos.forEach((v) => {
+        v.muted = true;
+        v.setAttribute('muted', '');
+        v.setAttribute('playsinline', '');
+        v.setAttribute('webkit-playsinline', '');
+        const p = v.play();
+        if (p !== undefined) p.catch(() => {});
+      });
+    }
+
     // Suppress native browser image ghost-dragging
     track.addEventListener('dragstart', (e) => e.preventDefault());
     track.style.touchAction = 'pan-y';
@@ -730,8 +743,19 @@
       wireNavButton(nextBtn2, () => popTrack2._stepNext && popTrack2._stepNext());
     }
 
-    // 4. Community Videos Track (#videosTrack) - Auto sliding removed as requested
-    // Reels section is kept static and not auto-sliding
+    // 4. Community Videos Track (#videosTrack) (Infinite Loop Swiping in Both Directions)
+    const videosTrack = document.getElementById('videosTrack');
+    if (videosTrack) {
+      setupInfiniteLoopSwipeRow(videosTrack, {
+        uniqueCount: 6,
+        cloneMultiplier: 3 // 4 cycles total (24 cards)
+      });
+
+      const videoPrevBtn = document.getElementById('videoPrevBtn');
+      const videoNextBtn = document.getElementById('videoNextBtn');
+      wireNavButton(videoPrevBtn, () => videosTrack._stepPrev && videosTrack._stepPrev());
+      wireNavButton(videoNextBtn, () => videosTrack._stepNext && videosTrack._stepNext());
+    }
 
     // 5. Customer Reviews Track (#reviewsTrack) (Continuous Marquee)
     const reviewsTrack = document.getElementById('reviewsTrack');
