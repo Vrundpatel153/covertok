@@ -2095,15 +2095,16 @@ img {
 
   background: var(--brand-orange, #E77242);
 
-
-
 }
 
-
-
-
-
-
+@media (min-width: 992px) and (max-width: 1440px) {
+  .nav-list {
+    gap: clamp(12px, 1.2vw, 18px) !important;
+  }
+  .header-left {
+    gap: clamp(14px, 1.6vw, 24px) !important;
+  }
+}
 
 @media (max-width: 1100px) and (min-width: 769px) {
 
@@ -51981,11 +51982,11 @@ a.footer-contact-main:hover {
 
   transform: none !important;
 
-  height: 104% !important;
+  height: clamp(460px, 86%, 600px) !important;
 
-  max-height: 670px !important;
+  max-height: calc(100% - 68px) !important;
 
-  width: clamp(360px, 40vw, 540px) !important;
+  width: clamp(330px, 34vw, 500px) !important;
 
   z-index: 4 !important;
 
@@ -52289,19 +52290,19 @@ a.footer-contact-main:hover {
 
     position: absolute !important;
 
-    bottom: -32px !important;
+    bottom: 0 !important;
 
-    right: -28px !important;
+    right: clamp(10px, 2vw, 36px) !important;
 
     left: auto !important;
 
     transform: none !important;
 
-    height: 106% !important;
+    height: clamp(460px, 86%, 600px) !important;
 
-    max-height: 740px !important;
+    max-height: calc(100% - 68px) !important;
 
-    width: clamp(420px, 42vw, 580px) !important;
+    width: clamp(330px, 34vw, 500px) !important;
 
     z-index: 4 !important;
 

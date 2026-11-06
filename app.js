@@ -1264,6 +1264,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    if (typeof window.fitHeroWindow === 'function') {
+
+      window.fitHeroWindow();
+
+    }
+
     if (heroSlideCounter) {
 
       heroSlideCounter.textContent = `0${idx + 1} / 0${heroSlides.length}`;

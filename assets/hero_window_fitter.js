@@ -56,21 +56,23 @@
     const dockRight = arrowRect ? (arrowRect.right - cRect.left) : (pillRect ? (pillRect.right - cRect.left + 60) : 260);
 
     // 1. Top riser curve (starts right after CONTACT US link, rises to y=yTopPeak)
-    const topRiseX1 = Math.max(0.40, Math.min(0.55, (hlRight + 20) / cardW));
-    const topRiseX2 = Math.min(topRiseX1 + 0.038, 0.62);
+    // On ultra-wide screens (1920px+), anchor around 0.50 for spacious symmetry.
+    // On 15.6" laptops (1280px-1536px), dynamically adapt past CONTACT US with clean 32px breathing room.
+    const topRiseX1 = Math.max(0.50, Math.min(0.72, (hlRight + 32) / cardW));
+    const topRiseX2 = Math.min(topRiseX1 + 0.038, 0.78);
 
     // 2. Top drop curve (starts before utility icons, drops to y=yTopBase)
-    const topDropX4 = Math.max(topRiseX2 + 0.12, Math.min(0.92, (hrLeft - 20) / cardW));
-    const topDropX3 = Math.max(topRiseX2 + 0.08, topDropX4 - 0.038);
+    const topDropX4 = Math.min(0.96, Math.max(topRiseX2 + 0.06, (hrLeft - 24) / cardW));
+    const topDropX3 = Math.max(topRiseX2 + 0.03, topDropX4 - 0.038);
 
-    // 3. Bottom step curve (Shelf envelopes BOTH pill & arrow button with balanced overhang, then sweeps gracefully to the floor)
-    const shelfOverhang = 18;
-    const curveSpan = 88;
+    // 3. Bottom step curve (Shelf envelopes BOTH pill & arrow button with balanced 32px overhang, then sweeps gracefully to the floor)
+    const shelfOverhang = 32;
+    const curveSpan = 54;
 
     const shelfEndPx = dockRight + shelfOverhang;
     const curveFloorPx = shelfEndPx + curveSpan;
-    const botStepX2 = Math.min(0.38, shelfEndPx / cardW);
-    const botStepX1 = Math.min(0.48, curveFloorPx / cardW);
+    const botStepX2 = Math.max(0.19, Math.min(0.40, shelfEndPx / cardW));
+    const botStepX1 = Math.max(botStepX2 + 0.03, Math.min(0.46, curveFloorPx / cardW));
 
     // Vertical landmarks
     // Baseline y: under nav links
