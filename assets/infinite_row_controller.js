@@ -62,8 +62,14 @@
       uniqueCount = 8;
     }
 
-    // Clone cards to ensure at least 3-4 full cycles of cards exist
-    const cloneMultiplier = options.cloneMultiplier !== undefined ? options.cloneMultiplier : (originalCount < 12 ? 2 : 1);
+    // Clone cards to ensure at least 4 full cycles (32+ cards) exist for deep wrap buffer
+    let cloneMultiplier = options.cloneMultiplier;
+    if (cloneMultiplier === undefined) {
+      if (originalCount <= 8) cloneMultiplier = 3;
+      else if (originalCount <= 16) cloneMultiplier = 1;
+      else cloneMultiplier = 1;
+    }
+
     for (let m = 0; m < cloneMultiplier; m++) {
       const frag = document.createDocumentFragment();
       originalCards.forEach((card) => {
@@ -83,48 +89,122 @@
     track.style.willChange = 'transform';
     track.style.animation = 'none';
 
-    let cycleWidth = 0;
-    let cardStep = 0;
-
-    function measureMetrics() {
+    function getCardStep() {
       const children = track.children;
-      if (children.length > uniqueCount && children[uniqueCount] && children[0]) {
-        cycleWidth = children[uniqueCount].offsetLeft - children[0].offsetLeft;
-      } else if (children.length > 1) {
-        const singleW = children[0].offsetWidth;
-        const gap = children[1].offsetLeft - (children[0].offsetLeft + singleW);
-        cycleWidth = (singleW + gap) * uniqueCount;
+      if (children.length > 1 && children[0] && children[1]) {
+        const step = children[1].offsetLeft - children[0].offsetLeft;
+        if (step > 40) return step;
       }
-
-      if (children.length > 1 && children[0]) {
-        cardStep = children[1].offsetLeft - children[0].offsetLeft;
-      } else if (children[0]) {
-        cardStep = children[0].offsetWidth;
+      if (children[0] && children[0].offsetWidth > 40) {
+        return children[0].offsetWidth;
       }
-
-      if (!cardStep || isNaN(cardStep)) cardStep = 280;
-      if (!cycleWidth || isNaN(cycleWidth)) cycleWidth = cardStep * uniqueCount;
+      return 288;
     }
 
-    measureMetrics();
+    function getCycleWidth() {
+      const children = track.children;
+      if (children.length > uniqueCount && children[uniqueCount] && children[0]) {
+        const w = children[uniqueCount].offsetLeft - children[0].offsetLeft;
+        if (w > 100) return w;
+      }
+      return getCardStep() * uniqueCount;
+    }
 
-    // Start in the middle cycle (Cycle 1) so user can immediately swipe left OR right indefinitely
-    const initialOffset = options.initialOffsetIndex ? (options.initialOffsetIndex * cardStep) : 0;
-    let currentX = -cycleWidth - initialOffset;
+    // Start in Cycle 2 (center cycle) so user has at least 16 cards of headroom in both directions
+    const initialStep = getCardStep();
+    const initialCycle = getCycleWidth();
+    const initialOffsetIndex = options.initialOffsetIndex || 0;
+
+    let currentX = -2 * initialCycle - (initialOffsetIndex * initialStep);
+    let targetX = currentX;
+    let isAnimating = false;
+    let settleTimer = null;
+
     track.style.transition = 'none';
     track.style.transform = `translate3d(${currentX}px, 0, 0)`;
 
-    // Recalculate metrics on resize / orientation change
+    // Normalization logic: smoothly fold currentX and targetX back into the safe central cycles [-3 * cycle, -1 * cycle]
+    function normalizeCenter() {
+      const cycle = getCycleWidth();
+      const step = getCardStep();
+      if (cycle <= 0 || step <= 0) return;
+
+      let normalized = Math.round(targetX / step) * step;
+      while (normalized < -3 * cycle) {
+        normalized += cycle;
+      }
+      while (normalized > -1 * cycle) {
+        normalized -= cycle;
+      }
+
+      if (normalized !== targetX) {
+        currentX = normalized;
+        targetX = normalized;
+        track.style.transition = 'none';
+        track.style.transform = `translate3d(${normalized}px, 0, 0)`;
+        void track.offsetHeight;
+      }
+    }
+
+    function onSettle() {
+      if (settleTimer) {
+        clearTimeout(settleTimer);
+        settleTimer = null;
+      }
+      isAnimating = false;
+      currentX = targetX;
+      normalizeCenter();
+    }
+
+    function animateTo(destX, durationSec = 0.30) {
+      isAnimating = true;
+      targetX = destX;
+      track.style.transition = `transform ${durationSec}s cubic-bezier(0.22, 1, 0.36, 1)`;
+      track.style.transform = `translate3d(${targetX}px, 0, 0)`;
+
+      if (settleTimer) clearTimeout(settleTimer);
+      settleTimer = setTimeout(onSettle, (durationSec * 1000) + 40);
+    }
+
+    track.addEventListener('transitionend', (e) => {
+      if (e.target !== track || e.propertyName !== 'transform') return;
+      onSettle();
+    });
+
+    // Resize listener: snap cleanly to card boundaries without fractional distortion
     window.addEventListener('resize', () => {
-      const prevCycle = cycleWidth;
-      measureMetrics();
-      if (prevCycle > 0 && cycleWidth > 0 && prevCycle !== cycleWidth) {
-        const ratio = currentX / prevCycle;
-        currentX = ratio * cycleWidth;
-        normalizePosition();
+      const step = getCardStep();
+      if (step > 0) {
+        currentX = Math.round(currentX / step) * step;
+        targetX = currentX;
+        track.style.transition = 'none';
+        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+        normalizeCenter();
       }
     });
 
+    // Prev / Next button controllers (Deterministic, rapid-click queuing, 0 latency)
+    function stepPrev() {
+      const step = getCardStep();
+      if (settleTimer) {
+        clearTimeout(settleTimer);
+        settleTimer = null;
+      }
+      targetX = Math.round(targetX / step) * step + step;
+      animateTo(targetX, 0.30);
+    }
+
+    function stepNext() {
+      const step = getCardStep();
+      if (settleTimer) {
+        clearTimeout(settleTimer);
+        settleTimer = null;
+      }
+      targetX = Math.round(targetX / step) * step - step;
+      animateTo(targetX, 0.30);
+    }
+
+    // Touch & Mouse Drag Handlers
     let isDragging = false;
     let hasDragged = false;
     let startX = 0;
@@ -134,35 +214,19 @@
     let lastTime = 0;
     let velocity = 0;
     let lockedHorizontal = false;
-    let isTransitioning = false;
-    let normTimer = null;
-
-    function normalizePosition() {
-      if (cycleWidth <= 0) return;
-      // Keep currentX strictly within the middle safe window [-2 * cycleWidth, -cycleWidth]
-      let normalized = currentX;
-      while (normalized > -cycleWidth) {
-        normalized -= cycleWidth;
-      }
-      while (normalized <= -2 * cycleWidth) {
-        normalized += cycleWidth;
-      }
-      if (normalized !== currentX) {
-        currentX = normalized;
-        track.style.transition = 'none';
-        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-      }
-    }
 
     function onStart(clientX, clientY) {
-      if (isTransitioning) {
-        clearTimeout(normTimer);
+      if (settleTimer) {
+        clearTimeout(settleTimer);
+        settleTimer = null;
+      }
+      if (isAnimating) {
         currentX = getCurrentTranslateX(track);
+        targetX = currentX;
         track.style.transition = 'none';
         track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-        isTransitioning = false;
+        isAnimating = false;
       }
-      normalizePosition();
 
       startX = clientX;
       startY = clientY;
@@ -189,7 +253,6 @@
         const absX = Math.abs(deltaX);
         const absY = Math.abs(deltaY);
 
-        // If vertical movement dominates or user is scrolling the page, release immediately to native page scroll
         if (absY >= absX && absY > 5) {
           isDragging = false;
           track.classList.remove('is-dragging');
@@ -197,12 +260,10 @@
           return;
         }
 
-        // Only lock into horizontal carousel swiping when horizontal movement clearly dominates
-        if (absX > absY && absX > 10) {
+        if (absX > absY && absX > 8) {
           lockedHorizontal = true;
           hasDragged = true;
         } else {
-          // Gesture direction ambiguous: yield and do not move track or preventDefault
           return;
         }
       }
@@ -218,21 +279,21 @@
         lastX = clientX;
         lastTime = now;
 
-        let targetX = baseX + deltaX;
-
-        // SEAMLESS INFINITE WRAPPING DURING CONTINUOUS DRAGGING:
-        // When dragging right past the middle cycle threshold:
-        while (targetX > -cycleWidth) {
-          targetX -= cycleWidth;
-          baseX -= cycleWidth;
+        let newX = baseX + deltaX;
+        const cycle = getCycleWidth();
+        if (cycle > 0) {
+          while (newX < -3 * cycle) {
+            newX += cycle;
+            baseX += cycle;
+          }
+          while (newX > -1 * cycle) {
+            newX -= cycle;
+            baseX -= cycle;
+          }
         }
-        // When dragging left past the middle cycle threshold:
-        while (targetX <= -2 * cycleWidth) {
-          targetX += cycleWidth;
-          baseX += cycleWidth;
-        }
 
-        currentX = targetX;
+        currentX = newX;
+        targetX = newX;
         track.style.transform = `translate3d(${currentX}px, 0, 0)`;
       }
     }
@@ -243,38 +304,27 @@
       track.classList.remove('is-dragging');
       track.style.cursor = 'grab';
 
+      const step = getCardStep();
       if (hasDragged) {
-        // If finger stayed still before lifting, zero velocity
         if (Date.now() - lastTime > 120) {
           velocity = 0;
         }
-
-        const glide = Math.max(-650, Math.min(650, velocity * 240));
-        let targetX = currentX + glide;
-
-        // Snap to clean card alignment
-        if (cardStep > 0) {
-          targetX = Math.round(targetX / cardStep) * cardStep;
+        const glide = Math.max(-650, Math.min(650, velocity * 220));
+        let dest = currentX + glide;
+        if (step > 0) {
+          dest = Math.round(dest / step) * step;
         }
-
-        animateTo(targetX, 0.45);
+        animateTo(dest, 0.36);
+      } else {
+        if (step > 0) {
+          const dest = Math.round(currentX / step) * step;
+          if (Math.abs(dest - currentX) > 1) {
+            animateTo(dest, 0.22);
+          }
+        }
       }
     }
 
-    function animateTo(targetX, durationSec = 0.42) {
-      isTransitioning = true;
-      currentX = targetX;
-      track.style.transition = `transform ${durationSec}s cubic-bezier(0.16, 1, 0.3, 1)`;
-      track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-
-      clearTimeout(normTimer);
-      normTimer = setTimeout(() => {
-        isTransitioning = false;
-        normalizePosition();
-      }, durationSec * 1000 + 40);
-    }
-
-    // Mouse Listeners
     track.addEventListener('mousedown', (e) => {
       if (e.button !== 0) return;
       onStart(e.clientX, e.clientY);
@@ -288,7 +338,6 @@
       if (isDragging) onEnd();
     });
 
-    // Touch Listeners (Mobile & Tablet)
     track.addEventListener('touchstart', (e) => {
       if (e.touches.length === 1) {
         onStart(e.touches[0].clientX, e.touches[0].clientY);
@@ -309,30 +358,24 @@
       if (isDragging) onEnd();
     }, { passive: true });
 
-    // Two-Finger Trackpad & Shift+Mouse Wheel (Strictly Horizontal Only)
     const wrap = track.parentElement;
     if (wrap) {
       wrap.addEventListener('wheel', (e) => {
-        // Intercept ONLY if the gesture is predominantly horizontal or if Shift is held
         const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
         const delta = isHorizontal ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
-
         if (Math.abs(delta) > 1) {
           e.preventDefault();
-          if (isTransitioning) {
-            clearTimeout(normTimer);
-            track.style.transition = 'none';
-            isTransitioning = false;
-          }
+          if (settleTimer) clearTimeout(settleTimer);
+          track.style.transition = 'none';
+          isAnimating = false;
           currentX -= delta;
-          normalizePosition();
+          targetX = currentX;
+          normalizeCenter();
           track.style.transform = `translate3d(${currentX}px, 0, 0)`;
         }
-        // If vertical scroll (delta === 0): do nothing, let browser natively scroll the page vertically!
       }, { passive: false });
     }
 
-    // Suppress link/button clicks if user dragged
     track.addEventListener('click', (e) => {
       if (hasDragged) {
         e.preventDefault();
@@ -341,34 +384,11 @@
       }
     }, true);
 
-    // Prev / Next button controllers (Infinite wrapping steps)
-    function stepPrev() {
-      if (isTransitioning) {
-        clearTimeout(normTimer);
-      } else {
-        normalizePosition();
-        void track.offsetWidth;
-      }
-      const target = currentX + (cardStep || 280);
-      animateTo(target, 0.40);
-    }
-
-    function stepNext() {
-      if (isTransitioning) {
-        clearTimeout(normTimer);
-      } else {
-        normalizePosition();
-        void track.offsetWidth;
-      }
-      const target = currentX - (cardStep || 280);
-      animateTo(target, 0.40);
-    }
-
     track._stepPrev = stepPrev;
     track._stepNext = stepNext;
-    track._normalizePosition = normalizePosition;
+    track._normalizePosition = normalizeCenter;
 
-    return { stepPrev, stepNext, normalizePosition };
+    return { stepPrev, stepNext, normalizePosition: normalizeCenter };
   }
 
   /**
@@ -659,6 +679,31 @@
     }, true);
   }
 
+  function wireNavButton(btn, stepFn) {
+    if (!btn) return;
+    btn.setAttribute('tabindex', '0');
+    btn.setAttribute('role', 'button');
+    btn.style.pointerEvents = 'auto';
+    btn.style.cursor = 'pointer';
+
+    const trigger = (e) => {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      btn.classList.add('btn-clicked');
+      setTimeout(() => btn.classList.remove('btn-clicked'), 140);
+      stepFn();
+    };
+
+    btn.addEventListener('click', trigger);
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        trigger(e);
+      }
+    });
+  }
+
   function initAllInfiniteRows() {
     initGlobalCardDelegation();
 
@@ -667,25 +712,13 @@
     if (dropsTrack) {
       setupInfiniteLoopSwipeRow(dropsTrack, {
         uniqueCount: 8,
-        cloneMultiplier: 2 // 3 cycles total (24 cards)
+        cloneMultiplier: 3 // 4 cycles total (32 cards)
       });
 
       const prevBtn = document.getElementById('dropsPrevBtn');
       const nextBtn = document.getElementById('dropsNextBtn');
-
-      if (prevBtn) {
-        prevBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (dropsTrack._stepPrev) dropsTrack._stepPrev();
-        });
-      }
-
-      if (nextBtn) {
-        nextBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (dropsTrack._stepNext) dropsTrack._stepNext();
-        });
-      }
+      wireNavButton(prevBtn, () => dropsTrack._stepPrev && dropsTrack._stepPrev());
+      wireNavButton(nextBtn, () => dropsTrack._stepNext && dropsTrack._stepNext());
     }
 
     // 2. Popular Choices Row 1: iPhone Covers (Infinite Loop Swiping in Both Directions)
@@ -698,20 +731,8 @@
 
       const prevBtn1 = document.getElementById('popCoversPrevBtn');
       const nextBtn1 = document.getElementById('popCoversNextBtn');
-
-      if (prevBtn1) {
-        prevBtn1.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (popTrack1._stepPrev) popTrack1._stepPrev();
-        });
-      }
-
-      if (nextBtn1) {
-        nextBtn1.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (popTrack1._stepNext) popTrack1._stepNext();
-        });
-      }
+      wireNavButton(prevBtn1, () => popTrack1._stepPrev && popTrack1._stepPrev());
+      wireNavButton(nextBtn1, () => popTrack1._stepNext && popTrack1._stepNext());
     }
 
     // 3. Popular Choices Row 2: Watch Bands (Infinite Loop Swiping in Both Directions)
@@ -725,20 +746,8 @@
 
       const prevBtn2 = document.getElementById('popBandsPrevBtn');
       const nextBtn2 = document.getElementById('popBandsNextBtn');
-
-      if (prevBtn2) {
-        prevBtn2.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (popTrack2._stepPrev) popTrack2._stepPrev();
-        });
-      }
-
-      if (nextBtn2) {
-        nextBtn2.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (popTrack2._stepNext) popTrack2._stepNext();
-        });
-      }
+      wireNavButton(prevBtn2, () => popTrack2._stepPrev && popTrack2._stepPrev());
+      wireNavButton(nextBtn2, () => popTrack2._stepNext && popTrack2._stepNext());
     }
 
     // 4. Community Videos Track (#videosTrack) - Auto sliding removed as requested
