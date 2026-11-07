@@ -180,44 +180,44 @@
   // Curated Bestselling Recommendations for Empty Cart State
   const EMPTY_CART_RECOMMENDATIONS = [
     {
-      id: '1',
-      title: 'Cream Minimalist Case',
-      fullTitle: 'iPhone 15 Cream Color Men Design Mobile Cover',
-      price: 399,
-      mrp: 799,
-      badge: '3 for ₹1,199',
-      img: 'assets/phone_cream.webp',
-      url: 'product.html?id=1'
-    },
-    {
-      id: 'glass16',
-      title: '9H Glass Armor Case',
-      fullTitle: 'Tempered Glass Mobile Back Cover',
-      price: 499,
+      id: '9989730304298',
+      title: 'Transparent MagSafe Armor',
+      fullTitle: 'Transparent Magnetic Wireless Charging Phone Case',
+      price: 649,
       mrp: 999,
       badge: '3 for ₹1,199',
-      img: 'assets/exact_exploded_glass.webp',
-      url: 'product.html?id=glass16'
+      img: 'assets/products/9989730304298/packshot_white_1.webp',
+      url: 'product.html?id=9989730304298'
     },
     {
-      id: 'prod_01',
-      title: 'Crystal Luxe MagSafe',
-      fullTitle: 'Crystal Studded Luxe Case - Orbit MagSafe',
+      id: '9982201299242',
+      title: 'Crystal Studded Luxe',
+      fullTitle: 'Crystal Studded Luxe Case – Orbit MagSafe',
       price: 949,
       mrp: 1299,
       badge: 'Top Rated',
-      img: 'assets/bestseller/prod_01_clear_case.webp',
-      url: 'product.html?id=prod_01'
+      img: 'assets/products/9982201299242/packshot_white_1.webp',
+      url: 'product.html?id=9982201299242'
     },
     {
-      id: '4',
-      title: 'Mandala Leather Series',
-      fullTitle: 'Bohemian Mandala Series iPhone Cover',
+      id: '9981786390826',
+      title: 'Ultra Clear Sideless',
+      fullTitle: 'Ultra Clear Sideless Anti-Yellow Back Case',
       price: 599,
-      mrp: 1199,
+      mrp: 999,
       badge: '3 for ₹1,199',
-      img: 'assets/mandala_phone_top.webp',
-      url: 'product.html?id=4'
+      img: 'assets/products/9981786390826/packshot_white_1.webp',
+      url: 'product.html?id=9981786390826'
+    },
+    {
+      id: '9893318426922',
+      title: 'Wavy Edge Pastel Case',
+      fullTitle: 'Wavy Edge Transparent Shockproof Pastel Cover',
+      price: 399,
+      mrp: 598,
+      badge: '3 for ₹1,199',
+      img: 'assets/products/9893318426922/packshot_white_1.webp',
+      url: 'product.html?id=9893318426922'
     }
   ];
 

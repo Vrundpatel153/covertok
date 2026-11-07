@@ -51937,62 +51937,34 @@ a.footer-contact-main:hover {
 
 
 
-/* Hand Model Showcase - Cleanly Positioned on the RIGHT SIDE (Zero gap, seamless bleed) */
-
+/* Hand Model Showcase - Cleanly Positioned on the RIGHT SIDE (Prominent, High-Grade, Smooth) */
 .hero-hand-slideshow {
-
   position: absolute !important;
-
   bottom: 0 !important;
-
-  right: clamp(20px, 3vw, 54px) !important;
-
+  right: clamp(16px, 2.5vw, 48px) !important;
   left: auto !important;
-
   transform: none !important;
-
-  height: clamp(420px, 82%, 560px) !important;
-
-  max-height: calc(100% - 88px) !important;
-
-  width: clamp(320px, 32vw, 480px) !important;
-
+  height: clamp(500px, 92%, 680px) !important;
+  max-height: calc(100% - 24px) !important;
+  width: clamp(380px, 38vw, 580px) !important;
   z-index: 4 !important;
-
   display: flex !important;
-
   align-items: flex-end !important;
-
   justify-content: flex-end !important;
-
   pointer-events: auto !important;
-
   user-select: none !important;
-
 }
-
-
 
 .hero-hand-stage {
-
   position: relative !important;
-
   width: 100% !important;
-
   height: 100% !important;
-
   display: flex !important;
-
   align-items: flex-end !important;
-
   justify-content: flex-end !important;
-
 }
 
-
-
 /* Dual-Phase In/Out Transition Animation for Hand Frames */
-
 .hero-hand-frame {
   position: absolute !important;
   bottom: 0 !important;
@@ -52007,9 +51979,9 @@ a.footer-contact-main:hover {
   visibility: hidden !important;
   pointer-events: none !important;
   image-rendering: -webkit-optimize-contrast !important;
-  filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.55)) !important;
-  transform: none !important;
-  transition: opacity 0.35s ease-in-out !important;
+  filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.55)) !important;
+  transform: translateZ(0) !important;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
   will-change: opacity !important;
   z-index: 1 !important;
 }
@@ -52256,58 +52228,31 @@ a.footer-contact-main:hover {
 /* Desktop Hand Model: RIGHT SIDE ONLY, Tall & Prominent */
 
 @media (min-width: 992px) {
-
   .hero-hand-slideshow {
-
     position: absolute !important;
-
     bottom: 0 !important;
-
-    right: clamp(20px, 3vw, 54px) !important;
-
+    right: clamp(16px, 2.5vw, 48px) !important;
     left: auto !important;
-
     transform: none !important;
-
-    height: clamp(420px, 82%, 560px) !important;
-
-    max-height: calc(100% - 88px) !important;
-
-    width: clamp(320px, 32vw, 480px) !important;
-
+    height: clamp(500px, 92%, 680px) !important;
+    max-height: calc(100% - 24px) !important;
+    width: clamp(380px, 38vw, 580px) !important;
     z-index: 4 !important;
-
     display: flex !important;
-
     align-items: flex-end !important;
-
     justify-content: flex-end !important;
-
     pointer-events: auto !important;
-
     user-select: none !important;
-
   }
-
-
 
   .hero-hand-stage {
-
     position: relative !important;
-
     width: 100% !important;
-
     height: 100% !important;
-
     display: flex !important;
-
     align-items: flex-end !important;
-
     justify-content: flex-end !important;
-
   }
-
-
 
   .hero-hand-frame {
     position: absolute !important;
@@ -52319,8 +52264,10 @@ a.footer-contact-main:hover {
     max-width: 100% !important;
     object-fit: contain !important;
     object-position: right bottom !important;
-    filter: drop-shadow(0 24px 44px rgba(0, 0, 0, 0.55)) !important;
-    transform: none !important;
+    filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.55)) !important;
+    transform: translateZ(0) !important;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    will-change: opacity !important;
   }
 
   .hero-hand-frame.active {
@@ -52484,48 +52431,38 @@ a.footer-contact-main:hover {
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important;
-    bottom: -16px !important;
-    height: 66% !important;
-    max-height: 480px !important;
-
+    bottom: -10px !important;
+    height: 72% !important;
+    max-height: 520px !important;
     width: 100% !important;
-
-    max-width: 360px !important;
-
+    max-width: 400px !important;
     justify-content: center !important;
-
     align-items: flex-end !important;
-
   }
-
-
 
   .hero-hand-stage {
-
     justify-content: center !important;
-
     align-items: flex-end !important;
-
   }
-
-
 
   .hero-hand-frame {
     left: 50% !important;
     right: auto !important;
     bottom: 0 !important;
     object-position: center bottom !important;
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%) translateZ(0) !important;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    will-change: opacity !important;
   }
 
   .hero-hand-frame.active {
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%) translateZ(0) !important;
     opacity: 1 !important;
     z-index: 3 !important;
   }
 
   .hero-hand-frame.exiting {
-    transform: translateX(-50%) !important;
+    transform: translateX(-50%) translateZ(0) !important;
     opacity: 1 !important;
     z-index: 2 !important;
   }
@@ -55746,24 +55683,15 @@ body.home-page .hero-content {
   box-sizing: border-box !important;
 }
 
-/* Mobile Toggle Hamburger Button: Strictly hidden on desktop (>= 992px), styled on mobile (<= 991px) */
-@media (min-width: 992px) {
-  .mobile-toggle-btn,
-  #mobileMenuBtn {
-    display: none !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .mobile-toggle-btn,
-  #mobileMenuBtn {
-    flex-shrink: 0 !important;
-    aspect-ratio: 1 / 1 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-  }
+/* Mobile Toggle Hamburger Button: Always visible and functional across desktop and mobile */
+.mobile-toggle-btn,
+#mobileMenuBtn {
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
 }
 
 /* FAQ Chevron: exactly 32x32px circle, never stretched into oval */
@@ -56250,39 +56178,29 @@ html body #siteHeader,
 /* ==========================================================================
    MOBILE BURGER MENU PILL (IDENTICAL MATCH TO SEARCH & CART BUTTONS)
    ========================================================================== */
-@media (min-width: 992px) {
-  .mobile-toggle-btn,
-  #mobileMenuBtn,
-  #mobileMenuToggle,
-  #mobileNavOpen {
-    display: none !important;
-  }
+.mobile-toggle-btn,
+#mobileMenuBtn,
+#mobileMenuToggle,
+#mobileNavOpen {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  border-radius: 50% !important;
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #0A0A0A !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 0 !important;
+  outline: none !important;
+  flex-shrink: 0 !important;
 }
-
-@media (max-width: 991px) {
-  .mobile-toggle-btn,
-  #mobileMenuBtn,
-  #mobileMenuToggle,
-  #mobileNavOpen {
-    width: 42px !important;
-    height: 42px !important;
-    min-width: 42px !important;
-    min-height: 42px !important;
-    border-radius: 50% !important;
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
-    border: 1px solid #E5E7EB !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #0A0A0A !important;
-    cursor: pointer !important;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    padding: 0 !important;
-    outline: none !important;
-    flex-shrink: 0 !important;
-  }
 
   .mobile-toggle-btn svg,
   #mobileMenuBtn svg,
@@ -57308,6 +57226,9 @@ html body #siteHeader,
   width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 auto !important;
   padding: 4px !important;
   transition: transform 0.25s ease !important;
 }

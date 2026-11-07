@@ -6,53 +6,39 @@
  *    - Curated Releases Spotlight Track (#trendingDropsTrack)
  *    - Popular Choices Covers Track (.popular-row-covers .popular-slider-track)
  *    - Popular Choices Watch Bands Track (.popular-row-bands .popular-slider-track)
+ *    - Community Video Reels Track (#videosTrack)
  *
  * 2. Continuous Marquee Rows:
- *    - Community Video Reels Track (#videosTrack)
  *    - Customer Reviews Track (#reviewsTrack)
  *
  * Provides:
  * - True mathematical infinite wrapping loop (left & right never hit an end)
- * - Buttery smooth touch swiping on mobile & tablet
- * - Mouse drag-to-swipe with momentum glide & image drag suppression
- * - Two-finger horizontal trackpad and Shift+wheel support
- * - Interactive Next / Prev arrow buttons that loop infinitely
+ * - Single-click instant responsiveness (every click advances exactly 1 card step immediately)
+ * - Buttery smooth GPU-accelerated transition (cubic-bezier 0.2, 0.9, 0.2, 1)
+ * - Buttery smooth touch swiping on mobile & tablet with horizontal lock & momentum snap
+ * - Mouse drag-to-swipe with momentum snap & ghost-drag prevention
+ * - Trackpad horizontal wheel support
  * - Delegated click & cart actions on all cloned product cards & color swatches
  */
 
 (function () {
   'use strict';
 
-  function getCurrentTranslateX(element) {
-    if (!element) return 0;
-    const style = window.getComputedStyle(element);
-    const transform = style.transform || style.webkitTransform;
-    if (!transform || transform === 'none') return 0;
-
-    try {
-      if (typeof DOMMatrixReadOnly !== 'undefined') {
-        const domMatrix = new DOMMatrixReadOnly(transform);
-        return domMatrix.m41;
-      }
-    } catch (e) {}
-
-    const match = transform.match(/matrix.*\((.+)\)/);
-    if (match && match[1]) {
-      const parts = match[1].split(',').map(s => parseFloat(s.trim()));
-      if (parts.length === 6) return parts[4];
-      if (parts.length === 16) return parts[12];
-    }
-    return 0;
-  }
-
   /**
    * TRUE INFINITE LOOP SWIPING ENGINE FOR PRODUCT CARD ROWS
-   * Continuous virtual coordinate system with GPU-accelerated RAF spring animation.
-   * Mathematically wraps on every single frame: cards NEVER run out or show empty space,
-   * no matter how fast or how many times the user taps or swipes.
+   * Fixed-cycle virtual buffer architecture:
+   * 4 identical cycles [Cycle 0, Cycle 1, Cycle 2, Cycle 3].
+   * The viewport operates primarily in Cycle 1.
+   * When moving into Cycle 2 (past 2*N), it silently wraps back to Cycle 1 without transition.
+   * When moving into Cycle 0 (below N), it silently wraps forward to Cycle 1 without transition.
+   * Because cycles are 100% identical clones, the wrap is mathematically invisible.
    */
   function setupInfiniteLoopSwipeRow(track, options = {}) {
     if (!track) return null;
+
+    // Remove any previous infinite clones if re-initialized
+    const existingClones = track.querySelectorAll('[data-infinite-clone="true"]');
+    existingClones.forEach(el => el.remove());
 
     const originalCards = Array.from(track.children);
     const originalCount = originalCards.length;
@@ -64,25 +50,26 @@
       uniqueCount = 8;
     }
 
-    // Clone cards to ensure at least 4 full cycles (32+ cards) exist for deep wrap buffer
-    let cloneMultiplier = options.cloneMultiplier;
-    if (cloneMultiplier === undefined) {
-      if (originalCount <= 8) cloneMultiplier = 3;
-      else if (originalCount <= 16) cloneMultiplier = 1;
-      else cloneMultiplier = 1;
-    }
+    // Determine how many clones needed so we have at least 4 full cycles (32+ cards)
+    let neededCycles = 4;
+    let currentCycles = Math.max(1, Math.round(originalCount / uniqueCount));
+    let clonesToAdd = Math.max(1, neededCycles - currentCycles);
 
-    for (let m = 0; m < cloneMultiplier; m++) {
+    // If original already had 2 cycles (e.g. 16 cards from 8 unique), clone once to get 4 cycles
+    for (let m = 0; m < clonesToAdd; m++) {
       const frag = document.createDocumentFragment();
-      originalCards.forEach((card) => {
-        const clone = card.cloneNode(true);
-        clone.setAttribute('data-infinite-clone', 'true');
-        frag.appendChild(clone);
-      });
+      for (let i = 0; i < uniqueCount; i++) {
+        const cardToClone = originalCards[i % originalCards.length];
+        if (cardToClone) {
+          const clone = cardToClone.cloneNode(true);
+          clone.setAttribute('data-infinite-clone', 'true');
+          frag.appendChild(clone);
+        }
+      }
       track.appendChild(frag);
     }
 
-    // Ensure all videos in track (originals and clones) play continuously
+    // Ensure all videos in track play continuously
     const inlineVideos = track.querySelectorAll('video');
     if (inlineVideos.length > 0) {
       inlineVideos.forEach((v) => {
@@ -95,7 +82,7 @@
       });
     }
 
-    // Suppress native browser image ghost-dragging
+    // Styling & Touch Action
     track.addEventListener('dragstart', (e) => e.preventDefault());
     track.style.touchAction = 'pan-y';
     track.style.cursor = 'grab';
@@ -103,7 +90,6 @@
     track.style.webkitUserSelect = 'none';
     track.style.willChange = 'transform';
     track.style.animation = 'none';
-    track.style.transition = 'none';
 
     function getCardStep() {
       const children = track.children;
@@ -112,105 +98,80 @@
         if (step > 40) return step;
       }
       if (children[0] && children[0].offsetWidth > 40) {
-        return children[0].offsetWidth;
+        const style = window.getComputedStyle(track);
+        const gap = parseFloat(style.gap) || 18;
+        return children[0].offsetWidth + gap;
       }
       return 288;
     }
 
-    function getCycleWidth() {
-      const children = track.children;
-      if (children.length > uniqueCount && children[uniqueCount] && children[0]) {
-        const w = children[uniqueCount].offsetLeft - children[0].offsetLeft;
-        if (w > 100) return w;
-      }
-      return getCardStep() * uniqueCount;
-    }
-
     const initialOffsetIndex = options.initialOffsetIndex || 0;
+    // Start inside Cycle 1 (index uniqueCount) so there is a full cycle buffer on the left
+    let currentIndex = uniqueCount + initialOffsetIndex;
+    let isAnimating = false;
+    let settleTimer = null;
 
-    // Continuous virtual position coordinates
-    let currentX = 0;
-    let targetX = 0;
-
-    function render(x) {
-      const cycle = getCycleWidth();
-      if (cycle <= 0) return;
-      // Project any real x continuously into [-2 * cycle, -cycle)
-      const offset = (((-x) % cycle) + cycle) % cycle;
-      const domX = -cycle - offset;
-      track.style.transform = `translate3d(${domX}px, 0, 0)`;
-    }
-
-    // Initialize position
-    function initPosition() {
+    function applyPosition(index, animate = false, durationMs = 300) {
       const step = getCardStep();
-      currentX = -(initialOffsetIndex * step);
-      targetX = currentX;
-      render(currentX);
+      const targetPx = -index * step;
+
+      if (animate) {
+        isAnimating = true;
+        track.style.transition = `transform ${durationMs}ms cubic-bezier(0.2, 0.9, 0.2, 1)`;
+        track.style.transform = `translate3d(${targetPx}px, 0, 0)`;
+
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(() => {
+          checkAndNormalize();
+        }, durationMs + 20);
+      } else {
+        track.style.transition = 'none';
+        track.style.transform = `translate3d(${targetPx}px, 0, 0)`;
+        isAnimating = false;
+      }
     }
-    initPosition();
 
-    // High performance frame-rate independent RAF spring loop
-    let animId = null;
-    let lastAnimTime = 0;
+    // Seamless wrap without visual jump
+    function checkAndNormalize() {
+      isAnimating = false;
+      let wrapped = false;
 
-    function tick(now) {
-      if (!lastAnimTime) lastAnimTime = now;
-      const dt = Math.min(32, now - lastAnimTime);
-      lastAnimTime = now;
-
-      const diff = targetX - currentX;
-
-      if (Math.abs(diff) < 0.4) {
-        currentX = targetX;
-        render(currentX);
-        animId = null;
-        lastAnimTime = 0;
-
-        // At rest, normalize currentX and targetX into single cycle to keep numbers tidy
-        const cycle = getCycleWidth();
-        if (cycle > 0) {
-          const offset = (((-currentX) % cycle) + cycle) % cycle;
-          currentX = -offset;
-          targetX = currentX;
+      // If user moved too far right (into or past Cycle 2)
+      if (currentIndex >= 2 * uniqueCount) {
+        while (currentIndex >= 2 * uniqueCount) {
+          currentIndex -= uniqueCount;
         }
-        return;
+        wrapped = true;
+      }
+      // If user moved too far left (into Cycle 0)
+      else if (currentIndex < uniqueCount) {
+        while (currentIndex < uniqueCount) {
+          currentIndex += uniqueCount;
+        }
+        wrapped = true;
       }
 
-      // Smooth decay curve (lambda = 15 yields ~200-240ms buttery-smooth glide)
-      const factor = 1 - Math.exp(-15 * (dt / 1000));
-      currentX += diff * factor;
-      render(currentX);
-
-      animId = requestAnimationFrame(tick);
-    }
-
-    function startAnimation() {
-      if (!animId) {
-        lastAnimTime = performance.now();
-        animId = requestAnimationFrame(tick);
+      if (wrapped) {
+        applyPosition(currentIndex, false);
       }
     }
 
-    function stopAnimation() {
-      if (animId) {
-        cancelAnimationFrame(animId);
-        animId = null;
-        lastAnimTime = 0;
+    // Track transition end
+    track.addEventListener('transitionend', (e) => {
+      if (e.target === track && e.propertyName === 'transform') {
+        checkAndNormalize();
       }
-    }
+    });
 
-    // Step navigation
-    function stepPrev() {
-      const step = getCardStep();
-      targetX = Math.round(targetX / step) * step + step;
-      startAnimation();
-    }
-
+    // Step navigation: 1 click = exactly 1 card step
     function stepNext() {
-      const step = getCardStep();
-      targetX = Math.round(targetX / step) * step - step;
-      startAnimation();
+      currentIndex++;
+      applyPosition(currentIndex, true, 280);
+    }
+
+    function stepPrev() {
+      currentIndex--;
+      applyPosition(currentIndex, true, 280);
     }
 
     // Touch & Mouse Drag Handlers
@@ -218,20 +179,23 @@
     let hasDragged = false;
     let startX = 0;
     let startY = 0;
-    let dragBaseX = 0;
+    let dragBasePx = 0;
     let lastDragX = 0;
     let lastDragTime = 0;
     let velocity = 0;
     let lockedHorizontal = false;
 
     function onStart(clientX, clientY) {
-      stopAnimation();
+      clearTimeout(settleTimer);
+      track.style.transition = 'none';
       isDragging = true;
       hasDragged = false;
       lockedHorizontal = false;
       startX = clientX;
       startY = clientY;
-      dragBaseX = currentX;
+
+      const step = getCardStep();
+      dragBasePx = -currentIndex * step;
       lastDragX = clientX;
       lastDragTime = performance.now();
       velocity = 0;
@@ -250,7 +214,7 @@
         const absX = Math.abs(deltaX);
         const absY = Math.abs(deltaY);
 
-        if (absY >= absX && absY > 5) {
+        if (absY >= absX && absY > 6) {
           isDragging = false;
           track.classList.remove('is-dragging');
           track.style.cursor = 'grab';
@@ -276,9 +240,8 @@
         lastDragX = clientX;
         lastDragTime = now;
 
-        currentX = dragBaseX + deltaX;
-        targetX = currentX;
-        render(currentX);
+        const currentPx = dragBasePx + deltaX;
+        track.style.transform = `translate3d(${currentPx}px, 0, 0)`;
       }
     }
 
@@ -290,17 +253,19 @@
 
       const step = getCardStep();
       if (hasDragged) {
-        if (performance.now() - lastDragTime > 100) {
+        if (performance.now() - lastDragTime > 90) {
           velocity = 0;
         }
-        const momentum = Math.max(-800, Math.min(800, velocity * 220));
-        targetX = Math.round((currentX + momentum) / step) * step;
-        startAnimation();
+        // Momentum projection
+        const momentum = Math.max(-600, Math.min(600, velocity * 180));
+        const deltaX = lastDragX - startX;
+        const totalDelta = deltaX + momentum;
+        const cardSteps = Math.round(-totalDelta / step);
+
+        currentIndex += cardSteps;
+        applyPosition(currentIndex, true, 320);
       } else {
-        targetX = Math.round(currentX / step) * step;
-        if (Math.abs(targetX - currentX) > 0.4) {
-          startAnimation();
-        }
+        applyPosition(currentIndex, false);
       }
     }
 
@@ -346,21 +311,17 @@
         const delta = isHorizontal ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
         if (Math.abs(delta) > 1) {
           e.preventDefault();
-          stopAnimation();
-          currentX -= delta;
-          targetX = currentX;
-          render(currentX);
-
           clearTimeout(wheelTimer);
-          wheelTimer = setTimeout(() => {
-            const step = getCardStep();
-            targetX = Math.round(currentX / step) * step;
-            startAnimation();
-          }, 120);
+          if (delta > 25) {
+            stepNext();
+          } else if (delta < -25) {
+            stepPrev();
+          }
         }
       }, { passive: false });
     }
 
+    // Suppress card link clicks if dragged
     track.addEventListener('click', (e) => {
       if (hasDragged) {
         e.preventDefault();
@@ -369,14 +330,17 @@
       }
     }, true);
 
+    // Resize handler
+    let resizeTimer = null;
     window.addEventListener('resize', () => {
-      const step = getCardStep();
-      if (step > 0) {
-        targetX = Math.round(targetX / step) * step;
-        currentX = targetX;
-        render(currentX);
-      }
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        applyPosition(currentIndex, false);
+      }, 100);
     });
+
+    // Initialize initial position in Cycle 1
+    applyPosition(currentIndex, false);
 
     track._stepPrev = stepPrev;
     track._stepNext = stepNext;
@@ -385,7 +349,7 @@
   }
 
   /**
-   * CONTINUOUS MARQUEE ENGINE FOR VIDEO REELS & REVIEWS
+   * CONTINUOUS MARQUEE ENGINE FOR CUSTOMER REVIEWS
    */
   function setupInfiniteLTRSwipeRow(track, options) {
     if (!track) return;
@@ -400,67 +364,94 @@
 
     if (cloneMultiplier > 0) {
       const originalCards = Array.from(track.children);
-      if (originalCards.length > 0) {
-        for (let m = 0; m < cloneMultiplier; m++) {
-          const frag = document.createDocumentFragment();
-          originalCards.forEach(card => {
-            const clone = card.cloneNode(true);
-            clone.setAttribute('data-infinite-clone', 'true');
-            frag.appendChild(clone);
-          });
-          track.appendChild(frag);
-        }
+      for (let m = 0; m < cloneMultiplier; m++) {
+        const frag = document.createDocumentFragment();
+        originalCards.forEach((card) => {
+          const clone = card.cloneNode(true);
+          clone.setAttribute('data-infinite-clone', 'true');
+          frag.appendChild(clone);
+        });
+        track.appendChild(frag);
       }
     }
-
-    let isDragging = false;
-    let hasDragged = false;
-    let startX = 0;
-    let startY = 0;
-    let currentX = 0;
-    let baseX = 0;
-    let startTime = 0;
-    let lockedHorizontal = false;
-    let lastClientX = 0;
 
     function getHalfWidth() {
       return track.scrollWidth / 2;
     }
 
-    function resumeMarquee(xPos) {
+    let isPaused = false;
+    let isDragging = false;
+    let hasDragged = false;
+    let startX = 0;
+    let startY = 0;
+    let lastClientX = 0;
+    let startTime = 0;
+    let currentX = 0;
+    let lockedHorizontal = false;
+
+    function getCurrentTranslateX(el) {
+      const style = window.getComputedStyle(el);
+      const transform = style.transform || style.webkitTransform;
+      if (!transform || transform === 'none') return 0;
+      const match = transform.match(/matrix.*\((.+)\)/);
+      if (match && match[1]) {
+        const parts = match[1].split(',').map(s => parseFloat(s.trim()));
+        if (parts.length === 6) return parts[4];
+        if (parts.length === 16) return parts[12];
+      }
+      return 0;
+    }
+
+    function resumeMarquee(x) {
       const halfWidth = getHalfWidth();
       if (halfWidth <= 20) return;
 
-      let normalized = xPos;
-      while (normalized > 0) normalized -= halfWidth;
-      while (normalized < -halfWidth) normalized += halfWidth;
+      let normX = x;
+      while (normX > 0) normX -= halfWidth;
+      while (normX < -halfWidth) normX += halfWidth;
 
-      const progress = (normalized + halfWidth) / halfWidth;
-      const delay = -(progress * duration);
+      const progress = (-normX) / halfWidth;
+      const remainingTime = Math.max(0.5, (1 - progress) * duration);
 
-      track.style.transition = 'none';
+      track.style.animation = 'none';
+      void track.offsetWidth;
+
+      track.style.transform = `translate3d(${normX}px, 0, 0)`;
       track.style.animation = `${animName} ${duration}s linear infinite`;
-      track.style.animationDelay = `${delay.toFixed(3)}s`;
-      track.style.transform = '';
+      track.style.animationDelay = `-${(progress * duration).toFixed(3)}s`;
+      track.style.animationPlayState = isPaused ? 'paused' : 'running';
     }
-    track._resumeMarquee = resumeMarquee;
+
+    track.addEventListener('mouseenter', () => {
+      isPaused = true;
+      if (!isDragging) {
+        track.style.animationPlayState = 'paused';
+      }
+    });
+
+    track.addEventListener('mouseleave', () => {
+      isPaused = false;
+      if (!isDragging) {
+        track.style.animationPlayState = 'running';
+      }
+    });
 
     function onPointerStart(clientX, clientY) {
-      currentX = getCurrentTranslateX(track);
-      baseX = currentX;
+      isDragging = true;
+      hasDragged = false;
+      lockedHorizontal = false;
       startX = clientX;
       startY = clientY;
       lastClientX = clientX;
       startTime = Date.now();
-      isDragging = true;
-      hasDragged = false;
-      lockedHorizontal = false;
 
-      track.classList.add('is-dragging');
-      track.style.cursor = 'grabbing';
+      currentX = getCurrentTranslateX(track);
       track.style.animation = 'none';
       track.style.transition = 'none';
       track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+
+      track.classList.add('is-dragging');
+      track.style.cursor = 'grabbing';
     }
 
     function onPointerMove(clientX, clientY, e) {
@@ -481,7 +472,7 @@
           return;
         }
 
-        if (absX > absY && absX > 10) {
+        if (absX > absY && absX > 8) {
           lockedHorizontal = true;
           hasDragged = true;
         } else {
@@ -492,8 +483,9 @@
       if (lockedHorizontal) {
         if (e && e.cancelable) e.preventDefault();
 
-        let targetX = baseX + deltaX;
         const halfWidth = getHalfWidth();
+        let targetX = currentX + (clientX - lastClientX);
+
         if (halfWidth > 20) {
           while (targetX > 0) targetX -= halfWidth;
           while (targetX < -halfWidth) targetX += halfWidth;
@@ -510,34 +502,7 @@
       isDragging = false;
       track.classList.remove('is-dragging');
       track.style.cursor = 'grab';
-
-      if (hasDragged) {
-        const durationMs = Math.max(1, Date.now() - startTime);
-        const diffX = lastClientX - startX;
-        const velocity = diffX / durationMs;
-
-        if (Math.abs(velocity) > 0.25) {
-          const glideDistance = Math.max(-320, Math.min(320, velocity * 160));
-          let finalX = currentX + glideDistance;
-          const halfWidth = getHalfWidth();
-          if (halfWidth > 20) {
-            while (finalX > 0) finalX -= halfWidth;
-            while (finalX < -halfWidth) finalX += halfWidth;
-          }
-
-          track.style.transition = 'transform 0.38s cubic-bezier(0.16, 1, 0.3, 1)';
-          track.style.transform = `translate3d(${finalX}px, 0, 0)`;
-
-          setTimeout(() => {
-            resumeMarquee(finalX);
-          }, 360);
-          return;
-        }
-
-        resumeMarquee(currentX);
-      } else {
-        resumeMarquee(currentX);
-      }
+      resumeMarquee(currentX);
     }
 
     track.addEventListener('mousedown', (e) => {
@@ -625,7 +590,7 @@
         const imgEl = card ? card.querySelector('.drop-product-img') : null;
 
         const title = titleEl ? titleEl.textContent.trim() : 'Covertok Featured Item';
-        const price = priceEl ? parseInt(priceEl.textContent.replace(/[^\d]/g, ''), 10) || 649 : 649;
+        const price = priceEl ? parseInt(priceEl.textContent.replace(/[^\d]/g, ''), 10) || 699 : 699;
         const img = imgEl ? imgEl.getAttribute('src') : '';
 
         if (window.CovertokStore && window.CovertokStore.addToCart) {
@@ -637,23 +602,29 @@
           window.CovertokFlows.openCart();
         } else if (typeof window.openCartDrawer === 'function') {
           window.openCartDrawer();
-        } else if (typeof window.openCart === 'function') {
-          window.openCart();
         }
 
-        dropAddBtn.style.transform = 'scale(0.85)';
-        setTimeout(() => { dropAddBtn.style.transform = ''; }, 180);
+        dropAddBtn.classList.add('added');
+        const prevText = dropAddBtn.innerHTML;
+        dropAddBtn.innerHTML = `<span>ADDED</span>`;
+        setTimeout(() => {
+          dropAddBtn.classList.remove('added');
+          dropAddBtn.innerHTML = prevText;
+        }, 1400);
         return;
       }
 
-      // 3. Interactive Color Swatches (Updates Product Image)
-      const swatch = e.target.closest('.color-dot, .popular-swatch');
+      // 3. Interactive Color Swatches on Cloned Cards
+      const swatch = e.target.closest('.color-dot, .swatch-dot');
       if (swatch) {
         e.preventDefault();
         e.stopPropagation();
-        const palette = swatch.closest('.product-color-palette, .drop-pricing-row, .pop-pricing-row');
+
+        const palette = swatch.closest('.product-color-palette');
         if (palette) {
-          palette.querySelectorAll('.color-dot, .popular-swatch').forEach(s => s.classList.remove('active', 'user-selected'));
+          palette.querySelectorAll('.color-dot, .swatch-dot').forEach(d => {
+            d.classList.remove('active', 'user-selected');
+          });
         }
         swatch.classList.add('active', 'user-selected');
 
@@ -700,12 +671,11 @@
   function initAllInfiniteRows() {
     initGlobalCardDelegation();
 
-    // 1. Trending Drops Product Card Row (Infinite Loop Swiping in Both Directions)
+    // 1. Trending Drops Product Card Row (#trendingDropsTrack)
     const dropsTrack = document.getElementById('trendingDropsTrack');
     if (dropsTrack) {
       setupInfiniteLoopSwipeRow(dropsTrack, {
-        uniqueCount: 8,
-        cloneMultiplier: 3 // 4 cycles total (32 cards)
+        uniqueCount: 8
       });
 
       const prevBtn = document.getElementById('dropsPrevBtn');
@@ -714,12 +684,11 @@
       wireNavButton(nextBtn, () => dropsTrack._stepNext && dropsTrack._stepNext());
     }
 
-    // 2. Popular Choices Row 1: iPhone Covers (Infinite Loop Swiping in Both Directions)
+    // 2. Popular Choices Row 1: iPhone Covers
     const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track, .popular-row-cases .popular-slider-track');
     if (popTrack1) {
       setupInfiniteLoopSwipeRow(popTrack1, {
-        uniqueCount: 8,
-        cloneMultiplier: 1 // 4 cycles total (32 cards)
+        uniqueCount: 8
       });
 
       const prevBtn1 = document.getElementById('popCoversPrevBtn');
@@ -728,13 +697,12 @@
       wireNavButton(nextBtn1, () => popTrack1._stepNext && popTrack1._stepNext());
     }
 
-    // 3. Popular Choices Row 2: Watch Bands (Infinite Loop Swiping in Both Directions)
+    // 3. Popular Choices Row 2: Watch Bands
     const popTrack2 = document.querySelector('.popular-row-bands .popular-slider-track, .popular-row-watchbands .popular-slider-track');
     if (popTrack2) {
       setupInfiniteLoopSwipeRow(popTrack2, {
         uniqueCount: 8,
-        cloneMultiplier: 1, // 4 cycles total (32 cards)
-        initialOffsetIndex: 2 // start on card 2 for visual variety
+        initialOffsetIndex: 2
       });
 
       const prevBtn2 = document.getElementById('popBandsPrevBtn');
@@ -743,12 +711,11 @@
       wireNavButton(nextBtn2, () => popTrack2._stepNext && popTrack2._stepNext());
     }
 
-    // 4. Community Videos Track (#videosTrack) (Infinite Loop Swiping in Both Directions)
+    // 4. Community Videos Track (#videosTrack)
     const videosTrack = document.getElementById('videosTrack');
     if (videosTrack) {
       setupInfiniteLoopSwipeRow(videosTrack, {
-        uniqueCount: 6,
-        cloneMultiplier: 3 // 4 cycles total (24 cards)
+        uniqueCount: 6
       });
 
       const videoPrevBtn = document.getElementById('videoPrevBtn');

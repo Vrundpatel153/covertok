@@ -134,23 +134,27 @@ body.app-sheet-open {
   overflow: hidden !important;
 }
 
-/* Slide-In Sidebars / Drawers (Floating Curved Card with Upper & Lower Space) */
+/* Slide-In Sidebars / Drawers (Docked Luxury Drawer) */
 .app-drawer {
   position: fixed;
-  top: 18px;
-  bottom: 18px;
-  right: 18px;
-  width: calc(100% - 36px);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: 100%;
   max-width: 440px;
-  height: calc(100vh - 36px);
-  height: calc(100dvh - 36px);
+  height: 100vh;
+  height: 100dvh;
   background: #FFFFFF;
-  border-radius: 28px;
+  border-radius: 20px 0 0 20px;
   border: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
   z-index: 10001;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16), 0 4px 16px rgba(0, 0, 0, 0.04);
-  transform: translate3d(calc(100% + 36px), 0, 0) scale(0.97);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease, visibility 0.4s ease;
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.14), -2px 0 10px rgba(0, 0, 0, 0.04);
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.24s ease, visibility 0.38s ease;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -159,9 +163,24 @@ body.app-sheet-open {
 }
 
 .app-drawer.active {
-  transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0);
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 600px) {
+  .app-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
 }
 
 /* Center Popup Modals */
@@ -1780,35 +1799,28 @@ body:not(.home-page) #siteHeader,
   padding: 0 !important;
 }
 
-@media (min-width: 992px) {
-  .mobile-toggle-btn,
-  #mobileMenuBtn,
-  .header-right .mobile-toggle-btn {
-    display: none !important;
-  }
-}
-
-@media (max-width: 991px) {
-  .mobile-toggle-btn,
-  #mobileMenuBtn,
-  .header-right .mobile-toggle-btn {
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 50% !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #FFFFFF !important;
-    border: 1px solid #E5E7EB !important;
-    color: #0A0A0A !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    position: relative !important;
-    cursor: pointer !important;
-    padding: 0 !important;
-  }
+.mobile-toggle-btn,
+#mobileMenuBtn,
+.header-right .mobile-toggle-btn {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  color: #0A0A0A !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 .icon-btn svg,
@@ -3073,29 +3085,32 @@ textarea:focus {
 #wishlistDrawerSheet,
 .catalog-filters-sheet {
   position: fixed !important;
-  top: 18px !important;
-  bottom: 18px !important;
-  right: 18px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
   left: auto !important;
-  width: calc(100% - 36px) !important;
+  width: 100% !important;
   max-width: 440px !important;
-  height: calc(100vh - 36px) !important;
-  height: calc(100dvh - 36px) !important;
+  height: 100vh !important;
+  height: 100dvh !important;
   background: #FFFFFF !important;
-  border-radius: 28px !important;
+  border-radius: 20px 0 0 20px !important;
   border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16), 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.14), -2px 0 10px rgba(0, 0, 0, 0.04) !important;
   z-index: 99999 !important;
   display: flex !important;
   flex-direction: column !important;
   overflow: hidden !important;
   -webkit-overflow-scrolling: touch !important;
-  transform: translate3d(calc(100% + 36px), 0, 0) scale(0.97) !important;
+  transform: translate3d(100%, 0, 0) !important;
   visibility: hidden !important;
   opacity: 0 !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.28s ease, 
-              visibility 0.4s ease !important;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.24s ease, 
+              visibility 0.38s ease !important;
   will-change: transform, opacity !important;
 }
 
@@ -3112,12 +3127,12 @@ textarea:focus {
 #accountDrawerSheet.active,
 #wishlistDrawerSheet.active,
 .catalog-filters-sheet.active {
-  transform: translate3d(0, 0, 0) scale(1) !important;
+  transform: translate3d(0, 0, 0) !important;
   visibility: visible !important;
   opacity: 1 !important;
   pointer-events: auto !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.28s ease !important;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.24s ease !important;
 }
 
 /* --- 15.2 Gentle Ambient Overlays & Balanced Soft Backdrop Blur (No Heavy Blur) --- */
@@ -4363,7 +4378,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 
 /* ==========================================================================
-   FLOATING CURVED LUXURY CART DRAWER (MODAL CARD WITH UPPER & LOWER SPACE)
+   DOCKED LUXURY SLIDE-OUT CART & APP DRAWER
    ========================================================================== */
 .app-drawer,
 .cart-drawer,
@@ -4374,28 +4389,31 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .catalog-filters-sheet,
 .mobile-nav-drawer {
   position: fixed !important;
-  top: 18px !important;
-  bottom: 18px !important;
-  right: 18px !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
   left: auto !important;
-  width: calc(100% - 36px) !important;
+  width: 100% !important;
   max-width: 440px !important;
-  height: calc(100vh - 36px) !important;
-  height: calc(100dvh - 36px) !important;
+  height: 100vh !important;
+  height: 100dvh !important;
   background: #FFFFFF !important;
-  border-radius: 28px !important;
+  border-radius: 20px 0 0 20px !important;
   overflow: hidden !important;
   border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16), 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.14), -2px 0 10px rgba(0, 0, 0, 0.04) !important;
   z-index: 99999 !important;
   display: flex !important;
   flex-direction: column !important;
-  transform: translate3d(calc(100% + 36px), 0, 0) scale(0.97) !important;
+  transform: translate3d(100%, 0, 0) !important;
   visibility: hidden !important;
   opacity: 0 !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.28s ease, 
-              visibility 0.4s ease !important;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.24s ease, 
+              visibility 0.38s ease !important;
 }
 
 .cart-drawer.open,
@@ -4407,24 +4425,58 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 #cartDrawerSheet.active,
 #accountDrawerSheet.active,
 #wishlistDrawerSheet.active,
-.catalog-filters-sheet.active {
-  transform: translate3d(0, 0, 0) scale(1) !important;
+.catalog-filters-sheet.active,
+.mobile-nav-drawer.open,
+#mobileDrawer.open {
+  transform: translate3d(0, 0, 0) !important;
   visibility: visible !important;
   opacity: 1 !important;
   pointer-events: auto !important;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              opacity 0.28s ease !important;
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.24s ease !important;
 }
 
-/* Internal components match curved edges seamlessly */
+/* Internal components match docked edges seamlessly */
 .cart-top-announcement {
-  border-radius: 28px 28px 0 0 !important;
+  border-radius: 20px 0 0 0 !important;
 }
 
 .cart-drawer-footer,
 .app-sheet-footer,
 #cartDrawerFooter {
-  border-radius: 0 0 28px 28px !important;
+  border-radius: 0 0 0 20px !important;
+}
+
+@media (max-width: 600px) {
+  .app-drawer,
+  .cart-drawer,
+  #cartDrawer,
+  #cartDrawerSheet,
+  #accountDrawerSheet,
+  #wishlistDrawerSheet,
+  .catalog-filters-sheet,
+  .mobile-nav-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .cart-top-announcement {
+    border-radius: 0 !important;
+  }
+
+  .cart-drawer-footer,
+  .app-sheet-footer,
+  #cartDrawerFooter {
+    border-radius: 0 !important;
+  }
 }
 
 /* Reduced Backdrop Blur & Clean Background: Eliminates Heavy Gaussian Smear */
@@ -4446,7 +4498,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   -webkit-backdrop-filter: blur(4px) !important;
 }
 
-/* Mobile Curved Modal Card View: Upper & Lower Space with Smooth Animation */
+/* Mobile Full-Bleed Docked Drawer View (No Awkward Margins or Cut Corners) */
 @media (max-width: 600px) {
   .app-drawer,
   .cart-drawer,
@@ -4455,17 +4507,19 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   #accountDrawerSheet,
   #wishlistDrawerSheet,
   .catalog-filters-sheet,
-  .mobile-nav-drawer {
-    top: 14px !important;
-    bottom: 14px !important;
-    right: 12px !important;
-    left: 12px !important;
-    width: calc(100% - 24px) !important;
-    max-width: none !important;
-    height: calc(100vh - 28px) !important;
-    height: calc(100dvh - 28px) !important;
-    border-radius: 24px !important;
-    transform: translate3d(calc(100% + 24px), 0, 0) scale(0.97) !important;
+  .mobile-nav-drawer,
+  #mobileDrawer {
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+    transform: translate3d(100%, 0, 0) !important;
   }
 
   .cart-drawer.open,
@@ -4477,18 +4531,20 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   #cartDrawerSheet.active,
   #accountDrawerSheet.active,
   #wishlistDrawerSheet.active,
-  .catalog-filters-sheet.active {
-    transform: translate3d(0, 0, 0) scale(1) !important;
+  .catalog-filters-sheet.active,
+  .mobile-nav-drawer.open,
+  #mobileDrawer.open {
+    transform: translate3d(0, 0, 0) !important;
   }
 
   .cart-top-announcement {
-    border-radius: 24px 24px 0 0 !important;
+    border-radius: 0 !important;
   }
 
   .cart-drawer-footer,
   .app-sheet-footer,
   #cartDrawerFooter {
-    border-radius: 0 0 24px 24px !important;
+    border-radius: 0 !important;
   }
 }
 
@@ -4638,6 +4694,9 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   width: 100% !important;
   height: 100% !important;
   object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  margin: 0 auto !important;
   padding: 4px !important;
   transition: transform 0.25s ease !important;
 }
