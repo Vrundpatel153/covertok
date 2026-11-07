@@ -50,12 +50,12 @@
       uniqueCount = 8;
     }
 
-    // Determine how many clones needed so we have at least 4 full cycles (32+ cards)
-    let neededCycles = 4;
+    // Always guarantee at least 5 full identical cycles (e.g. 40 cards for unique 8, 30 for unique 6)
+    // Viewport operates primarily in Cycle 2, with 2 full cycles buffer on the left and 2 on the right!
+    let neededCycles = 5;
     let currentCycles = Math.max(1, Math.round(originalCount / uniqueCount));
     let clonesToAdd = Math.max(1, neededCycles - currentCycles);
 
-    // If original already had 2 cycles (e.g. 16 cards from 8 unique), clone once to get 4 cycles
     for (let m = 0; m < clonesToAdd; m++) {
       const frag = document.createDocumentFragment();
       for (let i = 0; i < uniqueCount; i++) {
@@ -106,24 +106,24 @@
     }
 
     const initialOffsetIndex = options.initialOffsetIndex || 0;
-    // Start inside Cycle 1 (index uniqueCount) so there is a full cycle buffer on the left
-    let currentIndex = uniqueCount + initialOffsetIndex;
+    // Start strictly inside Cycle 2 (2 * uniqueCount) so there are 2 full buffer cycles to the left
+    let currentIndex = 2 * uniqueCount + initialOffsetIndex;
     let isAnimating = false;
     let settleTimer = null;
 
-    function applyPosition(index, animate = false, durationMs = 300) {
+    function applyPosition(index, animate = false, durationMs = 280) {
       const step = getCardStep();
       const targetPx = -index * step;
 
       if (animate) {
         isAnimating = true;
-        track.style.transition = `transform ${durationMs}ms cubic-bezier(0.2, 0.9, 0.2, 1)`;
+        track.style.transition = `transform ${durationMs}ms cubic-bezier(0.16, 1, 0.3, 1)`;
         track.style.transform = `translate3d(${targetPx}px, 0, 0)`;
 
         clearTimeout(settleTimer);
         settleTimer = setTimeout(() => {
           checkAndNormalize();
-        }, durationMs + 20);
+        }, durationMs + 10);
       } else {
         track.style.transition = 'none';
         track.style.transform = `translate3d(${targetPx}px, 0, 0)`;
@@ -131,23 +131,19 @@
       }
     }
 
-    // Seamless wrap without visual jump
+    // Seamless mathematical wrap without visual glitch
     function checkAndNormalize() {
       isAnimating = false;
       let wrapped = false;
 
-      // If user moved too far right (into or past Cycle 2)
-      if (currentIndex >= 2 * uniqueCount) {
-        while (currentIndex >= 2 * uniqueCount) {
-          currentIndex -= uniqueCount;
-        }
+      // If past Cycle 3, wrap back into Cycle 2
+      while (currentIndex >= 3 * uniqueCount) {
+        currentIndex -= uniqueCount;
         wrapped = true;
       }
-      // If user moved too far left (into Cycle 0)
-      else if (currentIndex < uniqueCount) {
-        while (currentIndex < uniqueCount) {
-          currentIndex += uniqueCount;
-        }
+      // If below Cycle 2, wrap forward into Cycle 2
+      while (currentIndex < 2 * uniqueCount) {
+        currentIndex += uniqueCount;
         wrapped = true;
       }
 
@@ -163,18 +159,30 @@
       }
     });
 
-    // Step navigation: 1 click = exactly 1 card step
+    // Step navigation: Instant responsiveness with live boundary guarantee
     function stepNext() {
+      // If user tapped rapidly past Cycle 3, instantly rebase to Cycle 2 first
+      if (currentIndex >= 3 * uniqueCount) {
+        currentIndex -= uniqueCount;
+        applyPosition(currentIndex, false);
+        void track.offsetWidth;
+      }
       currentIndex++;
-      applyPosition(currentIndex, true, 280);
+      applyPosition(currentIndex, true, 260);
     }
 
     function stepPrev() {
+      // If user tapped rapidly below Cycle 2, instantly rebase to Cycle 3 first
+      if (currentIndex <= 2 * uniqueCount) {
+        currentIndex += uniqueCount;
+        applyPosition(currentIndex, false);
+        void track.offsetWidth;
+      }
       currentIndex--;
-      applyPosition(currentIndex, true, 280);
+      applyPosition(currentIndex, true, 260);
     }
 
-    // Touch & Mouse Drag Handlers
+    // Touch & Mouse Drag Handlers with Live Wrapping
     let isDragging = false;
     let hasDragged = false;
     let startX = 0;
@@ -187,6 +195,7 @@
 
     function onStart(clientX, clientY) {
       clearTimeout(settleTimer);
+      checkAndNormalize();
       track.style.transition = 'none';
       isDragging = true;
       hasDragged = false;
@@ -240,7 +249,23 @@
         lastDragX = clientX;
         lastDragTime = now;
 
-        const currentPx = dragBasePx + deltaX;
+        const step = getCardStep();
+        const cyclePx = uniqueCount * step;
+        let currentPx = dragBasePx + deltaX;
+
+        // Continuous live wrap during drag so user can never drag off into empty space
+        const minSafePx = -(3 * uniqueCount) * step;
+        const maxSafePx = -(1 * uniqueCount) * step;
+
+        while (currentPx < minSafePx) {
+          currentPx += cyclePx;
+          dragBasePx += cyclePx;
+        }
+        while (currentPx > maxSafePx) {
+          currentPx -= cyclePx;
+          dragBasePx -= cyclePx;
+        }
+
         track.style.transform = `translate3d(${currentPx}px, 0, 0)`;
       }
     }
@@ -257,13 +282,18 @@
           velocity = 0;
         }
         // Momentum projection
-        const momentum = Math.max(-600, Math.min(600, velocity * 180));
-        const deltaX = lastDragX - startX;
-        const totalDelta = deltaX + momentum;
-        const cardSteps = Math.round(-totalDelta / step);
+        const momentum = Math.max(-500, Math.min(500, velocity * 150));
+        const transformMatch = track.style.transform.match(/translate3d\(([-\d.]+)px/);
+        const currentPx = transformMatch ? parseFloat(transformMatch[1]) : -currentIndex * step;
+        const targetPx = currentPx + momentum;
+        let snappedIndex = Math.round(-targetPx / step);
 
-        currentIndex += cardSteps;
-        applyPosition(currentIndex, true, 320);
+        // Snap safely inside Cycle 2
+        while (snappedIndex >= 3 * uniqueCount) snappedIndex -= uniqueCount;
+        while (snappedIndex < 2 * uniqueCount) snappedIndex += uniqueCount;
+
+        currentIndex = snappedIndex;
+        applyPosition(currentIndex, true, 280);
       } else {
         applyPosition(currentIndex, false);
       }
