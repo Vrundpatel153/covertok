@@ -354,15 +354,16 @@ html, body {
 }
 
 .pdp-container {
-  max-width: 1360px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 
 .pdp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(420px, 480px) minmax(0, 1fr);
-  gap: clamp(28px, 3.5vw, 48px);
+  grid-template-columns: minmax(460px, 540px) minmax(440px, 560px);
+  gap: clamp(36px, 4vw, 56px);
+  justify-content: center;
   align-items: start;
 }
 
@@ -377,6 +378,8 @@ html, body {
   height: fit-content;
   align-self: start;
   z-index: 10;
+  width: 100%;
+  max-width: 540px;
 }
 
 .pdp-gallery-wrap {
@@ -384,7 +387,7 @@ html, body {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  max-width: 520px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
 }
@@ -397,7 +400,7 @@ html, body {
   justify-content: center;
   gap: 12px;
   width: 100%;
-  max-width: 520px;
+  max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -449,7 +452,7 @@ html, body {
 .pdp-main-stage {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
   background: #F8F6F2;
   border-radius: 24px;
@@ -673,6 +676,8 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 0;
+  width: 100%;
+  max-width: 560px;
 }
 
 /* Upper Header Split Grid for Desktop */
@@ -1517,21 +1522,32 @@ html, body {
   border-radius: 999px;
   background: #FFFFFF;
   border: 1.5px solid #0A0A0A;
-  color: #0A0A0A;
-  font-family: var(--pdp-font-head);
-  font-size: 0.88rem;
+  color: #0A0A0A !important;
+  font-family: var(--pdp-font-head, 'Manrope', sans-serif);
+  font-size: 0.92rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
+.btn-pdp-buynow span {
+  color: #0A0A0A !important;
+  font-weight: 800 !important;
+}
+
 .btn-pdp-buynow:hover {
-  background: #FFFFFF;
+  background: #0A0A0A !important;
+  color: #FFFFFF !important;
   transform: translateY(-1px);
+}
+
+.btn-pdp-buynow:hover span {
+  color: #FFFFFF !important;
 }
 
 /* 5. TRUST BADGES STRIP (DIRECTLY BELOW HERO & BUYING OPTIONS) */
@@ -4462,24 +4478,30 @@ html body #siteHeader,
   display: none !important;
 }
 
-/* Desktop Ergonomic Sizing & Refinements */
+/* Desktop Ergonomic Sizing & Refinements - Balanced Column Fill */
 @media (min-width: 769px) {
   .pdp-model-select-wrap {
-    max-width: 380px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .pdp-dropdown-menu {
-    max-width: 380px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .pdp-actions-top-row {
-    max-width: 480px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .btn-pdp-buynow {
-    max-width: 480px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .btn-pdp-combo-add {
-    max-width: 480px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   .covertok-live-trust-badges {
-    max-width: 520px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
