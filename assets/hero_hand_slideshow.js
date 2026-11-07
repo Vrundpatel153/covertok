@@ -121,7 +121,7 @@
         }
       });
 
-      // Clear exiting state after crossfade completes (420ms for silky smooth blending)
+      // Clear exiting state after crossfade completes (380ms)
       if (exitClearTimer) clearTimeout(exitClearTimer);
       exitClearTimer = setTimeout(() => {
         frames.forEach(f => {
@@ -129,7 +129,7 @@
             f.classList.remove('exiting');
           }
         });
-      }, 420);
+      }, 380);
 
       // 2. Switch PC & Mobile Studio Backgrounds with fluid crossfade
       pcBgs.forEach((bg, i) => {
