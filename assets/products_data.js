@@ -193,6 +193,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/10005871362346/white_1.png",
         "images": [
+          "assets/products/10005871362346/white_1.png",
           "assets/products/10005871362346/1_51425350811946.jpg",
           "assets/products/10005871362346/4_51425351041322.jpg"
         ]
@@ -203,6 +204,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/10005871362346/white_8.png",
         "images": [
+          "assets/products/10005871362346/white_8.png",
           "assets/products/10005871362346/8_51425350877482.jpg",
           "assets/products/10005871362346/10_51425455997226.jpg"
         ]
@@ -213,6 +215,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/10005871362346/white_18.png",
         "images": [
+          "assets/products/10005871362346/white_18.png",
           "assets/products/10005871362346/18_51425350844714.jpg",
           "assets/products/10005871362346/16_51425350975786.jpg"
         ]
@@ -223,6 +226,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/10005871362346/white_12.png",
         "images": [
+          "assets/products/10005871362346/white_12.png",
           "assets/products/10005871362346/12_51425350713642.jpg",
           "assets/products/10005871362346/13_51425351008554.jpg"
         ]
@@ -356,6 +360,7 @@ window.CovertokProducts = [
         "price": 649.0,
         "image": "assets/products/9989730304298/white_4.png",
         "images": [
+          "assets/products/9989730304298/white_4.png",
           "assets/products/9989730304298/4_51224314511658.png",
           "assets/products/9989730304298/7_51224314478890.png"
         ]
@@ -956,6 +961,7 @@ window.CovertokProducts = [
         "price": 849.0,
         "image": "assets/products/9980484157738/white_1.png",
         "images": [
+          "assets/products/9980484157738/white_1.png",
           "assets/products/9980484157738/1_51111526859050.jpg"
         ]
       },
@@ -965,6 +971,7 @@ window.CovertokProducts = [
         "price": 849.0,
         "image": "assets/products/9980484157738/white_5.png",
         "images": [
+          "assets/products/9980484157738/white_5.png",
           "assets/products/9980484157738/5_51111526826282.jpg"
         ]
       },
@@ -974,6 +981,7 @@ window.CovertokProducts = [
         "price": 849.0,
         "image": "assets/products/9980484157738/white_4.png",
         "images": [
+          "assets/products/9980484157738/white_4.png",
           "assets/products/9980484157738/4_51111526990122.jpg"
         ]
       }
@@ -1134,6 +1142,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/9979941159210/white_2.png",
         "images": [
+          "assets/products/9979941159210/white_2.png",
           "assets/products/9979941159210/2_51102857265450.png",
           "assets/products/9979941159210/6_51102856872234.jpg"
         ]
@@ -1144,6 +1153,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/9979941159210/white_5.png",
         "images": [
+          "assets/products/9979941159210/white_5.png",
           "assets/products/9979941159210/5_51102856905002.jpg"
         ]
       }
@@ -1311,6 +1321,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_4.png",
         "images": [
+          "assets/products/9937879728426/white_4.png",
           "assets/products/9937879728426/4_50512140599594.png"
         ]
       },
@@ -1320,6 +1331,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_6.png",
         "images": [
+          "assets/products/9937879728426/white_6.png",
           "assets/products/9937879728426/6_50512140665130.png"
         ]
       },
@@ -1329,6 +1341,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_7.png",
         "images": [
+          "assets/products/9937879728426/white_7.png",
           "assets/products/9937879728426/7_50512149774634.png"
         ]
       },
@@ -1338,6 +1351,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_2.png",
         "images": [
+          "assets/products/9937879728426/white_2.png",
           "assets/products/9937879728426/2_50512140534058.png"
         ]
       },
@@ -1347,6 +1361,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_1.png",
         "images": [
+          "assets/products/9937879728426/white_1.png",
           "assets/products/9937879728426/1_50512140501290.png"
         ]
       },
@@ -1356,6 +1371,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_3.png",
         "images": [
+          "assets/products/9937879728426/white_3.png",
           "assets/products/9937879728426/3_50512140730666.png"
         ]
       },
@@ -1365,6 +1381,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_8.png",
         "images": [
+          "assets/products/9937879728426/white_8.png",
           "assets/products/9937879728426/8_50512140632362.png"
         ]
       },
@@ -1374,6 +1391,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9937879728426/white_9.png",
         "images": [
+          "assets/products/9937879728426/white_9.png",
           "assets/products/9937879728426/9_50512140697898.png"
         ]
       }
@@ -1626,6 +1644,7 @@ window.CovertokProducts = [
         "price": 399.0,
         "image": "assets/products/9893318426922/white_2.png",
         "images": [
+          "assets/products/9893318426922/white_2.png",
           "assets/products/9893318426922/2_50067404226858.jpg"
         ]
       },
@@ -1635,6 +1654,7 @@ window.CovertokProducts = [
         "price": 399.0,
         "image": "assets/products/9893318426922/white_3.png",
         "images": [
+          "assets/products/9893318426922/white_3.png",
           "assets/products/9893318426922/3_50067404194090.jpg"
         ]
       },
@@ -1644,6 +1664,7 @@ window.CovertokProducts = [
         "price": 399.0,
         "image": "assets/products/9893318426922/white_4.png",
         "images": [
+          "assets/products/9893318426922/white_4.png",
           "assets/products/9893318426922/4_50067404128554.jpg"
         ]
       },
@@ -1653,6 +1674,7 @@ window.CovertokProducts = [
         "price": 399.0,
         "image": "assets/products/9893318426922/white_5.png",
         "images": [
+          "assets/products/9893318426922/white_5.png",
           "assets/products/9893318426922/5_50067404161322.jpg"
         ]
       }
@@ -2163,6 +2185,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_24.png",
         "images": [
+          "assets/products/9882472382762/white_24.png",
           "assets/products/9882472382762/24_49996956336426.jpg"
         ]
       },
@@ -2172,6 +2195,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_26.png",
         "images": [
+          "assets/products/9882472382762/white_26.png",
           "assets/products/9882472382762/26_49996956565802.jpg"
         ]
       },
@@ -2181,6 +2205,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_8.png",
         "images": [
+          "assets/products/9882472382762/white_8.png",
           "assets/products/9882472382762/8_49996957221162.jpg"
         ]
       },
@@ -2190,6 +2215,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_28.png",
         "images": [
+          "assets/products/9882472382762/white_28.png",
           "assets/products/9882472382762/28_49996957450538.jpg"
         ]
       },
@@ -2199,6 +2225,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_30.png",
         "images": [
+          "assets/products/9882472382762/white_30.png",
           "assets/products/9882472382762/30_49996958499114.jpg"
         ]
       },
@@ -2208,6 +2235,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_12.png",
         "images": [
+          "assets/products/9882472382762/white_12.png",
           "assets/products/9882472382762/12_49996958925098.jpg",
           "assets/products/9882472382762/22_49996951093546.jpg"
         ]
@@ -2218,6 +2246,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_20.png",
         "images": [
+          "assets/products/9882472382762/white_20.png",
           "assets/products/9882472382762/20_49996959514922.jpg"
         ]
       },
@@ -2227,6 +2256,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_18.png",
         "images": [
+          "assets/products/9882472382762/white_18.png",
           "assets/products/9882472382762/18_49996951191850.jpg"
         ]
       },
@@ -2236,6 +2266,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_4.png",
         "images": [
+          "assets/products/9882472382762/white_4.png",
           "assets/products/9882472382762/4_49996961022250.jpg"
         ]
       },
@@ -2245,6 +2276,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_14.png",
         "images": [
+          "assets/products/9882472382762/white_14.png",
           "assets/products/9882472382762/14_49996953387306.jpg"
         ]
       },
@@ -2254,6 +2286,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_16.png",
         "images": [
+          "assets/products/9882472382762/white_16.png",
           "assets/products/9882472382762/16_49996961710378.jpg"
         ]
       },
@@ -2263,6 +2296,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9882472382762/white_12.png",
         "images": [
+          "assets/products/9882472382762/white_12.png",
           "assets/products/9882472382762/12_49996958925098.jpg"
         ]
       }
@@ -2528,6 +2562,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9875994280234/white_3.png",
         "images": [
+          "assets/products/9875994280234/white_3.png",
           "assets/products/9875994280234/3_49941561868586.png"
         ]
       },
@@ -2537,6 +2572,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9875994280234/white_1.png",
         "images": [
+          "assets/products/9875994280234/white_1.png",
           "assets/products/9875994280234/1_49941561835818.png"
         ]
       },
@@ -2546,6 +2582,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9875994280234/white_5.png",
         "images": [
+          "assets/products/9875994280234/white_5.png",
           "assets/products/9875994280234/5_49941561803050.png"
         ]
       }
@@ -3453,6 +3490,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9873114038570/white_1.png",
         "images": [
+          "assets/products/9873114038570/white_1.png",
           "assets/products/9873114038570/1_49920971211050.png"
         ]
       },
@@ -3462,6 +3500,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9873114038570/white_3.png",
         "images": [
+          "assets/products/9873114038570/white_3.png",
           "assets/products/9873114038570/3_49920971112746.png"
         ]
       }
@@ -4404,6 +4443,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9871368651050/white_3.png",
         "images": [
+          "assets/products/9871368651050/white_3.png",
           "assets/products/9871368651050/3_49907234865450.png"
         ]
       },
@@ -4413,6 +4453,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9871368651050/white_9.png",
         "images": [
+          "assets/products/9871368651050/white_9.png",
           "assets/products/9871368651050/9_49907236765994.png"
         ]
       }
@@ -5236,6 +5277,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9870560330026/white_10.png",
         "images": [
+          "assets/products/9870560330026/white_10.png",
           "assets/products/9870560330026/10_49900011782442.png"
         ]
       },
@@ -5245,6 +5287,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9870560330026/white_5.png",
         "images": [
+          "assets/products/9870560330026/white_5.png",
           "assets/products/9870560330026/4_49900004540714.png"
         ]
       },
@@ -5254,6 +5297,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9870560330026/white_6.png",
         "images": [
+          "assets/products/9870560330026/white_6.png",
           "assets/products/9870560330026/5_49900009947434.png"
         ]
       },
@@ -5263,6 +5307,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9870560330026/white_1.png",
         "images": [
+          "assets/products/9870560330026/white_1.png",
           "assets/products/9870560330026/6_49900011127082.png"
         ]
       },
@@ -5272,6 +5317,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9870560330026/white_3.png",
         "images": [
+          "assets/products/9870560330026/white_3.png",
           "assets/products/9870560330026/2_49900009718058.png",
           "assets/products/9870560330026/11_49945036914986.png"
         ]
@@ -5406,6 +5452,7 @@ window.CovertokProducts = [
         "price": 249.0,
         "image": "assets/products/9870559183146/white_1.png",
         "images": [
+          "assets/products/9870559183146/white_1.png",
           "assets/products/9870559183146/3_49899983831338.png"
         ]
       }
@@ -6108,6 +6155,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870548533546/white_3.png",
         "images": [
+          "assets/products/9870548533546/white_3.png",
           "assets/products/9870548533546/3_49905927258410.png"
         ]
       },
@@ -6117,6 +6165,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870548533546/white_1.png",
         "images": [
+          "assets/products/9870548533546/white_1.png",
           "assets/products/9870548533546/1_49905925554474.png"
         ]
       },
@@ -6126,6 +6175,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870548533546/white_5.png",
         "images": [
+          "assets/products/9870548533546/white_5.png",
           "assets/products/9870548533546/5_49905925423402.png"
         ]
       },
@@ -6135,6 +6185,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870548533546/white_4.png",
         "images": [
+          "assets/products/9870548533546/white_4.png",
           "assets/products/9870548533546/4_49905925488938.png"
         ]
       },
@@ -6144,6 +6195,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870548533546/white_6.png",
         "images": [
+          "assets/products/9870548533546/white_6.png",
           "assets/products/9870548533546/6_49905925456170.png"
         ]
       }
@@ -6611,6 +6663,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870500364586/white_1.png",
         "images": [
+          "assets/products/9870500364586/white_1.png",
           "assets/products/9870500364586/2_49899385356586.png"
         ]
       }
@@ -6746,6 +6799,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870484341034/white_4.png",
         "images": [
+          "assets/products/9870484341034/white_4.png",
           "assets/products/9870484341034/4_49899312546090.png"
         ]
       },
@@ -6755,6 +6809,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870484341034/white_5.png",
         "images": [
+          "assets/products/9870484341034/white_5.png",
           "assets/products/9870484341034/5_49899312578858.png"
         ]
       },
@@ -6764,6 +6819,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870484341034/white_6.png",
         "images": [
+          "assets/products/9870484341034/white_6.png",
           "assets/products/9870484341034/6_49899316576554.png"
         ]
       },
@@ -6773,6 +6829,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870484341034/white_3.png",
         "images": [
+          "assets/products/9870484341034/white_3.png",
           "assets/products/9870484341034/3_49899310809386.png"
         ]
       },
@@ -6782,6 +6839,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870484341034/white_7.png",
         "images": [
+          "assets/products/9870484341034/white_7.png",
           "assets/products/9870484341034/7_49899317133610.png"
         ]
       }
@@ -6913,6 +6971,7 @@ window.CovertokProducts = [
         "price": 549.0,
         "image": "assets/products/9870479524138/white_2.png",
         "images": [
+          "assets/products/9870479524138/white_2.png",
           "assets/products/9870479524138/2_49899266801962.png"
         ]
       }
@@ -7046,6 +7105,7 @@ window.CovertokProducts = [
         "price": 549.0,
         "image": "assets/products/9870479425834/white_1.png",
         "images": [
+          "assets/products/9870479425834/white_1.png",
           "assets/products/9870479425834/1_49899238752554.png"
         ]
       }
@@ -7313,6 +7373,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870456357162/white_3.png",
         "images": [
+          "assets/products/9870456357162/white_3.png",
           "assets/products/9870456357162/2_49899115348266.png"
         ]
       },
@@ -7322,6 +7383,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870456357162/white_4.png",
         "images": [
+          "assets/products/9870456357162/white_4.png",
           "assets/products/9870456357162/3_49899118428458.png"
         ]
       },
@@ -7331,6 +7393,7 @@ window.CovertokProducts = [
         "price": 499.0,
         "image": "assets/products/9870456357162/white_5.png",
         "images": [
+          "assets/products/9870456357162/white_5.png",
           "assets/products/9870456357162/4_49899113316650.png"
         ]
       }
@@ -7482,6 +7545,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870452588842/white_6.png",
         "images": [
+          "assets/products/9870452588842/white_6.png",
           "assets/products/9870452588842/6_49899078484266.png"
         ]
       },
@@ -7491,6 +7555,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870452588842/white_8.png",
         "images": [
+          "assets/products/9870452588842/white_8.png",
           "assets/products/9870452588842/8_49899079926058.png"
         ]
       },
@@ -7500,6 +7565,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870452588842/white_4.png",
         "images": [
+          "assets/products/9870452588842/white_4.png",
           "assets/products/9870452588842/4_49899077665066.png"
         ]
       },
@@ -7509,6 +7575,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870452588842/white_5.png",
         "images": [
+          "assets/products/9870452588842/white_5.png",
           "assets/products/9870452588842/5_49899077599530.png"
         ]
       },
@@ -7518,6 +7585,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870452588842/white_6.png",
         "images": [
+          "assets/products/9870452588842/white_6.png",
           "assets/products/9870452588842/6_49899078484266.png"
         ]
       },
@@ -7527,6 +7595,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9870452588842/white_7.png",
         "images": [
+          "assets/products/9870452588842/white_7.png",
           "assets/products/9870452588842/7_49899079893290.png"
         ]
       }
@@ -7670,6 +7739,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9870449443114/white_2.png",
         "images": [
+          "assets/products/9870449443114/white_2.png",
           "assets/products/9870449443114/2_49899048304938.png"
         ]
       }
@@ -7815,6 +7885,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9870445347114/white_6.png",
         "images": [
+          "assets/products/9870445347114/white_6.png",
           "assets/products/9870445347114/6_49899017568554.png"
         ]
       },
@@ -7824,6 +7895,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9870445347114/white_5.png",
         "images": [
+          "assets/products/9870445347114/white_5.png",
           "assets/products/9870445347114/5_49899017077034.png"
         ]
       },
@@ -7833,6 +7905,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9870445347114/white_1.png",
         "images": [
+          "assets/products/9870445347114/white_1.png",
           "assets/products/9870445347114/1_49899017273642.png"
         ]
       },
@@ -7842,6 +7915,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9870445347114/white_4.png",
         "images": [
+          "assets/products/9870445347114/white_4.png",
           "assets/products/9870445347114/4_49899017830698.png"
         ]
       },
@@ -7851,6 +7925,7 @@ window.CovertokProducts = [
         "price": 449.0,
         "image": "assets/products/9870445347114/white_2.png",
         "images": [
+          "assets/products/9870445347114/white_2.png",
           "assets/products/9870445347114/2_49899017896234.png"
         ]
       }
@@ -8273,6 +8348,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9869729956138/white_3.png",
         "images": [
+          "assets/products/9869729956138/white_3.png",
           "assets/products/9869729956138/3_49887449055530.png"
         ]
       },
@@ -8282,6 +8358,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9869729956138/white_4.png",
         "images": [
+          "assets/products/9869729956138/white_4.png",
           "assets/products/9869729956138/4_49887449383210.png"
         ]
       }
@@ -8436,6 +8513,7 @@ window.CovertokProducts = [
         "price": 899.0,
         "image": "assets/products/9869728907562/white_3.png",
         "images": [
+          "assets/products/9869728907562/white_3.png",
           "assets/products/9869728907562/3_49887422120234.jpg"
         ]
       }
@@ -8729,6 +8807,7 @@ window.CovertokProducts = [
         "price": 899.0,
         "image": "assets/products/9869724844330/white_1.png",
         "images": [
+          "assets/products/9869724844330/white_1.png",
           "assets/products/9869724844330/3_49887215386922.png"
         ]
       }
@@ -8882,6 +8961,7 @@ window.CovertokProducts = [
         "price": 149.0,
         "image": "assets/products/9855468175658/white_3.png",
         "images": [
+          "assets/products/9855468175658/white_3.png",
           "assets/products/9855468175658/3_49719338172714.png"
         ]
       },
@@ -8891,6 +8971,7 @@ window.CovertokProducts = [
         "price": 149.0,
         "image": "assets/products/9855468175658/white_4.png",
         "images": [
+          "assets/products/9855468175658/white_4.png",
           "assets/products/9855468175658/4_49719338959146.png"
         ]
       }
@@ -9160,6 +9241,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9853945741610/white_1.png",
         "images": [
+          "assets/products/9853945741610/white_1.png",
           "assets/products/9853945741610/1_49692707586346.png"
         ]
       },
@@ -9169,6 +9251,7 @@ window.CovertokProducts = [
         "price": 1099.0,
         "image": "assets/products/9853945741610/white_6.png",
         "images": [
+          "assets/products/9853945741610/white_6.png",
           "assets/products/9853945741610/6_49692728394026.png"
         ]
       }
@@ -9302,6 +9385,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/9853944529194/white_4.png",
         "images": [
+          "assets/products/9853944529194/white_4.png",
           "assets/products/9853944529194/4_49692671377706.png"
         ]
       },
@@ -9311,6 +9395,7 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/9853944529194/white_7.png",
         "images": [
+          "assets/products/9853944529194/white_7.png",
           "assets/products/9853944529194/7_49692868641066.png"
         ]
       }
@@ -9561,6 +9646,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9853490954538/white_7.png",
         "images": [
+          "assets/products/9853490954538/white_7.png",
           "assets/products/9853490954538/7_49682209997098.png"
         ]
       },
@@ -9570,6 +9656,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9853490954538/white_9.png",
         "images": [
+          "assets/products/9853490954538/white_9.png",
           "assets/products/9853490954538/9_49683667124522.png"
         ]
       },
@@ -9579,6 +9666,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9853490954538/white_6.png",
         "images": [
+          "assets/products/9853490954538/white_6.png",
           "assets/products/9853490954538/6_49683693994282.png"
         ]
       },
@@ -9588,6 +9676,7 @@ window.CovertokProducts = [
         "price": 799.0,
         "image": "assets/products/9853490954538/white_8.png",
         "images": [
+          "assets/products/9853490954538/white_8.png",
           "assets/products/9853490954538/8_49683507151146.png"
         ]
       }
@@ -9730,6 +9819,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9853436952874/white_5.png",
         "images": [
+          "assets/products/9853436952874/white_5.png",
           "assets/products/9853436952874/5_49893803557162.png"
         ]
       },
@@ -9739,6 +9829,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9853436952874/white_4.png",
         "images": [
+          "assets/products/9853436952874/white_4.png",
           "assets/products/9853436952874/4_49893811323178.png"
         ]
       },
@@ -9748,6 +9839,7 @@ window.CovertokProducts = [
         "price": 599.0,
         "image": "assets/products/9853436952874/white_1.png",
         "images": [
+          "assets/products/9853436952874/white_1.png",
           "assets/products/9853436952874/1_49893803622698.png"
         ]
       }
@@ -9892,6 +9984,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848509006122/white_6.png",
         "images": [
+          "assets/products/9848509006122/white_6.png",
           "assets/products/9848509006122/6_49672972927274.png"
         ]
       },
@@ -9901,6 +9994,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848509006122/white_4.png",
         "images": [
+          "assets/products/9848509006122/white_4.png",
           "assets/products/9848509006122/4_49672886911274.png"
         ]
       },
@@ -9910,6 +10004,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848509006122/white_2.png",
         "images": [
+          "assets/products/9848509006122/white_2.png",
           "assets/products/9848509006122/2_49672833040682.jpg"
         ]
       },
@@ -9919,6 +10014,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848509006122/white_5.png",
         "images": [
+          "assets/products/9848509006122/white_5.png",
           "assets/products/9848509006122/5_49672880062762.png"
         ]
       }
@@ -10522,6 +10618,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848506057002/white_6.png",
         "images": [
+          "assets/products/9848506057002/white_6.png",
           "assets/products/9848506057002/6_49672566571306.jpg"
         ]
       },
@@ -10531,6 +10628,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848506057002/white_3.png",
         "images": [
+          "assets/products/9848506057002/white_3.png",
           "assets/products/9848506057002/3_49670271893802.jpg"
         ]
       },
@@ -10540,6 +10638,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848506057002/white_5.png",
         "images": [
+          "assets/products/9848506057002/white_5.png",
           "assets/products/9848506057002/5_49619453083946.png"
         ]
       },
@@ -10549,6 +10648,7 @@ window.CovertokProducts = [
         "price": 699.0,
         "image": "assets/products/9848506057002/white_5.png",
         "images": [
+          "assets/products/9848506057002/white_5.png",
           "assets/products/9848506057002/2_49619358777642.png"
         ]
       }
@@ -10710,6 +10810,7 @@ window.CovertokProducts = [
         "price": 820.0,
         "image": "assets/products/9827998794026/white_16.png",
         "images": [
+          "assets/products/9827998794026/white_16.png",
           "assets/products/9827998794026/16_49990107693354.png"
         ]
       },
@@ -10719,6 +10820,7 @@ window.CovertokProducts = [
         "price": 820.0,
         "image": "assets/products/9827998794026/white_20.png",
         "images": [
+          "assets/products/9827998794026/white_20.png",
           "assets/products/9827998794026/20_50218813653290.png"
         ]
       },
@@ -10728,6 +10830,7 @@ window.CovertokProducts = [
         "price": 820.0,
         "image": "assets/products/9827998794026/white_12.png",
         "images": [
+          "assets/products/9827998794026/white_12.png",
           "assets/products/9827998794026/12_50090708730154.png"
         ]
       },
@@ -10737,6 +10840,7 @@ window.CovertokProducts = [
         "price": 820.0,
         "image": "assets/products/9827998794026/white_9.png",
         "images": [
+          "assets/products/9827998794026/white_9.png",
           "assets/products/9827998794026/9_50218796089642.png"
         ]
       },
@@ -10746,6 +10850,7 @@ window.CovertokProducts = [
         "price": 820.0,
         "image": "assets/products/9827998794026/white_21.png",
         "images": [
+          "assets/products/9827998794026/white_21.png",
           "assets/products/9827998794026/21_50218821484842.png"
         ]
       },
@@ -10755,6 +10860,7 @@ window.CovertokProducts = [
         "price": 820.0,
         "image": "assets/products/9827998794026/white_22.png",
         "images": [
+          "assets/products/9827998794026/white_22.png",
           "assets/products/9827998794026/22_50218824204586.png"
         ]
       }
