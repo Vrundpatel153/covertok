@@ -2789,7 +2789,15 @@
 
 .card-add-btn {
 
-  flex: 1;
+  flex: 0 0 auto;
+
+  flex-grow: 0;
+
+  width: 100%;
+
+  height: 40px;
+
+  max-height: 40px;
 
   display: flex;
 
@@ -5124,6 +5132,9 @@
   width: 100% !important;
   height: 42px !important;
   min-height: 42px !important;
+  max-height: 42px !important;
+  flex: 0 0 auto !important;
+  flex-grow: 0 !important;
   flex-shrink: 0 !important;
   display: flex !important;
   align-items: center !important;
@@ -5232,6 +5243,9 @@
   .card-add-btn {
     height: 38px !important;
     min-height: 38px !important;
+    max-height: 38px !important;
+    flex: 0 0 auto !important;
+    flex-grow: 0 !important;
     flex-shrink: 0 !important;
     font-size: 0.70rem !important;
     letter-spacing: 0.04em !important;
@@ -5248,27 +5262,36 @@
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 6px !important;
   margin: 36px 0 28px 0 !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
   position: relative !important;
   z-index: 2 !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding: 4px 6px !important;
+}
+
+.catalog-pagination-container::-webkit-scrollbar {
+  display: none !important;
 }
 
 .catalog-page-btn,
 .catalog-page-dots,
 .catalog-page-next,
 .catalog-page-prev {
-  width: 38px !important;
-  height: 38px !important;
-  min-width: 38px !important;
-  max-width: 38px !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  max-width: 36px !important;
   border-radius: 6px !important;
   border: 1px solid #D4D4D8 !important;
   background: #FFFFFF !important;
   color: #71717A !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-weight: 500 !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -5279,6 +5302,47 @@
   padding: 0 !important;
   user-select: none !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .catalog-pagination-container {
+    gap: 4px !important;
+    margin: 24px 0 20px 0 !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 4px 2px !important;
+  }
+  .catalog-page-btn,
+  .catalog-page-dots,
+  .catalog-page-next,
+  .catalog-page-prev {
+    width: 28px !important;
+    height: 32px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    font-size: 12px !important;
+    border-radius: 6px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .catalog-pagination-container {
+    gap: 3px !important;
+  }
+  .catalog-page-btn,
+  .catalog-page-dots,
+  .catalog-page-next,
+  .catalog-page-prev {
+    width: 24px !important;
+    height: 28px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    font-size: 11px !important;
+    flex-shrink: 0 !important;
+  }
 }
 
 .catalog-page-btn:hover:not(.active),

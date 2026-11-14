@@ -1212,9 +1212,9 @@
       </button>
     `;
 
-    // Dynamic Page Number Window (Always shows up to 5 contiguous numbers + extremes)
+    // Dynamic Page Number Window (Always aligns neatly in a single row)
     const pages = [];
-    if (totalPages <= 7) {
+    if (totalPages <= 10) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
       if (current <= 4) {
