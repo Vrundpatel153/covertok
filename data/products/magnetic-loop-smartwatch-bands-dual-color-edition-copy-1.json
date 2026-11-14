@@ -1,0 +1,152 @@
+{
+  "id": "9871358624042",
+  "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-1",
+  "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition(Black+Grey)",
+  "price": 999.0,
+  "original_price": 1999.0,
+  "discount_percent": 50,
+  "rating": 4.8,
+  "reviews_count": 482,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands",
+    "new-arrivals",
+    "our-bestsellers"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": true,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+  "images": [
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/01_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/02_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/03_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/04_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/05_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/06_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/07_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/08_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/09_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/10_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/11_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/12_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/13_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/14_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/15_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/16_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Black+Grey",
+      "hex": "#18181B",
+      "price": 999.0,
+      "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+      "images": [
+        "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm/45mm/46mm/49mm"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Black+Grey"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50532947329322,
+      "title": "40mm/41mm/42mm / Black+Grey",
+      "option1": "40mm/41mm/42mm",
+      "option2": "Black+Grey",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49997018759466,
+        "product_id": 9871358624042,
+        "position": 3,
+        "created_at": "2025-09-10T11:24:58+05:30",
+        "updated_at": "2025-09-10T11:27:06+05:30",
+        "alt": null,
+        "width": 5000,
+        "height": 5000,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/6_eb61e40a-29b0-448a-b966-fcec8198cb8b.jpg?v=1757483826",
+        "variant_ids": [
+          50532947329322,
+          50532947362090
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1999.00",
+      "position": 1,
+      "product_id": 9871358624042,
+      "created_at": "2025-08-26T17:12:32+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50532947362090,
+      "title": "44mm/45mm/46mm/49mm / Black+Grey",
+      "option1": "44mm/45mm/46mm/49mm",
+      "option2": "Black+Grey",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49997018759466,
+        "product_id": 9871358624042,
+        "position": 3,
+        "created_at": "2025-09-10T11:24:58+05:30",
+        "updated_at": "2025-09-10T11:27:06+05:30",
+        "alt": null,
+        "width": 5000,
+        "height": 5000,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/6_eb61e40a-29b0-448a-b966-fcec8198cb8b.jpg?v=1757483826",
+        "variant_ids": [
+          50532947329322,
+          50532947362090
+        ]
+      },
+      "available": false,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1999.00",
+      "position": 2,
+      "product_id": 9871358624042,
+      "created_at": "2025-08-26T17:12:32+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch. ✅ Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm ✅ Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink ✅ Comfortable, durable, and easy to snap on/off A stylish companion for everyday wear that keeps your watch looking fresh and elegant.",
+  "description_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>✅ Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>✅ Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>✅ Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>"
+}

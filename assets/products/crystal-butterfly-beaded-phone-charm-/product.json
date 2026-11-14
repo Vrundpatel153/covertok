@@ -1,0 +1,140 @@
+{
+  "id": "9870559183146",
+  "handle": "crystal-butterfly-beaded-phone-charm-✨",
+  "title": "Crystal Butterfly Beaded Phone Charm",
+  "price": 249.0,
+  "original_price": 499.0,
+  "discount_percent": 50,
+  "rating": 4.8,
+  "reviews_count": 166,
+  "category": "cover-charms",
+  "category_name": "Cover Charms",
+  "collections": [
+    "all",
+    "cover-charms",
+    "new-arrivals",
+    "our-bestsellers"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": true,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
+  "images": [
+    "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/02_lifestyle.png",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/02_lifestyle.png",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/extra/01_extra.webp",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/extra/02_extra.webp",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/extra/03_extra.webp",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/extra/04_extra.webp",
+    "assets/products/crystal-butterfly-beaded-phone-charm-/extra/05_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Ocean Butterfly",
+      "hex": "#38BDF8",
+      "price": 249.0,
+      "image": "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
+      "images": [
+        "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
+        "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Blush Butterfly",
+      "hex": "#F472B6",
+      "price": 249.0,
+      "image": "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
+      "images": [
+        "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
+        "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Variant",
+      "position": 1,
+      "values": [
+        "Ocean Butterfly",
+        "Blush Butterfly"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50529469432106,
+      "title": "Ocean Butterfly",
+      "option1": "Ocean Butterfly",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899983241514,
+        "product_id": 9870559183146,
+        "position": 2,
+        "created_at": "2025-08-25T17:03:04+05:30",
+        "updated_at": "2025-08-31T10:04:52+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug19_2025_10_32_37AM.png?v=1756614892",
+        "variant_ids": [
+          50529469432106
+        ]
+      },
+      "available": true,
+      "price": "249.00",
+      "grams": 0,
+      "compare_at_price": "499.00",
+      "position": 1,
+      "product_id": 9870559183146,
+      "created_at": "2025-08-25T17:08:34+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529469464874,
+      "title": "Blush Butterfly",
+      "option1": "Blush Butterfly",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899983831338,
+        "product_id": 9870559183146,
+        "position": 3,
+        "created_at": "2025-08-25T17:03:13+05:30",
+        "updated_at": "2025-08-31T10:04:52+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug19_2025_10_36_56AM.png?v=1756614892",
+        "variant_ids": [
+          50529469464874
+        ]
+      },
+      "available": true,
+      "price": "249.00",
+      "grams": 0,
+      "compare_at_price": "499.00",
+      "position": 2,
+      "product_id": 9870559183146,
+      "created_at": "2025-08-25T17:08:34+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Bring sparkle and elegance to your phone with our Crystal Butterfly Beaded Phone Charm Strap. Designed with shimmering faceted beads, a detailed butterfly pendant, and a dazzling crystal centerpiece, this charm is both stylish and functional. Available in Blue Crystal and Pink Crystal variants, it securely attaches to your phone case while doubling as a chic hand strap. Perfect for adding a touch of glam and personality to your everyday accessories.",
+  "description_html": "<p>Description:<br>Bring sparkle and elegance to your phone with our Crystal Butterfly Beaded Phone Charm Strap. Designed with shimmering faceted beads, a detailed butterfly pendant, and a dazzling crystal centerpiece, this charm is both stylish and functional. Available in Blue Crystal and Pink Crystal variants, it securely attaches to your phone case while doubling as a chic hand strap. Perfect for adding a touch of glam and personality to your everyday accessories.</p>"
+}

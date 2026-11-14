@@ -1,0 +1,254 @@
+{
+  "id": "9888955924778",
+  "handle": "magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah",
+  "title": "Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/ 10000 mAh",
+  "price": 2099.0,
+  "original_price": 0.0,
+  "discount_percent": 33,
+  "rating": 4.9,
+  "reviews_count": 158,
+  "category": "other-accessories",
+  "category_name": "Tech Essentials",
+  "collections": [
+    "all",
+    "new-arrivals",
+    "other-accessories",
+    "our-bestsellers"
+  ],
+  "vendor": "Covertok",
+  "product_type": "Mobile Accessories",
+  "tags": [],
+  "is_bestseller": true,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
+  "images": [
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/02_lifestyle.png",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.png",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/02_lifestyle.png",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/01_extra.webp",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/02_extra.webp",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/03_extra.webp",
+    "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/04_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Black",
+      "hex": "#18181B",
+      "price": 2099.0,
+      "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
+      "images": [
+        "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
+        "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Rose Gold",
+      "hex": "#FDA4AF",
+      "price": 2099.0,
+      "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
+      "images": [
+        "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
+        "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Grey",
+      "hex": "#6B7280",
+      "price": 2099.0,
+      "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
+      "images": [
+        "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
+        "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [
+    "5000mAh",
+    "10000mAh"
+  ],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "5000mAh",
+        "10000mAh"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Black",
+        "Rose Gold",
+        "Grey"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50602046161194,
+      "title": "5000mAh / Black",
+      "option1": "5000mAh",
+      "option2": "Black",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50035509330218,
+        "product_id": 9888955924778,
+        "position": 2,
+        "created_at": "2025-09-15T00:43:29+05:30",
+        "updated_at": "2025-09-15T00:43:31+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/94412336-570B-4CE9-96EB-0828034DA741.png?v=1757877211",
+        "variant_ids": [
+          50602046161194
+        ]
+      },
+      "available": true,
+      "price": "2099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 1,
+      "product_id": 9888955924778,
+      "created_at": "2025-09-15T00:47:43+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50602052419882,
+      "title": "5000mAh / Rose Gold",
+      "option1": "5000mAh",
+      "option2": "Rose Gold",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50035509297450,
+        "product_id": 9888955924778,
+        "position": 3,
+        "created_at": "2025-09-15T00:43:29+05:30",
+        "updated_at": "2025-09-15T00:43:31+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/52EC2197-3958-45A0-BC2E-BDBCC7C5A8D7.png?v=1757877211",
+        "variant_ids": [
+          50602052419882
+        ]
+      },
+      "available": false,
+      "price": "2099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 3,
+      "product_id": 9888955924778,
+      "created_at": "2025-09-15T00:50:50+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50602052452650,
+      "title": "5000mAh / Grey",
+      "option1": "5000mAh",
+      "option2": "Grey",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50035509264682,
+        "product_id": 9888955924778,
+        "position": 4,
+        "created_at": "2025-09-15T00:43:29+05:30",
+        "updated_at": "2025-09-15T00:43:31+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/328BFC03-674A-499E-95FE-7792BD2B7D46.png?v=1757877211",
+        "variant_ids": [
+          50602052452650
+        ]
+      },
+      "available": false,
+      "price": "2099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 4,
+      "product_id": 9888955924778,
+      "created_at": "2025-09-15T00:50:50+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50661458968874,
+      "title": "10000mAh / Black",
+      "option1": "10000mAh",
+      "option2": "Black",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "2499.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 5,
+      "product_id": 9888955924778,
+      "created_at": "2025-10-06T18:56:55+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50661459001642,
+      "title": "10000mAh / Rose Gold",
+      "option1": "10000mAh",
+      "option2": "Rose Gold",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": false,
+      "price": "2499.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 6,
+      "product_id": 9888955924778,
+      "created_at": "2025-10-06T18:56:55+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50661459034410,
+      "title": "10000mAh / Grey",
+      "option1": "10000mAh",
+      "option2": "Grey",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": false,
+      "price": "2499.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 7,
+      "product_id": 9888955924778,
+      "created_at": "2025-10-06T18:56:55+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [
+    "1-Month Warranty – your purchase is covered for any manufacturing defects"
+  ],
+  "description_text": "Stay charged in style with Covertok. This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go. ✅ 5000mAh High Capacity – Enough to keep your devices powered all day. ✅ Slim & Stylish Design – Fits easily in your pocket or bag. ✅ Digital LED Display – Real-time battery percentage indicator. ✅ Fast Charging Output – Quick and efficient charging whenever you need it. ✅ Premium Build Quality – Durable, elegant, and made for everyday use. • 📱 Magnetic Attachment – Snaps onto your phone securely. • ⚡ Wireless Charging – Say goodbye to messy cables. 1-Month Warranty – your purchase is covered for any manufacturing defects",
+  "description_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>✅ 5000mAh High Capacity – Enough to keep your devices powered all day.<br>✅ Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br>✅ Digital LED Display – Real-time battery percentage indicator.<br>✅ Fast Charging Output – Quick and efficient charging whenever you need it.<br>✅ Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>• 📱 Magnetic Attachment – Snaps onto your phone securely.<br> • ⚡ Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>"
+}

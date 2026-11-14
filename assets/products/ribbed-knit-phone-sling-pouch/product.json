@@ -1,0 +1,474 @@
+{
+  "id": "10005871362346",
+  "handle": "ribbed-knit-phone-sling-pouch",
+  "title": "Ribbed Knit Phone Sling Pouch",
+  "price": 999.0,
+  "original_price": 1499.0,
+  "discount_percent": 33,
+  "rating": 4.8,
+  "reviews_count": 206,
+  "category": "other-accessories",
+  "category_name": "Tech Essentials",
+  "collections": [
+    "all",
+    "other-accessories",
+    "our-bestsellers"
+  ],
+  "vendor": "Covertok",
+  "product_type": "Mobile Accessories",
+  "tags": [],
+  "is_bestseller": true,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
+  "images": [
+    "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/blue/02_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/orange/02_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/orange/03_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/pink/02_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/pink/03_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/black/02_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/black/03_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/brown/02_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/brown/03_lifestyle.jpg",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/01_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/02_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/03_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/04_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/05_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/06_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/07_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/08_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/09_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/10_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/11_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/12_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/13_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/14_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/15_extra.webp",
+    "assets/products/ribbed-knit-phone-sling-pouch/extra/16_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Blue",
+      "hex": "#2563EB",
+      "price": 999.0,
+      "image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
+      "images": [
+        "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
+        "assets/products/ribbed-knit-phone-sling-pouch/blue/02_lifestyle.jpg",
+        "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg"
+      ]
+    },
+    {
+      "name": "Orange",
+      "hex": "#F97316",
+      "price": 999.0,
+      "image": "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
+      "images": [
+        "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
+        "assets/products/ribbed-knit-phone-sling-pouch/orange/02_lifestyle.jpg",
+        "assets/products/ribbed-knit-phone-sling-pouch/orange/03_lifestyle.jpg"
+      ]
+    },
+    {
+      "name": "Pink",
+      "hex": "#EC4899",
+      "price": 999.0,
+      "image": "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
+      "images": [
+        "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
+        "assets/products/ribbed-knit-phone-sling-pouch/pink/02_lifestyle.jpg",
+        "assets/products/ribbed-knit-phone-sling-pouch/pink/03_lifestyle.jpg"
+      ]
+    },
+    {
+      "name": "Black",
+      "hex": "#18181B",
+      "price": 999.0,
+      "image": "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
+      "images": [
+        "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
+        "assets/products/ribbed-knit-phone-sling-pouch/black/02_lifestyle.jpg",
+        "assets/products/ribbed-knit-phone-sling-pouch/black/03_lifestyle.jpg"
+      ]
+    },
+    {
+      "name": "Brown",
+      "hex": "#854D0E",
+      "price": 999.0,
+      "image": "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
+      "images": [
+        "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
+        "assets/products/ribbed-knit-phone-sling-pouch/brown/02_lifestyle.jpg",
+        "assets/products/ribbed-knit-phone-sling-pouch/brown/03_lifestyle.jpg"
+      ]
+    }
+  ],
+  "models": [
+    "Short( hand pouch)",
+    "Long ( sling pouch)"
+  ],
+  "model_label": "Select Size",
+  "options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Blue",
+        "Orange",
+        "Pink",
+        "Black",
+        "Brown"
+      ]
+    },
+    {
+      "name": "Size",
+      "position": 2,
+      "values": [
+        "Short( hand pouch)",
+        "Long ( sling pouch)"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 51020842238250,
+      "title": "Blue / Short( hand pouch)",
+      "option1": "Blue",
+      "option2": "Short( hand pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425350910250,
+        "product_id": 10005871362346,
+        "position": 17,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0799.jpg?v=1767544626",
+        "variant_ids": [
+          51020842238250
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 1,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:51:48+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020842271018,
+      "title": "Orange / Short( hand pouch)",
+      "option1": "Orange",
+      "option2": "Short( hand pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425350811946,
+        "product_id": 10005871362346,
+        "position": 1,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0796.jpg?v=1767544626",
+        "variant_ids": [
+          51020842271018
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 2,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:51:48+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020842303786,
+      "title": "Pink / Short( hand pouch)",
+      "option1": "Pink",
+      "option2": "Short( hand pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425350877482,
+        "product_id": 10005871362346,
+        "position": 8,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0798.jpg?v=1767544626",
+        "variant_ids": [
+          51020842303786
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 3,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:51:48+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020842336554,
+      "title": "Black / Short( hand pouch)",
+      "option1": "Black",
+      "option2": "Short( hand pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425350844714,
+        "product_id": 10005871362346,
+        "position": 18,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0797.jpg?v=1767544626",
+        "variant_ids": [
+          51020842336554
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 4,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:51:48+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020842369322,
+      "title": "Brown / Short( hand pouch)",
+      "option1": "Brown",
+      "option2": "Short( hand pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425350713642,
+        "product_id": 10005871362346,
+        "position": 12,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0793.jpg?v=1767544626",
+        "variant_ids": [
+          51020842369322
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 5,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:51:48+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020843122986,
+      "title": "Blue / Long ( sling pouch)",
+      "option1": "Blue",
+      "option2": "Long ( sling pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425455964458,
+        "product_id": 10005871362346,
+        "position": 7,
+        "created_at": "2026-01-04T22:05:04+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0901.jpg?v=1767544626",
+        "variant_ids": [
+          51020843122986
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "2499.00",
+      "position": 6,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:52:45+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020843155754,
+      "title": "Orange / Long ( sling pouch)",
+      "option1": "Orange",
+      "option2": "Long ( sling pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425351041322,
+        "product_id": 10005871362346,
+        "position": 4,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0803.jpg?v=1767544626",
+        "variant_ids": [
+          51020843155754
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "2499.00",
+      "position": 7,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:52:45+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020843188522,
+      "title": "Pink / Long ( sling pouch)",
+      "option1": "Pink",
+      "option2": "Long ( sling pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425455997226,
+        "product_id": 10005871362346,
+        "position": 10,
+        "created_at": "2026-01-04T22:05:04+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0902.jpg?v=1767544626",
+        "variant_ids": [
+          51020843188522
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "2499.00",
+      "position": 8,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:52:45+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020843221290,
+      "title": "Black / Long ( sling pouch)",
+      "option1": "Black",
+      "option2": "Long ( sling pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425350975786,
+        "product_id": 10005871362346,
+        "position": 16,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0801.jpg?v=1767544626",
+        "variant_ids": [
+          51020843221290
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "2499.00",
+      "position": 9,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:52:45+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 51020843254058,
+      "title": "Brown / Long ( sling pouch)",
+      "option1": "Brown",
+      "option2": "Long ( sling pouch)",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51425351008554,
+        "product_id": 10005871362346,
+        "position": 13,
+        "created_at": "2026-01-04T21:50:12+05:30",
+        "updated_at": "2026-01-04T22:07:06+05:30",
+        "alt": null,
+        "width": 1080,
+        "height": 1080,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0802.jpg?v=1767544626",
+        "variant_ids": [
+          51020843254058
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "2499.00",
+      "position": 10,
+      "product_id": 10005871362346,
+      "created_at": "2026-01-04T21:52:45+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [
+    "Soft ribbed knit fabric with stretch fit",
+    "Hands-free carry with integrated strap",
+    "Secure phone hold without bulk",
+    "Lightweight, comfortable, and travel-friendly",
+    "Minimal, modern aesthetic",
+    "Suitable for most smartphones",
+    "Ideal For"
+  ],
+  "description_text": "Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look. The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort. Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement. Key Features Soft ribbed knit fabric with stretch fit Hands-free carry with integrated strap Secure phone hold without bulk Lightweight, comfortable, and travel-friendly Minimal, modern aesthetic Suitable for most smartphones Ideal For Daily use • Travel • Shopping • Casual outings • Minimalist styling",
+  "description_html": "<p><span>Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look.</span></p>\n<p>The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort.<br><span></span></p>\n<p>Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Soft ribbed knit fabric with stretch fit</span></li>\n<li><span>Hands-free carry with integrated strap</span></li>\n<li><span>Secure phone hold without bulk</span></li>\n<li><span>Lightweight, comfortable, and travel-friendly</span></li>\n<li><span>Minimal, modern aesthetic</span></li>\n<li><span>Suitable for most smartphones</span></li>\n<li>Ideal For</li>\n</ul>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>Daily use • Travel • Shopping • Casual outings • Minimalist styling<br><span></span></p>"
+}

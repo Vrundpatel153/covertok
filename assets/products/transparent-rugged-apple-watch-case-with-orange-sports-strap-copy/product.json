@@ -1,0 +1,199 @@
+{
+  "id": "9873124557098",
+  "handle": "transparent-rugged-apple-watch-case-with-orange-sports-strap-copy",
+  "title": "Black Transparent Rugged Apple Watch Case with Bold Orange Strap",
+  "price": 2149.0,
+  "original_price": 3999.0,
+  "discount_percent": 46,
+  "rating": 4.9,
+  "reviews_count": 198,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
+  "images": [
+    "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
+    "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/01_extra.webp",
+    "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/02_extra.webp",
+    "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/03_extra.webp",
+    "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/04_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Bold Orange",
+      "hex": "#FF5500",
+      "image": "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
+      "images": [
+        "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm",
+        "45mm",
+        "46mm"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50538584244522,
+      "title": "40mm/41mm/42mm",
+      "option1": "40mm/41mm/42mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921090847018,
+        "product_id": 9873124557098,
+        "position": 2,
+        "created_at": "2025-08-28T13:19:28+05:30",
+        "updated_at": "2025-08-28T13:22:40+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8021_0ae0294a-8d2f-451e-8f86-18183a37ba66.png?v=1756367560",
+        "variant_ids": [
+          50538584244522
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 1,
+      "product_id": 9873124557098,
+      "created_at": "2025-08-28T13:17:54+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50538584277290,
+      "title": "44mm",
+      "option1": "44mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921092157738,
+        "product_id": 9873124557098,
+        "position": 1,
+        "created_at": "2025-08-28T13:19:36+05:30",
+        "updated_at": "2025-08-28T13:19:56+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8010_4c98df3f-3bef-4648-99dd-f3e703d1fcda.png?v=1756367396",
+        "variant_ids": [
+          50538584277290,
+          50794623533354,
+          50794623566122
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 2,
+      "product_id": 9873124557098,
+      "created_at": "2025-08-28T13:17:54+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794623533354,
+      "title": "45mm",
+      "option1": "45mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921092157738,
+        "product_id": 9873124557098,
+        "position": 1,
+        "created_at": "2025-08-28T13:19:36+05:30",
+        "updated_at": "2025-08-28T13:19:56+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8010_4c98df3f-3bef-4648-99dd-f3e703d1fcda.png?v=1756367396",
+        "variant_ids": [
+          50538584277290,
+          50794623533354,
+          50794623566122
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 3,
+      "product_id": 9873124557098,
+      "created_at": "2025-11-08T15:43:25+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794623566122,
+      "title": "46mm",
+      "option1": "46mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921092157738,
+        "product_id": 9873124557098,
+        "position": 1,
+        "created_at": "2025-08-28T13:19:36+05:30",
+        "updated_at": "2025-08-28T13:19:56+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8010_4c98df3f-3bef-4648-99dd-f3e703d1fcda.png?v=1756367396",
+        "variant_ids": [
+          50538584277290,
+          50794623533354,
+          50794623566122
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 4,
+      "product_id": 9873124557098,
+      "created_at": "2025-11-08T15:43:25+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch’s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection. ✅ 360° rugged shockproof protection ✅ Transparent case with stylish orange strap ✅ Comfortable, sweat-resistant silicone band ✅ Easy to install with secure screw-lock frame ✅ Ideal for sports, fitness, and daily use",
+  "description_html": "<p>Description:<br>Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch’s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection.</p>\n<p>✅ 360° rugged shockproof protection<br>✅ Transparent case with stylish orange strap<br>✅ Comfortable, sweat-resistant silicone band<br>✅ Easy to install with secure screw-lock frame<br>✅ Ideal for sports, fitness, and daily use</p>"
+}

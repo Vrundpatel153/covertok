@@ -1,0 +1,117 @@
+{
+  "id": "9982201299242",
+  "handle": "crystal-studded-luxe-case-orange",
+  "title": "Crystal Studded Luxe Case – Orange",
+  "price": 949.0,
+  "original_price": 1299.0,
+  "discount_percent": 27,
+  "rating": 4.8,
+  "reviews_count": 302,
+  "category": "iphone-cases",
+  "category_name": "Phone Cases",
+  "collections": [
+    "all",
+    "buy-three",
+    "iphone-cases",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "Mobile Accessories",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp",
+  "images": [
+    "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/01_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/02_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/03_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/04_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/05_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/06_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/07_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/08_extra.webp",
+    "assets/products/crystal-studded-luxe-case-orange/extra/09_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Cosmic Orange",
+      "hex": "#FF5500",
+      "image": "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp",
+      "images": [
+        "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [
+    "iPhone 16 Pro Max",
+    "iPhone 16 Pro",
+    "iPhone 16 Plus",
+    "iPhone 16",
+    "iPhone 15 Pro Max",
+    "iPhone 15 Pro",
+    "iPhone 15 Plus",
+    "iPhone 15",
+    "iPhone 14 Pro Max",
+    "iPhone 14 Pro",
+    "iPhone 14",
+    "iPhone 13 Pro Max",
+    "iPhone 13"
+  ],
+  "model_label": "Select Device Model:",
+  "options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50956222300458,
+      "title": "iPhone 17 Pro",
+      "option1": "iPhone 17 Pro",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "949.00",
+      "grams": 0,
+      "compare_at_price": "1299.00",
+      "position": 1,
+      "product_id": 9982201299242,
+      "created_at": "2025-12-16T11:30:01+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50956222333226,
+      "title": "iPhone 17 Pro Max",
+      "option1": "iPhone 17 Pro Max",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "949.00",
+      "grams": 0,
+      "compare_at_price": "1299.00",
+      "position": 2,
+      "product_id": 9982201299242,
+      "created_at": "2025-12-16T11:30:01+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Elevate your phone with this luxury crystal-studded clear case in a bold orange tone. The transparent back highlights your phone’s original design, while precision-set crystals along the edges and camera rings add a refined, high-end look. Crafted for everyday elegance, it features raised camera protection, smooth button response, and a slim, comfortable grip—perfect for those who love subtle luxury without compromising style.",
+  "description_html": "<p><span>Elevate your phone with this luxury crystal-studded clear case in a bold orange tone. The transparent back highlights your phone’s original design, while precision-set crystals along the edges and camera rings add a refined, high-end look. Crafted for everyday elegance, it features raised camera protection, smooth button response, and a slim, comfortable grip—perfect for those who love subtle luxury without compromising style.</span></p>"
+}

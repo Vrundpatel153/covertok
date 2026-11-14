@@ -1,0 +1,753 @@
+{
+  "id": "9937879728426",
+  "handle": "premium-stainless-steel-milanese-loop-strap-for-smartwatch",
+  "title": "Premium Stainless Steel Milanese Loop Strap for Smartwatch",
+  "price": 1099.0,
+  "original_price": 0.0,
+  "discount_percent": 33,
+  "rating": 4.8,
+  "reviews_count": 426,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands"
+  ],
+  "vendor": "Covertok",
+  "product_type": "watch accessories",
+  "tags": [
+    "Black",
+    "Rose gold",
+    "Silver"
+  ],
+  "is_bestseller": false,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
+  "images": [
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/02_lifestyle.png",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/01_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/02_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/03_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/04_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/05_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/06_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/07_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/08_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/09_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/10_extra.webp",
+    "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/11_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Silver",
+      "hex": "#E4E4E7",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Black",
+      "hex": "#18181B",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Rose gold",
+      "hex": "#FDA4AF",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Blue",
+      "hex": "#2563EB",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Titanium",
+      "hex": "#D4D4D8",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Natural",
+      "hex": "#E2E8F0",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Stone",
+      "hex": "#A8A29E",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Black/Red Stripe",
+      "hex": "#18181B",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Gold",
+      "hex": "#EAB308",
+      "price": 1099.0,
+      "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
+      "images": [
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
+        "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Silver",
+        "Black",
+        "Rose gold",
+        "Blue",
+        "Titanium",
+        "Natural",
+        "Stone",
+        "Black/Red Stripe",
+        "Gold"
+      ]
+    },
+    {
+      "name": "Size",
+      "position": 2,
+      "values": [
+        "38/40/41mm",
+        "42/44/45/49mm"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50787725738282,
+      "title": "Silver / 38/40/41mm",
+      "option1": "Silver",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 1,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725771050,
+      "title": "Silver / 42/44/45/49mm",
+      "option1": "Silver",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 2,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725803818,
+      "title": "Black / 38/40/41mm",
+      "option1": "Black",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140599594,
+        "product_id": 9937879728426,
+        "position": 4,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9704.png?v=1763878990",
+        "variant_ids": [
+          50787725803818,
+          50787725836586
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 3,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725836586,
+      "title": "Black / 42/44/45/49mm",
+      "option1": "Black",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140599594,
+        "product_id": 9937879728426,
+        "position": 4,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9704.png?v=1763878990",
+        "variant_ids": [
+          50787725803818,
+          50787725836586
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 4,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725869354,
+      "title": "Rose gold / 38/40/41mm",
+      "option1": "Rose gold",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140665130,
+        "product_id": 9937879728426,
+        "position": 6,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9705.png?v=1763878990",
+        "variant_ids": [
+          50787725869354,
+          50787725902122
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 5,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725902122,
+      "title": "Rose gold / 42/44/45/49mm",
+      "option1": "Rose gold",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140665130,
+        "product_id": 9937879728426,
+        "position": 6,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9705.png?v=1763878990",
+        "variant_ids": [
+          50787725869354,
+          50787725902122
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 6,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725934890,
+      "title": "Blue / 38/40/41mm",
+      "option1": "Blue",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512149774634,
+        "product_id": 9937879728426,
+        "position": 7,
+        "created_at": "2025-11-07T20:44:10+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9700.png?v=1763878990",
+        "variant_ids": [
+          50787725934890,
+          50787725967658
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 7,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787725967658,
+      "title": "Blue / 42/44/45/49mm",
+      "option1": "Blue",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512149774634,
+        "product_id": 9937879728426,
+        "position": 7,
+        "created_at": "2025-11-07T20:44:10+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9700.png?v=1763878990",
+        "variant_ids": [
+          50787725934890,
+          50787725967658
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 8,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726000426,
+      "title": "Titanium / 38/40/41mm",
+      "option1": "Titanium",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140534058,
+        "product_id": 9937879728426,
+        "position": 2,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9698.png?v=1763878990",
+        "variant_ids": [
+          50787726000426,
+          50787726033194
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 9,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726033194,
+      "title": "Titanium / 42/44/45/49mm",
+      "option1": "Titanium",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140534058,
+        "product_id": 9937879728426,
+        "position": 2,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9698.png?v=1763878990",
+        "variant_ids": [
+          50787726000426,
+          50787726033194
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 10,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726065962,
+      "title": "Natural / 38/40/41mm",
+      "option1": "Natural",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140501290,
+        "product_id": 9937879728426,
+        "position": 1,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9699.png?v=1763878990",
+        "variant_ids": [
+          50787726065962,
+          50787726098730
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 11,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726098730,
+      "title": "Natural / 42/44/45/49mm",
+      "option1": "Natural",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140501290,
+        "product_id": 9937879728426,
+        "position": 1,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9699.png?v=1763878990",
+        "variant_ids": [
+          50787726065962,
+          50787726098730
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 12,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726131498,
+      "title": "Stone / 38/40/41mm",
+      "option1": "Stone",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140730666,
+        "product_id": 9937879728426,
+        "position": 3,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9707.png?v=1763878990",
+        "variant_ids": [
+          50787726131498,
+          50787726164266
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 13,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726164266,
+      "title": "Stone / 42/44/45/49mm",
+      "option1": "Stone",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140730666,
+        "product_id": 9937879728426,
+        "position": 3,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-23T11:53:10+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9707.png?v=1763878990",
+        "variant_ids": [
+          50787726131498,
+          50787726164266
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 14,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726197034,
+      "title": "Black/Red Stripe / 38/40/41mm",
+      "option1": "Black/Red Stripe",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140632362,
+        "product_id": 9937879728426,
+        "position": 8,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-08T23:28:06+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9703.png?v=1762624686",
+        "variant_ids": [
+          50787726197034,
+          50787726229802
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 15,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726229802,
+      "title": "Black/Red Stripe / 42/44/45/49mm",
+      "option1": "Black/Red Stripe",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140632362,
+        "product_id": 9937879728426,
+        "position": 8,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-08T23:28:06+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9703.png?v=1762624686",
+        "variant_ids": [
+          50787726197034,
+          50787726229802
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 16,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726262570,
+      "title": "Gold / 38/40/41mm",
+      "option1": "Gold",
+      "option2": "38/40/41mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140697898,
+        "product_id": 9937879728426,
+        "position": 9,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-08T23:28:06+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9708.png?v=1762624686",
+        "variant_ids": [
+          50787726262570,
+          50787726295338
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 17,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50787726295338,
+      "title": "Gold / 42/44/45/49mm",
+      "option1": "Gold",
+      "option2": "42/44/45/49mm",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 50512140697898,
+        "product_id": 9937879728426,
+        "position": 9,
+        "created_at": "2025-11-07T20:42:09+05:30",
+        "updated_at": "2025-11-08T23:28:06+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_9708.png?v=1762624686",
+        "variant_ids": [
+          50787726262570,
+          50787726295338
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 18,
+      "product_id": 9937879728426,
+      "created_at": "2025-11-07T21:08:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Upgrade your smartwatch look with our Premium Stainless Steel Milanese Loop Strap and magnetic adjustable band – a perfect blend of elegance, durability, and comfort. Crafted from high-grade stainless steel mesh, this magnetic loop band ensures a secure fit while adding a touch of luxury to your wrist. Available in stunning colors – Rose Gold, Gold, Black, Silver, and more – this strap complements every outfit and occasion. Compatible with major smartwatch models, it features easy installation, strong magnetic closure, and a breathable mesh design for all-day comfort. ✅ Premium stainless steel material ✅ Magnetic adjustable clasp for a perfect fit ✅ Lightweight, flexible & skin-friendly ✅ Available in multiple elegant shades Perfect for both men and women who value style and quality.",
+  "description_html": "<p>Upgrade your smartwatch look with our Premium Stainless Steel Milanese Loop Strap and magnetic adjustable band – a perfect blend of elegance, durability, and comfort. Crafted from high-grade stainless steel mesh, this magnetic loop band ensures a secure fit while adding a touch of luxury to your wrist.</p>\n<p>Available in stunning colors – Rose Gold, Gold, Black, Silver, and more – this strap complements every outfit and occasion.<br>Compatible with major smartwatch models, it features easy installation, strong magnetic closure, and a breathable mesh design for all-day comfort.</p>\n<p>✅ Premium stainless steel material<br>✅ Magnetic adjustable clasp for a perfect fit<br>✅ Lightweight, flexible &amp; skin-friendly<br>✅ Available in multiple elegant shades</p>\n<p>Perfect for both men and women who value style and quality.</p>"
+}

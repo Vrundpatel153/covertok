@@ -1,0 +1,196 @@
+{
+  "id": "9873120330026",
+  "handle": "transparent-rugged-protective-apple-watch-case-with-strap-copy",
+  "title": "Transparent Rugged Apple Watch Case with Orange Sports Strap",
+  "price": 2149.0,
+  "original_price": 3999.0,
+  "discount_percent": 46,
+  "rating": 4.8,
+  "reviews_count": 246,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
+  "images": [
+    "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
+    "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/01_extra.webp",
+    "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/02_extra.webp",
+    "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/03_extra.webp",
+    "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/04_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Bright Orange",
+      "hex": "#FF5500",
+      "image": "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
+      "images": [
+        "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44m",
+        "45mm",
+        "46mm"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50538574610730,
+      "title": "40mm/41mm/42mm",
+      "option1": "40mm/41mm/42mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921040089386,
+        "product_id": 9873120330026,
+        "position": 1,
+        "created_at": "2025-08-28T13:10:24+05:30",
+        "updated_at": "2025-08-28T13:11:06+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8022.png?v=1756366866",
+        "variant_ids": [
+          50538574610730,
+          50794590470442
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 1,
+      "product_id": 9873120330026,
+      "created_at": "2025-08-28T13:09:58+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794590470442,
+      "title": "44m",
+      "option1": "44m",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921040089386,
+        "product_id": 9873120330026,
+        "position": 1,
+        "created_at": "2025-08-28T13:10:24+05:30",
+        "updated_at": "2025-08-28T13:11:06+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8022.png?v=1756366866",
+        "variant_ids": [
+          50538574610730,
+          50794590470442
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 2,
+      "product_id": 9873120330026,
+      "created_at": "2025-11-08T15:34:08+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794593321258,
+      "title": "45mm",
+      "option1": "45mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921040187690,
+        "product_id": 9873120330026,
+        "position": 4,
+        "created_at": "2025-08-28T13:10:29+05:30",
+        "updated_at": "2025-08-28T13:10:31+05:30",
+        "alt": null,
+        "width": 1206,
+        "height": 1345,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_7984.jpg?v=1756366831",
+        "variant_ids": [
+          50794593321258,
+          50794597843242
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 3,
+      "product_id": 9873120330026,
+      "created_at": "2025-11-08T15:34:54+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794597843242,
+      "title": "46mm",
+      "option1": "46mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921040187690,
+        "product_id": 9873120330026,
+        "position": 4,
+        "created_at": "2025-08-28T13:10:29+05:30",
+        "updated_at": "2025-08-28T13:10:31+05:30",
+        "alt": null,
+        "width": 1206,
+        "height": 1345,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_7984.jpg?v=1756366831",
+        "variant_ids": [
+          50794593321258,
+          50794597843242
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 4,
+      "product_id": 9873120330026,
+      "created_at": "2025-11-08T15:36:11+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch’s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge. ✅ Shockproof & scratch-resistant protective case ✅ Transparent body with striking orange strap ✅ Sweat-resistant & comfortable for long wear ✅ Easy to install with screw-secured frame ✅ Perfect for sports, fitness & daily use",
+  "description_html": "<p>Description:<br>Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch’s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge.</p>\n<p>✅ Shockproof &amp; scratch-resistant protective case<br>✅ Transparent body with striking orange strap<br>✅ Sweat-resistant &amp; comfortable for long wear<br>✅ Easy to install with screw-secured frame<br>✅ Perfect for sports, fitness &amp; daily use</p>\n<p> </p>"
+}

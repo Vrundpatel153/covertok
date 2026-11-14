@@ -1,0 +1,198 @@
+{
+  "id": "9873118101802",
+  "handle": "premium-silicone-watch-bands-available-in-18-colors-copy",
+  "title": "Rugged Armor Protective Watch Case with Sport Band",
+  "price": 2149.0,
+  "original_price": 3999.0,
+  "discount_percent": 46,
+  "rating": 4.8,
+  "reviews_count": 342,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
+  "images": [
+    "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
+    "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/01_extra.webp",
+    "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/02_extra.webp",
+    "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/03_extra.webp",
+    "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/04_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Tactical Black",
+      "hex": "#1C1D1F",
+      "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
+      "images": [
+        "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm",
+        "45mm",
+        "46mm"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50538529325354,
+      "title": "40mm/41mm/42mm",
+      "option1": "40mm/41mm/42mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921013219626,
+        "product_id": 9873118101802,
+        "position": 1,
+        "created_at": "2025-08-28T12:57:35+05:30",
+        "updated_at": "2025-09-01T14:17:58+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8012.png?v=1756716478",
+        "variant_ids": [
+          50538529325354,
+          50794639360298,
+          50794639393066
+        ]
+      },
+      "available": false,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 1,
+      "product_id": 9873118101802,
+      "created_at": "2025-08-28T12:57:13+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50538529816874,
+      "title": "44mm",
+      "option1": "44mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921014169898,
+        "product_id": 9873118101802,
+        "position": 3,
+        "created_at": "2025-08-28T12:57:55+05:30",
+        "updated_at": "2025-09-01T14:17:58+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8013.png?v=1756716478",
+        "variant_ids": [
+          50538529816874
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 2,
+      "product_id": 9873118101802,
+      "created_at": "2025-08-28T12:57:13+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794639360298,
+      "title": "45mm",
+      "option1": "45mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921013219626,
+        "product_id": 9873118101802,
+        "position": 1,
+        "created_at": "2025-08-28T12:57:35+05:30",
+        "updated_at": "2025-09-01T14:17:58+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8012.png?v=1756716478",
+        "variant_ids": [
+          50538529325354,
+          50794639360298,
+          50794639393066
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 3,
+      "product_id": 9873118101802,
+      "created_at": "2025-11-08T15:47:22+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794639393066,
+      "title": "46mm",
+      "option1": "46mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921013219626,
+        "product_id": 9873118101802,
+        "position": 1,
+        "created_at": "2025-08-28T12:57:35+05:30",
+        "updated_at": "2025-09-01T14:17:58+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8012.png?v=1756716478",
+        "variant_ids": [
+          50538529325354,
+          50794639360298,
+          50794639393066
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 4,
+      "product_id": 9873118101802,
+      "created_at": "2025-11-08T15:47:22+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear. The transparent case highlights the watch’s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit—perfect for workouts, outdoor adventures, or daily use. ⚡ Sleek. Strong. Built to last. Protect your smartwatch in style.",
+  "description_html": "<p>Description:<br>Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear.</p>\n<p>The transparent case highlights the watch’s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit—perfect for workouts, outdoor adventures, or daily use.</p>\n<p>⚡ Sleek. Strong. Built to last. Protect your smartwatch in style.</p>"
+}

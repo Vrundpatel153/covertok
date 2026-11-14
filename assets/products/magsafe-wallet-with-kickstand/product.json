@@ -1,0 +1,187 @@
+{
+  "id": "9853945741610",
+  "handle": "magsafe-wallet-with-kickstand",
+  "title": "MagSafe Leather Wallet Card Holder With Kickstand",
+  "price": 1099.0,
+  "original_price": 0.0,
+  "discount_percent": 33,
+  "rating": 4.7,
+  "reviews_count": 170,
+  "category": "other-accessories",
+  "category_name": "Tech Essentials",
+  "collections": [
+    "all",
+    "mens-cover",
+    "new-arrivals",
+    "other-accessories"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": true,
+  "is_womens": false,
+  "primary_image": "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
+  "images": [
+    "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
+    "assets/products/magsafe-wallet-with-kickstand/black/02_lifestyle.png",
+    "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
+    "assets/products/magsafe-wallet-with-kickstand/dark-blue/02_lifestyle.png",
+    "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
+    "assets/products/magsafe-wallet-with-kickstand/violet/02_lifestyle.png",
+    "assets/products/magsafe-wallet-with-kickstand/extra/01_extra.webp",
+    "assets/products/magsafe-wallet-with-kickstand/extra/02_extra.webp",
+    "assets/products/magsafe-wallet-with-kickstand/extra/03_extra.webp",
+    "assets/products/magsafe-wallet-with-kickstand/extra/04_extra.webp",
+    "assets/products/magsafe-wallet-with-kickstand/extra/05_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Black",
+      "hex": "#18181B",
+      "price": 1099.0,
+      "image": "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
+      "images": [
+        "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
+        "assets/products/magsafe-wallet-with-kickstand/black/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Dark Blue",
+      "hex": "#1E3A8A",
+      "price": 1099.0,
+      "image": "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
+      "images": [
+        "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
+        "assets/products/magsafe-wallet-with-kickstand/dark-blue/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Violet",
+      "hex": "#7C3AED",
+      "price": 1099.0,
+      "image": "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
+      "images": [
+        "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
+        "assets/products/magsafe-wallet-with-kickstand/violet/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Black",
+        "Dark Blue",
+        "Violet"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50456451154218,
+      "title": "Black",
+      "option1": "Black",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": {
+        "id": 49692688875818,
+        "product_id": 9853945741610,
+        "position": 3,
+        "created_at": "2025-08-02T13:54:36+05:30",
+        "updated_at": "2025-11-23T12:00:47+05:30",
+        "alt": null,
+        "width": 1536,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug2_2025_12_36_41PM.png?v=1763879447",
+        "variant_ids": [
+          50456451154218
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 50,
+      "compare_at_price": "0.00",
+      "position": 1,
+      "product_id": 9853945741610,
+      "created_at": "2025-08-02T13:57:51+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50456451186986,
+      "title": "Dark Blue",
+      "option1": "Dark Blue",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": {
+        "id": 49692707586346,
+        "product_id": 9853945741610,
+        "position": 1,
+        "created_at": "2025-08-02T13:57:32+05:30",
+        "updated_at": "2025-11-23T12:00:47+05:30",
+        "alt": null,
+        "width": 1536,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162882.png?v=1763879447",
+        "variant_ids": [
+          50456451186986
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 50,
+      "compare_at_price": "0.00",
+      "position": 2,
+      "product_id": 9853945741610,
+      "created_at": "2025-08-02T13:57:51+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50456457871658,
+      "title": "Violet",
+      "option1": "Violet",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": {
+        "id": 49692728394026,
+        "product_id": 9853945741610,
+        "position": 6,
+        "created_at": "2025-08-02T14:03:00+05:30",
+        "updated_at": "2025-08-02T15:52:40+05:30",
+        "alt": null,
+        "width": 1536,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162918.png?v=1754130160",
+        "variant_ids": [
+          50456457871658
+        ]
+      },
+      "available": true,
+      "price": "1099.00",
+      "grams": 50,
+      "compare_at_price": "0.00",
+      "position": 3,
+      "product_id": 9853945741610,
+      "created_at": "2025-08-02T14:03:15+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [
+    "> 🧲 Key Features: – MagSafe Compatible: Strong magnetic grip for secure snap-on attachment. – Built-in Kickstand: Easily folds out to support vertical or horizontal viewing. – Premium PU Leather: Smooth, durable finish with an elegant look. – Slim Design: Pocket-friendly without compromising space. – Secure Card Slot: Holds 1–2 cards snugly."
+  ],
+  "description_text": "A wallet. A stand. A statement. Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time. 🧲 Key Features: – MagSafe Compatible: Strong magnetic grip for secure snap-on attachment. – Built-in Kickstand: Easily folds out to support vertical or horizontal viewing. – Premium PU Leather: Smooth, durable finish with an elegant look. – Slim Design: Pocket-friendly without compromising space. – Secure Card Slot: Holds 1–2 cards snugly. 📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)",
+  "description_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p>📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>"
+}

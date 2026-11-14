@@ -1,0 +1,187 @@
+{
+  "id": "9853944529194",
+  "handle": "magsafe-leather-card-holder-snap-on-wallet",
+  "title": "MagSafe Leather Card Holder – Snap-On Wallet",
+  "price": 999.0,
+  "original_price": 0.0,
+  "discount_percent": 33,
+  "rating": 4.9,
+  "reviews_count": 334,
+  "category": "other-accessories",
+  "category_name": "Tech Essentials",
+  "collections": [
+    "all",
+    "mens-cover",
+    "new-arrivals",
+    "other-accessories"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": true,
+  "is_womens": false,
+  "primary_image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
+  "images": [
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/02_lifestyle.png",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.png",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/02_lifestyle.png",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/01_extra.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/02_extra.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/03_extra.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/04_extra.webp",
+    "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/05_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Orange",
+      "hex": "#F97316",
+      "price": 999.0,
+      "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
+      "images": [
+        "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
+        "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Dark Blue",
+      "hex": "#1E3A8A",
+      "price": 999.0,
+      "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
+      "images": [
+        "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
+        "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Black",
+      "hex": "#18181B",
+      "price": 999.0,
+      "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
+      "images": [
+        "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
+        "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Orange",
+        "Dark Blue",
+        "Black"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50456442110250,
+      "title": "Orange",
+      "option1": "Orange",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": {
+        "id": 49692654207274,
+        "product_id": 9853944529194,
+        "position": 3,
+        "created_at": "2025-08-02T13:43:55+05:30",
+        "updated_at": "2025-11-23T12:01:19+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug2_2025_11_56_32AM.png?v=1763879479",
+        "variant_ids": [
+          50456442110250
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 50,
+      "compare_at_price": "0.00",
+      "position": 1,
+      "product_id": 9853944529194,
+      "created_at": "2025-08-02T13:50:41+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50456442143018,
+      "title": "Dark Blue",
+      "option1": "Dark Blue",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": {
+        "id": 49692671377706,
+        "product_id": 9853944529194,
+        "position": 4,
+        "created_at": "2025-08-02T13:49:39+05:30",
+        "updated_at": "2025-08-02T15:51:44+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162868.png?v=1754130104",
+        "variant_ids": [
+          50456442143018
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 50,
+      "compare_at_price": "0.00",
+      "position": 2,
+      "product_id": 9853944529194,
+      "created_at": "2025-08-02T13:50:41+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50456466882858,
+      "title": "Black",
+      "option1": "Black",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": false,
+      "featured_image": {
+        "id": 49692868641066,
+        "product_id": 9853944529194,
+        "position": 7,
+        "created_at": "2025-08-02T14:33:25+05:30",
+        "updated_at": "2025-08-02T15:51:44+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162925.png?v=1754130104",
+        "variant_ids": [
+          50456466882858
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 50,
+      "compare_at_price": "0.00",
+      "position": 3,
+      "product_id": 9853944529194,
+      "created_at": "2025-08-02T14:34:42+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [
+    "> 🧲 Key Features: – MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone. – Premium Leather Finish: Smooth, durable, and elegant look. – Slim & Lightweight: Adds functionality without bulk. – Secure Card Slot: Holds 1–2 cards safely with easy access. – Perfect Fit: Works with all MagSafe-enabled iPhones and cases."
+  ],
+  "description_text": "Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly. 🧲 Key Features: – MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone. – Premium Leather Finish: Smooth, durable, and elegant look. – Slim & Lightweight: Adds functionality without bulk. – Secure Card Slot: Holds 1–2 cards safely with easy access. – Perfect Fit: Works with all MagSafe-enabled iPhones and cases. 🎨 Color: Vibrant Orange (Available in multiple colors) 📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)",
+  "description_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p>🎨 Color: Vibrant Orange (Available in multiple colors)</p>\n<p>📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>"
+}

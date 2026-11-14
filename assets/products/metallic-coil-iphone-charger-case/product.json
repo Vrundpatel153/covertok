@@ -1,0 +1,92 @@
+{
+  "id": "9870520320298",
+  "handle": "metallic-coil-iphone-charger-case⚡✨",
+  "title": "Metallic Coil iPhone Charger Case",
+  "price": 499.0,
+  "original_price": 749.0,
+  "discount_percent": 33,
+  "rating": 4.9,
+  "reviews_count": 298,
+  "category": "charger-covers",
+  "category_name": "Charger Cases",
+  "collections": [
+    "all",
+    "charger-covers",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
+  "images": [
+    "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
+    "assets/products/metallic-coil-iphone-charger-case/bloom-edition/02_lifestyle.png",
+    "assets/products/metallic-coil-iphone-charger-case/extra/01_extra.webp",
+    "assets/products/metallic-coil-iphone-charger-case/extra/02_extra.webp",
+    "assets/products/metallic-coil-iphone-charger-case/extra/03_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Bloom Edition",
+      "hex": "#E19975",
+      "price": 499.0,
+      "image": "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
+      "images": [
+        "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
+        "assets/products/metallic-coil-iphone-charger-case/bloom-edition/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Variant",
+      "position": 1,
+      "values": [
+        "Bloom Edition"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50529275347242,
+      "title": "Bloom Edition",
+      "option1": "Bloom Edition",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899486576938,
+        "product_id": 9870520320298,
+        "position": 1,
+        "created_at": "2025-08-25T14:44:03+05:30",
+        "updated_at": "2025-08-25T14:44:05+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug19_2025_10_48_03PM.png?v=1756113245",
+        "variant_ids": [
+          50529275347242
+        ]
+      },
+      "available": true,
+      "price": "499.00",
+      "grams": 0,
+      "compare_at_price": "749.00",
+      "position": 1,
+      "product_id": 9870520320298,
+      "created_at": "2025-08-25T14:54:26+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Upgrade your charging game with our Metallic Coil Charger Case designed for both durability and style. Featuring a sleek silver coil body that prevents tangling and adds extra strength, these cables come with adorable decorative covers in Heart and Flower designs. The cute detailing on the connector and adapter gives your setup a playful yet premium vibe, while ensuring long-lasting performance. Perfect for everyday charging with a touch of personality.",
+  "description_html": "<p>Description:<br>Upgrade your charging game with our Metallic Coil Charger Case designed for both durability and style. Featuring a sleek silver coil body that prevents tangling and adds extra strength, these cables come with adorable decorative covers in Heart and Flower designs. The cute detailing on the connector and adapter gives your setup a playful yet premium vibe, while ensuring long-lasting performance. Perfect for everyday charging with a touch of personality.</p>"
+}

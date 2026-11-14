@@ -1,0 +1,198 @@
+{
+  "id": "9873118855466",
+  "handle": "rugged-armor-protective-watch-case-with-sport-band-copy",
+  "title": "Transparent Rugged Protective Apple Watch Case with Strap",
+  "price": 2149.0,
+  "original_price": 3999.0,
+  "discount_percent": 46,
+  "rating": 4.8,
+  "reviews_count": 466,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
+  "images": [
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/01_extra.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/02_extra.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/03_extra.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/04_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Clear Titanium",
+      "hex": "#94A3B8",
+      "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
+      "images": [
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm",
+        "45mm",
+        "46mm"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50538542137642,
+      "title": "40mm/41mm/42mm",
+      "option1": "40mm/41mm/42mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921023738154,
+        "product_id": 9873118855466,
+        "position": 1,
+        "created_at": "2025-08-28T13:00:52+05:30",
+        "updated_at": "2025-08-28T13:00:53+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8016.png?v=1756366253",
+        "variant_ids": [
+          50538542137642,
+          50794635133226,
+          50794635165994
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 1,
+      "product_id": 9873118855466,
+      "created_at": "2025-08-28T13:00:38+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50538542170410,
+      "title": "44mm",
+      "option1": "44mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921023934762,
+        "product_id": 9873118855466,
+        "position": 2,
+        "created_at": "2025-08-28T13:00:58+05:30",
+        "updated_at": "2025-08-28T13:01:00+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8020.png?v=1756366260",
+        "variant_ids": [
+          50538542170410
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 2,
+      "product_id": 9873118855466,
+      "created_at": "2025-08-28T13:00:38+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794635133226,
+      "title": "45mm",
+      "option1": "45mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921023738154,
+        "product_id": 9873118855466,
+        "position": 1,
+        "created_at": "2025-08-28T13:00:52+05:30",
+        "updated_at": "2025-08-28T13:00:53+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8016.png?v=1756366253",
+        "variant_ids": [
+          50538542137642,
+          50794635133226,
+          50794635165994
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 3,
+      "product_id": 9873118855466,
+      "created_at": "2025-11-08T15:46:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50794635165994,
+      "title": "46mm",
+      "option1": "46mm",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49921023738154,
+        "product_id": 9873118855466,
+        "position": 1,
+        "created_at": "2025-08-28T13:00:52+05:30",
+        "updated_at": "2025-08-28T13:00:53+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1024,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8016.png?v=1756366253",
+        "variant_ids": [
+          50538542137642,
+          50794635133226,
+          50794635165994
+        ]
+      },
+      "available": true,
+      "price": "2149.00",
+      "grams": 0,
+      "compare_at_price": "3999.00",
+      "position": 4,
+      "product_id": 9873118855466,
+      "created_at": "2025-11-08T15:46:14+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch’s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360° protection and premium comfort. ✅ Shockproof & Scratch-resistant ✅ Transparent modern design ✅ Easy installation with screw-secured frame ✅ Compatible with multiple Apple Watch sizes",
+  "description_html": "<p>Description:<br>Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch’s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360° protection and premium comfort.</p>\n<p>✅ Shockproof &amp; Scratch-resistant<br>✅ Transparent modern design<br>✅ Easy installation with screw-secured frame<br>✅ Compatible with multiple Apple Watch sizes</p>"
+}

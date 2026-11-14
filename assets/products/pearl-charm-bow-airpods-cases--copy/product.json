@@ -1,0 +1,452 @@
+{
+  "id": "9870479524138",
+  "handle": "pearl-charm-bow-airpods-cases-🎀✨-copy",
+  "title": "Butterfly Charm AirPods Case",
+  "price": 549.0,
+  "original_price": 0.0,
+  "discount_percent": 33,
+  "rating": 4.9,
+  "reviews_count": 178,
+  "category": "airpod-covers",
+  "category_name": "AirPods Covers",
+  "collections": [
+    "all",
+    "airpod-covers",
+    "new-arrivals",
+    "our-bestsellers"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": true,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
+  "images": [
+    "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/pink/02_lifestyle.png",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/blue/02_lifestyle.png",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/extra/01_extra.webp",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/extra/02_extra.webp",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/extra/03_extra.webp",
+    "assets/products/pearl-charm-bow-airpods-cases--copy/extra/04_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Pink",
+      "hex": "#EC4899",
+      "price": 549.0,
+      "image": "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
+      "images": [
+        "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
+        "assets/products/pearl-charm-bow-airpods-cases--copy/pink/02_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Blue",
+      "hex": "#2563EB",
+      "price": 549.0,
+      "image": "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
+      "images": [
+        "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
+        "assets/products/pearl-charm-bow-airpods-cases--copy/blue/02_lifestyle.png"
+      ]
+    }
+  ],
+  "models": [
+    "Airpods 1/2",
+    "Airpods Pro",
+    "Airpods 3",
+    "Airpods Pro 2",
+    "Airpods 4"
+  ],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "Airpods 1/2",
+        "Airpods Pro",
+        "Airpods 3",
+        "Airpods Pro 2",
+        "Airpods 4"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Pink",
+        "Blue"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50529129890090,
+      "title": "Airpods 1/2 / Pink",
+      "option1": "Airpods 1/2",
+      "option2": "Pink",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899267293482,
+        "product_id": 9870479524138,
+        "position": 4,
+        "created_at": "2025-08-25T13:27:44+05:30",
+        "updated_at": "2025-08-25T13:27:46+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_32_33AM.png?v=1756108666",
+        "variant_ids": [
+          50529129890090,
+          50529129955626,
+          50529130021162,
+          50529130086698,
+          50529130152234
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 1,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:27:00+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529146274090,
+      "title": "Airpods 1/2 / Blue",
+      "option1": "Airpods 1/2",
+      "option2": "Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899266801962,
+        "product_id": 9870479524138,
+        "position": 2,
+        "created_at": "2025-08-25T13:27:28+05:30",
+        "updated_at": "2025-08-25T13:27:30+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_58_55AM.png?v=1756108650",
+        "variant_ids": [
+          50529146274090,
+          50529146306858,
+          50529146339626,
+          50529146372394,
+          50529146405162
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 2,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:39:03+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529129955626,
+      "title": "Airpods Pro / Pink",
+      "option1": "Airpods Pro",
+      "option2": "Pink",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899267293482,
+        "product_id": 9870479524138,
+        "position": 4,
+        "created_at": "2025-08-25T13:27:44+05:30",
+        "updated_at": "2025-08-25T13:27:46+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_32_33AM.png?v=1756108666",
+        "variant_ids": [
+          50529129890090,
+          50529129955626,
+          50529130021162,
+          50529130086698,
+          50529130152234
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 3,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:27:00+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529146306858,
+      "title": "Airpods Pro / Blue",
+      "option1": "Airpods Pro",
+      "option2": "Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899266801962,
+        "product_id": 9870479524138,
+        "position": 2,
+        "created_at": "2025-08-25T13:27:28+05:30",
+        "updated_at": "2025-08-25T13:27:30+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_58_55AM.png?v=1756108650",
+        "variant_ids": [
+          50529146274090,
+          50529146306858,
+          50529146339626,
+          50529146372394,
+          50529146405162
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 4,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:39:03+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529130021162,
+      "title": "Airpods 3 / Pink",
+      "option1": "Airpods 3",
+      "option2": "Pink",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899267293482,
+        "product_id": 9870479524138,
+        "position": 4,
+        "created_at": "2025-08-25T13:27:44+05:30",
+        "updated_at": "2025-08-25T13:27:46+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_32_33AM.png?v=1756108666",
+        "variant_ids": [
+          50529129890090,
+          50529129955626,
+          50529130021162,
+          50529130086698,
+          50529130152234
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 5,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:27:00+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529146339626,
+      "title": "Airpods 3 / Blue",
+      "option1": "Airpods 3",
+      "option2": "Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899266801962,
+        "product_id": 9870479524138,
+        "position": 2,
+        "created_at": "2025-08-25T13:27:28+05:30",
+        "updated_at": "2025-08-25T13:27:30+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_58_55AM.png?v=1756108650",
+        "variant_ids": [
+          50529146274090,
+          50529146306858,
+          50529146339626,
+          50529146372394,
+          50529146405162
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 6,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:39:03+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529130086698,
+      "title": "Airpods Pro 2 / Pink",
+      "option1": "Airpods Pro 2",
+      "option2": "Pink",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899267293482,
+        "product_id": 9870479524138,
+        "position": 4,
+        "created_at": "2025-08-25T13:27:44+05:30",
+        "updated_at": "2025-08-25T13:27:46+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_32_33AM.png?v=1756108666",
+        "variant_ids": [
+          50529129890090,
+          50529129955626,
+          50529130021162,
+          50529130086698,
+          50529130152234
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 7,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:27:00+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529146372394,
+      "title": "Airpods Pro 2 / Blue",
+      "option1": "Airpods Pro 2",
+      "option2": "Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899266801962,
+        "product_id": 9870479524138,
+        "position": 2,
+        "created_at": "2025-08-25T13:27:28+05:30",
+        "updated_at": "2025-08-25T13:27:30+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_58_55AM.png?v=1756108650",
+        "variant_ids": [
+          50529146274090,
+          50529146306858,
+          50529146339626,
+          50529146372394,
+          50529146405162
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 8,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:39:03+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529130152234,
+      "title": "Airpods 4 / Pink",
+      "option1": "Airpods 4",
+      "option2": "Pink",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899267293482,
+        "product_id": 9870479524138,
+        "position": 4,
+        "created_at": "2025-08-25T13:27:44+05:30",
+        "updated_at": "2025-08-25T13:27:46+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_32_33AM.png?v=1756108666",
+        "variant_ids": [
+          50529129890090,
+          50529129955626,
+          50529130021162,
+          50529130086698,
+          50529130152234
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 9,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:27:00+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50529146405162,
+      "title": "Airpods 4 / Blue",
+      "option1": "Airpods 4",
+      "option2": "Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49899266801962,
+        "product_id": 9870479524138,
+        "position": 2,
+        "created_at": "2025-08-25T13:27:28+05:30",
+        "updated_at": "2025-08-25T13:27:30+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug20_2025_09_58_55AM.png?v=1756108650",
+        "variant_ids": [
+          50529146274090,
+          50529146306858,
+          50529146339626,
+          50529146372394,
+          50529146405162
+        ]
+      },
+      "available": true,
+      "price": "549.00",
+      "grams": 0,
+      "compare_at_price": "0.00",
+      "position": 10,
+      "product_id": 9870479524138,
+      "created_at": "2025-08-25T13:39:03+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!",
+  "description_html": "<p>Description:<br>Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!</p>"
+}

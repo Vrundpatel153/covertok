@@ -1,0 +1,76 @@
+{
+  "id": "9870514487594",
+  "handle": "blue-gingham-iphone-charger-case✨🔌",
+  "title": "Blue Gingham iPhone Charger Case",
+  "price": 499.0,
+  "original_price": 749.0,
+  "discount_percent": 33,
+  "rating": 4.9,
+  "reviews_count": 214,
+  "category": "charger-covers",
+  "category_name": "Charger Cases",
+  "collections": [
+    "all",
+    "charger-covers",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/blue-gingham-iphone-charger-case/sky-blue/01_packshot.webp",
+  "images": [
+    "assets/products/blue-gingham-iphone-charger-case/sky-blue/01_packshot.webp",
+    "assets/products/blue-gingham-iphone-charger-case/extra/01_extra.webp",
+    "assets/products/blue-gingham-iphone-charger-case/extra/02_extra.webp",
+    "assets/products/blue-gingham-iphone-charger-case/extra/03_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Sky Blue",
+      "hex": "#7DD3FC",
+      "image": "assets/products/blue-gingham-iphone-charger-case/sky-blue/01_packshot.webp",
+      "images": [
+        "assets/products/blue-gingham-iphone-charger-case/sky-blue/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50529253916970,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "499.00",
+      "grams": 0,
+      "compare_at_price": "749.00",
+      "position": 1,
+      "product_id": 9870514487594,
+      "created_at": "2025-08-25T14:41:17+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! 💙🚗",
+  "description_html": "<p>Description:<br>Brighten up your charging routine with our Blue Gingham Charger Case. Featuring a soft pastel checkered design with cute red car prints, this cable is as stylish as it is durable. The braided finish ensures strength and a tangle-free experience, while the matching protective cover keeps the connector safe from bends and breaks. Perfect for adding a touch of cuteness to your desk or bag—charging has never looked this good! 💙🚗</p>"
+}

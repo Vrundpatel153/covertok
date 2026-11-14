@@ -1,0 +1,319 @@
+{
+  "id": "9979941159210",
+  "handle": "aluminium-frame-transparent-case",
+  "title": "Aluminium Frame Transparent Case",
+  "price": 999.0,
+  "original_price": 1499.0,
+  "discount_percent": 33,
+  "rating": 4.7,
+  "reviews_count": 330,
+  "category": "iphone-cases",
+  "category_name": "Phone Cases",
+  "collections": [
+    "all",
+    "buy-three",
+    "iphone-cases",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "Mobile Accessories",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
+  "images": [
+    "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
+    "assets/products/aluminium-frame-transparent-case/cosmic-orange/02_lifestyle.jpg",
+    "assets/products/aluminium-frame-transparent-case/cosmic-orange/03_lifestyle.png",
+    "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
+    "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
+    "assets/products/aluminium-frame-transparent-case/deep-blue/03_lifestyle.jpg",
+    "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
+    "assets/products/aluminium-frame-transparent-case/silver/02_lifestyle.jpg",
+    "assets/products/aluminium-frame-transparent-case/extra/01_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/02_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/03_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/04_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/05_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/06_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/07_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/08_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/09_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/10_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/11_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/12_extra.webp",
+    "assets/products/aluminium-frame-transparent-case/extra/13_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Cosmic Orange",
+      "hex": "#FF6A3D",
+      "price": 999.0,
+      "image": "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
+      "images": [
+        "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
+        "assets/products/aluminium-frame-transparent-case/cosmic-orange/02_lifestyle.jpg",
+        "assets/products/aluminium-frame-transparent-case/cosmic-orange/03_lifestyle.png"
+      ]
+    },
+    {
+      "name": "Deep Blue",
+      "hex": "#1E40AF",
+      "price": 999.0,
+      "image": "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
+      "images": [
+        "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
+        "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
+        "assets/products/aluminium-frame-transparent-case/deep-blue/03_lifestyle.jpg"
+      ]
+    },
+    {
+      "name": "Silver",
+      "hex": "#E4E4E7",
+      "price": 999.0,
+      "image": "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
+      "images": [
+        "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
+        "assets/products/aluminium-frame-transparent-case/silver/02_lifestyle.jpg"
+      ]
+    }
+  ],
+  "models": [
+    "iPhone 16 Pro Max",
+    "iPhone 16 Pro",
+    "iPhone 16 Plus",
+    "iPhone 16",
+    "iPhone 15 Pro Max",
+    "iPhone 15 Pro",
+    "iPhone 15 Plus",
+    "iPhone 15",
+    "iPhone 14 Pro Max",
+    "iPhone 14 Pro",
+    "iPhone 14",
+    "iPhone 13 Pro Max",
+    "iPhone 13"
+  ],
+  "model_label": "Select Device Model:",
+  "options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Cosmic Orange",
+        "Deep Blue",
+        "Silver"
+      ]
+    },
+    {
+      "name": "Model",
+      "position": 2,
+      "values": [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50947899621674,
+      "title": "Cosmic Orange / iPhone 17 Pro",
+      "option1": "Cosmic Orange",
+      "option2": "iPhone 17 Pro",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51102857167146,
+        "product_id": 9979941159210,
+        "position": 3,
+        "created_at": "2025-12-13T21:04:56+05:30",
+        "updated_at": "2025-12-24T19:35:24+05:30",
+        "alt": null,
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0344.jpg?v=1766585124",
+        "variant_ids": [
+          50947899621674
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 1,
+      "product_id": 9979941159210,
+      "created_at": "2025-12-13T21:08:21+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50947899654442,
+      "title": "Deep Blue / iPhone 17 Pro",
+      "option1": "Deep Blue",
+      "option2": "iPhone 17 Pro",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51102857265450,
+        "product_id": 9979941159210,
+        "position": 2,
+        "created_at": "2025-12-13T21:04:56+05:30",
+        "updated_at": "2025-12-24T19:35:24+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0372.png?v=1766585124",
+        "variant_ids": [
+          50947899654442
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 2,
+      "product_id": 9979941159210,
+      "created_at": "2025-12-13T21:08:21+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50947899687210,
+      "title": "Silver / iPhone 17 Pro",
+      "option1": "Silver",
+      "option2": "iPhone 17 Pro",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51102856905002,
+        "product_id": 9979941159210,
+        "position": 5,
+        "created_at": "2025-12-13T21:04:56+05:30",
+        "updated_at": "2025-12-13T21:14:55+05:30",
+        "alt": null,
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0336.jpg?v=1765640695",
+        "variant_ids": [
+          50947899687210,
+          50947899883818
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 3,
+      "product_id": 9979941159210,
+      "created_at": "2025-12-13T21:08:21+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50947899818282,
+      "title": "Cosmic Orange / iPhone 17 Pro Max",
+      "option1": "Cosmic Orange",
+      "option2": "iPhone 17 Pro Max",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51102857298218,
+        "product_id": 9979941159210,
+        "position": 1,
+        "created_at": "2025-12-13T21:04:56+05:30",
+        "updated_at": "2025-12-24T19:35:24+05:30",
+        "alt": null,
+        "width": 1024,
+        "height": 1536,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0373.png?v=1766585124",
+        "variant_ids": [
+          50947899818282
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 5,
+      "product_id": 9979941159210,
+      "created_at": "2025-12-13T21:09:01+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50947899851050,
+      "title": "Deep Blue / iPhone 17 Pro Max",
+      "option1": "Deep Blue",
+      "option2": "iPhone 17 Pro Max",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51102856872234,
+        "product_id": 9979941159210,
+        "position": 6,
+        "created_at": "2025-12-13T21:04:56+05:30",
+        "updated_at": "2025-12-13T21:14:55+05:30",
+        "alt": null,
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0334.jpg?v=1765640695",
+        "variant_ids": [
+          50947899851050
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 6,
+      "product_id": 9979941159210,
+      "created_at": "2025-12-13T21:09:01+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50947899883818,
+      "title": "Silver / iPhone 17 Pro Max",
+      "option1": "Silver",
+      "option2": "iPhone 17 Pro Max",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 51102856905002,
+        "product_id": 9979941159210,
+        "position": 5,
+        "created_at": "2025-12-13T21:04:56+05:30",
+        "updated_at": "2025-12-13T21:14:55+05:30",
+        "alt": null,
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG-0336.jpg?v=1765640695",
+        "variant_ids": [
+          50947899687210,
+          50947899883818
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1499.00",
+      "position": 7,
+      "product_id": 9979941159210,
+      "created_at": "2025-12-13T21:09:01+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [
+    "Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look. This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device. The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series ✨ Key Features"
+  ],
+  "description_text": "Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look. This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device. The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series ✨ Key Features • Premium Aluminium Body Frame – Strong, durable, and stylish • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible • Perfect Fit – Designed exclusively for iPhone 17 Pro & 17 Pro Max • Sleek & Lightweight – Protection without bulk • Raised Camera Protection – Prevents scratches on lens • Anti-Slip Grip – Comfortable and secure to hold 📱 Compatibility • iPhone 17 Pro • iPhone 17 Pro Max",
+  "description_html": "<p>Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series</p>\n<p>✨ Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 17 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p>📱 Compatibility<br> • iPhone 17 Pro<br> • iPhone 17 Pro Max</p>"
+}

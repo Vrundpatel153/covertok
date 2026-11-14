@@ -1,0 +1,145 @@
+{
+  "id": "9871354528042",
+  "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy",
+  "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition(Cloud grey+Blue)",
+  "price": 999.0,
+  "original_price": 1999.0,
+  "discount_percent": 50,
+  "rating": 4.8,
+  "reviews_count": 122,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+  "images": [
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/01_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/02_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/03_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/04_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/05_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/06_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/07_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/08_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/09_extra.webp",
+    "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/10_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Cloud Grey+Blue",
+      "hex": "#2563EB",
+      "price": 999.0,
+      "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+      "images": [
+        "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+        "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg"
+      ]
+    }
+  ],
+  "models": [
+    "38mm / 40mm / 41mm",
+    "42mm / 44mm / 45mm",
+    "49mm (Apple Watch Ultra 1 & 2)"
+  ],
+  "model_label": "Select Case Size:",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm/45mm/46mm/49mm"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Cloud Grey+Blue"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50532927602986,
+      "title": "40mm/41mm/42mm / Cloud Grey+Blue",
+      "option1": "40mm/41mm/42mm",
+      "option2": "Cloud Grey+Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49997038715178,
+        "product_id": 9871354528042,
+        "position": 2,
+        "created_at": "2025-09-10T11:29:56+05:30",
+        "updated_at": "2025-11-23T11:49:03+05:30",
+        "alt": null,
+        "width": 3000,
+        "height": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/nghh_m.jpg?v=1763878743",
+        "variant_ids": [
+          50532927602986,
+          50532927635754
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1999.00",
+      "position": 1,
+      "product_id": 9871354528042,
+      "created_at": "2025-08-26T17:09:54+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    },
+    {
+      "id": 50532927635754,
+      "title": "44mm/45mm/46mm/49mm / Cloud Grey+Blue",
+      "option1": "44mm/45mm/46mm/49mm",
+      "option2": "Cloud Grey+Blue",
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 49997038715178,
+        "product_id": 9871354528042,
+        "position": 2,
+        "created_at": "2025-09-10T11:29:56+05:30",
+        "updated_at": "2025-11-23T11:49:03+05:30",
+        "alt": null,
+        "width": 3000,
+        "height": 3000,
+        "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/nghh_m.jpg?v=1763878743",
+        "variant_ids": [
+          50532927602986,
+          50532927635754
+        ]
+      },
+      "available": true,
+      "price": "999.00",
+      "grams": 0,
+      "compare_at_price": "1999.00",
+      "position": 2,
+      "product_id": 9871354528042,
+      "created_at": "2025-08-26T17:09:54+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch. ✅ Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm ✅ Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink ✅ Comfortable, durable, and easy to snap on/off A stylish companion for everyday wear that keeps your watch looking fresh and elegant.",
+  "description_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>✅ Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>✅ Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>✅ Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>"
+}
