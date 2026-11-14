@@ -1528,18 +1528,13 @@
       const initialImg = p.primary_image || (hasC ? p.colors[0].image : '');
 
       let badgeHtml = '';
-      if (p.discount_percent > 0) {
-        badgeHtml += `<span class="card-badge card-badge-discount">${p.discount_percent}% OFF</span>`;
-      }
-      if (p.is_bestseller) {
-        badgeHtml += `<span class="card-badge card-badge-bestseller">BESTSELLER</span>`;
-      } else if (p.is_new) {
-        badgeHtml += `<span class="card-badge card-badge-new">NEW</span>`;
+      if (p.discount_percent >= 10) {
+        badgeHtml = `<span class="luxury-card-tag">-${p.discount_percent}%</span>`;
       }
 
-      const priceFormatted = `Rs. ${Number(p.price).toLocaleString('en-IN')}.00`;
+      const priceFormatted = `₹${Math.round(p.price).toLocaleString('en-IN')}`;
       const origPriceFormatted = p.original_price && p.original_price > p.price 
-        ? `Rs. ${Number(p.original_price).toLocaleString('en-IN')}.00`
+        ? `₹${Math.round(p.original_price).toLocaleString('en-IN')}`
         : '';
 
       // Color Swatches Palette: Strictly only show when product has multiple colors (> 1)

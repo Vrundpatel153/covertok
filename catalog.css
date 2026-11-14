@@ -2259,78 +2259,55 @@
 
 
 
-/* Card Media Stage - Dominant, Crisp, Edge-to-Edge Hero Presentation */
-
+/* Card Media Stage - Dominant, Crisp, Edge-to-Edge Hero Presentation (Strictly 1:1 Pure White) */
 .card-media-stage {
-
-  position: relative;
-
-  background: #FFFFFF;
-
-  aspect-ratio: 4 / 4.6;
-
-  width: 100%;
-
-  margin: 0;
-
-  border-radius: 18px 18px 0 0;
-
-  overflow: hidden;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  cursor: pointer;
-
-  border-bottom: none;
-
-  padding: 0;
-
+  position: relative !important;
+  background: #FFFFFF !important;
+  aspect-ratio: 1 / 1 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  border-radius: 17px 17px 0 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
-
-
 
 .card-img-wrap {
-
-  width: 100%;
-
-  height: 100%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  overflow: hidden;
-
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: #FFFFFF !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
-
-
 
 .card-main-img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
-  display: block;
-
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
-
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: #FFFFFF !important;
+  border-radius: 17px 17px 0 0 !important;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-
-
 .catalog-card:hover .card-main-img {
-
-  transform: scale(1.05);
-
+  transform: scale(1.04) !important;
 }
 
 
@@ -2395,24 +2372,9 @@
 
 
 
-.luxury-card-tag.tag-bestseller {
-
-  background: #FF5500;
-
-  color: #FFFFFF;
-
-  box-shadow: 0 2px 8px rgba(255, 85, 0, 0.35);
-
-}
-
-
-
+.luxury-card-tag.tag-bestseller,
 .luxury-card-tag.tag-new {
-
-  background: #2B2A27;
-
-  color: #F8F6F2;
-
+  display: none !important;
 }
 
 

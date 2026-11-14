@@ -653,14 +653,10 @@
     const hasColors = product.colors && product.colors.length > 0;
     const initialImg = (hasColors && product.colors[0].image) ? product.colors[0].image : (product.primary_image || '');
 
-    // Single Minimalist Luxury Badge (No clutter or duplicate pills)
+    // Clean Discount Pill Only (No arbitrary text labeling)
     let badgeHtml = '';
     if (product.discount_percent >= 10) {
       badgeHtml = `<span class="luxury-card-tag">-${product.discount_percent}%</span>`;
-    } else if (product.is_bestseller) {
-      badgeHtml = `<span class="luxury-card-tag tag-bestseller">BESTSELLER</span>`;
-    } else if (product.is_new) {
-      badgeHtml = `<span class="luxury-card-tag tag-new">NEW</span>`;
     }
 
     // Format Prices cleanly
