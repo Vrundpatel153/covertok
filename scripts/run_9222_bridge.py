@@ -40,3 +40,4 @@ class ProxyHandler(http.server.BaseHTTPRequestHandler):
 server = socketserver.TCPServer(("127.0.0.1", 9222), ProxyHandler)
 print(f"Proxy listening on 9222 -> forwarding to {ws_url}")
 server.serve_forever()
+

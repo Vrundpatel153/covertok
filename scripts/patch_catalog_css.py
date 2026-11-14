@@ -379,3 +379,4 @@ with open('catalog.css', 'w', encoding='utf-8') as f:
     f.write(new_text)
 
 print('Successfully patched catalog.css')
+

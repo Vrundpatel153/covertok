@@ -22,3 +22,4 @@ conn.request("GET", "/json/version")
 resp = conn.getresponse()
 print("Response status from Chrome /json/version:", resp.status)
 print("Response body:", resp.read().decode())
+

@@ -20,3 +20,4 @@ for fname in files:
     with open(fname, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"Updated cache-busting in {fname}")
+

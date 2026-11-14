@@ -418,7 +418,7 @@
       return product.primary_image ? [product.primary_image] : [];
     }
 
-    // 1. Collect this selected color's dedicated images
+    // 1. Collect this selected color's dedicated images (01_packshot.webp first)
     const colorImgs = [];
     if (color.image) colorImgs.push(color.image);
     if (Array.isArray(color.images)) {
@@ -429,11 +429,19 @@
       });
     }
 
-    // Strict Shopify Variant Isolation:
-    // If this color has its own image(s), STRICTLY show only this color's gallery!
-    // Never leak other variant or unassigned images into this color's gallery.
-    if (colorImgs.length > 0) {
-      return colorImgs;
+    // 2. Collect product extra/lifestyle/photoshoot images in 1:1 format
+    const extraImgs = [];
+    if (Array.isArray(product.images)) {
+      product.images.forEach(img => {
+        if (img && (img.includes('/extra/') || img.includes('extra')) && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img))) {
+          extraImgs.push(img);
+        }
+      });
+    }
+
+    const combined = [...colorImgs, ...extraImgs];
+    if (combined.length > 0) {
+      return combined;
     }
 
     // Fallback if product has no color-specific images

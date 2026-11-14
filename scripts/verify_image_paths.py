@@ -30,3 +30,4 @@ if missing_images:
         print("  Missing:", m)
 else:
     print("ALL 75 PRODUCTS HAVE 100% VALID, EXISTING IMAGES ON DISK!")
+

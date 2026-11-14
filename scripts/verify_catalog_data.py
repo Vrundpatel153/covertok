@@ -17,3 +17,4 @@ if start != -1 and end != -1:
     print(f"products_data.js count: {len(js_data)}")
 else:
     print("Could not parse products_data.js array")
+
