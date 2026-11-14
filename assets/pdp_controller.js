@@ -91,17 +91,17 @@
       const str = String(c).trim();
       if (!str) continue;
 
-      let found = window.CovertokProducts.find(p => String(p.id) === str);
+      let found = window.CovertokProducts.find(p => String(p.id) === str || (p.alias_ids && p.alias_ids.includes(str)));
       if (found) return found;
 
-      found = window.CovertokProducts.find(p => p.handle === str);
+      found = window.CovertokProducts.find(p => p.handle === str || (p.alias_handles && p.alias_handles.includes(str)));
       if (found) return found;
 
       const norm = str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-      found = window.CovertokProducts.find(p => p.handle === norm);
+      found = window.CovertokProducts.find(p => p.handle === norm || (p.alias_handles && p.alias_handles.includes(norm)));
       if (found) return found;
 
-      found = window.CovertokProducts.find(p => p.handle.includes(norm) || norm.includes(p.handle));
+      found = window.CovertokProducts.find(p => p.handle.includes(norm) || norm.includes(p.handle) || (p.alias_handles && p.alias_handles.some(ah => ah.includes(norm) || norm.includes(ah))));
       if (found) return found;
 
       found = window.CovertokProducts.find(p => p.title.toLowerCase().includes(norm.replace(/-/g, ' ')));
