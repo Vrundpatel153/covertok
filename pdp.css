@@ -4056,78 +4056,220 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
 
 /* ==========================================================================
-   PDP RELATED PRODUCTS ENLARGED CARDS, COLOR PALETTES & ADD TO CART
+   PDP RELATED PRODUCTS: FULL-BLEED 1:1 STAGE, ALIGNED PRICE ROW, 100% ADD TO CART
    ========================================================================== */
 #pdpRelatedGrid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)) !important;
-  gap: 24px 18px !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px 20px !important;
+  margin-top: 24px !important;
+  align-items: stretch !important;
+}
+
+@media (max-width: 991px) {
+  #pdpRelatedGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px 10px !important;
+  }
 }
 
 #pdpRelatedGrid .catalog-card {
-  border-radius: 20px !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
+  justify-content: space-between !important;
+  border-radius: 18px !important;
+  border: 1px solid #141416 !important;
+  background: #FFFFFF !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.25s ease !important;
 }
 
-/* Card Action Row with Price and ADD TO CART */
-.card-action-row {
+#pdpRelatedGrid .catalog-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: #0A0A0C !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09) !important;
+}
+
+#pdpRelatedGrid .card-media-stage {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  background: #FFFFFF !important;
+  border-radius: 17px 17px 0 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+#pdpRelatedGrid .card-main-img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: #FFFFFF !important;
+  border-radius: 17px 17px 0 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  filter: none !important;
+  transition: transform 0.4s ease !important;
+}
+
+#pdpRelatedGrid .catalog-card:hover .card-main-img {
+  transform: scale(1.04) !important;
+}
+
+#pdpRelatedGrid .card-body-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  justify-content: space-between !important;
+  padding: 12px 14px 16px !important;
+  background: #FFFFFF !important;
+  box-sizing: border-box !important;
+}
+
+#pdpRelatedGrid .card-product-title {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  color: #111113 !important;
+  line-height: 1.35 !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  max-height: 38px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  margin: 0 0 8px 0 !important;
+  text-decoration: none !important;
+}
+
+#pdpRelatedGrid .card-price-swatch-row {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  gap: 10px !important;
-  margin-top: auto !important;
-  padding-top: 10px !important;
-  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin: 4px 0 8px 0 !important;
+  min-height: 22px !important;
 }
 
-.card-add-btn {
-  display: inline-flex !important;
+#pdpRelatedGrid .card-price-row {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 6px !important;
+  width: auto !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+}
+
+#pdpRelatedGrid .card-price-now {
+  font-family: var(--font-heading, 'Manrope', sans-serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #0A0A0C !important;
+  letter-spacing: -0.02em !important;
+}
+
+#pdpRelatedGrid .card-price-was {
+  font-family: var(--font-body, 'Inter', sans-serif) !important;
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  color: #52525B !important;
+  text-decoration: line-through !important;
+}
+
+#pdpRelatedGrid .product-color-palette {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 6px !important;
+  margin: 0 !important;
+  flex-wrap: nowrap !important;
+  flex-shrink: 0 !important;
+  padding: 2px 0 !important;
+  min-height: 20px !important;
+}
+
+#pdpRelatedGrid .product-color-palette .color-dot {
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  min-height: 13px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease !important;
+}
+
+#pdpRelatedGrid .product-color-palette .color-dot:hover,
+#pdpRelatedGrid .product-color-palette .color-dot.active {
+  border: 1.5px solid #FFFFFF !important;
+  box-shadow: 0 0 0 1.5px #0A0A0C !important;
+}
+
+#pdpRelatedGrid .card-add-btn {
+  width: 100% !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 6px !important;
   background: #0A0A0C !important;
   color: #FFFFFF !important;
-  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid #0A0A0C !important;
   border-radius: 999px !important;
-  padding: 8px 16px !important;
+  padding: 0 16px !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
+  font-size: 0.74rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
-  transition: all 0.2s ease !important;
   white-space: nowrap !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+  margin-top: auto !important;
+  box-sizing: border-box !important;
+  transition: all 0.22s ease !important;
 }
 
-.card-add-btn:hover {
+#pdpRelatedGrid .card-add-btn:hover {
   background: #FF5500 !important;
-  color: #FFFFFF !important;
   border-color: #FF5500 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  color: #FFFFFF !important;
 }
 
-/* Universal Product Color Palette */
-.product-color-palette {
-  display: flex !important;
-  align-items: center !important;
-  gap: 7px !important;
-  margin: 8px 0 12px !important;
-  padding: 0 !important;
-  min-height: 18px !important;
-  z-index: 3;
-  position: relative;
+@media (max-width: 640px) {
+  #pdpRelatedGrid .card-add-btn {
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    font-size: 0.70rem !important;
+  }
+  #pdpRelatedGrid .card-body-wrap {
+    padding: 10px 12px 14px !important;
+  }
 }
-
-.product-color-palette .color-dot {
-  width: 15px !important;
-  height: 15px !important;
-  min-width: 15px !important;
-  min-height: 15px !important;
   border-radius: 50% !important;
   display: inline-block !important;
   border: 1.5px solid #FFFFFF !important;

@@ -1570,16 +1570,16 @@
             <a href="product.html?handle=${p.handle}" class="card-product-title" title="${p.title}">
               ${p.title}
             </a>
-            ${paletteHtml}
-            <div class="card-action-row">
+            <div class="card-price-swatch-row">
               <div class="card-price-row">
                 <span class="card-price-now">${priceFormatted}</span>
                 ${origPriceFormatted ? `<span class="card-price-was">${origPriceFormatted}</span>` : ''}
               </div>
-              <button type="button" class="card-add-btn" aria-label="Add ${p.title} to cart" onclick="event.stopPropagation(); window.CovertokStore && window.CovertokStore.addToCart({ id: '${p.id}', title: '${p.title.replace(/'/g, "\\'")}', price: ${p.price}, img: '${initialImg}', color: '${p.colors && p.colors[0] ? p.colors[0].name : ''}', qty: 1 });">
-                <span>ADD TO CART</span>
-              </button>
+              ${paletteHtml}
             </div>
+            <button type="button" class="card-add-btn" aria-label="Add ${p.title} to cart" onclick="event.stopPropagation(); window.CovertokStore && window.CovertokStore.addToCart({ id: '${p.id}', title: '${p.title.replace(/'/g, "\\'")}', price: ${p.price}, img: '${initialImg}', color: '${p.colors && p.colors[0] ? p.colors[0].name : ''}', qty: 1 });">
+              <span>ADD TO CART</span>
+            </button>
           </div>
         </div>
       `;
