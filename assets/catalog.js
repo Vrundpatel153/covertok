@@ -15,7 +15,7 @@
   let currentModel = 'all';
   let currentBadge = 'all';
   let catalogCurrentPage = 1;
-  const CATALOG_PAGE_SIZE = 8;
+  const CATALOG_PAGE_SIZE = 12;
   let isCatalogInfiniteLoading = false;
   let catalogInfiniteObserver = null;
   let currentFilteredProducts = [];
@@ -443,15 +443,12 @@
       return;
     }
 
-    // Stabilized in-place transition: Lock minHeight so layout never collapses or jumps
-    const currentHeight = gridEl.offsetHeight;
-    if (currentHeight > 80) {
-      gridEl.style.minHeight = `${currentHeight}px`;
-    }
+    // Clean instant transition without locking stale grid heights
     gridEl.style.transition = 'opacity 0.12s ease';
     gridEl.style.opacity = '0.2';
 
     setTimeout(() => {
+      gridEl.style.minHeight = 'auto';
       gridEl.innerHTML = '';
       const fragment = document.createDocumentFragment();
       newProducts.forEach((prod) => {
@@ -462,13 +459,9 @@
 
       requestAnimationFrame(() => {
         gridEl.style.opacity = '1';
-        setTimeout(() => {
-          if (gridEl.offsetHeight > 80) {
-            gridEl.style.minHeight = `${gridEl.offsetHeight}px`;
-          }
-        }, 150);
+        gridEl.style.minHeight = '';
       });
-    }, 100);
+    }, 80);
   }
 
   // Render Active Filter Chips

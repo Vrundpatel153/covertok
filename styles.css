@@ -56828,6 +56828,8 @@ html body #siteHeader,
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
   gap: 24px 20px !important;
+  align-items: start !important;
+  justify-items: stretch !important;
   margin-bottom: 20px !important;
 }
 
@@ -56835,6 +56837,7 @@ html body #siteHeader,
   .catalog-products-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px 10px !important;
+    align-items: start !important;
   }
 }
 

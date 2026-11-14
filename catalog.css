@@ -4945,12 +4945,45 @@
    PRODUCT CARDS MASTER LAYOUT (Price Left, Swatches Right, 100% Add To Cart)
    ========================================================================== */
 
-/* 1. Bigger Product Image Window */
-.card-media-stage {
-  aspect-ratio: 1 / 1.05 !important;
+.catalog-products-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px 20px !important;
+  align-items: start !important;
+  justify-items: stretch !important;
   width: 100% !important;
+  margin-bottom: 24px !important;
+}
+
+.catalog-card {
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: 100% !important;
+  align-self: start !important;
+  display: flex !important;
+  flex-direction: column !important;
   background: #FFFFFF !important;
-  border-radius: 18px 18px 0 0 !important;
+  border: 1px solid #141416 !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 991px) {
+  .catalog-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px 10px !important;
+    align-items: start !important;
+  }
+}
+
+/* 1. Strictly 1:1 Square Product Image Window */
+.card-media-stage {
+  aspect-ratio: 1 / 1 !important;
+  width: 100% !important;
+  min-height: auto !important;
+  max-height: none !important;
+  background: #FFFFFF !important;
+  border-radius: 17px 17px 0 0 !important;
   overflow: hidden !important;
   position: relative !important;
   display: flex !important;
@@ -4984,14 +5017,16 @@
   transform: scale(1.06) !important;
 }
 
-/* 2. Card Body Structure */
+/* 2. Card Body Structure - Strictly natural compact height */
 .card-body-wrap {
   padding: 12px 14px 14px !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
-  flex: 1 !important;
+  flex: 0 0 auto !important;
+  height: auto !important;
   box-sizing: border-box !important;
+  gap: 4px !important;
 }
 
 .card-product-title {
@@ -5021,8 +5056,7 @@
   justify-content: space-between !important;
   gap: 8px !important;
   width: 100% !important;
-  margin: 6px 0 10px 0 !important;
-  margin-top: 0 !important;
+  margin: 4px 0 6px 0 !important;
   padding-top: 0 !important;
   overflow: visible !important;
   min-height: 22px !important;
@@ -5127,12 +5161,12 @@
   }
 }
 
-/* 4. Last Whole Line Dedicated to 100% Width ADD TO CART */
+/* 4. Last Whole Line Dedicated to 100% Width ADD TO CART - Strictly 40px Height */
 .card-add-btn {
   width: 100% !important;
-  height: 42px !important;
-  min-height: 42px !important;
-  max-height: 42px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
   flex: 0 0 auto !important;
   flex-grow: 0 !important;
   flex-shrink: 0 !important;
@@ -5146,15 +5180,15 @@
   border-radius: 999px !important;
   padding: 0 16px !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.76rem !important;
+  font-size: 0.74rem !important;
   font-weight: 800 !important;
-  letter-spacing: 0.06em !important;
+  letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   cursor: pointer !important;
   transition: all 0.22s ease !important;
   white-space: nowrap !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-  margin-top: auto !important;
+  margin-top: 8px !important;
   box-sizing: border-box !important;
 }
 
@@ -5172,32 +5206,47 @@
 
 /* 5. Mobile Responsiveness (<= 640px) */
 @media (max-width: 640px) {
+  .catalog-products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px 10px !important;
+    align-items: start !important;
+  }
+  .catalog-card {
+    border-radius: 16px !important;
+    height: auto !important;
+    align-self: start !important;
+  }
   .card-media-stage {
-    aspect-ratio: 1 / 1.05 !important;
-    min-height: 175px !important;
-    border-radius: 14px 14px 0 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    min-height: auto !important;
+    max-height: none !important;
+    border-radius: 15px 15px 0 0 !important;
+    background: #FFFFFF !important;
   }
   .card-img-wrap {
     padding: 0 !important;
     background: #FFFFFF !important;
   }
   .card-body-wrap {
-    padding: 10px 10px 12px !important;
+    padding: 8px 10px 10px !important;
     justify-content: flex-start !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
+    gap: 4px !important;
   }
   .card-product-title {
-    font-size: 0.78rem !important;
+    font-size: 0.76rem !important;
     line-height: 1.25 !important;
     min-height: 2.5em !important;
     max-height: 2.5em !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 3px !important;
   }
   .card-price-swatch-row {
-    margin: 4px 0 8px 0 !important;
+    margin: 3px 0 6px 0 !important;
     margin-top: 0 !important;
     gap: 4px !important;
     overflow: visible !important;
-    min-height: 20px !important;
+    min-height: 18px !important;
   }
   .card-price-swatch-row .card-price-row {
     display: flex !important;
@@ -5241,16 +5290,16 @@
     padding: 1px 4px !important;
   }
   .card-add-btn {
-    height: 38px !important;
-    min-height: 38px !important;
-    max-height: 38px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
     flex: 0 0 auto !important;
     flex-grow: 0 !important;
     flex-shrink: 0 !important;
-    font-size: 0.70rem !important;
+    font-size: 0.68rem !important;
     letter-spacing: 0.04em !important;
     padding: 0 8px !important;
-    margin-top: auto !important;
+    margin-top: 6px !important;
   }
 }
 
