@@ -429,19 +429,8 @@
       });
     }
 
-    // 2. Collect product extra/lifestyle/photoshoot images in 1:1 format
-    const extraImgs = [];
-    if (Array.isArray(product.images)) {
-      product.images.forEach(img => {
-        if (img && (img.includes('/extra/') || img.includes('extra')) && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img))) {
-          extraImgs.push(img);
-        }
-      });
-    }
-
-    const combined = [...colorImgs, ...extraImgs];
-    if (combined.length > 0) {
-      return combined;
+    if (colorImgs.length > 0) {
+      return colorImgs;
     }
 
     // Fallback if product has no color-specific images
@@ -461,13 +450,22 @@
     // When a color is chosen or a default is chosen, ONLY that color's images are in the gallery!
     const uniqueImgs = getColorGallery(product, selectedColor);
 
-    if (!uniqueImgs.length) {
+    const counter = document.getElementById('galleryCounter');
+    // Check navigation controls
+    const galleryPrev = document.getElementById('galleryPrevBtn');
+    const galleryNext = document.getElementById('galleryNextBtn');
+
+    if (!uniqueImgs || uniqueImgs.length <= 1) {
       strip.style.display = 'none';
+      if (counter) counter.style.display = 'none';
+      if (galleryPrev) galleryPrev.style.display = 'none';
+      if (galleryNext) galleryNext.style.display = 'none';
       return;
     }
 
     strip.style.display = 'flex';
     strip.classList.add('pdp-vertical-thumbs');
+    if (counter) counter.style.display = 'inline-block';
 
     if (!activeSrc || !uniqueImgs.includes(activeSrc)) {
       activeSrc = uniqueImgs[0];
@@ -501,8 +499,6 @@
       });
     });
 
-    const galleryPrev = document.getElementById('galleryPrevBtn');
-    const galleryNext = document.getElementById('galleryNextBtn');
     if (galleryPrev) {
       galleryPrev.style.display = uniqueImgs.length > 1 ? 'flex' : 'none';
       galleryPrev.onclick = () => {
@@ -1585,9 +1581,9 @@
       `;
     }).join('');
 
-    // Attach swatch switchers
+    // Attach swatch switchers (click & mouseenter hover preview)
     container.querySelectorAll('.color-dot').forEach(dot => {
-      dot.addEventListener('click', (e) => {
+      const switchSwatch = (e) => {
         e.stopPropagation();
         const card = dot.closest('.catalog-card');
         if (!card) return;
@@ -1595,8 +1591,17 @@
         dot.classList.add('active');
         const imgUrl = dot.getAttribute('data-color-img');
         const mainImg = card.querySelector('.card-main-img');
-        if (imgUrl && mainImg) mainImg.src = imgUrl;
-      });
+        if (imgUrl && mainImg && mainImg.src !== imgUrl && !mainImg.src.endsWith(imgUrl)) {
+          mainImg.style.opacity = '0.4';
+          mainImg.style.transition = 'opacity 0.12s ease';
+          setTimeout(() => {
+            mainImg.src = imgUrl;
+            mainImg.style.opacity = '1';
+          }, 60);
+        }
+      };
+      dot.addEventListener('click', switchSwatch);
+      dot.addEventListener('mouseenter', switchSwatch);
     });
   }
 

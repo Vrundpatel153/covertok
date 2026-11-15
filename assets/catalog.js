@@ -713,24 +713,27 @@
       </div>
     `;
 
-    // Interactive color swatch clicks with smooth transition
+    // Interactive color swatch clicks and hovers with smooth transition
     card.querySelectorAll('.color-dot').forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        e.stopPropagation();
+      const applyColor = (e) => {
+        if (e && e.type === 'click') e.stopPropagation();
         card.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
         dot.classList.add('active');
         const imgUrl = dot.getAttribute('data-color-img');
         const mainImg = card.querySelector('.card-main-img');
-        if (imgUrl && mainImg) {
+        if (imgUrl && mainImg && mainImg.src !== imgUrl && !mainImg.src.endsWith(imgUrl)) {
           mainImg.style.opacity = '0.35';
           mainImg.style.transform = 'scale(0.98)';
           setTimeout(() => {
             mainImg.src = imgUrl;
             mainImg.style.opacity = '1';
             mainImg.style.transform = 'scale(1)';
-          }, 80);
+          }, 60);
         }
-      });
+      };
+
+      dot.addEventListener('click', applyColor);
+      dot.addEventListener('mouseenter', applyColor);
     });
 
     // Wishlist Toggle
