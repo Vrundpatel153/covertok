@@ -1,4 +1,4 @@
-window.CovertokProducts = [
+window.CovertokProducts = window.PRODUCTS_DATA = [
   {
     "id": "10017625375018",
     "handle": "premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount",
@@ -33000,7 +33000,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/02_lifestyle.png"
         ]
       },
       {
@@ -33009,7 +33010,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg"
         ]
       },
       {
@@ -33018,7 +33020,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
         ]
       },
       {
@@ -33027,7 +33030,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg"
         ]
       },
       {
@@ -33036,7 +33040,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/02_lifestyle.png"
         ]
       }
     ],
@@ -33262,7 +33267,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg"
         ]
       },
       {
@@ -33271,7 +33277,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg"
         ]
       },
       {
@@ -33280,7 +33287,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
         ]
       },
       {
@@ -33289,7 +33297,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/02_lifestyle.png"
         ]
       },
       {
@@ -33298,7 +33307,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/02_lifestyle.png"
         ]
       }
     ],
@@ -33521,7 +33531,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/02_lifestyle.png"
         ]
       },
       {
@@ -33530,7 +33541,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg"
         ]
       },
       {
@@ -33539,7 +33551,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
         ]
       },
       {
@@ -33548,7 +33561,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg"
         ]
       },
       {
@@ -33557,7 +33571,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/02_lifestyle.png"
         ]
       }
     ],
@@ -33776,7 +33791,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg"
         ]
       },
       {
@@ -33785,7 +33801,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
         ]
       },
       {
@@ -33794,7 +33811,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg"
         ]
       },
       {
@@ -33803,7 +33821,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/02_lifestyle.png"
         ]
       },
       {
@@ -33812,7 +33831,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/02_lifestyle.png"
         ]
       }
     ],
@@ -34034,7 +34054,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
         ]
       },
       {
@@ -34043,7 +34064,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg"
         ]
       },
       {
@@ -34052,7 +34074,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg"
         ]
       },
       {
@@ -34061,7 +34084,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/02_lifestyle.png"
         ]
       },
       {
@@ -34070,7 +34094,8 @@ window.CovertokProducts = [
         "price": 999.0,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/02_lifestyle.png"
         ]
       }
     ],

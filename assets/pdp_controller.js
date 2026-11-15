@@ -402,11 +402,11 @@
   }
 
   // Universal isolated gallery extractor: Shopify-standard variant image filtering
-  // When a color is selected, gallery ONLY contains this color's images!
+  // When a color is selected, gallery ONLY contains this color's images + shared detail shots!
   function getColorGallery(product, color) {
     if (!product) return [];
 
-    // Helper to get normalized base ID from URL (e.g., "1_49941561835818")
+    // Helper to get normalized base ID from URL (e.g., "01_packshot")
     function getBaseId(url) {
       if (!url) return '';
       const clean = url.split('?')[0].split('#')[0];
@@ -424,8 +424,31 @@
     if (color.image) colorImgs.push(color.image);
     if (Array.isArray(color.images)) {
       color.images.forEach(img => {
-        if (img && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img))) {
-          colorImgs.push(img);
+        if (img && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img) && ci.split('/')[ci.split('/').length - 2] === img.split('/')[img.split('/').length - 2])) {
+          if (!colorImgs.includes(img)) colorImgs.push(img);
+        }
+      });
+    }
+
+    // 2. Append shared product-level extra / detail images (e.g. extra/01_extra.webp)
+    // NEVER leak other color variant packshots into this color's gallery
+    if (Array.isArray(product.images)) {
+      const otherColorFolders = (product.colors || [])
+        .filter(c => c !== color && c.image)
+        .map(c => {
+          const parts = c.image.split('/');
+          return parts.length >= 2 ? parts[parts.length - 2].toLowerCase() : '';
+        })
+        .filter(f => f && f !== 'extra');
+
+      product.images.forEach(pImg => {
+        if (!pImg) return;
+        const pImgLower = pImg.toLowerCase();
+        const belongsToOtherColor = otherColorFolders.some(otherFolder => pImgLower.includes('/' + otherFolder + '/'));
+        if (!belongsToOtherColor && !colorImgs.includes(pImg)) {
+          if (pImgLower.includes('/extra/') || pImgLower.includes('_extra.') || pImgLower.includes('lifestyle')) {
+            colorImgs.push(pImg);
+          }
         }
       });
     }
@@ -456,7 +479,7 @@
     const galleryPrev = document.getElementById('galleryPrevBtn');
     const galleryNext = document.getElementById('galleryNextBtn');
 
-    if (!uniqueImgs || uniqueImgs.length <= 1) {
+    if (!uniqueImgs || uniqueImgs.length === 0) {
       strip.style.display = 'none';
       if (counter) counter.style.display = 'none';
       if (galleryPrev) galleryPrev.style.display = 'none';
@@ -466,7 +489,7 @@
 
     strip.style.display = 'flex';
     strip.classList.add('pdp-vertical-thumbs');
-    if (counter) counter.style.display = 'inline-block';
+    if (counter) counter.style.display = uniqueImgs.length > 1 ? 'inline-block' : 'none';
 
     if (!activeSrc || !uniqueImgs.includes(activeSrc)) {
       activeSrc = uniqueImgs[0];
@@ -1120,7 +1143,10 @@
       }
 
       function toggleZoom(e) {
-        if (e) e.stopPropagation();
+        if (e) {
+          e.stopPropagation();
+          e.preventDefault();
+        }
         if (isZoomed) {
           disableZoom();
         } else {
@@ -1128,6 +1154,7 @@
         }
       }
 
+      zoomBtn.addEventListener('pointerdown', (e) => { e.stopPropagation(); });
       zoomBtn.addEventListener('click', toggleZoom);
 
       // Clicking directly on image toggles zoom at click coordinates
@@ -1139,19 +1166,40 @@
         }
       });
 
+      // Double-click/double-tap to zoom
+      mainStage.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        toggleZoom(e);
+      });
+
+      // Escape key to reset zoom
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isZoomed) disableZoom();
+      });
+
+      // Reset on mouseleave
+      mainStage.addEventListener('mouseleave', () => {
+        if (isZoomed) disableZoom();
+      });
+
       // Smooth pan tracking on mouse move
+      let zoomRaf = null;
       mainStage.addEventListener('mousemove', (e) => {
         if (isZoomed) {
-          updateZoomPosition(e.clientX, e.clientY);
+          if (zoomRaf) cancelAnimationFrame(zoomRaf);
+          zoomRaf = requestAnimationFrame(() => {
+            updateZoomPosition(e.clientX, e.clientY);
+          });
         }
       });
 
       // Touch drag tracking for mobile responsiveness
       mainStage.addEventListener('touchmove', (e) => {
         if (isZoomed && e.touches && e.touches.length > 0) {
+          if (e.cancelable) e.preventDefault();
           updateZoomPosition(e.touches[0].clientX, e.touches[0].clientY);
         }
-      }, { passive: true });
+      }, { passive: false });
 
       window.__pdpResetZoom = disableZoom;
     }
@@ -1500,8 +1548,8 @@
       const descBox = document.getElementById('pdpOverviewBox') || document.querySelector('.pdp-description-card');
       if (descBox) {
         const rect = descBox.getBoundingClientRect();
-        // The description section bottom has scrolled past the sticky header (~75-80px)
-        return rect.bottom <= 80;
+        // The description section bottom has scrolled past the top of the viewport
+        return rect.bottom <= 0;
       }
       // Fallback: If no description box exists, check main actions row or heading
       const mainActions = document.querySelector('.pdp-actions-row') || document.getElementById('pdpProductTitle');
