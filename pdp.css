@@ -473,31 +473,66 @@ html, body {
   object-fit: contain !important;
   object-position: center;
   user-select: none;
-  border-radius: 24px;
+  -webkit-user-drag: none;
+  border-radius: 20px;
   background: #FFFFFF !important;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center center;
+  will-change: transform, transform-origin;
+}
+
+.pdp-main-stage.is-zoomed .pdp-main-img {
+  cursor: zoom-out !important;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdp-main-stage:not(.is-zoomed) .pdp-main-img {
+  cursor: zoom-in !important;
 }
 
 .pdp-zoom-btn {
   position: absolute;
-  bottom: 14px;
-  right: 14px;
-  width: 36px;
-  height: 36px;
+  bottom: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s ease;
-  z-index: 5;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 10;
+  color: #171513;
 }
 
 .pdp-zoom-btn:hover {
   transform: scale(1.08);
+  background: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  color: #000000;
+}
+
+.pdp-zoom-btn.active {
+  background: #171513 !important;
+  color: #FFFFFF !important;
+  border-color: #171513 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28) !important;
+  transform: scale(1.05);
+}
+
+.pdp-zoom-btn svg {
+  stroke: currentColor;
+  transition: stroke 0.2s ease, transform 0.2s ease;
+}
+
+.pdp-zoom-btn.active svg {
+  stroke: #FFFFFF !important;
 }
 
 /* Floating Badges on Stage */
@@ -3064,10 +3099,10 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   .pdp-zoom-btn {
-    bottom: 12px;
-    right: 12px;
-    width: 36px;
-    height: 36px;
+    bottom: 14px !important;
+    right: 14px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .pdp-vertical-thumbs {

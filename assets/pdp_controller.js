@@ -367,6 +367,7 @@
 
   // Update Main Image Window with smooth transition & automatic fallback
   function updateMainImage(src, isInitial = false) {
+    if (window.__pdpResetZoom) window.__pdpResetZoom();
     const mainImg = document.getElementById('pdpMainImg');
     const stickyThumb = document.getElementById('stickyThumb');
 
@@ -1058,30 +1059,101 @@
       revFeed?.scrollBy({ left: 320, behavior: 'smooth' });
     });
 
-    // 5. Image Showcase Zoom Button
+    // 5. Responsive Pan & Interactive Magnifier Controller
     const zoomBtn = document.getElementById('pdpZoomBtn');
     const mainImg = document.getElementById('pdpMainImg');
-    if (zoomBtn && mainImg) {
+    const mainStage = document.getElementById('pdpMainStage');
+
+    if (zoomBtn && mainImg && mainStage) {
       let isZoomed = false;
-      zoomBtn.addEventListener('click', () => {
-        isZoomed = !isZoomed;
-        if (isZoomed) {
-          mainImg.style.transform = 'scale(1.35)';
-          mainImg.style.cursor = 'zoom-out';
-          zoomBtn.style.background = '#171513';
-          const svg = zoomBtn.querySelector('svg');
-          if (svg) svg.style.stroke = '#FFFFFF';
+
+      const zoomInSvg = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+          <line x1="11" y1="8" x2="11" y2="14"></line>
+          <line x1="8" y1="11" x2="14" y2="11"></line>
+        </svg>
+      `;
+      const zoomOutSvg = `
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+          <line x1="8" y1="11" x2="14" y2="11"></line>
+        </svg>
+      `;
+
+      function updateZoomPosition(clientX, clientY) {
+        if (!isZoomed) return;
+        const rect = mainStage.getBoundingClientRect();
+        const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+        const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
+        mainImg.style.transformOrigin = `${x.toFixed(1)}% ${y.toFixed(1)}%`;
+      }
+
+      function enableZoom(initialX, initialY) {
+        isZoomed = true;
+        mainStage.classList.add('is-zoomed');
+        zoomBtn.classList.add('active');
+        zoomBtn.setAttribute('title', 'Zoom out');
+        zoomBtn.setAttribute('aria-label', 'Zoom out');
+        zoomBtn.innerHTML = zoomOutSvg;
+
+        if (initialX !== undefined && initialY !== undefined) {
+          updateZoomPosition(initialX, initialY);
         } else {
-          mainImg.style.transform = 'scale(1)';
-          mainImg.style.cursor = 'default';
-          zoomBtn.style.background = '#FFFFFF';
-          const svg = zoomBtn.querySelector('svg');
-          if (svg) svg.style.stroke = '#171513';
+          mainImg.style.transformOrigin = 'center center';
+        }
+        mainImg.style.transform = 'scale(2.2)';
+      }
+
+      function disableZoom() {
+        if (!isZoomed) return;
+        isZoomed = false;
+        mainStage.classList.remove('is-zoomed');
+        zoomBtn.classList.remove('active');
+        zoomBtn.setAttribute('title', 'Zoom in');
+        zoomBtn.setAttribute('aria-label', 'Zoom in');
+        zoomBtn.innerHTML = zoomInSvg;
+        mainImg.style.transform = 'scale(1)';
+        mainImg.style.transformOrigin = 'center center';
+      }
+
+      function toggleZoom(e) {
+        if (e) e.stopPropagation();
+        if (isZoomed) {
+          disableZoom();
+        } else {
+          enableZoom();
+        }
+      }
+
+      zoomBtn.addEventListener('click', toggleZoom);
+
+      // Clicking directly on image toggles zoom at click coordinates
+      mainImg.addEventListener('click', (e) => {
+        if (isZoomed) {
+          disableZoom();
+        } else {
+          enableZoom(e.clientX, e.clientY);
         }
       });
-      mainImg.addEventListener('click', () => {
-        if (isZoomed) zoomBtn.click();
+
+      // Smooth pan tracking on mouse move
+      mainStage.addEventListener('mousemove', (e) => {
+        if (isZoomed) {
+          updateZoomPosition(e.clientX, e.clientY);
+        }
       });
+
+      // Touch drag tracking for mobile responsiveness
+      mainStage.addEventListener('touchmove', (e) => {
+        if (isZoomed && e.touches && e.touches.length > 0) {
+          updateZoomPosition(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      window.__pdpResetZoom = disableZoom;
     }
 
     // 6. Finish Cards
