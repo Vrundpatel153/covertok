@@ -361,8 +361,8 @@ html, body {
 
 .pdp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(460px, 540px) minmax(440px, 560px);
-  gap: clamp(36px, 4vw, 56px);
+  grid-template-columns: minmax(340px, 440px) minmax(420px, 580px);
+  gap: clamp(28px, 3.5vw, 48px);
   justify-content: center;
   align-items: start;
 }
@@ -379,15 +379,15 @@ html, body {
   align-self: start;
   z-index: 10;
   width: 100%;
-  max-width: 540px;
+  max-width: 440px;
 }
 
 .pdp-gallery-wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   align-items: center;
-  max-width: 100%;
+  max-width: 440px;
   width: 100%;
   margin: 0 auto;
 }
@@ -398,13 +398,13 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   width: 100%;
-  max-width: 100%;
+  max-width: 440px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 4px 6px;
+  padding: 2px 4px 4px;
   box-sizing: border-box;
 }
 
@@ -413,10 +413,10 @@ html, body {
 }
 
 .pdp-vthumb {
-  width: 72px;
-  height: 72px;
-  min-width: 72px;
-  border-radius: 14px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 12px;
   border: 1.5px solid #EAE5DB;
   background: #FFFFFF;
   padding: 3px;
@@ -444,18 +444,19 @@ html, body {
 .pdp-vthumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* Main Showcase Stage: Fitted Luxury Window */
 .pdp-main-stage {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 440px;
   aspect-ratio: 1 / 1;
+  max-height: min(440px, calc(100vh - 215px));
   background: #FFFFFF !important;
-  border-radius: 24px;
+  border-radius: 20px;
   border: 1px solid #141416 !important;
   box-shadow: 0 10px 32px rgba(23, 21, 19, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
   overflow: hidden;
@@ -2908,7 +2909,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
   .pdp-gallery-col {
     position: static;
-    max-width: 580px;
+    max-width: 440px;
     margin: 0 auto;
     width: 100%;
     min-width: 0 !important;
@@ -3016,7 +3017,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   .pdp-gallery-col {
     position: static !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 400px !important;
     min-width: 0 !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
@@ -3025,9 +3026,9 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   .pdp-gallery-wrap {
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 8px !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 400px !important;
     min-width: 0 !important;
     align-items: center !important;
     margin: 0 auto !important;
@@ -3036,10 +3037,11 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
   .pdp-main-stage {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 400px !important;
     aspect-ratio: 1 / 1 !important;
+    max-height: min(400px, 48vh) !important;
     background: #FFFFFF !important;
-    border-radius: 26px !important;
+    border-radius: 20px !important;
     border: 1px solid #141416 !important;
     box-shadow: 0 8px 24px rgba(23, 21, 19, 0.06) !important;
     margin: 0 auto !important;
@@ -3057,7 +3059,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     max-height: 100% !important;
     object-fit: contain !important;
     object-position: center !important;
-    border-radius: 26px !important;
+    border-radius: 20px !important;
     background: #FFFFFF !important;
   }
 
@@ -3072,13 +3074,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 400px !important;
     min-width: 0 !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    gap: 10px !important;
+    gap: 8px !important;
     justify-content: center !important;
-    padding: 4px 4px 8px !important;
+    padding: 2px 4px 6px !important;
     scrollbar-width: none !important;
     box-sizing: border-box !important;
   }
@@ -3088,13 +3090,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   }
 
   .pdp-vthumb {
-    width: 58px !important;
-    height: 58px !important;
-    min-width: 58px !important;
-    border-radius: 12px !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    border-radius: 10px !important;
     background: #FFFFFF !important;
     border: 1.5px solid rgba(0, 0, 0, 0.09) !important;
-    padding: 4px !important;
+    padding: 2px !important;
     flex-shrink: 0 !important;
     display: flex !important;
     align-items: center !important;
