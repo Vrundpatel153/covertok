@@ -49,13 +49,17 @@
             var found = window.CovertokProducts.find(function(p) { return String(p.id) === c; });
             if (found) return found;
 
-            // Direct handle match
-            found = window.CovertokProducts.find(function(p) { return p.handle === c; });
+            // Direct handle or alias match
+            found = window.CovertokProducts.find(function(p) {
+              return p.handle === c || (p.alias_handles && p.alias_handles.indexOf(c) !== -1);
+            });
             if (found) return found;
 
             // Normalized slug match
             var norm = c.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-            found = window.CovertokProducts.find(function(p) { return p.handle === norm; });
+            found = window.CovertokProducts.find(function(p) {
+              return p.handle === norm || (p.alias_handles && p.alias_handles.indexOf(norm) !== -1);
+            });
             if (found) return found;
 
             // Fuzzy handle match (prefix or substring)

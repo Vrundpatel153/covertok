@@ -332,9 +332,33 @@
       });
     }
 
-    // 3. Set Initial Color & Image (Default chosen color)
+    // 3. Set Initial Color & Image (Default chosen color or requested variant)
     const hasColors = product.colors && product.colors.length > 0;
     selectedColor = hasColors ? product.colors[0] : null;
+
+    if (hasColors) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const reqHandle = (urlParams.get('handle') || '').trim();
+      const reqColor = (urlParams.get('color') || '').trim();
+      const aliasColorMap = {
+        'magnetic-loop-smartwatch-bands-dual-color-edition-copy': 'Cloud Grey+Blue',
+        'magnetic-loop-smartwatch-bands-dual-color-edition-copy-1': 'Black+Grey',
+        'magnetic-loop-smartwatch-bands-dual-color-edition-copy-2': 'Starlight+Pink',
+        'magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy': 'Orange+Midnight Black',
+        'premium-magnetic-leather-loop-straps-for-apple-watch-copy': 'Black',
+        'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy': 'Light Blue',
+        'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1': 'Orange+Grey',
+        'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2': 'Grey+Black',
+        'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3': 'Yellow',
+        'silver-3d-love-heart-phone-case-copy': 'Espresso Brown'
+      };
+      const targetColorName = aliasColorMap[reqHandle] || reqColor;
+      if (targetColorName) {
+        const found = product.colors.find(c => c.name.toLowerCase() === targetColorName.toLowerCase());
+        if (found) selectedColor = found;
+      }
+    }
+
     const initialGallery = getColorGallery(product, selectedColor);
     const initialImg = (initialGallery && initialGallery.length > 0) ? initialGallery[0] : (selectedColor ? selectedColor.image : product.primary_image);
 
