@@ -3,7 +3,9 @@
   "handle": "luxury-crossbody-wallet-phone-case",
   "title": "Luxury Crossbody Wallet Phone Case",
   "price": 899.0,
+  "price_formatted": "Rs. 899.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 10,
   "rating": 4.8,
   "reviews_count": 262,
@@ -18,13 +20,11 @@
     "our-bestsellers",
     "womens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": true,
+  "tags": [],
   "primary_image": "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
   "images": [
     "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
@@ -39,26 +39,36 @@
     "assets/products/luxury-crossbody-wallet-phone-case/extra/06_extra.webp",
     "assets/products/luxury-crossbody-wallet-phone-case/extra/07_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
-      "hex": "#18181B",
-      "price": 899.0,
+      "value": "#171513",
       "image": "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
       "images": [
         "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
         "assets/products/luxury-crossbody-wallet-phone-case/black/02_lifestyle.jpg"
-      ]
+      ],
+      "hex": "#171513"
     },
     {
       "name": "Beige",
-      "hex": "#F5F5DC",
-      "price": 899.0,
+      "value": "#D8C7B5",
       "image": "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
       "images": [
         "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
         "assets/products/luxury-crossbody-wallet-phone-case/beige/02_lifestyle.jpg"
-      ]
+      ],
+      "hex": "#D8C7B5"
+    },
+    {
+      "name": "Espresso Brown",
+      "value": "#5C4033",
+      "image": "assets/products/luxury-crossbody-wallet-phone-case/espresso-brown/01_packshot.webp",
+      "images": [
+        "assets/products/luxury-crossbody-wallet-phone-case/espresso-brown/01_packshot.webp"
+      ],
+      "hex": "#5C4033"
     }
   ],
   "models": [
@@ -77,36 +87,87 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<div>Quilted Design with Chain Strap,</div>\n<div>Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Quilted faux-leather design with luxe gold hardware</span></div>\n<div><span> • Detachable crossbody chain strap for hands-free carry</span></div>\n<div><span> • Built-in mini wallet pocket with secure clasp</span></div>\n<div><span> • Shock-resistant protective phone cover</span></div>\n<div><span> • Elegant and practical – perfect for daily wear or special outings</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div><br></div>\n<div>This case doubles as a stylish mini bag and a protective phone cover – the perfect blend of fashion and function for modern lifestyles.</div>",
+  "bullets": [
+    "Quilted faux-leather design with luxe gold hardware",
+    "Detachable crossbody chain strap for hands-free carry",
+    "Built-in mini wallet pocket with secure clasp",
+    "Shock-resistant protective phone cover",
+    "Elegant and practical – perfect for daily wear or special outings",
+    "Compatible with various iPhone models"
+  ],
+  "raw_html": "<div>Quilted Design with Chain Strap,</div>\n<div>Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience.</div>\n<div><br></div>\n<div> Features:</div>\n<div><span> • Quilted faux-leather design with luxe gold hardware</span></div>\n<div><span> • Detachable crossbody chain strap for hands-free carry</span></div>\n<div><span> • Built-in mini wallet pocket with secure clasp</span></div>\n<div><span> • Shock-resistant protective phone cover</span></div>\n<div><span> • Elegant and practical – perfect for daily wear or special outings</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div><br></div>\n<div>This case doubles as a stylish mini bag and a protective phone cover – the perfect blend of fashion and function for modern lifestyles.</div>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Black",
-        "Beige"
-      ]
+      "title": "Quilted faux-leather design",
+      "subtitle": "with luxe gold hardware",
+      "icon": "shield"
     },
     {
-      "name": "Model",
-      "position": 2,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max",
-        "iPhone 17 Pro"
-      ]
+      "title": "Detachable crossbody chain",
+      "subtitle": "strap for hands-free carry",
+      "icon": "shield"
+    },
+    {
+      "title": "Built-in mini wallet",
+      "subtitle": "pocket with secure clasp",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 11 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Luxury Crossbody Wallet Phone Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 962,
+    "sold_hours": 4,
+    "stock_left": 20
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<div>Quilted Design with Chain Strap,</div>\n<div>Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Quilted faux-leather design with luxe gold hardware</span></div>\n<div><span> • Detachable crossbody chain strap for hands-free carry</span></div>\n<div><span> • Built-in mini wallet pocket with secure clasp</span></div>\n<div><span> • Shock-resistant protective phone cover</span></div>\n<div><span> • Elegant and practical – perfect for daily wear or special outings</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div><br></div>\n<div>This case doubles as a stylish mini bag and a protective phone cover – the perfect blend of fashion and function for modern lifestyles.</div>",
+  "shopify_variants": [
     {
       "id": 50525279846698,
       "title": "Black / iPhone 13",
@@ -628,7 +689,36 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Quilted Design with Chain Strap, Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience. ✨ Features: • Quilted faux-leather design with luxe gold hardware • Detachable crossbody chain strap for hands-free carry • Built-in mini wallet pocket with secure clasp • Shock-resistant protective phone cover • Elegant and practical – perfect for daily wear or special outings • Compatible with various iPhone models This case doubles as a stylish mini bag and a protective phone cover – the perfect blend of fashion and function for modern lifestyles.",
-  "description_html": "<div>Quilted Design with Chain Strap,</div>\n<div>Keep your essentials close in style with the Luxury Crossbody Wallet Phone Case. Featuring a quilted leather-look design and a gold-accent chain strap, this case is both fashionable and functional. The built-in mini wallet pocket is perfect for carrying cash, cards, or small must-haves, making it an ideal choice for on-the-go convenience.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Quilted faux-leather design with luxe gold hardware</span></div>\n<div><span> • Detachable crossbody chain strap for hands-free carry</span></div>\n<div><span> • Built-in mini wallet pocket with secure clasp</span></div>\n<div><span> • Shock-resistant protective phone cover</span></div>\n<div><span> • Elegant and practical – perfect for daily wear or special outings</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div><br></div>\n<div>This case doubles as a stylish mini bag and a protective phone cover – the perfect blend of fashion and function for modern lifestyles.</div>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Black",
+        "Beige"
+      ]
+    },
+    {
+      "name": "Model",
+      "position": 2,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "iPhone 17 Pro"
+      ]
+    }
+  ],
+  "alias_handles": [
+    "silver-3d-love-heart-phone-case-copy"
+  ]
 }

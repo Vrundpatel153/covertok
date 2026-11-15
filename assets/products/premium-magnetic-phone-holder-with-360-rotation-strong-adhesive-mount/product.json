@@ -3,7 +3,9 @@
   "handle": "premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount",
   "title": "Magnetic Phone Holder with 360° Rotation Strong Adhesive Mount",
   "price": 699.0,
+  "price_formatted": "Rs. 699.00",
   "original_price": 1499.0,
+  "original_price_formatted": "Rs. 1,499.00",
   "discount_percent": 53,
   "rating": 4.9,
   "reviews_count": 318,
@@ -13,13 +15,11 @@
     "all",
     "other-accessories"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp",
   "images": [
     "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp",
@@ -33,6 +33,7 @@
     "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/08_extra.webp",
     "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/09_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Space Black",
@@ -40,21 +41,96 @@
       "image": "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp",
       "images": [
         "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp"
-      ]
+      ],
+      "value": "#1C1D1F"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p><span>Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance.</span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping</span></li>\n<li><span>Aluminum Alloy Build – Durable, rust-resistant, and premium finish</span></li>\n<li><span>360° Rotation – Easily adjust your phone to any viewing angle</span></li>\n<li><span>Borderless Occlusion Design – Does not block the screen or interfere with usage</span></li>\n<li><span>Metal Trend Protective Shell – Adds protection while enhancing aesthetics</span></li>\n<li><span>Slim &amp; Lightweight – No bulk, just smart functionality</span></li>\n</ul>\n<p>Perfect For<br><span></span></p>\n<p> </p>\n<p> </p>\n<p>✔ Hands-free video watching<br><span></span></p>\n<p> </p>\n<p><span>✔ Kitchen, gym, or workspace use</span></p>\n<p><span>✔ Smooth scrolling and tapping while mounted</span></p>\n<p><span>✔ Daily use with a stylish, modern look</span></p>\n<p>Enjoy your life with smarter phone protection and effortless mounting.<br><span></span></p>",
+  "bullets": [
+    "Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping",
+    "360° Rotation – Easily adjust your phone to any viewing angle",
+    "Borderless Occlusion Design – Does not block the screen or interfere with usage",
+    "Metal Trend Protective Shell – Adds protection while enhancing aesthetics",
+    "Slim & Lightweight – No bulk, just smart functionality",
+    "Hands-free video watching",
+    "Kitchen, gym, or workspace use",
+    "Smooth scrolling and tapping while mounted",
+    "Daily use with a stylish, modern look"
+  ],
+  "raw_html": "<p><span>Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance.</span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping</span></li>\n<li><span>Aluminum Alloy Build – Durable, rust-resistant, and premium finish</span></li>\n<li><span>360° Rotation – Easily adjust your phone to any viewing angle</span></li>\n<li><span>Borderless Occlusion Design – Does not block the screen or interfere with usage</span></li>\n<li><span>Metal Trend Protective Shell – Adds protection while enhancing aesthetics</span></li>\n<li><span>Slim &amp; Lightweight – No bulk, just smart functionality</span></li>\n</ul>\n<p>Perfect For<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> Hands-free video watching<br><span></span></p>\n<p> </p>\n<p><span> Kitchen, gym, or workspace use</span></p>\n<p><span> Smooth scrolling and tapping while mounted</span></p>\n<p><span> Daily use with a stylish, modern look</span></p>\n<p>Enjoy your life with smarter phone protection and effortless mounting.<br><span></span></p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Title",
-      "position": 1,
-      "values": [
-        "Default Title"
-      ]
+      "title": "Strong Magnetic Hold",
+      "subtitle": "Securely attaches your phone to metal surfaces without slipping",
+      "icon": "magnet"
+    },
+    {
+      "title": "360° Rotation",
+      "subtitle": "Easily adjust your phone to any viewing angle",
+      "icon": "refresh"
+    },
+    {
+      "title": "Borderless Occlusion Design",
+      "subtitle": "Does not block the screen or interfere with usage",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Aero-Grade CNC Aluminum Alloy"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Universal Smartphone & Mobile Accessories"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Magnetic Phone Holder with 360° Rotation Strong Adhesive Mount"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 818,
+    "sold_hours": 8,
+    "stock_left": 21
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p><span>Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance.</span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping</span></li>\n<li><span>Aluminum Alloy Build – Durable, rust-resistant, and premium finish</span></li>\n<li><span>360° Rotation – Easily adjust your phone to any viewing angle</span></li>\n<li><span>Borderless Occlusion Design – Does not block the screen or interfere with usage</span></li>\n<li><span>Metal Trend Protective Shell – Adds protection while enhancing aesthetics</span></li>\n<li><span>Slim &amp; Lightweight – No bulk, just smart functionality</span></li>\n</ul>\n<p>Perfect For<br><span></span></p>\n<p> </p>\n<p> </p>\n<p>✔ Hands-free video watching<br><span></span></p>\n<p> </p>\n<p><span>✔ Kitchen, gym, or workspace use</span></p>\n<p><span>✔ Smooth scrolling and tapping while mounted</span></p>\n<p><span>✔ Daily use with a stylish, modern look</span></p>\n<p>Enjoy your life with smarter phone protection and effortless mounting.<br><span></span></p>",
+  "shopify_variants": [
     {
       "id": 51057909629226,
       "title": "Default Title",
@@ -75,14 +151,13 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping",
-    "Aluminum Alloy Build – Durable, rust-resistant, and premium finish",
-    "360° Rotation – Easily adjust your phone to any viewing angle",
-    "Borderless Occlusion Design – Does not block the screen or interfere with usage",
-    "Metal Trend Protective Shell – Adds protection while enhancing aesthetics",
-    "Slim & Lightweight – No bulk, just smart functionality"
-  ],
-  "description_text": "Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance. Key Features Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping Aluminum Alloy Build – Durable, rust-resistant, and premium finish 360° Rotation – Easily adjust your phone to any viewing angle Borderless Occlusion Design – Does not block the screen or interfere with usage Metal Trend Protective Shell – Adds protection while enhancing aesthetics Slim & Lightweight – No bulk, just smart functionality Perfect For ✔ Hands-free video watching ✔ Kitchen, gym, or workspace use ✔ Smooth scrolling and tapping while mounted ✔ Daily use with a stylish, modern look Enjoy your life with smarter phone protection and effortless mounting.",
-  "description_html": "<p><span>Upgrade your phone experience with this premium magnetic phone holder case, designed for style, strength, and everyday convenience. Crafted with a metal aluminum alloy, it offers a sleek look while ensuring reliable performance.</span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Strong Magnetic Hold – Securely attaches your phone to metal surfaces without slipping</span></li>\n<li><span>Aluminum Alloy Build – Durable, rust-resistant, and premium finish</span></li>\n<li><span>360° Rotation – Easily adjust your phone to any viewing angle</span></li>\n<li><span>Borderless Occlusion Design – Does not block the screen or interfere with usage</span></li>\n<li><span>Metal Trend Protective Shell – Adds protection while enhancing aesthetics</span></li>\n<li><span>Slim &amp; Lightweight – No bulk, just smart functionality</span></li>\n</ul>\n<p>Perfect For<br><span></span></p>\n<p> </p>\n<p> </p>\n<p>✔ Hands-free video watching<br><span></span></p>\n<p> </p>\n<p><span>✔ Kitchen, gym, or workspace use</span></p>\n<p><span>✔ Smooth scrolling and tapping while mounted</span></p>\n<p><span>✔ Daily use with a stylish, modern look</span></p>\n<p>Enjoy your life with smarter phone protection and effortless mounting.<br><span></span></p>"
+  "shopify_options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
 }

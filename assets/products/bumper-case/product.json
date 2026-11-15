@@ -3,7 +3,9 @@
   "handle": "bumper-case",
   "title": "Ultra-Thin Frameless Case for iPhone",
   "price": 820.0,
+  "price_formatted": "Rs. 820.00",
   "original_price": 1299.0,
+  "original_price_formatted": "Rs. 1,299.00",
   "discount_percent": 37,
   "rating": 4.8,
   "reviews_count": 166,
@@ -16,13 +18,11 @@
     "iphone-cases",
     "mens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/bumper-case/black/01_packshot.webp",
   "images": [
     "assets/products/bumper-case/black/01_packshot.webp",
@@ -56,6 +56,7 @@
     "assets/products/bumper-case/extra/15_extra.webp",
     "assets/products/bumper-case/extra/16_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -65,7 +66,8 @@
       "images": [
         "assets/products/bumper-case/black/01_packshot.webp",
         "assets/products/bumper-case/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Dark Blue",
@@ -75,7 +77,8 @@
       "images": [
         "assets/products/bumper-case/dark-blue/01_packshot.webp",
         "assets/products/bumper-case/dark-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#1E3A8A"
     },
     {
       "name": "Natural Titanium",
@@ -85,7 +88,8 @@
       "images": [
         "assets/products/bumper-case/natural-titanium/01_packshot.webp",
         "assets/products/bumper-case/natural-titanium/02_lifestyle.png"
-      ]
+      ],
+      "value": "#CBD5E1"
     },
     {
       "name": "Desert titanium",
@@ -95,7 +99,8 @@
       "images": [
         "assets/products/bumper-case/desert-titanium/01_packshot.webp",
         "assets/products/bumper-case/desert-titanium/02_lifestyle.png"
-      ]
+      ],
+      "value": "#D4A373"
     },
     {
       "name": "Dark red",
@@ -105,7 +110,8 @@
       "images": [
         "assets/products/bumper-case/dark-red/01_packshot.webp",
         "assets/products/bumper-case/dark-red/02_lifestyle.png"
-      ]
+      ],
+      "value": "#991B1B"
     },
     {
       "name": "Sierra blue",
@@ -115,7 +121,8 @@
       "images": [
         "assets/products/bumper-case/sierra-blue/01_packshot.webp",
         "assets/products/bumper-case/sierra-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#93C5FD"
     },
     {
       "name": "Cosmic orange",
@@ -125,7 +132,8 @@
       "images": [
         "assets/products/bumper-case/cosmic-orange/01_packshot.webp",
         "assets/products/bumper-case/cosmic-orange/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FF6A3D"
     }
   ],
   "models": [
@@ -144,50 +152,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<div style=\"text-align: left;\"><br></div>\n<p>This ultra-thin frameless phone case for iPhone offers sleek, minimalist protection without adding bulk. Designed to preserve the phone’s original design and feel, it provides reliable scratch resistance and everyday impact protection. Its precise cutouts ensure full access to all ports and buttons, maintaining seamless functionality while keeping your device safe. Ideal for users seeking a discreet yet effective case that complements the iPhone’s aesthetics.</p>\n<p><span>This ultra-thin, frameless phone case in an eye-catching purple color is specifically designed for the latest iPhone. With a sleek and slim design, it offers reliable protection without adding extra bulk. Its frameless feature provides a seamless look and allows for easy access to all ports and buttons. Upgrade your phone's style and protection with this must-have case.</span></p>\n<p><span><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162261.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162258.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162255.jpg?v=1754028668\"></span></p>",
+  "bullets": [],
+  "raw_html": "<div style=\"text-align: left;\"><br></div>\n<p>This ultra-thin frameless phone case for iPhone offers sleek, minimalist protection without adding bulk. Designed to preserve the phone’s original design and feel, it provides reliable scratch resistance and everyday impact protection. Its precise cutouts ensure full access to all ports and buttons, maintaining seamless functionality while keeping your device safe. Ideal for users seeking a discreet yet effective case that complements the iPhone’s aesthetics.</p>\n<p><span>This ultra-thin, frameless phone case in an eye-catching purple color is specifically designed for the latest iPhone. With a sleek and slim design, it offers reliable protection without adding extra bulk. Its frameless feature provides a seamless look and allows for easy access to all ports and buttons. Upgrade your phone's style and protection with this must-have case.</span></p>\n<p><span><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162261.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162258.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162255.jpg?v=1754028668\"></span></p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Black",
-        "Dark Blue",
-        "Natural Titanium",
-        "Desert titanium",
-        "Dark red",
-        "Sierra blue",
-        "Cosmic orange"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Model",
-      "position": 2,
-      "values": [
-        "iPhone 12",
-        "iPhone 12 Pro",
-        "iPhone 12 Pro Max",
-        "iPhone 13",
-        "iPhone 13 pro",
-        "iPhone 13 pro max",
-        "iPhone 14",
-        "iPhone 14 pro",
-        "iPhone 14 plus",
-        "iPhone 14 pro max",
-        "iPhone 15",
-        "iPhone 15 pro",
-        "iPhone 15 Plus",
-        "iPhone 15 pro max",
-        "iPhone 16",
-        "iPhone 16 pro",
-        "iPhone 16 plus",
-        "iPhone 16 pro max",
-        "iPhone 17",
-        "iPhone 17 Air",
-        "iPhone 17 pro",
-        "iPhone 17 Pro max"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "High-Grade Impact Resistant TPU & Polycarbonate"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 12, iPhone 12 Pro and 20 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Ultra-Thin Frameless Case for iPhone"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 626,
+    "sold_hours": 6,
+    "stock_left": 19
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<div style=\"text-align: left;\"><br></div>\n<p>This ultra-thin frameless phone case for iPhone offers sleek, minimalist protection without adding bulk. Designed to preserve the phone’s original design and feel, it provides reliable scratch resistance and everyday impact protection. Its precise cutouts ensure full access to all ports and buttons, maintaining seamless functionality while keeping your device safe. Ideal for users seeking a discreet yet effective case that complements the iPhone’s aesthetics.</p>\n<p><span>This ultra-thin, frameless phone case in an eye-catching purple color is specifically designed for the latest iPhone. With a sleek and slim design, it offers reliable protection without adding extra bulk. Its frameless feature provides a seamless look and allows for easy access to all ports and buttons. Upgrade your phone's style and protection with this must-have case.</span></p>\n<p><span><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162261.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162258.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162255.jpg?v=1754028668\"></span></p>",
+  "shopify_variants": [
     {
       "id": 50625379762474,
       "title": "Black / iPhone 12",
@@ -7245,7 +7283,47 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "This ultra-thin frameless phone case for iPhone offers sleek, minimalist protection without adding bulk. Designed to preserve the phone’s original design and feel, it provides reliable scratch resistance and everyday impact protection. Its precise cutouts ensure full access to all ports and buttons, maintaining seamless functionality while keeping your device safe. Ideal for users seeking a discreet yet effective case that complements the iPhone’s aesthetics. This ultra-thin, frameless phone case in an eye-catching purple color is specifically designed for the latest iPhone. With a sleek and slim design, it offers reliable protection without adding extra bulk. Its frameless feature provides a seamless look and allows for easy access to all ports and buttons. Upgrade your phone's style and protection with this must-have case.",
-  "description_html": "<div style=\"text-align: left;\"><br></div>\n<p>This ultra-thin frameless phone case for iPhone offers sleek, minimalist protection without adding bulk. Designed to preserve the phone’s original design and feel, it provides reliable scratch resistance and everyday impact protection. Its precise cutouts ensure full access to all ports and buttons, maintaining seamless functionality while keeping your device safe. Ideal for users seeking a discreet yet effective case that complements the iPhone’s aesthetics.</p>\n<p><span>This ultra-thin, frameless phone case in an eye-catching purple color is specifically designed for the latest iPhone. With a sleek and slim design, it offers reliable protection without adding extra bulk. Its frameless feature provides a seamless look and allows for easy access to all ports and buttons. Upgrade your phone's style and protection with this must-have case.</span></p>\n<p><span><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162261.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162258.jpg?v=1754028667\"><img alt=\"\" src=\"https://cdn.shopify.com/s/files/1/0942/0550/9930/files/1000162255.jpg?v=1754028668\"></span></p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Black",
+        "Dark Blue",
+        "Natural Titanium",
+        "Desert titanium",
+        "Dark red",
+        "Sierra blue",
+        "Cosmic orange"
+      ]
+    },
+    {
+      "name": "Model",
+      "position": 2,
+      "values": [
+        "iPhone 12",
+        "iPhone 12 Pro",
+        "iPhone 12 Pro Max",
+        "iPhone 13",
+        "iPhone 13 pro",
+        "iPhone 13 pro max",
+        "iPhone 14",
+        "iPhone 14 pro",
+        "iPhone 14 plus",
+        "iPhone 14 pro max",
+        "iPhone 15",
+        "iPhone 15 pro",
+        "iPhone 15 Plus",
+        "iPhone 15 pro max",
+        "iPhone 16",
+        "iPhone 16 pro",
+        "iPhone 16 plus",
+        "iPhone 16 pro max",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 pro",
+        "iPhone 17 Pro max"
+      ]
+    }
+  ]
 }

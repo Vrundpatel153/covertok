@@ -3,7 +3,9 @@
   "handle": "magsafe-leather-card-holder-snap-on-wallet",
   "title": "MagSafe Leather Card Holder – Snap-On Wallet",
   "price": 999.0,
+  "price_formatted": "Rs. 999.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 334,
@@ -15,13 +17,11 @@
     "new-arrivals",
     "other-accessories"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
   "images": [
     "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
@@ -36,6 +36,7 @@
     "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/04_extra.webp",
     "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Orange",
@@ -45,7 +46,8 @@
       "images": [
         "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
         "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F97316"
     },
     {
       "name": "Dark Blue",
@@ -55,7 +57,8 @@
       "images": [
         "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
         "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#1E3A8A"
     },
     {
       "name": "Black",
@@ -65,23 +68,90 @@
       "images": [
         "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
         "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p>🎨 Color: Vibrant Orange (Available in multiple colors)</p>\n<p>📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
+  "bullets": [
+    "– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.",
+    "– Premium Leather Finish: Smooth, durable, and elegant look.",
+    "– Slim & Lightweight: Adds functionality without bulk."
+  ],
+  "raw_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p> Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p> Color: Vibrant Orange (Available in multiple colors)</p>\n<p> Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Orange",
-        "Dark Blue",
-        "Black"
-      ]
+      "title": "",
+      "subtitle": "MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.",
+      "icon": "shield"
+    },
+    {
+      "title": "",
+      "subtitle": "Premium Leather Finish: Smooth, durable, and elegant look.",
+      "icon": "shield"
+    },
+    {
+      "title": "",
+      "subtitle": "Slim & Lightweight: Adds functionality without bulk.",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Apple 18W/20W/30W Chargers & MagSafe"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok MagSafe Leather Card Holder – Snap-On Wallet"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 994,
+    "sold_hours": 4,
+    "stock_left": 17
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p>🎨 Color: Vibrant Orange (Available in multiple colors)</p>\n<p>📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>",
+  "shopify_variants": [
     {
       "id": 50456442110250,
       "title": "Orange",
@@ -179,9 +249,15 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "> 🧲 Key Features: – MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone. – Premium Leather Finish: Smooth, durable, and elegant look. – Slim & Lightweight: Adds functionality without bulk. – Secure Card Slot: Holds 1–2 cards safely with easy access. – Perfect Fit: Works with all MagSafe-enabled iPhones and cases."
-  ],
-  "description_text": "Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly. 🧲 Key Features: – MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone. – Premium Leather Finish: Smooth, durable, and elegant look. – Slim & Lightweight: Adds functionality without bulk. – Secure Card Slot: Holds 1–2 cards safely with easy access. – Perfect Fit: Works with all MagSafe-enabled iPhones and cases. 🎨 Color: Vibrant Orange (Available in multiple colors) 📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)",
-  "description_html": "<p>Carry your essentials in style with our MagSafe Leather Card Holder, designed for a seamless snap-on experience. Crafted with premium PU leather, this sleek wallet attaches magnetically to your iPhone, letting you carry your cards and cash effortlessly.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnets ensure secure attachment to your iPhone.</p>\n<p>– Premium Leather Finish: Smooth, durable, and elegant look.</p>\n<p>– Slim &amp; Lightweight: Adds functionality without bulk.</p>\n<p>– Secure Card Slot: Holds 1–2 cards safely with easy access.</p>\n<p>– Perfect Fit: Works with all MagSafe-enabled iPhones and cases.</p>\n<p><br></p>\n<p>🎨 Color: Vibrant Orange (Available in multiple colors)</p>\n<p>📱 Compatible With: iPhone 12/13/14/15/16 Series (MagSafe Enabled)</p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Orange",
+        "Dark Blue",
+        "Black"
+      ]
+    }
+  ]
 }

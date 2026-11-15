@@ -3,7 +3,9 @@
   "handle": "magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah",
   "title": "Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/ 10000 mAh",
   "price": 2099.0,
+  "price_formatted": "Rs. 2,099.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 158,
@@ -15,13 +17,11 @@
     "other-accessories",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
   "images": [
     "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
@@ -35,6 +35,7 @@
     "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/03_extra.webp",
     "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/04_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -44,7 +45,8 @@
       "images": [
         "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
         "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Rose Gold",
@@ -54,7 +56,8 @@
       "images": [
         "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
         "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FDA4AF"
     },
     {
       "name": "Grey",
@@ -64,7 +67,8 @@
       "images": [
         "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
         "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/02_lifestyle.png"
-      ]
+      ],
+      "value": "#6B7280"
     }
   ],
   "models": [
@@ -72,26 +76,88 @@
     "10000mAh"
   ],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>✅ 5000mAh High Capacity – Enough to keep your devices powered all day.<br>✅ Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br>✅ Digital LED Display – Real-time battery percentage indicator.<br>✅ Fast Charging Output – Quick and efficient charging whenever you need it.<br>✅ Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>• 📱 Magnetic Attachment – Snaps onto your phone securely.<br> • ⚡ Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>",
+  "bullets": [
+    "5000mAh High Capacity – Enough to keep your devices powered all day.",
+    "Slim & Stylish Design – Fits easily in your pocket or bag.",
+    "Digital LED Display – Real-time battery percentage indicator.",
+    "Fast Charging Output – Quick and efficient charging whenever you need it.",
+    "Premium Build Quality – Durable, elegant, and made for everyday use.",
+    " Magnetic Attachment – Snaps onto your phone securely.",
+    " Wireless Charging – Say goodbye to messy cables."
+  ],
+  "raw_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p> 5000mAh High Capacity – Enough to keep your devices powered all day.<br> Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br> Digital LED Display – Real-time battery percentage indicator.<br> Fast Charging Output – Quick and efficient charging whenever you need it.<br> Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>•  Magnetic Attachment – Snaps onto your phone securely.<br> •  Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "5000mAh",
-        "10000mAh"
-      ]
+      "title": "5000mAh High Capacity",
+      "subtitle": "Enough to keep your devices powered all day.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Black",
-        "Rose Gold",
-        "Grey"
-      ]
+      "title": "Slim & Stylish Design",
+      "subtitle": "Fits easily in your pocket or bag.",
+      "icon": "feather"
+    },
+    {
+      "title": "Digital LED Display",
+      "subtitle": "Real-time battery percentage indicator.",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Dual-Braided Nylon & Reinforced Aluminum Connectors"
+    },
+    {
+      "label": "Compatibility",
+      "value": "5000mAh, 10000mAh"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/ 10000 mAh"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 978,
+    "sold_hours": 6,
+    "stock_left": 16
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>✅ 5000mAh High Capacity – Enough to keep your devices powered all day.<br>✅ Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br>✅ Digital LED Display – Real-time battery percentage indicator.<br>✅ Fast Charging Output – Quick and efficient charging whenever you need it.<br>✅ Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>• 📱 Magnetic Attachment – Snaps onto your phone securely.<br> • ⚡ Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>",
+  "shopify_variants": [
     {
       "id": 50602046161194,
       "title": "5000mAh / Black",
@@ -246,9 +312,23 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "1-Month Warranty – your purchase is covered for any manufacturing defects"
-  ],
-  "description_text": "Stay charged in style with Covertok. This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go. ✅ 5000mAh High Capacity – Enough to keep your devices powered all day. ✅ Slim & Stylish Design – Fits easily in your pocket or bag. ✅ Digital LED Display – Real-time battery percentage indicator. ✅ Fast Charging Output – Quick and efficient charging whenever you need it. ✅ Premium Build Quality – Durable, elegant, and made for everyday use. • 📱 Magnetic Attachment – Snaps onto your phone securely. • ⚡ Wireless Charging – Say goodbye to messy cables. 1-Month Warranty – your purchase is covered for any manufacturing defects",
-  "description_html": "<p>Stay charged in style with Covertok.<br>This ultra-slim 5000mAh/ 10000mAh power bank is designed for modern lifestyles – lightweight, sleek, and powerful. With its digital LED display, you always know your battery status. Perfectly pocket-sized, it ensures your devices never run out of power on the go.</p>\n<p>✅ 5000mAh High Capacity – Enough to keep your devices powered all day.<br>✅ Slim &amp; Stylish Design – Fits easily in your pocket or bag.<br>✅ Digital LED Display – Real-time battery percentage indicator.<br>✅ Fast Charging Output – Quick and efficient charging whenever you need it.<br>✅ Premium Build Quality – Durable, elegant, and made for everyday use.</p>\n<p>• 📱 Magnetic Attachment – Snaps onto your phone securely.<br> • ⚡ Wireless Charging – Say goodbye to messy cables.</p>\n<p> </p>\n<ul>\n<li><span>1-Month Warranty – your purchase is covered for any manufacturing defects</span></li>\n</ul>\n<p> </p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "5000mAh",
+        "10000mAh"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Black",
+        "Rose Gold",
+        "Grey"
+      ]
+    }
+  ]
 }

@@ -3,7 +3,9 @@
   "handle": "premium-magnetic-leather-loop-straps-for-apple-watch",
   "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
   "price": 1299.0,
+  "price_formatted": "Rs. 1,299.00",
   "original_price": 1999.0,
+  "original_price_formatted": "Rs. 1,999.00",
   "discount_percent": 35,
   "rating": 4.9,
   "reviews_count": 218,
@@ -13,17 +15,19 @@
     "all",
     "watchbands"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
-  "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/01_packshot.webp",
+  "tags": [],
+  "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
   "images": [
+    "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
+    "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/grey-black/01_packshot.webp",
+    "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp",
     "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/01_packshot.webp",
-    "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/02_lifestyle.jpg",
+    "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp",
+    "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp",
     "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/extra/01_extra.webp",
     "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/extra/02_extra.webp",
     "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/extra/03_extra.webp",
@@ -37,16 +41,67 @@
     "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/extra/11_extra.webp",
     "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/extra/12_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
+      "name": "Yellow",
+      "value": "#E6A838",
+      "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
+      "images": [
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/02_lifestyle.jpg"
+      ],
+      "hex": "#E6A838"
+    },
+    {
+      "name": "Grey+Black",
+      "value": "#4A4A4A",
+      "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/grey-black/01_packshot.webp",
+      "images": [
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/grey-black/01_packshot.webp",
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/grey-black/02_lifestyle.jpg"
+      ],
+      "hex": "#4A4A4A"
+    },
+    {
+      "name": "Black",
+      "value": "#1C1C1E",
+      "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp",
+      "images": [
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp",
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/02_lifestyle.jpg"
+      ],
+      "hex": "#1C1C1E"
+    },
+    {
       "name": "Starlight+Grey",
-      "hex": "#F5EBE0",
-      "price": 1299.0,
+      "value": "#D6D0C4",
       "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/01_packshot.webp",
       "images": [
         "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/01_packshot.webp",
         "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/02_lifestyle.jpg"
-      ]
+      ],
+      "hex": "#D6D0C4"
+    },
+    {
+      "name": "Orange+Grey",
+      "value": "#FF5500",
+      "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp",
+      "images": [
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp",
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/02_lifestyle.jpg"
+      ],
+      "hex": "#FF5500"
+    },
+    {
+      "name": "Light Blue",
+      "value": "#7FAFC4",
+      "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp",
+      "images": [
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp",
+        "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/02_lifestyle.jpg"
+      ],
+      "hex": "#7FAFC4"
     }
   ],
   "models": [
@@ -55,24 +110,84 @@
     "49mm (Apple Watch Ultra 1 & 2)"
   ],
   "model_label": "Select Case Size:",
-  "options": [
+  "description": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>✅ Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>✅ Strong magnetic clasp for secure fit<br>✅ Durable, flexible, and comfortable for everyday wear<br>✅ Perfect for casual, office, or formal occasions</p>",
+  "bullets": [
+    "Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+    "Strong magnetic clasp for secure fit",
+    "Durable, flexible, and comfortable for everyday wear"
+  ],
+  "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Size",
-      "position": 1,
-      "values": [
-        "40mm/41mm/42mm",
-        "44mm/45mm/46mm/49mm"
-      ]
+      "title": "Compatible with Apple",
+      "subtitle": "Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Starlight+Grey"
-      ]
+      "title": "Strong magnetic clasp",
+      "subtitle": "for secure fit",
+      "icon": "magnet"
+    },
+    {
+      "title": "Durable, flexible, and",
+      "subtitle": "comfortable for everyday wear",
+      "icon": "refresh"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Water Resistance",
+      "value": "Sweat & Splash Resistant (IPX5)"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Premium Magnetic Leather Loop Straps for Apple Watch"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 658,
+    "sold_hours": 4,
+    "stock_left": 11
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>✅ Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>✅ Strong magnetic clasp for secure fit<br>✅ Durable, flexible, and comfortable for everyday wear<br>✅ Perfect for casual, office, or formal occasions</p>",
+  "shopify_variants": [
     {
       "id": 50538394353962,
       "title": "40mm/41mm/42mm / Starlight+Grey",
@@ -140,7 +255,28 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Description: Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style. ✅ Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm ✅ Strong magnetic clasp for secure fit ✅ Durable, flexible, and comfortable for everyday wear ✅ Perfect for casual, office, or formal occasions",
-  "description_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>✅ Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>✅ Strong magnetic clasp for secure fit<br>✅ Durable, flexible, and comfortable for everyday wear<br>✅ Perfect for casual, office, or formal occasions</p>"
+  "shopify_options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm/45mm/46mm/49mm"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Starlight+Grey"
+      ]
+    }
+  ],
+  "alias_handles": [
+    "premium-magnetic-leather-loop-straps-for-apple-watch-copy",
+    "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy",
+    "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1",
+    "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2",
+    "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3"
+  ]
 }

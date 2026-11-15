@@ -3,7 +3,9 @@
   "handle": "ultra-clear-sideless-anti-yellow-back-case",
   "title": "Ultra Clear Sideless Anti-Yellow Back Case",
   "price": 599.0,
+  "price_formatted": "Rs. 599.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 40,
   "rating": 4.8,
   "reviews_count": 206,
@@ -14,13 +16,11 @@
     "buy-three",
     "iphone-cases"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp",
   "images": [
     "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp",
@@ -32,6 +32,7 @@
     "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/06_extra.webp",
     "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/07_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Crystal Clear",
@@ -39,7 +40,8 @@
       "image": "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp",
       "images": [
         "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp"
-      ]
+      ],
+      "value": "#E2E8F0"
     }
   ],
   "models": [
@@ -58,34 +60,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p><span>Experience the pure look and feel of your iPhone with this sideless ultra-clear back case, designed for minimalists who don’t want to hide the phone’s original design.</span></p>\n<p>The case features a high-clarity, anti-yellow hard back that stays transparent over time, while the open sideless design keeps the natural grip and premium feel of your iPhone intact. Lightweight and sleek, it adds protection to the back without adding bulk or altering the phone’s aesthetics.<br><span></span></p>\n<p>Perfect for users who prefer a clean, modern, and barely-there look.<br><span></span></p>\n<p>Key Features:<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Sideless open-frame design</span></li>\n<li><span>Anti-yellow crystal clear hard back</span></li>\n<li><span>Ultra-slim &amp; lightweight</span></li>\n<li><span>Scratch-resistant back panel</span></li>\n<li><span>Maintains original phone look &amp; feel</span></li>\n<li>\n<span>Easy snap-on fiT     <br></span>Compatibility:</li>\n</ul>\n<p> </p>\n<ul>\n<li><span>iPhone Pro &amp; Pro Max models (model-specific)</span></li>\n</ul>\n<p> </p>",
+  "bullets": [],
+  "raw_html": "<p><span>Experience the pure look and feel of your iPhone with this sideless ultra-clear back case, designed for minimalists who don’t want to hide the phone’s original design.</span></p>\n<p>The case features a high-clarity, anti-yellow hard back that stays transparent over time, while the open sideless design keeps the natural grip and premium feel of your iPhone intact. Lightweight and sleek, it adds protection to the back without adding bulk or altering the phone’s aesthetics.<br><span></span></p>\n<p>Perfect for users who prefer a clean, modern, and barely-there look.<br><span></span></p>\n<p>Key Features:<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Sideless open-frame design</span></li>\n<li><span>Anti-yellow crystal clear hard back</span></li>\n<li><span>Ultra-slim &amp; lightweight</span></li>\n<li><span>Scratch-resistant back panel</span></li>\n<li><span>Maintains original phone look &amp; feel</span></li>\n<li>\n<span>Easy snap-on fiT     <br></span>Compatibility:</li>\n</ul>\n<p> </p>\n<ul>\n<li><span>iPhone Pro &amp; Pro Max models (model-specific)</span></li>\n</ul>\n<p> </p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Plus",
-        "iPhone  14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Plus",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Plus",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max",
-        "iPhone 17",
-        "iPhone 17 Air",
-        "iPhone 17 Pro",
-        "iPhone 17 Pro Max"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
+    },
+    {
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 17 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Ultra Clear Sideless Anti-Yellow Back Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 626,
+    "sold_hours": 8,
+    "stock_left": 9
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p><span>Experience the pure look and feel of your iPhone with this sideless ultra-clear back case, designed for minimalists who don’t want to hide the phone’s original design.</span></p>\n<p>The case features a high-clarity, anti-yellow hard back that stays transparent over time, while the open sideless design keeps the natural grip and premium feel of your iPhone intact. Lightweight and sleek, it adds protection to the back without adding bulk or altering the phone’s aesthetics.<br><span></span></p>\n<p>Perfect for users who prefer a clean, modern, and barely-there look.<br><span></span></p>\n<p>Key Features:<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Sideless open-frame design</span></li>\n<li><span>Anti-yellow crystal clear hard back</span></li>\n<li><span>Ultra-slim &amp; lightweight</span></li>\n<li><span>Scratch-resistant back panel</span></li>\n<li><span>Maintains original phone look &amp; feel</span></li>\n<li>\n<span>Easy snap-on fiT     <br></span>Compatibility:</li>\n</ul>\n<p> </p>\n<ul>\n<li><span>iPhone Pro &amp; Pro Max models (model-specific)</span></li>\n</ul>\n<p> </p>",
+  "shopify_variants": [
     {
       "id": 50954768220458,
       "title": "iPhone 13",
@@ -448,15 +496,31 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "Sideless open-frame design",
-    "Anti-yellow crystal clear hard back",
-    "Ultra-slim & lightweight",
-    "Scratch-resistant back panel",
-    "Maintains original phone look & feel",
-    "Easy snap-on fiT Compatibility:",
-    "iPhone Pro & Pro Max models (model-specific)"
-  ],
-  "description_text": "Experience the pure look and feel of your iPhone with this sideless ultra-clear back case, designed for minimalists who don’t want to hide the phone’s original design. The case features a high-clarity, anti-yellow hard back that stays transparent over time, while the open sideless design keeps the natural grip and premium feel of your iPhone intact. Lightweight and sleek, it adds protection to the back without adding bulk or altering the phone’s aesthetics. Perfect for users who prefer a clean, modern, and barely-there look. Key Features: Sideless open-frame design Anti-yellow crystal clear hard back Ultra-slim & lightweight Scratch-resistant back panel Maintains original phone look & feel Easy snap-on fiT Compatibility: iPhone Pro & Pro Max models (model-specific)",
-  "description_html": "<p><span>Experience the pure look and feel of your iPhone with this sideless ultra-clear back case, designed for minimalists who don’t want to hide the phone’s original design.</span></p>\n<p>The case features a high-clarity, anti-yellow hard back that stays transparent over time, while the open sideless design keeps the natural grip and premium feel of your iPhone intact. Lightweight and sleek, it adds protection to the back without adding bulk or altering the phone’s aesthetics.<br><span></span></p>\n<p>Perfect for users who prefer a clean, modern, and barely-there look.<br><span></span></p>\n<p>Key Features:<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Sideless open-frame design</span></li>\n<li><span>Anti-yellow crystal clear hard back</span></li>\n<li><span>Ultra-slim &amp; lightweight</span></li>\n<li><span>Scratch-resistant back panel</span></li>\n<li><span>Maintains original phone look &amp; feel</span></li>\n<li>\n<span>Easy snap-on fiT     <br></span>Compatibility:</li>\n</ul>\n<p> </p>\n<ul>\n<li><span>iPhone Pro &amp; Pro Max models (model-specific)</span></li>\n</ul>\n<p> </p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Plus",
+        "iPhone  14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Plus",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Plus",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    }
+  ]
 }

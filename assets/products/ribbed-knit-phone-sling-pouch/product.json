@@ -3,7 +3,9 @@
   "handle": "ribbed-knit-phone-sling-pouch",
   "title": "Ribbed Knit Phone Sling Pouch",
   "price": 999.0,
+  "price_formatted": "Rs. 999.00",
   "original_price": 1499.0,
+  "original_price_formatted": "Rs. 1,499.00",
   "discount_percent": 33,
   "rating": 4.8,
   "reviews_count": 206,
@@ -14,13 +16,11 @@
     "other-accessories",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": true,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
   "images": [
     "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
@@ -55,6 +55,7 @@
     "assets/products/ribbed-knit-phone-sling-pouch/extra/15_extra.webp",
     "assets/products/ribbed-knit-phone-sling-pouch/extra/16_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Blue",
@@ -65,7 +66,8 @@
         "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
         "assets/products/ribbed-knit-phone-sling-pouch/blue/02_lifestyle.jpg",
         "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#2563EB"
     },
     {
       "name": "Orange",
@@ -76,7 +78,8 @@
         "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
         "assets/products/ribbed-knit-phone-sling-pouch/orange/02_lifestyle.jpg",
         "assets/products/ribbed-knit-phone-sling-pouch/orange/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#F97316"
     },
     {
       "name": "Pink",
@@ -87,7 +90,8 @@
         "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
         "assets/products/ribbed-knit-phone-sling-pouch/pink/02_lifestyle.jpg",
         "assets/products/ribbed-knit-phone-sling-pouch/pink/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#EC4899"
     },
     {
       "name": "Black",
@@ -98,7 +102,8 @@
         "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
         "assets/products/ribbed-knit-phone-sling-pouch/black/02_lifestyle.jpg",
         "assets/products/ribbed-knit-phone-sling-pouch/black/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Brown",
@@ -109,7 +114,8 @@
         "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
         "assets/products/ribbed-knit-phone-sling-pouch/brown/02_lifestyle.jpg",
         "assets/products/ribbed-knit-phone-sling-pouch/brown/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#854D0E"
     }
   ],
   "models": [
@@ -117,28 +123,80 @@
     "Long ( sling pouch)"
   ],
   "model_label": "Select Size",
-  "options": [
+  "description": "<p><span>Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look.</span></p>\n<p>The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort.<br><span></span></p>\n<p>Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Soft ribbed knit fabric with stretch fit</span></li>\n<li><span>Hands-free carry with integrated strap</span></li>\n<li><span>Secure phone hold without bulk</span></li>\n<li><span>Lightweight, comfortable, and travel-friendly</span></li>\n<li><span>Minimal, modern aesthetic</span></li>\n<li><span>Suitable for most smartphones</span></li>\n<li>Ideal For</li>\n</ul>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>Daily use • Travel • Shopping • Casual outings • Minimalist styling<br><span></span></p>",
+  "bullets": [],
+  "raw_html": "<p><span>Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look.</span></p>\n<p>The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort.<br><span></span></p>\n<p>Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Soft ribbed knit fabric with stretch fit</span></li>\n<li><span>Hands-free carry with integrated strap</span></li>\n<li><span>Secure phone hold without bulk</span></li>\n<li><span>Lightweight, comfortable, and travel-friendly</span></li>\n<li><span>Minimal, modern aesthetic</span></li>\n<li><span>Suitable for most smartphones</span></li>\n<li>Ideal For</li>\n</ul>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>Daily use • Travel • Shopping • Casual outings • Minimalist styling<br><span></span></p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Blue",
-        "Orange",
-        "Pink",
-        "Black",
-        "Brown"
-      ]
+      "title": "Premium Grade Materials",
+      "subtitle": "Crafted for durability, elegance, and daily wear.",
+      "icon": "shield"
     },
     {
-      "name": "Size",
-      "position": 2,
-      "values": [
-        "Short( hand pouch)",
-        "Long ( sling pouch)"
-      ]
+      "title": "Universal Compatibility",
+      "subtitle": "Engineered to fit seamlessly with your daily mobile gear.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "1-Year Covertok Guarantee",
+      "subtitle": "100% authentic quality backed by our exchange warranty.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Elastic Stretch-Knit Ribbed Fabric"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Short( hand pouch), Long ( sling pouch)"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Ribbed Knit Phone Sling Pouch"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 946,
+    "sold_hours": 8,
+    "stock_left": 9
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p><span>Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look.</span></p>\n<p>The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort.<br><span></span></p>\n<p>Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Soft ribbed knit fabric with stretch fit</span></li>\n<li><span>Hands-free carry with integrated strap</span></li>\n<li><span>Secure phone hold without bulk</span></li>\n<li><span>Lightweight, comfortable, and travel-friendly</span></li>\n<li><span>Minimal, modern aesthetic</span></li>\n<li><span>Suitable for most smartphones</span></li>\n<li>Ideal For</li>\n</ul>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>Daily use • Travel • Shopping • Casual outings • Minimalist styling<br><span></span></p>",
+  "shopify_variants": [
     {
       "id": 51020842238250,
       "title": "Blue / Short( hand pouch)",
@@ -460,15 +518,25 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "Soft ribbed knit fabric with stretch fit",
-    "Hands-free carry with integrated strap",
-    "Secure phone hold without bulk",
-    "Lightweight, comfortable, and travel-friendly",
-    "Minimal, modern aesthetic",
-    "Suitable for most smartphones",
-    "Ideal For"
-  ],
-  "description_text": "Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look. The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort. Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement. Key Features Soft ribbed knit fabric with stretch fit Hands-free carry with integrated strap Secure phone hold without bulk Lightweight, comfortable, and travel-friendly Minimal, modern aesthetic Suitable for most smartphones Ideal For Daily use • Travel • Shopping • Casual outings • Minimalist styling",
-  "description_html": "<p><span>Upgrade your everyday carry with this ribbed knit phone sling pouch, designed for style, comfort, and convenience. Crafted from soft yet durable stretch-knit fabric, this minimal phone holder securely hugs your smartphone while offering a sleek, fashion-forward look.</span></p>\n<p>The integrated hand/arm strap allows you to carry your phone effortlessly—perfect for quick errands, travel, shopping, or daily use. The snug-fit knit construction keeps your phone safe while maintaining easy access, and the lightweight design ensures all-day comfort.<br><span></span></p>\n<p>Available in multiple modern colors, this phone sling pairs effortlessly with casual and street-style outfits, making it both a functional accessory and a fashion statement.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Soft ribbed knit fabric with stretch fit</span></li>\n<li><span>Hands-free carry with integrated strap</span></li>\n<li><span>Secure phone hold without bulk</span></li>\n<li><span>Lightweight, comfortable, and travel-friendly</span></li>\n<li><span>Minimal, modern aesthetic</span></li>\n<li><span>Suitable for most smartphones</span></li>\n<li>Ideal For</li>\n</ul>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>Daily use • Travel • Shopping • Casual outings • Minimalist styling<br><span></span></p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Blue",
+        "Orange",
+        "Pink",
+        "Black",
+        "Brown"
+      ]
+    },
+    {
+      "name": "Size",
+      "position": 2,
+      "values": [
+        "Short( hand pouch)",
+        "Long ( sling pouch)"
+      ]
+    }
+  ]
 }

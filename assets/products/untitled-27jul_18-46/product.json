@@ -3,7 +3,9 @@
   "handle": "untitled-27jul_18-46",
   "title": "Premium Luxury Leather iPhone Case with Card Slot",
   "price": 699.0,
+  "price_formatted": "Rs. 699.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 30,
   "rating": 4.8,
   "reviews_count": 362,
@@ -16,13 +18,11 @@
     "iphone-cases",
     "mens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
   "images": [
     "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
@@ -39,6 +39,7 @@
     "assets/products/untitled-27jul_18-46/extra/02_extra.webp",
     "assets/products/untitled-27jul_18-46/extra/03_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Sky blue",
@@ -48,7 +49,8 @@
       "images": [
         "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
         "assets/products/untitled-27jul_18-46/sky-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#38BDF8"
     },
     {
       "name": "Brown",
@@ -58,7 +60,8 @@
       "images": [
         "assets/products/untitled-27jul_18-46/brown/01_packshot.webp",
         "assets/products/untitled-27jul_18-46/brown/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#854D0E"
     },
     {
       "name": "White",
@@ -68,7 +71,8 @@
       "images": [
         "assets/products/untitled-27jul_18-46/white/01_packshot.webp",
         "assets/products/untitled-27jul_18-46/white/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#FFFFFF"
     },
     {
       "name": "Rusty orange",
@@ -78,7 +82,8 @@
       "images": [
         "assets/products/untitled-27jul_18-46/rusty-orange/01_packshot.webp",
         "assets/products/untitled-27jul_18-46/rusty-orange/02_lifestyle.png"
-      ]
+      ],
+      "value": "#C2410C"
     },
     {
       "name": "Pink",
@@ -88,7 +93,8 @@
       "images": [
         "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
         "assets/products/untitled-27jul_18-46/pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#EC4899"
     }
   ],
   "models": [
@@ -107,33 +113,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p><span>This Luxury Leather iPhone Case features a convenient card slot, providing easy access to your most used card. The premium designer back cover adds a touch of sophistication to your phone, while the durable leather material offers superior protection. Stay stylish and organized with this must-have accessory.</span></p>",
+  "bullets": [],
+  "raw_html": "<p><span>This Luxury Leather iPhone Case features a convenient card slot, providing easy access to your most used card. The premium designer back cover adds a touch of sophistication to your phone, while the durable leather material offers superior protection. Stay stylish and organized with this must-have accessory.</span></p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "Iphone 13/14",
-        "Iphone 15",
-        "IPhone 15 pro",
-        "Iphone 15 pro max",
-        "Iphone 16",
-        "Iphone 16 pro",
-        "Iphone 16 pro max"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Colour",
-      "position": 2,
-      "values": [
-        "Sky blue",
-        "Brown",
-        "White",
-        "Rusty orange",
-        "Pink"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Iphone 13/14, Iphone 15 and 5 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Premium Luxury Leather iPhone Case with Card Slot"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 802,
+    "sold_hours": 4,
+    "stock_left": 20
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p><span>This Luxury Leather iPhone Case features a convenient card slot, providing easy access to your most used card. The premium designer back cover adds a touch of sophistication to your phone, while the durable leather material offers superior protection. Stay stylish and organized with this must-have accessory.</span></p>",
+  "shopify_variants": [
     {
       "id": 50436222419242,
       "title": "Iphone 13/14 / Sky blue",
@@ -1345,7 +1398,30 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "This Luxury Leather iPhone Case features a convenient card slot, providing easy access to your most used card. The premium designer back cover adds a touch of sophistication to your phone, while the durable leather material offers superior protection. Stay stylish and organized with this must-have accessory.",
-  "description_html": "<p><span>This Luxury Leather iPhone Case features a convenient card slot, providing easy access to your most used card. The premium designer back cover adds a touch of sophistication to your phone, while the durable leather material offers superior protection. Stay stylish and organized with this must-have accessory.</span></p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "Iphone 13/14",
+        "Iphone 15",
+        "IPhone 15 pro",
+        "Iphone 15 pro max",
+        "Iphone 16",
+        "Iphone 16 pro",
+        "Iphone 16 pro max"
+      ]
+    },
+    {
+      "name": "Colour",
+      "position": 2,
+      "values": [
+        "Sky blue",
+        "Brown",
+        "White",
+        "Rusty orange",
+        "Pink"
+      ]
+    }
+  ]
 }

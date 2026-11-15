@@ -3,7 +3,9 @@
   "handle": "transparent-magnetic-wireless-charging-phone-case",
   "title": "Transparent Magnetic Wireless Charging Phone Case",
   "price": 649.0,
+  "price_formatted": "Rs. 649.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 35,
   "rating": 4.9,
   "reviews_count": 378,
@@ -14,13 +16,11 @@
     "buy-three",
     "iphone-cases"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
   "images": [
     "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
@@ -36,6 +36,7 @@
     "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/05_extra.webp",
     "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/06_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Cosmic orange",
@@ -46,7 +47,8 @@
         "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
         "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/02_lifestyle.png",
         "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/03_lifestyle.png"
-      ]
+      ],
+      "value": "#FF6A3D"
     },
     {
       "name": "Dark Blue",
@@ -57,7 +59,8 @@
         "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/01_packshot.webp",
         "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/02_lifestyle.png",
         "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/03_lifestyle.png"
-      ]
+      ],
+      "value": "#1E3A8A"
     }
   ],
   "models": [
@@ -76,25 +79,86 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p><span>Protect your phone without hiding its original beauty.</span></p>\n<p><span>Our Transparent Magnetic Wireless Charging Phone Case is crafted with a TPU + Acrylic hybrid build, offering a perfect balance of clarity, strength, and everyday protection.</span></p>\n<p>✨ Clear &amp; Premium Look<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Crystal-clear acrylic back panel that showcases your phone’s original color</span></li>\n<li><span>Resistant to yellowing for long-lasting transparency</span></li>\n<li><span>Smooth, glossy finish for a modern premium feel</span></li>\n</ul>\n<p>Durable TPU Protection<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Flexible TPU bumper absorbs shocks and protects edges</span></li>\n<li><span>Soft yet sturdy frame for comfortable grip</span></li>\n<li><span>Raised edges around camera and screen for added safety</span></li>\n</ul>\n<p>Magnetic Wireless Charging Compatible<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Built-in magnetic ring ensures stable wireless charging</span></li>\n<li><span>Compatible with magnetic chargers and accessories</span></li>\n<li><span>No need to remove the case while charging</span></li>\n</ul>\n<p>Perfect Fit &amp; Easy Access<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Precision cut-outs for camera, ports, and speakers</span></li>\n<li><span>Responsive button covers for effortless use</span></li>\n<li><span>Slim profile without adding bulk</span></li>\n</ul>\n<p>Stylish Color Frames<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>• Available in trendy frame colors like Orange and Navy Blue, adding a bold outline to your clear case.<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> Why Choose This Case?<br><span></span></p>\n<p> </p>\n<p> </p>\n<p>✔ TPU + Acrylic hybrid material<br><span></span></p>\n<p> </p>\n<p><span>✔ Transparent, non-frosted back</span></p>\n<p><span>✔ Magnetic wireless charging support</span></p>\n<p><span>✔ Camera &amp; screen protection</span></p>\n<p><span>✔ Lightweight and everyday-friendly</span></p>\n<p> </p>\n<p>Package Includes<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>1 × Transparent Magnetic Wireless Charging Phone Case</span></li>\n</ul>\n<p> </p>",
+  "bullets": [
+    "Optical-Grade Clarity: UV-resistant acrylic backplate preserves original phone color",
+    "Hybrid Drop Defense: High-density shock-absorbing perimeter bumper protects edges",
+    "Integrated MagSafe Array: Embedded 38-magnet ring ensures rapid wireless charging",
+    "Raised Perimeter Bezels: 1.2mm elevated lips shield display and camera lenses",
+    "Precision Port Cutouts: Responsive button caps provide crisp tactile feedback"
+  ],
+  "raw_html": "<p class=\"pdp-desc-lead\">Protect your phone without compromising its iconic design. The Covertok Transparent Magnetic Case features an optical-grade acrylic backplate fused with an impact-absorbing TPU bumper, delivering military-grade drop defense while preserving your phone's authentic silhouette.</p><div class=\"pdp-desc-section\"><h4 class=\"pdp-desc-heading\">Design &amp; Engineering</h4><ul class=\"pdp-desc-list\"><li><strong>Optical-Grade Clarity:</strong> UV-stabilized acrylic backplate engineered to resist yellowing and retain crystal-clear transparency.</li><li><strong>Hybrid Drop Defense:</strong> High-density shock-absorbing perimeter bumper protects edges against impacts and everyday drops.</li><li><strong>Raised Perimeter Bezels:</strong> 1.2mm elevated lips shield camera lenses and front display from direct surface contact.</li></ul></div><div class=\"pdp-desc-section\"><h4 class=\"pdp-desc-heading\">Charging &amp; Ergonomics</h4><ul class=\"pdp-desc-list\"><li><strong>Precision MagSafe Array:</strong> Embedded 38-magnet ring ensures instant snap-on alignment with fast wireless chargers and magnetic mounts.</li><li><strong>Tactile Button Covers:</strong> Independently responsive button caps provide crisp, effortless tactile feedback.</li><li><strong>Architectural Color Accent:</strong> Precision-molded contrast frame adds an intentional aesthetic outline to the transparent casing.</li></ul></div><div class=\"pdp-desc-section\"><h4 class=\"pdp-desc-heading\">In The Box</h4><ul class=\"pdp-desc-list\"><li>1 × Covertok Transparent Magnetic Case</li><li>1 × Official 1-Year Quality Warranty Card</li></ul></div>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Cosmic orange",
-        "Dark Blue"
-      ]
+      "title": "Optical-Grade Acrylic",
+      "subtitle": "UV-resistant crystal clarity that will not yellow",
+      "icon": "shield"
     },
     {
-      "name": "Model",
-      "position": 2,
-      "values": [
-        "iPhone 17 Pro",
-        "iPhone 17 Pro Max"
-      ]
+      "title": "Shock-Absorbing TPU",
+      "subtitle": "Reinforced drop defense with 1.2mm raised screen bezels",
+      "icon": "shield"
+    },
+    {
+      "title": "Fast Magnetic Charging",
+      "subtitle": "Built-in 38-magnet array for instant MagSafe snap",
+      "icon": "zap"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 16 Pro, iPhone 16 Pro Max"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Transparent Magnetic Wireless Charging Phone Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 898,
+    "sold_hours": 6,
+    "stock_left": 16
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p><span>Protect your phone without hiding its original beauty.</span></p>\n<p><span>Our Transparent Magnetic Wireless Charging Phone Case is crafted with a TPU + Acrylic hybrid build, offering a perfect balance of clarity, strength, and everyday protection.</span></p>\n<p>✨ Clear &amp; Premium Look<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Crystal-clear acrylic back panel that showcases your phone’s original color</span></li>\n<li><span>Resistant to yellowing for long-lasting transparency</span></li>\n<li><span>Smooth, glossy finish for a modern premium feel</span></li>\n</ul>\n<p>Durable TPU Protection<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Flexible TPU bumper absorbs shocks and protects edges</span></li>\n<li><span>Soft yet sturdy frame for comfortable grip</span></li>\n<li><span>Raised edges around camera and screen for added safety</span></li>\n</ul>\n<p>Magnetic Wireless Charging Compatible<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Built-in magnetic ring ensures stable wireless charging</span></li>\n<li><span>Compatible with magnetic chargers and accessories</span></li>\n<li><span>No need to remove the case while charging</span></li>\n</ul>\n<p>Perfect Fit &amp; Easy Access<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Precision cut-outs for camera, ports, and speakers</span></li>\n<li><span>Responsive button covers for effortless use</span></li>\n<li><span>Slim profile without adding bulk</span></li>\n</ul>\n<p>Stylish Color Frames<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>• Available in trendy frame colors like Orange and Navy Blue, adding a bold outline to your clear case.<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> Why Choose This Case?<br><span></span></p>\n<p> </p>\n<p> </p>\n<p>✔ TPU + Acrylic hybrid material<br><span></span></p>\n<p> </p>\n<p><span>✔ Transparent, non-frosted back</span></p>\n<p><span>✔ Magnetic wireless charging support</span></p>\n<p><span>✔ Camera &amp; screen protection</span></p>\n<p><span>✔ Lightweight and everyday-friendly</span></p>\n<p> </p>\n<p>Package Includes<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>1 × Transparent Magnetic Wireless Charging Phone Case</span></li>\n</ul>\n<p> </p>",
+  "shopify_variants": [
     {
       "id": 50974730060074,
       "title": "Cosmic orange / iPhone 17 Pro",
@@ -224,21 +288,22 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "Crystal-clear acrylic back panel that showcases your phone’s original color",
-    "Resistant to yellowing for long-lasting transparency",
-    "Smooth, glossy finish for a modern premium feel",
-    "Flexible TPU bumper absorbs shocks and protects edges",
-    "Soft yet sturdy frame for comfortable grip",
-    "Raised edges around camera and screen for added safety",
-    "Built-in magnetic ring ensures stable wireless charging",
-    "Compatible with magnetic chargers and accessories",
-    "No need to remove the case while charging",
-    "Precision cut-outs for camera, ports, and speakers",
-    "Responsive button covers for effortless use",
-    "Slim profile without adding bulk",
-    "1 × Transparent Magnetic Wireless Charging Phone Case"
-  ],
-  "description_text": "Protect your phone without hiding its original beauty. Our Transparent Magnetic Wireless Charging Phone Case is crafted with a TPU + Acrylic hybrid build, offering a perfect balance of clarity, strength, and everyday protection. ✨ Clear & Premium Look Crystal-clear acrylic back panel that showcases your phone’s original color Resistant to yellowing for long-lasting transparency Smooth, glossy finish for a modern premium feel Durable TPU Protection Flexible TPU bumper absorbs shocks and protects edges Soft yet sturdy frame for comfortable grip Raised edges around camera and screen for added safety Magnetic Wireless Charging Compatible Built-in magnetic ring ensures stable wireless charging Compatible with magnetic chargers and accessories No need to remove the case while charging Perfect Fit & Easy Access Precision cut-outs for camera, ports, and speakers Responsive button covers for effortless use Slim profile without adding bulk Stylish Color Frames • Available in trendy frame colors like Orange and Navy Blue, adding a bold outline to your clear case. Why Choose This Case? ✔ TPU + Acrylic hybrid material ✔ Transparent, non-frosted back ✔ Magnetic wireless charging support ✔ Camera & screen protection ✔ Lightweight and everyday-friendly Package Includes 1 × Transparent Magnetic Wireless Charging Phone Case",
-  "description_html": "<p><span>Protect your phone without hiding its original beauty.</span></p>\n<p><span>Our Transparent Magnetic Wireless Charging Phone Case is crafted with a TPU + Acrylic hybrid build, offering a perfect balance of clarity, strength, and everyday protection.</span></p>\n<p>✨ Clear &amp; Premium Look<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Crystal-clear acrylic back panel that showcases your phone’s original color</span></li>\n<li><span>Resistant to yellowing for long-lasting transparency</span></li>\n<li><span>Smooth, glossy finish for a modern premium feel</span></li>\n</ul>\n<p>Durable TPU Protection<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Flexible TPU bumper absorbs shocks and protects edges</span></li>\n<li><span>Soft yet sturdy frame for comfortable grip</span></li>\n<li><span>Raised edges around camera and screen for added safety</span></li>\n</ul>\n<p>Magnetic Wireless Charging Compatible<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Built-in magnetic ring ensures stable wireless charging</span></li>\n<li><span>Compatible with magnetic chargers and accessories</span></li>\n<li><span>No need to remove the case while charging</span></li>\n</ul>\n<p>Perfect Fit &amp; Easy Access<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Precision cut-outs for camera, ports, and speakers</span></li>\n<li><span>Responsive button covers for effortless use</span></li>\n<li><span>Slim profile without adding bulk</span></li>\n</ul>\n<p>Stylish Color Frames<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p>• Available in trendy frame colors like Orange and Navy Blue, adding a bold outline to your clear case.<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> Why Choose This Case?<br><span></span></p>\n<p> </p>\n<p> </p>\n<p>✔ TPU + Acrylic hybrid material<br><span></span></p>\n<p> </p>\n<p><span>✔ Transparent, non-frosted back</span></p>\n<p><span>✔ Magnetic wireless charging support</span></p>\n<p><span>✔ Camera &amp; screen protection</span></p>\n<p><span>✔ Lightweight and everyday-friendly</span></p>\n<p> </p>\n<p>Package Includes<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>1 × Transparent Magnetic Wireless Charging Phone Case</span></li>\n</ul>\n<p> </p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Cosmic orange",
+        "Dark Blue"
+      ]
+    },
+    {
+      "name": "Model",
+      "position": 2,
+      "values": [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    }
+  ]
 }

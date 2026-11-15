@@ -1339,6 +1339,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     syncHeroCta(initBtnText, initBtnLink, currentHeroIndex);
 
+    // Initial hand slideshow sync
+    const initHeroHandShow = document.querySelector('.hero-hand-slideshow');
+    if (initHeroHandShow) {
+      if (currentHeroIndex === 0) {
+        initHeroHandShow.style.setProperty('display', 'flex', 'important');
+        initHeroHandShow.style.setProperty('opacity', '1', 'important');
+        initHeroHandShow.style.setProperty('visibility', 'visible', 'important');
+        initHeroHandShow.style.setProperty('pointer-events', 'auto', 'important');
+      } else {
+        initHeroHandShow.style.setProperty('display', 'none', 'important');
+        initHeroHandShow.style.setProperty('opacity', '0', 'important');
+        initHeroHandShow.style.setProperty('visibility', 'hidden', 'important');
+        initHeroHandShow.style.setProperty('pointer-events', 'none', 'important');
+      }
+    }
+
 
 
     const switchHeroSlide = (newIndex) => {

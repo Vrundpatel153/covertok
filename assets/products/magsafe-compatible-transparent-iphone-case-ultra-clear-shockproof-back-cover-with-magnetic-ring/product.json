@@ -3,7 +3,9 @@
   "handle": "magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring",
   "title": "Anti-Yellow MagSafe Transparent iPhone Case(Lifetime Clarity Assurance)",
   "price": 699.0,
+  "price_formatted": "Rs. 699.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 30,
   "rating": 4.8,
   "reviews_count": 302,
@@ -17,13 +19,11 @@
     "mens-cover",
     "new-arrivals"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
   "images": [
     "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
@@ -39,6 +39,7 @@
     "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/extra/01_extra.webp",
     "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/extra/02_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -48,7 +49,8 @@
       "images": [
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "White",
@@ -58,7 +60,8 @@
       "images": [
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FFFFFF"
     },
     {
       "name": "Neon Pink",
@@ -68,7 +71,8 @@
       "images": [
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F43F5E"
     },
     {
       "name": "Neon Orange",
@@ -78,7 +82,8 @@
       "images": [
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#F97316"
     },
     {
       "name": "Brown",
@@ -88,7 +93,8 @@
       "images": [
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
         "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/02_lifestyle.png"
-      ]
+      ],
+      "value": "#854D0E"
     }
   ],
   "models": [
@@ -107,42 +113,85 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p><span>Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360° protection from scratches, drops, and shocks.</span></p>\n<p> </p>\n<p><span>✨ Key Features:</span></p>\n<p> </p>\n<ul>\n<li><span>MagSafe Compatible – Strong magnetic alignment for effortless charging &amp; accessory support.</span></li>\n<li><span>Anti-Yellow Technology – Maintains clarity and freshness for long-lasting use.</span></li>\n<li><span>Shockproof &amp; Durable – Protects against accidental drops and daily wear.</span></li>\n<li><span>Slim &amp; Lightweight – Adds protection without bulk, keeping your iPhone sleek.</span></li>\n<li><span>Precise Cutouts – Easy access to buttons, speakers, and charging port.</span></li>\n</ul>\n<p> </p>",
+  "bullets": [
+    "MagSafe Compatible – Strong magnetic alignment for effortless charging & accessory support.",
+    "Shockproof & Durable – Protects against accidental drops and daily wear.",
+    "Slim & Lightweight – Adds protection without bulk, keeping your iPhone sleek.",
+    "Precise Cutouts – Easy access to buttons, speakers, and charging port."
+  ],
+  "raw_html": "<p><span>Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360° protection from scratches, drops, and shocks.</span></p>\n<p> </p>\n<p><span> Key Features:</span></p>\n<p> </p>\n<ul>\n<li><span>MagSafe Compatible – Strong magnetic alignment for effortless charging &amp; accessory support.</span></li>\n<li><span>Anti-Yellow Technology – Maintains clarity and freshness for long-lasting use.</span></li>\n<li><span>Shockproof &amp; Durable – Protects against accidental drops and daily wear.</span></li>\n<li><span>Slim &amp; Lightweight – Adds protection without bulk, keeping your iPhone sleek.</span></li>\n<li><span>Precise Cutouts – Easy access to buttons, speakers, and charging port.</span></li>\n</ul>\n<p> </p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 pro",
-        "iPhone 13 pro max",
-        "iPhone 14",
-        "iPhone 14 pro",
-        "iPhone 14 pro max",
-        "iPhone 14 plus",
-        "iPhone 15",
-        "iPhone 15 pro",
-        "iPhone 15 pro max",
-        "iPhone 15 plus",
-        "iPhone 16",
-        "iPhone 16 pro",
-        "iPhone 16 pro max",
-        "iPhone 16 plus",
-        "iPhone 16e"
-      ]
+      "title": "MagSafe Compatible",
+      "subtitle": "Strong magnetic alignment for effortless charging & accessory support.",
+      "icon": "magnet"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Black",
-        "White",
-        "Neon Pink",
-        "Neon Orange",
-        "Brown"
-      ]
+      "title": "Shockproof & Durable",
+      "subtitle": "Protects against accidental drops and daily wear.",
+      "icon": "shield"
+    },
+    {
+      "title": "Slim & Lightweight",
+      "subtitle": "Adds protection without bulk, keeping your iPhone sleek.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 pro and 14 other models"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Anti-Yellow MagSafe Transparent iPhone Case(Lifetime Clarity Assurance)"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 722,
+    "sold_hours": 4,
+    "stock_left": 20
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p><span>Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360° protection from scratches, drops, and shocks.</span></p>\n<p> </p>\n<p><span>✨ Key Features:</span></p>\n<p> </p>\n<ul>\n<li><span>MagSafe Compatible – Strong magnetic alignment for effortless charging &amp; accessory support.</span></li>\n<li><span>Anti-Yellow Technology – Maintains clarity and freshness for long-lasting use.</span></li>\n<li><span>Shockproof &amp; Durable – Protects against accidental drops and daily wear.</span></li>\n<li><span>Slim &amp; Lightweight – Adds protection without bulk, keeping your iPhone sleek.</span></li>\n<li><span>Precise Cutouts – Easy access to buttons, speakers, and charging port.</span></li>\n</ul>\n<p> </p>",
+  "shopify_variants": [
     {
       "id": 50451330236714,
       "title": "iPhone 13 / Black",
@@ -3689,13 +3738,39 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "MagSafe Compatible – Strong magnetic alignment for effortless charging & accessory support.",
-    "Anti-Yellow Technology – Maintains clarity and freshness for long-lasting use.",
-    "Shockproof & Durable – Protects against accidental drops and daily wear.",
-    "Slim & Lightweight – Adds protection without bulk, keeping your iPhone sleek.",
-    "Precise Cutouts – Easy access to buttons, speakers, and charging port."
-  ],
-  "description_text": "Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360° protection from scratches, drops, and shocks. ✨ Key Features: MagSafe Compatible – Strong magnetic alignment for effortless charging & accessory support. Anti-Yellow Technology – Maintains clarity and freshness for long-lasting use. Shockproof & Durable – Protects against accidental drops and daily wear. Slim & Lightweight – Adds protection without bulk, keeping your iPhone sleek. Precise Cutouts – Easy access to buttons, speakers, and charging port.",
-  "description_html": "<p><span>Keep your iPhone safe and stylish with our MagSafe compatible transparent case. Designed with anti-yellowing technology, this case stays crystal clear over time while offering 360° protection from scratches, drops, and shocks.</span></p>\n<p> </p>\n<p><span>✨ Key Features:</span></p>\n<p> </p>\n<ul>\n<li><span>MagSafe Compatible – Strong magnetic alignment for effortless charging &amp; accessory support.</span></li>\n<li><span>Anti-Yellow Technology – Maintains clarity and freshness for long-lasting use.</span></li>\n<li><span>Shockproof &amp; Durable – Protects against accidental drops and daily wear.</span></li>\n<li><span>Slim &amp; Lightweight – Adds protection without bulk, keeping your iPhone sleek.</span></li>\n<li><span>Precise Cutouts – Easy access to buttons, speakers, and charging port.</span></li>\n</ul>\n<p> </p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 pro",
+        "iPhone 13 pro max",
+        "iPhone 14",
+        "iPhone 14 pro",
+        "iPhone 14 pro max",
+        "iPhone 14 plus",
+        "iPhone 15",
+        "iPhone 15 pro",
+        "iPhone 15 pro max",
+        "iPhone 15 plus",
+        "iPhone 16",
+        "iPhone 16 pro",
+        "iPhone 16 pro max",
+        "iPhone 16 plus",
+        "iPhone 16e"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Black",
+        "White",
+        "Neon Pink",
+        "Neon Orange",
+        "Brown"
+      ]
+    }
+  ]
 }

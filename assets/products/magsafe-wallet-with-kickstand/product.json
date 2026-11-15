@@ -3,7 +3,9 @@
   "handle": "magsafe-wallet-with-kickstand",
   "title": "MagSafe Leather Wallet Card Holder With Kickstand",
   "price": 1099.0,
+  "price_formatted": "Rs. 1,099.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.7,
   "reviews_count": 170,
@@ -15,13 +17,11 @@
     "new-arrivals",
     "other-accessories"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
   "images": [
     "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
@@ -36,6 +36,7 @@
     "assets/products/magsafe-wallet-with-kickstand/extra/04_extra.webp",
     "assets/products/magsafe-wallet-with-kickstand/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -45,7 +46,8 @@
       "images": [
         "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
         "assets/products/magsafe-wallet-with-kickstand/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Dark Blue",
@@ -55,7 +57,8 @@
       "images": [
         "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
         "assets/products/magsafe-wallet-with-kickstand/dark-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#1E3A8A"
     },
     {
       "name": "Violet",
@@ -65,23 +68,88 @@
       "images": [
         "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
         "assets/products/magsafe-wallet-with-kickstand/violet/02_lifestyle.png"
-      ]
+      ],
+      "value": "#7C3AED"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p>📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
+  "bullets": [
+    "– Premium PU Leather: Smooth, durable finish with an elegant look."
+  ],
+  "raw_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p> Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p> Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Black",
-        "Dark Blue",
-        "Violet"
-      ]
+      "title": "",
+      "subtitle": "Premium PU Leather: Smooth, durable finish with an elegant look.",
+      "icon": "shield"
+    },
+    {
+      "title": "High-Efficiency Power Delivery",
+      "subtitle": "Ensures stable current flow and device thermal safety.",
+      "icon": "battery"
+    },
+    {
+      "title": "Reinforced Stress Points",
+      "subtitle": "Laboratory tested against 10,000+ bend cycles.",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Apple 18W/20W/30W Chargers & MagSafe"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok MagSafe Leather Wallet Card Holder With Kickstand"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 610,
+    "sold_hours": 6,
+    "stock_left": 13
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p>📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>",
+  "shopify_variants": [
     {
       "id": 50456451154218,
       "title": "Black",
@@ -179,9 +247,15 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "> 🧲 Key Features: – MagSafe Compatible: Strong magnetic grip for secure snap-on attachment. – Built-in Kickstand: Easily folds out to support vertical or horizontal viewing. – Premium PU Leather: Smooth, durable finish with an elegant look. – Slim Design: Pocket-friendly without compromising space. – Secure Card Slot: Holds 1–2 cards snugly."
-  ],
-  "description_text": "A wallet. A stand. A statement. Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time. 🧲 Key Features: – MagSafe Compatible: Strong magnetic grip for secure snap-on attachment. – Built-in Kickstand: Easily folds out to support vertical or horizontal viewing. – Premium PU Leather: Smooth, durable finish with an elegant look. – Slim Design: Pocket-friendly without compromising space. – Secure Card Slot: Holds 1–2 cards snugly. 📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)",
-  "description_html": "<p>A wallet. A stand. A statement.</p>\n<p>Introducing the MagSafe leather Wallet Stand, a premium 2-in-1 accessory that snaps securely to your iPhone and transforms into a kickstand whenever needed. Carry your cards and cash effortlessly, while enjoying hands-free viewing at any time.</p>\n<p><br></p>\n<p>🧲 Key Features:</p>\n<p>– MagSafe Compatible: Strong magnetic grip for secure snap-on attachment.</p>\n<p>– Built-in Kickstand: Easily folds out to support vertical or horizontal viewing.</p>\n<p>– Premium PU Leather: Smooth, durable finish with an elegant look.</p>\n<p>– Slim Design: Pocket-friendly without compromising space.</p>\n<p>– Secure Card Slot: Holds 1–2 cards snugly.</p>\n<p><br></p>\n<p>📱 Compatibility: MagSafe-enabled iPhones (12/13/14/15/16 Series)</p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Black",
+        "Dark Blue",
+        "Violet"
+      ]
+    }
+  ]
 }

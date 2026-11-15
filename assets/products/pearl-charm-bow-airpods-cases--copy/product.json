@@ -1,9 +1,11 @@
 {
   "id": "9870479524138",
-  "handle": "pearl-charm-bow-airpods-cases-🎀✨-copy",
+  "handle": "pearl-charm-bow-airpods-cases--copy",
   "title": "Butterfly Charm AirPods Case",
   "price": 549.0,
+  "price_formatted": "Rs. 549.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 178,
@@ -15,13 +17,11 @@
     "new-arrivals",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
   "images": [
     "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
@@ -33,6 +33,7 @@
     "assets/products/pearl-charm-bow-airpods-cases--copy/extra/03_extra.webp",
     "assets/products/pearl-charm-bow-airpods-cases--copy/extra/04_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Pink",
@@ -42,7 +43,8 @@
       "images": [
         "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
         "assets/products/pearl-charm-bow-airpods-cases--copy/pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#EC4899"
     },
     {
       "name": "Blue",
@@ -52,7 +54,8 @@
       "images": [
         "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
         "assets/products/pearl-charm-bow-airpods-cases--copy/blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#2563EB"
     }
   ],
   "models": [
@@ -63,28 +66,80 @@
     "Airpods 4"
   ],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>Description:<br>Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!</p>",
+  "bullets": [],
+  "raw_html": "<p>Description:<br>Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "Airpods 1/2",
-        "Airpods Pro",
-        "Airpods 3",
-        "Airpods Pro 2",
-        "Airpods 4"
-      ]
+      "title": "360° Shockproof Protection",
+      "subtitle": "Guards against scratches, drops, and pocket scuffs.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Pink",
-        "Blue"
-      ]
+      "title": "Visible LED Status Hole",
+      "subtitle": "Easily check charging status without removing case.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Wireless Charging Supported",
+      "subtitle": "Charges seamlessly through the case on all Qi pads.",
+      "icon": "battery"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Handcrafted Faceted Crystal Beads + High-Tensile Tether"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Airpods 1/2, Airpods Pro and 3 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Butterfly Charm AirPods Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 738,
+    "sold_hours": 8,
+    "stock_left": 21
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Description:<br>Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!</p>",
+  "shopify_variants": [
     {
       "id": 50529129890090,
       "title": "Airpods 1/2 / Pink",
@@ -446,7 +501,28 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Description: Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!",
-  "description_html": "<p>Description:<br>Protect your AirPods in style with our TPU Butterfly Charm Cases. Made from high-quality flexible TPU material, these cases provide reliable protection against scratches, bumps, and everyday wear while staying slim and lightweight. Designed with delicate butterfly prints in pastel pink and sky blue, they bring an elegant, dreamy vibe. Each case includes a detachable beaded butterfly keychain for extra charm and convenience—perfect for carrying or clipping to your bag. A blend of durability and aesthetic beauty in one!</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "Airpods 1/2",
+        "Airpods Pro",
+        "Airpods 3",
+        "Airpods Pro 2",
+        "Airpods 4"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Pink",
+        "Blue"
+      ]
+    }
+  ],
+  "alias_handles": [
+    "pearl-charm-bow-airpods-cases-🎀✨-copy"
+  ]
 }

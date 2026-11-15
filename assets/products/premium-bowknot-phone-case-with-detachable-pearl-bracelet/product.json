@@ -3,7 +3,9 @@
   "handle": "premium-bowknot-phone-case-with-detachable-pearl-bracelet",
   "title": "Premium Bowknot Phone Case with Detachable Pearl Bracelet",
   "price": 799.0,
+  "price_formatted": "Rs. 799.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 194,
@@ -16,13 +18,11 @@
     "new-arrivals",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
   "images": [
     "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
@@ -36,6 +36,7 @@
     "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/extra/01_extra.webp",
     "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/extra/02_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -45,7 +46,8 @@
       "images": [
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Pink",
@@ -55,7 +57,8 @@
       "images": [
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#EC4899"
     },
     {
       "name": "Off White",
@@ -65,7 +68,8 @@
       "images": [
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F3F4F6"
     },
     {
       "name": "Natural Titanium",
@@ -75,7 +79,8 @@
       "images": [
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/01_packshot.webp",
         "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/02_lifestyle.png"
-      ]
+      ],
+      "value": "#CBD5E1"
     }
   ],
   "models": [
@@ -94,37 +99,86 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Elevate your phone’s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling.</p>\n<div><br></div>\n<div>✅ Features:</div>\n<div><span> • Unique textured leather-style back with 3D bow design</span></div>\n<div><span> • Detachable pearl bracelet holder for a chic look &amp; secure grip</span></div>\n<div><span> • Shockproof edges for daily protection</span></div>\n<div><span> • Lightweight yet durable build</span></div>\n<div><span> • Perfect gift for fashion lovers</span></div>\n<div><br></div>\n<div>Available in multiple colors – Black, Gold, Pink, and White – to match your style.</div>",
+  "bullets": [
+    "Unique textured leather-style back with 3D bow design",
+    "Detachable pearl bracelet holder for a chic look & secure grip",
+    "Shockproof edges for daily protection",
+    "Lightweight yet durable build",
+    "Perfect gift for fashion lovers"
+  ],
+  "raw_html": "<p>Elevate your phone’s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling.</p>\n<div><br></div>\n<div> Features:</div>\n<div><span> • Unique textured leather-style back with 3D bow design</span></div>\n<div><span> • Detachable pearl bracelet holder for a chic look &amp; secure grip</span></div>\n<div><span> • Shockproof edges for daily protection</span></div>\n<div><span> • Lightweight yet durable build</span></div>\n<div><span> • Perfect gift for fashion lovers</span></div>\n<div><br></div>\n<div>Available in multiple colors – Black, Gold, Pink, and White – to match your style.</div>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Unique textured leather-style",
+      "subtitle": "back with 3D bow design",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Black",
-        "Pink",
-        "Off White",
-        "Natural Titanium"
-      ]
+      "title": "Detachable pearl bracelet",
+      "subtitle": "holder for a chic look & secure grip",
+      "icon": "shield"
+    },
+    {
+      "title": "Shockproof edges for",
+      "subtitle": "daily protection",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Premium Bowknot Phone Case with Detachable Pearl Bracelet"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 834,
+    "sold_hours": 8,
+    "stock_left": 12
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Elevate your phone’s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling.</p>\n<div><br></div>\n<div>✅ Features:</div>\n<div><span> • Unique textured leather-style back with 3D bow design</span></div>\n<div><span> • Detachable pearl bracelet holder for a chic look &amp; secure grip</span></div>\n<div><span> • Shockproof edges for daily protection</span></div>\n<div><span> • Lightweight yet durable build</span></div>\n<div><span> • Perfect gift for fashion lovers</span></div>\n<div><br></div>\n<div>Available in multiple colors – Black, Gold, Pink, and White – to match your style.</div>",
+  "shopify_variants": [
     {
       "id": 50549624275242,
       "title": "iPhone 13 / Black",
@@ -2190,7 +2244,34 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Elevate your phone’s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling. ✅ Features: • Unique textured leather-style back with 3D bow design • Detachable pearl bracelet holder for a chic look & secure grip • Shockproof edges for daily protection • Lightweight yet durable build • Perfect gift for fashion lovers Available in multiple colors – Black, Gold, Pink, and White – to match your style.",
-  "description_html": "<p>Elevate your phone’s look with this luxury designer bow charm phone case, crafted with a premium textured finish and an elegant 3D bow centerpiece. The case features a detachable pearl bracelet holder, making it not only fashionable but also practical for carrying and handling.</p>\n<div><br></div>\n<div>✅ Features:</div>\n<div><span> • Unique textured leather-style back with 3D bow design</span></div>\n<div><span> • Detachable pearl bracelet holder for a chic look &amp; secure grip</span></div>\n<div><span> • Shockproof edges for daily protection</span></div>\n<div><span> • Lightweight yet durable build</span></div>\n<div><span> • Perfect gift for fashion lovers</span></div>\n<div><br></div>\n<div>Available in multiple colors – Black, Gold, Pink, and White – to match your style.</div>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Black",
+        "Pink",
+        "Off White",
+        "Natural Titanium"
+      ]
+    }
+  ]
 }

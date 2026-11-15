@@ -3,7 +3,9 @@
   "handle": "magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover",
   "title": "MagSafe Clear Case- Transparent Shockproof Cover",
   "price": 499.0,
+  "price_formatted": "Rs. 499.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 50,
   "rating": 4.7,
   "reviews_count": 410,
@@ -17,13 +19,11 @@
     "mens-cover",
     "new-arrivals"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp",
   "images": [
     "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp",
@@ -32,6 +32,7 @@
     "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/extra/03_extra.webp",
     "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/extra/04_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Clear Armor",
@@ -39,7 +40,8 @@
       "image": "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp",
       "images": [
         "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp"
-      ]
+      ],
+      "value": "#E2E8F0"
     }
   ],
   "models": [
@@ -58,34 +60,86 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Showcase your phone’s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models.</p>\n<p> • ✅ MagSafe Ring for magnetic charging and accessory support</p>\n<p> • ✅ Crystal Clear Back – Anti-yellowing and scratch-resistant</p>\n<p> • ✅ Shockproof Corners for reliable drop protection</p>\n<p> • ✅ Slim Fit &amp; Lightweight – Easy to hold, pocket-friendly</p>\n<p> • ✅ Perfect Cutouts for camera and buttons</p>",
+  "bullets": [
+    "MagSafe Ring for magnetic charging and accessory support",
+    "Crystal Clear Back – Anti-yellowing and scratch-resistant",
+    "Shockproof Corners for reliable drop protection",
+    "Slim Fit & Lightweight – Easy to hold, pocket-friendly",
+    "Perfect Cutouts for camera and buttons"
+  ],
+  "raw_html": "<p>Showcase your phone’s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models.</p>\n<p> •  MagSafe Ring for magnetic charging and accessory support</p>\n<p> •  Crystal Clear Back – Anti-yellowing and scratch-resistant</p>\n<p> •  Shockproof Corners for reliable drop protection</p>\n<p> •  Slim Fit &amp; Lightweight – Easy to hold, pocket-friendly</p>\n<p> •  Perfect Cutouts for camera and buttons</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 pro",
-        "iPhone 13 pro max",
-        "iPhone 14",
-        "iPhone 14 pro",
-        "iPhone 14 plus",
-        "iPhone 14 pro max",
-        "iPhone 15",
-        "iPhone 15 plus",
-        "iPhone 15 pro max",
-        "iPhone 15 pro",
-        "iPhone 16",
-        "iPhone 16 plus",
-        "iPhone 16 pro",
-        "iPhone 16 pro max",
-        "iPhone 17",
-        "iPhone 17 Air",
-        "iPhone 17 Pro",
-        "iPhone 17 Pro Max"
-      ]
+      "title": "MagSafe Ring for",
+      "subtitle": "magnetic charging and accessory support",
+      "icon": "magnet"
+    },
+    {
+      "title": "Crystal Clear Back",
+      "subtitle": "Anti-yellowing and scratch-resistant",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Shockproof Corners for",
+      "subtitle": "reliable drop protection",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 pro and 17 other models"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok MagSafe Clear Case- Transparent Shockproof Cover"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 770,
+    "sold_hours": 6,
+    "stock_left": 13
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Showcase your phone’s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models.</p>\n<p> • ✅ MagSafe Ring for magnetic charging and accessory support</p>\n<p> • ✅ Crystal Clear Back – Anti-yellowing and scratch-resistant</p>\n<p> • ✅ Shockproof Corners for reliable drop protection</p>\n<p> • ✅ Slim Fit &amp; Lightweight – Easy to hold, pocket-friendly</p>\n<p> • ✅ Perfect Cutouts for camera and buttons</p>",
+  "shopify_variants": [
     {
       "id": 50458908754218,
       "title": "iPhone 13",
@@ -853,7 +907,31 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Showcase your phone’s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models. • ✅ MagSafe Ring for magnetic charging and accessory support • ✅ Crystal Clear Back – Anti-yellowing and scratch-resistant • ✅ Shockproof Corners for reliable drop protection • ✅ Slim Fit & Lightweight – Easy to hold, pocket-friendly • ✅ Perfect Cutouts for camera and buttons",
-  "description_html": "<p>Showcase your phone’s true beauty with this ultra-clear MagSafe-compatible case. Crafted for perfect fit and protection across iPhone 13 to 16 series, including Plus, Pro, and Pro Max models.</p>\n<p> • ✅ MagSafe Ring for magnetic charging and accessory support</p>\n<p> • ✅ Crystal Clear Back – Anti-yellowing and scratch-resistant</p>\n<p> • ✅ Shockproof Corners for reliable drop protection</p>\n<p> • ✅ Slim Fit &amp; Lightweight – Easy to hold, pocket-friendly</p>\n<p> • ✅ Perfect Cutouts for camera and buttons</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 pro",
+        "iPhone 13 pro max",
+        "iPhone 14",
+        "iPhone 14 pro",
+        "iPhone 14 plus",
+        "iPhone 14 pro max",
+        "iPhone 15",
+        "iPhone 15 plus",
+        "iPhone 15 pro max",
+        "iPhone 15 pro",
+        "iPhone 16",
+        "iPhone 16 plus",
+        "iPhone 16 pro",
+        "iPhone 16 pro max",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    }
+  ]
 }

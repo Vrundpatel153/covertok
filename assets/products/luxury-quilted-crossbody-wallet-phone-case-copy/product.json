@@ -3,7 +3,9 @@
   "handle": "luxury-quilted-crossbody-wallet-phone-case-copy",
   "title": "Cute Bear Phone Case with Plush Keychain",
   "price": 449.0,
+  "price_formatted": "Rs. 449.00",
   "original_price": 799.0,
+  "original_price_formatted": "Rs. 799.00",
   "discount_percent": 44,
   "rating": 4.8,
   "reviews_count": 326,
@@ -18,13 +20,11 @@
     "our-bestsellers",
     "womens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": true,
+  "tags": [],
   "primary_image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp",
   "images": [
     "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp",
@@ -33,6 +33,7 @@
     "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/extra/03_extra.webp",
     "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/extra/04_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Warm Caramel",
@@ -40,7 +41,8 @@
       "image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp",
       "images": [
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp"
-      ]
+      ],
+      "value": "#D97706"
     }
   ],
   "models": [
@@ -59,27 +61,87 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Cute bear sketch design with heart detail</span></div>\n<div><span> • Comes with a matching plush bear keychain</span></div>\n<div><span> • Soft-touch material with a comfortable grip</span></div>\n<div><span> • Shock-absorbent and scratch-resistant</span></div>\n<div><span> • Lightweight and protective without bulk</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. 🐻✨</div>",
+  "bullets": [
+    "Cute bear sketch design with heart detail",
+    "Comes with a matching plush bear keychain",
+    "Soft-touch material with a comfortable grip",
+    "Shock-absorbent and scratch-resistant",
+    "Lightweight and protective without bulk",
+    "Compatible with multiple iPhone models"
+  ],
+  "raw_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div> Features:</div>\n<div><span> • Cute bear sketch design with heart detail</span></div>\n<div><span> • Comes with a matching plush bear keychain</span></div>\n<div><span> • Soft-touch material with a comfortable grip</span></div>\n<div><span> • Shock-absorbent and scratch-resistant</span></div>\n<div><span> • Lightweight and protective without bulk</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. </div>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Cute bear sketch",
+      "subtitle": "design with heart detail",
+      "icon": "shield"
+    },
+    {
+      "title": "Comes with a",
+      "subtitle": "matching plush bear keychain",
+      "icon": "shield"
+    },
+    {
+      "title": "Soft-touch material with",
+      "subtitle": "a comfortable grip",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Handcrafted Faceted Crystal Beads + High-Tensile Tether"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Cute Bear Phone Case with Plush Keychain"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 706,
+    "sold_hours": 6,
+    "stock_left": 19
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Cute bear sketch design with heart detail</span></div>\n<div><span> • Comes with a matching plush bear keychain</span></div>\n<div><span> • Soft-touch material with a comfortable grip</span></div>\n<div><span> • Shock-absorbent and scratch-resistant</span></div>\n<div><span> • Lightweight and protective without bulk</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. 🐻✨</div>",
+  "shopify_variants": [
     {
       "id": 50525329522986,
       "title": "iPhone 13",
@@ -309,7 +371,24 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone. ✨ Features: • Cute bear sketch design with heart detail • Comes with a matching plush bear keychain • Soft-touch material with a comfortable grip • Shock-absorbent and scratch-resistant • Lightweight and protective without bulk • Compatible with multiple iPhone models Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. 🐻✨",
-  "description_html": "<div></div>\n<div>Bring a dose of cuteness to your everyday look with the Cute Bear Phone Case. Featuring an adorable bear sketch design and a matching fluffy plush bear keychain, this case is the perfect blend of fun and function. Made with a durable, soft-touch material, it provides reliable protection while adding a playful charm to your phone.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Cute bear sketch design with heart detail</span></div>\n<div><span> • Comes with a matching plush bear keychain</span></div>\n<div><span> • Soft-touch material with a comfortable grip</span></div>\n<div><span> • Shock-absorbent and scratch-resistant</span></div>\n<div><span> • Lightweight and protective without bulk</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>Perfect for anyone who loves kawaii-style accessories, this phone case is as protective as it is adorable. 🐻✨</div>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    }
+  ]
 }

@@ -1,9 +1,11 @@
 {
   "id": "9870484341034",
-  "handle": "title-butterfly-charm-airpods-case-✨-copy",
+  "handle": "title-butterfly-charm-airpods-case--copy",
   "title": "Silicone AirPods Cases with Rope Strap –",
   "price": 599.0,
+  "price_formatted": "Rs. 599.00",
   "original_price": 799.0,
+  "original_price_formatted": "Rs. 799.00",
   "discount_percent": 25,
   "rating": 4.9,
   "reviews_count": 194,
@@ -13,13 +15,11 @@
     "all",
     "airpod-covers"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
   "images": [
     "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
@@ -38,6 +38,7 @@
     "assets/products/title-butterfly-charm-airpods-case--copy/extra/02_extra.webp",
     "assets/products/title-butterfly-charm-airpods-case--copy/extra/03_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Mocha Brown",
@@ -47,7 +48,8 @@
       "images": [
         "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
         "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/02_lifestyle.png"
-      ]
+      ],
+      "value": "#78350F"
     },
     {
       "name": "Caramel Tan",
@@ -57,7 +59,8 @@
       "images": [
         "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/01_packshot.webp",
         "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/02_lifestyle.png"
-      ]
+      ],
+      "value": "#92400E"
     },
     {
       "name": "Blush Pink",
@@ -67,7 +70,8 @@
       "images": [
         "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp",
         "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F472B6"
     },
     {
       "name": "Sunshine Yellow",
@@ -77,7 +81,8 @@
       "images": [
         "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/01_packshot.webp",
         "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FACC15"
     },
     {
       "name": "Aqua Teal",
@@ -87,7 +92,8 @@
       "images": [
         "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
         "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/02_lifestyle.png"
-      ]
+      ],
+      "value": "#14B8A6"
     },
     {
       "name": "Candy Pink",
@@ -97,7 +103,8 @@
       "images": [
         "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
         "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FDA4AF"
     }
   ],
   "models": [
@@ -106,32 +113,80 @@
     "49mm (Apple Watch Ultra 1 & 2)"
   ],
   "model_label": "Select Case Size:",
-  "options": [
+  "description": "<p>Description:Colorful &amp; Durable 🎧✨<br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
+  "bullets": [],
+  "raw_html": "<p>Description:Colorful &amp; Durable <br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "Airpods 1/2",
-        "Airpods Pro",
-        "Airpods 3",
-        "Airpods Pro 2",
-        "Airpods 4"
-      ]
+      "title": "Precision Magnetic Clasp",
+      "subtitle": "Locks securely around your wrist for all-day comfort.",
+      "icon": "magnet"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Mocha Brown",
-        "Caramel Tan",
-        "Blush Pink",
-        "Sunshine Yellow",
-        "Aqua Teal",
-        "Candy Pink"
-      ]
+      "title": "Breathable 316L Stainless Mesh",
+      "subtitle": "Prevents sweat buildup and stays cool against the skin.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Quick-Fit Apple Watch Lugs",
+      "subtitle": "Effortless slide-and-lock installation into watch slots.",
+      "icon": "refresh"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Airpods 1/2, Airpods Pro and 3 other models"
+    },
+    {
+      "label": "Clasp Mechanism",
+      "value": "Neodymium Magnetic Infinite Loop Lock"
+    },
+    {
+      "label": "Water Resistance",
+      "value": "Sweat & Splash Resistant (IPX5)"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Silicone AirPods Cases with Rope Strap –"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 834,
+    "sold_hours": 8,
+    "stock_left": 12
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Description:Colorful &amp; Durable 🎧✨<br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>",
+  "shopify_variants": [
     {
       "id": 50529179730218,
       "title": "Airpods 1/2 / Mocha Brown",
@@ -1213,7 +1268,32 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Description:Colorful & Durable 🎧✨ Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.",
-  "description_html": "<p>Description:Colorful &amp; Durable 🎧✨<br>Keep your AirPods safe and stylish with our Silicone AirPods Cases featuring rope straps. Made from premium silicone, these cases offer excellent protection against scratches, drops, and everyday wear while staying lightweight and flexible. Each case comes with a sturdy rope-style strap for easy carrying and a sporty look, making it perfect for daily use, travel, or workouts. Available in vibrant colors like brown, yellow, turquoise, pink, and hot pink, these cases combine fun style with practical functionality.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "Airpods 1/2",
+        "Airpods Pro",
+        "Airpods 3",
+        "Airpods Pro 2",
+        "Airpods 4"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Mocha Brown",
+        "Caramel Tan",
+        "Blush Pink",
+        "Sunshine Yellow",
+        "Aqua Teal",
+        "Candy Pink"
+      ]
+    }
+  ],
+  "alias_handles": [
+    "title-butterfly-charm-airpods-case-✨-copy"
+  ]
 }

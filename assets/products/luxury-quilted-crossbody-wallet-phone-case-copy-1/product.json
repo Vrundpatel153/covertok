@@ -3,7 +3,9 @@
   "handle": "luxury-quilted-crossbody-wallet-phone-case-copy-1",
   "title": "Cute Plush Bear leather Phone Case",
   "price": 699.0,
+  "price_formatted": "Rs. 699.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 30,
   "rating": 4.7,
   "reviews_count": 430,
@@ -18,13 +20,11 @@
     "our-bestsellers",
     "womens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": true,
+  "tags": [],
   "primary_image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
   "images": [
     "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
@@ -41,6 +41,7 @@
     "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/06_extra.webp",
     "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/07_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -50,7 +51,8 @@
       "images": [
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "White",
@@ -60,7 +62,8 @@
       "images": [
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/01_packshot.webp",
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FFFFFF"
     },
     {
       "name": "Brown",
@@ -70,7 +73,8 @@
       "images": [
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/01_packshot.webp",
         "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/02_lifestyle.png"
-      ]
+      ],
+      "value": "#854D0E"
     }
   ],
   "models": [
@@ -89,36 +93,88 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<div>📝 Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Adorable plush teddy bear design on the back</span></div>\n<div><span> • Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> • Shock-absorbing and scratch-resistant</span></div>\n<div><span> • Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> • Lightweight yet protective design</span></div>\n<div><span> • Available in White, Black, and Brown</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. 🧸💖</div>\n<p> </p>",
+  "bullets": [
+    "Adorable plush teddy bear design on the back",
+    "Premium leather-textured TPU for durability & style",
+    "Shock-absorbing and scratch-resistant",
+    "Comes with a matching lanyard strap for easy carrying",
+    "Lightweight yet protective design",
+    "Available in White, Black, and Brown",
+    "Compatible with multiple iPhone models"
+  ],
+  "raw_html": "<div> Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div> Features:</div>\n<div><span> • Adorable plush teddy bear design on the back</span></div>\n<div><span> • Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> • Shock-absorbing and scratch-resistant</span></div>\n<div><span> • Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> • Lightweight yet protective design</span></div>\n<div><span> • Available in White, Black, and Brown</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. </div>\n<p> </p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Black",
-        "White",
-        "Brown"
-      ]
+      "title": "Adorable plush teddy",
+      "subtitle": "bear design on the back",
+      "icon": "shield"
     },
     {
-      "name": "Model",
-      "position": 2,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Premium leather-textured TPU",
+      "subtitle": "for durability & style",
+      "icon": "shield"
+    },
+    {
+      "title": "Shock-absorbing and scratch-resistant",
+      "subtitle": "Engineered with precision for everyday reliability.",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Premium Vegan Microfiber Leather"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Cute Plush Bear leather Phone Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 850,
+    "sold_hours": 6,
+    "stock_left": 13
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<div>📝 Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Adorable plush teddy bear design on the back</span></div>\n<div><span> • Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> • Shock-absorbing and scratch-resistant</span></div>\n<div><span> • Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> • Lightweight yet protective design</span></div>\n<div><span> • Available in White, Black, and Brown</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. 🧸💖</div>\n<p> </p>",
+  "shopify_variants": [
     {
       "id": 50532977738026,
       "title": "Black / iPhone 13",
@@ -1668,7 +1724,33 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "📝 Description: Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a nd dust. ✨ Features: • Adorable plush teddy bear design on the back • Premium leather-textured TPU for durability & style • Shock-absorbing and scratch-resistant • Comes with a matching lanyard strap for easy carrying • Lightweight yet protective design • Available in White, Black, and Brown • Compatible with multiple iPhone models Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. 🧸💖",
-  "description_html": "<div>📝 Description:</div>\n<div>Make your phone extra adorable with the Cute Plush Bear Lanyard Phone Case. Designed with a soft teddy bear patch on a leather-textured TPU case, this cover blends cuteness and practicality. It comes with a handy wrist/hand strap, making it easier to carry while keeping your phone safe from scratches, drops, a<img>nd dust.</div>\n<div><br></div>\n<div>✨ Features:</div>\n<div><span> • Adorable plush teddy bear design on the back</span></div>\n<div><span> • Premium leather-textured TPU for durability &amp; style</span></div>\n<div><span> • Shock-absorbing and scratch-resistant</span></div>\n<div><span> • Comes with a matching lanyard strap for easy carrying</span></div>\n<div><span> • Lightweight yet protective design</span></div>\n<div><span> • Available in White, Black, and Brown</span></div>\n<div><span> • Compatible with multiple iPhone models</span></div>\n<div><br></div>\n<div>Perfect for those who love cute, fashionable, and functional accessories, this phone case will keep your phone protected while adding a cozy teddy bear charm. 🧸💖</div>\n<p> </p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Black",
+        "White",
+        "Brown"
+      ]
+    },
+    {
+      "name": "Model",
+      "position": 2,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    }
+  ]
 }

@@ -29,13 +29,20 @@
       currentProduct = resolvePDPProduct();
     }
 
+    // Preserve requested color or alias before rewriting URL
+    const initialUrlParams = new URLSearchParams(window.location.search);
+    const initialReqColor = (initialUrlParams.get('color') || '').trim();
+
     // Ensure address bar reflects clean product URL (product.html?handle=<handle> or /products/<handle>)
     if (currentProduct && currentProduct.handle && window.history && window.history.replaceState) {
       try {
         const isPathStyle = window.location.pathname.startsWith('/products/');
-        const cleanUrl = isPathStyle 
+        let cleanUrl = isPathStyle 
           ? `/products/${currentProduct.handle}`
           : `product.html?handle=${currentProduct.handle}`;
+        if (initialReqColor) {
+          cleanUrl += `&color=${encodeURIComponent(initialReqColor)}`;
+        }
         window.history.replaceState({ id: currentProduct.id, handle: currentProduct.handle }, '', cleanUrl);
       } catch(e) {}
     }
@@ -391,7 +398,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261115_v12';
+    const v = '20261116_v13';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -433,7 +440,7 @@
   }
 
   // Universal isolated gallery extractor: Shopify-standard variant image filtering
-  // When a color is selected, gallery ONLY contains this color's images + shared detail shots!
+  // When a color is selected: Dedicated color packshot & lifestyle FIRST, followed by shared universal showcase shots!
   function getColorGallery(product, color) {
     if (!product) return [];
 
@@ -450,7 +457,7 @@
       return product.primary_image ? [product.primary_image] : [];
     }
 
-    // 1. Collect this selected color's dedicated images (01_packshot.webp first)
+    // 1. Collect this selected color's dedicated images (01_packshot.webp first, then dedicated lifestyles)
     const colorImgs = [];
     if (color.image) colorImgs.push(color.image);
     if (Array.isArray(color.images)) {
@@ -461,9 +468,38 @@
       });
     }
 
-    // STRICT COLOR ISOLATION:
-    // When a color variant has dedicated authentic images, return ONLY those images!
-    // Never leak generic AliExpress diagrams, washed-out sketches (e.g. 06_extra.webp), or other color models!
+    // Identify other color folders to strictly exclude them from this color's gallery
+    const otherColorFolders = [];
+    if (Array.isArray(product.colors)) {
+      product.colors.forEach(c => {
+        if (c && c.name !== color.name) {
+          const cSlug = (c.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+          if (cSlug) otherColorFolders.push(`/${cSlug}/`);
+          if (c.image) {
+            const parts = c.image.split('/');
+            if (parts.length >= 2) otherColorFolders.push(`/${parts[parts.length - 2]}/`);
+          }
+        }
+      });
+    }
+
+    // 2. Append shared universal showcase & feature images (e.g. from extra/ or universal product images)
+    // Strictly exclude other colors' packshots and folder images!
+    if (Array.isArray(product.images)) {
+      product.images.forEach(img => {
+        if (!img) return;
+        // Never leak images from other color folders
+        if (otherColorFolders.some(folder => img.includes(folder))) return;
+        // Never leak packshot of another color
+        if (img.includes('01_packshot') && !colorImgs.includes(img)) return;
+        // Exclude washed-out schematic diagram on magnetic loop
+        if (img.includes('06_extra.webp') && (product.handle || '').includes('magnetic-loop')) return;
+        if (!colorImgs.includes(img)) {
+          colorImgs.push(img);
+        }
+      });
+    }
+
     if (colorImgs.length > 0) {
       return colorImgs;
     }
@@ -1167,6 +1203,11 @@
 
       zoomBtn.addEventListener('pointerdown', (e) => { e.stopPropagation(); });
       zoomBtn.addEventListener('click', toggleZoom);
+      zoomBtn.addEventListener('touchend', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        toggleZoom(e);
+      });
 
       // Clicking directly on image toggles zoom at click coordinates
       mainImg.addEventListener('click', (e) => {
@@ -1188,9 +1229,11 @@
         if (e.key === 'Escape' && isZoomed) disableZoom();
       });
 
-      // Reset on mouseleave
-      mainStage.addEventListener('mouseleave', () => {
-        if (isZoomed) disableZoom();
+      // Reset when clicking outside the stage
+      document.addEventListener('click', (e) => {
+        if (isZoomed && !mainStage.contains(e.target)) {
+          disableZoom();
+        }
       });
 
       // Smooth pan tracking on mouse move

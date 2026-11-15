@@ -3,7 +3,9 @@
   "handle": "premium-silicone-watch-bands-available-in-18-colors-copy-1",
   "title": "Premium Silicone Watch Bands – Available in 18 Colors",
   "price": 799.0,
+  "price_formatted": "Rs. 799.00",
   "original_price": 999.0,
+  "original_price_formatted": "Rs. 999.00",
   "discount_percent": 20,
   "rating": 4.8,
   "reviews_count": 282,
@@ -14,13 +16,11 @@
     "watchbands",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
   "images": [
     "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
@@ -77,6 +77,7 @@
     "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/25_extra.webp",
     "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/26_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Orange",
@@ -86,7 +87,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#F97316"
     },
     {
       "name": "Light blue",
@@ -96,7 +98,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#60A5FA"
     },
     {
       "name": "Stone Blue",
@@ -106,7 +109,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#64748B"
     },
     {
       "name": "Purple lilac",
@@ -116,7 +120,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#C084FC"
     },
     {
       "name": "fruit purple",
@@ -126,7 +131,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#7E22CE"
     },
     {
       "name": "Midnight blue",
@@ -136,7 +142,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#0F172A"
     },
     {
       "name": "Pine Needle Green",
@@ -147,7 +154,8 @@
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/02_lifestyle.jpg",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#14532D"
     },
     {
       "name": "Alfalfa",
@@ -157,7 +165,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#4D7C0F"
     },
     {
       "name": "Wine red",
@@ -167,7 +176,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#881337"
     },
     {
       "name": "starlight",
@@ -177,7 +187,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#F5EBE0"
     },
     {
       "name": "Black",
@@ -187,7 +198,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Red",
@@ -197,7 +209,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#DC2626"
     },
     {
       "name": "Natural Titanium",
@@ -207,7 +220,8 @@
       "images": [
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/01_packshot.webp",
         "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#CBD5E1"
     }
   ],
   "models": [
@@ -216,36 +230,80 @@
     "49mm (Apple Watch Ultra 1 & 2)"
   ],
   "model_label": "Select Case Size:",
-  "options": [
+  "description": "<p>Upgrade your smartwatch style with our premium silicone watch bands, designed for comfort, durability, and a perfect fit. Available in 18 vibrant shades including White, Starlight, Pink, Purple Lilac, Gem Green, Orange, Black, Red, Wine Red, Stone Blue, Midnight Blue, and more – there’s a color for every mood and occasion.</p>\n<p>Crafted from high-quality, skin-friendly silicone, these bands are sweat-resistant, lightweight, and ideal for all-day wear. Easy to install and adjust, they’re compatible with multiple smartwatch models and perfect for everyday use, workouts, or special events.</p>\n<p> </p>",
+  "bullets": [],
+  "raw_html": "<p>Upgrade your smartwatch style with our premium silicone watch bands, designed for comfort, durability, and a perfect fit. Available in 18 vibrant shades including White, Starlight, Pink, Purple Lilac, Gem Green, Orange, Black, Red, Wine Red, Stone Blue, Midnight Blue, and more – there’s a color for every mood and occasion.</p>\n<p>Crafted from high-quality, skin-friendly silicone, these bands are sweat-resistant, lightweight, and ideal for all-day wear. Easy to install and adjust, they’re compatible with multiple smartwatch models and perfect for everyday use, workouts, or special events.</p>\n<p> </p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Size",
-      "position": 1,
-      "values": [
-        "40mm/41mm/42mm",
-        "44mm/45mm/46mm/49mm"
-      ]
+      "title": "Precision Magnetic Clasp",
+      "subtitle": "Locks securely around your wrist for all-day comfort.",
+      "icon": "magnet"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Orange",
-        "Light blue",
-        "Stone Blue",
-        "Purple lilac",
-        "fruit purple",
-        "Midnight blue",
-        "Pine Needle Green",
-        "Alfalfa",
-        "Wine red",
-        "starlight",
-        "Black",
-        "Red",
-        "Natural Titanium"
-      ]
+      "title": "Breathable 316L Stainless Mesh",
+      "subtitle": "Prevents sweat buildup and stays cool against the skin.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Quick-Fit Apple Watch Lugs",
+      "subtitle": "Effortless slide-and-lock installation into watch slots.",
+      "icon": "refresh"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+    },
+    {
+      "label": "Compatibility",
+      "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+    },
+    {
+      "label": "Clasp Mechanism",
+      "value": "Neodymium Magnetic Infinite Loop Lock"
+    },
+    {
+      "label": "Water Resistance",
+      "value": "Sweat & Splash Resistant (IPX5)"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Premium Silicone Watch Bands – Available in 18 Colors"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 962,
+    "sold_hours": 6,
+    "stock_left": 10
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Upgrade your smartwatch style with our premium silicone watch bands, designed for comfort, durability, and a perfect fit. Available in 18 vibrant shades including White, Starlight, Pink, Purple Lilac, Gem Green, Orange, Black, Red, Wine Red, Stone Blue, Midnight Blue, and more – there’s a color for every mood and occasion.</p>\n<p>Crafted from high-quality, skin-friendly silicone, these bands are sweat-resistant, lightweight, and ideal for all-day wear. Easy to install and adjust, they’re compatible with multiple smartwatch models and perfect for everyday use, workouts, or special events.</p>\n<p> </p>",
+  "shopify_variants": [
     {
       "id": 50583442719018,
       "title": "40mm/41mm/42mm / Orange",
@@ -1107,7 +1165,33 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Upgrade your smartwatch style with our premium silicone watch bands, designed for comfort, durability, and a perfect fit. Available in 18 vibrant shades including White, Starlight, Pink, Purple Lilac, Gem Green, Orange, Black, Red, Wine Red, Stone Blue, Midnight Blue, and more – there’s a color for every mood and occasion. Crafted from high-quality, skin-friendly silicone, these bands are sweat-resistant, lightweight, and ideal for all-day wear. Easy to install and adjust, they’re compatible with multiple smartwatch models and perfect for everyday use, workouts, or special events.",
-  "description_html": "<p>Upgrade your smartwatch style with our premium silicone watch bands, designed for comfort, durability, and a perfect fit. Available in 18 vibrant shades including White, Starlight, Pink, Purple Lilac, Gem Green, Orange, Black, Red, Wine Red, Stone Blue, Midnight Blue, and more – there’s a color for every mood and occasion.</p>\n<p>Crafted from high-quality, skin-friendly silicone, these bands are sweat-resistant, lightweight, and ideal for all-day wear. Easy to install and adjust, they’re compatible with multiple smartwatch models and perfect for everyday use, workouts, or special events.</p>\n<p> </p>"
+  "shopify_options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "40mm/41mm/42mm",
+        "44mm/45mm/46mm/49mm"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Orange",
+        "Light blue",
+        "Stone Blue",
+        "Purple lilac",
+        "fruit purple",
+        "Midnight blue",
+        "Pine Needle Green",
+        "Alfalfa",
+        "Wine red",
+        "starlight",
+        "Black",
+        "Red",
+        "Natural Titanium"
+      ]
+    }
+  ]
 }

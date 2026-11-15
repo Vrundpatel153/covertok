@@ -3,7 +3,9 @@
   "handle": "cute-bear-phone-case-with-plush-keychain-copy-1",
   "title": "Vibrant Frame-Style iPhone Cases",
   "price": 449.0,
+  "price_formatted": "Rs. 449.00",
   "original_price": 699.0,
+  "original_price_formatted": "Rs. 699.00",
   "discount_percent": 36,
   "rating": 4.9,
   "reviews_count": 354,
@@ -17,13 +19,11 @@
     "mens-cover",
     "new-arrivals"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
   "images": [
     "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
@@ -41,6 +41,7 @@
     "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/extra/01_extra.webp",
     "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/extra/02_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Sunshine Yellow",
@@ -50,7 +51,8 @@
       "images": [
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FACC15"
     },
     {
       "name": "Bubblegum Pink",
@@ -60,7 +62,8 @@
       "images": [
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FB7185"
     },
     {
       "name": "Cool Teal",
@@ -70,7 +73,8 @@
       "images": [
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/02_lifestyle.png"
-      ]
+      ],
+      "value": "#0D9488"
     },
     {
       "name": "Creamy White",
@@ -80,7 +84,8 @@
       "images": [
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FAF5FF"
     },
     {
       "name": "Jet Black",
@@ -90,7 +95,8 @@
       "images": [
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#000000"
     },
     {
       "name": "Coral Crush",
@@ -100,7 +106,8 @@
       "images": [
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
         "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FB7185"
     }
   ],
   "models": [
@@ -119,39 +126,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Add a pop of color to your phone with these stylish and durable frame-style iPhone cases. Available in multiple shades like yellow, teal, coral, white, pink, and black, these cases combine a sleek minimalist design with strong edge protection. Lightweight yet sturdy, they keep your phone safe from scratches and bumps while maintaining a trendy and modern look. Perfect for anyone who loves mixing functionality with fashion.</p>",
+  "bullets": [],
+  "raw_html": "<p>Add a pop of color to your phone with these stylish and durable frame-style iPhone cases. Available in multiple shades like yellow, teal, coral, white, pink, and black, these cases combine a sleek minimalist design with strong edge protection. Lightweight yet sturdy, they keep your phone safe from scratches and bumps while maintaining a trendy and modern look. Perfect for anyone who loves mixing functionality with fashion.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Sunshine Yellow",
-        "Bubblegum Pink",
-        "Cool Teal",
-        "Creamy White",
-        "Jet Black",
-        "Coral Crush"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "High-Grade Impact Resistant TPU & Polycarbonate"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Vibrant Frame-Style iPhone Cases"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 914,
+    "sold_hours": 4,
+    "stock_left": 17
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Add a pop of color to your phone with these stylish and durable frame-style iPhone cases. Available in multiple shades like yellow, teal, coral, white, pink, and black, these cases combine a sleek minimalist design with strong edge protection. Lightweight yet sturdy, they keep your phone safe from scratches and bumps while maintaining a trendy and modern look. Perfect for anyone who loves mixing functionality with fashion.</p>",
+  "shopify_variants": [
     {
       "id": 50528966377770,
       "title": "iPhone 13 / Sunshine Yellow",
@@ -3249,7 +3297,36 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Add a pop of color to your phone with these stylish and durable frame-style iPhone cases. Available in multiple shades like yellow, teal, coral, white, pink, and black, these cases combine a sleek minimalist design with strong edge protection. Lightweight yet sturdy, they keep your phone safe from scratches and bumps while maintaining a trendy and modern look. Perfect for anyone who loves mixing functionality with fashion.",
-  "description_html": "<p>Add a pop of color to your phone with these stylish and durable frame-style iPhone cases. Available in multiple shades like yellow, teal, coral, white, pink, and black, these cases combine a sleek minimalist design with strong edge protection. Lightweight yet sturdy, they keep your phone safe from scratches and bumps while maintaining a trendy and modern look. Perfect for anyone who loves mixing functionality with fashion.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Sunshine Yellow",
+        "Bubblegum Pink",
+        "Cool Teal",
+        "Creamy White",
+        "Jet Black",
+        "Coral Crush"
+      ]
+    }
+  ]
 }

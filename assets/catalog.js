@@ -668,7 +668,7 @@
     // Cache buster to ensure clients and CDNs immediately receive freshly updated packshots
     const bustUrl = (u) => {
       if (!u) return '';
-      const v = '20261115_v12';
+      const v = '20261116_v13';
       return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
     };
 

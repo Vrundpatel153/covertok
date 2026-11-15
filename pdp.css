@@ -374,20 +374,20 @@ html, body {
 /* LEFT: MEDIA GALLERY (Sticky on Desktop) */
 .pdp-gallery-col {
   position: sticky;
-  top: 96px;
+  top: 88px;
   height: fit-content;
   align-self: start;
   z-index: 10;
   width: 100%;
-  max-width: 390px;
+  max-width: 320px;
 }
 
 .pdp-gallery-wrap {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
-  max-width: 390px;
+  max-width: 320px;
   width: 100%;
   margin: 0 auto;
 }
@@ -398,14 +398,15 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  max-width: 390px;
+  max-width: 320px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 2px 4px 4px;
+  padding: 3px 2px 4px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .pdp-vertical-thumbs::-webkit-scrollbar {
@@ -413,19 +414,19 @@ html, body {
 }
 
 .pdp-vthumb {
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
   border: 1.5px solid #EAE5DB;
   background: #FFFFFF;
-  padding: 3px;
+  padding: 2px;
   cursor: pointer;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
 }
 
@@ -452,19 +453,20 @@ html, body {
 .pdp-main-stage {
   position: relative;
   width: 100%;
-  max-width: min(350px, calc(100vh - 270px));
+  max-width: min(315px, calc(100vh - 300px));
   aspect-ratio: 1 / 1;
-  max-height: min(350px, calc(100vh - 270px));
+  max-height: min(315px, calc(100vh - 300px));
   background: #FFFFFF !important;
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid #141416 !important;
-  box-shadow: 0 10px 32px rgba(23, 21, 19, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 8px 28px rgba(23, 21, 19, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   transition: var(--pdp-transition);
+  margin: 0 auto;
 }
 
 .pdp-main-img {
@@ -474,7 +476,7 @@ html, body {
   object-position: center;
   user-select: none;
   -webkit-user-drag: none;
-  border-radius: 20px;
+  border-radius: 18px;
   background: #FFFFFF !important;
   transition: opacity 0.2s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: center center;
@@ -492,10 +494,10 @@ html, body {
 
 .pdp-zoom-btn {
   position: absolute;
-  bottom: 14px;
-  right: 14px;
-  width: 40px;
-  height: 40px;
+  bottom: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
@@ -510,6 +512,7 @@ html, body {
   z-index: 25 !important;
   touch-action: manipulation;
   color: #171513;
+  padding: 0;
 }
 
 .pdp-zoom-btn:hover {
@@ -517,6 +520,10 @@ html, body {
   background: #FFFFFF;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   color: #000000;
+}
+
+.pdp-zoom-btn svg {
+  pointer-events: none;
 }
 
 .pdp-zoom-btn.active {
@@ -3053,7 +3060,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   .pdp-gallery-col {
     position: static !important;
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: 320px !important;
     min-width: 0 !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
@@ -3062,9 +3069,9 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   .pdp-gallery-wrap {
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 6px !important;
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: 320px !important;
     min-width: 0 !important;
     align-items: center !important;
     margin: 0 auto !important;
@@ -3073,11 +3080,11 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
   .pdp-main-stage {
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: min(315px, 45vh) !important;
     aspect-ratio: 1 / 1 !important;
-    max-height: min(400px, 48vh) !important;
+    max-height: min(315px, 45vh) !important;
     background: #FFFFFF !important;
-    border-radius: 20px !important;
+    border-radius: 18px !important;
     border: 1px solid #141416 !important;
     box-shadow: 0 8px 24px rgba(23, 21, 19, 0.06) !important;
     margin: 0 auto !important;
@@ -3095,13 +3102,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     max-height: 100% !important;
     object-fit: contain !important;
     object-position: center !important;
-    border-radius: 20px !important;
+    border-radius: 18px !important;
     background: #FFFFFF !important;
   }
 
   .pdp-zoom-btn {
-    bottom: 14px !important;
-    right: 14px !important;
+    bottom: 12px !important;
+    right: 12px !important;
     width: 36px !important;
     height: 36px !important;
   }
@@ -3110,13 +3117,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
-    max-width: 400px !important;
+    max-width: 320px !important;
     min-width: 0 !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    gap: 8px !important;
+    gap: 6px !important;
     justify-content: center !important;
-    padding: 2px 4px 6px !important;
+    padding: 2px 2px 4px !important;
     scrollbar-width: none !important;
     box-sizing: border-box !important;
   }
@@ -3718,15 +3725,15 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     font-size: 0.8rem !important;
   }
   .pdp-main-stage {
-    border-radius: 20px !important;
+    border-radius: 18px !important;
   }
   .pdp-main-img {
-    border-radius: 20px !important;
+    border-radius: 18px !important;
   }
   .pdp-vthumb {
-    width: 50px !important;
-    height: 50px !important;
-    min-width: 50px !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
   }
 }
 

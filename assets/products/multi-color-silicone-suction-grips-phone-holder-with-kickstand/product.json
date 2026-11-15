@@ -3,7 +3,9 @@
   "handle": "multi-color-silicone-suction-grips-phone-holder-with-kickstand",
   "title": "Multi-Color Silicone Suction Grips Phone Holder With Kickstand",
   "price": 299.0,
+  "price_formatted": "Rs. 299.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.7,
   "reviews_count": 290,
@@ -15,13 +17,11 @@
     "other-accessories",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
   "images": [
     "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
@@ -46,6 +46,7 @@
     "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/04_extra.webp",
     "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Black",
@@ -55,7 +56,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Beige",
@@ -65,7 +67,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F5F5DC"
     },
     {
       "name": "Pink",
@@ -75,7 +78,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#EC4899"
     },
     {
       "name": "Mint Green",
@@ -85,7 +89,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#4ADE80"
     },
     {
       "name": "Blue",
@@ -95,7 +100,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#2563EB"
     },
     {
       "name": "Peach",
@@ -105,7 +111,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FDBA74"
     },
     {
       "name": "Brown",
@@ -115,7 +122,8 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/02_lifestyle.png"
-      ]
+      ],
+      "value": "#854D0E"
     },
     {
       "name": "Lavender",
@@ -125,28 +133,86 @@
       "images": [
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
         "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/02_lifestyle.png"
-      ]
+      ],
+      "value": "#DDD6FE"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>Keep your phone secure and hands-free with these colorful silicone sticky pads featuring a built-in kickstand. The strong adhesive grip ensures your device stays in place, while the foldable stand lets you watch videos, take calls, or browse comfortably at any angle. Designed with a fun bubble-texture surface, these pads are available in a variety of stylish colors—cream, black, taupe, pink, lavender, mint green, coral orange, and navy blue. Lightweight, reusable, and easy to clean, they’re the perfect mix of function and style for everyday use.</p>",
+  "bullets": [],
+  "raw_html": "<p>Keep your phone secure and hands-free with these colorful silicone sticky pads featuring a built-in kickstand. The strong adhesive grip ensures your device stays in place, while the foldable stand lets you watch videos, take calls, or browse comfortably at any angle. Designed with a fun bubble-texture surface, these pads are available in a variety of stylish colors—cream, black, taupe, pink, lavender, mint green, coral orange, and navy blue. Lightweight, reusable, and easy to clean, they’re the perfect mix of function and style for everyday use.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Black",
-        "Beige",
-        "Pink",
-        "Mint Green",
-        "Blue",
-        "Peach",
-        "Brown",
-        "Lavender"
-      ]
+      "title": "Premium Grade Materials",
+      "subtitle": "Crafted for durability, elegance, and daily wear.",
+      "icon": "shield"
+    },
+    {
+      "title": "Universal Compatibility",
+      "subtitle": "Engineered to fit seamlessly with your daily mobile gear.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "1-Year Covertok Guarantee",
+      "subtitle": "100% authentic quality backed by our exchange warranty.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Universal Smartphone & Mobile Accessories"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Multi-Color Silicone Suction Grips Phone Holder With Kickstand"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 690,
+    "sold_hours": 4,
+    "stock_left": 8
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Keep your phone secure and hands-free with these colorful silicone sticky pads featuring a built-in kickstand. The strong adhesive grip ensures your device stays in place, while the foldable stand lets you watch videos, take calls, or browse comfortably at any angle. Designed with a fun bubble-texture surface, these pads are available in a variety of stylish colors—cream, black, taupe, pink, lavender, mint green, coral orange, and navy blue. Lightweight, reusable, and easy to clean, they’re the perfect mix of function and style for everyday use.</p>",
+  "shopify_variants": [
     {
       "id": 50603233902890,
       "title": "Black",
@@ -446,7 +512,20 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Keep your phone secure and hands-free with these colorful silicone sticky pads featuring a built-in kickstand. The strong adhesive grip ensures your device stays in place, while the foldable stand lets you watch videos, take calls, or browse comfortably at any angle. Designed with a fun bubble-texture surface, these pads are available in a variety of stylish colors—cream, black, taupe, pink, lavender, mint green, coral orange, and navy blue. Lightweight, reusable, and easy to clean, they’re the perfect mix of function and style for everyday use.",
-  "description_html": "<p>Keep your phone secure and hands-free with these colorful silicone sticky pads featuring a built-in kickstand. The strong adhesive grip ensures your device stays in place, while the foldable stand lets you watch videos, take calls, or browse comfortably at any angle. Designed with a fun bubble-texture surface, these pads are available in a variety of stylish colors—cream, black, taupe, pink, lavender, mint green, coral orange, and navy blue. Lightweight, reusable, and easy to clean, they’re the perfect mix of function and style for everyday use.</p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Black",
+        "Beige",
+        "Pink",
+        "Mint Green",
+        "Blue",
+        "Peach",
+        "Brown",
+        "Lavender"
+      ]
+    }
+  ]
 }

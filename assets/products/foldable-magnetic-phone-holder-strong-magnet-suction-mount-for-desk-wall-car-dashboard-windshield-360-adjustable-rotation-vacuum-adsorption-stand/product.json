@@ -3,7 +3,9 @@
   "handle": "foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand",
   "title": "Foldable Magnetic Phone Holder –Vacuum Adsorption Stand",
   "price": 999.0,
+  "price_formatted": "Rs. 999.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.7,
   "reviews_count": 450,
@@ -15,13 +17,11 @@
     "other-accessories",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp",
   "images": [
     "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp",
@@ -32,6 +32,7 @@
     "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/05_extra.webp",
     "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/06_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Metallic Silver",
@@ -39,21 +40,86 @@
       "image": "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp",
       "images": [
         "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp"
-      ]
+      ],
+      "value": "#CBD5E1"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p><span>  The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.</span></p>",
+  "bullets": [],
+  "raw_html": "<p><span>  The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.</span></p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Title",
-      "position": 1,
-      "values": [
-        "Default Title"
-      ]
+      "title": "Premium Grade Materials",
+      "subtitle": "Crafted for durability, elegance, and daily wear.",
+      "icon": "shield"
+    },
+    {
+      "title": "Universal Compatibility",
+      "subtitle": "Engineered to fit seamlessly with your daily mobile gear.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "1-Year Covertok Guarantee",
+      "subtitle": "100% authentic quality backed by our exchange warranty.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "High-Grade Impact Resistant TPU & Polycarbonate"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Universal Smartphone & Mobile Accessories"
+    },
+    {
+      "label": "Magnetic Alignment",
+      "value": "Strong MagSafe Ring Array (Built-in)"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Foldable Magnetic Phone Holder –Vacuum Adsorption Stand"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 690,
+    "sold_hours": 4,
+    "stock_left": 8
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p><span>  The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.</span></p>",
+  "shopify_variants": [
     {
       "id": 50448233988394,
       "title": "Default Title",
@@ -74,7 +140,13 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.",
-  "description_html": "<p><span>  The Foldable Magnetic Phone Holder provides convenient and secure mounting for your phone on any surface - from desks and walls to car dashboards and windshields. With 360° adjustable rotation and strong magnet suction, your phone stays in place while you work or drive. Vacuum adsorption technology ensures a stable hold.</span></p>"
+  "shopify_options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
 }

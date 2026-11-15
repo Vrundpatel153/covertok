@@ -3,7 +3,9 @@
   "handle": "pearl-phone-charm-with-airplane-bow-design",
   "title": "Pearl Phone Charm with Airplane & Bow Design",
   "price": 499.0,
+  "price_formatted": "Rs. 499.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 374,
@@ -13,13 +15,11 @@
     "all",
     "new-arrivals"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp",
   "images": [
     "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp",
@@ -27,6 +27,7 @@
     "assets/products/pearl-phone-charm-with-airplane-bow-design/extra/02_extra.webp",
     "assets/products/pearl-phone-charm-with-airplane-bow-design/extra/03_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Pearlescent White",
@@ -34,21 +35,86 @@
       "image": "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp",
       "images": [
         "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp"
-      ]
+      ],
+      "value": "#F8FAFC"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p><span>Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.</span></p>",
+  "bullets": [],
+  "raw_html": "<p><span>Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.</span></p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Title",
-      "position": 1,
-      "values": [
-        "Default Title"
-      ]
+      "title": "Premium Grade Materials",
+      "subtitle": "Crafted for durability, elegance, and daily wear.",
+      "icon": "shield"
+    },
+    {
+      "title": "Universal Compatibility",
+      "subtitle": "Engineered to fit seamlessly with your daily mobile gear.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "1-Year Covertok Guarantee",
+      "subtitle": "100% authentic quality backed by our exchange warranty.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Handcrafted Faceted Crystal Beads + High-Tensile Tether"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Universal Smartphone & Mobile Accessories"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Pearl Phone Charm with Airplane & Bow Design"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 674,
+    "sold_hours": 6,
+    "stock_left": 22
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p><span>Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.</span></p>",
+  "shopify_variants": [
     {
       "id": 50661867749674,
       "title": "Default Title",
@@ -69,7 +135,13 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.",
-  "description_html": "<p><span>Give your phone a chic upgrade with this elegant pearl phone charm. Designed with glossy white pearls, a dainty golden beaded bow, and a sparkling airplane charm, it adds a touch of luxury and personality to your device. The charm easily attaches to your phone case or keychain loop, making it a perfect blend of fashion and function. Ideal for travel lovers and those who adore stylish accessories that stand out.</span></p>"
+  "shopify_options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ]
 }

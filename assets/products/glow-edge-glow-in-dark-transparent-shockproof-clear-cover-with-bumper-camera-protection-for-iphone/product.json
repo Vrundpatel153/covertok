@@ -1,9 +1,11 @@
 {
   "id": "9853490954538",
   "handle": "glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone",
-  "title": "Glow In Dark Transparent \u2013 Shockproof Clear Cover",
+  "title": "Glow In Dark Transparent – Shockproof Clear Cover",
   "price": 799.0,
+  "price_formatted": "Rs. 799.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 138,
@@ -16,13 +18,11 @@
     "mens-cover",
     "new-arrivals"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
   "images": [
     "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
@@ -41,6 +41,7 @@
     "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/04_extra.webp",
     "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/03_glow_daylight.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Neon blue",
@@ -51,7 +52,8 @@
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/02_lifestyle.png",
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/03_glow_daylight.webp"
-      ]
+      ],
+      "value": "#2563EB"
     },
     {
       "name": "Neon Green",
@@ -61,7 +63,8 @@
       "images": [
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp",
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/02_lifestyle.png"
-      ]
+      ],
+      "value": "#22C55E"
     },
     {
       "name": "Neon Pink",
@@ -71,7 +74,8 @@
       "images": [
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F43F5E"
     },
     {
       "name": "Neon Orange",
@@ -81,7 +85,8 @@
       "images": [
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F97316"
     },
     {
       "name": "Neon Lime",
@@ -91,7 +96,8 @@
       "images": [
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/01_packshot.webp",
         "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/02_lifestyle.png"
-      ]
+      ],
+      "value": "#A3E635"
     }
   ],
   "models": [
@@ -110,41 +116,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>The Glow Edge transparent case offers robust shockproof protection for your iPhone, combining a clear design with a bumper that glows in the dark for added visibility. Engineered to absorb impacts, it also features raised edges to protect your camera from scratches and damage. This case preserves your phone’s sleek appearance while delivering reliable defense against everyday wear and tear.</p>",
+  "bullets": [],
+  "raw_html": "<p>The Glow Edge transparent case offers robust shockproof protection for your iPhone, combining a clear design with a bumper that glows in the dark for added visibility. Engineered to absorb impacts, it also features raised edges to protect your camera from scratches and damage. This case preserves your phone’s sleek appearance while delivering reliable defense against everyday wear and tear.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "Iphone 13",
-        "Iphone 13 pro",
-        "Iphone 13 pro max",
-        "Iphone 14",
-        "Iphone 14 pro",
-        "Iphone 14 pro max",
-        "Iphone 14 plus",
-        "Iphone 15",
-        "Iphone 15 pro",
-        "Iphone 15 pro max",
-        "Iphone 15 Plus",
-        "Iphone 16",
-        "Iphone 16 pro",
-        "Iphone 16 pro max",
-        "Iphone 16 Plus"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Neon blue",
-        "Neon Green",
-        "Neon Pink",
-        "Neon Orange",
-        "Neon Lime"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Iphone 13, Iphone 13 pro and 13 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Glow In Dark Transparent – Shockproof Clear Cover"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 738,
+    "sold_hours": 4,
+    "stock_left": 11
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>The Glow Edge transparent case offers robust shockproof protection for your iPhone, combining a clear design with a bumper that glows in the dark for added visibility. Engineered to absorb impacts, it also features raised edges to protect your camera from scratches and damage. This case preserves your phone’s sleek appearance while delivering reliable defense against everyday wear and tear.</p>",
+  "shopify_variants": [
     {
       "id": 50454033137962,
       "title": "Iphone 13 / Neon blue",
@@ -3596,7 +3641,38 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "The Glow Edge transparent case offers robust shockproof protection for your iPhone, combining a clear design with a bumper that glows in the dark for added visibility. Engineered to absorb impacts, it also features raised edges to protect your camera from scratches and damage. This case preserves your phone\u2019s sleek appearance while delivering reliable defense against everyday wear and tear.",
-  "description_html": "<p>The Glow Edge transparent case offers robust shockproof protection for your iPhone, combining a clear design with a bumper that glows in the dark for added visibility. Engineered to absorb impacts, it also features raised edges to protect your camera from scratches and damage. This case preserves your phone\u2019s sleek appearance while delivering reliable defense against everyday wear and tear.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "Iphone 13",
+        "Iphone 13 pro",
+        "Iphone 13 pro max",
+        "Iphone 14",
+        "Iphone 14 pro",
+        "Iphone 14 pro max",
+        "Iphone 14 plus",
+        "Iphone 15",
+        "Iphone 15 pro",
+        "Iphone 15 pro max",
+        "Iphone 15 Plus",
+        "Iphone 16",
+        "Iphone 16 pro",
+        "Iphone 16 pro max",
+        "Iphone 16 Plus"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Neon blue",
+        "Neon Green",
+        "Neon Pink",
+        "Neon Orange",
+        "Neon Lime"
+      ]
+    }
+  ]
 }

@@ -3,7 +3,9 @@
   "handle": "wavy-edge-transparent-shockproof-pastel-cover",
   "title": "Wavy Edge Transparent Shockproof Pastel Cover",
   "price": 399.0,
+  "price_formatted": "Rs. 399.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.8,
   "reviews_count": 462,
@@ -14,13 +16,11 @@
     "buy-three",
     "iphone-cases"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
   "images": [
     "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
@@ -39,6 +39,7 @@
     "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/04_extra.webp",
     "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Pink",
@@ -48,7 +49,8 @@
       "images": [
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#EC4899"
     },
     {
       "name": "White",
@@ -58,7 +60,8 @@
       "images": [
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#FFFFFF"
     },
     {
       "name": "lavender",
@@ -68,7 +71,8 @@
       "images": [
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#DDD6FE"
     },
     {
       "name": "Black",
@@ -78,7 +82,8 @@
       "images": [
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#18181B"
     },
     {
       "name": "Light blue",
@@ -88,7 +93,8 @@
       "images": [
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
         "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#60A5FA"
     }
   ],
   "models": [
@@ -107,44 +113,86 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Upgrade your iPhone with the Wavy Edge Transparent Case – a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone’s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection.</p>\n<p>✔ Transparent clear case for iPhone (various models available)<br>✔ Shockproof pastel bumper with stylish wavy edges<br>✔ Lightweight, slim-fit &amp; comfortable to hold<br>✔ Scratch-resistant back to keep your phone looking new<br>✔ Available in trendy pastel shades – pink, blue, cream, lilac &amp; more</p>\n<p>Perfect for those who love a chic, minimal, and protective iPhone case.</p>",
+  "bullets": [
+    "Transparent clear case for iPhone (various models available)",
+    "Shockproof pastel bumper with stylish wavy edges",
+    "Lightweight, slim-fit & comfortable to hold",
+    "Scratch-resistant back to keep your phone looking new",
+    "Available in trendy pastel shades – pink, blue, cream, lilac & more"
+  ],
+  "raw_html": "<p>Upgrade your iPhone with the Wavy Edge Transparent Case – a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone’s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection.</p>\n<p> Transparent clear case for iPhone (various models available)<br> Shockproof pastel bumper with stylish wavy edges<br> Lightweight, slim-fit &amp; comfortable to hold<br> Scratch-resistant back to keep your phone looking new<br> Available in trendy pastel shades – pink, blue, cream, lilac &amp; more</p>\n<p>Perfect for those who love a chic, minimal, and protective iPhone case.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 12",
-        "iPhone 12 Pro",
-        "iPhone 12 Pro Max",
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Plus",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Plus",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Plus",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Transparent clear case",
+      "subtitle": "for iPhone (various models available)",
+      "icon": "sparkles"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Pink",
-        "White",
-        "lavender",
-        "Black",
-        "Light blue"
-      ]
+      "title": "Shockproof pastel bumper",
+      "subtitle": "with stylish wavy edges",
+      "icon": "shield"
+    },
+    {
+      "title": "Lightweight, slim-fit &",
+      "subtitle": "comfortable to hold",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 12, iPhone 12 Pro and 16 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Wavy Edge Transparent Shockproof Pastel Cover"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 722,
+    "sold_hours": 4,
+    "stock_left": 20
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Upgrade your iPhone with the Wavy Edge Transparent Case – a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone’s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection.</p>\n<p>✔ Transparent clear case for iPhone (various models available)<br>✔ Shockproof pastel bumper with stylish wavy edges<br>✔ Lightweight, slim-fit &amp; comfortable to hold<br>✔ Scratch-resistant back to keep your phone looking new<br>✔ Available in trendy pastel shades – pink, blue, cream, lilac &amp; more</p>\n<p>Perfect for those who love a chic, minimal, and protective iPhone case.</p>",
+  "shopify_variants": [
     {
       "id": 50618170016042,
       "title": "iPhone 12 / Pink",
@@ -4556,7 +4604,41 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Upgrade your iPhone with the Wavy Edge Transparent Case – a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone’s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection. ✔ Transparent clear case for iPhone (various models available) ✔ Shockproof pastel bumper with stylish wavy edges ✔ Lightweight, slim-fit & comfortable to hold ✔ Scratch-resistant back to keep your phone looking new ✔ Available in trendy pastel shades – pink, blue, cream, lilac & more Perfect for those who love a chic, minimal, and protective iPhone case.",
-  "description_html": "<p>Upgrade your iPhone with the Wavy Edge Transparent Case – a perfect mix of style, protection, and elegance. Designed with soft pastel bumpers and a crystal-clear back, this case highlights your phone’s original design while keeping it safe from everyday drops, scratches, and dust. The raised wavy edges add a unique modern look while ensuring extra camera and screen protection.</p>\n<p>✔ Transparent clear case for iPhone (various models available)<br>✔ Shockproof pastel bumper with stylish wavy edges<br>✔ Lightweight, slim-fit &amp; comfortable to hold<br>✔ Scratch-resistant back to keep your phone looking new<br>✔ Available in trendy pastel shades – pink, blue, cream, lilac &amp; more</p>\n<p>Perfect for those who love a chic, minimal, and protective iPhone case.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 12",
+        "iPhone 12 Pro",
+        "iPhone 12 Pro Max",
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Plus",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Plus",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Plus",
+        "iPhone 16 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Pink",
+        "White",
+        "lavender",
+        "Black",
+        "Light blue"
+      ]
+    }
+  ]
 }

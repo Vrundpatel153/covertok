@@ -3,7 +3,9 @@
   "handle": "trendy-graphic-phone-cases-copy",
   "title": "Ultra-Thin Frosted Phone Cases",
   "price": 599.0,
+  "price_formatted": "Rs. 599.00",
   "original_price": 899.0,
+  "original_price_formatted": "Rs. 899.00",
   "discount_percent": 33,
   "rating": 4.8,
   "reviews_count": 422,
@@ -18,13 +20,11 @@
     "new-arrivals",
     "womens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": true,
   "is_womens": true,
+  "tags": [],
   "primary_image": "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
   "images": [
     "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
@@ -48,6 +48,7 @@
     "assets/products/trendy-graphic-phone-cases-copy/extra/05_extra.webp",
     "assets/products/trendy-graphic-phone-cases-copy/extra/06_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Frost Black",
@@ -57,7 +58,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/frost-black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#27272A"
     },
     {
       "name": "Rose Frost",
@@ -67,7 +69,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/rose-frost/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FB7185"
     },
     {
       "name": "Ice White",
@@ -77,7 +80,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/ice-white/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F8FAFC"
     },
     {
       "name": "Pastel Purple",
@@ -87,7 +91,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/02_lifestyle.png"
-      ]
+      ],
+      "value": "#C084FC"
     },
     {
       "name": "Ice Blue",
@@ -97,7 +102,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/ice-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#BAE6FD"
     },
     {
       "name": "Cosmic orange",
@@ -107,7 +113,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/02_lifestyle.png"
-      ]
+      ],
+      "value": "#FF6A3D"
     },
     {
       "name": "Deep Blue",
@@ -117,7 +124,8 @@
       "images": [
         "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
         "assets/products/trendy-graphic-phone-cases-copy/deep-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#1E40AF"
     }
   ],
   "models": [
@@ -136,44 +144,82 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Description:– Sleek &amp; Lightweight Protection,<br>Experience the perfect balance of style and protection with our Ultra-Thin Frosted Phone Cases. Designed to be slim and lightweight, these cases give you the natural feel of your phone while providing essential protection against scratches and everyday bumps. The matte frosted finish adds a modern, elegant look without adding bulk, keeping your phone sleek, comfortable, and pocket-friendly.</p>",
+  "bullets": [
+    "Description:– Sleek & Lightweight Protection,"
+  ],
+  "raw_html": "<p>Description:– Sleek &amp; Lightweight Protection,<br>Experience the perfect balance of style and protection with our Ultra-Thin Frosted Phone Cases. Designed to be slim and lightweight, these cases give you the natural feel of your phone while providing essential protection against scratches and everyday bumps. The matte frosted finish adds a modern, elegant look without adding bulk, keeping your phone sleek, comfortable, and pocket-friendly.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max",
-        "iPhone 17",
-        "iPhone 17 Air",
-        "iPhone 17 Pro",
-        "iPhone 17 Pro Max"
-      ]
+      "title": "Description",
+      "subtitle": "Sleek & Lightweight Protection,",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Frost Black",
-        "Rose Frost",
-        "Ice White",
-        "Pastel Purple",
-        "Ice Blue",
-        "Cosmic orange",
-        "Deep Blue"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
+    },
+    {
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "High-Grade Impact Resistant TPU & Polycarbonate"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 14 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Ultra-Thin Frosted Phone Cases"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 642,
+    "sold_hours": 8,
+    "stock_left": 15
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Description:– Sleek &amp; Lightweight Protection,<br>Experience the perfect balance of style and protection with our Ultra-Thin Frosted Phone Cases. Designed to be slim and lightweight, these cases give you the natural feel of your phone while providing essential protection against scratches and everyday bumps. The matte frosted finish adds a modern, elegant look without adding bulk, keeping your phone sleek, comfortable, and pocket-friendly.</p>",
+  "shopify_variants": [
     {
       "id": 50529024901418,
       "title": "iPhone 13 / Frost Black",
@@ -3167,7 +3213,41 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Description:– Sleek & Lightweight Protection, Experience the perfect balance of style and protection with our Ultra-Thin Frosted Phone Cases. Designed to be slim and lightweight, these cases give you the natural feel of your phone while providing essential protection against scratches and everyday bumps. The matte frosted finish adds a modern, elegant look without adding bulk, keeping your phone sleek, comfortable, and pocket-friendly.",
-  "description_html": "<p>Description:– Sleek &amp; Lightweight Protection,<br>Experience the perfect balance of style and protection with our Ultra-Thin Frosted Phone Cases. Designed to be slim and lightweight, these cases give you the natural feel of your phone while providing essential protection against scratches and everyday bumps. The matte frosted finish adds a modern, elegant look without adding bulk, keeping your phone sleek, comfortable, and pocket-friendly.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Frost Black",
+        "Rose Frost",
+        "Ice White",
+        "Pastel Purple",
+        "Ice Blue",
+        "Cosmic orange",
+        "Deep Blue"
+      ]
+    }
+  ]
 }

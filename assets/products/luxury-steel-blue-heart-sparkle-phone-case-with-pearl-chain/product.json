@@ -3,7 +3,9 @@
   "handle": "luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain",
   "title": "Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain",
   "price": 499.0,
+  "price_formatted": "Rs. 499.00",
   "original_price": 0.0,
+  "original_price_formatted": "Rs. 0.00",
   "discount_percent": 33,
   "rating": 4.9,
   "reviews_count": 354,
@@ -16,13 +18,11 @@
     "new-arrivals",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
   "images": [
     "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
@@ -33,6 +33,7 @@
     "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/04_extra.webp",
     "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Steel Blue",
@@ -42,7 +43,8 @@
       "images": [
         "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
         "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/02_lifestyle.png"
-      ]
+      ],
+      "value": "#2563EB"
     }
   ],
   "models": [
@@ -61,34 +63,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Add elegance and charm to your phone with this luxury steel blue case, designed with dazzling silver heart embellishments for a touch of sparkle. Crafted from durable material, it offers premium protection while maintaining a sleek, stylish look. The detachable pearl chain strap adds convenience and sophistication, making it easy to carry and accessorize. Perfect for those who love blending fashion with functionality, this case is ideal for daily use or special occasions.</p>",
+  "bullets": [],
+  "raw_html": "<p>Add elegance and charm to your phone with this luxury steel blue case, designed with dazzling silver heart embellishments for a touch of sparkle. Crafted from durable material, it offers premium protection while maintaining a sleek, stylish look. The detachable pearl chain strap adds convenience and sophistication, making it easy to carry and accessorize. Perfect for those who love blending fashion with functionality, this case is ideal for daily use or special occasions.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Steel Blue"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Handcrafted Faceted Crystal Beads + High-Tensile Tether"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 754,
+    "sold_hours": 8,
+    "stock_left": 12
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Add elegance and charm to your phone with this luxury steel blue case, designed with dazzling silver heart embellishments for a touch of sparkle. Crafted from durable material, it offers premium protection while maintaining a sleek, stylish look. The detachable pearl chain strap adds convenience and sophistication, making it easy to carry and accessorize. Perfect for those who love blending fashion with functionality, this case is ideal for daily use or special occasions.</p>",
+  "shopify_variants": [
     {
       "id": 50549820129578,
       "title": "iPhone 13 / Steel Blue",
@@ -606,7 +654,31 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Add elegance and charm to your phone with this luxury steel blue case, designed with dazzling silver heart embellishments for a touch of sparkle. Crafted from durable material, it offers premium protection while maintaining a sleek, stylish look. The detachable pearl chain strap adds convenience and sophistication, making it easy to carry and accessorize. Perfect for those who love blending fashion with functionality, this case is ideal for daily use or special occasions.",
-  "description_html": "<p>Add elegance and charm to your phone with this luxury steel blue case, designed with dazzling silver heart embellishments for a touch of sparkle. Crafted from durable material, it offers premium protection while maintaining a sleek, stylish look. The detachable pearl chain strap adds convenience and sophistication, making it easy to carry and accessorize. Perfect for those who love blending fashion with functionality, this case is ideal for daily use or special occasions.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Steel Blue"
+      ]
+    }
+  ]
 }

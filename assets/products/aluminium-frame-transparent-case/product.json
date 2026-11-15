@@ -3,7 +3,9 @@
   "handle": "aluminium-frame-transparent-case",
   "title": "Aluminium Frame Transparent Case",
   "price": 999.0,
+  "price_formatted": "Rs. 999.00",
   "original_price": 1499.0,
+  "original_price_formatted": "Rs. 1,499.00",
   "discount_percent": 33,
   "rating": 4.7,
   "reviews_count": 330,
@@ -15,13 +17,11 @@
     "iphone-cases",
     "new-arrivals"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
   "images": [
     "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
@@ -46,6 +46,7 @@
     "assets/products/aluminium-frame-transparent-case/extra/12_extra.webp",
     "assets/products/aluminium-frame-transparent-case/extra/13_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Cosmic Orange",
@@ -56,7 +57,8 @@
         "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
         "assets/products/aluminium-frame-transparent-case/cosmic-orange/02_lifestyle.jpg",
         "assets/products/aluminium-frame-transparent-case/cosmic-orange/03_lifestyle.png"
-      ]
+      ],
+      "value": "#FF6A3D"
     },
     {
       "name": "Deep Blue",
@@ -67,7 +69,8 @@
         "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
         "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
         "assets/products/aluminium-frame-transparent-case/deep-blue/03_lifestyle.jpg"
-      ]
+      ],
+      "value": "#1E40AF"
     },
     {
       "name": "Silver",
@@ -77,7 +80,8 @@
       "images": [
         "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
         "assets/products/aluminium-frame-transparent-case/silver/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#E4E4E7"
     }
   ],
   "models": [
@@ -96,26 +100,89 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series</p>\n<p>✨ Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 17 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p>📱 Compatibility<br> • iPhone 17 Pro<br> • iPhone 17 Pro Max</p>",
+  "bullets": [
+    "Premium Aluminium Body Frame – Strong, durable, and stylish",
+    "Transparent Middle Back – Keeps the original iPhone 16 Pro/Pro Max design visible",
+    "Perfect Fit – Designed exclusively for iPhone 16 Pro & 17 Pro Max",
+    "Sleek & Lightweight – Protection without bulk",
+    "Raised Camera Protection – Prevents scratches on lens",
+    "Anti-Slip Grip – Comfortable and secure to hold",
+    "iPhone 16 Pro",
+    "iPhone 16 Pro Max"
+  ],
+  "raw_html": "<p>Give your iPhone 16 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 16 & 15 series</p>\n<p> Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 16 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 16 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p> Compatibility<br> • iPhone 16 Pro<br> • iPhone 16 Pro Max</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Cosmic Orange",
-        "Deep Blue",
-        "Silver"
-      ]
+      "title": "Premium Aluminium Body Frame",
+      "subtitle": "Strong, durable, and stylish",
+      "icon": "shield"
     },
     {
-      "name": "Model",
-      "position": 2,
-      "values": [
-        "iPhone 17 Pro",
-        "iPhone 17 Pro Max"
-      ]
+      "title": "Transparent Middle Back",
+      "subtitle": "Keeps the original iPhone 16 Pro/Pro Max design visible",
+      "icon": "shield"
+    },
+    {
+      "title": "Perfect Fit",
+      "subtitle": "Designed exclusively for iPhone 16 Pro & 17 Pro Max",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Aero-Grade CNC Aluminum Alloy"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 16 Pro, iPhone 16 Pro Max"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Aluminium Frame Transparent Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 610,
+    "sold_hours": 4,
+    "stock_left": 8
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series</p>\n<p>✨ Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 17 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p>📱 Compatibility<br> • iPhone 17 Pro<br> • iPhone 17 Pro Max</p>",
+  "shopify_variants": [
     {
       "id": 50947899621674,
       "title": "Cosmic Orange / iPhone 17 Pro",
@@ -311,9 +378,23 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [
-    "Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look. This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device. The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series ✨ Key Features"
-  ],
-  "description_text": "Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look. This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device. The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series ✨ Key Features • Premium Aluminium Body Frame – Strong, durable, and stylish • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible • Perfect Fit – Designed exclusively for iPhone 17 Pro & 17 Pro Max • Sleek & Lightweight – Protection without bulk • Raised Camera Protection – Prevents scratches on lens • Anti-Slip Grip – Comfortable and secure to hold 📱 Compatibility • iPhone 17 Pro • iPhone 17 Pro Max",
-  "description_html": "<p>Give your iPhone 17 Pro or 17 Pro Max the protection it deserves—without hiding its original look.</p>\n<p>This premium case features a solid aluminium body frame with a crystal-clear transparent center, offering a perfect fit that highlights the natural design of your device.</p>\n<p>The sleek metal bumper adds durability and style, while the transparent back maintains the iconic look of the iPhone 17 series</p>\n<p>✨ Key Features<br> • Premium Aluminium Body Frame – Strong, durable, and stylish<br> • Transparent Middle Back – Keeps the original iPhone 17 Pro/Pro Max design visible<br> • Perfect Fit – Designed exclusively for iPhone 17 Pro &amp; 17 Pro Max<br> • Sleek &amp; Lightweight – Protection without bulk<br> • Raised Camera Protection – Prevents scratches on lens<br> • Anti-Slip Grip – Comfortable and secure to hold</p>\n<p>📱 Compatibility<br> • iPhone 17 Pro<br> • iPhone 17 Pro Max</p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Cosmic Orange",
+        "Deep Blue",
+        "Silver"
+      ]
+    },
+    {
+      "name": "Model",
+      "position": 2,
+      "values": [
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    }
+  ]
 }

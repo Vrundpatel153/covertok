@@ -3,7 +3,9 @@
   "handle": "silicone-airpods-cases-with-rope-strap-copy",
   "title": "Labubu AirPods Case –",
   "price": 599.0,
+  "price_formatted": "Rs. 599.00",
   "original_price": 749.0,
+  "original_price_formatted": "Rs. 749.00",
   "discount_percent": 20,
   "rating": 4.8,
   "reviews_count": 286,
@@ -15,13 +17,11 @@
     "new-arrivals",
     "our-bestsellers"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": true,
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
   "images": [
     "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
@@ -32,6 +32,7 @@
     "assets/products/silicone-airpods-cases-with-rope-strap-copy/extra/02_extra.webp",
     "assets/products/silicone-airpods-cases-with-rope-strap-copy/extra/03_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Red",
@@ -41,7 +42,8 @@
       "images": [
         "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
         "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/02_lifestyle.png"
-      ]
+      ],
+      "value": "#DC2626"
     },
     {
       "name": "Brown",
@@ -51,7 +53,8 @@
       "images": [
         "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/01_packshot.webp",
         "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/02_lifestyle.png"
-      ]
+      ],
+      "value": "#854D0E"
     }
   ],
   "models": [
@@ -62,28 +65,80 @@
     "Airpods 4"
   ],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>Description:Cute &amp; Protective 🎀🎧<br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
+  "bullets": [],
+  "raw_html": "<p>Description:Cute &amp; Protective <br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "Airpods 1/2",
-        "Airpods Pro",
-        "Airpods 3",
-        "Airpods Pro 2",
-        "Airpods 4"
-      ]
+      "title": "360° Shockproof Protection",
+      "subtitle": "Guards against scratches, drops, and pocket scuffs.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Red",
-        "Brown"
-      ]
+      "title": "Visible LED Status Hole",
+      "subtitle": "Easily check charging status without removing case.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Wireless Charging Supported",
+      "subtitle": "Charges seamlessly through the case on all Qi pads.",
+      "icon": "battery"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Handcrafted Faceted Crystal Beads + High-Tensile Tether"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Airpods 1/2, Airpods Pro and 3 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Labubu AirPods Case –"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 786,
+    "sold_hours": 8,
+    "stock_left": 9
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Description:Cute &amp; Protective 🎀🎧<br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>",
+  "shopify_variants": [
     {
       "id": 50529193689386,
       "title": "Airpods 1/2 / Red",
@@ -445,7 +500,25 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Description:Cute & Protective 🎀🎧 Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.",
-  "description_html": "<p>Description:Cute &amp; Protective 🎀🎧<br>Bring fun to your everyday accessories with our Labubu Cartoon AirPods Cases. Made from durable TPU material, these cases protect your AirPods from scratches, drops, and dust while keeping them stylish and playful. Designed with adorable Labubu character prints in polka-dot patterns, they add a touch of cuteness and personality to your tech. Each case also comes with a matching Labubu keychain charm, making it extra fun and convenient to carry. Available in Red Polka and Brown Polka variants for a cheerful, trendy look.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "Airpods 1/2",
+        "Airpods Pro",
+        "Airpods 3",
+        "Airpods Pro 2",
+        "Airpods 4"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Red",
+        "Brown"
+      ]
+    }
+  ]
 }

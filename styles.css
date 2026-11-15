@@ -51896,14 +51896,14 @@ a.footer-contact-main:hover {
 
 /* Slide 2 & 3 Desktop Hero Banners: Model positioned right with generous headroom below navbar notch */
 .hero-slide-bg[data-bg-index="1"] .hero-bg-img {
-  object-position: 80% 85% !important;
-  transform: translateY(32px) scale(0.93) !important;
+  object-position: 80% 95% !important;
+  transform: translateY(85px) scale(0.86) !important;
   transform-origin: center right !important;
 }
 
 .hero-slide-bg[data-bg-index="2"] .hero-bg-img {
-  object-position: 80% 85% !important;
-  transform: translateY(75px) scale(0.88) !important;
+  object-position: 80% 95% !important;
+  transform: translateY(115px) scale(0.83) !important;
   transform-origin: center right !important;
 }
 
@@ -52255,9 +52255,9 @@ a.footer-contact-main:hover {
     right: 0 !important;
     left: auto !important;
     transform: none !important;
-    height: clamp(390px, 75%, 490px) !important;
-    max-height: 76% !important;
-    width: clamp(420px, 44vw, 650px) !important;
+    height: clamp(310px, 62%, 405px) !important;
+    max-height: 64% !important;
+    width: clamp(390px, 41vw, 610px) !important;
     z-index: 4 !important;
     display: flex !important;
     align-items: flex-end !important;
@@ -56660,9 +56660,12 @@ html body #siteHeader,
 }
 
 /* Hide Hand Model Slideshow on non-zero hero slides */
+.hero-card:has(.hero-slide[data-slide="1"].active) .hero-hand-slideshow,
+.hero-card:has(.hero-slide[data-slide="2"].active) .hero-hand-slideshow,
 .hero-card:has(.hero-slide[data-slide-index="1"].active) .hero-hand-slideshow,
 .hero-card:has(.hero-slide[data-slide-index="2"].active) .hero-hand-slideshow,
-.hero-card:has(.hero-slide.active:not(:first-child)) .hero-hand-slideshow {
+.hero-slide:not([data-slide="0"]):not([data-slide-index="0"]) .hero-hand-slideshow,
+.hero-card:not(:has(.hero-slide[data-slide="0"].active)):not(:has(.hero-slide[data-slide-index="0"].active)) .hero-hand-slideshow {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;

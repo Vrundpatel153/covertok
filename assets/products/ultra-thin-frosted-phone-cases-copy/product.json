@@ -3,7 +3,9 @@
   "handle": "ultra-thin-frosted-phone-cases-copy",
   "title": "Silicone World Map Travel Phone Case",
   "price": 499.0,
+  "price_formatted": "Rs. 499.00",
   "original_price": 599.0,
+  "original_price_formatted": "Rs. 599.00",
   "discount_percent": 17,
   "rating": 4.8,
   "reviews_count": 282,
@@ -16,13 +18,11 @@
     "iphone-cases",
     "mens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
   "images": [
     "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
@@ -36,6 +36,7 @@
     "assets/products/ultra-thin-frosted-phone-cases-copy/extra/01_extra.webp",
     "assets/products/ultra-thin-frosted-phone-cases-copy/extra/02_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Wine Red",
@@ -45,7 +46,8 @@
       "images": [
         "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
         "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/02_lifestyle.png"
-      ]
+      ],
+      "value": "#881337"
     },
     {
       "name": "Ivory White",
@@ -55,7 +57,8 @@
       "images": [
         "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
         "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F8FAFC"
     },
     {
       "name": "Earth Brown",
@@ -65,7 +68,8 @@
       "images": [
         "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/01_packshot.webp",
         "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/02_lifestyle.png"
-      ]
+      ],
+      "value": "#713F12"
     },
     {
       "name": "Midnight Black",
@@ -75,7 +79,8 @@
       "images": [
         "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/01_packshot.webp",
         "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#09090B"
     }
   ],
   "models": [
@@ -94,37 +99,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Show off your love for travel with our premium silicone World Map Phone Cases. Crafted from high-quality soft-touch silicone, these cases feature an elegant embossed world map with a flying airplane design—perfect for globetrotters and dreamers. The flexible silicone build ensures a comfortable grip while protecting your phone from scratches, bumps, and everyday wear. Available in four stunning shades: Earth Brown, Ivory White, Midnight Black, and Wine Red. Ultra-sleek, durable, and stylish—travel vibes in every hold.</p>",
+  "bullets": [],
+  "raw_html": "<p>Show off your love for travel with our premium silicone World Map Phone Cases. Crafted from high-quality soft-touch silicone, these cases feature an elegant embossed world map with a flying airplane design—perfect for globetrotters and dreamers. The flexible silicone build ensures a comfortable grip while protecting your phone from scratches, bumps, and everyday wear. Available in four stunning shades: Earth Brown, Ivory White, Midnight Black, and Wine Red. Ultra-sleek, durable, and stylish—travel vibes in every hold.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Wine Red",
-        "Ivory White",
-        "Earth Brown",
-        "Midnight Black"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Silicone World Map Travel Phone Case"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 962,
+    "sold_hours": 4,
+    "stock_left": 20
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Show off your love for travel with our premium silicone World Map Phone Cases. Crafted from high-quality soft-touch silicone, these cases feature an elegant embossed world map with a flying airplane design—perfect for globetrotters and dreamers. The flexible silicone build ensures a comfortable grip while protecting your phone from scratches, bumps, and everyday wear. Available in four stunning shades: Earth Brown, Ivory White, Midnight Black, and Wine Red. Ultra-sleek, durable, and stylish—travel vibes in every hold.</p>",
+  "shopify_variants": [
     {
       "id": 50529046200618,
       "title": "iPhone 13 / Wine Red",
@@ -2190,7 +2238,34 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Show off your love for travel with our premium silicone World Map Phone Cases. Crafted from high-quality soft-touch silicone, these cases feature an elegant embossed world map with a flying airplane design—perfect for globetrotters and dreamers. The flexible silicone build ensures a comfortable grip while protecting your phone from scratches, bumps, and everyday wear. Available in four stunning shades: Earth Brown, Ivory White, Midnight Black, and Wine Red. Ultra-sleek, durable, and stylish—travel vibes in every hold.",
-  "description_html": "<p>Show off your love for travel with our premium silicone World Map Phone Cases. Crafted from high-quality soft-touch silicone, these cases feature an elegant embossed world map with a flying airplane design—perfect for globetrotters and dreamers. The flexible silicone build ensures a comfortable grip while protecting your phone from scratches, bumps, and everyday wear. Available in four stunning shades: Earth Brown, Ivory White, Midnight Black, and Wine Red. Ultra-sleek, durable, and stylish—travel vibes in every hold.</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Wine Red",
+        "Ivory White",
+        "Earth Brown",
+        "Midnight Black"
+      ]
+    }
+  ]
 }

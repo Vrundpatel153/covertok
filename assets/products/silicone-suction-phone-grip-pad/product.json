@@ -3,7 +3,9 @@
   "handle": "silicone-suction-phone-grip-pad",
   "title": "Silicone Suction Phone Grip Pad",
   "price": 149.0,
+  "price_formatted": "Rs. 149.00",
   "original_price": 499.0,
+  "original_price_formatted": "Rs. 499.00",
   "discount_percent": 70,
   "rating": 4.9,
   "reviews_count": 318,
@@ -14,17 +16,15 @@
     "buy-three",
     "other-accessories"
   ],
-  "vendor": "Covertok",
-  "product_type": "Mobile Accessories",
+  "is_bestseller": false,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
   "tags": [
     "silicone pads",
     "suction grip pad",
     "suction pads"
   ],
-  "is_bestseller": false,
-  "is_new": false,
-  "is_mens": false,
-  "is_womens": false,
   "primary_image": "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
   "images": [
     "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
@@ -39,6 +39,7 @@
     "assets/products/silicone-suction-phone-grip-pad/extra/04_extra.webp",
     "assets/products/silicone-suction-phone-grip-pad/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Orange",
@@ -48,7 +49,8 @@
       "images": [
         "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
         "assets/products/silicone-suction-phone-grip-pad/orange/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F97316"
     },
     {
       "name": "Violet",
@@ -58,7 +60,8 @@
       "images": [
         "assets/products/silicone-suction-phone-grip-pad/violet/01_packshot.webp",
         "assets/products/silicone-suction-phone-grip-pad/violet/02_lifestyle.png"
-      ]
+      ],
+      "value": "#7C3AED"
     },
     {
       "name": "Black",
@@ -68,23 +71,86 @@
       "images": [
         "assets/products/silicone-suction-phone-grip-pad/black/01_packshot.webp",
         "assets/products/silicone-suction-phone-grip-pad/black/02_lifestyle.png"
-      ]
+      ],
+      "value": "#18181B"
     }
   ],
   "models": [],
   "model_label": "Select Model",
-  "options": [
+  "description": "<p>Get a grip with this sleek, reusable silicone suction pad designed for smartphones. Featuring 24 strong mini suction cups, this compact accessory offers a secure hold on smooth surfaces—ideal for mounting your phone to mirrors, windows, tiles, or dashboards. The pad sticks without residue and detaches easily, making it perfect for hands-free calls, selfies, or video watching. Compact, lightweight, and travel-friendly, it adds convenience without bulk.</p>",
+  "bullets": [],
+  "raw_html": "<p>Get a grip with this sleek, reusable silicone suction pad designed for smartphones. Featuring 24 strong mini suction cups, this compact accessory offers a secure hold on smooth surfaces—ideal for mounting your phone to mirrors, windows, tiles, or dashboards. The pad sticks without residue and detaches easily, making it perfect for hands-free calls, selfies, or video watching. Compact, lightweight, and travel-friendly, it adds convenience without bulk.</p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Color",
-      "position": 1,
-      "values": [
-        "Orange",
-        "Violet",
-        "Black"
-      ]
+      "title": "Premium Grade Materials",
+      "subtitle": "Crafted for durability, elegance, and daily wear.",
+      "icon": "shield"
+    },
+    {
+      "title": "Universal Compatibility",
+      "subtitle": "Engineered to fit seamlessly with your daily mobile gear.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "1-Year Covertok Guarantee",
+      "subtitle": "100% authentic quality backed by our exchange warranty.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+    },
+    {
+      "label": "Compatibility",
+      "value": "Universal Smartphone & Mobile Accessories"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Durability",
+      "value": "Reinforced Wear & Tear Resistant"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Silicone Suction Phone Grip Pad"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 658,
+    "sold_hours": 6,
+    "stock_left": 16
+  },
+  "vendor": "COVERTOK",
+  "product_type": "Mobile Accessories",
+  "body_html": "<p>Get a grip with this sleek, reusable silicone suction pad designed for smartphones. Featuring 24 strong mini suction cups, this compact accessory offers a secure hold on smooth surfaces—ideal for mounting your phone to mirrors, windows, tiles, or dashboards. The pad sticks without residue and detaches easily, making it perfect for hands-free calls, selfies, or video watching. Compact, lightweight, and travel-friendly, it adds convenience without bulk.</p>",
+  "shopify_variants": [
     {
       "id": 50463229378858,
       "title": "Orange",
@@ -182,7 +248,15 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Get a grip with this sleek, reusable silicone suction pad designed for smartphones. Featuring 24 strong mini suction cups, this compact accessory offers a secure hold on smooth surfaces—ideal for mounting your phone to mirrors, windows, tiles, or dashboards. The pad sticks without residue and detaches easily, making it perfect for hands-free calls, selfies, or video watching. Compact, lightweight, and travel-friendly, it adds convenience without bulk.",
-  "description_html": "<p>Get a grip with this sleek, reusable silicone suction pad designed for smartphones. Featuring 24 strong mini suction cups, this compact accessory offers a secure hold on smooth surfaces—ideal for mounting your phone to mirrors, windows, tiles, or dashboards. The pad sticks without residue and detaches easily, making it perfect for hands-free calls, selfies, or video watching. Compact, lightweight, and travel-friendly, it adds convenience without bulk.</p>"
+  "shopify_options": [
+    {
+      "name": "Color",
+      "position": 1,
+      "values": [
+        "Orange",
+        "Violet",
+        "Black"
+      ]
+    }
+  ]
 }

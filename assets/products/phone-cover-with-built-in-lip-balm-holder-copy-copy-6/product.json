@@ -3,7 +3,9 @@
   "handle": "phone-cover-with-built-in-lip-balm-holder-copy-copy-6",
   "title": "Soft Silicone Cover With-Lip Balm",
   "price": 649.0,
+  "price_formatted": "Rs. 649.00",
   "original_price": 1299.0,
+  "original_price_formatted": "Rs. 1,299.00",
   "discount_percent": 50,
   "rating": 4.8,
   "reviews_count": 282,
@@ -17,13 +19,11 @@
     "new-arrivals",
     "womens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": true,
   "is_mens": false,
   "is_womens": true,
+  "tags": [],
   "primary_image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
   "images": [
     "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
@@ -46,6 +46,7 @@
     "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/04_extra.webp",
     "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/05_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Raspberry",
@@ -59,7 +60,8 @@
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/04_lifestyle.jpg",
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/05_lifestyle.jpg",
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/06_lifestyle.jpg"
-      ]
+      ],
+      "value": "#9D174D"
     },
     {
       "name": "Salty Tan",
@@ -69,7 +71,8 @@
       "images": [
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/01_packshot.webp",
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#B8977E"
     },
     {
       "name": "Unscented",
@@ -79,7 +82,8 @@
       "images": [
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/01_packshot.webp",
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#CBD5E1"
     },
     {
       "name": "Shortcake",
@@ -89,7 +93,8 @@
       "images": [
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#F2C4CE"
     },
     {
       "name": "Peach Pit",
@@ -99,7 +104,8 @@
       "images": [
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
         "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/02_lifestyle.jpg"
-      ]
+      ],
+      "value": "#FDBA74"
     }
   ],
   "models": [
@@ -118,49 +124,86 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> • Slim, protective cover for everyday use</span></div>\n<div><span> • Available in multiple colors to match your vibe</span></div>\n<div><span> • Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.</div>",
+  "bullets": [
+    "Designed to hold Rhode Peptide Lip Treatment securely",
+    "Slim, protective cover for everyday use",
+    "Available in multiple colors to match your vibe",
+    "Sleek and minimal design with the Rhode aesthetic",
+    "Compatible with various iPhone models"
+  ],
+  "raw_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div> Features:</div>\n<div><span> • Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> • Slim, protective cover for everyday use</span></div>\n<div><span> • Available in multiple colors to match your vibe</span></div>\n<div><span> • Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.</div>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Plus",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Plus",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Plus",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max",
-        "iPhone 17",
-        "iPhone 17 Air",
-        "iPhone 17 Pro",
-        "iPhone 17 Pro Max"
-      ]
+      "title": "Designed to hold",
+      "subtitle": "Rhode Peptide Lip Treatment securely",
+      "icon": "magnet"
     },
     {
-      "name": "Color",
-      "position": 2,
-      "values": [
-        "Guava Spritz",
-        "Salty Tan",
-        "Unscented",
-        "Raspberry",
-        "Perch Pit",
-        "Shortcake",
-        "Espresso",
-        "Toast",
-        "Ribbon"
-      ]
+      "title": "Slim, protective cover",
+      "subtitle": "for everyday use",
+      "icon": "feather"
+    },
+    {
+      "title": "Available in multiple",
+      "subtitle": "colors to match your vibe",
+      "icon": "shield"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 17 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Soft Silicone Cover With-Lip Balm"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 802,
+    "sold_hours": 6,
+    "stock_left": 10
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> • Slim, protective cover for everyday use</span></div>\n<div><span> • Available in multiple colors to match your vibe</span></div>\n<div><span> • Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.</div>",
+  "shopify_variants": [
     {
       "id": 50547066700074,
       "title": "iPhone 13 / Guava Spritz",
@@ -8712,7 +8755,46 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach. ✨ Features: • Designed to hold Rhode Peptide Lip Treatment securely • Slim, protective cover for everyday use • Available in multiple colors to match your vibe • Sleek and minimal design with the Rhode aesthetic • Compatible with various iPhone models Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.",
-  "description_html": "<div></div>\n<div>The Rhode Lip Case is the ultimate blend of style and function – a sleek protective phone cover designed with a built-in slot for your favorite Rhode Peptide Lip Treatment. Perfect for beauty lovers on the go, it keeps your phone safe while making sure your lip balm is always within reach.</div>\n<div></div>\n<div>✨ Features:</div>\n<div><span> • Designed to hold Rhode Peptide Lip Treatment securely</span></div>\n<div><span> • Slim, protective cover for everyday use</span></div>\n<div><span> • Available in multiple colors to match your vibe</span></div>\n<div><span> • Sleek and minimal design with the Rhode aesthetic</span></div>\n<div><span> • Compatible with various iPhone models</span></div>\n<div></div>\n<div>Pair it with any of the Rhode Lip Tint shades – Ribbon, Toast, Raspberry Jelly, PBJ, or Espresso– to keep your phone case as stylish as your lips.</div>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Plus",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Plus",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Plus",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max",
+        "iPhone 17",
+        "iPhone 17 Air",
+        "iPhone 17 Pro",
+        "iPhone 17 Pro Max"
+      ]
+    },
+    {
+      "name": "Color",
+      "position": 2,
+      "values": [
+        "Guava Spritz",
+        "Salty Tan",
+        "Unscented",
+        "Raspberry",
+        "Perch Pit",
+        "Shortcake",
+        "Espresso",
+        "Toast",
+        "Ribbon"
+      ]
+    }
+  ]
 }

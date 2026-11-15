@@ -1,0 +1,112 @@
+{
+  "id": "9873118101802",
+  "handle": "rugged-armor-protective-watch-case-with-sport-band",
+  "alias_handles": [
+    "transparent-rugged-apple-watch-case-with-orange-sports-strap-copy",
+    "transparent-rugged-protective-apple-watch-case-with-strap-copy",
+    "rugged-armor-protective-watch-case-with-sport-band-copy",
+    "premium-silicone-watch-bands-available-in-18-colors-copy"
+  ],
+  "alias_ids": [
+    "9873124557098",
+    "9873120330026",
+    "9873118855466",
+    "9873118101802"
+  ],
+  "title": "Rugged Armor Protective Watch Case with Sport Band",
+  "price": 2149.0,
+  "price_formatted": "Rs. 2,149.00",
+  "original_price": 3499.0,
+  "original_price_formatted": "Rs. 3,499.00",
+  "discount_percent": 39,
+  "rating": 4.9,
+  "reviews_count": 142,
+  "category": "watchbands",
+  "category_name": "Watch Bands",
+  "collections": [
+    "all",
+    "watchbands",
+    "our-bestsellers"
+  ],
+  "is_bestseller": true,
+  "is_new": false,
+  "is_mens": false,
+  "is_womens": false,
+  "tags": [],
+  "primary_image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
+  "images": [
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/bold-orange/01_packshot.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/bright-orange/01_packshot.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/clear-titanium/01_packshot.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
+    "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+  ],
+  "has_colors": true,
+  "colors": [
+    {
+      "name": "Tactical Black",
+      "hex": "#18181B",
+      "value": "#18181B",
+      "price": 2149.0,
+      "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
+      "images": [
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+      ]
+    },
+    {
+      "name": "Bold Orange",
+      "hex": "#EA580C",
+      "value": "#EA580C",
+      "price": 2149.0,
+      "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/bold-orange/01_packshot.webp",
+      "images": [
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/bold-orange/01_packshot.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+      ]
+    },
+    {
+      "name": "Bright Orange",
+      "hex": "#FF7A00",
+      "value": "#FF7A00",
+      "price": 2149.0,
+      "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/bright-orange/01_packshot.webp",
+      "images": [
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/bright-orange/01_packshot.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+      ]
+    },
+    {
+      "name": "Clear Titanium",
+      "hex": "#CBD5E1",
+      "value": "#CBD5E1",
+      "price": 2149.0,
+      "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/clear-titanium/01_packshot.webp",
+      "images": [
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/clear-titanium/01_packshot.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
+        "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+      ]
+    }
+  ],
+  "models": [
+    "Apple Watch Ultra 49mm",
+    "Apple Watch 45mm",
+    "Apple Watch 44mm"
+  ],
+  "finishes": []
+}

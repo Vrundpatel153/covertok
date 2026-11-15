@@ -3,7 +3,9 @@
   "handle": "vibrant-frame-style-iphone-cases-copy",
   "title": "Trendy Graphic Phone Cases",
   "price": 449.0,
+  "price_formatted": "Rs. 449.00",
   "original_price": 599.0,
+  "original_price_formatted": "Rs. 599.00",
   "discount_percent": 25,
   "rating": 4.9,
   "reviews_count": 334,
@@ -16,13 +18,11 @@
     "iphone-cases",
     "mens-cover"
   ],
-  "vendor": "Covertok",
-  "product_type": "",
-  "tags": [],
   "is_bestseller": false,
   "is_new": false,
   "is_mens": true,
   "is_womens": false,
+  "tags": [],
   "primary_image": "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
   "images": [
     "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
@@ -33,6 +33,7 @@
     "assets/products/vibrant-frame-style-iphone-cases-copy/extra/02_extra.webp",
     "assets/products/vibrant-frame-style-iphone-cases-copy/extra/03_extra.webp"
   ],
+  "has_colors": true,
   "colors": [
     {
       "name": "Caffeine Mood",
@@ -42,7 +43,8 @@
       "images": [
         "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
         "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/02_lifestyle.png"
-      ]
+      ],
+      "value": "#78350F"
     },
     {
       "name": "Chill Mood",
@@ -52,7 +54,8 @@
       "images": [
         "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/01_packshot.webp",
         "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/02_lifestyle.png"
-      ]
+      ],
+      "value": "#3B82F6"
     }
   ],
   "models": [
@@ -71,35 +74,80 @@
     "iPhone 13"
   ],
   "model_label": "Select Device Model:",
-  "options": [
+  "description": "<p>Coffee &amp; Cozy Vibes Phone Cases ☕✨<br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! 🌸📱</p>",
+  "bullets": [],
+  "raw_html": "<p>Coffee &amp; Cozy Vibes Phone Cases <br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! </p>",
+  "in_stock": true,
+  "features": [
     {
-      "name": "Model",
-      "position": 1,
-      "values": [
-        "iPhone 13",
-        "iPhone 13 Pro",
-        "iPhone 13 Pro Max",
-        "iPhone 14",
-        "iPhone 14 Pro",
-        "iPhone 14 Pro Max",
-        "iPhone 15",
-        "iPhone 15 Pro",
-        "iPhone 15 Pro Max",
-        "iPhone 16",
-        "iPhone 16 Pro",
-        "iPhone 16 Pro Max"
-      ]
+      "title": "Shock-Absorbent Armor",
+      "subtitle": "Precision engineered corners disperse drop impact safely.",
+      "icon": "shield"
     },
     {
-      "name": "Variant",
-      "position": 2,
-      "values": [
-        "Caffeine Mood",
-        "Chill Mood"
-      ]
+      "title": "Raised Screen & Lens Lips",
+      "subtitle": "Prevents scratches on flat surfaces and rough drops.",
+      "icon": "sparkles"
+    },
+    {
+      "title": "Ultra-Responsive Tactile Buttons",
+      "subtitle": "Delivers satisfying, crisp click feel with every press.",
+      "icon": "feather"
     }
   ],
-  "variants": [
+  "specs": [
+    {
+      "label": "Material",
+      "value": "High-Grade Impact Resistant TPU & Polycarbonate"
+    },
+    {
+      "label": "Compatibility",
+      "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+    },
+    {
+      "label": "Form Factor",
+      "value": "Slim Ergonomic Grip Profile"
+    },
+    {
+      "label": "Drop Rating",
+      "value": "10ft Military Impact Protection Tested"
+    },
+    {
+      "label": "In The Box",
+      "value": "1 × Covertok Trendy Graphic Phone Cases"
+    },
+    {
+      "label": "Warranty",
+      "value": "1 Year Genuine Covertok Replacement Warranty"
+    }
+  ],
+  "trust_badges": [
+    {
+      "title": "Premium Quality",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+    },
+    {
+      "title": "1 Year Warranty",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+    },
+    {
+      "title": "2 Days Return",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+    },
+    {
+      "title": "10k+ Happy Customer",
+      "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+    }
+  ],
+  "social_proof": {
+    "sold_count": 914,
+    "sold_hours": 8,
+    "stock_left": 12
+  },
+  "vendor": "COVERTOK",
+  "product_type": "",
+  "body_html": "<p>Coffee &amp; Cozy Vibes Phone Cases ☕✨<br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! 🌸📱</p>",
+  "shopify_variants": [
     {
       "id": 50529010712874,
       "title": "iPhone 13 / Caffeine Mood",
@@ -845,7 +893,32 @@
       "updated_at": "2026-11-15T01:28:00+05:30"
     }
   ],
-  "features": [],
-  "description_text": "Coffee & Cozy Vibes Phone Cases ☕✨ Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! 🌸📱",
-  "description_html": "<p>Coffee &amp; Cozy Vibes Phone Cases ☕✨<br>Start your day with the perfect vibe! These chic phone cases feature playful designs that speak your mood—whether it’s “No Coffee, No Workie” for all caffeine lovers or a cozy, relaxed illustration for your laid-back days. Made with a slim, protective fit, they keep your phone safe while adding a stylish touch of personality. Perfect for coffeeholics, dreamers, and anyone who loves a little fun in their everyday accessories! 🌸📱</p>"
+  "shopify_options": [
+    {
+      "name": "Model",
+      "position": 1,
+      "values": [
+        "iPhone 13",
+        "iPhone 13 Pro",
+        "iPhone 13 Pro Max",
+        "iPhone 14",
+        "iPhone 14 Pro",
+        "iPhone 14 Pro Max",
+        "iPhone 15",
+        "iPhone 15 Pro",
+        "iPhone 15 Pro Max",
+        "iPhone 16",
+        "iPhone 16 Pro",
+        "iPhone 16 Pro Max"
+      ]
+    },
+    {
+      "name": "Variant",
+      "position": 2,
+      "values": [
+        "Caffeine Mood",
+        "Chill Mood"
+      ]
+    }
+  ]
 }
