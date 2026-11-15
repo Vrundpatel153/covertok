@@ -51958,8 +51958,8 @@ a.footer-contact-main:hover {
   right: 0 !important;
   left: auto !important;
   transform: none !important;
-  height: clamp(540px, 96%, 740px) !important;
-  max-height: 100% !important;
+  height: clamp(440px, 82%, 550px) !important;
+  max-height: 84% !important;
   width: clamp(420px, 44vw, 650px) !important;
   z-index: 4 !important;
   display: flex !important;
@@ -52248,8 +52248,8 @@ a.footer-contact-main:hover {
     right: 0 !important;
     left: auto !important;
     transform: none !important;
-    height: clamp(540px, 96%, 740px) !important;
-    max-height: 100% !important;
+    height: clamp(440px, 82%, 550px) !important;
+    max-height: 84% !important;
     width: clamp(420px, 44vw, 650px) !important;
     z-index: 4 !important;
     display: flex !important;
