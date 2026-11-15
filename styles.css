@@ -51894,9 +51894,10 @@ a.footer-contact-main:hover {
 
 
 
-/* Slide 1 (Frameless Series / Titanium): Model position shifted down & framed with full headroom */
-.hero-slide-bg[data-bg-index="1"] .hero-bg-img {
-  object-position: 82% 26% !important;
+/* Slide 2 & 3 Desktop Hero Banners: Model positioned right with generous headroom */
+.hero-slide-bg[data-bg-index="1"] .hero-bg-img,
+.hero-slide-bg[data-bg-index="2"] .hero-bg-img {
+  object-position: right center !important;
 }
 
 .hero-slide-bg[data-bg-index="1"] .hero-bg-scrim {
@@ -56624,8 +56625,9 @@ html body #siteHeader,
   padding: 36px 0 !important;
 }
 
-/* Male Model Slide 2 Hero Banner: fill from bottom without gaps */
-.hero-mob-img.hero-mob-img-1 {
+/* Slide 2 & 3 Mobile Hero Banners: fill from bottom to preserve generous top headroom without gaps */
+.hero-mob-img.hero-mob-img-1,
+.hero-mob-img.hero-mob-img-2 {
   object-fit: cover !important;
   object-position: center bottom !important;
 }
