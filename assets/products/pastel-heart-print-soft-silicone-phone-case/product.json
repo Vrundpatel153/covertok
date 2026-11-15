@@ -31,22 +31,19 @@
     "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
     "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/02_lifestyle.png",
     "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
-    "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png",
-    "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/01_extra.webp",
-    "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/02_extra.webp",
-    "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/03_extra.webp",
-    "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/04_extra.webp"
+    "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png"
   ],
   "colors": [
     {
       "name": "Ivory hearts",
-      "hex": "#6DB634",
+      "hex": "#F5F2EB",
       "price": 449.0,
       "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
       "images": [
         "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
         "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/02_lifestyle.png"
-      ]
+      ],
+      "value": "#F5F2EB"
     },
     {
       "name": "Blush pink",

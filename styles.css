@@ -51902,8 +51902,8 @@ a.footer-contact-main:hover {
 }
 
 .hero-slide-bg[data-bg-index="2"] .hero-bg-img {
-  object-position: 82% 80% !important;
-  transform: translateY(36px) scale(0.92) !important;
+  object-position: 80% 85% !important;
+  transform: translateY(75px) scale(0.88) !important;
   transform-origin: center right !important;
 }
 
@@ -51965,8 +51965,8 @@ a.footer-contact-main:hover {
   right: 0 !important;
   left: auto !important;
   transform: none !important;
-  height: clamp(440px, 82%, 550px) !important;
-  max-height: 84% !important;
+  height: clamp(370px, 72%, 475px) !important;
+  max-height: 73% !important;
   width: clamp(420px, 44vw, 650px) !important;
   z-index: 4 !important;
   display: flex !important;

@@ -42,7 +42,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp",
         "images": [
           "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp"
-        ]
+        ],
+        "value": "#1C1D1F"
       }
     ],
     "models": [],
@@ -229,7 +230,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
           "assets/products/ribbed-knit-phone-sling-pouch/blue/02_lifestyle.jpg",
           "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#2563EB"
       },
       {
         "name": "Orange",
@@ -240,7 +242,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
           "assets/products/ribbed-knit-phone-sling-pouch/orange/02_lifestyle.jpg",
           "assets/products/ribbed-knit-phone-sling-pouch/orange/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Pink",
@@ -251,7 +254,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
           "assets/products/ribbed-knit-phone-sling-pouch/pink/02_lifestyle.jpg",
           "assets/products/ribbed-knit-phone-sling-pouch/pink/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#EC4899"
       },
       {
         "name": "Black",
@@ -262,7 +266,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
           "assets/products/ribbed-knit-phone-sling-pouch/black/02_lifestyle.jpg",
           "assets/products/ribbed-knit-phone-sling-pouch/black/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Brown",
@@ -273,7 +278,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
           "assets/products/ribbed-knit-phone-sling-pouch/brown/02_lifestyle.jpg",
           "assets/products/ribbed-knit-phone-sling-pouch/brown/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#854D0E"
       }
     ],
     "models": [
@@ -747,7 +753,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
           "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/02_lifestyle.png",
           "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/03_lifestyle.png"
-        ]
+        ],
+        "value": "#FF6A3D"
       },
       {
         "name": "Dark Blue",
@@ -758,7 +765,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/01_packshot.webp",
           "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/02_lifestyle.png",
           "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/03_lifestyle.png"
-        ]
+        ],
+        "value": "#1E3A8A"
       }
     ],
     "models": [
@@ -1067,7 +1075,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/04_lifestyle.jpg",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/05_lifestyle.jpg",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/06_lifestyle.jpg"
-        ]
+        ],
+        "value": "#9D174D"
       },
       {
         "name": "Salty Tan",
@@ -1077,7 +1086,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/01_packshot.webp",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#B8977E"
       },
       {
         "name": "Unscented",
@@ -1087,7 +1097,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/01_packshot.webp",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#CBD5E1"
       },
       {
         "name": "Shortcake",
@@ -1097,7 +1108,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#F2C4CE"
       },
       {
         "name": "Peach Pit",
@@ -1107,7 +1119,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#FDBA74"
       }
     ],
     "models": [
@@ -9845,7 +9858,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp",
         "images": [
           "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp"
-        ]
+        ],
+        "value": "#FF5500"
       }
     ],
     "models": [
@@ -10030,7 +10044,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp",
         "images": [
           "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp"
-        ]
+        ],
+        "value": "#E2E8F0"
       }
     ],
     "models": [
@@ -10567,7 +10582,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp",
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Brown",
@@ -10577,7 +10593,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp",
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#854D0E"
       },
       {
         "name": "Grey",
@@ -10587,7 +10604,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/01_packshot.webp",
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#6B7280"
       },
       {
         "name": "White",
@@ -10597,7 +10615,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp",
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#FFFFFF"
       }
     ],
     "models": [
@@ -14596,7 +14615,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
           "assets/products/aluminium-frame-transparent-case/cosmic-orange/02_lifestyle.jpg",
           "assets/products/aluminium-frame-transparent-case/cosmic-orange/03_lifestyle.png"
-        ]
+        ],
+        "value": "#FF6A3D"
       },
       {
         "name": "Deep Blue",
@@ -14607,7 +14627,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
           "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
           "assets/products/aluminium-frame-transparent-case/deep-blue/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#1E40AF"
       },
       {
         "name": "Silver",
@@ -14617,7 +14638,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
           "assets/products/aluminium-frame-transparent-case/silver/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#E4E4E7"
       }
     ],
     "models": [
@@ -15002,7 +15024,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/02_lifestyle.png"
-        ]
+        ],
+        "value": "#E4E4E7"
       },
       {
         "name": "Black",
@@ -15012,7 +15035,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Rose gold",
@@ -15022,7 +15046,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FDA4AF"
       },
       {
         "name": "Blue",
@@ -15032,7 +15057,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#2563EB"
       },
       {
         "name": "Titanium",
@@ -15042,7 +15068,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/02_lifestyle.png"
-        ]
+        ],
+        "value": "#D4D4D8"
       },
       {
         "name": "Natural",
@@ -15052,7 +15079,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/02_lifestyle.png"
-        ]
+        ],
+        "value": "#E2E8F0"
       },
       {
         "name": "Stone",
@@ -15062,7 +15090,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/02_lifestyle.png"
-        ]
+        ],
+        "value": "#A8A29E"
       },
       {
         "name": "Black/Red Stripe",
@@ -15072,7 +15101,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Gold",
@@ -15082,7 +15112,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EAB308"
       }
     ],
     "models": [
@@ -15800,7 +15831,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp",
         "images": [
           "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp"
-        ]
+        ],
+        "value": "#F8FAFC"
       }
     ],
     "models": [],
@@ -15960,7 +15992,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#EC4899"
       },
       {
         "name": "White",
@@ -15970,7 +16003,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#FFFFFF"
       },
       {
         "name": "lavender",
@@ -15980,7 +16014,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#DDD6FE"
       },
       {
         "name": "Black",
@@ -15990,7 +16025,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Light blue",
@@ -16000,7 +16036,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#60A5FA"
       }
     ],
     "models": [
@@ -20606,7 +20643,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Beige",
@@ -20616,7 +20654,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F5F5DC"
       },
       {
         "name": "Pink",
@@ -20626,7 +20665,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EC4899"
       },
       {
         "name": "Mint Green",
@@ -20636,7 +20676,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#4ADE80"
       },
       {
         "name": "Blue",
@@ -20646,7 +20687,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#2563EB"
       },
       {
         "name": "Peach",
@@ -20656,7 +20698,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FDBA74"
       },
       {
         "name": "Brown",
@@ -20666,7 +20709,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/02_lifestyle.png"
-        ]
+        ],
+        "value": "#854D0E"
       },
       {
         "name": "Lavender",
@@ -20676,7 +20720,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/02_lifestyle.png"
-        ]
+        ],
+        "value": "#DDD6FE"
       }
     ],
     "models": [],
@@ -21118,7 +21163,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Rose Gold",
@@ -21128,7 +21174,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FDA4AF"
       },
       {
         "name": "Grey",
@@ -21138,7 +21185,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/02_lifestyle.png"
-        ]
+        ],
+        "value": "#6B7280"
       }
     ],
     "models": [
@@ -21491,7 +21539,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Light blue",
@@ -21501,7 +21550,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#60A5FA"
       },
       {
         "name": "Stone Blue",
@@ -21511,7 +21561,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#64748B"
       },
       {
         "name": "Purple lilac",
@@ -21521,7 +21572,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#C084FC"
       },
       {
         "name": "fruit purple",
@@ -21531,7 +21583,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#7E22CE"
       },
       {
         "name": "Midnight blue",
@@ -21541,7 +21594,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#0F172A"
       },
       {
         "name": "Pine Needle Green",
@@ -21552,7 +21606,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/02_lifestyle.jpg",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/03_lifestyle.jpg"
-        ]
+        ],
+        "value": "#14532D"
       },
       {
         "name": "Alfalfa",
@@ -21562,7 +21617,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#4D7C0F"
       },
       {
         "name": "Wine red",
@@ -21572,7 +21628,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#881337"
       },
       {
         "name": "starlight",
@@ -21582,7 +21639,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#F5EBE0"
       },
       {
         "name": "Black",
@@ -21592,7 +21650,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Red",
@@ -21602,7 +21661,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#DC2626"
       },
       {
         "name": "Natural Titanium",
@@ -21612,7 +21672,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/01_packshot.webp",
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#CBD5E1"
       }
     ],
     "models": [
@@ -22631,7 +22692,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
           "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#2563EB"
       }
     ],
     "models": [
@@ -23317,7 +23379,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Pink",
@@ -23327,7 +23390,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EC4899"
       },
       {
         "name": "Off White",
@@ -23337,7 +23401,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F3F4F6"
       },
       {
         "name": "Natural Titanium",
@@ -23347,7 +23412,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/01_packshot.webp",
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/02_lifestyle.png"
-        ]
+        ],
+        "value": "#CBD5E1"
       }
     ],
     "models": [
@@ -25581,7 +25647,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/ultra-clear/01_packshot.webp",
         "images": [
           "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/ultra-clear/01_packshot.webp"
-        ]
+        ],
+        "value": "#E2E8F0"
       }
     ],
     "models": [],
@@ -26081,7 +26148,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/matte-privacy/01_packshot.webp",
         "images": [
           "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/matte-privacy/01_packshot.webp"
-        ]
+        ],
+        "value": "#334155"
       }
     ],
     "models": [
@@ -26553,7 +26621,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
         "images": [
           "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp"
-        ]
+        ],
+        "value": "#FF5500"
       }
     ],
     "models": [
@@ -26828,7 +26897,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
         "images": [
           "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp"
-        ]
+        ],
+        "value": "#FF5500"
       }
     ],
     "models": [
@@ -27100,7 +27170,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
         "images": [
           "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp"
-        ]
+        ],
+        "value": "#94A3B8"
       }
     ],
     "models": [
@@ -27374,7 +27445,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp"
-        ]
+        ],
+        "value": "#1C1D1F"
       }
     ],
     "models": [
@@ -27640,23 +27712,20 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/02_lifestyle.png",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/01_extra.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/02_extra.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/03_extra.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/extra/04_extra.webp"
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Ivory hearts",
-        "hex": "#6DB634",
+        "hex": "#F5F2EB",
         "price": 449.0,
         "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
         "images": [
           "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
           "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F5F2EB"
       },
       {
         "name": "Blush pink",
@@ -27666,7 +27735,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
           "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F472B6"
       },
       {
         "name": "Mint breeze",
@@ -27676,7 +27746,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
           "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png"
-        ]
+        ],
+        "value": "#86EFAC"
       }
     ],
     "models": [
@@ -29927,7 +29998,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#E6A838"
       },
       {
         "name": "Grey+Black",
@@ -29936,7 +30008,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/grey-black/01_packshot.webp",
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/grey-black/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#4A4A4A"
       },
       {
         "name": "Black",
@@ -29945,7 +30018,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp",
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#1C1C1E"
       },
       {
         "name": "Starlight+Grey",
@@ -29954,7 +30028,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/01_packshot.webp",
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/starlight-grey/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#D6D0C4"
       },
       {
         "name": "Orange+Grey",
@@ -29963,7 +30038,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp",
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#FF5500"
       },
       {
         "name": "Light Blue",
@@ -29972,7 +30048,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp",
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#7FAFC4"
       }
     ],
     "models": [
@@ -30204,7 +30281,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "White",
@@ -30214,7 +30292,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/01_packshot.webp",
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FFFFFF"
       },
       {
         "name": "Brown",
@@ -30224,7 +30303,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/01_packshot.webp",
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/02_lifestyle.png"
-        ]
+        ],
+        "value": "#854D0E"
       }
     ],
     "models": [
@@ -31957,7 +32037,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/01_packshot.webp",
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/02_lifestyle.png"
-        ]
+        ],
+        "hex": "#FF5500"
       },
       {
         "name": "Blue+Midnight Black",
@@ -31966,7 +32047,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#1E3A8A"
       },
       {
         "name": "Cloud Grey+Blue",
@@ -31975,7 +32057,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp",
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#6B7280"
       },
       {
         "name": "Black+Grey",
@@ -31984,7 +32067,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp",
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#1F2937"
       },
       {
         "name": "Starlight+Pink",
@@ -31993,7 +32077,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/01_packshot.webp",
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/02_lifestyle.png"
-        ]
+        ],
+        "hex": "#F472B6"
       }
     ],
     "models": [
@@ -32226,7 +32311,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/01_packshot.webp",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Hot Pink",
@@ -32236,7 +32322,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/01_packshot.webp",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#DB2777"
       },
       {
         "name": "Lime Green",
@@ -32246,7 +32333,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/01_packshot.webp",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/02_lifestyle.png"
-        ]
+        ],
+        "value": "#84CC16"
       },
       {
         "name": "Aqua Blue",
@@ -32256,7 +32344,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/01_packshot.webp",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#06B6D4"
       },
       {
         "name": "Classic White",
@@ -32266,7 +32355,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/01_packshot.webp",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F1F5F9"
       },
       {
         "name": "Neon Pink",
@@ -32277,7 +32367,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/01_packshot.webp",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/02_lifestyle.png",
           "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/03_lifestyle.png"
-        ]
+        ],
+        "value": "#F43F5E"
       }
     ],
     "models": [
@@ -33276,7 +33367,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
           "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/02_lifestyle.png"
-        ]
+        ],
+        "value": "#38BDF8"
       },
       {
         "name": "Blush Butterfly",
@@ -33286,7 +33378,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
           "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F472B6"
       }
     ],
     "models": [],
@@ -33483,7 +33576,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/pastel-beaded-phone-charm-/pastel-rainbow/01_packshot.webp",
         "images": [
           "assets/products/pastel-beaded-phone-charm-/pastel-rainbow/01_packshot.webp"
-        ]
+        ],
+        "value": "#FBCFE8"
       }
     ],
     "models": [],
@@ -33637,7 +33731,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/crystal-beaded-phone-charm-/crystal-glass/01_packshot.webp",
         "images": [
           "assets/products/crystal-beaded-phone-charm-/crystal-glass/01_packshot.webp"
-        ]
+        ],
+        "value": "#E0E7FF"
       }
     ],
     "models": [],
@@ -33788,7 +33883,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/pink-beaded-heart-phone-charm-/blush-pink/01_packshot.webp",
         "images": [
           "assets/products/pink-beaded-heart-phone-charm-/blush-pink/01_packshot.webp"
-        ]
+        ],
+        "value": "#F472B6"
       }
     ],
     "models": [],
@@ -33934,12 +34030,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "has_colors": true,
     "colors": [
       {
-        "name": "Pastel Mint",
-        "hex": "#A7F3D0",
+        "name": "Strawberry Pink",
+        "hex": "#F472B6",
         "image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp",
         "images": [
           "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp"
-        ]
+        ],
+        "value": "#F472B6"
       }
     ],
     "models": [],
@@ -34090,7 +34187,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
         "images": [
           "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp"
-        ]
+        ],
+        "value": "#FDF4FF"
       }
     ],
     "models": [],
@@ -34252,7 +34350,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/01_packshot.webp",
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EAB308"
       },
       {
         "name": "Violet",
@@ -34262,7 +34361,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/01_packshot.webp",
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/02_lifestyle.png"
-        ]
+        ],
+        "value": "#7C3AED"
       },
       {
         "name": "Black",
@@ -34272,7 +34372,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/01_packshot.webp",
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Green",
@@ -34282,7 +34383,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/01_packshot.webp",
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/02_lifestyle.png"
-        ]
+        ],
+        "value": "#16A34A"
       },
       {
         "name": "Blue",
@@ -34292,7 +34394,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/01_packshot.webp",
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#2563EB"
       },
       {
         "name": "Pink",
@@ -34302,7 +34405,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/01_packshot.webp",
           "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EC4899"
       }
     ],
     "models": [],
@@ -34630,7 +34734,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
         "images": [
           "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp"
-        ]
+        ],
+        "value": "#FDA4AF"
       }
     ],
     "models": [],
@@ -34783,7 +34888,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
           "assets/products/metallic-coil-iphone-charger-case/bloom-edition/02_lifestyle.png"
-        ]
+        ],
+        "value": "#E19975"
       }
     ],
     "models": [],
@@ -34946,7 +35052,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/blue-gingham-iphone-charger-case/sky-blue/01_packshot.webp",
         "images": [
           "assets/products/blue-gingham-iphone-charger-case/sky-blue/01_packshot.webp"
-        ]
+        ],
+        "value": "#7DD3FC"
       }
     ],
     "models": [],
@@ -35102,7 +35209,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
           "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/02_lifestyle.png"
-        ]
+        ],
+        "value": "#DC2626"
       },
       {
         "name": "Brown",
@@ -35112,7 +35220,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/01_packshot.webp",
           "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/02_lifestyle.png"
-        ]
+        ],
+        "value": "#854D0E"
       }
     ],
     "models": [
@@ -35630,7 +35739,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
           "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/02_lifestyle.png"
-        ]
+        ],
+        "value": "#78350F"
       },
       {
         "name": "Caramel Tan",
@@ -35640,7 +35750,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/01_packshot.webp",
           "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/02_lifestyle.png"
-        ]
+        ],
+        "value": "#92400E"
       },
       {
         "name": "Blush Pink",
@@ -35650,7 +35761,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp",
           "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F472B6"
       },
       {
         "name": "Sunshine Yellow",
@@ -35660,7 +35772,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/01_packshot.webp",
           "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FACC15"
       },
       {
         "name": "Aqua Teal",
@@ -35670,7 +35783,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
           "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/02_lifestyle.png"
-        ]
+        ],
+        "value": "#14B8A6"
       },
       {
         "name": "Candy Pink",
@@ -35680,7 +35794,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
           "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FDA4AF"
       }
     ],
     "models": [
@@ -36918,7 +37033,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
           "assets/products/pearl-charm-bow-airpods-cases--copy/pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EC4899"
       },
       {
         "name": "Blue",
@@ -36928,7 +37044,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
           "assets/products/pearl-charm-bow-airpods-cases--copy/blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#2563EB"
       }
     ],
     "models": [
@@ -37444,7 +37561,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/01_packshot.webp",
           "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FBCFE8"
       },
       {
         "name": "Classic White",
@@ -37454,7 +37572,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases-/classic-white/01_packshot.webp",
           "assets/products/pearl-charm-bow-airpods-cases-/classic-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F1F5F9"
       }
     ],
     "models": [
@@ -37968,7 +38087,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/silicone-world-map-travel-phone-case️-copy/holographic/01_packshot.webp",
         "images": [
           "assets/products/silicone-world-map-travel-phone-case️-copy/holographic/01_packshot.webp"
-        ]
+        ],
+        "value": "#C4B5FD"
       }
     ],
     "models": [
@@ -38362,7 +38482,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
           "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/02_lifestyle.png"
-        ]
+        ],
+        "value": "#881337"
       },
       {
         "name": "Ivory White",
@@ -38372,7 +38493,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
           "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F8FAFC"
       },
       {
         "name": "Earth Brown",
@@ -38382,7 +38504,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/01_packshot.webp",
           "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/02_lifestyle.png"
-        ]
+        ],
+        "value": "#713F12"
       },
       {
         "name": "Midnight Black",
@@ -38392,7 +38515,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/01_packshot.webp",
           "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#09090B"
       }
     ],
     "models": [
@@ -40641,7 +40765,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/frost-black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#27272A"
       },
       {
         "name": "Rose Frost",
@@ -40651,7 +40776,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/rose-frost/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FB7185"
       },
       {
         "name": "Ice White",
@@ -40661,7 +40787,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/ice-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F8FAFC"
       },
       {
         "name": "Pastel Purple",
@@ -40671,7 +40798,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/02_lifestyle.png"
-        ]
+        ],
+        "value": "#C084FC"
       },
       {
         "name": "Ice Blue",
@@ -40681,7 +40809,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/ice-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#BAE6FD"
       },
       {
         "name": "Cosmic orange",
@@ -40691,7 +40820,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FF6A3D"
       },
       {
         "name": "Deep Blue",
@@ -40701,7 +40831,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
           "assets/products/trendy-graphic-phone-cases-copy/deep-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#1E40AF"
       }
     ],
     "models": [
@@ -43872,7 +44003,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
           "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/02_lifestyle.png"
-        ]
+        ],
+        "value": "#78350F"
       },
       {
         "name": "Chill Mood",
@@ -43882,7 +44014,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/01_packshot.webp",
           "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/02_lifestyle.png"
-        ]
+        ],
+        "value": "#3B82F6"
       }
     ],
     "models": [
@@ -44802,7 +44935,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FACC15"
       },
       {
         "name": "Bubblegum Pink",
@@ -44812,7 +44946,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FB7185"
       },
       {
         "name": "Cool Teal",
@@ -44822,7 +44957,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/02_lifestyle.png"
-        ]
+        ],
+        "value": "#0D9488"
       },
       {
         "name": "Creamy White",
@@ -44832,7 +44968,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FAF5FF"
       },
       {
         "name": "Jet Black",
@@ -44842,7 +44979,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#000000"
       },
       {
         "name": "Coral Crush",
@@ -44852,7 +44990,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FB7185"
       }
     ],
     "models": [
@@ -48118,7 +48257,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp",
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp"
-        ]
+        ],
+        "value": "#D97706"
       }
     ],
     "models": [
@@ -48515,7 +48655,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silver-3d-love-heart-phone-case/pink/01_packshot.webp",
           "assets/products/silver-3d-love-heart-phone-case/pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EC4899"
       },
       {
         "name": "Off White",
@@ -48525,7 +48666,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp",
           "assets/products/silver-3d-love-heart-phone-case/off-white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F3F4F6"
       },
       {
         "name": "Black",
@@ -48535,7 +48677,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silver-3d-love-heart-phone-case/black/01_packshot.webp",
           "assets/products/silver-3d-love-heart-phone-case/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       }
     ],
     "models": [
@@ -49713,7 +49856,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
           "assets/products/luxury-crossbody-wallet-phone-case/black/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#171513"
       },
       {
         "name": "Beige",
@@ -49722,7 +49866,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
           "assets/products/luxury-crossbody-wallet-phone-case/beige/02_lifestyle.jpg"
-        ]
+        ],
+        "hex": "#D8C7B5"
       },
       {
         "name": "Espresso Brown",
@@ -49730,7 +49875,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/luxury-crossbody-wallet-phone-case/espresso-brown/01_packshot.webp",
         "images": [
           "assets/products/luxury-crossbody-wallet-phone-case/espresso-brown/01_packshot.webp"
-        ]
+        ],
+        "hex": "#5C4033"
       }
     ],
     "models": [
@@ -50428,7 +50574,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/leopard-print-chic-transparent-phone-case/amber-leopard/01_packshot.webp",
         "images": [
           "assets/products/leopard-print-chic-transparent-phone-case/amber-leopard/01_packshot.webp"
-        ]
+        ],
+        "value": "#B45309"
       }
     ],
     "models": [
@@ -50827,7 +50974,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-bow-pearl-chain-phone-case/black/01_packshot.webp",
           "assets/products/luxury-bow-pearl-chain-phone-case/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Beige",
@@ -50837,7 +50985,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/luxury-bow-pearl-chain-phone-case/beige/01_packshot.webp",
           "assets/products/luxury-bow-pearl-chain-phone-case/beige/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F5F5DC"
       }
     ],
     "models": [
@@ -52050,7 +52199,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
           "assets/products/silicone-suction-phone-grip-pad/orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Violet",
@@ -52060,7 +52210,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silicone-suction-phone-grip-pad/violet/01_packshot.webp",
           "assets/products/silicone-suction-phone-grip-pad/violet/02_lifestyle.png"
-        ]
+        ],
+        "value": "#7C3AED"
       },
       {
         "name": "Black",
@@ -52070,7 +52221,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/silicone-suction-phone-grip-pad/black/01_packshot.webp",
           "assets/products/silicone-suction-phone-grip-pad/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       }
     ],
     "models": [],
@@ -52300,7 +52452,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp",
         "images": [
           "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp"
-        ]
+        ],
+        "value": "#E2E8F0"
       }
     ],
     "models": [
@@ -53242,7 +53395,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
           "assets/products/magsafe-wallet-with-kickstand/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Dark Blue",
@@ -53252,7 +53406,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
           "assets/products/magsafe-wallet-with-kickstand/dark-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#1E3A8A"
       },
       {
         "name": "Violet",
@@ -53262,7 +53417,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
           "assets/products/magsafe-wallet-with-kickstand/violet/02_lifestyle.png"
-        ]
+        ],
+        "value": "#7C3AED"
       }
     ],
     "models": [],
@@ -53500,7 +53656,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Dark Blue",
@@ -53510,7 +53667,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#1E3A8A"
       },
       {
         "name": "Black",
@@ -53520,7 +53678,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       }
     ],
     "models": [],
@@ -53751,7 +53910,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magsafe-wireless-charger-usb-c/pure-white/01_packshot.webp",
         "images": [
           "assets/products/magsafe-wireless-charger-usb-c/pure-white/01_packshot.webp"
-        ]
+        ],
+        "value": "#F8FAFC"
       }
     ],
     "models": [],
@@ -53914,7 +54074,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/02_lifestyle.png",
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/03_glow_daylight.webp"
-        ]
+        ],
+        "value": "#2563EB"
       },
       {
         "name": "Neon Green",
@@ -53924,7 +54085,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp",
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/02_lifestyle.png"
-        ]
+        ],
+        "value": "#22C55E"
       },
       {
         "name": "Neon Pink",
@@ -53934,7 +54096,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F43F5E"
       },
       {
         "name": "Neon Orange",
@@ -53944,7 +54107,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Neon Lime",
@@ -53954,7 +54118,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/01_packshot.webp",
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/02_lifestyle.png"
-        ]
+        ],
+        "value": "#A3E635"
       }
     ],
     "models": [
@@ -57580,7 +57745,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/01_packshot.webp",
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Natural Titanium",
@@ -57590,7 +57756,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/01_packshot.webp",
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/02_lifestyle.png"
-        ]
+        ],
+        "value": "#CBD5E1"
       },
       {
         "name": "Blue",
@@ -57600,7 +57767,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp",
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#2563EB"
       },
       {
         "name": "Desert titanium",
@@ -57610,7 +57778,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp",
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/02_lifestyle.png"
-        ]
+        ],
+        "value": "#D4A373"
       }
     ],
     "models": [
@@ -60549,7 +60718,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "White",
@@ -60559,7 +60729,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FFFFFF"
       },
       {
         "name": "Neon Pink",
@@ -60569,7 +60740,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#F43F5E"
       },
       {
         "name": "Neon Orange",
@@ -60579,7 +60751,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#F97316"
       },
       {
         "name": "Brown",
@@ -60589,7 +60762,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/02_lifestyle.png"
-        ]
+        ],
+        "value": "#854D0E"
       }
     ],
     "models": [
@@ -64306,7 +64480,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/space-grey/01_packshot.webp",
         "images": [
           "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/space-grey/01_packshot.webp"
-        ]
+        ],
+        "value": "#374151"
       }
     ],
     "models": [],
@@ -64453,7 +64628,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/titanium-black/01_packshot.webp",
         "images": [
           "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/titanium-black/01_packshot.webp"
-        ]
+        ],
+        "value": "#111827"
       }
     ],
     "models": [],
@@ -64604,7 +64780,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp",
         "images": [
           "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp"
-        ]
+        ],
+        "value": "#CBD5E1"
       }
     ],
     "models": [],
@@ -64750,7 +64927,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/matte-black/01_packshot.webp",
         "images": [
           "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/matte-black/01_packshot.webp"
-        ]
+        ],
+        "value": "#1F2937"
       }
     ],
     "models": [],
@@ -64910,7 +65088,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
           "assets/products/untitled-27jul_18-46/sky-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#38BDF8"
       },
       {
         "name": "Brown",
@@ -64920,7 +65099,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/untitled-27jul_18-46/brown/01_packshot.webp",
           "assets/products/untitled-27jul_18-46/brown/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#854D0E"
       },
       {
         "name": "White",
@@ -64930,7 +65110,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/untitled-27jul_18-46/white/01_packshot.webp",
           "assets/products/untitled-27jul_18-46/white/02_lifestyle.jpg"
-        ]
+        ],
+        "value": "#FFFFFF"
       },
       {
         "name": "Rusty orange",
@@ -64940,7 +65121,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/untitled-27jul_18-46/rusty-orange/01_packshot.webp",
           "assets/products/untitled-27jul_18-46/rusty-orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#C2410C"
       },
       {
         "name": "Pink",
@@ -64950,7 +65132,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
           "assets/products/untitled-27jul_18-46/pink/02_lifestyle.png"
-        ]
+        ],
+        "value": "#EC4899"
       }
     ],
     "models": [
@@ -66349,7 +66532,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/black/01_packshot.webp",
           "assets/products/bumper-case/black/02_lifestyle.png"
-        ]
+        ],
+        "value": "#18181B"
       },
       {
         "name": "Dark Blue",
@@ -66359,7 +66543,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/dark-blue/01_packshot.webp",
           "assets/products/bumper-case/dark-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#1E3A8A"
       },
       {
         "name": "Natural Titanium",
@@ -66369,7 +66554,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/natural-titanium/01_packshot.webp",
           "assets/products/bumper-case/natural-titanium/02_lifestyle.png"
-        ]
+        ],
+        "value": "#CBD5E1"
       },
       {
         "name": "Desert titanium",
@@ -66379,7 +66565,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/desert-titanium/01_packshot.webp",
           "assets/products/bumper-case/desert-titanium/02_lifestyle.png"
-        ]
+        ],
+        "value": "#D4A373"
       },
       {
         "name": "Dark red",
@@ -66389,7 +66576,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/dark-red/01_packshot.webp",
           "assets/products/bumper-case/dark-red/02_lifestyle.png"
-        ]
+        ],
+        "value": "#991B1B"
       },
       {
         "name": "Sierra blue",
@@ -66399,7 +66587,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/sierra-blue/01_packshot.webp",
           "assets/products/bumper-case/sierra-blue/02_lifestyle.png"
-        ]
+        ],
+        "value": "#93C5FD"
       },
       {
         "name": "Cosmic orange",
@@ -66409,7 +66598,8 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "images": [
           "assets/products/bumper-case/cosmic-orange/01_packshot.webp",
           "assets/products/bumper-case/cosmic-orange/02_lifestyle.png"
-        ]
+        ],
+        "value": "#FF6A3D"
       }
     ],
     "models": [

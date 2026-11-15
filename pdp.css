@@ -413,9 +413,9 @@ html, body {
 }
 
 .pdp-vthumb {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   border-radius: 12px;
   border: 1.5px solid #EAE5DB;
   background: #FFFFFF;
@@ -452,9 +452,9 @@ html, body {
 .pdp-main-stage {
   position: relative;
   width: 100%;
-  max-width: min(390px, calc(100vh - 250px));
+  max-width: min(350px, calc(100vh - 270px));
   aspect-ratio: 1 / 1;
-  max-height: min(390px, calc(100vh - 250px));
+  max-height: min(350px, calc(100vh - 270px));
   background: #FFFFFF !important;
   border-radius: 20px;
   border: 1px solid #141416 !important;

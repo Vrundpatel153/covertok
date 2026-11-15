@@ -389,28 +389,35 @@
     recalculatePrice();
   }
 
+  const bustUrl = (u) => {
+    if (!u) return '';
+    const v = '20261115_v11';
+    return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
+  };
+
   // Update Main Image Window with smooth transition & automatic fallback
   function updateMainImage(src, isInitial = false) {
     if (window.__pdpResetZoom) window.__pdpResetZoom();
     const mainImg = document.getElementById('pdpMainImg');
     const stickyThumb = document.getElementById('stickyThumb');
+    const finalSrc = bustUrl(src);
 
     if (mainImg) {
       mainImg.onerror = function() {
         if (this.src.endsWith('.webp')) {
           this.src = this.src.replace(/\.webp$/, '.png');
         } else if (currentProduct && currentProduct.primary_image && this.src !== currentProduct.primary_image) {
-          this.src = currentProduct.primary_image;
+          this.src = bustUrl(currentProduct.primary_image);
         }
       };
 
       if (isInitial) {
-        mainImg.src = src;
+        mainImg.src = finalSrc;
         mainImg.style.opacity = '1';
       } else {
         mainImg.style.opacity = '0.3';
         setTimeout(() => {
-          mainImg.src = src;
+          mainImg.src = finalSrc;
           mainImg.style.opacity = '1';
         }, 120);
       }
@@ -420,7 +427,7 @@
       stickyThumb.onerror = function() {
         if (this.src.endsWith('.webp')) this.src = this.src.replace(/\.webp$/, '.png');
       };
-      stickyThumb.src = src;
+      stickyThumb.src = finalSrc;
       stickyThumb.style.opacity = '1';
     }
   }
@@ -454,29 +461,9 @@
       });
     }
 
-    // 2. Append shared product-level extra / detail images (e.g. extra/01_extra.webp)
-    // NEVER leak other color variant packshots into this color's gallery
-    if (Array.isArray(product.images)) {
-      const otherColorFolders = (product.colors || [])
-        .filter(c => c !== color && c.image)
-        .map(c => {
-          const parts = c.image.split('/');
-          return parts.length >= 2 ? parts[parts.length - 2].toLowerCase() : '';
-        })
-        .filter(f => f && f !== 'extra');
-
-      product.images.forEach(pImg => {
-        if (!pImg) return;
-        const pImgLower = pImg.toLowerCase();
-        const belongsToOtherColor = otherColorFolders.some(otherFolder => pImgLower.includes('/' + otherFolder + '/'));
-        if (!belongsToOtherColor && !colorImgs.includes(pImg)) {
-          if (pImgLower.includes('/extra/') || pImgLower.includes('_extra.') || pImgLower.includes('lifestyle')) {
-            colorImgs.push(pImg);
-          }
-        }
-      });
-    }
-
+    // STRICT COLOR ISOLATION:
+    // When a color variant has dedicated authentic images, return ONLY those images!
+    // Never leak generic AliExpress diagrams, washed-out sketches (e.g. 06_extra.webp), or other color models!
     if (colorImgs.length > 0) {
       return colorImgs;
     }
@@ -529,7 +516,7 @@
     // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-        <img src="${src}" alt="${product.title} angle ${idx + 1}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
       </button>
     `).join('');
 
@@ -593,7 +580,7 @@
           data-img="${c.image || (c.images && c.images[0])}"
           title="${c.name}"
           aria-label="${c.name}">
-          <span class="swatch-circle" style="background: ${c.hex || '#18181B'};"></span>
+          <span class="swatch-circle" style="background: ${c.hex || c.value || '#18181B'};"></span>
         </button>
       `).join('');
 

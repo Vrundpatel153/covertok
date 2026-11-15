@@ -665,6 +665,13 @@
       ? `₹${Math.round(product.original_price).toLocaleString('en-IN')}`
       : '';
 
+    // Cache buster to ensure clients and CDNs immediately receive freshly updated packshots
+    const bustUrl = (u) => {
+      if (!u) return '';
+      const v = '20261115_v11';
+      return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
+    };
+
     // Color Swatches Palette: Strictly only show when product has multiple colors (> 1)
     let paletteHtml = '';
     if (hasColors && product.colors.length > 1) {
@@ -673,9 +680,9 @@
       const remaining = cols.length - 3;
       const dots = visible.map((c, i) => `
         <span class="color-dot ${i === 0 ? 'active' : ''}" 
-              style="background-color: ${c.hex};" 
+              style="background-color: ${c.hex || c.value || '#18181B'};" 
               title="${c.name}"
-              ${c.image ? `data-color-img="${c.image}"` : ''}></span>
+              ${c.image ? `data-color-img="${bustUrl(c.image)}"` : ''}></span>
       `).join('');
       const morePill = remaining > 0 ? `<span class="color-more-pill"><span class="more-pc">+${remaining} more</span><span class="more-mob">+${remaining}</span></span>` : '';
       paletteHtml = `
@@ -690,7 +697,7 @@
       <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'">
         ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
         <div class="card-img-wrap">
-          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+          <img src="${bustUrl(initialImg)}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
         </div>
       </div>
 
@@ -910,7 +917,7 @@
           class="qv-color-swatch ${i === 0 ? 'active' : ''}" 
           data-color="${c.name}" 
           data-img="${c.image}" 
-          style="background: ${c.hex};" 
+          style="background: ${c.hex || c.value || '#18181B'};" 
           title="${c.name}">
         </button>
       `).join('');

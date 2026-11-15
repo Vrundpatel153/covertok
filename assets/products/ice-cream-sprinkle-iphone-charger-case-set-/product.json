@@ -31,12 +31,13 @@
   ],
   "colors": [
     {
-      "name": "Pastel Mint",
-      "hex": "#A7F3D0",
+      "name": "Strawberry Pink",
+      "hex": "#F472B6",
       "image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp",
       "images": [
         "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp"
-      ]
+      ],
+      "value": "#F472B6"
     }
   ],
   "models": [],
