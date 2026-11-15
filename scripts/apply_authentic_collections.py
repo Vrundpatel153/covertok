@@ -86,3 +86,4 @@ import subprocess
 subprocess.run(["python", "scripts/build_product_wise_data.py"], check=True)
 
 print("Successfully synced all 75 products with authentic Covertok collections and flags!")
+

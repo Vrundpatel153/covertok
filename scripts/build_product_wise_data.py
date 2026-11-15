@@ -112,3 +112,4 @@ for p in local_prods:
         created_count += 1
 
 print(f"Successfully generated structured product.json for {created_count} / {len(local_prods)} products!")
+

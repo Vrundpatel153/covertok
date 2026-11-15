@@ -30,3 +30,4 @@ with open("assets/covertok_collections_map.json", "w", encoding="utf-8") as f:
     json.dump(collection_map, f, indent=2)
 
 print("Saved assets/covertok_collections_map.json")
+

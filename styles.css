@@ -56699,11 +56699,18 @@ html body #siteHeader,
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 6px !important;
   margin: 36px 0 28px 0 !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
   position: relative !important;
   z-index: 2 !important;
+}
+
+.catalog-pagination-container::-webkit-scrollbar {
+  display: none !important;
 }
 
 .catalog-page-btn,

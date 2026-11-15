@@ -25,3 +25,4 @@ for hs in home_scripts:
         print(f"{hs}: found {len(ids)} IDs, {len(handles)} handles")
 
 print("All home controllers load dynamically from window.CovertokProducts!")
+

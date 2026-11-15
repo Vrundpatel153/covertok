@@ -1,4 +1,3 @@
-// Covertok Master Products Catalog Data (Auto-optimized WebP)
 window.CovertokProducts = [
   {
     "id": "10017625375018",
