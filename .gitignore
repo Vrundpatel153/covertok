@@ -42,3 +42,6 @@ test_*.png
 cutout_*.png
 
 Covertok_Product_Images.zip
+
+tmp_inspect/
+test_*
