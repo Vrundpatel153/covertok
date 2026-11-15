@@ -1417,26 +1417,27 @@
   }
 
   // Setup Sticky Bar on scroll (Passive, requestAnimationFrame throttled)
-  // Appears when scrolling down just a little past the product heading
+  // Appears ONLY when scrolling down from the product description section
   function setupStickyBar() {
     const bar = document.getElementById('pdpStickyBar');
     const wa = document.getElementById('floatingWhatsappBtn') || document.getElementById('floatingWhatsAppBtn') || document.querySelector('.floating-whatsapp-btn');
     if (!bar) return;
 
-    const getTriggerScrollY = () => {
-      const heading = document.getElementById('pdpProductTitle');
-      if (heading) {
-        const rect = heading.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const headingTop = rect.top + scrollTop;
-        // On mobile, trigger as soon as user scrolls past 280px (into the heading)
-        if (window.innerWidth <= 768) {
-          return Math.min(280, headingTop - 40);
-        }
-        // On desktop, trigger right below heading (~120px)
-        return Math.max(60, headingTop - 40);
+    // Checks if the user has scrolled down past the description section
+    const isPastDescriptionSection = () => {
+      const descBox = document.getElementById('pdpOverviewBox') || document.querySelector('.pdp-description-card');
+      if (descBox) {
+        const rect = descBox.getBoundingClientRect();
+        // The description section bottom has scrolled past the sticky header (~75-80px)
+        return rect.bottom <= 80;
       }
-      return 120;
+      // Fallback: If no description box exists, check main actions row or heading
+      const mainActions = document.querySelector('.pdp-actions-row') || document.getElementById('pdpProductTitle');
+      if (mainActions) {
+        const rect = mainActions.getBoundingClientRect();
+        return rect.bottom <= 0;
+      }
+      return (window.pageYOffset || document.documentElement.scrollTop) > 700;
     };
 
     const footer = document.getElementById('siteFooter') || document.querySelector('.site-footer');
@@ -1469,8 +1470,7 @@
         }
       }
 
-      const threshold = getTriggerScrollY();
-      const isPastTop = scrollTop > threshold;
+      const isPastDesc = isPastDescriptionSection();
 
       // Check if user has scrolled near or into the footer
       let isAtFooter = false;
@@ -1481,7 +1481,7 @@
         isAtFooter = footerRect.top <= (window.innerHeight - 20);
       }
 
-      if (isPastTop && !isAtFooter) {
+      if (isPastDesc && !isAtFooter) {
         bar.classList.add('visible');
         document.body.classList.add('sticky-bar-visible');
         if (wa) wa.classList.add('elevated');
