@@ -4953,15 +4953,9 @@ img {
 
 
 
-  border-radius: 0;
-
-
-
-  clip-path: url(#heroCardClip);
-
-
-
-  -webkit-clip-path: url(#heroCardClip);
+  border-radius: 28px;
+  clip-path: none;
+  -webkit-clip-path: none;
 
 
 
@@ -52222,12 +52216,9 @@ a.footer-contact-main:hover {
   margin: 0 !important;
 
   background: #0A0A0C !important;
-
-  border-radius: 0 !important;
-
-  clip-path: url(#heroCardClip) !important;
-
-  -webkit-clip-path: url(#heroCardClip) !important;
+  border-radius: 28px !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
 
   padding: 0 !important;
 
@@ -52251,12 +52242,12 @@ a.footer-contact-main:hover {
   .hero-hand-slideshow {
     position: absolute !important;
     bottom: 0 !important;
-    right: 0 !important;
+    right: clamp(16px, 2.5vw, 40px) !important;
     left: auto !important;
     transform: none !important;
-    height: clamp(310px, 62%, 405px) !important;
-    max-height: 64% !important;
-    width: clamp(390px, 41vw, 610px) !important;
+    height: clamp(270px, 50%, 350px) !important;
+    max-height: 52% !important;
+    width: clamp(320px, 34vw, 480px) !important;
     z-index: 4 !important;
     display: flex !important;
     align-items: flex-end !important;
@@ -53425,9 +53416,9 @@ body.home-page .hero-card {
   max-height: 740px !important;
   margin: 0 !important;
   background: #0A0A0C !important;
-  border-radius: 0 !important;
-  clip-path: url(#heroCardClip) !important;
-  -webkit-clip-path: url(#heroCardClip) !important;
+  border-radius: 28px !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
   padding: 0 !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12) !important;
   border: none !important;
@@ -56066,8 +56057,9 @@ html body #siteHeader,
   }
 
   body.home-page .hero-card {
-    clip-path: url(#heroCardClip) !important;
-    -webkit-clip-path: url(#heroCardClip) !important;
+    border-radius: 28px !important;
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
   }
 }
 

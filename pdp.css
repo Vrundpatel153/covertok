@@ -385,9 +385,9 @@ html, body {
 .pdp-gallery-wrap {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   align-items: center;
-  max-width: 320px;
+  max-width: 440px;
   width: 100%;
   margin: 0 auto;
 }
@@ -397,14 +397,14 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
+  justify-content: flex-start;
+  gap: 8px;
   width: 100%;
-  max-width: 320px;
+  max-width: 440px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding: 3px 2px 4px;
+  scrollbar-width: thin;
+  padding: 4px 4px 8px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -3117,13 +3117,13 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 440px !important;
     min-width: 0 !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    gap: 6px !important;
-    justify-content: center !important;
-    padding: 2px 2px 4px !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+    padding: 4px 4px 8px !important;
     scrollbar-width: none !important;
     box-sizing: border-box !important;
   }

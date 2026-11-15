@@ -29,9 +29,37 @@
       currentProduct = resolvePDPProduct();
     }
 
-    // Preserve requested color or alias before rewriting URL
+    // Preserve requested color, handle, or alias ID before rewriting URL
     const initialUrlParams = new URLSearchParams(window.location.search);
     const initialReqColor = (initialUrlParams.get('color') || '').trim();
+    const initialReqHandle = (initialUrlParams.get('handle') || '').trim();
+    const initialReqId = (initialUrlParams.get('id') || initialUrlParams.get('prodId') || '').trim();
+    window.__PDP_INITIAL_REQ__ = { handle: initialReqHandle, id: initialReqId, color: initialReqColor };
+
+    // Determine target color from alias map if applicable
+    const aliasColorMap = {
+      'magnetic-loop-smartwatch-bands-dual-color-edition-copy': 'Cloud Grey+Blue',
+      'magnetic-loop-smartwatch-bands-dual-color-edition-copy-1': 'Black+Grey',
+      'magnetic-loop-smartwatch-bands-dual-color-edition-copy-2': 'Starlight+Pink',
+      'magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy': 'Orange+Midnight Black',
+      '9871354528042': 'Cloud Grey+Blue',
+      '9871358624042': 'Black+Grey',
+      '9871367274794': 'Starlight+Pink',
+      '9871361442090': 'Orange+Midnight Black',
+      'premium-magnetic-leather-loop-straps-for-apple-watch-copy': 'Black',
+      'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy': 'Light Blue',
+      'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1': 'Orange+Grey',
+      'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2': 'Grey+Black',
+      'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3': 'Yellow',
+      '9873108828458': 'Yellow',
+      '9873108435242': 'Grey+Black',
+      '9873108238634': 'Orange+Grey',
+      '9873108074794': 'Light Blue',
+      '9873108042026': 'Black',
+      'silver-3d-love-heart-phone-case-copy': 'Espresso Brown',
+      '9869730382122': 'Espresso Brown'
+    };
+    const targetAliasColor = aliasColorMap[initialReqHandle] || aliasColorMap[initialReqId] || initialReqColor;
 
     // Ensure address bar reflects clean product URL (product.html?handle=<handle> or /products/<handle>)
     if (currentProduct && currentProduct.handle && window.history && window.history.replaceState) {
@@ -40,8 +68,8 @@
         let cleanUrl = isPathStyle 
           ? `/products/${currentProduct.handle}`
           : `product.html?handle=${currentProduct.handle}`;
-        if (initialReqColor) {
-          cleanUrl += `&color=${encodeURIComponent(initialReqColor)}`;
+        if (targetAliasColor) {
+          cleanUrl += `&color=${encodeURIComponent(targetAliasColor)}`;
         }
         window.history.replaceState({ id: currentProduct.id, handle: currentProduct.handle }, '', cleanUrl);
       } catch(e) {}
@@ -345,21 +373,33 @@
 
     if (hasColors) {
       const urlParams = new URLSearchParams(window.location.search);
-      const reqHandle = (urlParams.get('handle') || '').trim();
-      const reqColor = (urlParams.get('color') || '').trim();
+      const initReq = window.__PDP_INITIAL_REQ__ || {};
+      const reqHandle = (urlParams.get('handle') || initReq.handle || '').trim();
+      const reqId = (urlParams.get('id') || urlParams.get('prodId') || initReq.id || '').trim();
+      const reqColor = (urlParams.get('color') || initReq.color || '').trim();
       const aliasColorMap = {
         'magnetic-loop-smartwatch-bands-dual-color-edition-copy': 'Cloud Grey+Blue',
         'magnetic-loop-smartwatch-bands-dual-color-edition-copy-1': 'Black+Grey',
         'magnetic-loop-smartwatch-bands-dual-color-edition-copy-2': 'Starlight+Pink',
         'magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy': 'Orange+Midnight Black',
+        '9871354528042': 'Cloud Grey+Blue',
+        '9871358624042': 'Black+Grey',
+        '9871367274794': 'Starlight+Pink',
+        '9871361442090': 'Orange+Midnight Black',
         'premium-magnetic-leather-loop-straps-for-apple-watch-copy': 'Black',
         'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy': 'Light Blue',
         'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1': 'Orange+Grey',
         'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2': 'Grey+Black',
         'premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3': 'Yellow',
-        'silver-3d-love-heart-phone-case-copy': 'Espresso Brown'
+        '9873108828458': 'Yellow',
+        '9873108435242': 'Grey+Black',
+        '9873108238634': 'Orange+Grey',
+        '9873108074794': 'Light Blue',
+        '9873108042026': 'Black',
+        'silver-3d-love-heart-phone-case-copy': 'Espresso Brown',
+        '9869730382122': 'Espresso Brown'
       };
-      const targetColorName = aliasColorMap[reqHandle] || reqColor;
+      const targetColorName = aliasColorMap[reqHandle] || aliasColorMap[reqId] || reqColor;
       if (targetColorName) {
         const found = product.colors.find(c => c.name.toLowerCase() === targetColorName.toLowerCase());
         if (found) selectedColor = found;
@@ -398,7 +438,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261116_v15';
+    const v = '20261116_v16';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
