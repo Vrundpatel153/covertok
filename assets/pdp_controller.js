@@ -391,7 +391,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261115_v11';
+    const v = '20261115_v12';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -804,7 +804,7 @@
         <div class="pdp-perk-item">
           <span class="pdp-perk-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path>
+              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v12"></path>
               <path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path>
               <circle cx="7" cy="18" r="2"></circle>
               <circle cx="17" cy="18" r="2"></circle>
@@ -844,7 +844,7 @@
         <div class="pdp-perk-item">
           <span class="pdp-perk-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path>
+              <path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v12"></path>
               <path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path>
               <circle cx="7" cy="18" r="2"></circle>
               <circle cx="17" cy="18" r="2"></circle>

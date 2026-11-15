@@ -22,9 +22,9 @@
   "is_new": true,
   "is_mens": false,
   "is_womens": false,
-  "primary_image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp",
+  "primary_image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp",
   "images": [
-    "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp",
+    "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp",
     "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/extra/01_extra.webp",
     "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/extra/02_extra.webp",
     "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/extra/03_extra.webp"
@@ -33,9 +33,9 @@
     {
       "name": "Strawberry Pink",
       "hex": "#F472B6",
-      "image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp",
+      "image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp",
       "images": [
-        "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/pastel-mint/01_packshot.webp"
+        "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp"
       ],
       "value": "#F472B6"
     }
