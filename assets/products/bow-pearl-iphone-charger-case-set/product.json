@@ -1,0 +1,77 @@
+{
+  "id": "9870550761770",
+  "handle": "bow-pearl-iphone-charger-case-set-✨🎀",
+  "title": "Bow Pearl iPhone Charger Case Set",
+  "price": 499.0,
+  "original_price": 749.0,
+  "discount_percent": 33,
+  "rating": 4.7,
+  "reviews_count": 350,
+  "category": "charger-covers",
+  "category_name": "Charger Cases",
+  "collections": [
+    "all",
+    "charger-covers",
+    "new-arrivals",
+    "our-bestsellers"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": true,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
+  "images": [
+    "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
+    "assets/products/bow-pearl-iphone-charger-case-set-/extra/01_extra.webp",
+    "assets/products/bow-pearl-iphone-charger-case-set-/extra/02_extra.webp",
+    "assets/products/bow-pearl-iphone-charger-case-set-/extra/03_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Pearl White",
+      "hex": "#FDF4FF",
+      "image": "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
+      "images": [
+        "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50529436533034,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "499.00",
+      "grams": 0,
+      "compare_at_price": "749.00",
+      "position": 1,
+      "product_id": 9870550761770,
+      "created_at": "2025-08-25T16:13:25+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Elevate your charging style with our Bow Pearl iPhone Charger Case Set. Featuring a glittery white base with delicate mini bow designs and pearl accents, this charger case transforms your regular adapter into a fashionable accessory. The set includes a matching cable cover and a stylish scrunchie-inspired cord protector, combining elegance with functionality. Durable, protective, and absolutely aesthetic—perfect for keeping your charger safe while adding a luxe touch to your everyday essentials.",
+  "description_html": "<p>Description:<br>Elevate your charging style with our Bow Pearl iPhone Charger Case Set. Featuring a glittery white base with delicate mini bow designs and pearl accents, this charger case transforms your regular adapter into a fashionable accessory. The set includes a matching cable cover and a stylish scrunchie-inspired cord protector, combining elegance with functionality. Durable, protective, and absolutely aesthetic—perfect for keeping your charger safe while adding a luxe touch to your everyday essentials.</p>"
+}

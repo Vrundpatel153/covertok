@@ -438,7 +438,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261116_v19';
+    const v = '20261116_v20';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -625,7 +625,7 @@
 
       colorGrid.innerHTML = product.colors.map((c, idx) => `
         <button type="button" 
-          class="pdp-color-swatch ${(selectedColor ? c.name === selectedColor.name : idx === 0) ? 'active' : ''}" 
+          class="pdp-color-swatch ${(selectedColor ? (c.name || '').trim().toLowerCase() === (selectedColor.name || '').trim().toLowerCase() : idx === 0) ? 'active' : ''}" 
           data-color="${c.name}" 
           data-img="${c.image || (c.images && c.images[0])}"
           title="${c.name}"

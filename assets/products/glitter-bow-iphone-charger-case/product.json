@@ -1,0 +1,76 @@
+{
+  "id": "9870544142634",
+  "handle": "glitter-bow-iphone-charger-case-✨🎀",
+  "title": "Glitter Bow iPhone Charger Case",
+  "price": 499.0,
+  "original_price": 749.0,
+  "discount_percent": 33,
+  "rating": 4.9,
+  "reviews_count": 434,
+  "category": "charger-covers",
+  "category_name": "Charger Cases",
+  "collections": [
+    "all",
+    "charger-covers",
+    "new-arrivals"
+  ],
+  "vendor": "Covertok",
+  "product_type": "",
+  "tags": [],
+  "is_bestseller": false,
+  "is_new": true,
+  "is_mens": false,
+  "is_womens": false,
+  "primary_image": "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
+  "images": [
+    "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
+    "assets/products/glitter-bow-iphone-charger-case-/extra/01_extra.webp",
+    "assets/products/glitter-bow-iphone-charger-case-/extra/02_extra.webp",
+    "assets/products/glitter-bow-iphone-charger-case-/extra/03_extra.webp"
+  ],
+  "colors": [
+    {
+      "name": "Rose Gold",
+      "hex": "#FDA4AF",
+      "image": "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
+      "images": [
+        "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp"
+      ]
+    }
+  ],
+  "models": [],
+  "model_label": "Select Model",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "variants": [
+    {
+      "id": 50529390559530,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": null,
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "price": "499.00",
+      "grams": 0,
+      "compare_at_price": "749.00",
+      "position": 1,
+      "product_id": 9870544142634,
+      "created_at": "2025-08-25T15:39:10+05:30",
+      "updated_at": "2026-11-15T01:28:00+05:30"
+    }
+  ],
+  "features": [],
+  "description_text": "Description: Give your charger a glamorous upgrade with our Glitter Bow iPhone Charger Case. Designed with sparkling glitter, elegant pearls, and mini black bow accents, this case turns your regular adapter into a stylish accessory. The durable protective shell keeps your charger safe from scratches, dust, and wear, while the coiled black cable adds extra durability and a sleek touch. Perfect for those who love mixing fashion with function—charging has never looked this pretty!",
+  "description_html": "<p>Description:<br>Give your charger a glamorous upgrade with our Glitter Bow iPhone Charger Case. Designed with sparkling glitter, elegant pearls, and mini black bow accents, this case turns your regular adapter into a stylish accessory. The durable protective shell keeps your charger safe from scratches, dust, and wear, while the coiled black cable adds extra durability and a sleek touch. Perfect for those who love mixing fashion with function—charging has never looked this pretty!</p>"
+}

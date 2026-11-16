@@ -33175,27 +33175,27 @@ window.CovertokProducts = [
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/blue-midnight-black/01_packshot.webp"
         ]
       },
       {
         "name": "Black+Grey",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/black-grey/01_packshot.webp"
         ]
       },
       {
         "name": "Orange+Midnight Black",
         "hex": "#EA580C",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/orange-midnight-black/01_packshot.webp"
         ]
       }
     ],
@@ -33696,27 +33696,27 @@ window.CovertokProducts = [
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/blue-midnight-black/01_packshot.webp"
         ]
       },
       {
         "name": "Black+Grey",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/black-grey/01_packshot.webp"
         ]
       },
       {
         "name": "Starlight+Pink",
         "hex": "#F472B6",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/starlight-pink/01_packshot.webp"
         ]
       }
     ],
@@ -33942,36 +33942,36 @@ window.CovertokProducts = [
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/blue-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/blue-midnight-black/01_packshot.webp"
         ]
       },
       {
         "name": "Black+Grey",
         "hex": "#18181B",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/black-grey/01_packshot.webp"
         ]
       },
       {
         "name": "Starlight+Pink",
         "hex": "#F472B6",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/starlight-pink/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/starlight-pink/01_packshot.webp"
         ]
       },
       {
         "name": "Orange+Midnight Black",
         "hex": "#EA580C",
         "price": 999.0,
-        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/orange-midnight-black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/orange-midnight-black/01_packshot.webp"
         ]
       }
     ],
@@ -34436,27 +34436,27 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/01_packshot.webp",
+    "primary_image": "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
     "images": [
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/02_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/02_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/02_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/02_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/02_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/02_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/03_lifestyle.png",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/extra/01_extra.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/extra/02_extra.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/extra/03_extra.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/extra/04_extra.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/extra/05_extra.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous-/extra/06_extra.webp"
+      "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/02_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/02_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/01_packshot.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/02_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/01_packshot.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/02_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/01_packshot.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/02_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/01_packshot.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/02_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/03_lifestyle.png",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/extra/01_extra.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/extra/02_extra.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/extra/03_extra.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/extra/04_extra.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/extra/05_extra.webp",
+      "assets/products/glow-sand-airpods-cases-playful-luminous/extra/06_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -34464,10 +34464,10 @@ window.CovertokProducts = [
         "name": "Neon Orange",
         "hex": "#F97316",
         "price": 699.0,
-        "image": "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/01_packshot.webp",
+        "image": "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-orange/02_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/02_lifestyle.png"
         ],
         "value": "#F97316"
       },
@@ -34475,10 +34475,10 @@ window.CovertokProducts = [
         "name": "Hot Pink",
         "hex": "#DB2777",
         "price": 699.0,
-        "image": "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/01_packshot.webp",
+        "image": "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/hot-pink/02_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/02_lifestyle.png"
         ],
         "value": "#DB2777"
       },
@@ -34486,10 +34486,10 @@ window.CovertokProducts = [
         "name": "Lime Green",
         "hex": "#84CC16",
         "price": 699.0,
-        "image": "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/01_packshot.webp",
+        "image": "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/lime-green/02_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/01_packshot.webp",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/02_lifestyle.png"
         ],
         "value": "#84CC16"
       },
@@ -34497,10 +34497,10 @@ window.CovertokProducts = [
         "name": "Aqua Blue",
         "hex": "#06B6D4",
         "price": 699.0,
-        "image": "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/01_packshot.webp",
+        "image": "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/aqua-blue/02_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/01_packshot.webp",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/02_lifestyle.png"
         ],
         "value": "#06B6D4"
       },
@@ -34508,10 +34508,10 @@ window.CovertokProducts = [
         "name": "Classic White",
         "hex": "#F1F5F9",
         "price": 699.0,
-        "image": "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/01_packshot.webp",
+        "image": "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/classic-white/02_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/01_packshot.webp",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/02_lifestyle.png"
         ],
         "value": "#F1F5F9"
       },
@@ -34519,11 +34519,11 @@ window.CovertokProducts = [
         "name": "Neon Pink",
         "hex": "#F43F5E",
         "price": 699.0,
-        "image": "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/01_packshot.webp",
+        "image": "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/02_lifestyle.png",
-          "assets/products/glow-sand-airpods-cases-playful-luminous-/neon-pink/03_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/01_packshot.webp",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/02_lifestyle.png",
+          "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/03_lifestyle.png"
         ],
         "value": "#F43F5E"
       }
@@ -35502,17 +35502,17 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
+    "primary_image": "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
     "images": [
-      "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/02_lifestyle.png",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/02_lifestyle.png",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/extra/01_extra.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/extra/02_extra.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/extra/03_extra.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/extra/04_extra.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm-/extra/05_extra.webp"
+      "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
+      "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/02_lifestyle.png",
+      "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
+      "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/02_lifestyle.png",
+      "assets/products/crystal-butterfly-beaded-phone-charm/extra/01_extra.webp",
+      "assets/products/crystal-butterfly-beaded-phone-charm/extra/02_extra.webp",
+      "assets/products/crystal-butterfly-beaded-phone-charm/extra/03_extra.webp",
+      "assets/products/crystal-butterfly-beaded-phone-charm/extra/04_extra.webp",
+      "assets/products/crystal-butterfly-beaded-phone-charm/extra/05_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -35520,10 +35520,10 @@ window.CovertokProducts = [
         "name": "Ocean Butterfly",
         "hex": "#38BDF8",
         "price": 249.0,
-        "image": "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
+        "image": "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
         "images": [
-          "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/01_packshot.webp",
-          "assets/products/crystal-butterfly-beaded-phone-charm-/ocean-butterfly/02_lifestyle.png"
+          "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
+          "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/02_lifestyle.png"
         ],
         "value": "#38BDF8"
       },
@@ -35531,10 +35531,10 @@ window.CovertokProducts = [
         "name": "Blush Butterfly",
         "hex": "#F472B6",
         "price": 249.0,
-        "image": "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
+        "image": "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
         "images": [
-          "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/01_packshot.webp",
-          "assets/products/crystal-butterfly-beaded-phone-charm-/blush-butterfly/02_lifestyle.png"
+          "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
+          "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/02_lifestyle.png"
         ],
         "value": "#F472B6"
       }
@@ -35718,21 +35718,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/pastel-beaded-phone-charm-/pastel-rainbow/01_packshot.webp",
+    "primary_image": "assets/products/pastel-beaded-phone-charm/pastel-rainbow/01_packshot.webp",
     "images": [
-      "assets/products/pastel-beaded-phone-charm-/pastel-rainbow/01_packshot.webp",
-      "assets/products/pastel-beaded-phone-charm-/extra/01_extra.webp",
-      "assets/products/pastel-beaded-phone-charm-/extra/02_extra.webp",
-      "assets/products/pastel-beaded-phone-charm-/extra/03_extra.webp"
+      "assets/products/pastel-beaded-phone-charm/pastel-rainbow/01_packshot.webp",
+      "assets/products/pastel-beaded-phone-charm/extra/01_extra.webp",
+      "assets/products/pastel-beaded-phone-charm/extra/02_extra.webp",
+      "assets/products/pastel-beaded-phone-charm/extra/03_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Pastel Rainbow",
         "hex": "#FBCFE8",
-        "image": "assets/products/pastel-beaded-phone-charm-/pastel-rainbow/01_packshot.webp",
+        "image": "assets/products/pastel-beaded-phone-charm/pastel-rainbow/01_packshot.webp",
         "images": [
-          "assets/products/pastel-beaded-phone-charm-/pastel-rainbow/01_packshot.webp"
+          "assets/products/pastel-beaded-phone-charm/pastel-rainbow/01_packshot.webp"
         ],
         "value": "#FBCFE8"
       }
@@ -35870,24 +35870,24 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/crystal-beaded-phone-charm-/crystal-glass/01_packshot.webp",
+    "primary_image": "assets/products/crystal-beaded-phone-charm/crystal-glass/01_packshot.webp",
     "images": [
-      "assets/products/crystal-beaded-phone-charm-/crystal-glass/01_packshot.webp",
-      "assets/products/crystal-beaded-phone-charm-/extra/01_extra.webp",
-      "assets/products/crystal-beaded-phone-charm-/extra/02_extra.webp",
-      "assets/products/crystal-beaded-phone-charm-/extra/03_extra.webp",
-      "assets/products/crystal-beaded-phone-charm-/extra/04_extra.webp",
-      "assets/products/crystal-beaded-phone-charm-/extra/05_extra.webp",
-      "assets/products/crystal-beaded-phone-charm-/extra/06_extra.webp"
+      "assets/products/crystal-beaded-phone-charm/crystal-glass/01_packshot.webp",
+      "assets/products/crystal-beaded-phone-charm/extra/01_extra.webp",
+      "assets/products/crystal-beaded-phone-charm/extra/02_extra.webp",
+      "assets/products/crystal-beaded-phone-charm/extra/03_extra.webp",
+      "assets/products/crystal-beaded-phone-charm/extra/04_extra.webp",
+      "assets/products/crystal-beaded-phone-charm/extra/05_extra.webp",
+      "assets/products/crystal-beaded-phone-charm/extra/06_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Crystal Glass",
         "hex": "#E0E7FF",
-        "image": "assets/products/crystal-beaded-phone-charm-/crystal-glass/01_packshot.webp",
+        "image": "assets/products/crystal-beaded-phone-charm/crystal-glass/01_packshot.webp",
         "images": [
-          "assets/products/crystal-beaded-phone-charm-/crystal-glass/01_packshot.webp"
+          "assets/products/crystal-beaded-phone-charm/crystal-glass/01_packshot.webp"
         ],
         "value": "#E0E7FF"
       }
@@ -36025,21 +36025,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/pink-beaded-heart-phone-charm-/blush-pink/01_packshot.webp",
+    "primary_image": "assets/products/pink-beaded-heart-phone-charm/blush-pink/01_packshot.webp",
     "images": [
-      "assets/products/pink-beaded-heart-phone-charm-/blush-pink/01_packshot.webp",
-      "assets/products/pink-beaded-heart-phone-charm-/extra/01_extra.webp",
-      "assets/products/pink-beaded-heart-phone-charm-/extra/02_extra.webp",
-      "assets/products/pink-beaded-heart-phone-charm-/extra/03_extra.webp"
+      "assets/products/pink-beaded-heart-phone-charm/blush-pink/01_packshot.webp",
+      "assets/products/pink-beaded-heart-phone-charm/extra/01_extra.webp",
+      "assets/products/pink-beaded-heart-phone-charm/extra/02_extra.webp",
+      "assets/products/pink-beaded-heart-phone-charm/extra/03_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Blush Pink",
         "hex": "#F472B6",
-        "image": "assets/products/pink-beaded-heart-phone-charm-/blush-pink/01_packshot.webp",
+        "image": "assets/products/pink-beaded-heart-phone-charm/blush-pink/01_packshot.webp",
         "images": [
-          "assets/products/pink-beaded-heart-phone-charm-/blush-pink/01_packshot.webp"
+          "assets/products/pink-beaded-heart-phone-charm/blush-pink/01_packshot.webp"
         ],
         "value": "#F472B6"
       }
@@ -36177,21 +36177,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp",
+    "primary_image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set/strawberry-pink/01_packshot.webp",
     "images": [
-      "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp",
-      "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/extra/01_extra.webp",
-      "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/extra/02_extra.webp",
-      "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/extra/03_extra.webp"
+      "assets/products/ice-cream-sprinkle-iphone-charger-case-set/strawberry-pink/01_packshot.webp",
+      "assets/products/ice-cream-sprinkle-iphone-charger-case-set/extra/01_extra.webp",
+      "assets/products/ice-cream-sprinkle-iphone-charger-case-set/extra/02_extra.webp",
+      "assets/products/ice-cream-sprinkle-iphone-charger-case-set/extra/03_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Strawberry Pink",
         "hex": "#F472B6",
-        "image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp",
+        "image": "assets/products/ice-cream-sprinkle-iphone-charger-case-set/strawberry-pink/01_packshot.webp",
         "images": [
-          "assets/products/ice-cream-sprinkle-iphone-charger-case-set-/strawberry-pink/01_packshot.webp"
+          "assets/products/ice-cream-sprinkle-iphone-charger-case-set/strawberry-pink/01_packshot.webp"
         ],
         "value": "#F472B6"
       }
@@ -36329,21 +36329,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
+    "primary_image": "assets/products/bow-pearl-iphone-charger-case-set/pearl-white/01_packshot.webp",
     "images": [
-      "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
-      "assets/products/bow-pearl-iphone-charger-case-set-/extra/01_extra.webp",
-      "assets/products/bow-pearl-iphone-charger-case-set-/extra/02_extra.webp",
-      "assets/products/bow-pearl-iphone-charger-case-set-/extra/03_extra.webp"
+      "assets/products/bow-pearl-iphone-charger-case-set/pearl-white/01_packshot.webp",
+      "assets/products/bow-pearl-iphone-charger-case-set/extra/01_extra.webp",
+      "assets/products/bow-pearl-iphone-charger-case-set/extra/02_extra.webp",
+      "assets/products/bow-pearl-iphone-charger-case-set/extra/03_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Pearl White",
         "hex": "#FDF4FF",
-        "image": "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp",
+        "image": "assets/products/bow-pearl-iphone-charger-case-set/pearl-white/01_packshot.webp",
         "images": [
-          "assets/products/bow-pearl-iphone-charger-case-set-/pearl-white/01_packshot.webp"
+          "assets/products/bow-pearl-iphone-charger-case-set/pearl-white/01_packshot.webp"
         ],
         "value": "#FDF4FF"
       }
@@ -36480,22 +36480,22 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/01_packshot.webp",
+    "primary_image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
     "images": [
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/02_lifestyle.png",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/02_lifestyle.png",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/02_lifestyle.png",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/02_lifestyle.png",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/02_lifestyle.png",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/02_lifestyle.png",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/extra/01_extra.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable-/extra/02_extra.webp"
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/02_lifestyle.png",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/02_lifestyle.png",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/02_lifestyle.png",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/02_lifestyle.png",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/02_lifestyle.png",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/02_lifestyle.png",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/extra/01_extra.webp",
+      "assets/products/heart-iphone-charger-case-set-with-matching-cable/extra/02_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -36503,10 +36503,10 @@ window.CovertokProducts = [
         "name": "Yellow",
         "hex": "#EAB308",
         "price": 499.0,
-        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/01_packshot.webp",
+        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/yellow/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/02_lifestyle.png"
         ],
         "value": "#EAB308"
       },
@@ -36514,10 +36514,10 @@ window.CovertokProducts = [
         "name": "Violet",
         "hex": "#7C3AED",
         "price": 499.0,
-        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/01_packshot.webp",
+        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/violet/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/02_lifestyle.png"
         ],
         "value": "#7C3AED"
       },
@@ -36525,10 +36525,10 @@ window.CovertokProducts = [
         "name": "Black",
         "hex": "#18181B",
         "price": 499.0,
-        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/01_packshot.webp",
+        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/black/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/02_lifestyle.png"
         ],
         "value": "#18181B"
       },
@@ -36536,10 +36536,10 @@ window.CovertokProducts = [
         "name": "Green",
         "hex": "#16A34A",
         "price": 499.0,
-        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/01_packshot.webp",
+        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/green/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/02_lifestyle.png"
         ],
         "value": "#16A34A"
       },
@@ -36547,10 +36547,10 @@ window.CovertokProducts = [
         "name": "Blue",
         "hex": "#2563EB",
         "price": 499.0,
-        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/01_packshot.webp",
+        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/blue/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/02_lifestyle.png"
         ],
         "value": "#2563EB"
       },
@@ -36558,10 +36558,10 @@ window.CovertokProducts = [
         "name": "Pink",
         "hex": "#EC4899",
         "price": 499.0,
-        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/01_packshot.webp",
+        "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable-/pink/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/02_lifestyle.png"
         ],
         "value": "#EC4899"
       }
@@ -36876,21 +36876,21 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
+    "primary_image": "assets/products/glitter-bow-iphone-charger-case/rose-gold/01_packshot.webp",
     "images": [
-      "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
-      "assets/products/glitter-bow-iphone-charger-case-/extra/01_extra.webp",
-      "assets/products/glitter-bow-iphone-charger-case-/extra/02_extra.webp",
-      "assets/products/glitter-bow-iphone-charger-case-/extra/03_extra.webp"
+      "assets/products/glitter-bow-iphone-charger-case/rose-gold/01_packshot.webp",
+      "assets/products/glitter-bow-iphone-charger-case/extra/01_extra.webp",
+      "assets/products/glitter-bow-iphone-charger-case/extra/02_extra.webp",
+      "assets/products/glitter-bow-iphone-charger-case/extra/03_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Rose Gold",
         "hex": "#FDA4AF",
-        "image": "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp",
+        "image": "assets/products/glitter-bow-iphone-charger-case/rose-gold/01_packshot.webp",
         "images": [
-          "assets/products/glitter-bow-iphone-charger-case-/rose-gold/01_packshot.webp"
+          "assets/products/glitter-bow-iphone-charger-case/rose-gold/01_packshot.webp"
         ],
         "value": "#FDA4AF"
       }
@@ -39703,16 +39703,16 @@ window.CovertokProducts = [
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/01_packshot.webp",
+    "primary_image": "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
     "images": [
-      "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/01_packshot.webp",
-      "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/02_lifestyle.png",
-      "assets/products/pearl-charm-bow-airpods-cases-/classic-white/01_packshot.webp",
-      "assets/products/pearl-charm-bow-airpods-cases-/classic-white/02_lifestyle.png",
-      "assets/products/pearl-charm-bow-airpods-cases-/extra/01_extra.webp",
-      "assets/products/pearl-charm-bow-airpods-cases-/extra/02_extra.webp",
-      "assets/products/pearl-charm-bow-airpods-cases-/extra/03_extra.webp",
-      "assets/products/pearl-charm-bow-airpods-cases-/extra/04_extra.webp"
+      "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
+      "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/02_lifestyle.png",
+      "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
+      "assets/products/pearl-charm-bow-airpods-cases/classic-white/02_lifestyle.png",
+      "assets/products/pearl-charm-bow-airpods-cases/extra/01_extra.webp",
+      "assets/products/pearl-charm-bow-airpods-cases/extra/02_extra.webp",
+      "assets/products/pearl-charm-bow-airpods-cases/extra/03_extra.webp",
+      "assets/products/pearl-charm-bow-airpods-cases/extra/04_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -39720,10 +39720,10 @@ window.CovertokProducts = [
         "name": "Sweet Pink",
         "hex": "#FBCFE8",
         "price": 549.0,
-        "image": "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/01_packshot.webp",
+        "image": "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
         "images": [
-          "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/01_packshot.webp",
-          "assets/products/pearl-charm-bow-airpods-cases-/sweet-pink/02_lifestyle.png"
+          "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
+          "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/02_lifestyle.png"
         ],
         "value": "#FBCFE8"
       },
@@ -39731,10 +39731,10 @@ window.CovertokProducts = [
         "name": "Classic White",
         "hex": "#F1F5F9",
         "price": 549.0,
-        "image": "assets/products/pearl-charm-bow-airpods-cases-/classic-white/01_packshot.webp",
+        "image": "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
         "images": [
-          "assets/products/pearl-charm-bow-airpods-cases-/classic-white/01_packshot.webp",
-          "assets/products/pearl-charm-bow-airpods-cases-/classic-white/02_lifestyle.png"
+          "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
+          "assets/products/pearl-charm-bow-airpods-cases/classic-white/02_lifestyle.png"
         ],
         "value": "#F1F5F9"
       }
