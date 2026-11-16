@@ -1,4 +1,5 @@
-window.CovertokProducts = window.PRODUCTS_DATA = [
+// Covertok Full 75-Product Canonical Dataset
+window.CovertokProducts = [
   {
     "id": "10017625375018",
     "handle": "premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount",
@@ -26595,116 +26596,1097 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ]
   },
   {
-    "id": "9873118101802",
-    "handle": "rugged-armor-protective-watch-case-with-sport-band",
-    "alias_handles": [
-      "premium-silicone-watch-bands-available-in-18-colors-copy",
-      "rugged-armor-protective-watch-case-with-sport-band-copy",
-      "transparent-rugged-apple-watch-case-with-orange-sports-strap-copy",
-      "transparent-rugged-protective-apple-watch-case-with-strap-copy"
-    ],
-    "alias_ids": [
-      "9873118101802",
-      "9873118855466",
-      "9873120330026",
-      "9873124557098"
-    ],
-    "title": "Rugged Armor Protective Watch Case with Sport Band",
+    "id": "9873124557098",
+    "handle": "transparent-rugged-apple-watch-case-with-orange-sports-strap-copy",
+    "title": "Black Transparent Rugged Apple Watch Case with Bold Orange Strap",
     "price": 2149.0,
     "price_formatted": "Rs. 2,149.00",
-    "original_price": 3499.0,
-    "original_price_formatted": "Rs. 3,499.00",
-    "discount_percent": 39,
+    "original_price": 3999.0,
+    "original_price_formatted": "Rs. 3,999.00",
+    "discount_percent": 46,
     "rating": 4.9,
-    "reviews_count": 142,
+    "reviews_count": 198,
     "category": "watchbands",
     "category_name": "Watch Bands",
     "collections": [
       "all",
       "watchbands",
-      "our-bestsellers"
+      "new-arrivals"
     ],
-    "is_bestseller": true,
+    "is_bestseller": false,
+    "is_new": true,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
+    "images": [
+      "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
+      "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/01_extra.webp",
+      "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/02_extra.webp",
+      "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/03_extra.webp",
+      "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/extra/04_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Bold Orange",
+        "hex": "#FF5500",
+        "image": "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp",
+        "images": [
+          "assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch\u2019s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection.</p>\n<p>\u2705 360\u00b0 rugged shockproof protection<br>\u2705 Transparent case with stylish orange strap<br>\u2705 Comfortable, sweat-resistant silicone band<br>\u2705 Easy to install with secure screw-lock frame<br>\u2705 Ideal for sports, fitness, and daily use</p>",
+    "bullets": [
+      "360\u00b0 rugged shockproof protection",
+      "Transparent case with stylish orange strap",
+      "Comfortable, sweat-resistant silicone band",
+      "Easy to install with secure screw-lock frame",
+      "Ideal for sports, fitness, and daily use"
+    ],
+    "raw_html": "<p>Description:<br>Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch\u2019s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection.</p>\n<p> 360\u00b0 rugged shockproof protection<br> Transparent case with stylish orange strap<br> Comfortable, sweat-resistant silicone band<br> Easy to install with secure screw-lock frame<br> Ideal for sports, fitness, and daily use</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "360\u00b0 rugged shockproof",
+        "subtitle": "protection",
+        "icon": "shield"
+      },
+      {
+        "title": "Transparent case with",
+        "subtitle": "stylish orange strap",
+        "icon": "shield"
+      },
+      {
+        "title": "Comfortable, sweat-resistant silicone",
+        "subtitle": "band",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm and 2 other models"
+      },
+      {
+        "label": "Clasp Mechanism",
+        "value": "Neodymium Magnetic Infinite Loop Lock"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Black Transparent Rugged Apple Watch Case with Bold Orange Strap"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 898,
+      "sold_hours": 6,
+      "stock_left": 16
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Stand out with this rugged transparent protective case and striking orange strap for Apple Watch. Built for durability and a sporty lifestyle, it offers full-body protection against shocks, scratches, and accidental drops while keeping your watch\u2019s sleek design visible. The soft yet sturdy silicone strap ensures all-day comfort, making it perfect for workouts, outdoor activities, and everyday wear. Designed with precise cutouts for the crown, buttons, and sensors, it guarantees effortless functionality with maximum protection.</p>\n<p>\u2705 360\u00b0 rugged shockproof protection<br>\u2705 Transparent case with stylish orange strap<br>\u2705 Comfortable, sweat-resistant silicone band<br>\u2705 Easy to install with secure screw-lock frame<br>\u2705 Ideal for sports, fitness, and daily use</p>",
+    "shopify_variants": [
+      {
+        "id": 50538584244522,
+        "title": "40mm/41mm/42mm",
+        "option1": "40mm/41mm/42mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921090847018,
+          "product_id": 9873124557098,
+          "position": 2,
+          "created_at": "2025-08-28T13:19:28+05:30",
+          "updated_at": "2025-08-28T13:22:40+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8021_0ae0294a-8d2f-451e-8f86-18183a37ba66.png?v=1756367560",
+          "variant_ids": [
+            50538584244522
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 1,
+        "product_id": 9873124557098,
+        "created_at": "2025-08-28T13:17:54+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538584277290,
+        "title": "44mm",
+        "option1": "44mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921092157738,
+          "product_id": 9873124557098,
+          "position": 1,
+          "created_at": "2025-08-28T13:19:36+05:30",
+          "updated_at": "2025-08-28T13:19:56+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8010_4c98df3f-3bef-4648-99dd-f3e703d1fcda.png?v=1756367396",
+          "variant_ids": [
+            50538584277290,
+            50794623533354,
+            50794623566122
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 2,
+        "product_id": 9873124557098,
+        "created_at": "2025-08-28T13:17:54+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794623533354,
+        "title": "45mm",
+        "option1": "45mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921092157738,
+          "product_id": 9873124557098,
+          "position": 1,
+          "created_at": "2025-08-28T13:19:36+05:30",
+          "updated_at": "2025-08-28T13:19:56+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8010_4c98df3f-3bef-4648-99dd-f3e703d1fcda.png?v=1756367396",
+          "variant_ids": [
+            50538584277290,
+            50794623533354,
+            50794623566122
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 3,
+        "product_id": 9873124557098,
+        "created_at": "2025-11-08T15:43:25+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794623566122,
+        "title": "46mm",
+        "option1": "46mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921092157738,
+          "product_id": 9873124557098,
+          "position": 1,
+          "created_at": "2025-08-28T13:19:36+05:30",
+          "updated_at": "2025-08-28T13:19:56+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8010_4c98df3f-3bef-4648-99dd-f3e703d1fcda.png?v=1756367396",
+          "variant_ids": [
+            50538584277290,
+            50794623533354,
+            50794623566122
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 4,
+        "product_id": 9873124557098,
+        "created_at": "2025-11-08T15:43:25+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm",
+          "45mm",
+          "46mm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873120330026",
+    "handle": "transparent-rugged-protective-apple-watch-case-with-strap-copy",
+    "title": "Transparent Rugged Apple Watch Case with Orange Sports Strap",
+    "price": 2149.0,
+    "price_formatted": "Rs. 2,149.00",
+    "original_price": 3999.0,
+    "original_price_formatted": "Rs. 3,999.00",
+    "discount_percent": 46,
+    "rating": 4.8,
+    "reviews_count": 246,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
     "is_new": false,
     "is_mens": false,
     "is_womens": false,
     "tags": [],
-    "primary_image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
+    "primary_image": "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
     "images": [
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/bold-orange/01_packshot.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/bright-orange/01_packshot.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/clear-titanium/01_packshot.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
-      "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+      "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
+      "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/01_extra.webp",
+      "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/02_extra.webp",
+      "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/03_extra.webp",
+      "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/extra/04_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Bright Orange",
+        "hex": "#FF5500",
+        "image": "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp",
+        "images": [
+          "assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch\u2019s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge.</p>\n<p>\u2705 Shockproof &amp; scratch-resistant protective case<br>\u2705 Transparent body with striking orange strap<br>\u2705 Sweat-resistant &amp; comfortable for long wear<br>\u2705 Easy to install with screw-secured frame<br>\u2705 Perfect for sports, fitness &amp; daily use</p>\n<p>\u00a0</p>",
+    "bullets": [
+      "Shockproof & scratch-resistant protective case",
+      "Transparent body with striking orange strap",
+      "Sweat-resistant & comfortable for long wear",
+      "Easy to install with screw-secured frame"
+    ],
+    "raw_html": "<p>Description:<br>Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch\u2019s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge.</p>\n<p> Shockproof &amp; scratch-resistant protective case<br> Transparent body with striking orange strap<br> Sweat-resistant &amp; comfortable for long wear<br> Easy to install with screw-secured frame<br> Perfect for sports, fitness &amp; daily use</p>\n<p>\u00a0</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Shockproof & scratch-resistant",
+        "subtitle": "protective case",
+        "icon": "shield"
+      },
+      {
+        "title": "Transparent body with",
+        "subtitle": "striking orange strap",
+        "icon": "shield"
+      },
+      {
+        "title": "Sweat-resistant & comfortable",
+        "subtitle": "for long wear",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44m and 2 other models"
+      },
+      {
+        "label": "Clasp Mechanism",
+        "value": "Neodymium Magnetic Infinite Loop Lock"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Transparent Rugged Apple Watch Case with Orange Sports Strap"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 626,
+      "sold_hours": 6,
+      "stock_left": 19
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Add a bold pop of color to your Apple Watch with this transparent rugged protective case paired with a vibrant orange strap. Designed for durability and style, this case provides all-around protection against scratches, drops, and daily wear while showcasing your Apple Watch\u2019s sleek design. The high-quality silicone strap offers a secure and comfortable fit, perfect for workouts, outdoor adventures, or everyday wear. With precise cutouts, it ensures easy access to all buttons, crown, and sensors, combining practicality with a sporty edge.</p>\n<p>\u2705 Shockproof &amp; scratch-resistant protective case<br>\u2705 Transparent body with striking orange strap<br>\u2705 Sweat-resistant &amp; comfortable for long wear<br>\u2705 Easy to install with screw-secured frame<br>\u2705 Perfect for sports, fitness &amp; daily use</p>\n<p>\u00a0</p>",
+    "shopify_variants": [
+      {
+        "id": 50538574610730,
+        "title": "40mm/41mm/42mm",
+        "option1": "40mm/41mm/42mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921040089386,
+          "product_id": 9873120330026,
+          "position": 1,
+          "created_at": "2025-08-28T13:10:24+05:30",
+          "updated_at": "2025-08-28T13:11:06+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8022.png?v=1756366866",
+          "variant_ids": [
+            50538574610730,
+            50794590470442
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 1,
+        "product_id": 9873120330026,
+        "created_at": "2025-08-28T13:09:58+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794590470442,
+        "title": "44m",
+        "option1": "44m",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921040089386,
+          "product_id": 9873120330026,
+          "position": 1,
+          "created_at": "2025-08-28T13:10:24+05:30",
+          "updated_at": "2025-08-28T13:11:06+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8022.png?v=1756366866",
+          "variant_ids": [
+            50538574610730,
+            50794590470442
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 2,
+        "product_id": 9873120330026,
+        "created_at": "2025-11-08T15:34:08+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794593321258,
+        "title": "45mm",
+        "option1": "45mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921040187690,
+          "product_id": 9873120330026,
+          "position": 4,
+          "created_at": "2025-08-28T13:10:29+05:30",
+          "updated_at": "2025-08-28T13:10:31+05:30",
+          "alt": null,
+          "width": 1206,
+          "height": 1345,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_7984.jpg?v=1756366831",
+          "variant_ids": [
+            50794593321258,
+            50794597843242
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 3,
+        "product_id": 9873120330026,
+        "created_at": "2025-11-08T15:34:54+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794597843242,
+        "title": "46mm",
+        "option1": "46mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921040187690,
+          "product_id": 9873120330026,
+          "position": 4,
+          "created_at": "2025-08-28T13:10:29+05:30",
+          "updated_at": "2025-08-28T13:10:31+05:30",
+          "alt": null,
+          "width": 1206,
+          "height": 1345,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_7984.jpg?v=1756366831",
+          "variant_ids": [
+            50794593321258,
+            50794597843242
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 4,
+        "product_id": 9873120330026,
+        "created_at": "2025-11-08T15:36:11+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44m",
+          "45mm",
+          "46mm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873118855466",
+    "handle": "rugged-armor-protective-watch-case-with-sport-band-copy",
+    "title": "Transparent Rugged Protective Apple Watch Case with Strap",
+    "price": 2149.0,
+    "price_formatted": "Rs. 2,149.00",
+    "original_price": 3999.0,
+    "original_price_formatted": "Rs. 3,999.00",
+    "discount_percent": 46,
+    "rating": 4.8,
+    "reviews_count": 466,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
+    "images": [
+      "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
+      "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/01_extra.webp",
+      "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/02_extra.webp",
+      "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/03_extra.webp",
+      "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/extra/04_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Clear Titanium",
+        "hex": "#94A3B8",
+        "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp",
+        "images": [
+          "assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch\u2019s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360\u00b0 protection and premium comfort.</p>\n<p>\u2705 Shockproof &amp; Scratch-resistant<br>\u2705 Transparent modern design<br>\u2705 Easy installation with screw-secured frame<br>\u2705 Compatible with multiple Apple Watch sizes</p>",
+    "bullets": [
+      "Shockproof & Scratch-resistant",
+      "Transparent modern design",
+      "Easy installation with screw-secured frame",
+      "Compatible with multiple Apple Watch sizes"
+    ],
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch\u2019s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360\u00b0 protection and premium comfort.</p>\n<p> Shockproof &amp; Scratch-resistant<br> Transparent modern design<br> Easy installation with screw-secured frame<br> Compatible with multiple Apple Watch sizes</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Shockproof & Scratch-resistant",
+        "subtitle": "Engineered with precision for everyday reliability.",
+        "icon": "shield"
+      },
+      {
+        "title": "Transparent modern design",
+        "subtitle": "Engineered with precision for everyday reliability.",
+        "icon": "shield"
+      },
+      {
+        "title": "Easy installation with",
+        "subtitle": "screw-secured frame",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Shockproof TPU Bumper + Scratch-Resistant Acrylic"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm and 2 other models"
+      },
+      {
+        "label": "Clasp Mechanism",
+        "value": "Neodymium Magnetic Infinite Loop Lock"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Transparent Rugged Protective Apple Watch Case with Strap"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 866,
+      "sold_hours": 6,
+      "stock_left": 19
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Elevate your Apple Watch with this transparent rugged case and strap combo, designed for ultimate protection without compromising style. Crafted from durable, impact-resistant material, it shields your watch from scratches, shocks, and daily wear while maintaining a sleek, modern look. The crystal-clear design highlights your Apple Watch\u2019s original beauty, while the secure fit and precise cutouts ensure easy access to buttons, crown, and sensors. Perfect for everyday use, workouts, and outdoor adventures, this case delivers 360\u00b0 protection and premium comfort.</p>\n<p>\u2705 Shockproof &amp; Scratch-resistant<br>\u2705 Transparent modern design<br>\u2705 Easy installation with screw-secured frame<br>\u2705 Compatible with multiple Apple Watch sizes</p>",
+    "shopify_variants": [
+      {
+        "id": 50538542137642,
+        "title": "40mm/41mm/42mm",
+        "option1": "40mm/41mm/42mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921023738154,
+          "product_id": 9873118855466,
+          "position": 1,
+          "created_at": "2025-08-28T13:00:52+05:30",
+          "updated_at": "2025-08-28T13:00:53+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8016.png?v=1756366253",
+          "variant_ids": [
+            50538542137642,
+            50794635133226,
+            50794635165994
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 1,
+        "product_id": 9873118855466,
+        "created_at": "2025-08-28T13:00:38+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538542170410,
+        "title": "44mm",
+        "option1": "44mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921023934762,
+          "product_id": 9873118855466,
+          "position": 2,
+          "created_at": "2025-08-28T13:00:58+05:30",
+          "updated_at": "2025-08-28T13:01:00+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8020.png?v=1756366260",
+          "variant_ids": [
+            50538542170410
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 2,
+        "product_id": 9873118855466,
+        "created_at": "2025-08-28T13:00:38+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794635133226,
+        "title": "45mm",
+        "option1": "45mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921023738154,
+          "product_id": 9873118855466,
+          "position": 1,
+          "created_at": "2025-08-28T13:00:52+05:30",
+          "updated_at": "2025-08-28T13:00:53+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8016.png?v=1756366253",
+          "variant_ids": [
+            50538542137642,
+            50794635133226,
+            50794635165994
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 3,
+        "product_id": 9873118855466,
+        "created_at": "2025-11-08T15:46:14+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794635165994,
+        "title": "46mm",
+        "option1": "46mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921023738154,
+          "product_id": 9873118855466,
+          "position": 1,
+          "created_at": "2025-08-28T13:00:52+05:30",
+          "updated_at": "2025-08-28T13:00:53+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8016.png?v=1756366253",
+          "variant_ids": [
+            50538542137642,
+            50794635133226,
+            50794635165994
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 4,
+        "product_id": 9873118855466,
+        "created_at": "2025-11-08T15:46:14+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm",
+          "45mm",
+          "46mm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873118101802",
+    "handle": "premium-silicone-watch-bands-available-in-18-colors-copy",
+    "title": "Rugged Armor Protective Watch Case with Sport Band",
+    "price": 2149.0,
+    "price_formatted": "Rs. 2,149.00",
+    "original_price": 3999.0,
+    "original_price_formatted": "Rs. 3,999.00",
+    "discount_percent": 46,
+    "rating": 4.8,
+    "reviews_count": 342,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
+    "images": [
+      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
+      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/01_extra.webp",
+      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/02_extra.webp",
+      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/03_extra.webp",
+      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/extra/04_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Tactical Black",
-        "hex": "#18181B",
-        "value": "#18181B",
-        "price": 2149.0,
-        "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
+        "hex": "#1C1D1F",
+        "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp",
         "images": [
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/tactical-black/01_packshot.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
-        ]
-      },
-      {
-        "name": "Bold Orange",
-        "hex": "#EA580C",
-        "value": "#EA580C",
-        "price": 2149.0,
-        "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/bold-orange/01_packshot.webp",
-        "images": [
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/bold-orange/01_packshot.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
-        ]
-      },
-      {
-        "name": "Bright Orange",
-        "hex": "#FF7A00",
-        "value": "#FF7A00",
-        "price": 2149.0,
-        "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/bright-orange/01_packshot.webp",
-        "images": [
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/bright-orange/01_packshot.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
-        ]
-      },
-      {
-        "name": "Clear Titanium",
-        "hex": "#CBD5E1",
-        "value": "#CBD5E1",
-        "price": 2149.0,
-        "image": "assets/products/rugged-armor-protective-watch-case-with-sport-band/clear-titanium/01_packshot.webp",
-        "images": [
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/clear-titanium/01_packshot.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/01_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/02_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/03_extra.webp",
-          "assets/products/rugged-armor-protective-watch-case-with-sport-band/extra/04_extra.webp"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp"
         ]
       }
     ],
     "models": [
-      "Apple Watch Ultra 49mm",
-      "Apple Watch 45mm",
-      "Apple Watch 44mm"
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
     ],
-    "finishes": []
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear.</p>\n<p>The transparent case highlights the watch\u2019s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit\u2014perfect for workouts, outdoor adventures, or daily use.</p>\n<p>\u26a1 Sleek. Strong. Built to last. Protect your smartwatch in style.</p>",
+    "bullets": [
+      " Sleek. Strong. Built to last. Protect your smartwatch in style."
+    ],
+    "raw_html": "<p>Description:<br>Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear.</p>\n<p>The transparent case highlights the watch\u2019s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit\u2014perfect for workouts, outdoor adventures, or daily use.</p>\n<p> Sleek. Strong. Built to last. Protect your smartwatch in style.</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": " Sleek. Strong.",
+        "subtitle": "Built to last. Protect your smartwatch in style.",
+        "icon": "shield"
+      },
+      {
+        "title": "Precision Magnetic Clasp",
+        "subtitle": "Locks securely around your wrist for all-day comfort.",
+        "icon": "magnet"
+      },
+      {
+        "title": "Breathable 316L Stainless Mesh",
+        "subtitle": "Prevents sweat buildup and stays cool against the skin.",
+        "icon": "sparkles"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Ultra-Soft Liquid Silicone + Velvet Microfiber Lining"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm and 2 other models"
+      },
+      {
+        "label": "Clasp Mechanism",
+        "value": "Neodymium Magnetic Infinite Loop Lock"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Rugged Armor Protective Watch Case with Sport Band"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 802,
+      "sold_hours": 8,
+      "stock_left": 15
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Give your smartwatch a bold, durable upgrade with our Rugged Armor Protective Case and Sport Band combo. Designed for ultimate protection, this case features a shock-resistant build with reinforced edges, ensuring your watch stays safe from bumps, scratches, and everyday wear.</p>\n<p>The transparent case highlights the watch\u2019s design while adding a tough, industrial look. Paired with a high-quality silicone sport band, it offers superior comfort, flexibility, and a secure fit\u2014perfect for workouts, outdoor adventures, or daily use.</p>\n<p>\u26a1 Sleek. Strong. Built to last. Protect your smartwatch in style.</p>",
+    "shopify_variants": [
+      {
+        "id": 50538529325354,
+        "title": "40mm/41mm/42mm",
+        "option1": "40mm/41mm/42mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921013219626,
+          "product_id": 9873118101802,
+          "position": 1,
+          "created_at": "2025-08-28T12:57:35+05:30",
+          "updated_at": "2025-09-01T14:17:58+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8012.png?v=1756716478",
+          "variant_ids": [
+            50538529325354,
+            50794639360298,
+            50794639393066
+          ]
+        },
+        "available": false,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 1,
+        "product_id": 9873118101802,
+        "created_at": "2025-08-28T12:57:13+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538529816874,
+        "title": "44mm",
+        "option1": "44mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921014169898,
+          "product_id": 9873118101802,
+          "position": 3,
+          "created_at": "2025-08-28T12:57:55+05:30",
+          "updated_at": "2025-09-01T14:17:58+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1024,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8013.png?v=1756716478",
+          "variant_ids": [
+            50538529816874
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 2,
+        "product_id": 9873118101802,
+        "created_at": "2025-08-28T12:57:13+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794639360298,
+        "title": "45mm",
+        "option1": "45mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921013219626,
+          "product_id": 9873118101802,
+          "position": 1,
+          "created_at": "2025-08-28T12:57:35+05:30",
+          "updated_at": "2025-09-01T14:17:58+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8012.png?v=1756716478",
+          "variant_ids": [
+            50538529325354,
+            50794639360298,
+            50794639393066
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 3,
+        "product_id": 9873118101802,
+        "created_at": "2025-11-08T15:47:22+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50794639393066,
+        "title": "46mm",
+        "option1": "46mm",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49921013219626,
+          "product_id": 9873118101802,
+          "position": 1,
+          "created_at": "2025-08-28T12:57:35+05:30",
+          "updated_at": "2025-09-01T14:17:58+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/IMG_8012.png?v=1756716478",
+          "variant_ids": [
+            50538529325354,
+            50794639360298,
+            50794639393066
+          ]
+        },
+        "available": true,
+        "price": "2149.00",
+        "grams": 0,
+        "compare_at_price": "3999.00",
+        "position": 4,
+        "product_id": 9873118101802,
+        "created_at": "2025-11-08T15:47:22+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm",
+          "45mm",
+          "46mm"
+        ]
+      }
+    ]
   },
   {
     "id": "9873114038570",
@@ -28974,6 +29956,1111 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ]
   },
   {
+    "id": "9873108828458",
+    "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3",
+    "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
+    "price": 1299.0,
+    "price_formatted": "Rs. 1,299.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 35,
+    "rating": 4.9,
+    "reviews_count": 138,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp",
+    "images": [
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/02_lifestyle.jpg",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/01_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/02_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/03_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/04_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/05_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/06_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/07_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/08_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/09_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/10_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/11_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/extra/12_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Yellow",
+        "hex": "#EAB308",
+        "price": 1299.0,
+        "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp",
+        "images": [
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp",
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/02_lifestyle.jpg"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "bullets": [
+      "Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+      "Strong magnetic clasp for secure fit",
+      "Durable, flexible, and comfortable for everyday wear"
+    ],
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Compatible with Apple",
+        "subtitle": "Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Strong magnetic clasp",
+        "subtitle": "for secure fit",
+        "icon": "magnet"
+      },
+      {
+        "title": "Durable, flexible, and",
+        "subtitle": "comfortable for everyday wear",
+        "icon": "refresh"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Premium Vegan Microfiber Leather"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Premium Magnetic Leather Loop Straps for Apple Watch"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 658,
+      "sold_hours": 6,
+      "stock_left": 16
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "shopify_variants": [
+      {
+        "id": 50538418635050,
+        "title": "40mm/41mm/42mm / Yellow",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Yellow",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984385122602,
+          "product_id": 9873108828458,
+          "position": 1,
+          "created_at": "2025-09-08T19:24:59+05:30",
+          "updated_at": "2025-11-23T11:51:54+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_02eceb4e-68c6-4c87-b844-7dbd29db3e42.jpg?v=1763878914",
+          "variant_ids": [
+            50538418635050,
+            50538418667818
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9873108828458,
+        "created_at": "2025-08-28T11:58:32+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538418667818,
+        "title": "44mm/45mm/46mm/49mm / Yellow",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Yellow",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984385122602,
+          "product_id": 9873108828458,
+          "position": 1,
+          "created_at": "2025-09-08T19:24:59+05:30",
+          "updated_at": "2025-11-23T11:51:54+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_02eceb4e-68c6-4c87-b844-7dbd29db3e42.jpg?v=1763878914",
+          "variant_ids": [
+            50538418635050,
+            50538418667818
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9873108828458,
+        "created_at": "2025-08-28T11:58:32+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Yellow"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873108435242",
+    "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2",
+    "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
+    "price": 1299.0,
+    "price_formatted": "Rs. 1,299.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 35,
+    "rating": 4.8,
+    "reviews_count": 222,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/01_packshot.webp",
+    "images": [
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/01_packshot.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/02_lifestyle.jpg",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/01_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/02_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/03_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/04_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/05_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/06_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/07_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/08_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/09_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/10_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/11_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/12_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/extra/13_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Grey+Black",
+        "hex": "#18181B",
+        "price": 1299.0,
+        "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/01_packshot.webp",
+        "images": [
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/01_packshot.webp",
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/02_lifestyle.jpg"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "bullets": [
+      "Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+      "Strong magnetic clasp for secure fit",
+      "Durable, flexible, and comfortable for everyday wear"
+    ],
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Compatible with Apple",
+        "subtitle": "Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Strong magnetic clasp",
+        "subtitle": "for secure fit",
+        "icon": "magnet"
+      },
+      {
+        "title": "Durable, flexible, and",
+        "subtitle": "comfortable for everyday wear",
+        "icon": "refresh"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Premium Vegan Microfiber Leather"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Premium Magnetic Leather Loop Straps for Apple Watch"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 642,
+      "sold_hours": 6,
+      "stock_left": 10
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "shopify_variants": [
+      {
+        "id": 50538405593386,
+        "title": "40mm/41mm/42mm / Grey+Black",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Grey+Black",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984376144170,
+          "product_id": 9873108435242,
+          "position": 2,
+          "created_at": "2025-09-08T19:21:34+05:30",
+          "updated_at": "2025-11-23T11:51:24+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_edc512a5-3131-4a3d-98ad-e09dde9efcd7.jpg?v=1763878884",
+          "variant_ids": [
+            50538405593386,
+            50538405626154
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9873108435242,
+        "created_at": "2025-08-28T11:54:07+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538405626154,
+        "title": "44mm/45mm/46mm/49mm / Grey+Black",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Grey+Black",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984376144170,
+          "product_id": 9873108435242,
+          "position": 2,
+          "created_at": "2025-09-08T19:21:34+05:30",
+          "updated_at": "2025-11-23T11:51:24+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_edc512a5-3131-4a3d-98ad-e09dde9efcd7.jpg?v=1763878884",
+          "variant_ids": [
+            50538405593386,
+            50538405626154
+          ]
+        },
+        "available": false,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9873108435242,
+        "created_at": "2025-08-28T11:54:07+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Grey+Black"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873108238634",
+    "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1",
+    "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
+    "price": 1299.0,
+    "price_formatted": "Rs. 1,299.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 35,
+    "rating": 4.9,
+    "reviews_count": 454,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/01_packshot.webp",
+    "images": [
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/01_packshot.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/02_lifestyle.jpg",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/01_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/02_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/03_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/04_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/05_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/06_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/07_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/08_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/09_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/10_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/11_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/12_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/extra/13_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Orange+Grey",
+        "hex": "#F97316",
+        "price": 1299.0,
+        "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/01_packshot.webp",
+        "images": [
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/01_packshot.webp",
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/02_lifestyle.jpg"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "bullets": [
+      "Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+      "Strong magnetic clasp for secure fit",
+      "Durable, flexible, and comfortable for everyday wear"
+    ],
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Compatible with Apple",
+        "subtitle": "Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Strong magnetic clasp",
+        "subtitle": "for secure fit",
+        "icon": "magnet"
+      },
+      {
+        "title": "Durable, flexible, and",
+        "subtitle": "comfortable for everyday wear",
+        "icon": "refresh"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Premium Vegan Microfiber Leather"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Premium Magnetic Leather Loop Straps for Apple Watch"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 834,
+      "sold_hours": 6,
+      "stock_left": 22
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "shopify_variants": [
+      {
+        "id": 50538398613802,
+        "title": "40mm/41mm/42mm / Orange+Grey",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Orange+Grey",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984401539370,
+          "product_id": 9873108238634,
+          "position": 3,
+          "created_at": "2025-09-08T19:29:58+05:30",
+          "updated_at": "2025-11-23T11:51:10+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_518246ef-e691-45b9-9db9-891b6f4f8427.jpg?v=1763878870",
+          "variant_ids": [
+            50538398613802,
+            50538398646570
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9873108238634,
+        "created_at": "2025-08-28T11:52:28+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538398646570,
+        "title": "44mm/45mm/46mm/49mm / Orange+Grey",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Orange+Grey",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984401539370,
+          "product_id": 9873108238634,
+          "position": 3,
+          "created_at": "2025-09-08T19:29:58+05:30",
+          "updated_at": "2025-11-23T11:51:10+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_518246ef-e691-45b9-9db9-891b6f4f8427.jpg?v=1763878870",
+          "variant_ids": [
+            50538398613802,
+            50538398646570
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9873108238634,
+        "created_at": "2025-08-28T11:52:28+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Orange+Grey"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873108074794",
+    "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy",
+    "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
+    "price": 1299.0,
+    "price_formatted": "Rs. 1,299.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 35,
+    "rating": 4.9,
+    "reviews_count": 394,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/01_packshot.webp",
+    "images": [
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/01_packshot.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/02_lifestyle.jpg",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/01_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/02_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/03_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/04_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/05_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/06_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/07_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/08_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/09_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/10_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/extra/11_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Light Blue",
+        "hex": "#60A5FA",
+        "price": 1299.0,
+        "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/01_packshot.webp",
+        "images": [
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/01_packshot.webp",
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/02_lifestyle.jpg"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "bullets": [
+      "Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+      "Strong magnetic clasp for secure fit",
+      "Durable, flexible, and comfortable for everyday wear"
+    ],
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Compatible with Apple",
+        "subtitle": "Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Strong magnetic clasp",
+        "subtitle": "for secure fit",
+        "icon": "magnet"
+      },
+      {
+        "title": "Durable, flexible, and",
+        "subtitle": "comfortable for everyday wear",
+        "icon": "refresh"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Premium Vegan Microfiber Leather"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Premium Magnetic Leather Loop Straps for Apple Watch"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 994,
+      "sold_hours": 8,
+      "stock_left": 12
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "shopify_variants": [
+      {
+        "id": 50538394485034,
+        "title": "40mm/41mm/42mm / Light Blue",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Light Blue",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984412221738,
+          "product_id": 9873108074794,
+          "position": 7,
+          "created_at": "2025-09-08T19:32:13+05:30",
+          "updated_at": "2025-11-23T11:50:59+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_3d7c7f41-6bfc-4d3e-86d0-87d7b99869f5.jpg?v=1763878859",
+          "variant_ids": [
+            50538394485034,
+            50538394517802
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9873108074794,
+        "created_at": "2025-08-28T11:49:47+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538394517802,
+        "title": "44mm/45mm/46mm/49mm / Light Blue",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Light Blue",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984412221738,
+          "product_id": 9873108074794,
+          "position": 7,
+          "created_at": "2025-09-08T19:32:13+05:30",
+          "updated_at": "2025-11-23T11:50:59+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_3d7c7f41-6bfc-4d3e-86d0-87d7b99869f5.jpg?v=1763878859",
+          "variant_ids": [
+            50538394485034,
+            50538394517802
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9873108074794,
+        "created_at": "2025-08-28T11:49:47+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Light Blue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9873108042026",
+    "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy",
+    "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
+    "price": 1299.0,
+    "price_formatted": "Rs. 1,299.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 35,
+    "rating": 4.8,
+    "reviews_count": 306,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands"
+    ],
+    "is_bestseller": false,
+    "is_new": false,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/01_packshot.webp",
+    "images": [
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/01_packshot.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/02_lifestyle.jpg",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/01_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/02_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/03_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/04_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/05_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/06_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/07_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/08_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/09_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/10_extra.webp",
+      "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/extra/11_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Black",
+        "hex": "#18181B",
+        "price": 1299.0,
+        "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/01_packshot.webp",
+        "images": [
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/01_packshot.webp",
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/02_lifestyle.jpg"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "bullets": [
+      "Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+      "Strong magnetic clasp for secure fit",
+      "Durable, flexible, and comfortable for everyday wear"
+    ],
+    "raw_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p> Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br> Strong magnetic clasp for secure fit<br> Durable, flexible, and comfortable for everyday wear<br> Perfect for casual, office, or formal occasions</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Compatible with Apple",
+        "subtitle": "Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Strong magnetic clasp",
+        "subtitle": "for secure fit",
+        "icon": "magnet"
+      },
+      {
+        "title": "Durable, flexible, and",
+        "subtitle": "comfortable for everyday wear",
+        "icon": "refresh"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "Premium Vegan Microfiber Leather"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Premium Magnetic Leather Loop Straps for Apple Watch"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 626,
+      "sold_hours": 6,
+      "stock_left": 19
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Elevate your Apple Watch with our stylish Magnetic Leather Loop Straps, designed for a perfect blend of comfort and elegance. Crafted from high-quality leather with a soft lining, these bands feature a secure magnetic closure that ensures a snug fit all day long. Available in multiple vibrant and classic colors to match your personality and style.</p>\n<p>\u2705 Compatible with Apple Watch sizes 40mm/41mm/42mm/44mm/45mm/49mm<br>\u2705 Strong magnetic clasp for secure fit<br>\u2705 Durable, flexible, and comfortable for everyday wear<br>\u2705 Perfect for casual, office, or formal occasions</p>",
+    "shopify_variants": [
+      {
+        "id": 50538394419498,
+        "title": "40mm/41mm/42mm / Black",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Black",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984418054442,
+          "product_id": 9873108042026,
+          "position": 1,
+          "created_at": "2025-09-08T19:34:10+05:30",
+          "updated_at": "2025-11-23T11:50:21+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_d349aa87-fe49-4d5c-ab6e-0ef2d61ac56d.jpg?v=1763878821",
+          "variant_ids": [
+            50538394419498,
+            50538394452266
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9873108042026,
+        "created_at": "2025-08-28T11:49:34+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50538394452266,
+        "title": "44mm/45mm/46mm/49mm / Black",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Black",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49984418054442,
+          "product_id": 9873108042026,
+          "position": 1,
+          "created_at": "2025-09-08T19:34:10+05:30",
+          "updated_at": "2025-11-23T11:50:21+05:30",
+          "alt": null,
+          "width": 2000,
+          "height": 2000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/3_d349aa87-fe49-4d5c-ab6e-0ef2d61ac56d.jpg?v=1763878821",
+          "variant_ids": [
+            50538394419498,
+            50538394452266
+          ]
+        },
+        "available": true,
+        "price": "1299.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9873108042026,
+        "created_at": "2025-08-28T11:49:34+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Black"
+        ]
+      }
+    ]
+  },
+  {
     "id": "9873108009258",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
@@ -31027,6 +33114,1037 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ]
   },
   {
+    "id": "9871367274794",
+    "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-2",
+    "title": "Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Starlight+Pink)",
+    "price": 999.0,
+    "price_formatted": "Rs. 999.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 50,
+    "rating": 4.9,
+    "reviews_count": 154,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands",
+      "new-arrivals",
+      "our-bestsellers"
+    ],
+    "is_bestseller": true,
+    "is_new": true,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+    "images": [
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/02_lifestyle.png",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/01_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/02_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/03_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/04_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/05_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/06_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/07_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/08_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/09_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Starlight+Pink",
+        "hex": "#F472B6",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Cloud Grey+Blue",
+        "hex": "#64748B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Blue+Midnight Black",
+        "hex": "#1E3A8A",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Black+Grey",
+        "hex": "#18181B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Orange+Midnight Black",
+        "hex": "#EA580C",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "bullets": [
+      "Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+      "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+      "Comfortable, durable, and easy to snap on/off"
+    ],
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Available in sizes",
+        "subtitle": "40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Dual-color combinations: Black",
+        "subtitle": "+ Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+        "icon": "shield"
+      },
+      {
+        "title": "Comfortable, durable, and",
+        "subtitle": "easy to snap on/off",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-Density Breathable Silicone & Metal Hardware"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Starlight+Pink)"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 994,
+      "sold_hours": 6,
+      "stock_left": 22
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "shopify_variants": [
+      {
+        "id": 50532975116586,
+        "title": "40mm/41mm/42mm / Starlight+Pink",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Starlight+Pink",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49905290379562,
+          "product_id": 9871367274794,
+          "position": 1,
+          "created_at": "2025-08-26T10:16:16+05:30",
+          "updated_at": "2025-11-23T11:50:41+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug24_2025_12_30_05PM.png?v=1763878841",
+          "variant_ids": [
+            50532975116586,
+            50532975149354
+          ]
+        },
+        "available": true,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9871367274794,
+        "created_at": "2025-08-26T17:20:52+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50532975149354,
+        "title": "44mm/45mm/46mm/49mm / Starlight+Pink",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Starlight+Pink",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49905290379562,
+          "product_id": 9871367274794,
+          "position": 1,
+          "created_at": "2025-08-26T10:16:16+05:30",
+          "updated_at": "2025-11-23T11:50:41+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug24_2025_12_30_05PM.png?v=1763878841",
+          "variant_ids": [
+            50532975116586,
+            50532975149354
+          ]
+        },
+        "available": true,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9871367274794,
+        "created_at": "2025-08-26T17:20:52+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Starlight+Pink"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9871358624042",
+    "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-1",
+    "title": "Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Black+Grey)",
+    "price": 999.0,
+    "price_formatted": "Rs. 999.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 50,
+    "rating": 4.8,
+    "reviews_count": 482,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands",
+      "new-arrivals",
+      "our-bestsellers"
+    ],
+    "is_bestseller": true,
+    "is_new": true,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+    "images": [
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/01_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/02_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/03_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/04_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/05_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/06_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/07_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/08_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/09_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/10_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/11_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/12_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/13_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/14_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/15_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/16_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Black+Grey",
+        "hex": "#18181B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Cloud Grey+Blue",
+        "hex": "#64748B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Blue+Midnight Black",
+        "hex": "#1E3A8A",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Starlight+Pink",
+        "hex": "#F472B6",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Orange+Midnight Black",
+        "hex": "#EA580C",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "bullets": [
+      "Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+      "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+      "Comfortable, durable, and easy to snap on/off"
+    ],
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Available in sizes",
+        "subtitle": "40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Dual-color combinations: Black",
+        "subtitle": "+ Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+        "icon": "shield"
+      },
+      {
+        "title": "Comfortable, durable, and",
+        "subtitle": "easy to snap on/off",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-Density Breathable Silicone & Metal Hardware"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Black+Grey)"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 642,
+      "sold_hours": 6,
+      "stock_left": 10
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "shopify_variants": [
+      {
+        "id": 50532947329322,
+        "title": "40mm/41mm/42mm / Black+Grey",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Black+Grey",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49997018759466,
+          "product_id": 9871358624042,
+          "position": 3,
+          "created_at": "2025-09-10T11:24:58+05:30",
+          "updated_at": "2025-09-10T11:27:06+05:30",
+          "alt": null,
+          "width": 5000,
+          "height": 5000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/6_eb61e40a-29b0-448a-b966-fcec8198cb8b.jpg?v=1757483826",
+          "variant_ids": [
+            50532947329322,
+            50532947362090
+          ]
+        },
+        "available": true,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9871358624042,
+        "created_at": "2025-08-26T17:12:32+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50532947362090,
+        "title": "44mm/45mm/46mm/49mm / Black+Grey",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Black+Grey",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49997018759466,
+          "product_id": 9871358624042,
+          "position": 3,
+          "created_at": "2025-09-10T11:24:58+05:30",
+          "updated_at": "2025-09-10T11:27:06+05:30",
+          "alt": null,
+          "width": 5000,
+          "height": 5000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/6_eb61e40a-29b0-448a-b966-fcec8198cb8b.jpg?v=1757483826",
+          "variant_ids": [
+            50532947329322,
+            50532947362090
+          ]
+        },
+        "available": false,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9871358624042,
+        "created_at": "2025-08-26T17:12:32+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Black+Grey"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9871361442090",
+    "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy",
+    "title": "Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Orange+Midnight Black)",
+    "price": 999.0,
+    "price_formatted": "Rs. 999.00",
+    "original_price": 0.0,
+    "original_price_formatted": "Rs. 0.00",
+    "discount_percent": 33,
+    "rating": 4.7,
+    "reviews_count": 450,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands",
+      "new-arrivals"
+    ],
+    "is_bestseller": false,
+    "is_new": true,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+    "images": [
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/02_lifestyle.png",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/01_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/02_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/03_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/04_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/05_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/06_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/07_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/08_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/09_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/10_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/11_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/12_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/13_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/14_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Orange+Midnight Black",
+        "hex": "#EA580C",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Cloud Grey+Blue",
+        "hex": "#64748B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Blue+Midnight Black",
+        "hex": "#1E3A8A",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Black+Grey",
+        "hex": "#18181B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Starlight+Pink",
+        "hex": "#F472B6",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "bullets": [
+      "Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+      "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+      "Comfortable, durable, and easy to snap on/off"
+    ],
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Available in sizes",
+        "subtitle": "40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Dual-color combinations: Black",
+        "subtitle": "+ Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+        "icon": "shield"
+      },
+      {
+        "title": "Comfortable, durable, and",
+        "subtitle": "easy to snap on/off",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-Density Breathable Silicone & Metal Hardware"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Orange+Midnight Black)"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 690,
+      "sold_hours": 4,
+      "stock_left": 8
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "shopify_variants": [
+      {
+        "id": 50532957323562,
+        "title": "40mm/41mm/42mm / Orange+Midnight Black",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Orange+Midnight Black",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49905283760426,
+          "product_id": 9871361442090,
+          "position": 1,
+          "created_at": "2025-08-26T10:15:51+05:30",
+          "updated_at": "2025-11-23T11:48:46+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug24_2025_12_08_35PM.png?v=1763878726",
+          "variant_ids": [
+            50532957323562,
+            50532957356330
+          ]
+        },
+        "available": true,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "0.00",
+        "position": 1,
+        "product_id": 9871361442090,
+        "created_at": "2025-08-26T17:14:17+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50532957356330,
+        "title": "44mm/45mm/46mm/49mm / Orange+Midnight Black",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Orange+Midnight Black",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49905283760426,
+          "product_id": 9871361442090,
+          "position": 1,
+          "created_at": "2025-08-26T10:15:51+05:30",
+          "updated_at": "2025-11-23T11:48:46+05:30",
+          "alt": null,
+          "width": 1024,
+          "height": 1536,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/ChatGPTImageAug24_2025_12_08_35PM.png?v=1763878726",
+          "variant_ids": [
+            50532957323562,
+            50532957356330
+          ]
+        },
+        "available": false,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "0.00",
+        "position": 2,
+        "product_id": 9871361442090,
+        "created_at": "2025-08-26T17:14:17+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Orange+Midnight Black"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9871354528042",
+    "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy",
+    "title": "Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Cloud grey+Blue)",
+    "price": 999.0,
+    "price_formatted": "Rs. 999.00",
+    "original_price": 1999.0,
+    "original_price_formatted": "Rs. 1,999.00",
+    "discount_percent": 50,
+    "rating": 4.8,
+    "reviews_count": 122,
+    "category": "watchbands",
+    "category_name": "Watch Bands",
+    "collections": [
+      "all",
+      "watchbands",
+      "new-arrivals"
+    ],
+    "is_bestseller": false,
+    "is_new": true,
+    "is_mens": false,
+    "is_womens": false,
+    "tags": [],
+    "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+    "images": [
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/01_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/02_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/03_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/04_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/05_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/06_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/07_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/08_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/09_extra.webp",
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/10_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Cloud Grey+Blue",
+        "hex": "#64748B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Blue+Midnight Black",
+        "hex": "#1E3A8A",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Black+Grey",
+        "hex": "#18181B",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Starlight+Pink",
+        "hex": "#F472B6",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
+        ]
+      },
+      {
+        "name": "Orange+Midnight Black",
+        "hex": "#EA580C",
+        "price": 999.0,
+        "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
+        "images": [
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "38mm / 40mm / 41mm",
+      "42mm / 44mm / 45mm",
+      "49mm (Apple Watch Ultra 1 & 2)"
+    ],
+    "model_label": "Select Case Size:",
+    "description": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "bullets": [
+      "Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+      "Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+      "Comfortable, durable, and easy to snap on/off"
+    ],
+    "raw_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p> Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br> Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br> Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Available in sizes",
+        "subtitle": "40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm",
+        "icon": "shield"
+      },
+      {
+        "title": "Dual-color combinations: Black",
+        "subtitle": "+ Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink",
+        "icon": "shield"
+      },
+      {
+        "title": "Comfortable, durable, and",
+        "subtitle": "easy to snap on/off",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-Density Breathable Silicone & Metal Hardware"
+      },
+      {
+        "label": "Compatibility",
+        "value": "40mm/41mm/42mm, 44mm/45mm/46mm/49mm"
+      },
+      {
+        "label": "Magnetic Alignment",
+        "value": "Strong MagSafe Ring Array (Built-in)"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Sweat & Splash Resistant (IPX5)"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition(Cloud grey+Blue)"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 642,
+      "sold_hours": 8,
+      "stock_left": 15
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<p>Description:<br>Style meets comfort with our Dual-Tone Magnetic Smartwatch Bands. Designed with a flexible magnetic closure for a secure fit and effortless wear, these bands combine durability with a modern two-tone look. Perfect for both casual and formal outfits, they bring a premium upgrade to your smartwatch.</p>\n<p>\u2705 Available in sizes: 40mm, 41mm, 42mm, 44mm, 45mm, 46mm, 49mm<br>\u2705 Dual-color combinations: Black + Grey, Orange + Midnight, Blue + Midnight, Cloud Grey + Blue, Green + Deep Blue, Starlight + Pink<br>\u2705 Comfortable, durable, and easy to snap on/off</p>\n<p>A stylish companion for everyday wear that keeps your watch looking fresh and elegant.</p>",
+    "shopify_variants": [
+      {
+        "id": 50532927602986,
+        "title": "40mm/41mm/42mm / Cloud Grey+Blue",
+        "option1": "40mm/41mm/42mm",
+        "option2": "Cloud Grey+Blue",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49997038715178,
+          "product_id": 9871354528042,
+          "position": 2,
+          "created_at": "2025-09-10T11:29:56+05:30",
+          "updated_at": "2025-11-23T11:49:03+05:30",
+          "alt": null,
+          "width": 3000,
+          "height": 3000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/nghh_m.jpg?v=1763878743",
+          "variant_ids": [
+            50532927602986,
+            50532927635754
+          ]
+        },
+        "available": true,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 1,
+        "product_id": 9871354528042,
+        "created_at": "2025-08-26T17:09:54+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50532927635754,
+        "title": "44mm/45mm/46mm/49mm / Cloud Grey+Blue",
+        "option1": "44mm/45mm/46mm/49mm",
+        "option2": "Cloud Grey+Blue",
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": {
+          "id": 49997038715178,
+          "product_id": 9871354528042,
+          "position": 2,
+          "created_at": "2025-09-10T11:29:56+05:30",
+          "updated_at": "2025-11-23T11:49:03+05:30",
+          "alt": null,
+          "width": 3000,
+          "height": 3000,
+          "src": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/nghh_m.jpg?v=1763878743",
+          "variant_ids": [
+            50532927602986,
+            50532927635754
+          ]
+        },
+        "available": true,
+        "price": "999.00",
+        "grams": 0,
+        "compare_at_price": "1999.00",
+        "position": 2,
+        "product_id": 9871354528042,
+        "created_at": "2025-08-26T17:09:54+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "40mm/41mm/42mm",
+          "44mm/45mm/46mm/49mm"
+        ]
+      },
+      {
+        "name": "Color",
+        "position": 2,
+        "values": [
+          "Cloud Grey+Blue"
+        ]
+      }
+    ]
+  },
+  {
     "id": "9871022719274",
     "handle": "magnetic-loop-smartwatch-bands-dual-color-edition",
     "title": "Magnetic Loop Smartwatch Bands \u2013 Dual Color Edition",
@@ -31069,11 +34187,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/02_lifestyle.png",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/09_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/10_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/11_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/12_extra.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/02_lifestyle.png"
         ],
         "hex": "#FF5500"
       },
@@ -31083,14 +34197,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/01_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/02_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/03_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/09_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/10_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/11_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/12_extra.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/02_lifestyle.jpg"
         ],
         "hex": "#1E3A8A"
       },
@@ -31100,12 +34207,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/02_lifestyle.jpg",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/08_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/09_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/10_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/11_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/12_extra.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/02_lifestyle.jpg"
         ],
         "hex": "#6B7280"
       },
@@ -31115,11 +34217,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/02_lifestyle.jpg",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/09_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/10_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/11_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/12_extra.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/02_lifestyle.jpg"
         ],
         "hex": "#1F2937"
       },
@@ -31129,11 +34227,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/02_lifestyle.png",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/09_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/10_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/11_extra.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/12_extra.webp"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/02_lifestyle.png"
         ],
         "hex": "#F472B6"
       }
@@ -47711,6 +50805,398 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "alias_handles": [
       "luxury-quilted-crossbody-wallet-phone-case-copy",
       "luxury-quilted-crossbody-wallet-phone-case-copy-1"
+    ]
+  },
+  {
+    "id": "9869730382122",
+    "handle": "silver-3d-love-heart-phone-case-copy",
+    "title": "Luxury Crossbody Wallet Phone Case",
+    "price": 899.0,
+    "price_formatted": "Rs. 899.00",
+    "original_price": 999.0,
+    "original_price_formatted": "Rs. 999.00",
+    "discount_percent": 10,
+    "rating": 4.8,
+    "reviews_count": 422,
+    "category": "iphone-cases",
+    "category_name": "Phone Cases",
+    "collections": [
+      "all",
+      "buy-three",
+      "covers",
+      "iphone-cases",
+      "new-arrivals",
+      "womens-cover"
+    ],
+    "is_bestseller": false,
+    "is_new": true,
+    "is_mens": false,
+    "is_womens": true,
+    "tags": [],
+    "primary_image": "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/01_packshot.webp",
+    "images": [
+      "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/01_packshot.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/extra/01_extra.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/extra/02_extra.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/extra/03_extra.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/extra/04_extra.webp"
+    ],
+    "has_colors": true,
+    "colors": [
+      {
+        "name": "Espresso Brown",
+        "hex": "#78350F",
+        "image": "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/01_packshot.webp",
+        "images": [
+          "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/01_packshot.webp"
+        ]
+      }
+    ],
+    "models": [
+      "iPhone 16 Pro Max",
+      "iPhone 16 Pro",
+      "iPhone 16 Plus",
+      "iPhone 16",
+      "iPhone 15 Pro Max",
+      "iPhone 15 Pro",
+      "iPhone 15 Plus",
+      "iPhone 15",
+      "iPhone 14 Pro Max",
+      "iPhone 14 Pro",
+      "iPhone 14",
+      "iPhone 13 Pro Max",
+      "iPhone 13"
+    ],
+    "model_label": "Select Device Model:",
+    "description": "<div>Cream with Gold Chain &amp; Mini Pocket,</div>\n<div>Stay stylish and organized with the Luxury Crossbody Wallet Phone Case. Designed in a chic cream finish with a contrasting brown mini pocket and gold hardware, this case is the perfect blend of fashion and function. The attached gold chain lets you wear it crossbody or over the shoulder, keeping your phone and essentials close at all times.</div>\n<div></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Elegant cream case with brown pocket and gold clasp</span></div>\n<div><span> \u2022 Built-in mini wallet pocket for cards, cash, or small items</span></div>\n<div><span> \u2022 Detachable gold chain for hands-free carrying</span></div>\n<div><span> \u2022 Durable, protective design against scratches and drops</span></div>\n<div><span> \u2022 Perfect for casual outings, shopping trips, or nights out</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag.</div>",
+    "bullets": [
+      "Elegant cream case with brown pocket and gold clasp",
+      "Built-in mini wallet pocket for cards, cash, or small items",
+      "Detachable gold chain for hands-free carrying",
+      "Durable, protective design against scratches and drops",
+      "Compatible with multiple iPhone models",
+      "This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag."
+    ],
+    "raw_html": "<div>Cream with Gold Chain &amp; Mini Pocket,</div>\n<div>Stay stylish and organized with the Luxury Crossbody Wallet Phone Case. Designed in a chic cream finish with a contrasting brown mini pocket and gold hardware, this case is the perfect blend of fashion and function. The attached gold chain lets you wear it crossbody or over the shoulder, keeping your phone and essentials close at all times.</div>\n<div></div>\n<div> Features:</div>\n<div><span> \u2022 Elegant cream case with brown pocket and gold clasp</span></div>\n<div><span> \u2022 Built-in mini wallet pocket for cards, cash, or small items</span></div>\n<div><span> \u2022 Detachable gold chain for hands-free carrying</span></div>\n<div><span> \u2022 Durable, protective design against scratches and drops</span></div>\n<div><span> \u2022 Perfect for casual outings, shopping trips, or nights out</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag.</div>",
+    "in_stock": true,
+    "features": [
+      {
+        "title": "Elegant cream case",
+        "subtitle": "with brown pocket and gold clasp",
+        "icon": "shield"
+      },
+      {
+        "title": "Built-in mini wallet",
+        "subtitle": "pocket for cards, cash, or small items",
+        "icon": "shield"
+      },
+      {
+        "title": "Detachable gold chain",
+        "subtitle": "for hands-free carrying",
+        "icon": "shield"
+      }
+    ],
+    "specs": [
+      {
+        "label": "Material",
+        "value": "High-Grade Impact Resistant TPU & Polycarbonate"
+      },
+      {
+        "label": "Compatibility",
+        "value": "iPhone 13, iPhone 13 Pro and 10 other models"
+      },
+      {
+        "label": "Form Factor",
+        "value": "Slim Ergonomic Grip Profile"
+      },
+      {
+        "label": "Durability",
+        "value": "Reinforced Wear & Tear Resistant"
+      },
+      {
+        "label": "In The Box",
+        "value": "1 \u00d7 Covertok Luxury Crossbody Wallet Phone Case"
+      },
+      {
+        "label": "Warranty",
+        "value": "1 Year Genuine Covertok Replacement Warranty"
+      }
+    ],
+    "trust_badges": [
+      {
+        "title": "Premium Quality",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/high-quality.png?v=1775130085"
+      },
+      {
+        "title": "1 Year Warranty",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/guaranteed.png?v=1775130084"
+      },
+      {
+        "title": "2 Days Return",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/delivery-status.png?v=1775130085"
+      },
+      {
+        "title": "10k+ Happy Customer",
+        "icon": "https://cdn.shopify.com/s/files/1/0942/0550/9930/files/costumer.png?v=1775653342"
+      }
+    ],
+    "social_proof": {
+      "sold_count": 722,
+      "sold_hours": 4,
+      "stock_left": 20
+    },
+    "vendor": "COVERTOK",
+    "product_type": "",
+    "body_html": "<div>Cream with Gold Chain &amp; Mini Pocket,</div>\n<div>Stay stylish and organized with the Luxury Crossbody Wallet Phone Case. Designed in a chic cream finish with a contrasting brown mini pocket and gold hardware, this case is the perfect blend of fashion and function. The attached gold chain lets you wear it crossbody or over the shoulder, keeping your phone and essentials close at all times.</div>\n<div></div>\n<div>\u2728 Features:</div>\n<div><span> \u2022 Elegant cream case with brown pocket and gold clasp</span></div>\n<div><span> \u2022 Built-in mini wallet pocket for cards, cash, or small items</span></div>\n<div><span> \u2022 Detachable gold chain for hands-free carrying</span></div>\n<div><span> \u2022 Durable, protective design against scratches and drops</span></div>\n<div><span> \u2022 Perfect for casual outings, shopping trips, or nights out</span></div>\n<div><span> \u2022 Compatible with multiple iPhone models</span></div>\n<div></div>\n<div>This case isn\u2019t just protection \u2013 it\u2019s a statement accessory that doubles as a mini bag.</div>",
+    "shopify_variants": [
+      {
+        "id": 50525289513258,
+        "title": "iPhone 13",
+        "option1": "iPhone 13",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 1,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289546026,
+        "title": "iPhone 13 Pro",
+        "option1": "iPhone 13 Pro",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 2,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289578794,
+        "title": "iPhone 13 Pro Max",
+        "option1": "iPhone 13 Pro Max",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 3,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289611562,
+        "title": "iPhone 14",
+        "option1": "iPhone 14",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 4,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289644330,
+        "title": "iPhone 14 Pro",
+        "option1": "iPhone 14 Pro",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 5,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289677098,
+        "title": "iPhone 14 Pro Max",
+        "option1": "iPhone 14 Pro Max",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 6,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289709866,
+        "title": "iPhone 15",
+        "option1": "iPhone 15",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 7,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289742634,
+        "title": "iPhone 15 Pro",
+        "option1": "iPhone 15 Pro",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 8,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289775402,
+        "title": "iPhone 15 Pro Max",
+        "option1": "iPhone 15 Pro Max",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 9,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289808170,
+        "title": "iPhone 16",
+        "option1": "iPhone 16",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 10,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289840938,
+        "title": "iPhone 16 Pro",
+        "option1": "iPhone 16 Pro",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 11,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      },
+      {
+        "id": 50525289873706,
+        "title": "iPhone 16 Pro Max",
+        "option1": "iPhone 16 Pro Max",
+        "option2": null,
+        "option3": null,
+        "sku": null,
+        "requires_shipping": true,
+        "taxable": true,
+        "featured_image": null,
+        "available": true,
+        "price": "899.00",
+        "grams": 0,
+        "compare_at_price": "999.00",
+        "position": 12,
+        "product_id": 9869730382122,
+        "created_at": "2025-08-23T17:16:39+05:30",
+        "updated_at": "2026-11-15T01:28:00+05:30"
+      }
+    ],
+    "shopify_options": [
+      {
+        "name": "Model",
+        "position": 1,
+        "values": [
+          "iPhone 13",
+          "iPhone 13 Pro",
+          "iPhone 13 Pro Max",
+          "iPhone 14",
+          "iPhone 14 Pro",
+          "iPhone 14 Pro Max",
+          "iPhone 15",
+          "iPhone 15 Pro",
+          "iPhone 15 Pro Max",
+          "iPhone 16",
+          "iPhone 16 Pro",
+          "iPhone 16 Pro Max"
+        ]
+      }
     ]
   },
   {

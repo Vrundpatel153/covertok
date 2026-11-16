@@ -438,7 +438,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261116_v17';
+    const v = '20261116_v19';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -479,75 +479,49 @@
     }
   }
 
-  // Universal isolated gallery extractor: Shopify-standard variant image filtering
-  // When a color is selected: Dedicated color packshot & lifestyle FIRST, followed by shared universal showcase shots!
+  // Universal isolated gallery extractor: Strict Shopify-standard variant image filtering
+  // When a color is selected on multi-color products: STRICTLY render ONLY that color's images!
   function getColorGallery(product, color) {
     if (!product) return [];
 
-    // Helper to get normalized base ID from URL (e.g., "01_packshot")
-    function getBaseId(url) {
-      if (!url) return '';
-      const clean = url.split('?')[0].split('#')[0];
-      const filename = clean.substring(clean.lastIndexOf('/') + 1);
-      return filename.replace(/\.(webp|png|jpg|jpeg|gif)$/i, '').toLowerCase();
-    }
+    const hasMultipleColors = Array.isArray(product.colors) && product.colors.length > 1;
 
     if (!color) {
-      if (Array.isArray(product.images) && product.images.length > 0) return product.images;
-      return product.primary_image ? [product.primary_image] : [];
+      if (hasMultipleColors && product.colors[0]) {
+        color = product.colors[0];
+      } else {
+        if (Array.isArray(product.images) && product.images.length > 0) return product.images;
+        return product.primary_image ? [product.primary_image] : [];
+      }
     }
 
-    // 1. Collect this selected color's dedicated images (01_packshot.webp first, then dedicated lifestyles)
+    // 1. Collect this selected color's dedicated images strictly
     const colorImgs = [];
     if (color.image) colorImgs.push(color.image);
     if (Array.isArray(color.images)) {
       color.images.forEach(img => {
-        if (img && !colorImgs.some(ci => getBaseId(ci) === getBaseId(img) && ci.split('/')[ci.split('/').length - 2] === img.split('/')[img.split('/').length - 2])) {
-          if (!colorImgs.includes(img)) colorImgs.push(img);
-        }
-      });
-    }
-
-    // Identify other color folders to strictly exclude them from this color's gallery
-    const otherColorFolders = [];
-    if (Array.isArray(product.colors)) {
-      product.colors.forEach(c => {
-        if (c && c.name !== color.name) {
-          const cSlug = (c.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-          if (cSlug) otherColorFolders.push(`/${cSlug}/`);
-          if (c.image) {
-            const parts = c.image.split('/');
-            if (parts.length >= 2) otherColorFolders.push(`/${parts[parts.length - 2]}/`);
-          }
-        }
-      });
-    }
-
-    // 2. Append shared universal showcase & feature images (e.g. from extra/ or universal product images)
-    // Strictly exclude other colors' packshots and folder images!
-    if (Array.isArray(product.images)) {
-      product.images.forEach(img => {
-        if (!img) return;
-        // Never leak images from other color folders
-        if (otherColorFolders.some(folder => img.includes(folder))) return;
-        // Never leak packshot of another color
-        if (img.includes('01_packshot') && !colorImgs.includes(img)) return;
-        // Exclude washed-out schematic diagram on magnetic loop
-        if (img.includes('06_extra.webp') && (product.handle || '').includes('magnetic-loop')) return;
-        if (!colorImgs.includes(img)) {
+        if (img && !colorImgs.includes(img)) {
           colorImgs.push(img);
         }
       });
     }
 
-    if (colorImgs.length > 0) {
-      return colorImgs;
+    // Strict Multi-Color Isolation:
+    // When a product has multiple color variants, return STRICTLY this selected color's images.
+    // NEVER leak other colors or unclassified images from product.images!
+    if (hasMultipleColors) {
+      if (colorImgs.length > 0) return colorImgs;
+      return color.image ? [color.image] : (product.primary_image ? [product.primary_image] : []);
     }
 
-    // Fallback if product has no color-specific images
+    // Single-color or non-variant products: display all product images in gallery
     if (Array.isArray(product.images) && product.images.length > 0) {
-      return product.images;
+      product.images.forEach(img => {
+        if (img && !colorImgs.includes(img)) colorImgs.push(img);
+      });
     }
+
+    if (colorImgs.length > 0) return colorImgs;
     return product.primary_image ? [product.primary_image] : [];
   }
 

@@ -668,7 +668,7 @@
     // Cache buster to ensure clients and CDNs immediately receive freshly updated packshots
     const bustUrl = (u) => {
       if (!u) return '';
-      const v = '20261116_v17';
+      const v = '20261116_v19';
       return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
     };
 
@@ -727,6 +727,17 @@
         card.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
         dot.classList.add('active');
         const imgUrl = dot.getAttribute('data-color-img');
+        const colorName = dot.getAttribute('title') || '';
+        
+        // Dynamically update card media stage and title links so opening product page carries selected color
+        const targetUrl = colorName
+          ? `product.html?handle=${encodeURIComponent(product.handle)}&color=${encodeURIComponent(colorName)}`
+          : `product.html?handle=${encodeURIComponent(product.handle)}`;
+        const mediaStage = card.querySelector('.card-media-stage');
+        if (mediaStage) mediaStage.onclick = () => window.location.href = targetUrl;
+        const titleLink = card.querySelector('.card-product-title');
+        if (titleLink) titleLink.href = targetUrl;
+
         const mainImg = card.querySelector('.card-main-img');
         if (imgUrl && mainImg && mainImg.src !== imgUrl && !mainImg.src.endsWith(imgUrl)) {
           mainImg.style.opacity = '0.35';
