@@ -438,7 +438,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261117_v23';
+    const v = '20261117_v24';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 

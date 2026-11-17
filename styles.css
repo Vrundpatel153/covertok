@@ -51959,9 +51959,9 @@ a.footer-contact-main:hover {
   right: 0 !important;
   left: auto !important;
   transform: none !important;
-  height: clamp(370px, 72%, 475px) !important;
-  max-height: 73% !important;
-  width: clamp(420px, 44vw, 650px) !important;
+  height: clamp(520px, 92%, 670px) !important;
+  max-height: 94% !important;
+  width: clamp(440px, 46vw, 680px) !important;
   z-index: 4 !important;
   display: flex !important;
   align-items: flex-end !important;
@@ -52249,9 +52249,9 @@ a.footer-contact-main:hover {
     right: 0 !important;
     left: auto !important;
     transform: none !important;
-    height: clamp(390px, 75%, 490px) !important;
-    max-height: 76% !important;
-    width: clamp(420px, 44vw, 650px) !important;
+    height: clamp(520px, 92%, 670px) !important;
+    max-height: 94% !important;
+    width: clamp(440px, 46vw, 680px) !important;
     z-index: 4 !important;
     display: flex !important;
     align-items: flex-end !important;
