@@ -51888,17 +51888,25 @@ a.footer-contact-main:hover {
 
 
 
-/* Slide 2 & 3 Desktop Hero Banners: Model positioned right with generous headroom below navbar notch */
+/* Slide 2 & 3 Desktop Hero Banners: Full Bleed Edge-to-Edge Expanded Fitted Display */
 .hero-slide-bg[data-bg-index="1"] .hero-bg-img {
-  object-position: 80% 85% !important;
-  transform: translateY(32px) scale(0.93) !important;
-  transform-origin: center right !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right center !important;
+  transform: none !important;
 }
 
 .hero-slide-bg[data-bg-index="2"] .hero-bg-img {
-  object-position: 80% 85% !important;
-  transform: translateY(75px) scale(0.88) !important;
-  transform-origin: center right !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: right 25% !important;
+  transform: none !important;
 }
 
 .hero-slide-bg[data-bg-index="1"] .hero-bg-scrim {
@@ -56044,6 +56052,16 @@ html body #siteHeader,
   body.home-page .site-header .main-nav,
   body.home-page .site-header .header-right {
     pointer-events: auto !important;
+  }
+
+  body.home-page .site-header .main-nav .nav-list {
+    gap: clamp(10px, 1.2vw, 18px) !important;
+  }
+
+  body.home-page .site-header .nav-link {
+    font-size: clamp(0.76rem, 0.84vw, 0.84rem) !important;
+    letter-spacing: 0.05em !important;
+    white-space: nowrap !important;
   }
 
   body.home-page .hero-section {
