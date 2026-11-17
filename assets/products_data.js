@@ -10608,31 +10608,31 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "iPhone 13"
     ],
     "model_label": "Select Device Model:",
-    "description": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>✔️ Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>✔️ Slim &amp; lightweight design</span></li>\n<li><span>✔️ Metal camera ring for lens protection</span></li>\n<li><span>✔️ Scratch &amp; fingerprint resistant</span></li>\n<li><span>✔️ Precise cut-outs for camera &amp; ports</span></li>\n<li><span>✔️ Easy snap-on installation</span></li>\n<li><span>✔️ Ideal for daily use</span></li>\n</ul>\n<p> </p>\n<p>Protection Level<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p> </p>",
+    "description": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>✔ Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>✔ Slim &amp; lightweight design</span></li>\n<li><span>✔ Metal camera ring for lens protection</span></li>\n<li><span>✔ Scratch &amp; fingerprint resistant</span></li>\n<li><span>✔ Precise cut-outs for camera &amp; ports</span></li>\n<li><span>✔ Easy snap-on installation</span></li>\n<li><span>✔ Ideal for daily use</span></li>\n</ul>\n<p> </p>\n<p>Protection Level<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p> </p>",
     "bullets": [
-      "️ Premium leather-texture back (soft & comfortable grip)",
-      "️ Slim & lightweight design",
-      "️ Metal camera ring for lens protection",
-      "️ Scratch & fingerprint resistant",
-      "️ Precise cut-outs for camera & ports",
-      "️ Easy snap-on installation",
-      "️ Ideal for daily use"
+      " Premium leather-texture back (soft & comfortable grip)",
+      " Slim & lightweight design",
+      " Metal camera ring for lens protection",
+      " Scratch & fingerprint resistant",
+      " Precise cut-outs for camera & ports",
+      " Easy snap-on installation",
+      " Ideal for daily use"
     ],
-    "raw_html": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>️ Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>️ Slim &amp; lightweight design</span></li>\n<li><span>️ Metal camera ring for lens protection</span></li>\n<li><span>️ Scratch &amp; fingerprint resistant</span></li>\n<li><span>️ Precise cut-outs for camera &amp; ports</span></li>\n<li><span>️ Easy snap-on installation</span></li>\n<li><span>️ Ideal for daily use</span></li>\n</ul>\n<p> </p>\n<p>Protection Level<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p> </p>",
+    "raw_html": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span> Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span> Slim &amp; lightweight design</span></li>\n<li><span> Metal camera ring for lens protection</span></li>\n<li><span> Scratch &amp; fingerprint resistant</span></li>\n<li><span> Precise cut-outs for camera &amp; ports</span></li>\n<li><span> Easy snap-on installation</span></li>\n<li><span> Ideal for daily use</span></li>\n</ul>\n<p> </p>\n<p>Protection Level<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p> </p>",
     "in_stock": true,
     "features": [
       {
-        "title": "️ Premium leather-texture",
+        "title": " Premium leather-texture",
         "subtitle": "back (soft & comfortable grip)",
         "icon": "shield"
       },
       {
-        "title": "️ Slim &",
+        "title": " Slim &",
         "subtitle": "lightweight design",
         "icon": "feather"
       },
       {
-        "title": "️ Metal camera",
+        "title": " Metal camera",
         "subtitle": "ring for lens protection",
         "icon": "shield"
       }
@@ -10688,7 +10688,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     },
     "vendor": "COVERTOK",
     "product_type": "Mobile Accessories",
-    "body_html": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>✔️ Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>✔️ Slim &amp; lightweight design</span></li>\n<li><span>✔️ Metal camera ring for lens protection</span></li>\n<li><span>✔️ Scratch &amp; fingerprint resistant</span></li>\n<li><span>✔️ Precise cut-outs for camera &amp; ports</span></li>\n<li><span>✔️ Easy snap-on installation</span></li>\n<li><span>✔️ Ideal for daily use</span></li>\n</ul>\n<p> </p>\n<p>Protection Level<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p> </p>",
+    "body_html": "<p><span>Give your iPhone a refined and elegant look with our Premium Leather-Finish Slim Case, designed for everyday style and comfort.</span></p>\n<p>The case features a soft leather-texture back panel that provides a smooth, anti-slip grip, along with a metal camera ring for added protection around the lenses. Its slim and lightweight design ensures your phone stays pocket-friendly while offering reliable protection against scratches and daily wear.Perfect for those who prefer a clean, classy, and minimal aesthetic without adding bulk.<br><span></span></p>\n<p>Key Features<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>✔ Premium leather-texture back (soft &amp; comfortable grip)</span></li>\n<li><span>✔ Slim &amp; lightweight design</span></li>\n<li><span>✔ Metal camera ring for lens protection</span></li>\n<li><span>✔ Scratch &amp; fingerprint resistant</span></li>\n<li><span>✔ Precise cut-outs for camera &amp; ports</span></li>\n<li><span>✔ Easy snap-on installation</span></li>\n<li><span>✔ Ideal for daily use</span></li>\n</ul>\n<p> </p>\n<p>Protection Level<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Protects against scratches, minor drops &amp; daily wear</span></li>\n<li><span>Raised camera edge to prevent lens contact with surfaces</span></li>\n</ul>\n<p>Compatibility<br><span></span></p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<p> </p>\n<ul>\n<li><span>Compatible with iPhone models (select model before checkout)</span></li>\n</ul>\n<p> </p>",
     "shopify_variants": [
       {
         "id": 50950226444586,
@@ -40102,22 +40102,22 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "is_mens": false,
     "is_womens": true,
     "tags": [],
-    "primary_image": "assets/products/silicone-world-map-travel-phone-case️-copy/holographic/01_packshot.webp",
+    "primary_image": "assets/products/silicone-world-map-travel-phone-case-copy/holographic/01_packshot.webp",
     "images": [
-      "assets/products/silicone-world-map-travel-phone-case️-copy/holographic/01_packshot.webp",
-      "assets/products/silicone-world-map-travel-phone-case️-copy/extra/01_extra.webp",
-      "assets/products/silicone-world-map-travel-phone-case️-copy/extra/02_extra.webp",
-      "assets/products/silicone-world-map-travel-phone-case️-copy/extra/03_extra.webp",
-      "assets/products/silicone-world-map-travel-phone-case️-copy/extra/04_extra.webp"
+      "assets/products/silicone-world-map-travel-phone-case-copy/holographic/01_packshot.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/extra/01_extra.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/extra/02_extra.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/extra/03_extra.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/extra/04_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Holographic",
         "hex": "#C4B5FD",
-        "image": "assets/products/silicone-world-map-travel-phone-case️-copy/holographic/01_packshot.webp",
+        "image": "assets/products/silicone-world-map-travel-phone-case-copy/holographic/01_packshot.webp",
         "images": [
-          "assets/products/silicone-world-map-travel-phone-case️-copy/holographic/01_packshot.webp"
+          "assets/products/silicone-world-map-travel-phone-case-copy/holographic/01_packshot.webp"
         ],
         "value": "#C4B5FD"
       }
@@ -40462,7 +40462,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       }
     ],
     "alias_handles": [
-      "silicone-world-map-travel-phone-case✈️🌍-copy"
+      "silicone-world-map-travel-phone-case✈🌍-copy"
     ]
   },
   {
