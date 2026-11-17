@@ -4953,9 +4953,9 @@ img {
 
 
 
-  border-radius: 28px;
-  clip-path: none;
-  -webkit-clip-path: none;
+  border-radius: 0;
+  clip-path: url(#heroCardClip);
+  -webkit-clip-path: url(#heroCardClip);
 
 
 
@@ -51888,16 +51888,17 @@ a.footer-contact-main:hover {
 
 
 
-/* Slide 2 & 3 Desktop Hero Banners: Full bleed edge-to-edge cover to eliminate all gaps and black bars */
-.hero-slide-bg[data-bg-index="1"] .hero-bg-img,
+/* Slide 2 & 3 Desktop Hero Banners: Model positioned right with generous headroom below navbar notch */
+.hero-slide-bg[data-bg-index="1"] .hero-bg-img {
+  object-position: 80% 85% !important;
+  transform: translateY(32px) scale(0.93) !important;
+  transform-origin: center right !important;
+}
+
 .hero-slide-bg[data-bg-index="2"] .hero-bg-img {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: right top !important;
-  transform: none !important;
+  object-position: 80% 85% !important;
+  transform: translateY(75px) scale(0.88) !important;
+  transform-origin: center right !important;
 }
 
 .hero-slide-bg[data-bg-index="1"] .hero-bg-scrim {
@@ -52216,9 +52217,12 @@ a.footer-contact-main:hover {
   margin: 0 !important;
 
   background: #0A0A0C !important;
-  border-radius: 28px !important;
-  clip-path: none !important;
-  -webkit-clip-path: none !important;
+
+  border-radius: 0 !important;
+
+  clip-path: url(#heroCardClip) !important;
+
+  -webkit-clip-path: url(#heroCardClip) !important;
 
   padding: 0 !important;
 
@@ -52242,18 +52246,17 @@ a.footer-contact-main:hover {
   .hero-hand-slideshow {
     position: absolute !important;
     bottom: 0 !important;
-    right: clamp(16px, 2.5vw, 40px) !important;
+    right: 0 !important;
     left: auto !important;
     transform: none !important;
-    height: clamp(270px, 50%, 350px) !important;
-    max-height: 52% !important;
-    width: clamp(320px, 34vw, 480px) !important;
+    height: clamp(390px, 75%, 490px) !important;
+    max-height: 76% !important;
+    width: clamp(420px, 44vw, 650px) !important;
     z-index: 4 !important;
     display: flex !important;
     align-items: flex-end !important;
     justify-content: flex-end !important;
-    pointer-events: auto !important;
-    user-select: none !important;
+    pointer-events: none !important;
   }
 
   .hero-hand-stage {
@@ -53416,9 +53419,9 @@ body.home-page .hero-card {
   max-height: 740px !important;
   margin: 0 !important;
   background: #0A0A0C !important;
-  border-radius: 28px !important;
-  clip-path: none !important;
-  -webkit-clip-path: none !important;
+  border-radius: 0 !important;
+  clip-path: url(#heroCardClip) !important;
+  -webkit-clip-path: url(#heroCardClip) !important;
   padding: 0 !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12) !important;
   border: none !important;
@@ -55990,47 +55993,51 @@ html body #siteHeader,
 
 
 /* ==========================================================================
-   HOMEPAGE CLEAN STANDARDIZED HEADER & HERO RECOVERY
+   HOMEPAGE DESKTOP STEPPED HERO WINDOW NESTING & UNIVERSAL NAVBAR
    ========================================================================== */
 @media (min-width: 992px) {
   html body.home-page .site-header,
   html body.home-page #siteHeader,
   body.home-page .site-header,
   body.home-page #siteHeader {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
     width: 100% !important;
-    background: rgba(255, 255, 255, 0.96) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
-    padding: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 16px 0 0 !important;
     margin: 0 !important;
-    height: 68px !important;
-    min-height: 68px !important;
-    z-index: 1000 !important;
-    pointer-events: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
   }
 
   body.home-page .site-header .header-inner,
   body.home-page #siteHeader .header-inner {
-    max-width: 1680px !important;
-    margin: 0 auto !important;
-    padding: 0 clamp(16px, 2vw, 36px) !important;
-    height: 68px !important;
-    min-height: 68px !important;
+    max-width: 100% !important;
+    padding: 0 clamp(10px, 1.2vw, 20px) !important;
+    height: 52px !important;
+    min-height: 52px !important;
     background: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: none !important;
     box-shadow: none !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    pointer-events: auto !important;
+    pointer-events: none !important;
   }
 
   body.home-page .site-header .header-left,
@@ -56042,8 +56049,8 @@ html body #siteHeader,
   body.home-page .hero-section {
     position: relative !important;
     width: 100% !important;
-    margin-top: 0 !important;
-    padding: 16px clamp(12px, 2vw, 32px) 24px !important;
+    margin-top: -68px !important;
+    padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
     margin-bottom: 0 !important;
     display: block !important;
     background: var(--bg-stone, #FAF9F6) !important;
@@ -56053,14 +56060,8 @@ html body #siteHeader,
   }
 
   body.home-page .hero-card {
-    border-radius: 28px !important;
-    clip-path: none !important;
-    -webkit-clip-path: none !important;
-    overflow: hidden !important;
-  }
-
-  body.home-page .hero-content {
-    padding-top: clamp(36px, 5vh, 64px) !important;
+    clip-path: url(#heroCardClip) !important;
+    -webkit-clip-path: url(#heroCardClip) !important;
   }
 }
 

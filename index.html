@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css?v=20261117_v22" rel="stylesheet"/>
-<link href="catalog.css?v=20261117_v22" rel="stylesheet"/>
-<link href="microinteractions.css?v=20261117_v22" rel="stylesheet"/>
-<link href="combo.css?v=20261117_v22" rel="stylesheet"/>
-<link href="assets/trending_drops.css?v=20261117_v22" rel="stylesheet"/>
+<link href="styles.css?v=20261117_v23" rel="stylesheet"/>
+<link href="catalog.css?v=20261117_v23" rel="stylesheet"/>
+<link href="microinteractions.css?v=20261117_v23" rel="stylesheet"/>
+<link href="combo.css?v=20261117_v23" rel="stylesheet"/>
+<link href="assets/trending_drops.css?v=20261117_v23" rel="stylesheet"/>
 <!-- Preload 3D WebGL Textures for Instant Zero-Lag Rendering -->
 <link as="image" href="assets/blue_phone_body.webp" rel="preload" type="image/webp"/>
 <link as="image" href="assets/blue_protector_cover.webp" rel="preload" type="image/webp"/>
@@ -262,8 +262,36 @@
 <!-- SECTION: HERO BANNER (Shopify: sections/hero-banner.liquid)             -->
 <!-- ========================================================================= -->
 <!-- Global SVG clipPath definition for desktop curve notch pocket -->
+<svg aria-hidden="true" height="0" style="position: absolute; pointer-events: none;" width="0">
+<defs>
+<clipPath clipPathUnits="objectBoundingBox" id="heroCurveClip">
+<path d="
+            M 0.024, 0
+            L 0.976, 0
+            C 0.99, 0, 1, 0.015, 1, 0.04
+            L 1, 0.96
+            C 1, 0.985, 0.99, 1, 0.976, 1
+            L 0.22, 1
+            C 0.19, 1, 0.172, 0.865, 0.145, 0.865
+            L 0.024, 0.865
+            C 0.01, 0.865, 0, 0.845, 0, 0.81
+            L 0, 0.04
+            C 0, 0.015, 0.01, 0, 0.024, 0
+            Z
+          "></path>
+</clipPath>
+</defs>
+</svg>
 <section aria-label="Featured Mobile Cover Banners" class="hero-section" id="hero">
 <div class="hero-container">
+<!-- SVG Defs for Signature Curved Hero Window Silhouette -->
+<svg aria-hidden="true" height="0" style="position: absolute; pointer-events: none;" width="0">
+<defs>
+<clipPath clipPathUnits="objectBoundingBox" id="heroCardClip">
+<path d="M 0.0000 0.8676 L 0.0000 0.1324 C 0.0000 0.1146, 0.0075 0.1000, 0.0167 0.1000 L 0.4600 0.1000 C 0.4750 0.1000, 0.4850 0.0189, 0.5000 0.0189 L 0.8200 0.0189 C 0.8350 0.0189, 0.8450 0.1000, 0.8600 0.1000 L 0.9833 0.1000 C 0.9920 0.1000, 1.0000 0.1146, 1.0000 0.1324 L 1.0000 0.9676 C 1.0000 0.9854, 0.9920 1.0000, 0.9822 1.0000 L 0.2500 1.0000 C 0.2300 1.0000, 0.2150 0.8814, 0.1950 0.8814 L 0.0178 0.8814 C 0.0080 0.8814, 0.0000 0.8633, 0.0000 0.8446 Z"></path>
+</clipPath>
+</defs>
+</svg>
 <!-- Master Luxury Hero Canvas Card -->
 <div class="hero-card" id="heroCarousel">
 <!-- Desktop & Tablet Slide Backgrounds (Hardware Accelerated Crossfade) -->
@@ -283,11 +311,11 @@
 <div class="hero-bg-scrim"></div>
 </div>
 <div class="hero-slide-bg" data-bg-index="1">
-<img alt="Covertok Frameless Series Bumper Case" class="hero-bg-img" decoding="async" src="assets/hero_banner_2_pc.webp?v=20261117_v22"/>
+<img alt="Covertok Frameless Series Bumper Case" class="hero-bg-img" decoding="async" src="assets/hero_banner_2_pc.webp?v=20261117_v23"/>
 <div class="hero-bg-scrim"></div>
 </div>
 <div class="hero-slide-bg" data-bg-index="2">
-<img alt="Covertok Viral Silicone Lip Balm Phone Case" class="hero-bg-img" decoding="async" src="assets/hero_banner_3_pc.webp?v=20261117_v22"/>
+<img alt="Covertok Viral Silicone Lip Balm Phone Case" class="hero-bg-img" decoding="async" src="assets/hero_banner_3_pc.webp?v=20261117_v23"/>
 <div class="hero-bg-scrim"></div>
 </div>
 </div>
@@ -306,10 +334,10 @@
 </div>
 </div>
 <div class="hero-mob-bg" data-bg-index="1">
-<img alt="Covertok Frameless Series Bumper Case" class="hero-mob-img hero-mob-img-1" decoding="async" src="assets/hero_banner_2_mob.webp?v=20261117_v22"/>
+<img alt="Covertok Frameless Series Bumper Case" class="hero-mob-img hero-mob-img-1" decoding="async" src="assets/hero_banner_2_mob.webp?v=20261117_v23"/>
 </div>
 <div class="hero-mob-bg" data-bg-index="2">
-<img alt="Viral Silicone Lip Balm Phone Case" class="hero-mob-img hero-mob-img-2" decoding="async" src="assets/hero_banner_3_mob.webp?v=20261117_v22"/>
+<img alt="Viral Silicone Lip Balm Phone Case" class="hero-mob-img hero-mob-img-2" decoding="async" src="assets/hero_banner_3_mob.webp?v=20261117_v23"/>
 </div>
 </div>
 <!-- 3 EDITORIAL SLIDES CONTAINER -->
@@ -3205,23 +3233,23 @@
 </div>
 </div>
 <div id="storeSharedModalsMount"></div>
-<script src="assets/products_data.js?v=20261117_v22"></script>
-<script src="assets/store_core.js?v=20261117_v22"></script>
-<script src="assets/store_modals.js?v=20261117_v22"></script>
-<script src="assets/store_flows.js?v=20261117_v22"></script>
-<script src="assets/bestseller_controller.js?v=20261117_v22"></script>
+<script src="assets/products_data.js?v=20261117_v23"></script>
+<script src="assets/store_core.js?v=20261117_v23"></script>
+<script src="assets/store_modals.js?v=20261117_v23"></script>
+<script src="assets/store_flows.js?v=20261117_v23"></script>
+<script src="assets/bestseller_controller.js?v=20261117_v23"></script>
 <script src="assets/popular_choices_controller.js"></script>
 <script src="assets/story_controller.js"></script>
-<script src="assets/instagram_controller.js?v=20261117_v22"></script>
-<script src="assets/community_reviews_controller.js?v=20261117_v22"></script>
-<script src="assets/hero_hand_slideshow.js?v=20261117_v22"></script>
-<script src="app.js?v=20261117_v22"></script>
+<script src="assets/instagram_controller.js?v=20261117_v23"></script>
+<script src="assets/community_reviews_controller.js?v=20261117_v23"></script>
+<script src="assets/hero_hand_slideshow.js?v=20261117_v23"></script>
+<script src="app.js?v=20261117_v23"></script>
 <script src="assets/home_products.js"></script>
 <script src="assets/trending_drops_controller.js"></script>
-<script src="assets/infinite_row_controller.js?v=20261117_v22"></script>
+<script src="assets/infinite_row_controller.js?v=20261117_v23"></script>
 <!-- Real 3D GPU-Accelerated Interactive Exploded & Assembled Showcase -->
 <script src="assets/three.min.js"></script>
-<script src="webgl_stage_ad.js?v=20261117_v22"></script>
+<script src="webgl_stage_ad.js?v=20261117_v23"></script>
 <!-- Global Product Color Swatches & Quick Add Delegator -->
 <script>
       // Universal Product Card Color Swatch Controller (Instant Click & Hover Preview)
@@ -3269,7 +3297,7 @@
         switchColorDot(dot);
       });
     </script>
-<script defer="" src="assets/instant_navigation.js?v=20261117_v22"></script>
+<script defer="" src="assets/instant_navigation.js?v=20261117_v23"></script>
 <!-- Floating WhatsApp Concierge Button -->
 <a aria-label="Chat with Covertok on WhatsApp" class="floating-whatsapp-btn" href="https://wa.me/919999999999?text=Hi%20Covertok%2C%20I%20have%20a%20query%20about%20your%20products" id="floatingWhatsappBtn" rel="noopener noreferrer" target="_blank">
 <svg aria-hidden="true" class="floating-whatsapp-icon" viewbox="0 0 24 24">

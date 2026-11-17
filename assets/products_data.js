@@ -1,12 +1,12 @@
 // Covertok Full 75-Product Canonical Dataset
-window.PRODUCTS_DATA = [
+window.CovertokProducts = window.PRODUCTS_DATA = [
   {
     "id": "10017625375018",
     "handle": "premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount",
     "title": "Magnetic Phone Holder with 360° Rotation Strong Adhesive Mount",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 1499.0,
+    "original_price": 1499,
     "original_price_formatted": "Rs. 1,499.00",
     "discount_percent": 53,
     "rating": 4.9,
@@ -167,9 +167,9 @@ window.PRODUCTS_DATA = [
     "id": "10005871362346",
     "handle": "ribbed-knit-phone-sling-pouch",
     "title": "Ribbed Knit Phone Sling Pouch",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 1499.0,
+    "original_price": 1499,
     "original_price_formatted": "Rs. 1,499.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -189,20 +189,11 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
     "images": [
       "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
-      "assets/products/ribbed-knit-phone-sling-pouch/blue/02_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
-      "assets/products/ribbed-knit-phone-sling-pouch/orange/02_lifestyle.jpg",
-      "assets/products/ribbed-knit-phone-sling-pouch/orange/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
-      "assets/products/ribbed-knit-phone-sling-pouch/pink/02_lifestyle.jpg",
-      "assets/products/ribbed-knit-phone-sling-pouch/pink/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
-      "assets/products/ribbed-knit-phone-sling-pouch/black/02_lifestyle.jpg",
-      "assets/products/ribbed-knit-phone-sling-pouch/black/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
-      "assets/products/ribbed-knit-phone-sling-pouch/brown/02_lifestyle.jpg",
-      "assets/products/ribbed-knit-phone-sling-pouch/brown/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/extra/01_extra.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/extra/02_extra.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/extra/03_extra.webp",
@@ -225,7 +216,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue",
         "hex": "#2563EB",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
         "images": [
           "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
@@ -236,7 +227,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange",
         "hex": "#F97316",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
         "images": [
           "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp"
@@ -246,7 +237,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
         "images": [
           "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp"
@@ -256,7 +247,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
         "images": [
           "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp"
@@ -266,7 +257,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
         "images": [
           "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp"
@@ -700,9 +691,9 @@ window.PRODUCTS_DATA = [
     "id": "9989730304298",
     "handle": "transparent-magnetic-wireless-charging-phone-case",
     "title": "Transparent Magnetic Wireless Charging Phone Case",
-    "price": 649.0,
+    "price": 649,
     "price_formatted": "Rs. 649.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 35,
     "rating": 4.9,
@@ -739,7 +730,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
         "images": [
           "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
@@ -751,7 +742,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/01_packshot.webp",
         "images": [
           "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/01_packshot.webp",
@@ -1009,9 +1000,9 @@ window.PRODUCTS_DATA = [
     "id": "9875589628202",
     "handle": "phone-cover-with-built-in-lip-balm-holder-copy-copy-6",
     "title": "Soft Silicone Cover With-Lip Balm",
-    "price": 649.0,
+    "price": 649,
     "price_formatted": "Rs. 649.00",
-    "original_price": 1299.0,
+    "original_price": 1299,
     "original_price_formatted": "Rs. 1,299.00",
     "discount_percent": 50,
     "rating": 4.8,
@@ -1035,17 +1026,12 @@ window.PRODUCTS_DATA = [
     "images": [
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/02_lifestyle.jpg",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/03_lifestyle.jpg",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/04_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/05_lifestyle.jpg",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/06_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/01_packshot.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/01_packshot.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/02_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/02_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/02_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/01_extra.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/02_extra.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/03_extra.webp",
@@ -1057,7 +1043,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Raspberry",
         "hex": "#9D174D",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
@@ -1069,7 +1055,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Salty Tan",
         "hex": "#B8977E",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/01_packshot.webp",
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/01_packshot.webp"
@@ -1079,7 +1065,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Unscented",
         "hex": "#CBD5E1",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/01_packshot.webp",
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/01_packshot.webp",
@@ -1090,7 +1076,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Shortcake",
         "hex": "#F2C4CE",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp"
@@ -1100,7 +1086,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Peach Pit",
         "hex": "#FDBA74",
-        "price": 649.0,
+        "price": 649,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp"
@@ -9808,9 +9794,9 @@ window.PRODUCTS_DATA = [
     "id": "9982201299242",
     "handle": "crystal-studded-luxe-case-orange",
     "title": "Crystal Studded Luxe Case – Orange",
-    "price": 949.0,
+    "price": 949,
     "price_formatted": "Rs. 949.00",
-    "original_price": 1299.0,
+    "original_price": 1299,
     "original_price_formatted": "Rs. 1,299.00",
     "discount_percent": 27,
     "rating": 4.8,
@@ -9997,9 +9983,9 @@ window.PRODUCTS_DATA = [
     "id": "9981786390826",
     "handle": "ultra-clear-sideless-anti-yellow-back-case",
     "title": "Ultra Clear Sideless Anti-Yellow Back Case",
-    "price": 599.0,
+    "price": 599,
     "price_formatted": "Rs. 599.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 40,
     "rating": 4.8,
@@ -10523,9 +10509,9 @@ window.PRODUCTS_DATA = [
     "id": "9980484157738",
     "handle": "premium-leather-finish-slim-case-with-metal-camera-ring",
     "title": "Premium Leather-Finish Slim Case with Metal Camera Ring",
-    "price": 849.0,
+    "price": 849,
     "price_formatted": "Rs. 849.00",
-    "original_price": 1299.0,
+    "original_price": 1299,
     "original_price_formatted": "Rs. 1,299.00",
     "discount_percent": 35,
     "rating": 4.9,
@@ -10547,11 +10533,9 @@ window.PRODUCTS_DATA = [
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/02_lifestyle.jpg",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/02_lifestyle.jpg",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/01_packshot.webp",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/02_lifestyle.jpg",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/02_lifestyle.jpg",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/01_extra.webp",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/02_extra.webp",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/03_extra.webp",
@@ -10568,7 +10552,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 849.0,
+        "price": 849,
         "image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp",
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp",
@@ -10579,7 +10563,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 849.0,
+        "price": 849,
         "image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp",
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp"
@@ -10589,7 +10573,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Grey",
         "hex": "#6B7280",
-        "price": 849.0,
+        "price": 849,
         "image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/01_packshot.webp",
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/01_packshot.webp",
@@ -10600,7 +10584,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "White",
         "hex": "#FFFFFF",
-        "price": 849.0,
+        "price": 849,
         "image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp",
         "images": [
           "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp"
@@ -14549,9 +14533,9 @@ window.PRODUCTS_DATA = [
     "id": "9979941159210",
     "handle": "aluminium-frame-transparent-case",
     "title": "Aluminium Frame Transparent Case",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 1499.0,
+    "original_price": 1499,
     "original_price_formatted": "Rs. 1,499.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -14576,7 +14560,6 @@ window.PRODUCTS_DATA = [
       "assets/products/aluminium-frame-transparent-case/cosmic-orange/03_lifestyle.png",
       "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
       "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
-      "assets/products/aluminium-frame-transparent-case/deep-blue/03_lifestyle.jpg",
       "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
       "assets/products/aluminium-frame-transparent-case/silver/02_lifestyle.jpg",
       "assets/products/aluminium-frame-transparent-case/extra/01_extra.webp",
@@ -14598,7 +14581,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cosmic Orange",
         "hex": "#FF6A3D",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
         "images": [
           "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
@@ -14610,7 +14593,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Deep Blue",
         "hex": "#1E40AF",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
         "images": [
           "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
@@ -14621,7 +14604,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Silver",
         "hex": "#E4E4E7",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
         "images": [
           "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
@@ -14948,9 +14931,9 @@ window.PRODUCTS_DATA = [
     "id": "9937879728426",
     "handle": "premium-stainless-steel-milanese-loop-strap-for-smartwatch",
     "title": "Premium Stainless Steel Milanese Loop Strap for Smartwatch",
-    "price": 1099.0,
+    "price": 1099,
     "price_formatted": "Rs. 1,099.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -14973,21 +14956,17 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
     "images": [
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
-      "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
-      "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
-      "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
-      "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/02_lifestyle.png",
       "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/extra/01_extra.webp",
@@ -15007,7 +14986,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Silver",
         "hex": "#E4E4E7",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp"
@@ -15017,7 +14996,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black/01_packshot.webp",
@@ -15028,7 +15007,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Rose gold",
         "hex": "#FDA4AF",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/rose-gold/01_packshot.webp",
@@ -15039,7 +15018,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue",
         "hex": "#2563EB",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp"
@@ -15049,7 +15028,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Titanium",
         "hex": "#D4D4D8",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp"
@@ -15059,7 +15038,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Natural",
         "hex": "#E2E8F0",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/natural/01_packshot.webp",
@@ -15070,7 +15049,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Stone",
         "hex": "#A8A29E",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/stone/01_packshot.webp",
@@ -15081,7 +15060,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black/Red Stripe",
         "hex": "#18181B",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp"
@@ -15091,7 +15070,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Gold",
         "hex": "#EAB308",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
         "images": [
           "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/gold/01_packshot.webp",
@@ -15782,9 +15761,9 @@ window.PRODUCTS_DATA = [
     "id": "9904686924074",
     "handle": "pearl-phone-charm-with-airplane-bow-design",
     "title": "Pearl Phone Charm with Airplane & Bow Design",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -15929,9 +15908,9 @@ window.PRODUCTS_DATA = [
     "id": "9893318426922",
     "handle": "wavy-edge-transparent-shockproof-pastel-cover",
     "title": "Wavy Edge Transparent Shockproof Pastel Cover",
-    "price": 399.0,
+    "price": 399,
     "price_formatted": "Rs. 399.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -15953,13 +15932,9 @@ window.PRODUCTS_DATA = [
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/02_lifestyle.jpg",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/02_lifestyle.jpg",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/02_lifestyle.jpg",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/02_lifestyle.jpg",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/02_lifestyle.jpg",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/01_extra.webp",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/02_extra.webp",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/03_extra.webp",
@@ -15971,7 +15946,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 399.0,
+        "price": 399,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
@@ -15982,7 +15957,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "White",
         "hex": "#FFFFFF",
-        "price": 399.0,
+        "price": 399,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp"
@@ -15992,7 +15967,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "lavender",
         "hex": "#DDD6FE",
-        "price": 399.0,
+        "price": 399,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp"
@@ -16002,7 +15977,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 399.0,
+        "price": 399,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp"
@@ -16012,7 +15987,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Light blue",
         "hex": "#60A5FA",
-        "price": 399.0,
+        "price": 399,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
         "images": [
           "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp"
@@ -20569,9 +20544,9 @@ window.PRODUCTS_DATA = [
     "id": "9889169211690",
     "handle": "multi-color-silicone-suction-grips-phone-holder-with-kickstand",
     "title": "Multi-Color Silicone Suction Grips Phone Holder With Kickstand",
-    "price": 299.0,
+    "price": 299,
     "price_formatted": "Rs. 299.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -20592,21 +20567,14 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
     "images": [
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/02_lifestyle.jpg",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/01_packshot.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/02_lifestyle.png",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/01_extra.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/02_extra.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/03_extra.webp",
@@ -20618,7 +20586,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp"
@@ -20628,7 +20596,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Beige",
         "hex": "#F5F5DC",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp"
@@ -20638,7 +20606,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp"
@@ -20648,7 +20616,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Mint Green",
         "hex": "#4ADE80",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp"
@@ -20658,7 +20626,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue",
         "hex": "#2563EB",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp"
@@ -20668,7 +20636,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Peach",
         "hex": "#FDBA74",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp"
@@ -20678,7 +20646,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/01_packshot.webp",
@@ -20689,7 +20657,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Lavender",
         "hex": "#DDD6FE",
-        "price": 299.0,
+        "price": 299,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
         "images": [
           "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp"
@@ -21093,9 +21061,9 @@ window.PRODUCTS_DATA = [
     "id": "9888955924778",
     "handle": "magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah",
     "title": "Magnetic Wireless Power Bank – Ultra Sleek 5000mAh/ 10000 mAh",
-    "price": 2099.0,
+    "price": 2099,
     "price_formatted": "Rs. 2,099.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -21116,7 +21084,6 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
     "images": [
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
-      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/02_lifestyle.png",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.png",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
@@ -21131,7 +21098,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 2099.0,
+        "price": 2099,
         "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp"
@@ -21141,7 +21108,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Rose Gold",
         "hex": "#FDA4AF",
-        "price": 2099.0,
+        "price": 2099,
         "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
         "images": [
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
@@ -21152,7 +21119,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Grey",
         "hex": "#6B7280",
-        "price": 2099.0,
+        "price": 2099,
         "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
         "images": [
           "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
@@ -21426,9 +21393,9 @@ window.PRODUCTS_DATA = [
     "id": "9882472382762",
     "handle": "premium-silicone-watch-bands-available-in-18-colors-copy-1",
     "title": "Premium Silicone Watch Bands – Available in 18 Colors",
-    "price": 799.0,
+    "price": 799,
     "price_formatted": "Rs. 799.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 20,
     "rating": 4.8,
@@ -21448,30 +21415,19 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
     "images": [
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/01_packshot.webp",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/01_packshot.webp",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/02_lifestyle.jpg",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/03_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/01_packshot.webp",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/02_lifestyle.jpg",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/01_extra.webp",
@@ -21506,7 +21462,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange",
         "hex": "#F97316",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp"
@@ -21516,7 +21472,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Light blue",
         "hex": "#60A5FA",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp"
@@ -21526,7 +21482,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Stone Blue",
         "hex": "#64748B",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/stone-blue/01_packshot.webp",
@@ -21537,7 +21493,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Purple lilac",
         "hex": "#C084FC",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/purple-lilac/01_packshot.webp",
@@ -21548,7 +21504,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "fruit purple",
         "hex": "#7E22CE",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp"
@@ -21558,7 +21514,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Midnight blue",
         "hex": "#0F172A",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp"
@@ -21568,7 +21524,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pine Needle Green",
         "hex": "#14532D",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp"
@@ -21578,7 +21534,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Alfalfa",
         "hex": "#4D7C0F",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp"
@@ -21588,7 +21544,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Wine red",
         "hex": "#881337",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp"
@@ -21598,7 +21554,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "starlight",
         "hex": "#F5EBE0",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp"
@@ -21608,7 +21564,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp"
@@ -21618,7 +21574,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Red",
         "hex": "#DC2626",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp"
@@ -21628,7 +21584,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/01_packshot.webp",
         "images": [
           "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/natural-titanium/01_packshot.webp",
@@ -22620,9 +22576,9 @@ window.PRODUCTS_DATA = [
     "id": "9876014432554",
     "handle": "luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain",
     "title": "Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -22656,7 +22612,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Steel Blue",
         "hex": "#2563EB",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
         "images": [
           "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
@@ -23304,9 +23260,9 @@ window.PRODUCTS_DATA = [
     "id": "9875994280234",
     "handle": "premium-bowknot-phone-case-with-detachable-pearl-bracelet",
     "title": "Premium Bowknot Phone Case with Detachable Pearl Bracelet",
-    "price": 799.0,
+    "price": 799,
     "price_formatted": "Rs. 799.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -23328,11 +23284,8 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
     "images": [
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
-      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/02_lifestyle.png",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
-      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/02_lifestyle.png",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
-      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/02_lifestyle.png",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/01_packshot.webp",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/02_lifestyle.png",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/extra/01_extra.webp",
@@ -23343,7 +23296,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp"
@@ -23353,7 +23306,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp"
@@ -23363,7 +23316,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Off White",
         "hex": "#F3F4F6",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp"
@@ -23373,7 +23326,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/01_packshot.webp",
         "images": [
           "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/01_packshot.webp",
@@ -25578,9 +25531,9 @@ window.PRODUCTS_DATA = [
     "id": "9875597623594",
     "handle": "premium-tempered-glass-screen-protector-with-easy-installation-kit",
     "title": "Premium Tempered Glass Screen Protector with Easy Installation Kit",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 1499.0,
+    "original_price": 1499,
     "original_price_formatted": "Rs. 1,499.00",
     "discount_percent": 53,
     "rating": 4.9,
@@ -26073,9 +26026,9 @@ window.PRODUCTS_DATA = [
     "id": "9875054297386",
     "handle": "premium-matte-frosted-privacy-tempered-glass-screen-protector",
     "title": "Premium Frosted Privacy Tempered Glass Screen Protector With Easy Installation Kit",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -26552,9 +26505,9 @@ window.PRODUCTS_DATA = [
     "id": "9873124557098",
     "handle": "transparent-rugged-apple-watch-case-with-orange-sports-strap-copy",
     "title": "Black Transparent Rugged Apple Watch Case with Bold Orange Strap",
-    "price": 2149.0,
+    "price": 2149,
     "price_formatted": "Rs. 2,149.00",
-    "original_price": 3999.0,
+    "original_price": 3999,
     "original_price_formatted": "Rs. 3,999.00",
     "discount_percent": 46,
     "rating": 4.9,
@@ -26828,9 +26781,9 @@ window.PRODUCTS_DATA = [
     "id": "9873120330026",
     "handle": "transparent-rugged-protective-apple-watch-case-with-strap-copy",
     "title": "Transparent Rugged Apple Watch Case with Orange Sports Strap",
-    "price": 2149.0,
+    "price": 2149,
     "price_formatted": "Rs. 2,149.00",
-    "original_price": 3999.0,
+    "original_price": 3999,
     "original_price_formatted": "Rs. 3,999.00",
     "discount_percent": 46,
     "rating": 4.8,
@@ -27100,9 +27053,9 @@ window.PRODUCTS_DATA = [
     "id": "9873118855466",
     "handle": "rugged-armor-protective-watch-case-with-sport-band-copy",
     "title": "Transparent Rugged Protective Apple Watch Case with Strap",
-    "price": 2149.0,
+    "price": 2149,
     "price_formatted": "Rs. 2,149.00",
-    "original_price": 3999.0,
+    "original_price": 3999,
     "original_price_formatted": "Rs. 3,999.00",
     "discount_percent": 46,
     "rating": 4.8,
@@ -27374,9 +27327,9 @@ window.PRODUCTS_DATA = [
     "id": "9873118101802",
     "handle": "premium-silicone-watch-bands-available-in-18-colors-copy",
     "title": "Rugged Armor Protective Watch Case with Sport Band",
-    "price": 2149.0,
+    "price": 2149,
     "price_formatted": "Rs. 2,149.00",
-    "original_price": 3999.0,
+    "original_price": 3999,
     "original_price_formatted": "Rs. 3,999.00",
     "discount_percent": 46,
     "rating": 4.8,
@@ -27645,9 +27598,9 @@ window.PRODUCTS_DATA = [
     "id": "9873114038570",
     "handle": "pastel-heart-print-soft-silicone-phone-case",
     "title": "Pastel Heart Print Soft Silicone Phone Case",
-    "price": 449.0,
+    "price": 449,
     "price_formatted": "Rs. 449.00",
-    "original_price": 699.0,
+    "original_price": 699,
     "original_price_formatted": "Rs. 699.00",
     "discount_percent": 36,
     "rating": 4.7,
@@ -27670,9 +27623,7 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
     "images": [
       "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/02_lifestyle.png",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/02_lifestyle.png",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png"
     ],
@@ -27681,7 +27632,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Ivory hearts",
         "hex": "#F5F2EB",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
         "images": [
           "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp"
@@ -27691,7 +27642,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blush pink",
         "hex": "#F472B6",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
         "images": [
           "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp"
@@ -27701,7 +27652,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Mint breeze",
         "hex": "#86EFAC",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
         "images": [
           "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
@@ -29910,9 +29861,9 @@ window.PRODUCTS_DATA = [
     "id": "9873108828458",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
-    "price": 1299.0,
+    "price": 1299,
     "price_formatted": "Rs. 1,299.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 35,
     "rating": 4.9,
@@ -29950,7 +29901,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Yellow",
         "hex": "#EAB308",
-        "price": 1299.0,
+        "price": 1299,
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp",
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp",
@@ -30131,9 +30082,9 @@ window.PRODUCTS_DATA = [
     "id": "9873108435242",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
-    "price": 1299.0,
+    "price": 1299,
     "price_formatted": "Rs. 1,299.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 35,
     "rating": 4.8,
@@ -30172,7 +30123,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Grey+Black",
         "hex": "#18181B",
-        "price": 1299.0,
+        "price": 1299,
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/01_packshot.webp",
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-2/grey-black/01_packshot.webp",
@@ -30353,9 +30304,9 @@ window.PRODUCTS_DATA = [
     "id": "9873108238634",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
-    "price": 1299.0,
+    "price": 1299,
     "price_formatted": "Rs. 1,299.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 35,
     "rating": 4.9,
@@ -30394,7 +30345,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange+Grey",
         "hex": "#F97316",
-        "price": 1299.0,
+        "price": 1299,
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/01_packshot.webp",
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-1/orange-grey/01_packshot.webp",
@@ -30575,9 +30526,9 @@ window.PRODUCTS_DATA = [
     "id": "9873108074794",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
-    "price": 1299.0,
+    "price": 1299,
     "price_formatted": "Rs. 1,299.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 35,
     "rating": 4.9,
@@ -30614,7 +30565,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Light Blue",
         "hex": "#60A5FA",
-        "price": 1299.0,
+        "price": 1299,
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/01_packshot.webp",
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy/light-blue/01_packshot.webp",
@@ -30795,9 +30746,9 @@ window.PRODUCTS_DATA = [
     "id": "9873108042026",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch-copy",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
-    "price": 1299.0,
+    "price": 1299,
     "price_formatted": "Rs. 1,299.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 35,
     "rating": 4.8,
@@ -30834,7 +30785,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 1299.0,
+        "price": 1299,
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/01_packshot.webp",
         "images": [
           "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy/black/01_packshot.webp",
@@ -31015,9 +30966,9 @@ window.PRODUCTS_DATA = [
     "id": "9873108009258",
     "handle": "premium-magnetic-leather-loop-straps-for-apple-watch",
     "title": "Premium Magnetic Leather Loop Straps for Apple Watch",
-    "price": 1299.0,
+    "price": 1299,
     "price_formatted": "Rs. 1,299.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 35,
     "rating": 4.9,
@@ -31300,9 +31251,9 @@ window.PRODUCTS_DATA = [
     "id": "9871368651050",
     "handle": "luxury-quilted-crossbody-wallet-phone-case-copy-1",
     "title": "Cute Plush Bear leather Phone Case",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 30,
     "rating": 4.7,
@@ -31326,7 +31277,6 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
     "images": [
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/02_lifestyle.png",
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/01_packshot.webp",
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/02_lifestyle.png",
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/01_packshot.webp",
@@ -31344,7 +31294,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp"
@@ -31354,7 +31304,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "White",
         "hex": "#FFFFFF",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/01_packshot.webp",
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/01_packshot.webp",
@@ -31365,7 +31315,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/01_packshot.webp",
         "images": [
           "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/01_packshot.webp",
@@ -33063,9 +33013,9 @@ window.PRODUCTS_DATA = [
     "id": "9871367274794",
     "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-2",
     "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition(Starlight+Pink)",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 50,
     "rating": 4.9,
@@ -33102,7 +33052,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Starlight+Pink",
         "hex": "#F472B6",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
@@ -33111,7 +33061,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cloud Grey+Blue",
         "hex": "#64748B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
@@ -33120,7 +33070,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/blue-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/blue-midnight-black/01_packshot.webp"
@@ -33129,7 +33079,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black+Grey",
         "hex": "#18181B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/black-grey/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/black-grey/01_packshot.webp"
@@ -33138,7 +33088,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange+Midnight Black",
         "hex": "#EA580C",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/orange-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/orange-midnight-black/01_packshot.webp"
@@ -33318,9 +33268,9 @@ window.PRODUCTS_DATA = [
     "id": "9871358624042",
     "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-1",
     "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition(Black+Grey)",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 50,
     "rating": 4.8,
@@ -33341,7 +33291,6 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
     "images": [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/02_lifestyle.jpg",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/01_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/02_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/03_extra.webp",
@@ -33364,7 +33313,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black+Grey",
         "hex": "#18181B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/black-grey/01_packshot.webp"
@@ -33373,7 +33322,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cloud Grey+Blue",
         "hex": "#64748B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
@@ -33382,7 +33331,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/blue-midnight-black/01_packshot.webp"
@@ -33391,7 +33340,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Starlight+Pink",
         "hex": "#F472B6",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/starlight-pink/01_packshot.webp"
@@ -33400,7 +33349,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange+Midnight Black",
         "hex": "#EA580C",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
@@ -33580,9 +33529,9 @@ window.PRODUCTS_DATA = [
     "id": "9871361442090",
     "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy",
     "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition(Orange+Midnight Black)",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -33623,7 +33572,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange+Midnight Black",
         "hex": "#EA580C",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/orange-midnight-black/01_packshot.webp"
@@ -33632,7 +33581,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cloud Grey+Blue",
         "hex": "#64748B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
@@ -33641,7 +33590,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/blue-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/blue-midnight-black/01_packshot.webp"
@@ -33650,7 +33599,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black+Grey",
         "hex": "#18181B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/black-grey/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/black-grey/01_packshot.webp"
@@ -33659,7 +33608,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Starlight+Pink",
         "hex": "#F472B6",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/starlight-pink/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/starlight-pink/01_packshot.webp"
@@ -33839,9 +33788,9 @@ window.PRODUCTS_DATA = [
     "id": "9871354528042",
     "handle": "magnetic-loop-smartwatch-bands-dual-color-edition-copy",
     "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition(Cloud grey+Blue)",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 1999.0,
+    "original_price": 1999,
     "original_price_formatted": "Rs. 1,999.00",
     "discount_percent": 50,
     "rating": 4.8,
@@ -33861,7 +33810,6 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
     "images": [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/02_lifestyle.jpg",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/01_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/02_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/03_extra.webp",
@@ -33878,7 +33826,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cloud Grey+Blue",
         "hex": "#64748B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/cloud-grey-blue/01_packshot.webp"
@@ -33887,7 +33835,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue+Midnight Black",
         "hex": "#1E3A8A",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/blue-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/blue-midnight-black/01_packshot.webp"
@@ -33896,7 +33844,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black+Grey",
         "hex": "#18181B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/black-grey/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/black-grey/01_packshot.webp"
@@ -33905,7 +33853,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Starlight+Pink",
         "hex": "#F472B6",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/starlight-pink/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/starlight-pink/01_packshot.webp"
@@ -33914,7 +33862,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange+Midnight Black",
         "hex": "#EA580C",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/orange-midnight-black/01_packshot.webp",
         "images": [
           "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/orange-midnight-black/01_packshot.webp"
@@ -34094,9 +34042,9 @@ window.PRODUCTS_DATA = [
     "id": "9871022719274",
     "handle": "magnetic-loop-smartwatch-bands-dual-color-edition",
     "title": "Magnetic Loop Smartwatch Bands – Dual Color Edition",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -34361,9 +34309,9 @@ window.PRODUCTS_DATA = [
     "id": "9870560330026",
     "handle": "glow-sand-airpods-cases-playful-luminous",
     "title": "Glow In The Dark Sand AirPods Cases – Playful & Luminous",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 1699.0,
+    "original_price": 1699,
     "original_price_formatted": "Rs. 1,699.00",
     "discount_percent": 59,
     "rating": 4.8,
@@ -34385,7 +34333,6 @@ window.PRODUCTS_DATA = [
       "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
       "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/02_lifestyle.png",
       "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
-      "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/02_lifestyle.png",
       "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/01_packshot.webp",
       "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/02_lifestyle.png",
       "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/01_packshot.webp",
@@ -34407,7 +34354,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Orange",
         "hex": "#F97316",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp",
@@ -34418,7 +34365,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Hot Pink",
         "hex": "#DB2777",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp"
@@ -34428,7 +34375,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Lime Green",
         "hex": "#84CC16",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/01_packshot.webp",
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous/lime-green/01_packshot.webp",
@@ -34439,7 +34386,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Aqua Blue",
         "hex": "#06B6D4",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/01_packshot.webp",
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous/aqua-blue/01_packshot.webp",
@@ -34450,7 +34397,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Classic White",
         "hex": "#F1F5F9",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/01_packshot.webp",
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous/classic-white/01_packshot.webp",
@@ -34461,7 +34408,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Pink",
         "hex": "#F43F5E",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/01_packshot.webp",
         "images": [
           "assets/products/glow-sand-airpods-cases-playful-luminous/neon-pink/01_packshot.webp",
@@ -35425,9 +35372,9 @@ window.PRODUCTS_DATA = [
     "id": "9870559183146",
     "handle": "crystal-butterfly-beaded-phone-charm",
     "title": "Crystal Butterfly Beaded Phone Charm",
-    "price": 249.0,
+    "price": 249,
     "price_formatted": "Rs. 249.00",
-    "original_price": 499.0,
+    "original_price": 499,
     "original_price_formatted": "Rs. 499.00",
     "discount_percent": 50,
     "rating": 4.8,
@@ -35450,7 +35397,6 @@ window.PRODUCTS_DATA = [
       "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
       "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/02_lifestyle.png",
       "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
-      "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/02_lifestyle.png",
       "assets/products/crystal-butterfly-beaded-phone-charm/extra/01_extra.webp",
       "assets/products/crystal-butterfly-beaded-phone-charm/extra/02_extra.webp",
       "assets/products/crystal-butterfly-beaded-phone-charm/extra/03_extra.webp",
@@ -35462,7 +35408,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Ocean Butterfly",
         "hex": "#38BDF8",
-        "price": 249.0,
+        "price": 249,
         "image": "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
         "images": [
           "assets/products/crystal-butterfly-beaded-phone-charm/ocean-butterfly/01_packshot.webp",
@@ -35473,7 +35419,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blush Butterfly",
         "hex": "#F472B6",
-        "price": 249.0,
+        "price": 249,
         "image": "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
         "images": [
           "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp"
@@ -35640,9 +35586,9 @@ window.PRODUCTS_DATA = [
     "id": "9870558363946",
     "handle": "pastel-beaded-phone-charm",
     "title": "Pastel Beaded Phone Charm",
-    "price": 249.0,
+    "price": 249,
     "price_formatted": "Rs. 249.00",
-    "original_price": 490.0,
+    "original_price": 490,
     "original_price_formatted": "Rs. 490.00",
     "discount_percent": 49,
     "rating": 4.8,
@@ -35792,9 +35738,9 @@ window.PRODUCTS_DATA = [
     "id": "9870558036266",
     "handle": "crystal-beaded-phone-charm",
     "title": "Crystal Phone Charm",
-    "price": 249.0,
+    "price": 249,
     "price_formatted": "Rs. 249.00",
-    "original_price": 499.0,
+    "original_price": 499,
     "original_price_formatted": "Rs. 499.00",
     "discount_percent": 50,
     "rating": 4.8,
@@ -35947,9 +35893,9 @@ window.PRODUCTS_DATA = [
     "id": "9870555054378",
     "handle": "pink-beaded-heart-phone-charm",
     "title": "Pink Beaded Heart Phone Charm",
-    "price": 249.0,
+    "price": 249,
     "price_formatted": "Rs. 249.00",
-    "original_price": 499.0,
+    "original_price": 499,
     "original_price_formatted": "Rs. 499.00",
     "discount_percent": 50,
     "rating": 4.9,
@@ -36099,9 +36045,9 @@ window.PRODUCTS_DATA = [
     "id": "9870554038570",
     "handle": "ice-cream-sprinkle-iphone-charger-case-set",
     "title": "Ice Cream Sprinkle iPhone Charger Case Set",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -36251,9 +36197,9 @@ window.PRODUCTS_DATA = [
     "id": "9870550761770",
     "handle": "bow-pearl-iphone-charger-case-set",
     "title": "Bow Pearl iPhone Charger Case Set",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -36403,9 +36349,9 @@ window.PRODUCTS_DATA = [
     "id": "9870548533546",
     "handle": "heart-iphone-charger-case-set-with-matching-cable",
     "title": "Heart iPhone Charger Case Set with Matching Cable",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -36425,17 +36371,11 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
     "images": [
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/02_lifestyle.png",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/02_lifestyle.png",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/02_lifestyle.png",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/02_lifestyle.png",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/02_lifestyle.png",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
-      "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/02_lifestyle.png",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/extra/01_extra.webp",
       "assets/products/heart-iphone-charger-case-set-with-matching-cable/extra/02_extra.webp"
     ],
@@ -36444,7 +36384,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Yellow",
         "hex": "#EAB308",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp"
@@ -36454,7 +36394,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Violet",
         "hex": "#7C3AED",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp"
@@ -36464,7 +36404,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp"
@@ -36474,7 +36414,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Green",
         "hex": "#16A34A",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp"
@@ -36484,7 +36424,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue",
         "hex": "#2563EB",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp"
@@ -36494,7 +36434,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
         "images": [
           "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp"
@@ -36793,9 +36733,9 @@ window.PRODUCTS_DATA = [
     "id": "9870544142634",
     "handle": "glitter-bow-iphone-charger-case",
     "title": "Glitter Bow iPhone Charger Case",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -36944,9 +36884,9 @@ window.PRODUCTS_DATA = [
     "id": "9870520320298",
     "handle": "metallic-coil-iphone-charger-case",
     "title": "Metallic Coil iPhone Charger Case",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -36976,7 +36916,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Bloom Edition",
         "hex": "#E19975",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
         "images": [
           "assets/products/metallic-coil-iphone-charger-case/bloom-edition/01_packshot.webp",
@@ -37111,9 +37051,9 @@ window.PRODUCTS_DATA = [
     "id": "9870514487594",
     "handle": "blue-gingham-iphone-charger-case",
     "title": "Blue Gingham iPhone Charger Case",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -37262,9 +37202,9 @@ window.PRODUCTS_DATA = [
     "id": "9870500364586",
     "handle": "silicone-airpods-cases-with-rope-strap-copy",
     "title": "Labubu AirPods Case –",
-    "price": 599.0,
+    "price": 599,
     "price_formatted": "Rs. 599.00",
-    "original_price": 749.0,
+    "original_price": 749,
     "original_price_formatted": "Rs. 749.00",
     "discount_percent": 20,
     "rating": 4.8,
@@ -37285,7 +37225,6 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
     "images": [
       "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
-      "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/02_lifestyle.png",
       "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/01_packshot.webp",
       "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/02_lifestyle.png",
       "assets/products/silicone-airpods-cases-with-rope-strap-copy/extra/01_extra.webp",
@@ -37297,7 +37236,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Red",
         "hex": "#DC2626",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
         "images": [
           "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp"
@@ -37307,7 +37246,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/01_packshot.webp",
         "images": [
           "assets/products/silicone-airpods-cases-with-rope-strap-copy/brown/01_packshot.webp",
@@ -37791,9 +37730,9 @@ window.PRODUCTS_DATA = [
     "id": "9870484341034",
     "handle": "title-butterfly-charm-airpods-case--copy",
     "title": "Silicone AirPods Cases with Rope Strap –",
-    "price": 599.0,
+    "price": 599,
     "price_formatted": "Rs. 599.00",
-    "original_price": 799.0,
+    "original_price": 799,
     "original_price_formatted": "Rs. 799.00",
     "discount_percent": 25,
     "rating": 4.9,
@@ -37812,17 +37751,13 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
     "images": [
       "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
-      "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/01_packshot.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp",
-      "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/01_packshot.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
-      "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
-      "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/extra/01_extra.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/extra/02_extra.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/extra/03_extra.webp"
@@ -37832,7 +37767,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Mocha Brown",
         "hex": "#78350F",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp"
@@ -37842,7 +37777,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Caramel Tan",
         "hex": "#92400E",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/01_packshot.webp",
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/caramel-tan/01_packshot.webp",
@@ -37853,7 +37788,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blush Pink",
         "hex": "#F472B6",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp",
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp"
@@ -37863,7 +37798,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Sunshine Yellow",
         "hex": "#FACC15",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/01_packshot.webp",
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/01_packshot.webp",
@@ -37874,7 +37809,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Aqua Teal",
         "hex": "#14B8A6",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp"
@@ -37884,7 +37819,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Candy Pink",
         "hex": "#FDA4AF",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
         "images": [
           "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp"
@@ -39086,9 +39021,9 @@ window.PRODUCTS_DATA = [
     "id": "9870479524138",
     "handle": "pearl-charm-bow-airpods-cases--copy",
     "title": "Butterfly Charm AirPods Case",
-    "price": 549.0,
+    "price": 549,
     "price_formatted": "Rs. 549.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -39122,7 +39057,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 549.0,
+        "price": 549,
         "image": "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases--copy/pink/01_packshot.webp",
@@ -39133,7 +39068,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue",
         "hex": "#2563EB",
-        "price": 549.0,
+        "price": 549,
         "image": "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases--copy/blue/01_packshot.webp",
@@ -39614,9 +39549,9 @@ window.PRODUCTS_DATA = [
     "id": "9870479425834",
     "handle": "pearl-charm-bow-airpods-cases",
     "title": "Pearl Charm Bow AirPods Cases",
-    "price": 549.0,
+    "price": 549,
     "price_formatted": "Rs. 549.00",
-    "original_price": 799.0,
+    "original_price": 799,
     "original_price_formatted": "Rs. 799.00",
     "discount_percent": 31,
     "rating": 4.9,
@@ -39639,7 +39574,6 @@ window.PRODUCTS_DATA = [
       "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
       "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/02_lifestyle.png",
       "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
-      "assets/products/pearl-charm-bow-airpods-cases/classic-white/02_lifestyle.png",
       "assets/products/pearl-charm-bow-airpods-cases/extra/01_extra.webp",
       "assets/products/pearl-charm-bow-airpods-cases/extra/02_extra.webp",
       "assets/products/pearl-charm-bow-airpods-cases/extra/03_extra.webp",
@@ -39650,7 +39584,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Sweet Pink",
         "hex": "#FBCFE8",
-        "price": 549.0,
+        "price": 549,
         "image": "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases/sweet-pink/01_packshot.webp",
@@ -39661,7 +39595,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Classic White",
         "hex": "#F1F5F9",
-        "price": 549.0,
+        "price": 549,
         "image": "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
         "images": [
           "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp"
@@ -40145,9 +40079,9 @@ window.PRODUCTS_DATA = [
     "id": "9870469464362",
     "handle": "silicone-world-map-travel-phone-case-copy",
     "title": "Holographic Bow Glitter Case With Charm",
-    "price": 799.0,
+    "price": 799,
     "price_formatted": "Rs. 799.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 20,
     "rating": 4.8,
@@ -40535,9 +40469,9 @@ window.PRODUCTS_DATA = [
     "id": "9870456357162",
     "handle": "ultra-thin-frosted-phone-cases-copy",
     "title": "Silicone World Map Travel Phone Case",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 599.0,
+    "original_price": 599,
     "original_price_formatted": "Rs. 599.00",
     "discount_percent": 17,
     "rating": 4.8,
@@ -40559,9 +40493,7 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
     "images": [
       "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
-      "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/02_lifestyle.png",
       "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
-      "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/02_lifestyle.png",
       "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/01_packshot.webp",
       "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/02_lifestyle.png",
       "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/01_packshot.webp",
@@ -40574,7 +40506,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Wine Red",
         "hex": "#881337",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp"
@@ -40584,7 +40516,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Ivory White",
         "hex": "#F8FAFC",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp"
@@ -40594,7 +40526,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Earth Brown",
         "hex": "#713F12",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/01_packshot.webp",
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/01_packshot.webp",
@@ -40605,7 +40537,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Midnight Black",
         "hex": "#09090B",
-        "price": 499.0,
+        "price": 499,
         "image": "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/01_packshot.webp",
         "images": [
           "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/01_packshot.webp",
@@ -42810,9 +42742,9 @@ window.PRODUCTS_DATA = [
     "id": "9870452588842",
     "handle": "trendy-graphic-phone-cases-copy",
     "title": "Ultra-Thin Frosted Phone Cases",
-    "price": 599.0,
+    "price": 599,
     "price_formatted": "Rs. 599.00",
-    "original_price": 899.0,
+    "original_price": 899,
     "original_price_formatted": "Rs. 899.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -42838,17 +42770,12 @@ window.PRODUCTS_DATA = [
       "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
       "assets/products/trendy-graphic-phone-cases-copy/frost-black/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/rose-frost/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/ice-white/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/ice-blue/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
       "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/deep-blue/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/extra/01_extra.webp",
       "assets/products/trendy-graphic-phone-cases-copy/extra/02_extra.webp",
       "assets/products/trendy-graphic-phone-cases-copy/extra/03_extra.webp",
@@ -42861,7 +42788,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Frost Black",
         "hex": "#27272A",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
@@ -42872,7 +42799,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Rose Frost",
         "hex": "#FB7185",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp"
@@ -42882,7 +42809,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Ice White",
         "hex": "#F8FAFC",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp"
@@ -42892,7 +42819,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pastel Purple",
         "hex": "#C084FC",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp"
@@ -42902,7 +42829,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Ice Blue",
         "hex": "#BAE6FD",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp"
@@ -42912,7 +42839,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
@@ -42923,7 +42850,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Deep Blue",
         "hex": "#1E40AF",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
         "images": [
           "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp"
@@ -46064,9 +45991,9 @@ window.PRODUCTS_DATA = [
     "id": "9870449443114",
     "handle": "vibrant-frame-style-iphone-cases-copy",
     "title": "Trendy Graphic Phone Cases",
-    "price": 449.0,
+    "price": 449,
     "price_formatted": "Rs. 449.00",
-    "original_price": 599.0,
+    "original_price": 599,
     "original_price_formatted": "Rs. 599.00",
     "discount_percent": 25,
     "rating": 4.9,
@@ -46088,7 +46015,6 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
     "images": [
       "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
-      "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/02_lifestyle.png",
       "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/01_packshot.webp",
       "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/02_lifestyle.png",
       "assets/products/vibrant-frame-style-iphone-cases-copy/extra/01_extra.webp",
@@ -46100,7 +46026,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Caffeine Mood",
         "hex": "#78350F",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
         "images": [
           "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp"
@@ -46110,7 +46036,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Chill Mood",
         "hex": "#3B82F6",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/01_packshot.webp",
         "images": [
           "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/01_packshot.webp",
@@ -46993,9 +46919,9 @@ window.PRODUCTS_DATA = [
     "id": "9870445347114",
     "handle": "cute-bear-phone-case-with-plush-keychain-copy-1",
     "title": "Vibrant Frame-Style iPhone Cases",
-    "price": 449.0,
+    "price": 449,
     "price_formatted": "Rs. 449.00",
-    "original_price": 699.0,
+    "original_price": 699,
     "original_price_formatted": "Rs. 699.00",
     "discount_percent": 36,
     "rating": 4.9,
@@ -47020,15 +46946,10 @@ window.PRODUCTS_DATA = [
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/extra/01_extra.webp",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/extra/02_extra.webp"
     ],
@@ -47037,7 +46958,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Sunshine Yellow",
         "hex": "#FACC15",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
@@ -47048,7 +46969,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Bubblegum Pink",
         "hex": "#FB7185",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp"
@@ -47058,7 +46979,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cool Teal",
         "hex": "#0D9488",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp"
@@ -47068,7 +46989,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Creamy White",
         "hex": "#FAF5FF",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp"
@@ -47078,7 +46999,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Jet Black",
         "hex": "#000000",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp"
@@ -47088,7 +47009,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Coral Crush",
         "hex": "#FB7185",
-        "price": 449.0,
+        "price": 449,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
         "images": [
           "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp"
@@ -50326,9 +50247,9 @@ window.PRODUCTS_DATA = [
     "id": "9869735723306",
     "handle": "luxury-quilted-crossbody-wallet-phone-case-copy",
     "title": "Cute Bear Phone Case with Plush Keychain",
-    "price": 449.0,
+    "price": 449,
     "price_formatted": "Rs. 449.00",
-    "original_price": 799.0,
+    "original_price": 799,
     "original_price_formatted": "Rs. 799.00",
     "discount_percent": 44,
     "rating": 4.8,
@@ -50728,9 +50649,9 @@ window.PRODUCTS_DATA = [
     "id": "9869730382122",
     "handle": "silver-3d-love-heart-phone-case-copy",
     "title": "Luxury Crossbody Wallet Phone Case",
-    "price": 899.0,
+    "price": 899,
     "price_formatted": "Rs. 899.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 10,
     "rating": 4.8,
@@ -51120,9 +51041,9 @@ window.PRODUCTS_DATA = [
     "id": "9869729956138",
     "handle": "silver-3d-love-heart-phone-case",
     "title": "Silver 3D Love Heart Phone Case",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 30,
     "rating": 4.9,
@@ -51146,7 +51067,6 @@ window.PRODUCTS_DATA = [
       "assets/products/silver-3d-love-heart-phone-case/pink/01_packshot.webp",
       "assets/products/silver-3d-love-heart-phone-case/pink/02_lifestyle.png",
       "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp",
-      "assets/products/silver-3d-love-heart-phone-case/off-white/02_lifestyle.png",
       "assets/products/silver-3d-love-heart-phone-case/black/01_packshot.webp",
       "assets/products/silver-3d-love-heart-phone-case/black/02_lifestyle.png",
       "assets/products/silver-3d-love-heart-phone-case/extra/01_extra.webp",
@@ -51158,7 +51078,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/silver-3d-love-heart-phone-case/pink/01_packshot.webp",
         "images": [
           "assets/products/silver-3d-love-heart-phone-case/pink/01_packshot.webp",
@@ -51169,7 +51089,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Off White",
         "hex": "#F3F4F6",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp",
         "images": [
           "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp"
@@ -51179,7 +51099,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/silver-3d-love-heart-phone-case/black/01_packshot.webp",
         "images": [
           "assets/products/silver-3d-love-heart-phone-case/black/01_packshot.webp",
@@ -52323,9 +52243,9 @@ window.PRODUCTS_DATA = [
     "id": "9869728907562",
     "handle": "luxury-crossbody-wallet-phone-case",
     "title": "Luxury Crossbody Wallet Phone Case",
-    "price": 899.0,
+    "price": 899,
     "price_formatted": "Rs. 899.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 10,
     "rating": 4.8,
@@ -52351,7 +52271,6 @@ window.PRODUCTS_DATA = [
       "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
       "assets/products/luxury-crossbody-wallet-phone-case/black/02_lifestyle.jpg",
       "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/beige/02_lifestyle.jpg",
       "assets/products/luxury-crossbody-wallet-phone-case/extra/01_extra.webp",
       "assets/products/luxury-crossbody-wallet-phone-case/extra/02_extra.webp",
       "assets/products/luxury-crossbody-wallet-phone-case/extra/03_extra.webp",
@@ -53046,9 +52965,9 @@ window.PRODUCTS_DATA = [
     "id": "9869725696298",
     "handle": "leopard-print-chic-transparent-phone-case",
     "title": "Leopard Print Chic Transparent Phone Case",
-    "price": 799.0,
+    "price": 799,
     "price_formatted": "Rs. 799.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 20,
     "rating": 4.9,
@@ -53441,9 +53360,9 @@ window.PRODUCTS_DATA = [
     "id": "9869724844330",
     "handle": "luxury-bow-pearl-chain-phone-case",
     "title": "Luxury Bow Pearl Chain Phone Case",
-    "price": 899.0,
+    "price": 899,
     "price_formatted": "Rs. 899.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 10,
     "rating": 4.7,
@@ -53481,7 +53400,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 899.0,
+        "price": 899,
         "image": "assets/products/luxury-bow-pearl-chain-phone-case/black/01_packshot.webp",
         "images": [
           "assets/products/luxury-bow-pearl-chain-phone-case/black/01_packshot.webp",
@@ -53492,7 +53411,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Beige",
         "hex": "#F5F5DC",
-        "price": 899.0,
+        "price": 899,
         "image": "assets/products/luxury-bow-pearl-chain-phone-case/beige/01_packshot.webp",
         "images": [
           "assets/products/luxury-bow-pearl-chain-phone-case/beige/01_packshot.webp",
@@ -54664,9 +54583,9 @@ window.PRODUCTS_DATA = [
     "id": "9855468175658",
     "handle": "silicone-suction-phone-grip-pad",
     "title": "Silicone Suction Phone Grip Pad",
-    "price": 149.0,
+    "price": 149,
     "price_formatted": "Rs. 149.00",
-    "original_price": 499.0,
+    "original_price": 499,
     "original_price_formatted": "Rs. 499.00",
     "discount_percent": 70,
     "rating": 4.9,
@@ -54706,7 +54625,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange",
         "hex": "#F97316",
-        "price": 149.0,
+        "price": 149,
         "image": "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
         "images": [
           "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
@@ -54717,7 +54636,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Violet",
         "hex": "#7C3AED",
-        "price": 149.0,
+        "price": 149,
         "image": "assets/products/silicone-suction-phone-grip-pad/violet/01_packshot.webp",
         "images": [
           "assets/products/silicone-suction-phone-grip-pad/violet/01_packshot.webp",
@@ -54728,7 +54647,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 149.0,
+        "price": 149,
         "image": "assets/products/silicone-suction-phone-grip-pad/black/01_packshot.webp",
         "images": [
           "assets/products/silicone-suction-phone-grip-pad/black/01_packshot.webp",
@@ -54926,9 +54845,9 @@ window.PRODUCTS_DATA = [
     "id": "9854428905770",
     "handle": "magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover",
     "title": "MagSafe Clear Case- Transparent Shockproof Cover",
-    "price": 499.0,
+    "price": 499,
     "price_formatted": "Rs. 499.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 50,
     "rating": 4.7,
@@ -55863,9 +55782,9 @@ window.PRODUCTS_DATA = [
     "id": "9853945741610",
     "handle": "magsafe-wallet-with-kickstand",
     "title": "MagSafe Leather Wallet Card Holder With Kickstand",
-    "price": 1099.0,
+    "price": 1099,
     "price_formatted": "Rs. 1,099.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -55886,9 +55805,7 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
     "images": [
       "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
-      "assets/products/magsafe-wallet-with-kickstand/black/02_lifestyle.png",
       "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
-      "assets/products/magsafe-wallet-with-kickstand/dark-blue/02_lifestyle.png",
       "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
       "assets/products/magsafe-wallet-with-kickstand/violet/02_lifestyle.png",
       "assets/products/magsafe-wallet-with-kickstand/extra/01_extra.webp",
@@ -55902,7 +55819,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
         "images": [
           "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp"
@@ -55912,7 +55829,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
         "images": [
           "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp"
@@ -55922,7 +55839,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Violet",
         "hex": "#7C3AED",
-        "price": 1099.0,
+        "price": 1099,
         "image": "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
         "images": [
           "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
@@ -56122,9 +56039,9 @@ window.PRODUCTS_DATA = [
     "id": "9853944529194",
     "handle": "magsafe-leather-card-holder-snap-on-wallet",
     "title": "MagSafe Leather Card Holder – Snap-On Wallet",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -56149,7 +56066,6 @@ window.PRODUCTS_DATA = [
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.png",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
-      "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/02_lifestyle.png",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/01_extra.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/02_extra.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/03_extra.webp",
@@ -56161,7 +56077,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Orange",
         "hex": "#F97316",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
         "images": [
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
@@ -56172,7 +56088,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
         "images": [
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
@@ -56183,7 +56099,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 999.0,
+        "price": 999,
         "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
         "images": [
           "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp"
@@ -56384,9 +56300,9 @@ window.PRODUCTS_DATA = [
     "id": "9853542105386",
     "handle": "magsafe-wireless-charger-usb-c",
     "title": "MagSafe Wireless Charger (Usb-C)",
-    "price": 1049.0,
+    "price": 1049,
     "price_formatted": "Rs. 1,049.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.8,
@@ -56533,9 +56449,9 @@ window.PRODUCTS_DATA = [
     "id": "9853490954538",
     "handle": "glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone",
     "title": "Glow In Dark Transparent – Shockproof Clear Cover",
-    "price": 799.0,
+    "price": 799,
     "price_formatted": "Rs. 799.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -56557,27 +56473,22 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
     "images": [
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/02_lifestyle.png",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/02_lifestyle.png",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/02_lifestyle.png",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/02_lifestyle.png",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/01_packshot.webp",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/02_lifestyle.png",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/01_extra.webp",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/02_extra.webp",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/03_extra.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/04_extra.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/03_glow_daylight.webp"
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/04_extra.webp"
     ],
     "has_colors": true,
     "colors": [
       {
         "name": "Neon blue",
         "hex": "#2563EB",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp"
@@ -56587,7 +56498,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Green",
         "hex": "#22C55E",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp",
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp"
@@ -56597,7 +56508,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Pink",
         "hex": "#F43F5E",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp"
@@ -56607,7 +56518,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Orange",
         "hex": "#F97316",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp"
@@ -56617,7 +56528,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Lime",
         "hex": "#A3E635",
-        "price": 799.0,
+        "price": 799,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/01_packshot.webp",
         "images": [
           "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/01_packshot.webp",
@@ -60206,9 +60117,9 @@ window.PRODUCTS_DATA = [
     "id": "9853436952874",
     "handle": "premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support",
     "title": "Premium MagSafe Case Cover with Metal Camera Ring",
-    "price": 599.0,
+    "price": 599,
     "price_formatted": "Rs. 599.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 40,
     "rating": 4.9,
@@ -60232,9 +60143,7 @@ window.PRODUCTS_DATA = [
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/01_packshot.webp",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/02_lifestyle.png",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/02_lifestyle.png",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/02_lifestyle.png",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/extra/01_extra.webp",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/extra/02_extra.webp",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/extra/03_extra.webp"
@@ -60244,7 +60153,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/01_packshot.webp",
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/01_packshot.webp",
@@ -60255,7 +60164,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/01_packshot.webp",
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/01_packshot.webp",
@@ -60266,7 +60175,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Blue",
         "hex": "#2563EB",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp",
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp"
@@ -60276,7 +60185,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Desert titanium",
         "hex": "#D4A373",
-        "price": 599.0,
+        "price": 599,
         "image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp",
         "images": [
           "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp"
@@ -63173,9 +63082,9 @@ window.PRODUCTS_DATA = [
     "id": "9848509006122",
     "handle": "magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring",
     "title": "Anti-Yellow MagSafe Transparent iPhone Case(Lifetime Clarity Assurance)",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 30,
     "rating": 4.8,
@@ -63200,13 +63109,9 @@ window.PRODUCTS_DATA = [
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/02_lifestyle.png",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/02_lifestyle.png",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/02_lifestyle.png",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/02_lifestyle.jpg",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/02_lifestyle.png",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/extra/01_extra.webp",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/extra/02_extra.webp"
     ],
@@ -63215,7 +63120,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
@@ -63226,7 +63131,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "White",
         "hex": "#FFFFFF",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp"
@@ -63236,7 +63141,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Pink",
         "hex": "#F43F5E",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp"
@@ -63246,7 +63151,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Neon Orange",
         "hex": "#F97316",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp"
@@ -63256,7 +63161,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
         "images": [
           "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp"
@@ -66945,9 +66850,9 @@ window.PRODUCTS_DATA = [
     "id": "9851899576618",
     "handle": "39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility",
     "title": "39W+ 7.1A Fast Car Charger",
-    "price": 1099.0,
+    "price": 1099,
     "price_formatted": "Rs. 1,099.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -67092,9 +66997,9 @@ window.PRODUCTS_DATA = [
     "id": "9851856716074",
     "handle": "100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge",
     "title": "100W Fast Charging Mini Alloy Car Charger",
-    "price": 1099.0,
+    "price": 1099,
     "price_formatted": "Rs. 1,099.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -67240,9 +67145,9 @@ window.PRODUCTS_DATA = [
     "id": "9851843182890",
     "handle": "foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand",
     "title": "Foldable Magnetic Phone Holder –Vacuum Adsorption Stand",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.7,
@@ -67392,9 +67297,9 @@ window.PRODUCTS_DATA = [
     "id": "9851840495914",
     "handle": "3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black",
     "title": "3-in-1 Wireless Charger MagSafe Compatible – Fast Charging Station",
-    "price": 999.0,
+    "price": 999,
     "price_formatted": "Rs. 999.00",
-    "original_price": 0.0,
+    "original_price": 0,
     "original_price_formatted": "Rs. 0.00",
     "discount_percent": 33,
     "rating": 4.9,
@@ -67539,9 +67444,9 @@ window.PRODUCTS_DATA = [
     "id": "9848506057002",
     "handle": "untitled-27jul_18-46",
     "title": "Premium Luxury Leather iPhone Case with Card Slot",
-    "price": 699.0,
+    "price": 699,
     "price_formatted": "Rs. 699.00",
-    "original_price": 999.0,
+    "original_price": 999,
     "original_price_formatted": "Rs. 999.00",
     "discount_percent": 30,
     "rating": 4.8,
@@ -67571,7 +67476,6 @@ window.PRODUCTS_DATA = [
       "assets/products/untitled-27jul_18-46/rusty-orange/01_packshot.webp",
       "assets/products/untitled-27jul_18-46/rusty-orange/02_lifestyle.png",
       "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
-      "assets/products/untitled-27jul_18-46/pink/02_lifestyle.png",
       "assets/products/untitled-27jul_18-46/extra/01_extra.webp",
       "assets/products/untitled-27jul_18-46/extra/02_extra.webp",
       "assets/products/untitled-27jul_18-46/extra/03_extra.webp"
@@ -67581,7 +67485,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Sky blue",
         "hex": "#38BDF8",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
         "images": [
           "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
@@ -67592,7 +67496,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Brown",
         "hex": "#854D0E",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/untitled-27jul_18-46/brown/01_packshot.webp",
         "images": [
           "assets/products/untitled-27jul_18-46/brown/01_packshot.webp",
@@ -67603,7 +67507,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "White",
         "hex": "#FFFFFF",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/untitled-27jul_18-46/white/01_packshot.webp",
         "images": [
           "assets/products/untitled-27jul_18-46/white/01_packshot.webp",
@@ -67614,7 +67518,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Rusty orange",
         "hex": "#C2410C",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/untitled-27jul_18-46/rusty-orange/01_packshot.webp",
         "images": [
           "assets/products/untitled-27jul_18-46/rusty-orange/01_packshot.webp",
@@ -67625,7 +67529,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Pink",
         "hex": "#EC4899",
-        "price": 699.0,
+        "price": 699,
         "image": "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
         "images": [
           "assets/products/untitled-27jul_18-46/pink/01_packshot.webp"
@@ -68965,9 +68869,9 @@ window.PRODUCTS_DATA = [
     "id": "9827998794026",
     "handle": "bumper-case",
     "title": "Ultra-Thin Frameless Case for iPhone",
-    "price": 820.0,
+    "price": 820,
     "price_formatted": "Rs. 820.00",
-    "original_price": 1299.0,
+    "original_price": 1299,
     "original_price_formatted": "Rs. 1,299.00",
     "discount_percent": 37,
     "rating": 4.8,
@@ -68989,17 +68893,12 @@ window.PRODUCTS_DATA = [
     "primary_image": "assets/products/bumper-case/black/01_packshot.webp",
     "images": [
       "assets/products/bumper-case/black/01_packshot.webp",
-      "assets/products/bumper-case/black/02_lifestyle.png",
       "assets/products/bumper-case/dark-blue/01_packshot.webp",
       "assets/products/bumper-case/dark-blue/02_lifestyle.png",
       "assets/products/bumper-case/natural-titanium/01_packshot.webp",
-      "assets/products/bumper-case/natural-titanium/02_lifestyle.png",
       "assets/products/bumper-case/desert-titanium/01_packshot.webp",
-      "assets/products/bumper-case/desert-titanium/02_lifestyle.png",
       "assets/products/bumper-case/dark-red/01_packshot.webp",
-      "assets/products/bumper-case/dark-red/02_lifestyle.png",
       "assets/products/bumper-case/sierra-blue/01_packshot.webp",
-      "assets/products/bumper-case/sierra-blue/02_lifestyle.png",
       "assets/products/bumper-case/cosmic-orange/01_packshot.webp",
       "assets/products/bumper-case/cosmic-orange/02_lifestyle.png",
       "assets/products/bumper-case/extra/01_extra.webp",
@@ -69024,7 +68923,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Black",
         "hex": "#18181B",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/black/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/black/01_packshot.webp"
@@ -69034,7 +68933,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Dark Blue",
         "hex": "#1E3A8A",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/dark-blue/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/dark-blue/01_packshot.webp",
@@ -69045,7 +68944,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Natural Titanium",
         "hex": "#CBD5E1",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/natural-titanium/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/natural-titanium/01_packshot.webp"
@@ -69055,7 +68954,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Desert titanium",
         "hex": "#D4A373",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/desert-titanium/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/desert-titanium/01_packshot.webp"
@@ -69065,7 +68964,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Dark red",
         "hex": "#991B1B",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/dark-red/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/dark-red/01_packshot.webp"
@@ -69075,7 +68974,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Sierra blue",
         "hex": "#93C5FD",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/sierra-blue/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/sierra-blue/01_packshot.webp"
@@ -69085,7 +68984,7 @@ window.PRODUCTS_DATA = [
       {
         "name": "Cosmic orange",
         "hex": "#FF6A3D",
-        "price": 820.0,
+        "price": 820,
         "image": "assets/products/bumper-case/cosmic-orange/01_packshot.webp",
         "images": [
           "assets/products/bumper-case/cosmic-orange/01_packshot.webp",
@@ -76286,3 +76185,7 @@ window.PRODUCTS_DATA = [
     ]
   }
 ];
+
+if (typeof window !== "undefined") {
+  window.CovertokProducts = window.PRODUCTS_DATA;
+}
