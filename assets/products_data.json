@@ -228,7 +228,6 @@
         "image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
         "images": [
           "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
-          "assets/products/ribbed-knit-phone-sling-pouch/blue/02_lifestyle.jpg",
           "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg"
         ],
         "value": "#2563EB"
@@ -239,9 +238,7 @@
         "price": 999.0,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
         "images": [
-          "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
-          "assets/products/ribbed-knit-phone-sling-pouch/orange/02_lifestyle.jpg",
-          "assets/products/ribbed-knit-phone-sling-pouch/orange/03_lifestyle.jpg"
+          "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp"
         ],
         "value": "#F97316"
       },
@@ -251,9 +248,7 @@
         "price": 999.0,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
         "images": [
-          "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
-          "assets/products/ribbed-knit-phone-sling-pouch/pink/02_lifestyle.jpg",
-          "assets/products/ribbed-knit-phone-sling-pouch/pink/03_lifestyle.jpg"
+          "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp"
         ],
         "value": "#EC4899"
       },
@@ -263,9 +258,7 @@
         "price": 999.0,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
         "images": [
-          "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
-          "assets/products/ribbed-knit-phone-sling-pouch/black/02_lifestyle.jpg",
-          "assets/products/ribbed-knit-phone-sling-pouch/black/03_lifestyle.jpg"
+          "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -275,9 +268,7 @@
         "price": 999.0,
         "image": "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
         "images": [
-          "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
-          "assets/products/ribbed-knit-phone-sling-pouch/brown/02_lifestyle.jpg",
-          "assets/products/ribbed-knit-phone-sling-pouch/brown/03_lifestyle.jpg"
+          "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp"
         ],
         "value": "#854D0E"
       }
@@ -1070,10 +1061,7 @@
         "images": [
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
           "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/02_lifestyle.jpg",
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/03_lifestyle.jpg",
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/04_lifestyle.jpg",
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/05_lifestyle.jpg",
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/06_lifestyle.jpg"
+          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/05_lifestyle.jpg"
         ],
         "value": "#9D174D"
       },
@@ -1104,8 +1092,7 @@
         "price": 649.0,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
         "images": [
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/02_lifestyle.jpg"
+          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp"
         ],
         "value": "#F2C4CE"
       },
@@ -1115,8 +1102,7 @@
         "price": 649.0,
         "image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
         "images": [
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
-          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/02_lifestyle.jpg"
+          "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp"
         ],
         "value": "#FDBA74"
       }
@@ -10595,8 +10581,7 @@
         "price": 849.0,
         "image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp",
         "images": [
-          "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp",
-          "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/02_lifestyle.jpg"
+          "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp"
         ],
         "value": "#854D0E"
       },
@@ -10617,8 +10602,7 @@
         "price": 849.0,
         "image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp",
         "images": [
-          "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp",
-          "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/02_lifestyle.jpg"
+          "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp"
         ],
         "value": "#FFFFFF"
       }
@@ -14629,8 +14613,7 @@
         "image": "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
         "images": [
           "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
-          "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
-          "assets/products/aluminium-frame-transparent-case/deep-blue/03_lifestyle.jpg"
+          "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png"
         ],
         "value": "#1E40AF"
       },
@@ -15026,8 +15009,7 @@
         "price": 1099.0,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
         "images": [
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp",
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/02_lifestyle.png"
+          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp"
         ],
         "value": "#E4E4E7"
       },
@@ -15059,8 +15041,7 @@
         "price": 1099.0,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
         "images": [
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp",
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/02_lifestyle.png"
+          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/blue/01_packshot.webp"
         ],
         "value": "#2563EB"
       },
@@ -15070,8 +15051,7 @@
         "price": 1099.0,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
         "images": [
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp",
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/02_lifestyle.png"
+          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/titanium/01_packshot.webp"
         ],
         "value": "#D4D4D8"
       },
@@ -15103,8 +15083,7 @@
         "price": 1099.0,
         "image": "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
         "images": [
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp",
-          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/02_lifestyle.png"
+          "assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/black-red-stripe/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -16005,8 +15984,7 @@
         "price": 399.0,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
         "images": [
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/02_lifestyle.jpg"
+          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp"
         ],
         "value": "#FFFFFF"
       },
@@ -16016,8 +15994,7 @@
         "price": 399.0,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
         "images": [
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/02_lifestyle.jpg"
+          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp"
         ],
         "value": "#DDD6FE"
       },
@@ -16027,8 +16004,7 @@
         "price": 399.0,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
         "images": [
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/02_lifestyle.jpg"
+          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -16038,8 +16014,7 @@
         "price": 399.0,
         "image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
         "images": [
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
-          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/02_lifestyle.jpg"
+          "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp"
         ],
         "value": "#60A5FA"
       }
@@ -20645,8 +20620,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/02_lifestyle.png"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -20656,8 +20630,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/02_lifestyle.png"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/beige/01_packshot.webp"
         ],
         "value": "#F5F5DC"
       },
@@ -20667,8 +20640,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/02_lifestyle.png"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/pink/01_packshot.webp"
         ],
         "value": "#EC4899"
       },
@@ -20678,8 +20650,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/02_lifestyle.jpg"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/mint-green/01_packshot.webp"
         ],
         "value": "#4ADE80"
       },
@@ -20689,8 +20660,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/02_lifestyle.png"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp"
         ],
         "value": "#2563EB"
       },
@@ -20700,8 +20670,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/02_lifestyle.png"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp"
         ],
         "value": "#FDBA74"
       },
@@ -20722,8 +20691,7 @@
         "price": 299.0,
         "image": "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
         "images": [
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
-          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/02_lifestyle.png"
+          "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp"
         ],
         "value": "#DDD6FE"
       }
@@ -21165,8 +21133,7 @@
         "price": 2099.0,
         "image": "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
-          "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/02_lifestyle.png"
+          "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -21541,8 +21508,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp"
         ],
         "value": "#F97316"
       },
@@ -21552,8 +21518,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/light-blue/01_packshot.webp"
         ],
         "value": "#60A5FA"
       },
@@ -21585,8 +21550,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/fruit-purple/01_packshot.webp"
         ],
         "value": "#7E22CE"
       },
@@ -21596,8 +21560,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/midnight-blue/01_packshot.webp"
         ],
         "value": "#0F172A"
       },
@@ -21607,9 +21570,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/02_lifestyle.jpg",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/03_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/pine-needle-green/01_packshot.webp"
         ],
         "value": "#14532D"
       },
@@ -21619,8 +21580,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/alfalfa/01_packshot.webp"
         ],
         "value": "#4D7C0F"
       },
@@ -21630,8 +21590,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/wine-red/01_packshot.webp"
         ],
         "value": "#881337"
       },
@@ -21641,8 +21600,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/starlight/01_packshot.webp"
         ],
         "value": "#F5EBE0"
       },
@@ -21652,8 +21610,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -21663,8 +21620,7 @@
         "price": 799.0,
         "image": "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp",
         "images": [
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp",
-          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/02_lifestyle.jpg"
+          "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/red/01_packshot.webp"
         ],
         "value": "#DC2626"
       },
@@ -23389,8 +23345,7 @@
         "price": 799.0,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
         "images": [
-          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp",
-          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/02_lifestyle.png"
+          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -23400,8 +23355,7 @@
         "price": 799.0,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
         "images": [
-          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
-          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/02_lifestyle.png"
+          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp"
         ],
         "value": "#EC4899"
       },
@@ -23411,8 +23365,7 @@
         "price": 799.0,
         "image": "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
         "images": [
-          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
-          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/02_lifestyle.png"
+          "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp"
         ],
         "value": "#F3F4F6"
       },
@@ -27730,8 +27683,7 @@
         "price": 449.0,
         "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
         "images": [
-          "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
-          "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/02_lifestyle.png"
+          "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp"
         ],
         "value": "#F5F2EB"
       },
@@ -27741,8 +27693,7 @@
         "price": 449.0,
         "image": "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
         "images": [
-          "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
-          "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/02_lifestyle.png"
+          "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp"
         ],
         "value": "#F472B6"
       },
@@ -31109,8 +31060,7 @@
         "value": "#E6A838",
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
         "images": [
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp",
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/02_lifestyle.jpg"
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/yellow/01_packshot.webp"
         ],
         "hex": "#E6A838"
       },
@@ -31129,8 +31079,7 @@
         "value": "#1C1C1E",
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp",
         "images": [
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp",
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/02_lifestyle.jpg"
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/black/01_packshot.webp"
         ],
         "hex": "#1C1C1E"
       },
@@ -31149,8 +31098,7 @@
         "value": "#FF5500",
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp",
         "images": [
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp",
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/02_lifestyle.jpg"
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/orange-grey/01_packshot.webp"
         ],
         "hex": "#FF5500"
       },
@@ -31159,8 +31107,7 @@
         "value": "#7FAFC4",
         "image": "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp",
         "images": [
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp",
-          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/02_lifestyle.jpg"
+          "assets/products/premium-magnetic-leather-loop-straps-for-apple-watch/light-blue/01_packshot.webp"
         ],
         "hex": "#7FAFC4"
       }
@@ -31399,8 +31346,7 @@
         "price": 699.0,
         "image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
         "images": [
-          "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
-          "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/02_lifestyle.png"
+          "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -34205,8 +34151,7 @@
         "value": "#6B7280",
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/02_lifestyle.jpg"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp"
         ],
         "hex": "#6B7280"
       },
@@ -34215,8 +34160,7 @@
         "value": "#1F2937",
         "image": "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp",
         "images": [
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp",
-          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/02_lifestyle.jpg"
+          "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp"
         ],
         "hex": "#1F2937"
       },
@@ -34476,8 +34420,7 @@
         "price": 699.0,
         "image": "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
         "images": [
-          "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp",
-          "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/02_lifestyle.png"
+          "assets/products/glow-sand-airpods-cases-playful-luminous/hot-pink/01_packshot.webp"
         ],
         "value": "#DB2777"
       },
@@ -35532,8 +35475,7 @@
         "price": 249.0,
         "image": "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
         "images": [
-          "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp",
-          "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/02_lifestyle.png"
+          "assets/products/crystal-butterfly-beaded-phone-charm/blush-butterfly/01_packshot.webp"
         ],
         "value": "#F472B6"
       }
@@ -36504,8 +36446,7 @@
         "price": 499.0,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/yellow/01_packshot.webp"
         ],
         "value": "#EAB308"
       },
@@ -36515,8 +36456,7 @@
         "price": 499.0,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/violet/01_packshot.webp"
         ],
         "value": "#7C3AED"
       },
@@ -36526,8 +36466,7 @@
         "price": 499.0,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -36537,8 +36476,7 @@
         "price": 499.0,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/green/01_packshot.webp"
         ],
         "value": "#16A34A"
       },
@@ -36548,8 +36486,7 @@
         "price": 499.0,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/blue/01_packshot.webp"
         ],
         "value": "#2563EB"
       },
@@ -36559,8 +36496,7 @@
         "price": 499.0,
         "image": "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
         "images": [
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp",
-          "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/02_lifestyle.png"
+          "assets/products/heart-iphone-charger-case-set-with-matching-cable/pink/01_packshot.webp"
         ],
         "value": "#EC4899"
       }
@@ -37363,8 +37299,7 @@
         "price": 599.0,
         "image": "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
         "images": [
-          "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp",
-          "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/02_lifestyle.png"
+          "assets/products/silicone-airpods-cases-with-rope-strap-copy/red/01_packshot.webp"
         ],
         "value": "#DC2626"
       },
@@ -37899,8 +37834,7 @@
         "price": 599.0,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
         "images": [
-          "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp",
-          "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/02_lifestyle.png"
+          "assets/products/title-butterfly-charm-airpods-case--copy/mocha-brown/01_packshot.webp"
         ],
         "value": "#78350F"
       },
@@ -37921,8 +37855,7 @@
         "price": 599.0,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp",
         "images": [
-          "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp",
-          "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/02_lifestyle.png"
+          "assets/products/title-butterfly-charm-airpods-case--copy/blush-pink/01_packshot.webp"
         ],
         "value": "#F472B6"
       },
@@ -37943,8 +37876,7 @@
         "price": 599.0,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
         "images": [
-          "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
-          "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/02_lifestyle.png"
+          "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp"
         ],
         "value": "#14B8A6"
       },
@@ -37954,8 +37886,7 @@
         "price": 599.0,
         "image": "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
         "images": [
-          "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
-          "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/02_lifestyle.png"
+          "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp"
         ],
         "value": "#FDA4AF"
       }
@@ -39732,8 +39663,7 @@
         "price": 549.0,
         "image": "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
         "images": [
-          "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp",
-          "assets/products/pearl-charm-bow-airpods-cases/classic-white/02_lifestyle.png"
+          "assets/products/pearl-charm-bow-airpods-cases/classic-white/01_packshot.webp"
         ],
         "value": "#F1F5F9"
       }
@@ -40646,8 +40576,7 @@
         "price": 499.0,
         "image": "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
         "images": [
-          "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
-          "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/02_lifestyle.png"
+          "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp"
         ],
         "value": "#881337"
       },
@@ -40657,8 +40586,7 @@
         "price": 499.0,
         "image": "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
         "images": [
-          "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
-          "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/02_lifestyle.png"
+          "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp"
         ],
         "value": "#F8FAFC"
       },
@@ -42946,8 +42874,7 @@
         "price": 599.0,
         "image": "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
         "images": [
-          "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
-          "assets/products/trendy-graphic-phone-cases-copy/rose-frost/02_lifestyle.png"
+          "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp"
         ],
         "value": "#FB7185"
       },
@@ -42957,8 +42884,7 @@
         "price": 599.0,
         "image": "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
         "images": [
-          "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
-          "assets/products/trendy-graphic-phone-cases-copy/ice-white/02_lifestyle.png"
+          "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp"
         ],
         "value": "#F8FAFC"
       },
@@ -42968,8 +42894,7 @@
         "price": 599.0,
         "image": "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
         "images": [
-          "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
-          "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/02_lifestyle.png"
+          "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp"
         ],
         "value": "#C084FC"
       },
@@ -42979,8 +42904,7 @@
         "price": 599.0,
         "image": "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
         "images": [
-          "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
-          "assets/products/trendy-graphic-phone-cases-copy/ice-blue/02_lifestyle.png"
+          "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp"
         ],
         "value": "#BAE6FD"
       },
@@ -43001,8 +42925,7 @@
         "price": 599.0,
         "image": "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
         "images": [
-          "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
-          "assets/products/trendy-graphic-phone-cases-copy/deep-blue/02_lifestyle.png"
+          "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp"
         ],
         "value": "#1E40AF"
       }
@@ -46179,8 +46102,7 @@
         "price": 449.0,
         "image": "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
         "images": [
-          "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
-          "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/02_lifestyle.png"
+          "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp"
         ],
         "value": "#78350F"
       },
@@ -47128,8 +47050,7 @@
         "price": 449.0,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
         "images": [
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/02_lifestyle.png"
+          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp"
         ],
         "value": "#FB7185"
       },
@@ -47139,8 +47060,7 @@
         "price": 449.0,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
         "images": [
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/02_lifestyle.png"
+          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp"
         ],
         "value": "#0D9488"
       },
@@ -47150,8 +47070,7 @@
         "price": 449.0,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
         "images": [
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/02_lifestyle.png"
+          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp"
         ],
         "value": "#FAF5FF"
       },
@@ -47161,8 +47080,7 @@
         "price": 449.0,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
         "images": [
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/02_lifestyle.png"
+          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp"
         ],
         "value": "#000000"
       },
@@ -47172,8 +47090,7 @@
         "price": 449.0,
         "image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
         "images": [
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
-          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/02_lifestyle.png"
+          "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp"
         ],
         "value": "#FB7185"
       }
@@ -51254,8 +51171,7 @@
         "price": 699.0,
         "image": "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp",
         "images": [
-          "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp",
-          "assets/products/silver-3d-love-heart-phone-case/off-white/02_lifestyle.png"
+          "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp"
         ],
         "value": "#F3F4F6"
       },
@@ -52460,8 +52376,7 @@
         "value": "#D8C7B5",
         "image": "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
         "images": [
-          "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
-          "assets/products/luxury-crossbody-wallet-phone-case/beige/02_lifestyle.jpg"
+          "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp"
         ],
         "hex": "#D8C7B5"
       },
@@ -55989,8 +55904,7 @@
         "price": 1099.0,
         "image": "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
-          "assets/products/magsafe-wallet-with-kickstand/black/02_lifestyle.png"
+          "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -56000,8 +55914,7 @@
         "price": 1099.0,
         "image": "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
-          "assets/products/magsafe-wallet-with-kickstand/dark-blue/02_lifestyle.png"
+          "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp"
         ],
         "value": "#1E3A8A"
       },
@@ -56272,8 +56185,7 @@
         "price": 999.0,
         "image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
-          "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/02_lifestyle.png"
+          "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp"
         ],
         "value": "#18181B"
       }
@@ -56667,9 +56579,7 @@
         "price": 799.0,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
         "images": [
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp",
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/02_lifestyle.png",
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/03_glow_daylight.webp"
+          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-blue/01_packshot.webp"
         ],
         "value": "#2563EB"
       },
@@ -56679,8 +56589,7 @@
         "price": 799.0,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp",
         "images": [
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp",
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/02_lifestyle.png"
+          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-green/01_packshot.webp"
         ],
         "value": "#22C55E"
       },
@@ -56690,8 +56599,7 @@
         "price": 799.0,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
         "images": [
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/02_lifestyle.png"
+          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp"
         ],
         "value": "#F43F5E"
       },
@@ -56701,8 +56609,7 @@
         "price": 799.0,
         "image": "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
         "images": [
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
-          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/02_lifestyle.png"
+          "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp"
         ],
         "value": "#F97316"
       },
@@ -60361,8 +60268,7 @@
         "price": 599.0,
         "image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp",
         "images": [
-          "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp",
-          "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/02_lifestyle.png"
+          "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp"
         ],
         "value": "#2563EB"
       },
@@ -60372,8 +60278,7 @@
         "price": 599.0,
         "image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp",
         "images": [
-          "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp",
-          "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/02_lifestyle.png"
+          "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp"
         ],
         "value": "#D4A373"
       }
@@ -63323,8 +63228,7 @@
         "price": 699.0,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/02_lifestyle.png"
+          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp"
         ],
         "value": "#FFFFFF"
       },
@@ -63334,8 +63238,7 @@
         "price": 699.0,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/02_lifestyle.png"
+          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp"
         ],
         "value": "#F43F5E"
       },
@@ -63345,8 +63248,7 @@
         "price": 699.0,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/02_lifestyle.jpg"
+          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp"
         ],
         "value": "#F97316"
       },
@@ -63356,8 +63258,7 @@
         "price": 699.0,
         "image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
         "images": [
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
-          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/02_lifestyle.png"
+          "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp"
         ],
         "value": "#854D0E"
       }
@@ -67726,8 +67627,7 @@
         "price": 699.0,
         "image": "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
         "images": [
-          "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
-          "assets/products/untitled-27jul_18-46/pink/02_lifestyle.png"
+          "assets/products/untitled-27jul_18-46/pink/01_packshot.webp"
         ],
         "value": "#EC4899"
       }
@@ -69126,8 +69026,7 @@
         "price": 820.0,
         "image": "assets/products/bumper-case/black/01_packshot.webp",
         "images": [
-          "assets/products/bumper-case/black/01_packshot.webp",
-          "assets/products/bumper-case/black/02_lifestyle.png"
+          "assets/products/bumper-case/black/01_packshot.webp"
         ],
         "value": "#18181B"
       },
@@ -69148,8 +69047,7 @@
         "price": 820.0,
         "image": "assets/products/bumper-case/natural-titanium/01_packshot.webp",
         "images": [
-          "assets/products/bumper-case/natural-titanium/01_packshot.webp",
-          "assets/products/bumper-case/natural-titanium/02_lifestyle.png"
+          "assets/products/bumper-case/natural-titanium/01_packshot.webp"
         ],
         "value": "#CBD5E1"
       },
@@ -69159,8 +69057,7 @@
         "price": 820.0,
         "image": "assets/products/bumper-case/desert-titanium/01_packshot.webp",
         "images": [
-          "assets/products/bumper-case/desert-titanium/01_packshot.webp",
-          "assets/products/bumper-case/desert-titanium/02_lifestyle.png"
+          "assets/products/bumper-case/desert-titanium/01_packshot.webp"
         ],
         "value": "#D4A373"
       },
@@ -69170,8 +69067,7 @@
         "price": 820.0,
         "image": "assets/products/bumper-case/dark-red/01_packshot.webp",
         "images": [
-          "assets/products/bumper-case/dark-red/01_packshot.webp",
-          "assets/products/bumper-case/dark-red/02_lifestyle.png"
+          "assets/products/bumper-case/dark-red/01_packshot.webp"
         ],
         "value": "#991B1B"
       },
@@ -69181,8 +69077,7 @@
         "price": 820.0,
         "image": "assets/products/bumper-case/sierra-blue/01_packshot.webp",
         "images": [
-          "assets/products/bumper-case/sierra-blue/01_packshot.webp",
-          "assets/products/bumper-case/sierra-blue/02_lifestyle.png"
+          "assets/products/bumper-case/sierra-blue/01_packshot.webp"
         ],
         "value": "#93C5FD"
       },
