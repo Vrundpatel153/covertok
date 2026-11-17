@@ -55990,51 +55990,47 @@ html body #siteHeader,
 
 
 /* ==========================================================================
-   HOMEPAGE DESKTOP STEPPED HERO WINDOW NESTING & UNIVERSAL NAVBAR
+   HOMEPAGE CLEAN STANDARDIZED HEADER & HERO RECOVERY
    ========================================================================== */
 @media (min-width: 992px) {
   html body.home-page .site-header,
   html body.home-page #siteHeader,
   body.home-page .site-header,
   body.home-page #siteHeader {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
     width: 100% !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    padding: 16px 0 0 !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+    padding: 0 !important;
     margin: 0 !important;
-    height: auto !important;
-    min-height: 0 !important;
-    z-index: 100 !important;
-    pointer-events: none !important;
+    height: 68px !important;
+    min-height: 68px !important;
+    z-index: 1000 !important;
+    pointer-events: auto !important;
   }
 
   body.home-page .site-header .header-inner,
   body.home-page #siteHeader .header-inner {
-    max-width: 100% !important;
-    padding: 0 clamp(10px, 1.2vw, 20px) !important;
-    height: 52px !important;
-    min-height: 52px !important;
+    max-width: 1680px !important;
+    margin: 0 auto !important;
+    padding: 0 clamp(16px, 2vw, 36px) !important;
+    height: 68px !important;
+    min-height: 68px !important;
     background: transparent !important;
-    background-image: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
     border: none !important;
     box-shadow: none !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    pointer-events: none !important;
+    pointer-events: auto !important;
   }
 
   body.home-page .site-header .header-left,
@@ -56046,8 +56042,8 @@ html body #siteHeader,
   body.home-page .hero-section {
     position: relative !important;
     width: 100% !important;
-    margin-top: -68px !important;
-    padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
+    margin-top: 0 !important;
+    padding: 16px clamp(12px, 2vw, 32px) 24px !important;
     margin-bottom: 0 !important;
     display: block !important;
     background: var(--bg-stone, #FAF9F6) !important;
@@ -56060,6 +56056,11 @@ html body #siteHeader,
     border-radius: 28px !important;
     clip-path: none !important;
     -webkit-clip-path: none !important;
+    overflow: hidden !important;
+  }
+
+  body.home-page .hero-content {
+    padding-top: clamp(36px, 5vh, 64px) !important;
   }
 }
 
