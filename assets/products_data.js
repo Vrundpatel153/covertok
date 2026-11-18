@@ -994,6 +994,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/01_model.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/02_angle.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/03_quality.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/04_feature.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -9788,6 +9795,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "phone-cover-with-built-in-lip-balm-holder-copy-copy-6"
+    ],
+    "showcase": [
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/01_model.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/02_angle.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/03_quality.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/04_feature.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/05_marketing.webp"
     ]
   },
   {
@@ -9977,6 +9991,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/crystal-studded-luxe-case-orange/showcase/01_model.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/02_angle.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/03_quality.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/04_feature.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/05_marketing.webp"
     ]
   },
   {
@@ -10503,6 +10524,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/01_model.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/02_angle.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/03_quality.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/04_feature.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -14527,6 +14555,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/01_model.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/02_angle.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/03_quality.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/04_feature.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/05_marketing.webp"
     ]
   },
   {
@@ -14925,6 +14960,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/aluminium-frame-transparent-case/showcase/01_model.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/02_angle.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/03_quality.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/04_feature.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -20538,6 +20580,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Light blue"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/01_model.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/02_angle.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/03_quality.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/04_feature.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/05_marketing.webp"
     ]
   },
   {
@@ -23254,6 +23303,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Steel Blue"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/01_model.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/02_angle.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/03_quality.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/04_feature.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/05_marketing.webp"
     ]
   },
   {
@@ -25525,6 +25581,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Natural Titanium"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/01_model.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/02_angle.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/03_quality.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/04_feature.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/05_marketing.webp"
     ]
   },
   {
@@ -29855,6 +29918,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 16 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/01_model.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/02_angle.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/03_quality.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/04_feature.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -33007,6 +33077,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "alias_handles": [
       "luxury-quilted-crossbody-wallet-phone-case-copy",
       "luxury-quilted-crossbody-wallet-phone-case-copy-1"
+    ],
+    "showcase": [
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/01_model.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/02_angle.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/03_quality.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/04_feature.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/05_marketing.webp"
     ]
   },
   {
@@ -40463,6 +40540,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "silicone-world-map-travel-phone-case✈🌍-copy"
+    ],
+    "showcase": [
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/01_model.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/02_angle.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/03_quality.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/04_feature.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/05_marketing.webp"
     ]
   },
   {
@@ -42736,6 +42820,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "ultra-thin-frosted-phone-cases-copy"
+    ],
+    "showcase": [
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/01_model.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/02_angle.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/03_quality.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/04_feature.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/05_marketing.webp"
     ]
   },
   {
@@ -45985,6 +46076,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "trendy-graphic-phone-cases-copy"
+    ],
+    "showcase": [
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/01_model.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/02_angle.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/03_quality.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/04_feature.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/05_marketing.webp"
     ]
   },
   {
@@ -46913,6 +47011,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "vibrant-frame-style-iphone-cases-copy"
+    ],
+    "showcase": [
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/01_model.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/02_angle.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/03_quality.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/04_feature.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/05_marketing.webp"
     ]
   },
   {
@@ -50241,6 +50346,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "cute-bear-phone-case-with-plush-keychain-copy-1"
+    ],
+    "showcase": [
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/01_model.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/02_angle.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/03_quality.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/04_feature.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/05_marketing.webp"
     ]
   },
   {
@@ -50643,6 +50755,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "alias_handles": [
       "luxury-quilted-crossbody-wallet-phone-case-copy",
       "luxury-quilted-crossbody-wallet-phone-case-copy-1"
+    ],
+    "showcase": [
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/01_model.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/02_angle.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/03_quality.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/04_feature.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/05_marketing.webp"
     ]
   },
   {
@@ -51035,6 +51154,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 16 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/01_model.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/02_angle.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/03_quality.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/04_feature.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/05_marketing.webp"
     ]
   },
   {
@@ -52237,6 +52363,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "silver-3d-love-heart-phone-case-copy"
+    ],
+    "showcase": [
+      "assets/products/silver-3d-love-heart-phone-case/showcase/01_model.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/02_angle.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/03_quality.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/04_feature.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -52959,6 +53092,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     ],
     "alias_handles": [
       "silver-3d-love-heart-phone-case-copy"
+    ],
+    "showcase": [
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/01_model.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/02_angle.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/03_quality.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/04_feature.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -53354,6 +53494,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 16 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/01_model.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/02_angle.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/03_quality.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/04_feature.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -54577,6 +54724,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 16 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/01_model.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/02_angle.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/03_quality.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/04_feature.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/05_marketing.webp"
     ]
   },
   {
@@ -55776,6 +55930,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro Max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/01_model.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/02_angle.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/03_quality.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/04_feature.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/05_marketing.webp"
     ]
   },
   {
@@ -60111,6 +60272,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Neon Lime"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/01_model.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/02_angle.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/03_quality.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/04_feature.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/05_marketing.webp"
     ]
   },
   {
@@ -63076,6 +63244,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Desert titanium"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/01_model.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/02_angle.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/03_quality.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/04_feature.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/05_marketing.webp"
     ]
   },
   {
@@ -66844,6 +67019,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Brown"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/01_model.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/02_angle.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/03_quality.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/04_feature.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/05_marketing.webp"
     ]
   },
   {
@@ -68863,6 +69045,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Pink"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/untitled-27jul_18-46/showcase/01_model.webp",
+      "assets/products/untitled-27jul_18-46/showcase/02_angle.webp",
+      "assets/products/untitled-27jul_18-46/showcase/03_quality.webp",
+      "assets/products/untitled-27jul_18-46/showcase/04_feature.webp",
+      "assets/products/untitled-27jul_18-46/showcase/05_marketing.webp"
     ]
   },
   {
@@ -76182,10 +76371,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Pro max"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/bumper-case/showcase/01_model.webp",
+      "assets/products/bumper-case/showcase/02_angle.webp",
+      "assets/products/bumper-case/showcase/03_quality.webp",
+      "assets/products/bumper-case/showcase/04_feature.webp",
+      "assets/products/bumper-case/showcase/05_marketing.webp"
     ]
   }
 ];
-
-if (typeof window !== "undefined") {
-  window.CovertokProducts = window.PRODUCTS_DATA;
-}
