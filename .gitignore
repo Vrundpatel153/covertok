@@ -45,3 +45,7 @@ Covertok_Product_Images.zip
 
 tmp_inspect/
 test_*
+
+# Raw showcase PNG source files (kept locally, webp committed for production)
+assets/products/**/showcase/*.png
+assets/products/*/*/*.png
