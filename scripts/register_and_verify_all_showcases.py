@@ -76,3 +76,4 @@ if all_verified and verified_count == 28:
     print("Successfully updated assets/products_data.js with canonical showcase arrays!")
 else:
     print("Verification failed or incomplete, not writing products_data.js")
+

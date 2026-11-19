@@ -7,3 +7,4 @@ if len(sys.argv) >= 3:
     img = Image.open(src)
     img.save(dst, "WEBP", quality=90)
     print(f"Successfully converted {src} to {dst}")
+

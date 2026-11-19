@@ -429,6 +429,9 @@
     // 8. Descriptions & Tech Specs
     renderDescriptions(product);
 
+    // 8B. 5-Part Visual Craftsmanship Showcase
+    renderVisualShowcase(product);
+
     // 9. Community Reviews tailored to this product
     renderCommunityReviews(product);
 
@@ -480,7 +483,8 @@
   }
 
   // Universal isolated gallery extractor: Strict Shopify-standard variant image filtering
-  // When a color is selected on multi-color products: STRICTLY render ONLY that color's images!
+  // When a color is selected on multi-color products: STRICTLY render ONLY that color's images,
+  // enriched with the 5-part visual showcase (lifestyle model, 45-degree angle, macro craftsmanship, drop defense, EDC flatlay).
   function getColorGallery(product, color) {
     if (!product) return [];
 
@@ -489,16 +493,13 @@
     if (!color) {
       if (hasMultipleColors && product.colors[0]) {
         color = product.colors[0];
-      } else {
-        if (Array.isArray(product.images) && product.images.length > 0) return product.images;
-        return product.primary_image ? [product.primary_image] : [];
       }
     }
 
     // 1. Collect this selected color's dedicated images strictly
     const colorImgs = [];
-    if (color.image) colorImgs.push(color.image);
-    if (Array.isArray(color.images)) {
+    if (color && color.image) colorImgs.push(color.image);
+    if (color && Array.isArray(color.images)) {
       color.images.forEach(img => {
         if (img && !colorImgs.includes(img)) {
           colorImgs.push(img);
@@ -506,23 +507,29 @@
       });
     }
 
-    // Strict Multi-Color Isolation:
-    // When a product has multiple color variants, return STRICTLY this selected color's images.
-    // NEVER leak other colors or unclassified images from product.images!
-    if (hasMultipleColors) {
-      if (colorImgs.length > 0) return colorImgs;
-      return color.image ? [color.image] : (product.primary_image ? [product.primary_image] : []);
+    // Fallback to primary image if no color packshot
+    if (colorImgs.length === 0) {
+      if (product.primary_image) colorImgs.push(product.primary_image);
+      else if (Array.isArray(product.images) && product.images[0]) colorImgs.push(product.images[0]);
     }
 
-    // Single-color or non-variant products: display all product images in gallery
-    if (Array.isArray(product.images) && product.images.length > 0) {
+    // 2. Append 5-part visual showcase (lifestyle model, 45° angle, macro quality, drop defense trust, marketing flatlay)
+    if (Array.isArray(product.showcase) && product.showcase.length > 0) {
+      product.showcase.forEach(img => {
+        if (img && !colorImgs.includes(img)) {
+          colorImgs.push(img);
+        }
+      });
+    }
+
+    // 3. For single-color or non-variant products, retain any remaining generic product images
+    if (!hasMultipleColors && Array.isArray(product.images)) {
       product.images.forEach(img => {
         if (img && !colorImgs.includes(img)) colorImgs.push(img);
       });
     }
 
-    if (colorImgs.length > 0) return colorImgs;
-    return product.primary_image ? [product.primary_image] : [];
+    return colorImgs.length > 0 ? colorImgs : (product.primary_image ? [product.primary_image] : []);
   }
 
   // Render Thumbnails Rail: Displays gallery below or beside the main showcase
@@ -1500,6 +1507,87 @@
     if (bundleCard1) {
       bundleCard1.setAttribute('data-bundle-price', product.price);
     }
+  }
+
+  // 8B. Render Visual Showcase (5-Part Editorial Craftsmanship Gallery)
+  function renderVisualShowcase(product) {
+    const section = document.getElementById('pdpShowcaseSection');
+    const grid = document.getElementById('pdpShowcaseGrid');
+    if (!section || !grid) return;
+
+    if (!product || !Array.isArray(product.showcase) || product.showcase.length === 0) {
+      section.style.display = 'none';
+      return;
+    }
+
+    const showcaseMetadata = [
+      {
+        badge: '01 / LIFESTYLE & ERGONOMICS',
+        title: 'Natural In-Hand Form',
+        desc: 'Sculpted contours for tactile grip, balanced pocketability, and effortless one-handed use.'
+      },
+      {
+        badge: '02 / PRECISION PROFILE',
+        title: '45° Sculpted Architecture',
+        desc: 'Raised bezel corners and tactile button cutouts protect delicate glass and lens rings.'
+      },
+      {
+        badge: '03 / MACRO CRAFTSMANSHIP',
+        title: 'Signature Materials & Texture',
+        desc: 'Silky scratch-resistant finish engineered to resist fingerprint oils and daily micro-abrasions.'
+      },
+      {
+        badge: '04 / DEFENSE & TRUST',
+        title: '10ft Certified Drop Shield',
+        desc: 'Shock-absorbing perimeter cushioning cushions against severe corner drops and impact.'
+      },
+      {
+        badge: '05 / CURATED EDC',
+        title: 'Everyday Carry Luxury',
+        desc: 'Minimalist industrial aesthetic built to seamlessly complement your lifestyle essentials.'
+      }
+    ];
+
+    section.style.display = 'block';
+    grid.innerHTML = product.showcase.map((src, idx) => {
+      const meta = showcaseMetadata[idx] || {
+        badge: `0${idx + 1} / DETAIL PERSPECTIVE`,
+        title: `${product.title} Angle`,
+        desc: 'Engineered for durability, seamless functionality, and style.'
+      };
+
+      return `
+        <div class="pdp-showcase-item" data-src="${src}" tabindex="0" role="button" aria-label="View ${meta.title}">
+          <div class="pdp-showcase-img-wrap">
+            <img src="${bustUrl(src)}" alt="${meta.title}" class="pdp-showcase-img" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+          </div>
+          <div class="pdp-showcase-content">
+            <span class="pdp-showcase-pill">${meta.badge}</span>
+            <h3 class="pdp-showcase-card-title">${meta.title}</h3>
+            <p class="pdp-showcase-card-desc">${meta.desc}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Interactivity: Clicking a showcase card brings it to the main PDP stage
+    grid.querySelectorAll('.pdp-showcase-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const targetSrc = item.getAttribute('data-src');
+        if (!targetSrc) return;
+        updateMainImage(targetSrc);
+        const strip = document.getElementById('pdpThumbnails');
+        if (strip) {
+          strip.querySelectorAll('.pdp-vthumb').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-img') === targetSrc);
+          });
+        }
+        const stage = document.getElementById('pdpMainStage');
+        if (stage) {
+          stage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
   }
 
   // Setup Add To Cart & Sticky Actions

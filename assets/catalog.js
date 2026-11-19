@@ -960,9 +960,19 @@
     // Set initial image
     mainImg.src = selectedImg;
 
-    // Thumbnails
+    // Thumbnails: Selected packshot followed by 5-part visual showcase or product gallery
     thumbsStrip.innerHTML = '';
-    const allImgs = product.images.slice(0, 5);
+    const allImgs = [];
+    if (selectedImg) allImgs.push(selectedImg);
+    if (Array.isArray(product.showcase) && product.showcase.length > 0) {
+      product.showcase.forEach(src => {
+        if (!allImgs.includes(src)) allImgs.push(src);
+      });
+    } else if (Array.isArray(product.images)) {
+      product.images.forEach(src => {
+        if (!allImgs.includes(src)) allImgs.push(src);
+      });
+    }
     if (allImgs.length > 1) {
       thumbsStrip.style.display = 'flex';
       allImgs.forEach((src, idx) => {
