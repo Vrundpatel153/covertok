@@ -1525,38 +1525,38 @@
 
     const showcaseMetadata = [
       {
-        badge: '01 / LIFESTYLE & ERGONOMICS',
-        title: 'Natural In-Hand Form',
-        desc: 'Sculpted contours for tactile grip, balanced pocketability, and effortless one-handed use.'
+        badge: '01',
+        title: 'In Hand',
+        desc: 'Slim profile with natural everyday grip.'
       },
       {
-        badge: '02 / PRECISION PROFILE',
-        title: '45° Sculpted Architecture',
-        desc: 'Raised bezel corners and tactile button cutouts protect delicate glass and lens rings.'
+        badge: '02',
+        title: 'Side Angle',
+        desc: 'Raised bezels shield camera and screen.'
       },
       {
-        badge: '03 / MACRO CRAFTSMANSHIP',
-        title: 'Signature Materials & Texture',
-        desc: 'Silky scratch-resistant finish engineered to resist fingerprint oils and daily micro-abrasions.'
+        badge: '03',
+        title: 'Craft & Texture',
+        desc: 'Scratch-resistant finish and tactile feel.'
       },
       {
-        badge: '04 / DEFENSE & TRUST',
-        title: '10ft Certified Drop Shield',
-        desc: 'Shock-absorbing perimeter cushioning cushions against severe corner drops and impact.'
+        badge: '04',
+        title: 'Protection',
+        desc: 'Reinforced corners against daily drops.'
       },
       {
-        badge: '05 / CURATED EDC',
-        title: 'Everyday Carry Luxury',
-        desc: 'Minimalist industrial aesthetic built to seamlessly complement your lifestyle essentials.'
+        badge: '05',
+        title: 'Everyday Carry',
+        desc: 'Clean styling for daily essentials.'
       }
     ];
 
     section.style.display = 'block';
     grid.innerHTML = product.showcase.map((src, idx) => {
       const meta = showcaseMetadata[idx] || {
-        badge: `0${idx + 1} / DETAIL PERSPECTIVE`,
-        title: `${product.title} Angle`,
-        desc: 'Engineered for durability, seamless functionality, and style.'
+        badge: `0${idx + 1}`,
+        title: `Detail View`,
+        desc: 'Engineered for durability and clean style.'
       };
 
       return `
