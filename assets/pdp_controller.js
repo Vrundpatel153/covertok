@@ -588,12 +588,14 @@
         const img = btn.getAttribute('data-img');
         if (img) updateMainImage(img);
         updateGalleryCounter(idx, uniqueImgs.length);
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       });
     });
 
     if (galleryPrev) {
       galleryPrev.style.display = uniqueImgs.length > 1 ? 'flex' : 'none';
-      galleryPrev.onclick = () => {
+      galleryPrev.onclick = (e) => {
+        e.preventDefault();
         const thumbs = strip.querySelectorAll('.pdp-vthumb');
         if (!thumbs.length) return;
         let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));
@@ -603,7 +605,8 @@
     }
     if (galleryNext) {
       galleryNext.style.display = uniqueImgs.length > 1 ? 'flex' : 'none';
-      galleryNext.onclick = () => {
+      galleryNext.onclick = (e) => {
+        e.preventDefault();
         const thumbs = strip.querySelectorAll('.pdp-vthumb');
         if (!thumbs.length) return;
         let currentActive = Array.from(thumbs).findIndex(b => b.classList.contains('active'));

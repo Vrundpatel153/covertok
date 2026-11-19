@@ -361,10 +361,12 @@ html, body {
 
 .pdp-hero-grid {
   display: grid;
-  grid-template-columns: minmax(340px, 440px) minmax(420px, 580px);
-  gap: clamp(28px, 3.5vw, 48px);
+  grid-template-columns: minmax(460px, 560px) minmax(400px, 560px);
+  gap: clamp(32px, 4vw, 56px);
   justify-content: center;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .pdp-hero-grid > * {
@@ -374,50 +376,100 @@ html, body {
 /* LEFT: MEDIA GALLERY (Sticky on Desktop) */
 .pdp-gallery-col {
   position: sticky;
-  top: 88px;
+  top: 92px;
   height: fit-content;
   align-self: start;
   z-index: 10;
   width: 100%;
-  max-width: 320px;
+  max-width: 560px;
 }
 
 .pdp-gallery-wrap {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
   align-items: center;
-  max-width: 440px;
+  max-width: 560px;
   width: 100%;
   margin: 0 auto;
 }
 
-/* Photo Gallery Thumbnails Slider Below Window */
+/* Photo Gallery Thumbnails Navigation Wrap (With Left/Right Buttons) */
+.pdp-thumbs-nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pdp-thumbs-arrow {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #E5E0D8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #171513;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.pdp-thumbs-arrow:hover {
+  background: #171513;
+  color: #FFFFFF;
+  border-color: #171513;
+  transform: scale(1.08);
+}
+
+.pdp-thumbs-arrow:active {
+  transform: scale(0.96);
+}
+
+.pdp-thumbs-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Photo Gallery Thumbnails Slider Below Window (Scrollbar Removed) */
 .pdp-vertical-thumbs {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 10px;
   width: 100%;
-  max-width: 440px;
-  overflow-x: auto;
+  overflow-x: auto !important;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  padding: 4px 4px 8px;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 4px 2px 6px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 .pdp-vertical-thumbs::-webkit-scrollbar {
-  display: none;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .pdp-vthumb {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 10px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 12px;
   border: 1.5px solid #EAE5DB;
   background: #FFFFFF;
   padding: 2px;
@@ -446,20 +498,20 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* Main Showcase Stage: Fitted Luxury Window */
 .pdp-main-stage {
   position: relative;
   width: 100%;
-  max-width: min(315px, calc(100vh - 300px));
+  max-width: 540px;
   aspect-ratio: 1 / 1;
-  max-height: min(315px, calc(100vh - 300px));
+  max-height: 540px;
   background: #FFFFFF !important;
-  border-radius: 18px;
-  border: 1px solid #141416 !important;
-  box-shadow: 0 8px 28px rgba(23, 21, 19, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  border-radius: 24px;
+  border: 1.5px solid #141416 !important;
+  box-shadow: 0 12px 36px rgba(23, 21, 19, 0.08), 0 2px 8px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -476,7 +528,7 @@ html, body {
   object-position: center;
   user-select: none;
   -webkit-user-drag: none;
-  border-radius: 18px;
+  border-radius: 24px;
   background: #FFFFFF !important;
   transition: opacity 0.2s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   transform-origin: center center;
@@ -3212,7 +3264,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   .pdp-gallery-col {
     position: static !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: min(440px, 94vw) !important;
     min-width: 0 !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
@@ -3221,9 +3273,9 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   .pdp-gallery-wrap {
     display: flex !important;
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 10px !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: min(440px, 94vw) !important;
     min-width: 0 !important;
     align-items: center !important;
     margin: 0 auto !important;
@@ -3232,12 +3284,12 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 
   .pdp-main-stage {
     width: 100% !important;
-    max-width: min(315px, 45vh) !important;
+    max-width: min(440px, 94vw) !important;
     aspect-ratio: 1 / 1 !important;
-    max-height: min(315px, 45vh) !important;
+    max-height: min(440px, 58vh) !important;
     background: #FFFFFF !important;
-    border-radius: 18px !important;
-    border: 1px solid #141416 !important;
+    border-radius: 20px !important;
+    border: 1.5px solid #141416 !important;
     box-shadow: 0 8px 24px rgba(23, 21, 19, 0.06) !important;
     margin: 0 auto !important;
     overflow: hidden !important;
@@ -3254,7 +3306,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     max-height: 100% !important;
     object-fit: contain !important;
     object-position: center !important;
-    border-radius: 18px !important;
+    border-radius: 20px !important;
     background: #FFFFFF !important;
   }
 
@@ -3265,23 +3317,42 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     height: 36px !important;
   }
 
+  .pdp-thumbs-nav-wrap {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: min(440px, 94vw) !important;
+    margin: 0 auto !important;
+  }
+
+  .pdp-thumbs-arrow {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+  }
+
   .pdp-vertical-thumbs {
     display: flex !important;
     flex-direction: row !important;
     width: 100% !important;
-    max-width: 440px !important;
+    max-width: 100% !important;
     min-width: 0 !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
     gap: 8px !important;
     justify-content: flex-start !important;
-    padding: 4px 4px 8px !important;
+    padding: 4px 2px 6px !important;
     scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
     box-sizing: border-box !important;
   }
 
   .pdp-vertical-thumbs::-webkit-scrollbar {
     display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   .pdp-vthumb {

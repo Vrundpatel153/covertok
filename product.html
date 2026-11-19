@@ -513,8 +513,20 @@
               </button>
             </div>
 
-            <!-- Horizontal Thumbnails Slider Rail (Positioned Neatly Below Window) -->
-            <div class="pdp-vertical-thumbs" id="pdpThumbnails" role="tablist" aria-label="Product thumbnails"></div>
+            <!-- Horizontal Thumbnails Slider Rail with Left/Right Buttons -->
+            <div class="pdp-thumbs-nav-wrap">
+              <button type="button" class="pdp-thumbs-arrow pdp-thumbs-prev" id="galleryPrevBtn" aria-label="Previous image" title="Previous">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="pdp-vertical-thumbs" id="pdpThumbnails" role="tablist" aria-label="Product thumbnails"></div>
+              <button type="button" class="pdp-thumbs-arrow pdp-thumbs-next" id="galleryNextBtn" aria-label="Next image" title="Next">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
