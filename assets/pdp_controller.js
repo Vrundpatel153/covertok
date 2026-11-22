@@ -513,9 +513,17 @@
       else if (Array.isArray(product.images) && product.images[0]) colorImgs.push(product.images[0]);
     }
 
-    // 2. Append 5-part visual showcase (lifestyle model, 45° angle, macro quality, drop defense trust, marketing flatlay)
-    if (Array.isArray(product.showcase) && product.showcase.length > 0) {
-      product.showcase.forEach(img => {
+    // 2. Append 5-part visual showcase:
+    // If this color has dedicated showcase images, append them.
+    // Otherwise, append product.showcase ONLY if single-color OR if this is the primary/default color matching the showcase assets.
+    const showcaseImgs = (color && Array.isArray(color.showcase) && color.showcase.length > 0)
+      ? color.showcase
+      : (!hasMultipleColors || (product.colors && product.colors[0] && color && ((color.name || '').trim().toLowerCase() === (product.colors[0].name || '').trim().toLowerCase())))
+        ? product.showcase
+        : null;
+
+    if (Array.isArray(showcaseImgs) && showcaseImgs.length > 0) {
+      showcaseImgs.forEach(img => {
         if (img && !colorImgs.includes(img)) {
           colorImgs.push(img);
         }
@@ -663,6 +671,7 @@
           
           updateMainImage(firstImg);
           renderThumbnails(product, firstImg);
+          renderVisualShowcase(product, selectedColor);
 
           recalculatePrice();
         });
@@ -1513,12 +1522,16 @@
   }
 
   // 8B. Render Visual Showcase (5-Part Editorial Craftsmanship Gallery)
-  function renderVisualShowcase(product) {
+  function renderVisualShowcase(product, activeColor) {
     const section = document.getElementById('pdpShowcaseSection');
     const grid = document.getElementById('pdpShowcaseGrid');
     if (!section || !grid) return;
 
-    if (!product || !Array.isArray(product.showcase) || product.showcase.length === 0) {
+    const showcaseList = (activeColor && Array.isArray(activeColor.showcase) && activeColor.showcase.length > 0)
+      ? activeColor.showcase
+      : (product && Array.isArray(product.showcase)) ? product.showcase : [];
+
+    if (!showcaseList || showcaseList.length === 0) {
       section.style.display = 'none';
       return;
     }
@@ -1552,7 +1565,7 @@
     ];
 
     section.style.display = 'block';
-    grid.innerHTML = product.showcase.map((src, idx) => {
+    grid.innerHTML = showcaseList.map((src, idx) => {
       const meta = showcaseMetadata[idx] || {
         badge: `0${idx + 1}`,
         title: `Detail View`,
