@@ -53439,7 +53439,7 @@ body.home-page .hero-card {
 }
 
 body.home-page .hero-content {
-  padding-top: clamp(40px, 6vh, 64px) !important;
+  padding-top: clamp(80px, 12vh, 120px) !important;
 }
 
 .hero-bottom-bar {
@@ -56008,30 +56008,31 @@ html body #siteHeader,
   html body.home-page #siteHeader,
   body.home-page .site-header,
   body.home-page #siteHeader {
-    position: sticky !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
     width: 100% !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
-    padding: 10px 0 !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 16px 0 0 !important;
     margin: 0 !important;
     height: auto !important;
-    min-height: 56px !important;
-    z-index: 1000 !important;
-    pointer-events: auto !important;
+    min-height: 0 !important;
+    z-index: 100 !important;
+    pointer-events: none !important;
   }
 
   body.home-page .site-header .header-inner,
   body.home-page #siteHeader .header-inner {
     max-width: 100% !important;
-    padding: 0 clamp(16px, 2vw, 32px) !important;
+    padding: 0 clamp(10px, 1.2vw, 20px) !important;
     height: 52px !important;
     min-height: 52px !important;
     background: transparent !important;
@@ -56044,12 +56045,17 @@ html body #siteHeader,
     align-items: center !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    pointer-events: auto !important;
+    pointer-events: none !important;
   }
 
   body.home-page .site-header .header-left,
   body.home-page .site-header .main-nav,
-  body.home-page .site-header .header-right {
+  body.home-page .site-header .header-right,
+  body.home-page .site-header a,
+  body.home-page .site-header button,
+  body.home-page .site-header .nav-link,
+  body.home-page .site-header .header-action-btn,
+  body.home-page .site-header .header-logo {
     pointer-events: auto !important;
   }
 
@@ -56067,7 +56073,7 @@ html body #siteHeader,
   body.home-page .hero-section {
     position: relative !important;
     width: 100% !important;
-    margin-top: 6px !important;
+    margin-top: -68px !important;
     padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
     margin-bottom: 0 !important;
     display: block !important;
