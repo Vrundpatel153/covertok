@@ -60,7 +60,7 @@
     "02_angle": true,
     "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "pastel-heart-print-soft-silicone-phone-case": {
     "01_model": true,
@@ -74,28 +74,28 @@
     "02_angle": true,
     "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "silicone-world-map-travel-phone-case-copy": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "ultra-thin-frosted-phone-cases-copy": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "trendy-graphic-phone-cases-copy": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "vibrant-frame-style-iphone-cases-copy": {
     "01_model": true,
@@ -123,7 +123,7 @@
     "02_angle": true,
     "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "silver-3d-love-heart-phone-case": {
     "01_model": true,
@@ -134,64 +134,64 @@
   },
   "luxury-crossbody-wallet-phone-case": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
+    "02_angle": true,
+    "03_quality": true,
     "04_feature": false,
     "05_marketing": true
   },
   "leopard-print-chic-transparent-phone-case": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
+    "02_angle": true,
+    "03_quality": true,
     "04_feature": true,
-    "05_marketing": false
+    "05_marketing": true
   },
   "luxury-bow-pearl-chain-phone-case": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
-    "04_feature": false,
+    "02_angle": true,
+    "03_quality": true,
+    "04_feature": true,
     "05_marketing": true
   },
   "magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
+    "02_angle": true,
+    "03_quality": true,
     "04_feature": false,
     "05_marketing": true
   },
   "glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
-    "04_feature": false,
-    "05_marketing": false
+    "02_angle": true,
+    "03_quality": true,
+    "04_feature": true,
+    "05_marketing": true
   },
   "premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
+    "02_angle": true,
+    "03_quality": true,
     "04_feature": false,
-    "05_marketing": false
+    "05_marketing": true
   },
   "magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring": {
     "01_model": true,
-    "02_angle": false,
+    "02_angle": true,
     "03_quality": false,
-    "04_feature": false,
-    "05_marketing": false
+    "04_feature": true,
+    "05_marketing": true
   },
   "untitled-27jul_18-46": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
-    "04_feature": false,
-    "05_marketing": false
+    "02_angle": true,
+    "03_quality": true,
+    "04_feature": true,
+    "05_marketing": true
   },
   "bumper-case": {
     "01_model": true,
-    "02_angle": false,
-    "03_quality": false,
+    "02_angle": true,
+    "03_quality": true,
     "04_feature": true,
     "05_marketing": true
   }
