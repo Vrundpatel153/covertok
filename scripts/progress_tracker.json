@@ -3,19 +3,22 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "phone-cover-with-built-in-lip-balm-holder-copy-copy-6": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "crystal-studded-luxe-case-orange": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "ultra-clear-sideless-anti-yellow-back-case": {
     "01_model": true,
@@ -63,7 +66,8 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "luxury-quilted-crossbody-wallet-phone-case-copy-1": {
     "01_model": true,
@@ -97,7 +101,8 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "cute-bear-phone-case-with-plush-keychain-copy-1": {
     "01_model": true,
@@ -110,7 +115,8 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "silver-3d-love-heart-phone-case-copy": {
     "01_model": true,
@@ -122,31 +128,37 @@
   "silver-3d-love-heart-phone-case": {
     "01_model": true,
     "02_angle": true,
-    "05_marketing": true
+    "05_marketing": true,
+    "03_quality": true,
+    "04_feature": true
   },
   "luxury-crossbody-wallet-phone-case": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "leopard-print-chic-transparent-phone-case": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "05_marketing": true
+    "05_marketing": true,
+    "04_feature": true
   },
   "luxury-bow-pearl-chain-phone-case": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover": {
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": true
+    "04_feature": true,
+    "05_marketing": true
   },
   "glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone": {
     "01_model": true,
@@ -180,6 +192,7 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "05_marketing": true
+    "05_marketing": true,
+    "04_feature": true
   }
 }
