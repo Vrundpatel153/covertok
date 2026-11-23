@@ -136,7 +136,7 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": false,
+    "04_feature": true,
     "05_marketing": true
   },
   "leopard-print-chic-transparent-phone-case": {
@@ -157,7 +157,7 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": false,
+    "04_feature": true,
     "05_marketing": true
   },
   "glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone": {
@@ -171,13 +171,13 @@
     "01_model": true,
     "02_angle": true,
     "03_quality": true,
-    "04_feature": false,
+    "04_feature": true,
     "05_marketing": true
   },
   "magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring": {
     "01_model": true,
     "02_angle": true,
-    "03_quality": false,
+    "03_quality": true,
     "04_feature": true,
     "05_marketing": true
   },
