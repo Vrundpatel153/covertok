@@ -1543,51 +1543,13 @@
       return;
     }
 
-    const showcaseMetadata = [
-      {
-        badge: '01',
-        title: 'In Hand',
-        desc: 'Slim profile with natural everyday grip.'
-      },
-      {
-        badge: '02',
-        title: 'Side Angle',
-        desc: 'Raised bezels shield camera and screen.'
-      },
-      {
-        badge: '03',
-        title: 'Craft & Texture',
-        desc: 'Scratch-resistant finish and tactile feel.'
-      },
-      {
-        badge: '04',
-        title: 'Protection',
-        desc: 'Reinforced corners against daily drops.'
-      },
-      {
-        badge: '05',
-        title: 'Everyday Carry',
-        desc: 'Clean styling for daily essentials.'
-      }
-    ];
-
     section.style.display = 'block';
     grid.innerHTML = showcaseList.map((src, idx) => {
-      const meta = showcaseMetadata[idx] || {
-        badge: `0${idx + 1}`,
-        title: `Detail View`,
-        desc: 'Engineered for durability and clean style.'
-      };
-
+      const perspectiveNum = idx + 1;
       return `
-        <div class="pdp-showcase-item" data-src="${src}" tabindex="0" role="button" aria-label="View ${meta.title}">
+        <div class="pdp-showcase-item" data-src="${src}" tabindex="0" role="button" aria-label="Perspective 0${perspectiveNum}">
           <div class="pdp-showcase-img-wrap">
-            <img src="${bustUrl(src)}" alt="${meta.title}" class="pdp-showcase-img" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
-          </div>
-          <div class="pdp-showcase-content">
-            <span class="pdp-showcase-pill">${meta.badge}</span>
-            <h3 class="pdp-showcase-card-title">${meta.title}</h3>
-            <p class="pdp-showcase-card-desc">${meta.desc}</p>
+            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
           </div>
         </div>
       `;
