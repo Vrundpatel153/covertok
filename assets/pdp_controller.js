@@ -530,11 +530,18 @@
       });
     }
 
-    // 3. For single-color or non-variant products, retain any remaining generic product images
+    // 3. Append bare packshot (structure view) if available, and strictly exclude legacy /extra/ fantasy visuals
     if (!hasMultipleColors && Array.isArray(product.images)) {
       product.images.forEach(img => {
-        if (img && !colorImgs.includes(img)) colorImgs.push(img);
+        if (img && !colorImgs.includes(img) && !img.includes('/extra/')) colorImgs.push(img);
       });
+    } else if (hasMultipleColors && Array.isArray(product.images)) {
+      if (color && color.image) {
+        const bareImg = color.image.replace('01_packshot', '02_packshot_bare');
+        if (product.images.includes(bareImg) && !colorImgs.includes(bareImg)) {
+          colorImgs.push(bareImg);
+        }
+      }
     }
 
     return colorImgs.length > 0 ? colorImgs : (product.primary_image ? [product.primary_image] : []);

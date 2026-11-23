@@ -1,4 +1,3 @@
-// Covertok Full 75-Product Canonical Dataset
 window.CovertokProducts = window.PRODUCTS_DATA = [
   {
     "id": "10017625375018",
@@ -713,17 +712,14 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
     "images": [
       "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/02_lifestyle.png",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/03_lifestyle.png",
       "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/01_packshot.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/02_lifestyle.png",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/03_lifestyle.png",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/01_extra.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/02_extra.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/03_extra.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/04_extra.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/05_extra.webp",
-      "assets/products/transparent-magnetic-wireless-charging-phone-case/extra/06_extra.webp"
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/01_model.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/02_angle.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/03_quality.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/04_feature.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/showcase/05_marketing.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/02_packshot_bare.webp",
+      "assets/products/transparent-magnetic-wireless-charging-phone-case/dark-blue/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -1032,18 +1028,15 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
     "images": [
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/02_lifestyle.jpg",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/05_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/salty-tan/01_packshot.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/01_packshot.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/unscented/02_lifestyle.jpg",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/shortcake/01_packshot.webp",
       "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/peach-pit/01_packshot.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/01_extra.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/02_extra.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/03_extra.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/04_extra.webp",
-      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/extra/05_extra.webp"
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/01_model.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/02_angle.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/03_quality.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/04_feature.webp",
+      "assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -9831,15 +9824,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp",
     "images": [
       "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/01_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/02_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/03_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/04_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/05_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/06_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/07_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/08_extra.webp",
-      "assets/products/crystal-studded-luxe-case-orange/extra/09_extra.webp"
+      "assets/products/crystal-studded-luxe-case-orange/showcase/01_model.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/02_angle.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/03_quality.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/04_feature.webp",
+      "assets/products/crystal-studded-luxe-case-orange/showcase/05_marketing.webp",
+      "assets/products/crystal-studded-luxe-case-orange/cosmic-orange/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -10026,13 +10016,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp",
     "images": [
       "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/01_extra.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/02_extra.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/03_extra.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/04_extra.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/05_extra.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/06_extra.webp",
-      "assets/products/ultra-clear-sideless-anti-yellow-back-case/extra/07_extra.webp"
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/01_model.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/02_angle.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/03_quality.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/04_feature.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/showcase/05_marketing.webp",
+      "assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -10559,21 +10548,14 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp",
     "images": [
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/02_lifestyle.jpg",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/brown/01_packshot.webp",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/01_packshot.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/grey/02_lifestyle.jpg",
       "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/white/01_packshot.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/01_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/02_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/03_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/04_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/05_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/06_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/07_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/08_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/09_extra.webp",
-      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/extra/10_extra.webp"
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/01_model.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/02_angle.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/03_quality.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/04_feature.webp",
+      "assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -14591,25 +14573,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
     "images": [
       "assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp",
-      "assets/products/aluminium-frame-transparent-case/cosmic-orange/02_lifestyle.jpg",
-      "assets/products/aluminium-frame-transparent-case/cosmic-orange/03_lifestyle.png",
       "assets/products/aluminium-frame-transparent-case/deep-blue/01_packshot.webp",
-      "assets/products/aluminium-frame-transparent-case/deep-blue/02_lifestyle.png",
       "assets/products/aluminium-frame-transparent-case/silver/01_packshot.webp",
-      "assets/products/aluminium-frame-transparent-case/silver/02_lifestyle.jpg",
-      "assets/products/aluminium-frame-transparent-case/extra/01_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/02_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/03_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/04_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/05_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/06_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/07_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/08_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/09_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/10_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/11_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/12_extra.webp",
-      "assets/products/aluminium-frame-transparent-case/extra/13_extra.webp"
+      "assets/products/aluminium-frame-transparent-case/showcase/01_model.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/02_angle.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/03_quality.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/04_feature.webp",
+      "assets/products/aluminium-frame-transparent-case/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -15972,16 +15942,15 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
     "images": [
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/02_lifestyle.jpg",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/white/01_packshot.webp",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/lavender/01_packshot.webp",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/black/01_packshot.webp",
       "assets/products/wavy-edge-transparent-shockproof-pastel-cover/light-blue/01_packshot.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/01_extra.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/02_extra.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/03_extra.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/04_extra.webp",
-      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/extra/05_extra.webp"
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/01_model.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/02_angle.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/03_quality.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/04_feature.webp",
+      "assets/products/wavy-edge-transparent-shockproof-pastel-cover/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -22649,12 +22618,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
     "images": [
       "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp",
-      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/02_lifestyle.png",
-      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/01_extra.webp",
-      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/02_extra.webp",
-      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/03_extra.webp",
-      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/04_extra.webp",
-      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/extra/05_extra.webp"
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/01_model.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/02_angle.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/03_quality.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/04_feature.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/showcase/05_marketing.webp",
+      "assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -23343,9 +23312,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/pink/01_packshot.webp",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp",
       "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/01_packshot.webp",
-      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/natural-titanium/02_lifestyle.png",
-      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/extra/01_extra.webp",
-      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/extra/02_extra.webp"
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/01_model.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/02_angle.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/03_quality.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/04_feature.webp",
+      "assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -27688,7 +27659,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/blush-pink/01_packshot.webp",
       "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/01_packshot.webp",
-      "assets/products/pastel-heart-print-soft-silicone-phone-case/mint-breeze/02_lifestyle.png"
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/01_model.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/02_angle.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/03_quality.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/04_feature.webp",
+      "assets/products/pastel-heart-print-soft-silicone-phone-case/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -31348,16 +31323,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "images": [
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/black/01_packshot.webp",
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/01_packshot.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/white/02_lifestyle.png",
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/01_packshot.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/brown/02_lifestyle.png",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/01_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/02_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/03_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/04_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/05_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/06_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/extra/07_extra.webp"
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/01_model.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/02_angle.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/03_quality.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/04_feature.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy-1/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -40182,10 +40153,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/silicone-world-map-travel-phone-case-copy/holographic/01_packshot.webp",
     "images": [
       "assets/products/silicone-world-map-travel-phone-case-copy/holographic/01_packshot.webp",
-      "assets/products/silicone-world-map-travel-phone-case-copy/extra/01_extra.webp",
-      "assets/products/silicone-world-map-travel-phone-case-copy/extra/02_extra.webp",
-      "assets/products/silicone-world-map-travel-phone-case-copy/extra/03_extra.webp",
-      "assets/products/silicone-world-map-travel-phone-case-copy/extra/04_extra.webp"
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/01_model.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/02_angle.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/03_quality.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/04_feature.webp",
+      "assets/products/silicone-world-map-travel-phone-case-copy/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -40579,11 +40551,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/ultra-thin-frosted-phone-cases-copy/wine-red/01_packshot.webp",
       "assets/products/ultra-thin-frosted-phone-cases-copy/ivory-white/01_packshot.webp",
       "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/01_packshot.webp",
-      "assets/products/ultra-thin-frosted-phone-cases-copy/earth-brown/02_lifestyle.png",
       "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/01_packshot.webp",
-      "assets/products/ultra-thin-frosted-phone-cases-copy/midnight-black/02_lifestyle.png",
-      "assets/products/ultra-thin-frosted-phone-cases-copy/extra/01_extra.webp",
-      "assets/products/ultra-thin-frosted-phone-cases-copy/extra/02_extra.webp"
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/01_model.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/02_angle.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/03_quality.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/04_feature.webp",
+      "assets/products/ultra-thin-frosted-phone-cases-copy/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -42859,20 +42832,17 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
     "images": [
       "assets/products/trendy-graphic-phone-cases-copy/frost-black/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/frost-black/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/rose-frost/01_packshot.webp",
       "assets/products/trendy-graphic-phone-cases-copy/ice-white/01_packshot.webp",
       "assets/products/trendy-graphic-phone-cases-copy/pastel-purple/01_packshot.webp",
       "assets/products/trendy-graphic-phone-cases-copy/ice-blue/01_packshot.webp",
       "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/02_lifestyle.png",
       "assets/products/trendy-graphic-phone-cases-copy/deep-blue/01_packshot.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/extra/01_extra.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/extra/02_extra.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/extra/03_extra.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/extra/04_extra.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/extra/05_extra.webp",
-      "assets/products/trendy-graphic-phone-cases-copy/extra/06_extra.webp"
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/01_model.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/02_angle.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/03_quality.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/04_feature.webp",
+      "assets/products/trendy-graphic-phone-cases-copy/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -46114,10 +46084,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "images": [
       "assets/products/vibrant-frame-style-iphone-cases-copy/caffeine-mood/01_packshot.webp",
       "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/01_packshot.webp",
-      "assets/products/vibrant-frame-style-iphone-cases-copy/chill-mood/02_lifestyle.png",
-      "assets/products/vibrant-frame-style-iphone-cases-copy/extra/01_extra.webp",
-      "assets/products/vibrant-frame-style-iphone-cases-copy/extra/02_extra.webp",
-      "assets/products/vibrant-frame-style-iphone-cases-copy/extra/03_extra.webp"
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/01_model.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/02_angle.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/03_quality.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/04_feature.webp",
+      "assets/products/vibrant-frame-style-iphone-cases-copy/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -47049,14 +47020,16 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
     "images": [
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/sunshine-yellow/02_lifestyle.png",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/bubblegum-pink/01_packshot.webp",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/cool-teal/01_packshot.webp",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/creamy-white/01_packshot.webp",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/jet-black/01_packshot.webp",
       "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/coral-crush/01_packshot.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/extra/01_extra.webp",
-      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/extra/02_extra.webp"
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/01_model.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/02_angle.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/03_quality.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/04_feature.webp",
+      "assets/products/cute-bear-phone-case-with-plush-keychain-copy-1/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -50385,10 +50358,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp",
     "images": [
       "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/warm-caramel/01_packshot.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/extra/01_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/extra/02_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/extra/03_extra.webp",
-      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/extra/04_extra.webp"
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/01_model.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/02_angle.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/03_quality.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/04_feature.webp",
+      "assets/products/luxury-quilted-crossbody-wallet-phone-case-copy/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -50793,10 +50767,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/01_packshot.webp",
     "images": [
       "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/01_packshot.webp",
-      "assets/products/silver-3d-love-heart-phone-case-copy/extra/01_extra.webp",
-      "assets/products/silver-3d-love-heart-phone-case-copy/extra/02_extra.webp",
-      "assets/products/silver-3d-love-heart-phone-case-copy/extra/03_extra.webp",
-      "assets/products/silver-3d-love-heart-phone-case-copy/extra/04_extra.webp"
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/01_model.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/02_angle.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/03_quality.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/04_feature.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/showcase/05_marketing.webp",
+      "assets/products/silver-3d-love-heart-phone-case-copy/espresso-brown/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -51191,13 +51167,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/silver-3d-love-heart-phone-case/pink/01_packshot.webp",
     "images": [
       "assets/products/silver-3d-love-heart-phone-case/pink/01_packshot.webp",
-      "assets/products/silver-3d-love-heart-phone-case/pink/02_lifestyle.png",
       "assets/products/silver-3d-love-heart-phone-case/off-white/01_packshot.webp",
       "assets/products/silver-3d-love-heart-phone-case/black/01_packshot.webp",
-      "assets/products/silver-3d-love-heart-phone-case/black/02_lifestyle.png",
-      "assets/products/silver-3d-love-heart-phone-case/extra/01_extra.webp",
-      "assets/products/silver-3d-love-heart-phone-case/extra/02_extra.webp",
-      "assets/products/silver-3d-love-heart-phone-case/extra/03_extra.webp"
+      "assets/products/silver-3d-love-heart-phone-case/showcase/01_model.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/02_angle.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/03_quality.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/04_feature.webp",
+      "assets/products/silver-3d-love-heart-phone-case/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -52402,15 +52378,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
     "images": [
       "assets/products/luxury-crossbody-wallet-phone-case/black/01_packshot.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/black/02_lifestyle.jpg",
       "assets/products/luxury-crossbody-wallet-phone-case/beige/01_packshot.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/01_extra.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/02_extra.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/03_extra.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/04_extra.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/05_extra.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/06_extra.webp",
-      "assets/products/luxury-crossbody-wallet-phone-case/extra/07_extra.webp"
+      "assets/products/luxury-crossbody-wallet-phone-case/espresso-brown/01_packshot.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/01_model.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/02_angle.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/03_quality.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/04_feature.webp",
+      "assets/products/luxury-crossbody-wallet-phone-case/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -53131,11 +53105,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/leopard-print-chic-transparent-phone-case/amber-leopard/01_packshot.webp",
     "images": [
       "assets/products/leopard-print-chic-transparent-phone-case/amber-leopard/01_packshot.webp",
-      "assets/products/leopard-print-chic-transparent-phone-case/extra/01_extra.webp",
-      "assets/products/leopard-print-chic-transparent-phone-case/extra/02_extra.webp",
-      "assets/products/leopard-print-chic-transparent-phone-case/extra/03_extra.webp",
-      "assets/products/leopard-print-chic-transparent-phone-case/extra/04_extra.webp",
-      "assets/products/leopard-print-chic-transparent-phone-case/extra/05_extra.webp"
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/01_model.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/02_angle.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/03_quality.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/04_feature.webp",
+      "assets/products/leopard-print-chic-transparent-phone-case/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -53533,14 +53507,12 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/luxury-bow-pearl-chain-phone-case/black/01_packshot.webp",
     "images": [
       "assets/products/luxury-bow-pearl-chain-phone-case/black/01_packshot.webp",
-      "assets/products/luxury-bow-pearl-chain-phone-case/black/02_lifestyle.png",
       "assets/products/luxury-bow-pearl-chain-phone-case/beige/01_packshot.webp",
-      "assets/products/luxury-bow-pearl-chain-phone-case/beige/02_lifestyle.png",
-      "assets/products/luxury-bow-pearl-chain-phone-case/extra/01_extra.webp",
-      "assets/products/luxury-bow-pearl-chain-phone-case/extra/02_extra.webp",
-      "assets/products/luxury-bow-pearl-chain-phone-case/extra/03_extra.webp",
-      "assets/products/luxury-bow-pearl-chain-phone-case/extra/04_extra.webp",
-      "assets/products/luxury-bow-pearl-chain-phone-case/extra/05_extra.webp"
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/01_model.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/02_angle.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/03_quality.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/04_feature.webp",
+      "assets/products/luxury-bow-pearl-chain-phone-case/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -55024,10 +54996,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp",
     "images": [
       "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/clear-armor/01_packshot.webp",
-      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/extra/01_extra.webp",
-      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/extra/02_extra.webp",
-      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/extra/03_extra.webp",
-      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/extra/04_extra.webp"
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/01_model.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/02_angle.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/03_quality.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/04_feature.webp",
+      "assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -56638,11 +56611,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-pink/01_packshot.webp",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-orange/01_packshot.webp",
       "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/01_packshot.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/neon-lime/02_lifestyle.png",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/01_extra.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/02_extra.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/03_extra.webp",
-      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/extra/04_extra.webp"
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/01_model.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/02_angle.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/03_quality.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/04_feature.webp",
+      "assets/products/glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -60307,14 +60280,14 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/01_packshot.webp",
     "images": [
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/01_packshot.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/black/02_lifestyle.png",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/01_packshot.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/natural-titanium/02_lifestyle.png",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/blue/01_packshot.webp",
       "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/desert-titanium/01_packshot.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/extra/01_extra.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/extra/02_extra.webp",
-      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/extra/03_extra.webp"
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/01_model.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/02_angle.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/03_quality.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/04_feature.webp",
+      "assets/products/premium-magsafe-case-cover-with-metal-camera-ring-shockproof-stylish-with-magnetic-charging-support/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -63282,13 +63255,15 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
     "images": [
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/01_packshot.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/black/02_lifestyle.png",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/white/01_packshot.webp",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-pink/01_packshot.webp",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/neon-orange/01_packshot.webp",
       "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/brown/01_packshot.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/extra/01_extra.webp",
-      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/extra/02_extra.webp"
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/01_model.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/02_angle.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/03_quality.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/04_feature.webp",
+      "assets/products/magsafe-compatible-transparent-iphone-case-ultra-clear-shockproof-back-cover-with-magnetic-ring/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -67650,17 +67625,15 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
     "images": [
       "assets/products/untitled-27jul_18-46/sky-blue/01_packshot.webp",
-      "assets/products/untitled-27jul_18-46/sky-blue/02_lifestyle.png",
       "assets/products/untitled-27jul_18-46/brown/01_packshot.webp",
-      "assets/products/untitled-27jul_18-46/brown/02_lifestyle.jpg",
       "assets/products/untitled-27jul_18-46/white/01_packshot.webp",
-      "assets/products/untitled-27jul_18-46/white/02_lifestyle.jpg",
       "assets/products/untitled-27jul_18-46/rusty-orange/01_packshot.webp",
-      "assets/products/untitled-27jul_18-46/rusty-orange/02_lifestyle.png",
       "assets/products/untitled-27jul_18-46/pink/01_packshot.webp",
-      "assets/products/untitled-27jul_18-46/extra/01_extra.webp",
-      "assets/products/untitled-27jul_18-46/extra/02_extra.webp",
-      "assets/products/untitled-27jul_18-46/extra/03_extra.webp"
+      "assets/products/untitled-27jul_18-46/showcase/01_model.webp",
+      "assets/products/untitled-27jul_18-46/showcase/02_angle.webp",
+      "assets/products/untitled-27jul_18-46/showcase/03_quality.webp",
+      "assets/products/untitled-27jul_18-46/showcase/04_feature.webp",
+      "assets/products/untitled-27jul_18-46/showcase/05_marketing.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -69083,29 +69056,23 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "images": [
       "assets/products/bumper-case/black/01_packshot.webp",
       "assets/products/bumper-case/dark-blue/01_packshot.webp",
-      "assets/products/bumper-case/dark-blue/02_lifestyle.png",
       "assets/products/bumper-case/natural-titanium/01_packshot.webp",
       "assets/products/bumper-case/desert-titanium/01_packshot.webp",
       "assets/products/bumper-case/dark-red/01_packshot.webp",
       "assets/products/bumper-case/sierra-blue/01_packshot.webp",
       "assets/products/bumper-case/cosmic-orange/01_packshot.webp",
-      "assets/products/bumper-case/cosmic-orange/02_lifestyle.png",
-      "assets/products/bumper-case/extra/01_extra.webp",
-      "assets/products/bumper-case/extra/02_extra.webp",
-      "assets/products/bumper-case/extra/03_extra.webp",
-      "assets/products/bumper-case/extra/04_extra.webp",
-      "assets/products/bumper-case/extra/05_extra.webp",
-      "assets/products/bumper-case/extra/06_extra.webp",
-      "assets/products/bumper-case/extra/07_extra.webp",
-      "assets/products/bumper-case/extra/08_extra.webp",
-      "assets/products/bumper-case/extra/09_extra.webp",
-      "assets/products/bumper-case/extra/10_extra.webp",
-      "assets/products/bumper-case/extra/11_extra.webp",
-      "assets/products/bumper-case/extra/12_extra.webp",
-      "assets/products/bumper-case/extra/13_extra.webp",
-      "assets/products/bumper-case/extra/14_extra.webp",
-      "assets/products/bumper-case/extra/15_extra.webp",
-      "assets/products/bumper-case/extra/16_extra.webp"
+      "assets/products/bumper-case/showcase/01_model.webp",
+      "assets/products/bumper-case/showcase/02_angle.webp",
+      "assets/products/bumper-case/showcase/03_quality.webp",
+      "assets/products/bumper-case/showcase/04_feature.webp",
+      "assets/products/bumper-case/showcase/05_marketing.webp",
+      "assets/products/bumper-case/black/02_packshot_bare.webp",
+      "assets/products/bumper-case/dark-blue/02_packshot_bare.webp",
+      "assets/products/bumper-case/natural-titanium/02_packshot_bare.webp",
+      "assets/products/bumper-case/desert-titanium/02_packshot_bare.webp",
+      "assets/products/bumper-case/dark-red/02_packshot_bare.webp",
+      "assets/products/bumper-case/sierra-blue/02_packshot_bare.webp",
+      "assets/products/bumper-case/cosmic-orange/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
