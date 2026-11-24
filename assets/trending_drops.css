@@ -118,14 +118,14 @@
 }
 
 .drops-view-all-btn:hover {
-  border-color: #FF5500;
-  color: #FF5500;
-  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.2);
+  border-color: #0A0A0C;
+  color: #0A0A0C;
+  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.2);
   transform: translateY(-1px);
 }
 
 .drops-view-all-btn:hover .drops-arrow-circle {
-  background: #FF5500;
+  background: #0A0A0C;
   transform: translateX(3px);
 }
 
@@ -378,7 +378,7 @@
 
 .drop-review-cnt {
   font-weight: 500;
-  color: #8C827A;
+  color: #71717A;
 }
 
 .drop-title {
@@ -403,7 +403,7 @@
 }
 
 .drop-title a:hover {
-  color: #FF5500;
+  color: #0A0A0C;
 }
 
 .drop-pricing-row {
@@ -459,10 +459,10 @@
 }
 
 .drop-quick-add-btn:hover {
-  background: #FF5500;
-  border-color: #FF5500;
+  background: #0A0A0C;
+  border-color: #0A0A0C;
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 14px rgba(255, 85, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.35);
 }
 
 .drop-quick-add-btn.added {
@@ -534,7 +534,7 @@
     font-weight: 700 !important;
     letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
-    color: #FF5500 !important;
+    color: #FF5A18 !important;
     display: inline-block !important;
   }
 
@@ -1077,10 +1077,10 @@
 }
 
 .drop-quick-add-btn:hover {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 6px 16px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(10, 10, 12, 0.35) !important;
 }
 
 /* ==========================================================================
@@ -1130,7 +1130,7 @@
     font-weight: 700 !important;
     letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
-    color: #FF5500 !important;
+    color: #FF5A18 !important;
     display: inline-block !important;
   }
 

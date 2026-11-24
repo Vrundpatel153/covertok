@@ -522,7 +522,7 @@
 
   font-size: 0.775rem;
 
-  color: #735238;
+  color: #27272A;
 
   margin-top: 2px;
 
@@ -630,7 +630,7 @@
 
 .catalog-breadcrumb a:hover {
 
-  color: var(--color-accent, #FF5500);
+  color: #18181B;
 
 }
 
@@ -731,7 +731,7 @@
   align-items: center !important;
   padding: 3px 8px !important;
   border-radius: 5px !important;
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.65rem !important;
@@ -1063,7 +1063,7 @@
 
 .catalog-cat-card.active .cat-pill-count {
 
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 
   color: #FFFFFF !important;
 
@@ -1085,7 +1085,7 @@
 
   border-radius: 999px;
 
-  background: #FF5500;
+  background: #0A0A0C;
 
   color: #FFFFFF;
 
@@ -1199,7 +1199,7 @@
 
 .catalog-search-pill input::placeholder {
 
-  color: #9E948A;
+  color: #71717A;
 
   font-weight: 500;
 
@@ -1233,7 +1233,7 @@
 
   font-weight: 700;
 
-  color: #786B61;
+  color: #52525B;
 
   white-space: nowrap;
 
@@ -1333,7 +1333,7 @@
 
 .catalog-filters-btn.active svg {
 
-  stroke: #FF5500;
+  stroke: #0A0A0C;
 
 }
 
@@ -1347,7 +1347,7 @@
 
   font-weight: 700;
 
-  color: #786B61;
+  color: #52525B;
 
   white-space: nowrap;
 
@@ -1475,7 +1475,7 @@
 
 .sort-trigger-icon {
 
-  color: #786B61;
+  color: #52525B;
 
   transition: transform 0.2s ease, color 0.2s ease;
 
@@ -1573,7 +1573,7 @@
 
   font-weight: 600;
 
-  color: #4A443E;
+  color: #27272A;
 
   cursor: pointer;
 
@@ -1727,7 +1727,7 @@
 
     font-weight: 700;
 
-    color: #786B61;
+    color: #52525B;
 
     white-space: nowrap;
 
@@ -1911,7 +1911,7 @@
 
   font-weight: 800;
 
-  color: #735238;
+  color: #27272A;
 
   letter-spacing: 0.04em;
 
@@ -1981,9 +1981,9 @@
 
   color: #FFFFFF;
 
-  border-color: #FF5500;
+  border-color: #0A0A0C;
 
-  box-shadow: 0 2px 8px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(10, 10, 12, 0.25);
 
 }
 
@@ -2001,7 +2001,7 @@
 
   font-weight: 700;
 
-  color: #735238;
+  color: #27272A;
 
 }
 
@@ -2037,7 +2037,7 @@
 
 .catalog-price-input:focus {
 
-  border-color: #E77242;
+  border-color: #18181B;
 
 }
 
@@ -2077,7 +2077,7 @@
 
 .catalog-stock-label:hover {
 
-  border-color: #E77242;
+  border-color: #18181B;
 
 }
 
@@ -2129,7 +2129,7 @@
 
   border: 1px solid #DFD7C7;
 
-  color: #63431D;
+  color: #18181B;
 
   padding: 4px 12px;
 
@@ -2711,7 +2711,7 @@
 
   font-size: 0.95rem;
 
-  color: #786B61;
+  color: #52525B;
 
   margin: 0;
 
@@ -2867,7 +2867,7 @@
 
   justify-content: center;
 
-  color: #735238;
+  color: #27272A;
 
   cursor: pointer;
 
@@ -3001,7 +3001,7 @@
 
   font-size: 1.4rem;
 
-  color: #735238;
+  color: #27272A;
 
   display: flex;
 
@@ -3211,9 +3211,9 @@
 
   background: rgba(231, 213, 164, 0.45);
 
-  color: #735238;
+  color: #27272A;
 
-  border: 1px solid rgba(169, 129, 53, 0.35);
+  border: 1px solid rgba(10, 10, 12, 0.35);
 
   border-radius: 999px;
 
@@ -3289,7 +3289,7 @@
 
 .qv-color-swatch.active {
 
-  box-shadow: 0 0 0 2px #E77242;
+  box-shadow: 0 0 0 2px #18181B;
 
   transform: scale(1.12);
 
@@ -3301,7 +3301,7 @@
 
   font-size: 0.85rem;
 
-  color: #735238;
+  color: #27272A;
 
   line-height: 1.55;
 
@@ -3383,7 +3383,7 @@
 
   background: #FFFFFF;
 
-  border: 1px solid rgba(231, 114, 66, 0.22);
+  border: 1px solid rgba(10, 10, 12, 0.22);
 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 
@@ -3393,7 +3393,7 @@
 
   justify-content: center;
 
-  color: #E77242;
+  color: #18181B;
 
   flex-shrink: 0;
 
@@ -3407,7 +3407,7 @@
 
   transform: translateY(-2px);
 
-  border-color: rgba(231, 114, 66, 0.45);
+  border-color: rgba(10, 10, 12, 0.45);
 
 }
 
@@ -3543,7 +3543,7 @@
 
     background: #FFFFFF !important;
 
-    border: 1px solid rgba(169, 129, 53, 0.22) !important;
+    border: 1px solid rgba(10, 10, 12, 0.22) !important;
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
 
@@ -3991,7 +3991,7 @@
 
   font-weight: 700;
 
-  color: #786B61;
+  color: #52525B;
 
   background: #FAF7F2;
 
@@ -4223,7 +4223,7 @@
 
 .category-filter-banner .banner-text span {
 
-  color: #786B61;
+  color: #52525B;
 
   font-weight: 600;
 
@@ -4351,7 +4351,7 @@
 
   font-weight: 700;
 
-  color: #786B61;
+  color: #52525B;
 
 }
 
@@ -4365,9 +4365,9 @@
 
   border-radius: 50%;
 
-  background: #FF5500;
+  background: #FF5A18;
 
-  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 0 0 2px rgba(255, 90, 24, 0.25);
 
   display: inline-block;
 
@@ -4524,15 +4524,15 @@
 
 .card-add-btn:hover {
 
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 
   color: #FFFFFF !important;
 
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
 
   transform: translateY(-1px) !important;
 
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.35) !important;
 
 }
 
@@ -5008,7 +5008,7 @@
 }
 
 .card-product-title:hover {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 /* 3. Price on Left, Color Swatches on Right Row */
@@ -5155,11 +5155,11 @@
 }
 
 .card-add-btn:hover {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.35) !important;
 }
 
 .card-add-btn:active {
@@ -5427,9 +5427,9 @@
   margin: 14px auto !important;
   max-width: 260px !important;
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+  border: 1.5px solid rgba(10, 10, 12, 0.38) !important;
   border-radius: 999px !important;
-  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 18px rgba(10, 10, 12, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
   color: #18181B !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 13px !important;
@@ -5448,8 +5448,8 @@
 .catalog-infinite-spinner {
   width: 16px !important;
   height: 16px !important;
-  border: 2px solid rgba(255, 85, 0, 0.2) !important;
-  border-top-color: #FF5500 !important;
+  border: 2px solid rgba(10, 10, 12, 0.2) !important;
+  border-top-color: #0A0A0C !important;
   border-radius: 50% !important;
   animation: catalogSpinner 0.65s linear infinite !important;
   flex-shrink: 0 !important;

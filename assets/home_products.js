@@ -63,7 +63,7 @@
         if (p.discount_percent >= 10) {
           badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: rgba(23, 21, 19, 0.88); color: #FFFFFF; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">-${p.discount_percent}%</span>`;
         } else if (p.is_bestseller) {
-          badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #FF5500; color: #171513; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
+          badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #0A0A0C; color: #FFFFFF; border: 1px solid rgba(255, 90, 24, 0.45); font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
         }
 
         return `
@@ -74,13 +74,13 @@
             </div>
 
             <div class="col-prod-info" style="padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1;">
-              <span style="font-size: 0.72rem; font-weight: 700; color: #8C827A; text-transform: uppercase; margin-bottom: 4px;">${p.category_name}</span>
+              <span style="font-size: 0.72rem; font-weight: 700; color: #71717A; text-transform: uppercase; margin-bottom: 4px;">${p.category_name}</span>
               <a href="product.html?handle=${p.handle}" style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: #171513; text-decoration: none; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px;">
                 ${p.title}
               </a>
               <div class="col-prod-price-box" style="display: flex; align-items: baseline; gap: 8px; margin-top: auto;">
                 <span class="col-price-now" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #171513;">${p.price_formatted}</span>
-                ${p.original_price > p.price ? `<span class="col-price-was" style="font-size: 0.82rem; color: #8C827A; text-decoration: line-through;">${p.original_price_formatted}</span>` : ''}
+                ${p.original_price > p.price ? `<span class="col-price-was" style="font-size: 0.82rem; color: #71717A; text-decoration: line-through;">${p.original_price_formatted}</span>` : ''}
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
       if (p.discount_percent >= 10) {
         badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: rgba(23, 21, 19, 0.88); color: #FFFFFF; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">-${p.discount_percent}%</span>`;
       } else if (p.is_bestseller) {
-        badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #FF5500; color: #171513; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
+        badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #0A0A0C; color: #FFFFFF; border: 1px solid rgba(255, 90, 24, 0.45); font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
       }
 
       return `

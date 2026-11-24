@@ -38,7 +38,7 @@
 
      COVERTOK LUXURY HIGH-CONTRAST MASTER PALETTE (2026 EDITORIAL EDITION)
 
-     Matte Obsidian Black (#0A0A0C) + Pure Optical White (#FFFFFF) + International Orange (#FF5A18)
+     Matte Obsidian Black (#0A0A0C) + Pure Optical White (#FFFFFF) + International Orange (#0A0A0C)
 
      -------------------------------------------------------------------------- */
 
@@ -52,15 +52,15 @@
 
   --color-accent-deep: #E0480C;          /* Pressed / Active Orange */
 
-  --color-accent-subtle: rgba(255, 90, 24, 0.08); /* Ambient Glow Fill */
+  --color-accent-subtle: rgba(10, 10, 12, 0.06); /* Ambient Neutral Fill */
 
-  --color-accent-glow: rgba(255, 90, 24, 0.28);   /* Rim Light Glow */
+  --color-accent-glow: rgba(10, 10, 12, 0.20);   /* Rim Light Glow */
 
-  --color-accent-border: rgba(255, 90, 24, 0.24); /* Accent Hairline Border */
+  --color-accent-border: rgba(10, 10, 12, 0.16); /* Neutral Hairline Border */
 
   --color-orange: #FF5A18;               /* Master Brand Orange */
 
-  --color-orange-glow: rgba(255, 90, 24, 0.28);
+  --color-orange-glow: rgba(10, 10, 12, 0.20);
 
 
 
@@ -456,7 +456,7 @@
 
 
 
-  --shadow-hover: 0 20px 48px rgba(169, 129, 53, 0.18);
+  --shadow-hover: 0 20px 48px rgba(10, 10, 12, 0.18);
 
 
 
@@ -748,7 +748,7 @@
 
 
 
-  border: 1px solid rgba(255, 85, 0, 0.6) !important;
+  border: 1px solid rgba(10, 10, 12, 0.6) !important;
 
 
 
@@ -756,7 +756,7 @@
 
 
 
-    0 0 8px rgba(255, 85, 0, 0.4),
+    0 0 8px rgba(10, 10, 12, 0.4),
 
 
 
@@ -1110,7 +1110,7 @@ img {
 
    COVERTOK LUXURY EDITORIAL ANNOUNCEMENT MARQUEE (REFINED LUXURY EDITION)
 
-   Matte Obsidian (#0D0E12) + Crisp Ivory (#F3F4F6) + Warm Amber (#FF7A30)
+   Matte Obsidian (#0D0E12) + Crisp Ivory (#F3F4F6) + Warm Amber (#18181B)
 
    ========================================================================== */
 
@@ -1268,7 +1268,7 @@ img {
 
 .announcement-item .txt-accent {
 
-  color: #FF7A30 !important;
+  color: #FF5A18 !important;
 
   font-weight: 700 !important;
 
@@ -1280,11 +1280,11 @@ img {
 
 .announcement-item .txt-badge {
 
-  background: rgba(255, 122, 48, 0.15) !important;
+  background: rgba(255, 90, 24, 0.15) !important;
 
-  color: #FF7A30 !important;
+  color: #FF5A18 !important;
 
-  border: 1px solid rgba(255, 122, 48, 0.35) !important;
+  border: 1px solid rgba(255, 90, 24, 0.35) !important;
 
   font-size: 0.58rem !important;
 
@@ -2093,7 +2093,7 @@ img {
 
 
 
-  background: var(--brand-orange, #E77242);
+  background: var(--brand-orange, #FF5A18);
 
 }
 
@@ -2609,7 +2609,7 @@ img {
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.65rem !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
 }
@@ -4241,7 +4241,7 @@ img {
 
 
 
-  color: #9E948A !important;
+  color: #71717A !important;
 
 
 
@@ -4285,7 +4285,7 @@ img {
 
 
 
-  color: #786B61 !important;
+  color: #52525B !important;
 
 
 
@@ -4301,7 +4301,7 @@ img {
 
 
 
-  color: #786B61 !important;
+  color: #52525B !important;
 
 
 
@@ -4385,7 +4385,7 @@ img {
 
 
 
-  color: #786B61 !important;
+  color: #52525B !important;
 
 
 
@@ -4513,7 +4513,7 @@ img {
 
 
 
-  box-shadow: 0 8px 24px rgba(169, 129, 53, 0.25);
+  box-shadow: 0 8px 24px rgba(10, 10, 12, 0.25);
 
 
 
@@ -4537,7 +4537,7 @@ img {
 
 
 
-  border: 1.5px solid rgba(255, 85, 0, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.45);
 
 
 
@@ -6270,7 +6270,7 @@ img {
 
 
 
-  border: 1px solid rgba(255, 85, 0, 0.35);
+  border: 1px solid rgba(10, 10, 12, 0.35);
 
 
 
@@ -6302,7 +6302,7 @@ img {
 
 
 
-  stroke: var(--brand-orange, #E77242);
+  stroke: #0A0A0C;
 
 
 
@@ -7824,7 +7824,7 @@ img {
 
 
 
-  background-color: #FBEBE3;
+  background-color: #F4F4F5;
 
 
 
@@ -8169,11 +8169,11 @@ img {
 
 
 
-  border: 1.5px solid rgba(231, 114, 66, 0.22);
+  border: 1.5px solid rgba(10, 10, 12, 0.22);
 
 
 
-  box-shadow: 0 20px 60px rgba(17, 17, 19, 0.06), 0 2px 14px rgba(169, 129, 53, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 60px rgba(17, 17, 19, 0.06), 0 2px 14px rgba(10, 10, 12, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
 
 
@@ -8433,7 +8433,7 @@ img {
 
 
 
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(243, 232, 210, 0.45) 40%, rgba(255, 85, 0, 0.12) 65%, transparent 80%);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(243, 232, 210, 0.45) 40%, rgba(10, 10, 12, 0.12) 65%, transparent 80%);
 
 
 
@@ -8837,7 +8837,7 @@ img {
 
 
 
-  border: 1px solid rgba(169, 129, 53, 0.35);
+  border: 1px solid rgba(10, 10, 12, 0.35);
 
 
 
@@ -9093,7 +9093,7 @@ img {
 
 
 
-  border: 1px solid rgba(231, 114, 66, 0.22);
+  border: 1px solid rgba(10, 10, 12, 0.22);
 
 
 
@@ -9961,7 +9961,7 @@ img {
 
 
 
-  border: 1px solid rgba(255, 85, 0, 0.45);
+  border: 1px solid rgba(10, 10, 12, 0.45);
 
 
 
@@ -10105,7 +10105,7 @@ img {
 
 
 
-  border: 1px solid rgba(169, 129, 53, 0.28);
+  border: 1px solid rgba(10, 10, 12, 0.28);
 
 
 
@@ -10289,7 +10289,7 @@ img {
 
 
 
-  box-shadow: 0 4px 16px rgba(169, 129, 53, 0.35);
+  box-shadow: 0 4px 16px rgba(10, 10, 12, 0.35);
 
 
 
@@ -10309,7 +10309,7 @@ img {
 
 
 
-  background: linear-gradient(135deg, #FFFFFF 0%, #E7D5A4 100%);
+  background: #FFFFFF;
 
 
 
@@ -12166,8 +12166,8 @@ img {
 
 .trust-icon {
   background: #FFFFFF;
-  color: #E77242;
-  border: 1px solid rgba(231, 114, 66, 0.2);
+  color: #18181B;
+  border: 1px solid rgba(10, 10, 12, 0.2);
   width: 52px;
   height: 52px;
   border-radius: 16px;
@@ -12180,8 +12180,8 @@ img {
 }
 
 .trust-item:hover .trust-icon {
-  border-color: rgba(231, 114, 66, 0.45);
-  box-shadow: 0 8px 20px rgba(231, 114, 66, 0.15);
+  border-color: rgba(10, 10, 12, 0.45);
+  box-shadow: 0 8px 20px rgba(10, 10, 12, 0.15);
   transform: scale(1.05);
 }
 
@@ -19192,11 +19192,11 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(231, 114, 66, 0.22) !important;
+    border: 1px solid rgba(10, 10, 12, 0.22) !important;
 
 
 
-    color: #E77242 !important;
+    color: #18181B !important;
 
 
 
@@ -21387,7 +21387,7 @@ a.footer-contact-main:hover {
 
 .fl-offer-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(231, 114, 66, 0.25);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(10, 10, 12, 0.25);
 }
 
 .fl-offer-header {
@@ -21402,7 +21402,7 @@ a.footer-contact-main:hover {
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #E77242;
+  color: #FF5A18;
   text-transform: uppercase;
 }
 
@@ -21411,9 +21411,9 @@ a.footer-contact-main:hover {
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.04em;
-  background: rgba(231, 114, 66, 0.16);
-  color: #FF8F60;
-  border: 1px solid rgba(231, 114, 66, 0.35);
+  background: rgba(255, 90, 24, 0.16);
+  color: #FF5A18;
+  border: 1px solid rgba(255, 90, 24, 0.35);
   padding: 3px 9px;
   border-radius: 999px;
 }
@@ -21455,7 +21455,7 @@ a.footer-contact-main:hover {
   font-family: var(--font-heading);
   font-size: 2.3rem;
   font-weight: 900;
-  color: #E77242;
+  color: #FFFFFF;
   line-height: 1;
   letter-spacing: -0.02em;
 }
@@ -21606,7 +21606,7 @@ a.footer-contact-main:hover {
 }
 
 .fl-perk-item svg {
-  color: #E77242;
+  color: #18181B;
 }
 
 .fl-perk-dot {
@@ -22833,7 +22833,7 @@ a.footer-contact-main:hover {
 
 
 
-  border: 1.2px solid rgba(220, 185, 135, 0.45) !important;
+  border: 1.2px solid rgba(10, 10, 12, 0.45) !important;
 
 
 
@@ -22893,7 +22893,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: rgba(234, 202, 166, 0.92) !important;
+  border-color: rgba(10, 10, 12, 0.92) !important;
 
 
 
@@ -22901,7 +22901,7 @@ a.footer-contact-main:hover {
 
 
 
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 20px rgba(220, 185, 135, 0.25) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 20px rgba(10, 10, 12, 0.25) !important;
 
 
 
@@ -23161,7 +23161,7 @@ a.footer-contact-main:hover {
 
 
 
-  border: 1.5px solid rgba(220, 185, 135, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.45);
 
 
 
@@ -23301,7 +23301,7 @@ a.footer-contact-main:hover {
 
 
 
-  border: 1.5px solid rgba(255, 85, 0, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.45);
 
 
 
@@ -23538,7 +23538,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-top: 1px solid rgba(234, 202, 166, 0.4);
+  border-top: 1px solid rgba(10, 10, 12, 0.4);
 
 
 
@@ -23894,11 +23894,11 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: #EACAA6;
+  border-color: #FFFFFF;
 
 
 
-  background: rgba(234, 202, 166, 0.08);
+  background: rgba(10, 10, 12, 0.08);
 
 
 
@@ -23966,7 +23966,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: #EACAA6;
+  background: #FFFFFF;
 
 
 
@@ -24222,7 +24222,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: rgba(234, 202, 166, 0.5);
+  border-color: rgba(10, 10, 12, 0.5);
 
 
 
@@ -24242,7 +24242,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: #EACAA6;
+  border-color: #FFFFFF;
 
 
 
@@ -24250,7 +24250,7 @@ a.footer-contact-main:hover {
 
 
 
-  box-shadow: 0 0 20px rgba(234, 202, 166, 0.25);
+  box-shadow: 0 0 20px rgba(10, 10, 12, 0.25);
 
 
 
@@ -24286,7 +24286,7 @@ a.footer-contact-main:hover {
 
 
 
-  border: 1px solid rgba(255, 85, 0, 0.4);
+  border: 1px solid rgba(10, 10, 12, 0.4);
 
 
 
@@ -24554,7 +24554,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: #EACAA6;
+  background: #FFFFFF;
 
 
 
@@ -24562,7 +24562,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: #EACAA6;
+  border-color: #FFFFFF;
 
 
 
@@ -24722,7 +24722,7 @@ a.footer-contact-main:hover {
 
 
 
-  border: 1.5px solid rgba(255, 85, 0, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.45);
 
 
 
@@ -26456,7 +26456,7 @@ a.footer-contact-main:hover {
 
 .bento-view-all-btn:hover .bento-view-all-circle {
 
-  background: #FF5A18 !important;
+  background: #0A0A0C !important;
 
   transform: translateX(3px) !important;
 
@@ -26634,13 +26634,13 @@ a.footer-contact-main:hover {
 
 .bento-intro-cta:hover {
 
-  background: #FF5A18;
+  background: #0A0A0C;
 
   color: #FFFFFF;
 
   transform: translateY(-2px);
 
-  box-shadow: 0 8px 24px rgba(255, 90, 24, 0.35);
+  box-shadow: 0 8px 24px rgba(10, 10, 12, 0.35);
 
 }
 
@@ -26818,7 +26818,7 @@ a.footer-contact-main:hover {
 
 
 
-  border: 1.5px solid rgba(255, 85, 0, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.45);
 
 
 
@@ -27362,9 +27362,9 @@ a.footer-contact-main:hover {
 
   text-transform: uppercase !important;
 
-  color: #FF5A18 !important;
+  color: #0A0A0C !important;
 
-  background: rgba(255, 90, 24, 0.10) !important;
+  background: rgba(10, 10, 12, 0.10) !important;
 
   padding: 3px 9px !important;
 
@@ -28428,7 +28428,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1.5px solid rgba(255, 85, 0, 0.45) !important;
+    border: 1.5px solid rgba(10, 10, 12, 0.45) !important;
 
 
 
@@ -28924,11 +28924,11 @@ a.footer-contact-main:hover {
 
 
 
-    background: var(--color-accent, #FF5500) !important;
+    background: #18181B !important;
 
 
 
-    border-color: var(--color-accent, #FF5500) !important;
+    border-color: #18181B !important;
 
 
 
@@ -30831,7 +30831,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(169, 129, 53, 0.18) !important;
+    border: 1px solid rgba(10, 10, 12, 0.18) !important;
 
 
 
@@ -31711,7 +31711,7 @@ a.footer-contact-main:hover {
 
 
 
-    color: #524B43 !important;
+    color: #27272A !important;
 
 
 
@@ -32151,7 +32151,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(169, 129, 53, 0.25) !important;
+    border: 1px solid rgba(10, 10, 12, 0.25) !important;
 
 
 
@@ -32263,8 +32263,8 @@ a.footer-contact-main:hover {
 
 
 
-    background: var(--brand-orange, #E77242) !important;
-    box-shadow: 0 0 8px rgba(231, 114, 66, 0.4) !important;
+    background: var(--brand-orange, #FF5A18) !important;
+    box-shadow: 0 0 8px rgba(255, 90, 24, 0.4) !important;
 
 
 
@@ -33184,7 +33184,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(255, 85, 0, 0.45) !important;
+    border: 1px solid rgba(10, 10, 12, 0.45) !important;
 
 
 
@@ -33212,7 +33212,7 @@ a.footer-contact-main:hover {
 
 
 
-    box-shadow: 0 2px 6px rgba(169, 129, 53, 0.15) !important;
+    box-shadow: 0 2px 6px rgba(10, 10, 12, 0.15) !important;
 
 
 
@@ -33388,7 +33388,7 @@ a.footer-contact-main:hover {
 
 
 
-    box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px var(--brand-orange, #E77242) !important;
+    box-shadow: 0 0 0 1.5px #FFFFFF, 0 0 0 3px #0A0A0C !important;
 
 
 
@@ -33564,7 +33564,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1.5px solid rgba(255, 85, 0, 0.45) !important;
+    border: 1.5px solid rgba(10, 10, 12, 0.45) !important;
 
 
 
@@ -33744,7 +33744,7 @@ a.footer-contact-main:hover {
 
 
 
-    background: var(--gold-pale, #E7D5A4) !important;
+    background: var(--gold-pale, #F4F4F5) !important;
 
 
 
@@ -34146,7 +34146,7 @@ a.footer-contact-main:hover {
     font-size: 0.70rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.12em !important;
-    color: #FF5500 !important;
+    color: #FF5A18 !important;
     display: block !important;
     margin-bottom: 6px !important;
   }
@@ -34159,7 +34159,7 @@ a.footer-contact-main:hover {
     margin: 0 0 8px 0 !important;
   }
   .fl-headline-accent {
-    color: #FF5500 !important;
+    color: #FF5A18 !important;
   }
   .fl-subtext {
     font-size: 0.82rem !important;
@@ -34834,11 +34834,11 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1.5px solid rgba(231, 114, 66, 0.22) !important;
+    border: 1.5px solid rgba(10, 10, 12, 0.22) !important;
 
 
 
-    box-shadow: 0 16px 40px rgba(17, 17, 19, 0.06), 0 2px 10px rgba(169, 129, 53, 0.06) !important;
+    box-shadow: 0 16px 40px rgba(17, 17, 19, 0.06), 0 2px 10px rgba(10, 10, 12, 0.06) !important;
 
 
 
@@ -34902,7 +34902,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(169, 129, 53, 0.35) !important;
+    border: 1px solid rgba(10, 10, 12, 0.35) !important;
 
 
 
@@ -35010,7 +35010,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(255, 85, 0, 0.45) !important;
+    border: 1px solid rgba(10, 10, 12, 0.45) !important;
 
 
 
@@ -35058,7 +35058,7 @@ a.footer-contact-main:hover {
 
 
 
-    border: 1px solid rgba(169, 129, 53, 0.28) !important;
+    border: 1px solid rgba(10, 10, 12, 0.28) !important;
 
 
 
@@ -35086,7 +35086,7 @@ a.footer-contact-main:hover {
 
 
 
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(243, 232, 210, 0.45) 40%, rgba(255, 85, 0, 0.12) 65%, transparent 80%) !important;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.85) 0%, rgba(243, 232, 210, 0.45) 40%, rgba(10, 10, 12, 0.12) 65%, transparent 80%) !important;
 
 
 
@@ -37538,7 +37538,7 @@ a.footer-contact-main:hover {
 
 
 
-    box-shadow: 0 4px 14px rgba(154, 105, 75, 0.4);
+    box-shadow: 0 4px 14px rgba(10, 10, 12, 0.4);
 
 
 
@@ -40075,7 +40075,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: linear-gradient(to right, transparent, var(--color-accent, #FF5500));
+  background: linear-gradient(to right, transparent, var(--color-accent, #FF5A18));
 
 
 
@@ -40091,7 +40091,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: linear-gradient(to left, transparent, var(--color-accent, #FF5500));
+  background: linear-gradient(to left, transparent, var(--color-accent, #FF5A18));
 
 
 
@@ -40831,7 +40831,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: rgba(255, 85, 0, 0.6);
+  background: rgba(10, 10, 12, 0.6);
 
 
 
@@ -41335,7 +41335,7 @@ a.footer-contact-main:hover {
 
 
 
-  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #FF5500;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #0A0A0C;
 
 
 
@@ -41423,11 +41423,11 @@ a.footer-contact-main:hover {
 
 
 
-  background: #F8D8B6 !important;
+  background: #0A0A0C !important;
 
 
 
-  color: #1E1A16 !important;
+  color: #FFFFFF !important;
 
 
 
@@ -43522,11 +43522,11 @@ a.footer-contact-main:hover {
 
 
 
-  background: #E5A87B;
+  background: #FF5A18;
 
 
 
-  box-shadow: 0 0 8px rgba(229, 168, 123, 0.85);
+  box-shadow: 0 0 8px rgba(255, 90, 24, 0.85);
 
 
 
@@ -43558,7 +43558,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #FDE3B8;
+  color: #E4E4E7;
 
 
 
@@ -44563,7 +44563,7 @@ a.footer-contact-main:hover {
 
 
 
-    color: #FDE3B8;
+    color: #E4E4E7;
 
 
 
@@ -45134,7 +45134,7 @@ a.footer-contact-main:hover {
 
 
 
-  outline: 3px solid #9F5927;
+  outline: 3px solid #27272A;
 
 
 
@@ -46098,7 +46098,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: #9F5927;
+  border-color: #27272A;
 
 
 
@@ -46118,7 +46118,7 @@ a.footer-contact-main:hover {
 
 
 
-  border-color: #9F5927;
+  border-color: #27272A;
 
 
 
@@ -46126,7 +46126,7 @@ a.footer-contact-main:hover {
 
 
 
-  box-shadow: 0 4px 12px rgba(159, 89, 39, 0.28);
+  box-shadow: 0 4px 12px rgba(10, 10, 12, 0.28);
 
 
 
@@ -47566,7 +47566,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #6D6359;
+  color: #52525B;
 
 
 
@@ -48219,7 +48219,7 @@ a.footer-contact-main:hover {
 
 
 
-  background: #2D2721;
+  background: #18181B;
 
 
 
@@ -48687,7 +48687,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #706458;
+  color: #52525B;
 
 
 
@@ -48755,7 +48755,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #2D2721;
+  color: #18181B;
 
 
 
@@ -48875,7 +48875,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #4B423A;
+  color: #27272A;
 
 
 
@@ -49391,7 +49391,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #8C8278;
+  color: #71717A;
 
 
 
@@ -49603,7 +49603,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #4A4036;
+  color: #27272A;
 
 
 
@@ -49643,7 +49643,7 @@ a.footer-contact-main:hover {
 
 
 
-  color: #706458;
+  color: #52525B;
 
 
 
@@ -53496,8 +53496,8 @@ body.home-page .hero-content {
   min-width: 48px !important;
   margin-left: 0 !important;
   border-radius: 50% !important;
-  background: #E8BA87 !important; /* Authentic warm artisan sand from Image 2 */
-  color: #0A0A0C !important;
+  background: #0A0A0C !important; /* Authentic warm artisan sand from Image 2 */
+  color: #FFFFFF !important;
   border: none !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -53507,7 +53507,7 @@ body.home-page .hero-content {
 }
 
 #heroExploreArrow:hover {
-  background: #D89858 !important;
+  background: #27272A !important;
   transform: scale(1.08) rotate(5deg) !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
 }
@@ -54015,7 +54015,7 @@ body.home-page .hero-content {
 }
 
 .hardware-product-title a:hover {
-  color: #FF5A18 !important;
+  color: #0A0A0C !important;
 }
 
 .hardware-product-features {
@@ -54071,9 +54071,9 @@ body.home-page .hero-content {
 }
 
 .hardware-add-btn:hover {
-  background: #FF5A18 !important;
+  background: #0A0A0C !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 4px 12px rgba(255, 90, 24, 0.35) !important;
+  box-shadow: 0 4px 12px rgba(10, 10, 12, 0.35) !important;
 }
 
 @media (max-width: 1080px) {
@@ -54280,11 +54280,11 @@ body.home-page .hero-content {
 
 .pop-quick-add-btn:hover,
 .hardware-add-btn:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.35) !important;
 }
 
 /* 7. Hardware Section Sizing */
@@ -54678,10 +54678,10 @@ body.home-page .hero-content {
 }
 
 .hardware-banner-btn:hover {
-  background: #FF5A18 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px rgba(255, 90, 24, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(10, 10, 12, 0.4) !important;
 }
 
 /* Desktop Hardware Product Row: Strictly 4 Columns Single Horizontal Line */
@@ -54725,8 +54725,8 @@ body.home-page .hero-content {
 
   .hardware-banner-badge {
     background: rgba(10, 10, 12, 0.92) !important;
-    color: #FF5500 !important;
-    border: 1px solid rgba(255, 85, 0, 0.35) !important;
+    color: #0A0A0C !important;
+    border: 1px solid rgba(10, 10, 12, 0.35) !important;
     font-size: 0.62rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.1em !important;
@@ -54931,11 +54931,11 @@ body.home-page .hero-content {
 }
 
 .pop-quick-add-btn:hover {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.35) !important;
 }
 
 /* 2. Hardware / Essentials Showcase */
@@ -55038,11 +55038,11 @@ body.home-page .hero-content {
 }
 
 .hardware-add-btn:hover {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.35) !important;
 }
 
 /* 3. Mobile Overrides for Popular & Hardware (<= 640px) */
@@ -55466,7 +55466,7 @@ body.home-page .hero-content {
   font-size: 0.78rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.12em !important;
-  color: #FF5500 !important;
+  color: #FF5A18 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
 }
@@ -55503,10 +55503,10 @@ body.home-page .hero-content {
   .instagram-eyebrow-text {
     font-size: 0.70rem !important;
     letter-spacing: 0.08em !important;
-    background: rgba(255, 85, 0, 0.08) !important;
+    background: rgba(10, 10, 12, 0.06) !important;
     padding: 4px 12px !important;
     border-radius: 999px !important;
-    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+    border: 1px solid rgba(10, 10, 12, 0.16) !important;
   }
   .instagram-title {
     font-size: 1.85rem !important;
@@ -55542,8 +55542,8 @@ body.home-page .hero-content {
 }
 
 .faq-kicker-tag {
-  background: rgba(255, 85, 0, 0.15) !important;
-  color: #FF5500 !important;
+  background: rgba(10, 10, 12, 0.06) !important;
+  color: #FF5A18 !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
   font-size: 0.72rem !important;
   font-weight: 800 !important;
@@ -55552,7 +55552,7 @@ body.home-page .hero-content {
   border-radius: 999px !important;
   display: inline-block !important;
   margin-bottom: 12px !important;
-  border: 1px solid rgba(255, 85, 0, 0.25) !important;
+  border: 1px solid rgba(10, 10, 12, 0.16) !important;
 }
 
 .faq-main-title {
@@ -55566,7 +55566,7 @@ body.home-page .hero-content {
 }
 
 .faq-sub-title {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   font-weight: 850 !important;
 }
 
@@ -55617,7 +55617,7 @@ body.home-page .hero-content {
 }
 
 .faq-item.active {
-  border-color: rgba(255, 85, 0, 0.4) !important;
+  border-color: rgba(10, 10, 12, 0.4) !important;
   background: rgba(255, 255, 255, 0.05) !important;
 }
 
@@ -55644,7 +55644,7 @@ body.home-page .hero-content {
 }
 
 .faq-item.active .faq-question-text {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .faq-chevron {
@@ -55655,7 +55655,7 @@ body.home-page .hero-content {
 
 .faq-item.active .faq-chevron {
   transform: rotate(180deg) !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .faq-answer-panel {
@@ -56368,8 +56368,8 @@ html body #siteHeader,
    ========================================================================== */
 .trust-banner-section {
   background: #FAF8F5 !important;
-  border-top: 1px solid rgba(255, 85, 0, 0.14) !important;
-  border-bottom: 1px solid rgba(255, 85, 0, 0.14) !important;
+  border-top: 1px solid rgba(10, 10, 12, 0.14) !important;
+  border-bottom: 1px solid rgba(10, 10, 12, 0.14) !important;
   padding: 24px 0 !important;
 }
 
@@ -56386,17 +56386,17 @@ html body #siteHeader,
   gap: 14px !important;
   padding: 16px 18px !important;
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+  border: 1.5px solid rgba(10, 10, 12, 0.38) !important;
   border-radius: 16px !important;
-  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 18px rgba(10, 10, 12, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   box-sizing: border-box !important;
   height: 100% !important;
 }
 
 .trust-item:hover {
-  border-color: #FF5500 !important;
-  box-shadow: 0 10px 28px rgba(255, 85, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  border-color: #0A0A0C !important;
+  box-shadow: 0 10px 28px rgba(10, 10, 12, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
   transform: translateY(-2.5px) !important;
 }
 
@@ -56405,20 +56405,20 @@ html body #siteHeader,
   height: 44px !important;
   min-width: 44px !important;
   border-radius: 12px !important;
-  background: rgba(255, 85, 0, 0.08) !important;
-  border: 1px solid rgba(255, 85, 0, 0.22) !important;
+  background: rgba(10, 10, 12, 0.08) !important;
+  border: 1px solid rgba(10, 10, 12, 0.22) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   box-shadow: none !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   flex-shrink: 0 !important;
   transition: all 0.25s ease !important;
 }
 
 .trust-item:hover .trust-icon {
-  border-color: #FF5500 !important;
-  background: rgba(255, 85, 0, 0.14) !important;
+  border-color: #0A0A0C !important;
+  background: rgba(10, 10, 12, 0.14) !important;
   transform: scale(1.06) !important;
 }
 .trust-icon svg {
@@ -56471,8 +56471,8 @@ html body #siteHeader,
     padding: 0 10px !important;
     border-radius: 12px !important;
     background: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
-    box-shadow: 0 2px 8px rgba(255, 85, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    border: 1.5px solid rgba(10, 10, 12, 0.38) !important;
+    box-shadow: 0 2px 8px rgba(10, 10, 12, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
     height: 56px !important;
     min-height: 56px !important;
     max-height: 56px !important;
@@ -56486,8 +56486,8 @@ html body #siteHeader,
     min-width: 32px !important;
     max-width: 32px !important;
     border-radius: 8px !important;
-    background: rgba(255, 85, 0, 0.08) !important;
-    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+    background: rgba(10, 10, 12, 0.08) !important;
+    border: 1px solid rgba(10, 10, 12, 0.22) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -56554,9 +56554,9 @@ html body #siteHeader,
     gap: 8px !important;
     padding: 0 10px !important;
     background: #FFFFFF !important;
-    border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+    border: 1.5px solid rgba(10, 10, 12, 0.38) !important;
     border-radius: 12px !important;
-    box-shadow: 0 2px 8px rgba(255, 85, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 2px 8px rgba(10, 10, 12, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
     height: 56px !important;
     min-height: 56px !important;
     max-height: 56px !important;
@@ -56565,8 +56565,8 @@ html body #siteHeader,
   }
 
   .covertok-trust-item:hover {
-    border-color: #FF5500 !important;
-    box-shadow: 0 6px 16px rgba(255, 85, 0, 0.16) !important;
+    border-color: #0A0A0C !important;
+    box-shadow: 0 6px 16px rgba(10, 10, 12, 0.16) !important;
   }
 
   .covertok-trust-icon {
@@ -56575,8 +56575,8 @@ html body #siteHeader,
     min-width: 32px !important;
     max-width: 32px !important;
     border-radius: 8px !important;
-    background: rgba(255, 85, 0, 0.08) !important;
-    border: 1px solid rgba(255, 85, 0, 0.22) !important;
+    background: rgba(10, 10, 12, 0.08) !important;
+    border: 1px solid rgba(10, 10, 12, 0.22) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -56839,9 +56839,9 @@ html body #siteHeader,
   margin: 14px auto !important;
   max-width: 260px !important;
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+  border: 1.5px solid rgba(10, 10, 12, 0.38) !important;
   border-radius: 999px !important;
-  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 18px rgba(10, 10, 12, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
   color: #18181B !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 13px !important;
@@ -56860,8 +56860,8 @@ html body #siteHeader,
 .catalog-infinite-spinner {
   width: 16px !important;
   height: 16px !important;
-  border: 2px solid rgba(255, 85, 0, 0.2) !important;
-  border-top-color: #FF5500 !important;
+  border: 2px solid rgba(10, 10, 12, 0.2) !important;
+  border-top-color: #0A0A0C !important;
   border-radius: 50% !important;
   animation: catalogSpinner 0.65s linear infinite !important;
   flex-shrink: 0 !important;
@@ -56976,7 +56976,7 @@ html body #siteHeader,
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.775rem !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   margin-top: 2px !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -57037,7 +57037,7 @@ html body #siteHeader,
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 11px !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #FF5A18 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
@@ -57049,9 +57049,9 @@ html body #siteHeader,
   height: 7px !important;
   min-width: 7px !important;
   border-radius: 50% !important;
-  background: #FF5500 !important;
+  background: #FF5A18 !important;
   display: inline-block !important;
-  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25) !important;
+  box-shadow: 0 0 0 2px rgba(255, 90, 24, 0.25) !important;
   flex-shrink: 0 !important;
 }
 
@@ -57066,7 +57066,7 @@ html body #siteHeader,
   background: rgba(255, 255, 255, 0.85) !important;
   padding: 2px 7px !important;
   border-radius: 999px !important;
-  border: 1px solid rgba(255, 85, 0, 0.18) !important;
+  border: 1px solid rgba(10, 10, 12, 0.18) !important;
   box-sizing: border-box !important;
 }
 
@@ -57260,9 +57260,9 @@ html body #siteHeader,
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 9.5px !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
-  background: rgba(255, 85, 0, 0.08) !important;
-  border: 1px solid rgba(255, 85, 0, 0.2) !important;
+  color: #0A0A0C !important;
+  background: rgba(10, 10, 12, 0.08) !important;
+  border: 1px solid rgba(10, 10, 12, 0.2) !important;
   padding: 2px 8px !important;
   border-radius: 999px !important;
   letter-spacing: 0.04em !important;
@@ -57292,8 +57292,8 @@ html body #siteHeader,
 }
 
 .cart-empty-rec-card:hover {
-  border-color: rgba(255, 85, 0, 0.45) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.08) !important;
+  border-color: rgba(10, 10, 12, 0.45) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.08) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -57363,7 +57363,7 @@ html body #siteHeader,
 }
 
 .cart-empty-rec-title:hover {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .cart-empty-rec-pricing {
@@ -57377,7 +57377,7 @@ html body #siteHeader,
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 12px !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .cart-empty-rec-mrp {
@@ -57406,7 +57406,7 @@ html body #siteHeader,
 }
 
 .cart-empty-rec-add-btn:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: scale(1.02) !important;
 }
@@ -57472,7 +57472,7 @@ body.mobile-nav-open {
 }
 
 .mobile-nav-body::-webkit-scrollbar-thumb:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 }
 
 /* ==========================================================================
@@ -57535,7 +57535,7 @@ body.mobile-nav-open {
   font-size: 0.64rem !important;
   font-weight: 750 !important;
   letter-spacing: 0.04em !important;
-  color: #6D6359 !important;
+  color: #52525B !important;
   background: rgba(0, 0, 0, 0.06) !important;
   padding: 2px 8px !important;
   border-radius: 999px !important;
@@ -57633,7 +57633,7 @@ body.mobile-nav-open {
 .mobile-cat-link:hover,
 .mobile-cat-link:active {
   background: #FFFBF9 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   padding-left: 20px !important;
 }
 
@@ -57645,7 +57645,7 @@ body.mobile-nav-open {
 }
 
 .mobile-cat-link:hover .mobile-cat-arrow {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   transform: translateX(3px) !important;
 }
 

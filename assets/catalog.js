@@ -573,7 +573,7 @@
 
     container.style.display = 'flex';
     container.innerHTML = `
-      <span style="font-size: 0.775rem; font-weight: 800; color: #735238; text-transform: uppercase;">Active Filters:</span>
+      <span style="font-size: 0.775rem; font-weight: 800; color: #27272A; text-transform: uppercase;">Active Filters:</span>
       ${chips.map((c, idx) => `
         <span class="catalog-chip" data-idx="${idx}">
           <span>${c.label}</span>
