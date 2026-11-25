@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/instagram/modal/view_01_lifestyle.webp',
         'assets/instagram/modal/view_02_camera.webp',
         'assets/instagram/modal/view_03_flatlay.webp',
-        'assets/instagram/modal/view_04_studio.webp'
+        'assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-and-pro-max-models-transparent-shockproof-cover/showcase/02_angle.webp'
       ]
     },
     {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       instaUrl: 'https://www.instagram.com/covertokofficial/',
       images: [
         'assets/instagram/card_02_leather_wallets.webp',
-        'assets/bestseller/prod_02_wallet_kickstand.webp',
+        'assets/bestseller/bestseller_left_stage_clean.webp',
         'assets/instagram/modal/view_02_camera.webp',
         'assets/instagram/card_02_leather_wallets.webp'
       ]

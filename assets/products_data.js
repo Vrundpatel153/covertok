@@ -31,7 +31,6 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/05_extra.webp",
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/06_extra.webp",
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/07_extra.webp",
-      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/08_extra.webp",
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/09_extra.webp"
     ],
     "has_colors": true,
@@ -21468,12 +21467,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/18_extra.webp",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/19_extra.webp",
       "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/20_extra.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/21_extra.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/22_extra.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/23_extra.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/24_extra.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/25_extra.webp",
-      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/26_extra.webp"
+      "assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/extra/21_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -25589,8 +25583,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/01_extra.webp",
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/02_extra.webp",
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/03_extra.webp",
-      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/04_extra.webp",
-      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/05_extra.webp"
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/04_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -26083,15 +26076,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/matte-privacy/01_packshot.webp",
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/01_extra.webp",
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/02_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/03_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/04_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/05_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/06_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/07_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/08_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/09_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/10_extra.webp",
-      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/11_extra.webp"
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/03_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -33092,7 +33077,6 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/05_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/06_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/07_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/08_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-2/extra/09_extra.webp"
     ],
     "has_colors": true,
@@ -33349,12 +33333,10 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/08_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/09_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/10_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/11_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/12_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/13_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/14_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/15_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/16_extra.webp"
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-1/extra/15_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -33612,8 +33594,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/10_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/11_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/12_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/13_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/14_extra.webp"
+      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy-copy/extra/13_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -33863,7 +33844,6 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/03_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/04_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/05_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/06_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/07_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/08_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition-copy/extra/09_extra.webp",
@@ -34116,9 +34096,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/cloud-grey-blue/01_packshot.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/black-grey/01_packshot.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/starlight-pink/01_packshot.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/09_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/10_extra.webp",
-      "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/11_extra.webp",
       "assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/extra/12_extra.webp"
     ],
     "has_colors": true,
@@ -67337,9 +67315,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/01_extra.webp",
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/02_extra.webp",
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/03_extra.webp",
-      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/04_extra.webp",
-      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/05_extra.webp",
-      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/06_extra.webp"
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/04_extra.webp"
     ],
     "has_colors": true,
     "colors": [
@@ -69075,13 +69051,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/bumper-case/showcase/03_quality.webp",
       "assets/products/bumper-case/showcase/04_feature.webp",
       "assets/products/bumper-case/showcase/05_marketing.webp",
-      "assets/products/bumper-case/black/02_packshot_bare.webp",
-      "assets/products/bumper-case/dark-blue/02_packshot_bare.webp",
-      "assets/products/bumper-case/natural-titanium/02_packshot_bare.webp",
-      "assets/products/bumper-case/desert-titanium/02_packshot_bare.webp",
-      "assets/products/bumper-case/dark-red/02_packshot_bare.webp",
-      "assets/products/bumper-case/sierra-blue/02_packshot_bare.webp",
-      "assets/products/bumper-case/cosmic-orange/02_packshot_bare.webp"
+      "assets/products/bumper-case/dark-blue/02_packshot_bare.webp"
     ],
     "has_colors": true,
     "colors": [
