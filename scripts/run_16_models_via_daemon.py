@@ -14,7 +14,7 @@ QUEUE_FILE = os.path.join('scripts', 'remaining_16_models.json')
 PROGRESS_FILE = os.path.join('scripts', 'remaining_16_progress.json')
 
 
-def post_action(payload, timeout=30):
+def post_action(payload, timeout=65):
     req = urllib.request.Request(
         DAEMON_URL,
         data=json.dumps(payload).encode('utf-8'),
@@ -41,9 +41,19 @@ def save_progress(prog):
 
 
 def start_fresh_chat():
-    post_action({'action': 'goto', 'url': 'https://chatgpt.com/'})
-    # Wait up to 20s for clean #prompt-textarea and file input with 0 attachments
-    for _ in range(20):
+    # Try instant SPA "New chat" click if already on chatgpt.com, otherwise full goto
+    spa = eval_js('''() => {
+        if (!location.href.includes('chatgpt.com')) return false;
+        const btn = document.querySelector('[data-testid="create-new-chat-button"], a[href="/"]');
+        if (btn) { btn.click(); return true; }
+        return false;
+    }''')
+    if not (spa.get('ok') and spa.get('result')):
+        post_action({'action': 'goto', 'url': 'https://chatgpt.com/'})
+    else:
+        time.sleep(1.5)
+    # Wait up to 25s for clean #prompt-textarea and file input with 0 attachments
+    for _ in range(25):
         time.sleep(1)
         res = eval_js('''() => {
             const box = document.querySelector('#prompt-textarea') || document.querySelector('div[contenteditable="true"]');
@@ -52,8 +62,12 @@ def start_fresh_chat():
             return { ready: !!(box && fin && formImgs.length === 0), url: location.href };
         }''')
         if res.get('ok') and res.get('result', {}).get('ready'):
+            time.sleep(1.5)
             return True
-    return False
+    # Fallback full navigation if SPA new chat didn't reset cleanly
+    post_action({'action': 'goto', 'url': 'https://chatgpt.com/'})
+    time.sleep(2.5)
+    return True
 
 
 def upload_and_wait(ref_jpg):
