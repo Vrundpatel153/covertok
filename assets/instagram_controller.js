@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'assets/instagram/modal/view_01_lifestyle.webp',
         'assets/instagram/modal/view_02_camera.webp',
         'assets/instagram/modal/view_03_flatlay.webp',
-        'assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-and-pro-max-models-transparent-shockproof-cover/showcase/02_angle.webp'
+        'assets/products/magsafe-clear-case-for-iphone-13-to-16-series-supports-all-plus-pro-amp-pro-max-models-transparent-shockproof-cover/showcase/02_angle.webp'
       ]
     },
     {

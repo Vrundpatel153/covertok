@@ -63,6 +63,7 @@
         if (cardToClone) {
           const clone = cardToClone.cloneNode(true);
           clone.setAttribute('data-infinite-clone', 'true');
+          clone.querySelectorAll('img').forEach(img => { img.loading = 'eager'; });
           frag.appendChild(clone);
         }
       }

@@ -102,7 +102,7 @@
           <div class="cart-upsell-list" id="cartUpsellList">
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/bundle_lens_protector.webp" alt="Camera Lens Protector" class="cart-upsell-img" loading="lazy">
+                <img src="assets/bundle_lens_protector.webp" alt="Camera Lens Protector" class="cart-upsell-img" loading="eager">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="2× 9H Diamond Camera Lens Protector">2× 9H Diamond Lens Protector</div>
                   <div class="cart-upsell-price">+₹299.00</div>
@@ -114,7 +114,7 @@
             </div>
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/bundle_usbc_cable.webp" alt="USB-C Fast Cable" class="cart-upsell-img" loading="lazy">
+                <img src="assets/bundle_usbc_cable.webp" alt="USB-C Fast Cable" class="cart-upsell-img" loading="eager">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="Braided Fast-Charging USB-C Cable (1m)">Braided Fast USB-C Cable</div>
                   <div class="cart-upsell-price">+₹249.00</div>
@@ -126,7 +126,7 @@
             </div>
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/cat_thumb_airpods.webp" alt="Silicone AirPods Case" class="cart-upsell-img" loading="lazy">
+                <img src="assets/cat_thumb_airpods.webp" alt="Silicone AirPods Case" class="cart-upsell-img" loading="eager">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="Luxury Silicone AirPods Pro Protective Case">Silicone AirPods Case</div>
                   <div class="cart-upsell-price">+₹349.00</div>
@@ -138,7 +138,7 @@
             </div>
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/cat_thumb_charms.webp" alt="Phone Charm Wristlet" class="cart-upsell-img" loading="lazy">
+                <img src="assets/cat_thumb_charms.webp" alt="Phone Charm Wristlet" class="cart-upsell-img" loading="eager">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="Handmade Beaded Phone Charm Wristlet">Beaded Charm Wristlet</div>
                   <div class="cart-upsell-price">+₹199.00</div>

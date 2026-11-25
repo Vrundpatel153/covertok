@@ -669,7 +669,7 @@
         </button>
 
         <a href="product.html?id=${encodeURIComponent(product.id)}&handle=${encodeURIComponent(product.handle || product.id)}" class="card-img-wrap card-img-link" aria-label="${product.title}">
-          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy">
+          <img src="${initialImg}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="eager">
         </a>
 
         ${swatchesHtml}

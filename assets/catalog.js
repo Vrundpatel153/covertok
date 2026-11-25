@@ -668,7 +668,7 @@
     // Cache buster to ensure clients and CDNs immediately receive freshly updated packshots
     const bustUrl = (u) => {
       if (!u) return '';
-      const v = '20261124_v29_clean_marketing_and_models';
+      const v = '20261125_v36_clean_cards';
       return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
     };
 
@@ -697,7 +697,7 @@
       <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'">
         ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
         <div class="card-img-wrap">
-          <img src="${bustUrl(initialImg)}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+          <img src="${bustUrl(initialImg)}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="eager" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
         </div>
       </div>
 

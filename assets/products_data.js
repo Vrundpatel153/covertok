@@ -37784,7 +37784,6 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/title-butterfly-charm-airpods-case--copy/sunshine-yellow/02_lifestyle.png",
       "assets/products/title-butterfly-charm-airpods-case--copy/aqua-teal/01_packshot.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/candy-pink/01_packshot.webp",
-      "assets/products/title-butterfly-charm-airpods-case--copy/extra/01_extra.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/extra/02_extra.webp",
       "assets/products/title-butterfly-charm-airpods-case--copy/extra/03_extra.webp"
     ],

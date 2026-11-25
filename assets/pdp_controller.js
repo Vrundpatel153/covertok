@@ -588,7 +588,7 @@
     // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="eager" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
       </button>
     `).join('');
 
@@ -1549,7 +1549,7 @@
       return `
         <div class="pdp-showcase-item" data-src="${src}" tabindex="0" role="button" aria-label="Perspective 0${perspectiveNum}">
           <div class="pdp-showcase-img-wrap">
-            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="eager" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
           </div>
         </div>
       `;
@@ -1820,7 +1820,7 @@
           <div class="card-media-stage" onclick="window.location.href='product.html?handle=${p.handle}'" style="cursor: pointer;">
             <div class="card-badges-row">${badgeHtml}</div>
             <div class="card-img-wrap">
-              <img src="${initialImg}" alt="${p.title}" class="card-main-img" id="relatedImg_${p.id}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+              <img src="${initialImg}" alt="${p.title}" class="card-main-img" id="relatedImg_${p.id}" loading="eager" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>
           </div>
           <div class="card-body-wrap">

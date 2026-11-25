@@ -235,7 +235,7 @@
           return `
             <div class="cart-upsell-item ${inCart ? 'is-in-cart' : ''}">
               <div class="cart-upsell-left">
-                <img src="${addon.img}" alt="${addon.title}" class="cart-upsell-img" loading="lazy">
+                <img src="${addon.img}" alt="${addon.title}" class="cart-upsell-img" loading="eager">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="${addon.title}">${addon.shortTitle}</div>
                   <div class="cart-upsell-price">+₹${addon.price}.00</div>
@@ -493,7 +493,7 @@
               ${EMPTY_CART_RECOMMENDATIONS.map(item => `
                 <div class="cart-empty-rec-card">
                   <div class="cart-empty-rec-img-wrap" onclick="window.CovertokFlows.closeCart(); window.location.href='${item.url}';">
-                    <img src="${item.img}" alt="${item.title}" class="cart-empty-rec-img" loading="lazy">
+                    <img src="${item.img}" alt="${item.title}" class="cart-empty-rec-img" loading="eager">
                     <span class="cart-empty-deal-badge">${item.badge}</span>
                   </div>
                   <div class="cart-empty-rec-details">
