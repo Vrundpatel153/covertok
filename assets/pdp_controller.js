@@ -441,7 +441,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261124_v29_clean_marketing_and_models';
+    const v = '20261125_v37_clean_pdp';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -454,8 +454,8 @@
 
     if (mainImg) {
       mainImg.onerror = function() {
-        if (this.src.endsWith('.webp')) {
-          this.src = this.src.replace(/\.webp$/, '.png');
+        if (this.src.split('?')[0].endsWith('.webp')) {
+          this.src = this.src.replace(/\.webp(\?|$)/, '.png$1');
         } else if (currentProduct && currentProduct.primary_image && this.src !== currentProduct.primary_image) {
           this.src = bustUrl(currentProduct.primary_image);
         }
@@ -475,7 +475,7 @@
 
     if (stickyThumb) {
       stickyThumb.onerror = function() {
-        if (this.src.endsWith('.webp')) this.src = this.src.replace(/\.webp$/, '.png');
+        if (this.src.split('?')[0].endsWith('.webp')) this.src = this.src.replace(/\.webp(\?|$)/, '.png$1');
       };
       stickyThumb.src = finalSrc;
       stickyThumb.style.opacity = '1';
@@ -588,7 +588,7 @@
     // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="eager" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="eager" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
       </button>
     `).join('');
 
