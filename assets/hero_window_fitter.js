@@ -1,9 +1,10 @@
 /**
  * Covertok Signature Architectural Hero Window Precision Fitter
- * Mathematically aligns the Bezier cutout silhouette across all desktop viewports (>= 992px):
- * - Flush top plateau (y = 0.0000) directly meeting the announcement bar (zero white strip gap)
+ * Mathematically aligns the Bezier cutout silhouette across all desktop/PC viewports (>= 992px up to 4K):
+ * - Leaves crisp top gap padding (~10-12px) beneath the announcement bar so plateau frames cleanly
  * - Top-left shelf rises cleanly 18px after "3-PIECE COMBO" with a smooth 48px organic S-curve
  * - Top-right shelf descends tightly 12px before the 4 equal circular utility icons [Q] [👤] [🛍️] [☰]
+ * - Vertically centers header nav & icons inside the top pockets
  * - Bottom-left shelf centers the CTA pill + arrow buttons vertically (66px height) with tight 14px clearance
  *   and a smooth 52px organic S-curve to the card floor
  */
@@ -18,6 +19,7 @@
 
     const heroCard = document.querySelector('.hero-card');
     const clipPathEl = document.querySelector('#heroCardClip path');
+    const siteHeader = document.querySelector('.site-header');
     const lastNavItem = document.querySelector('.site-header .main-nav .nav-list > .nav-item:last-child');
     const headerRight = document.querySelector('.site-header .header-right');
     const ctaGroup = document.querySelector('.hero-cta-group');
@@ -35,8 +37,8 @@
       const lnRect = lastNavItem.getBoundingClientRect();
       shelfEndPx = (lnRect.right - cRect.left) + 18;
     }
-    const riseSpan = Math.min(0.046, 48 / cardW);
-    const x1 = Math.max(0.22, Math.min(0.55, shelfEndPx / cardW));
+    const riseSpan = Math.min(0.048, 48 / cardW);
+    const x1 = Math.max(0.12, Math.min(0.55, shelfEndPx / cardW));
     const x2 = x1 + riseSpan;
 
     // 2. Top-right shelf: descends tightly 12px before the 4 circular utility icons
@@ -45,24 +47,26 @@
       const hrRect = headerRight.getBoundingClientRect();
       iconsStartPx = (hrRect.left - cRect.left) - 12;
     }
-    const dropSpan = Math.min(0.044, 46 / cardW);
-    const x4 = Math.max(x2 + 0.12, Math.min(0.95, iconsStartPx / cardW));
+    const dropSpan = Math.min(0.046, 46 / cardW);
+    const x4 = Math.max(x2 + 0.08, Math.min(0.97, iconsStartPx / cardW));
     const x3 = x4 - dropSpan;
 
     // 3. Bottom-left shelf: snug 14px clearance after CTA arrow button + smooth 52px S-curve
-    let ctaEndPx = cardW * 0.17;
+    let ctaEndPx = cardW * 0.16;
     if (ctaGroup) {
       const ctaRect = ctaGroup.getBoundingClientRect();
       ctaEndPx = (ctaRect.right - cRect.left) + 14;
     }
-    const botSpan = Math.min(0.050, 52 / cardW);
-    const xb1 = Math.max(0.13, Math.min(0.36, ctaEndPx / cardW));
+    const botSpan = Math.min(0.052, 52 / cardW);
+    const xb1 = Math.max(0.08, Math.min(0.36, ctaEndPx / cardW));
     const xb2 = xb1 + botSpan;
 
-    // Vertical landmarks (in objectBoundingBox units relative to cardH)
+    // Vertical landmarks (aligned precisely to header height minus top padding gap)
     const yTopPeak = 0.0000;
-    const yTopShelf = Math.max(0.070, Math.min(0.105, 50 / cardH));
-    const yBotShelf = Math.max(0.840, Math.min(0.910, (cardH - 66) / cardH));
+    const hdrRect = siteHeader ? siteHeader.getBoundingClientRect() : null;
+    const topShelfBottomPx = hdrRect ? Math.max(38, (hdrRect.bottom - cRect.top) + 2) : 44;
+    const yTopShelf = Math.max(0.055, Math.min(0.115, topShelfBottomPx / cardH));
+    const yBotShelf = Math.max(0.840, Math.min(0.915, (cardH - 66) / cardH));
     const yBotFloor = 1.0000;
 
     // Smooth tangent-continuous corner radii (~18px visual radius)
