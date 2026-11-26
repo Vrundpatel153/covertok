@@ -20464,7 +20464,7 @@ a.footer-contact-main:hover {
 
 
 
-  touch-action: none;
+  touch-action: pan-y !important;
 
 
 
@@ -34255,7 +34255,7 @@ a.footer-contact-main:hover {
     border-radius: 20px !important;
     overflow: hidden !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
-    background: #7CA5C8 !important;
+    background: linear-gradient(180deg, #5A93C8 0%, #9BC4E2 58%, #EBF2F7 100%) !important;
   }
 
   .fl-stage-media-img,

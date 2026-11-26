@@ -236,6 +236,12 @@
 
         cb(tex);
 
+      }, undefined, () => {
+
+        container.classList.remove('fl-webgl-active');
+
+        canvas.style.display = 'none';
+
       });
 
     }
@@ -1221,9 +1227,21 @@
 
 
 
-    // Guaranteed non-stop continuous execution: never pause or halt
+    // Guaranteed non-stop continuous execution & graceful WebGL loss recovery
 
     isVisible = true;
+
+    canvas.addEventListener('webglcontextlost', (e) => {
+      e.preventDefault();
+      container.classList.remove('fl-webgl-active');
+      canvas.style.display = 'none';
+    }, false);
+
+    canvas.addEventListener('webglcontextrestored', () => {
+      canvas.style.display = 'block';
+      container.classList.add('fl-webgl-active');
+      if (renderer && scene && camera) renderer.render(scene, camera);
+    }, false);
 
 
 
