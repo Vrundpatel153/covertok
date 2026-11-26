@@ -441,7 +441,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261125_v37_clean_pdp';
+    const v = '20261124_v29_clean_marketing_and_models';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -588,7 +588,7 @@
     // Render strictly only the images of the selected color
     strip.innerHTML = uniqueImgs.map((src, idx) => `
       <button type="button" class="pdp-vthumb pdp-thumb-btn ${src === activeSrc ? 'active' : ''}" data-img="${src}" aria-label="View product image ${idx + 1}">
-        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="eager" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
+        <img src="${bustUrl(src)}" alt="${product.title} angle ${idx + 1}" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
       </button>
     `).join('');
 
@@ -1549,7 +1549,7 @@
       return `
         <div class="pdp-showcase-item" data-src="${src}" tabindex="0" role="button" aria-label="Perspective 0${perspectiveNum}">
           <div class="pdp-showcase-img-wrap">
-            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="eager" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="lazy" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
           </div>
         </div>
       `;
@@ -1820,7 +1820,7 @@
           <div class="card-media-stage" onclick="window.location.href='product.html?handle=${p.handle}'" style="cursor: pointer;">
             <div class="card-badges-row">${badgeHtml}</div>
             <div class="card-img-wrap">
-              <img src="${initialImg}" alt="${p.title}" class="card-main-img" id="relatedImg_${p.id}" loading="eager" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+              <img src="${initialImg}" alt="${p.title}" class="card-main-img" id="relatedImg_${p.id}" loading="lazy" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
             </div>
           </div>
           <div class="card-body-wrap">
@@ -1928,12 +1928,12 @@
         actionAddBtn.style.display = 'block';
 
         if (inSlotKey) {
-          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF5A18" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
+          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
           actionAddBtn.style.background = '#0A0A0A';
           actionAddBtn.style.color = '#FFFFFF';
           actionAddBtn.style.borderColor = '#0A0A0C';
         } else {
-          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#FF5A18" stroke="none" style="vertical-align:-1px; margin-right:4px;"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
+          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#0A0A0C" stroke="none" style="vertical-align:-1px; margin-right:4px;"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
           actionAddBtn.style.background = '#FFFFFF';
           actionAddBtn.style.color = '#0A0A0A';
           actionAddBtn.style.borderColor = '#0A0A0C';

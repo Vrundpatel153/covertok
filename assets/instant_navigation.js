@@ -92,12 +92,12 @@
       left: 0;
       height: 3px;
       width: 0%;
-      background: linear-gradient(90deg, #0A0A0C 0%, #27272A 85%, #FF5A18 100%);
+      background: linear-gradient(90deg, #0A0A0C 0%, #71717A 50%, #0A0A0C 100%);
       z-index: 99999999;
       pointer-events: none;
       transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
       opacity: 0;
-      box-shadow: 0 1px 6px rgba(10, 10, 12, 0.25);
+      box-shadow: 0 1px 6px rgba(255, 85, 0, 0.4);
     `;
     document.body.appendChild(topLoader);
     return topLoader;

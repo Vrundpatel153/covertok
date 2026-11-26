@@ -39,7 +39,7 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(10, 10, 12, 0.07) 0%, rgba(10, 10, 12, 0) 70%) 70%);
+  background: radial-gradient(circle, rgba(10, 10, 12, 0.08) 0%, rgba(10, 10, 12, 0.00) 70%);
   pointer-events: none;
 }
 
@@ -88,7 +88,7 @@
   align-items: center;
   gap: 6px;
   background: rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(10, 10, 12, 0.4);
+  border: 1px solid rgba(10, 10, 12, 0.12);
   color: #0A0A0A;
   padding: 4px 12px;
   border-radius: 999px;
@@ -104,8 +104,8 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #FF5A18;
-  box-shadow: 0 0 0 2px rgba(255, 90, 24, 0.3);
+  background: #0A0A0C;
+  box-shadow: 0 0 0 2px rgba(10, 10, 12, 0.12);
 }
 
 .page-hero-title {
@@ -303,7 +303,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(10, 10, 12, 0.07) 0%, rgba(10, 10, 12, 0) 70%);
+  background: radial-gradient(circle, rgba(10, 10, 12, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -556,7 +556,7 @@
 .channel-icon-wrap.email-gold {
   background: #0A0A0A;
   color: #FFFFFF;
-  border: 1.5px solid rgba(10, 10, 12, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.12);
 }
 
 .channel-title {
@@ -683,7 +683,7 @@
 .form-textarea:focus {
   outline: none;
   border-color: #0A0A0C;
-  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.18);
+  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.12);
 }
 
 .form-textarea {
@@ -944,7 +944,7 @@
 .search-input-wrap:focus-within {
   background: #FFFFFF;
   border-color: #0A0A0C;
-  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.16), 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .search-input-icon {
@@ -980,7 +980,7 @@
 }
 
 .search-page-input::placeholder {
-  color: #71717A;
+  color: #9E948A;
   font-weight: 400;
 }
 
@@ -999,7 +999,7 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  color: #3F3F46;
+  color: #5C5249;
   font-size: 14px;
   cursor: pointer;
   display: none;
@@ -1035,7 +1035,7 @@
   border-radius: 999px;
   border: 1.5px solid #E2DCD4;
   background: #FFFFFF;
-  color: #3F3F46;
+  color: #5C5249;
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 0.84rem;
   font-weight: 600;
