@@ -124,7 +124,7 @@
 
         antialias: true,
 
-        powerPreference: 'high-performance',
+        powerPreference: 'default',
 
         preserveDrawingBuffer: false
 
@@ -238,9 +238,39 @@
 
       }, undefined, () => {
 
+        const pngUrl = url.replace(/\.webp(\?|$)/i, '.png$1');
+
+        if (pngUrl !== url) {
+
+          texLoader.load(pngUrl, (tex) => {
+
+            tex.generateMipmaps = true;
+
+            tex.minFilter = THREE.LinearMipmapLinearFilter;
+
+            tex.magFilter = THREE.LinearFilter;
+
+            tex.needsUpdate = true;
+
+            texCache[url] = tex;
+
+            cb(tex);
+
+          }, undefined, () => {
+
+            container.classList.remove('fl-webgl-active');
+
+            canvas.style.opacity = '0';
+
+          });
+
+          return;
+
+        }
+
         container.classList.remove('fl-webgl-active');
 
-        canvas.style.display = 'none';
+        canvas.style.opacity = '0';
 
       });
 
@@ -388,7 +418,7 @@
 
     const isFileProtocol = typeof window !== 'undefined' && window.location.protocol === 'file:';
 
-    const vTag = isFileProtocol ? '' : ('?v=' + Date.now());
+    const vTag = isFileProtocol ? '' : '?v=20261127_3d';
 
     const modelsData = [
 
@@ -1234,12 +1264,25 @@
     canvas.addEventListener('webglcontextlost', (e) => {
       e.preventDefault();
       container.classList.remove('fl-webgl-active');
-      canvas.style.display = 'none';
+      canvas.style.opacity = '0';
     }, false);
 
     canvas.addEventListener('webglcontextrestored', () => {
-      canvas.style.display = 'block';
-      container.classList.add('fl-webgl-active');
+      shadowTex.needsUpdate = true;
+      Object.values(texCache).forEach((t) => {
+        if (t) t.needsUpdate = true;
+      });
+      modelObjects.forEach((m) => {
+        const pm = m.getPhoneMat();
+        const cm = m.getCoverMat();
+        if (pm) pm.needsUpdate = true;
+        if (cm) cm.needsUpdate = true;
+        if (m.shadowMat) m.shadowMat.needsUpdate = true;
+      });
+      canvas.style.opacity = '1';
+      if (loadedAssetsCount >= totalAssetsToLoad) {
+        container.classList.add('fl-webgl-active');
+      }
       if (renderer && scene && camera) renderer.render(scene, camera);
     }, false);
 
