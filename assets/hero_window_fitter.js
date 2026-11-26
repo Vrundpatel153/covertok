@@ -1,11 +1,11 @@
 /**
  * Covertok Signature Architectural Hero Window Precision Fitter
- * Mathematically aligns the Bezier cutout silhouette across all screen viewports:
- * - Top shelf rises right after the last navigation item ("3-PIECE COMBO") with 20px clearance
- * - Top plateau rises to y = 0.0000 (flush against announcement bar, eliminating any white void)
- * - Top-right shelf descends right before utility buttons [Q] [👤] [🛍️] [☰] with 20px clearance
- * - Bottom-left shelf envelopes BOTH the CTA pill button AND the circular arrow button with 32px clearance
- * - Continuous organic Bezier transitions with zero coordinate collisions or icon clipping
+ * Mathematically aligns the Bezier cutout silhouette across all desktop viewports (>= 992px):
+ * - Flush top plateau (y = 0.0000) directly meeting the announcement bar (zero white strip gap)
+ * - Top-left shelf rises cleanly 18px after "3-PIECE COMBO" with a smooth 48px organic S-curve
+ * - Top-right shelf descends tightly 12px before the 4 equal circular utility icons [Q] [👤] [🛍️] [☰]
+ * - Bottom-left shelf centers the CTA pill + arrow buttons vertically (66px height) with tight 14px clearance
+ *   and a smooth 52px organic S-curve to the card floor
  */
 (function() {
   'use strict';
@@ -29,55 +29,63 @@
     const cardH = cRect.height;
     if (cardW <= 0 || cardH <= 0) return;
 
-    // 1. Top-left shelf: rises right after '3-PIECE COMBO' with 20px clearance
+    // 1. Top-left shelf: rises cleanly 18px after '3-PIECE COMBO'
     let shelfEndPx = cardW * 0.33;
     if (lastNavItem) {
       const lnRect = lastNavItem.getBoundingClientRect();
-      shelfEndPx = (lnRect.right - cRect.left) + 20;
+      shelfEndPx = (lnRect.right - cRect.left) + 18;
     }
-    const x1 = Math.max(0.24, Math.min(0.55, shelfEndPx / cardW));
-    const x2 = x1 + 0.042;
+    const riseSpan = Math.min(0.046, 48 / cardW);
+    const x1 = Math.max(0.22, Math.min(0.55, shelfEndPx / cardW));
+    const x2 = x1 + riseSpan;
 
-    // 2. Top-right shelf: drops right before utility action buttons with 20px clearance
-    let iconsStartPx = cardW * 0.84;
+    // 2. Top-right shelf: descends tightly 12px before the 4 circular utility icons
+    let iconsStartPx = cardW * 0.87;
     if (headerRight) {
       const hrRect = headerRight.getBoundingClientRect();
-      iconsStartPx = (hrRect.left - cRect.left) - 20;
+      iconsStartPx = (hrRect.left - cRect.left) - 12;
     }
-    const x4 = Math.max(x2 + 0.10, Math.min(0.95, iconsStartPx / cardW));
-    const x3 = x4 - 0.038;
+    const dropSpan = Math.min(0.044, 46 / cardW);
+    const x4 = Math.max(x2 + 0.12, Math.min(0.95, iconsStartPx / cardW));
+    const x3 = x4 - dropSpan;
 
-    // 3. Bottom-left shelf: envelopes both CTA pill button and circular arrow button with 32px clearance
-    let ctaEndPx = cardW * 0.22;
+    // 3. Bottom-left shelf: snug 14px clearance after CTA arrow button + smooth 52px S-curve
+    let ctaEndPx = cardW * 0.17;
     if (ctaGroup) {
       const ctaRect = ctaGroup.getBoundingClientRect();
-      ctaEndPx = (ctaRect.right - cRect.left) + 32;
+      ctaEndPx = (ctaRect.right - cRect.left) + 14;
     }
-    const xb1 = Math.max(0.16, Math.min(0.38, ctaEndPx / cardW));
-    const xb2 = xb1 + 0.045;
+    const botSpan = Math.min(0.050, 52 / cardW);
+    const xb1 = Math.max(0.13, Math.min(0.36, ctaEndPx / cardW));
+    const xb2 = xb1 + botSpan;
 
-    // Vertical coordinates matching the original design
-    const yTopShelf = 0.0880;
+    // Vertical landmarks (in objectBoundingBox units relative to cardH)
     const yTopPeak = 0.0000;
-    const yBotShelf = 0.8814;
+    const yTopShelf = Math.max(0.070, Math.min(0.105, 50 / cardH));
+    const yBotShelf = Math.max(0.840, Math.min(0.910, (cardH - 66) / cardH));
     const yBotFloor = 1.0000;
 
+    // Smooth tangent-continuous corner radii (~18px visual radius)
+    const rx = Math.min(0.020, 18 / cardW);
+    const ryTop = Math.min(0.032, 18 / cardH);
+    const ryBot = Math.min(0.032, 18 / cardH);
+
     const d = [
-      'M 0.0000 0.8446',
-      'L 0.0000 0.1100',
-      'C 0.0000 0.0960, 0.0075 ' + yTopShelf.toFixed(4) + ', 0.0167 ' + yTopShelf.toFixed(4),
+      'M 0.0000 ' + (yBotShelf - ryBot).toFixed(4),
+      'L 0.0000 ' + (yTopShelf + ryTop).toFixed(4),
+      'C 0.0000 ' + (yTopShelf + ryTop * 0.45).toFixed(4) + ', ' + (rx * 0.45).toFixed(4) + ' ' + yTopShelf.toFixed(4) + ', ' + rx.toFixed(4) + ' ' + yTopShelf.toFixed(4),
       'L ' + x1.toFixed(4) + ' ' + yTopShelf.toFixed(4),
-      'C ' + (x1 + 0.016).toFixed(4) + ' ' + yTopShelf.toFixed(4) + ', ' + (x2 - 0.016).toFixed(4) + ' ' + yTopPeak.toFixed(4) + ', ' + x2.toFixed(4) + ' ' + yTopPeak.toFixed(4),
+      'C ' + (x1 + riseSpan * 0.45).toFixed(4) + ' ' + yTopShelf.toFixed(4) + ', ' + (x2 - riseSpan * 0.45).toFixed(4) + ' ' + yTopPeak.toFixed(4) + ', ' + x2.toFixed(4) + ' ' + yTopPeak.toFixed(4),
       'L ' + x3.toFixed(4) + ' ' + yTopPeak.toFixed(4),
-      'C ' + (x3 + 0.016).toFixed(4) + ' ' + yTopPeak.toFixed(4) + ', ' + (x4 - 0.016).toFixed(4) + ' ' + yTopShelf.toFixed(4) + ', ' + x4.toFixed(4) + ' ' + yTopShelf.toFixed(4),
-      'L 0.9830 ' + yTopShelf.toFixed(4),
-      'C 0.9920 ' + yTopShelf.toFixed(4) + ', 1.0000 0.0980, 1.0000 0.1100',
-      'L 1.0000 0.9676',
-      'C 1.0000 0.9854, 0.9920 ' + yBotFloor.toFixed(4) + ', 0.9822 ' + yBotFloor.toFixed(4),
+      'C ' + (x3 + dropSpan * 0.45).toFixed(4) + ' ' + yTopPeak.toFixed(4) + ', ' + (x4 - dropSpan * 0.45).toFixed(4) + ' ' + yTopShelf.toFixed(4) + ', ' + x4.toFixed(4) + ' ' + yTopShelf.toFixed(4),
+      'L ' + (1.0 - rx).toFixed(4) + ' ' + yTopShelf.toFixed(4),
+      'C ' + (1.0 - rx * 0.45).toFixed(4) + ' ' + yTopShelf.toFixed(4) + ', 1.0000 ' + (yTopShelf + ryTop * 0.45).toFixed(4) + ', 1.0000 ' + (yTopShelf + ryTop).toFixed(4),
+      'L 1.0000 ' + (yBotFloor - ryBot).toFixed(4),
+      'C 1.0000 ' + (yBotFloor - ryBot * 0.45).toFixed(4) + ', ' + (1.0 - rx * 0.45).toFixed(4) + ' ' + yBotFloor.toFixed(4) + ', ' + (1.0 - rx).toFixed(4) + ' ' + yBotFloor.toFixed(4),
       'L ' + xb2.toFixed(4) + ' ' + yBotFloor.toFixed(4),
-      'C ' + (xb2 - 0.016).toFixed(4) + ' ' + yBotFloor.toFixed(4) + ', ' + (xb1 + 0.016).toFixed(4) + ' ' + yBotShelf.toFixed(4) + ', ' + xb1.toFixed(4) + ' ' + yBotShelf.toFixed(4),
-      'L 0.0178 ' + yBotShelf.toFixed(4),
-      'C 0.0080 ' + yBotShelf.toFixed(4) + ', 0.0000 0.8633, 0.0000 0.8446 Z'
+      'C ' + (xb2 - botSpan * 0.45).toFixed(4) + ' ' + yBotFloor.toFixed(4) + ', ' + (xb1 + botSpan * 0.45).toFixed(4) + ' ' + yBotShelf.toFixed(4) + ', ' + xb1.toFixed(4) + ' ' + yBotShelf.toFixed(4),
+      'L ' + rx.toFixed(4) + ' ' + yBotShelf.toFixed(4),
+      'C ' + (rx * 0.45).toFixed(4) + ' ' + yBotShelf.toFixed(4) + ', 0.0000 ' + (yBotShelf - ryBot * 0.45).toFixed(4) + ', 0.0000 ' + (yBotShelf - ryBot).toFixed(4) + ' Z'
     ].join(' ');
 
     clipPathEl.setAttribute('d', d);

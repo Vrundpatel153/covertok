@@ -56354,11 +56354,12 @@ html body #siteHeader,
     pointer-events: auto !important;
   }
 
-  /* Pure Clean Utility Icons for Header Right (Directly on transparent header, exactly matching reference) */
-  body.home-page .site-header .header-right {
+  /* 4 Uniform Discrete Circular Action Buttons for Header Right Utility Icons */
+  body.home-page .site-header .header-right,
+  html body.home-page #siteHeader .header-right {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 14px !important;
+    gap: 8px !important;
     background: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -56366,49 +56367,76 @@ html body #siteHeader,
     border-radius: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
-    margin-right: clamp(4px, 0.8vw, 12px) !important;
+    margin-right: clamp(4px, 0.6vw, 10px) !important;
     pointer-events: auto !important;
     z-index: 100 !important;
   }
 
-  body.home-page .site-header .header-right .header-action-btn,
-  body.home-page .site-header .header-right .icon-btn,
-  body.home-page .site-header .header-right .mobile-toggle-btn {
-    width: 28px !important;
-    height: 28px !important;
-    min-width: 28px !important;
-    min-height: 28px !important;
-    border-radius: 0 !important;
-    display: flex !important;
+  html body.home-page .site-header .header-right .header-action-btn,
+  html body.home-page .site-header .header-right .icon-btn,
+  html body.home-page .site-header .header-right .mobile-toggle-btn,
+  html body.home-page #siteHeader .header-right #searchBtn,
+  html body.home-page #siteHeader .header-right #userBtn,
+  html body.home-page #siteHeader .header-right #cartBtn,
+  html body.home-page #siteHeader .header-right #mobileMenuBtn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     color: #0A0A0C !important;
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
     padding: 0 !important;
-    transition: opacity 0.2s ease, transform 0.2s ease !important;
+    margin: 0 !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
     pointer-events: auto !important;
+    flex-shrink: 0 !important;
   }
 
-  body.home-page .site-header .header-right .header-action-btn:hover,
-  body.home-page .site-header .header-right .icon-btn:hover,
-  body.home-page .site-header .header-right .mobile-toggle-btn:hover {
-    background: transparent !important;
-    border-color: transparent !important;
-    opacity: 0.65 !important;
+  html body.home-page .site-header .header-right .header-action-btn:hover,
+  html body.home-page .site-header .header-right .icon-btn:hover,
+  html body.home-page .site-header .header-right .mobile-toggle-btn:hover,
+  html body.home-page #siteHeader .header-right #searchBtn:hover,
+  html body.home-page #siteHeader .header-right #userBtn:hover,
+  html body.home-page #siteHeader .header-right #cartBtn:hover,
+  html body.home-page #siteHeader .header-right #mobileMenuBtn:hover {
+    background: #0A0A0C !important;
+    background-color: #0A0A0C !important;
+    border-color: #0A0A0C !important;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
     transform: translateY(-1px) !important;
-    box-shadow: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14) !important;
   }
 
-  body.home-page .site-header .header-right .header-action-btn svg,
-  body.home-page .site-header .header-right .icon-btn svg,
-  body.home-page .site-header .header-right .mobile-toggle-btn svg {
+  html body.home-page .site-header .header-right .header-action-btn svg,
+  html body.home-page .site-header .header-right .icon-btn svg,
+  html body.home-page .site-header .header-right .mobile-toggle-btn svg,
+  html body.home-page #siteHeader .header-right #searchBtn svg,
+  html body.home-page #siteHeader .header-right #userBtn svg,
+  html body.home-page #siteHeader .header-right #cartBtn svg,
+  html body.home-page #siteHeader .header-right #mobileMenuBtn svg {
     stroke: #0A0A0C !important;
-    width: 20px !important;
-    height: 20px !important;
+    color: #0A0A0C !important;
+    width: 17px !important;
+    height: 17px !important;
     display: block !important;
+    transition: stroke 0.2s ease !important;
+  }
+
+  html body.home-page .site-header .header-right .icon-btn:hover svg,
+  html body.home-page .site-header .header-right .mobile-toggle-btn:hover svg,
+  html body.home-page #siteHeader .header-right #mobileMenuBtn:hover svg {
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
   }
 
   body.home-page .site-header .main-nav .nav-list {
@@ -56441,22 +56469,29 @@ html body #siteHeader,
     -webkit-clip-path: url(#heroCardClip) !important;
   }
 
-  /* Compact & snug action buttons avoiding cutout collision */
+  body.home-page .hero-bottom-bar {
+    height: 66px !important;
+    padding: 0 18px 12px !important;
+  }
+
+  /* Identical-height & cleanly centered CTA buttons inside snug bottom-left cutout */
   body.home-page #heroDynamicCta {
-    padding: 0 16px !important;
+    height: 42px !important;
+    padding: 0 18px !important;
     font-size: 0.74rem !important;
     gap: 6px !important;
     white-space: nowrap !important;
   }
 
   body.home-page #heroExploreArrow {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
   }
 
   body.home-page .hero-cta-group {
-    gap: 6px !important;
+    gap: 8px !important;
   }
 
   /* Provide comfortable breathing room & headroom for hero phone packshots */
