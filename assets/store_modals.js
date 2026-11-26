@@ -102,7 +102,7 @@
           <div class="cart-upsell-list" id="cartUpsellList">
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/bundle_lens_protector.webp" alt="Camera Lens Protector" class="cart-upsell-img" loading="eager">
+                <img src="assets/bundle_lens_protector.webp" alt="Camera Lens Protector" class="cart-upsell-img" loading="lazy">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="2× 9H Diamond Camera Lens Protector">2× 9H Diamond Lens Protector</div>
                   <div class="cart-upsell-price">+₹299.00</div>
@@ -114,7 +114,7 @@
             </div>
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/bundle_usbc_cable.webp" alt="USB-C Fast Cable" class="cart-upsell-img" loading="eager">
+                <img src="assets/bundle_usbc_cable.webp" alt="USB-C Fast Cable" class="cart-upsell-img" loading="lazy">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="Braided Fast-Charging USB-C Cable (1m)">Braided Fast USB-C Cable</div>
                   <div class="cart-upsell-price">+₹249.00</div>
@@ -126,7 +126,7 @@
             </div>
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/cat_thumb_airpods.webp" alt="Silicone AirPods Case" class="cart-upsell-img" loading="eager">
+                <img src="assets/cat_thumb_airpods.webp" alt="Silicone AirPods Case" class="cart-upsell-img" loading="lazy">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="Luxury Silicone AirPods Pro Protective Case">Silicone AirPods Case</div>
                   <div class="cart-upsell-price">+₹349.00</div>
@@ -138,7 +138,7 @@
             </div>
             <div class="cart-upsell-item">
               <div class="cart-upsell-left">
-                <img src="assets/cat_thumb_charms.webp" alt="Phone Charm Wristlet" class="cart-upsell-img" loading="eager">
+                <img src="assets/cat_thumb_charms.webp" alt="Phone Charm Wristlet" class="cart-upsell-img" loading="lazy">
                 <div class="cart-upsell-info">
                   <div class="cart-upsell-name" title="Handmade Beaded Phone Charm Wristlet">Beaded Charm Wristlet</div>
                   <div class="cart-upsell-price">+₹199.00</div>
@@ -163,9 +163,9 @@
           <span>Subtotal</span>
           <span id="cartDrawerSubtotal" class="cart-summary-val">Rs. 0.00</span>
         </div>
-        <div class="cart-summary-row" id="cartBundleDiscountRow" style="display: none; color: #FF5A18;">
+        <div class="cart-summary-row" id="cartBundleDiscountRow" style="display: none; color: #0A0A0C;">
           <span style="font-weight: 600;">3 for ₹1,199 Bundle Savings</span>
-          <span id="cartDrawerBundleDiscount" class="cart-summary-val" style="color: #FF5A18; font-weight: 700;">-Rs. 0.00</span>
+          <span id="cartDrawerBundleDiscount" class="cart-summary-val" style="color: #0A0A0C; font-weight: 700;">-Rs. 0.00</span>
         </div>
         <div class="cart-summary-row">
           <span>Shipping (Express Air)</span>
@@ -272,7 +272,7 @@
           <h4 style="font-family: var(--font-heading, 'Manrope', sans-serif); font-weight: 700; font-size: 0.95rem; margin-bottom: 14px;">Select Delivery Speed</h4>
           <div class="checkout-option-card selected" onclick="window.selectShippingOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(10, 10, 12, 0.12);">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 2L11 13"></path>
                   <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
@@ -288,7 +288,7 @@
 
           <div class="checkout-option-card" onclick="window.selectShippingOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(10, 10, 12, 0.12);">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A0A0C" stroke="#0A0A0C" stroke-width="1">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
@@ -308,7 +308,7 @@
           
           <div class="checkout-option-card selected" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(10, 10, 12, 0.12);">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                   <line x1="12" y1="18" x2="12.01" y2="18"></line>
@@ -324,7 +324,7 @@
 
           <div class="checkout-option-card" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(10, 10, 12, 0.12);">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
                   <line x1="1" y1="10" x2="23" y2="10"></line>
@@ -339,7 +339,7 @@
 
           <div class="checkout-option-card" onclick="window.selectPaymentOption(this)">
             <div class="checkout-option-left">
-              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(10, 10, 12, 0.12);">
+              <div style="display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgba(255, 85, 0, 0.12);">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2" y="6" width="20" height="12" rx="2"></rect>
                   <circle cx="12" cy="12" r="2"></circle>
@@ -504,7 +504,7 @@
 
         <!-- VIP Perks Tab Content -->
         <div class="profile-tab-content" data-tab="perks" style="display: none;">
-          <div class="profile-order-card" style="border-left: 4px solid #18181B;">
+          <div class="profile-order-card" style="border-left: 4px solid #0A0A0C;">
             <div style="font-weight: 800; font-size: 0.875rem; color: #171513; margin-bottom: 4px;">Exclusive VIP Member 15% Pass</div>
             <p style="font-size: 0.8rem; color: #64748B; margin: 0 0 10px;">Use your personal code at checkout for 15% off any case in store.</p>
             <button type="button" class="btn btn-pill-dark" onclick="window.applyPromoCode('COVERTOK15'); window.CovertokFlows.closeAccount(); window.CovertokFlows.openCart();" style="padding: 6px 14px; font-size: 0.775rem; border-radius: 999px;">

@@ -1,359 +1,257 @@
 /**
- * Covertok Infinite Left-to-Right & Right-to-Left Swiping Engine
- * Powers all multi-item rows on landing pages:
+ * Covertok Ultra-Smooth Hardware-Accelerated Swipe Engine
+ * High-performance, zero-lag, 60fps/120fps touch & mouse drag engine
+ * across all product and review slider rows on the platform:
  *
- * 1. Infinite Looping Product Card Rows (Never Ends in Either Direction):
- *    - Curated Releases Spotlight Track (#trendingDropsTrack)
- *    - Popular Choices Covers Track (.popular-row-covers .popular-slider-track)
- *    - Popular Choices Watch Bands Track (.popular-row-bands .popular-slider-track)
- *    - Community Video Reels Track (#videosTrack)
- *
- * 2. Continuous Marquee Rows:
- *    - Customer Reviews Track (#reviewsTrack)
+ * 1. Curated Releases Spotlight Track (#trendingDropsTrack / .trending-drops-slider-wrap)
+ * 2. Popular Choices Covers Track (.popular-row-covers .popular-slider-track)
+ * 3. Popular Choices Watch Bands Track (.popular-row-bands .popular-slider-track)
+ * 4. Community Video Reels Track (#videosTrack / .videos-slider-wrapper)
+ * 5. Customer Reviews Track (#reviewsTrack / .reviews-slider-wrap)
  *
  * Provides:
- * - True mathematical infinite wrapping loop (left & right never hit an end)
- * - Single-click instant responsiveness (every click advances exactly 1 card step immediately)
- * - Buttery smooth GPU-accelerated transition (cubic-bezier 0.2, 0.9, 0.2, 1)
- * - Buttery smooth touch swiping on mobile & tablet with horizontal lock & momentum snap
- * - Mouse drag-to-swipe with momentum snap & ghost-drag prevention
- * - Trackpad horizontal wheel support
- * - Delegated click & cart actions on all cloned product cards & color swatches
+ * - 120Hz Native Compositor Touch Scrolling on Mobile/Tablet (zero JS latency!)
+ * - Frictionless Desktop Mouse Drag-to-Scroll with Natural Momentum & Velocity Gliding
+ * - CSS Scroll-Snap start alignment (structured, clean, zero coordinate jitter)
+ * - Intelligent Drag Discrimination (> 6px suppresses card links, direct clicks fire instantly)
+ * - Precision Prev / Next Navigation Buttons with Smooth Boundary Wrap
+ * - Native Trackpad & Shift+Wheel support
+ * - Delegated Quick Add & Color Swatch Actions across all cards
  */
 
 (function () {
   'use strict';
 
   /**
-   * TRUE INFINITE LOOP SWIPING ENGINE FOR PRODUCT CARD ROWS
-   * Fixed-cycle virtual buffer architecture:
-   * 4 identical cycles [Cycle 0, Cycle 1, Cycle 2, Cycle 3].
-   * The viewport operates primarily in Cycle 1.
-   * When moving into Cycle 2 (past 2*N), it silently wraps back to Cycle 1 without transition.
-   * When moving into Cycle 0 (below N), it silently wraps forward to Cycle 1 without transition.
-   * Because cycles are 100% identical clones, the wrap is mathematically invisible.
+   * Unified Smooth Swipe Row Controller
    */
-  function setupInfiniteLoopSwipeRow(track, options = {}) {
-    if (!track) return null;
+  function makeSmoothSwipeRow(container, options = {}) {
+    if (!container) return null;
 
-    // Remove any previous infinite clones if re-initialized
-    const existingClones = track.querySelectorAll('[data-infinite-clone="true"]');
-    existingClones.forEach(el => el.remove());
+    const track = options.track || container;
+    const cardSelector = options.cardSelector || ':scope > *';
+    const prevBtn = options.prevBtn || null;
+    const nextBtn = options.nextBtn || null;
 
-    const originalCards = Array.from(track.children);
-    const originalCount = originalCards.length;
-    if (originalCount === 0) return null;
+    // 1. Remove legacy infinite clones so DOM is clean, fast, and 60fps
+    const legacyClones = track.querySelectorAll('[data-infinite-clone="true"]');
+    legacyClones.forEach(el => el.remove());
 
-    // Detect unique item count
-    let uniqueCount = options.uniqueCount || originalCount;
-    if (originalCount === 16 && (track.classList.contains('popular-slider-track') || track.closest('.popular-slider-wrap'))) {
-      uniqueCount = 8;
-    }
+    // 2. Hardware-accelerated CSS setup on container
+    container.style.overflowX = 'auto';
+    container.style.overflowY = 'hidden';
+    container.style.scrollBehavior = 'smooth';
+    container.style.webkitOverflowScrolling = 'touch';
+    container.style.scrollSnapType = 'x mandatory';
+    container.style.overscrollBehaviorX = 'contain';
+    container.style.touchAction = 'pan-x pan-y';
+    container.style.scrollbarWidth = 'none';
+    container.style.cursor = 'grab';
 
-    // Always guarantee at least 5 full identical cycles (e.g. 40 cards for unique 8, 30 for unique 6)
-    // Viewport operates primarily in Cycle 2, with 2 full cycles buffer on the left and 2 on the right!
-    let neededCycles = 5;
-    let currentCycles = Math.max(1, Math.round(originalCount / uniqueCount));
-    let clonesToAdd = Math.max(1, neededCycles - currentCycles);
+    // Reset any transform on track
+    track.style.transform = 'none';
+    track.style.willChange = 'auto';
+    track.style.animation = 'none';
 
-    for (let m = 0; m < clonesToAdd; m++) {
-      const frag = document.createDocumentFragment();
-      for (let i = 0; i < uniqueCount; i++) {
-        const cardToClone = originalCards[i % originalCards.length];
-        if (cardToClone) {
-          const clone = cardToClone.cloneNode(true);
-          clone.setAttribute('data-infinite-clone', 'true');
-          clone.querySelectorAll('img').forEach(img => { img.loading = 'eager'; });
-          frag.appendChild(clone);
-        }
-      }
-      track.appendChild(frag);
-    }
+    // Ensure all child cards snap cleanly to start
+    const cards = track.querySelectorAll(cardSelector);
+    cards.forEach(card => {
+      card.style.scrollSnapAlign = 'start';
+      card.style.scrollSnapStop = 'normal';
+      card.style.flexShrink = '0';
+    });
 
-    // Ensure all videos in track play continuously
+    // Ensure all inline videos play continuously
     const inlineVideos = track.querySelectorAll('video');
-    if (inlineVideos.length > 0) {
-      inlineVideos.forEach((v) => {
-        v.muted = true;
-        v.setAttribute('muted', '');
-        v.setAttribute('playsinline', '');
-        v.setAttribute('webkit-playsinline', '');
-        const p = v.play();
-        if (p !== undefined) p.catch(() => {});
+    inlineVideos.forEach((v) => {
+      v.muted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+      v.setAttribute('loop', '');
+      const p = v.play();
+      if (p !== undefined) p.catch(() => { });
+    });
+
+    // 3. Dynamic Card Step Calculation
+    function getCardStep() {
+      const visibleCards = track.querySelectorAll(cardSelector);
+      if (visibleCards.length > 1 && visibleCards[0] && visibleCards[1]) {
+        const step = visibleCards[1].offsetLeft - visibleCards[0].offsetLeft;
+        if (step > 40) return step;
+      }
+      if (visibleCards[0] && visibleCards[0].offsetWidth > 40) {
+        const style = window.getComputedStyle(track);
+        const gap = parseFloat(style.gap) || 20;
+        return visibleCards[0].offsetWidth + gap;
+      }
+      return 290;
+    }
+
+    // 4. Smooth Prev / Next Navigation with Circular Wrap
+    function scrollNext() {
+      const step = getCardStep();
+      const maxScroll = Math.max(0, container.scrollWidth - container.clientWidth);
+      if (container.scrollLeft >= maxScroll - 24) {
+        container.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }
+
+    function scrollPrev() {
+      const step = getCardStep();
+      const maxScroll = Math.max(0, container.scrollWidth - container.clientWidth);
+      if (container.scrollLeft <= 24) {
+        container.scrollTo({ left: maxScroll, behavior: 'smooth' });
+      } else {
+        container.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    }
+
+    function wireNavBtn(btn, stepFn) {
+      if (!btn) return;
+      btn.setAttribute('tabindex', '0');
+      btn.setAttribute('role', 'button');
+      btn.style.pointerEvents = 'auto';
+      btn.style.cursor = 'pointer';
+
+      const trigger = (e) => {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        btn.classList.add('btn-clicked');
+        setTimeout(() => btn.classList.remove('btn-clicked'), 140);
+        stepFn();
+      };
+
+      btn.addEventListener('click', trigger);
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          trigger(e);
+        }
       });
     }
 
-    // Styling & Touch Action
-    track.addEventListener('dragstart', (e) => e.preventDefault());
-    track.style.touchAction = 'pan-y';
-    track.style.cursor = 'grab';
-    track.style.userSelect = 'none';
-    track.style.webkitUserSelect = 'none';
-    track.style.willChange = 'transform';
-    track.style.animation = 'none';
+    if (nextBtn) wireNavBtn(nextBtn, scrollNext);
+    if (prevBtn) wireNavBtn(prevBtn, scrollPrev);
 
-    function getCardStep() {
-      const children = track.children;
-      if (children.length > 1 && children[0] && children[1]) {
-        const step = children[1].offsetLeft - children[0].offsetLeft;
-        if (step > 40) return step;
-      }
-      if (children[0] && children[0].offsetWidth > 40) {
-        const style = window.getComputedStyle(track);
-        const gap = parseFloat(style.gap) || 18;
-        return children[0].offsetWidth + gap;
-      }
-      return 288;
-    }
-
-    const initialOffsetIndex = options.initialOffsetIndex || 0;
-    // Start strictly inside Cycle 2 (2 * uniqueCount) so there are 2 full buffer cycles to the left
-    let currentIndex = 2 * uniqueCount + initialOffsetIndex;
-    let isAnimating = false;
-    let settleTimer = null;
-
-    function applyPosition(index, animate = false, durationMs = 280) {
-      const step = getCardStep();
-      const targetPx = -index * step;
-
-      if (animate) {
-        isAnimating = true;
-        track.style.transition = `transform ${durationMs}ms cubic-bezier(0.16, 1, 0.3, 1)`;
-        track.style.transform = `translate3d(${targetPx}px, 0, 0)`;
-
-        clearTimeout(settleTimer);
-        settleTimer = setTimeout(() => {
-          checkAndNormalize();
-        }, durationMs + 10);
-      } else {
-        track.style.transition = 'none';
-        track.style.transform = `translate3d(${targetPx}px, 0, 0)`;
-        isAnimating = false;
-      }
-    }
-
-    // Seamless mathematical wrap without visual glitch
-    function checkAndNormalize() {
-      isAnimating = false;
-      let wrapped = false;
-
-      // If past Cycle 3, wrap back into Cycle 2
-      while (currentIndex >= 3 * uniqueCount) {
-        currentIndex -= uniqueCount;
-        wrapped = true;
-      }
-      // If below Cycle 2, wrap forward into Cycle 2
-      while (currentIndex < 2 * uniqueCount) {
-        currentIndex += uniqueCount;
-        wrapped = true;
-      }
-
-      if (wrapped) {
-        applyPosition(currentIndex, false);
-      }
-    }
-
-    // Track transition end
-    track.addEventListener('transitionend', (e) => {
-      if (e.target === track && e.propertyName === 'transform') {
-        checkAndNormalize();
-      }
-    });
-
-    // Step navigation: Instant responsiveness with live boundary guarantee
-    function stepNext() {
-      // If user tapped rapidly past Cycle 3, instantly rebase to Cycle 2 first
-      if (currentIndex >= 3 * uniqueCount) {
-        currentIndex -= uniqueCount;
-        applyPosition(currentIndex, false);
-        void track.offsetWidth;
-      }
-      currentIndex++;
-      applyPosition(currentIndex, true, 260);
-    }
-
-    function stepPrev() {
-      // If user tapped rapidly below Cycle 2, instantly rebase to Cycle 3 first
-      if (currentIndex <= 2 * uniqueCount) {
-        currentIndex += uniqueCount;
-        applyPosition(currentIndex, false);
-        void track.offsetWidth;
-      }
-      currentIndex--;
-      applyPosition(currentIndex, true, 260);
-    }
-
-    // Touch & Mouse Drag Handlers with Live Wrapping
-    let isDragging = false;
+    // 5. Desktop Pointer Drag & Native Touch Integration
+    let isMouseDown = false;
     let hasDragged = false;
     let startX = 0;
-    let startY = 0;
-    let dragBasePx = 0;
-    let lastDragX = 0;
-    let lastDragTime = 0;
+    let startScrollLeft = 0;
+    let lastX = 0;
+    let lastTime = 0;
     let velocity = 0;
-    let lockedHorizontal = false;
+    let rafId = null;
 
-    function onStart(clientX, clientY) {
-      clearTimeout(settleTimer);
-      checkAndNormalize();
-      track.style.transition = 'none';
-      isDragging = true;
+    // Mobile / Tablet Touch (Let 120Hz native compositor handle scrolling; only track for click suppression)
+    container.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        startX = e.touches[0].clientX;
+        hasDragged = false;
+      }
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 1) {
+        const diff = Math.abs(e.touches[0].clientX - startX);
+        if (diff > 8) {
+          hasDragged = true;
+        }
+      }
+    }, { passive: true });
+
+    container.addEventListener('touchend', () => {
+      if (hasDragged) {
+        setTimeout(() => { hasDragged = false; }, 80);
+      }
+    }, { passive: true });
+
+    // Desktop Mouse Drag Handlers
+    function getEventX(e) {
+      return (e.pageX !== undefined && e.pageX !== 0) ? e.pageX : e.clientX;
+    }
+
+    container.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return; // Primary left click only
+      if (e.target.closest('button, input, select, textarea, .pop-quick-add-btn, .drop-quick-add-btn, .color-dot, .swatch-dot')) {
+        return;
+      }
+
+      isMouseDown = true;
       hasDragged = false;
-      lockedHorizontal = false;
-      startX = clientX;
-      startY = clientY;
-
-      const step = getCardStep();
-      dragBasePx = -currentIndex * step;
-      lastDragX = clientX;
-      lastDragTime = performance.now();
+      startX = getEventX(e);
+      startScrollLeft = container.scrollLeft;
+      lastX = startX;
+      lastTime = performance.now();
       velocity = 0;
 
+      // Disable snap and smooth scroll during active mouse drag for instant 1:1 response
+      container.style.scrollBehavior = 'auto';
+      container.style.scrollSnapType = 'none';
+      container.classList.add('is-dragging');
       track.classList.add('is-dragging');
-      track.style.cursor = 'grabbing';
-    }
-
-    function onMove(clientX, clientY, e) {
-      if (!isDragging) return;
-
-      const deltaX = clientX - startX;
-      const deltaY = clientY - startY;
-
-      if (!lockedHorizontal) {
-        const absX = Math.abs(deltaX);
-        const absY = Math.abs(deltaY);
-
-        if (absY >= absX && absY > 6) {
-          isDragging = false;
-          track.classList.remove('is-dragging');
-          track.style.cursor = 'grab';
-          return;
-        }
-
-        if (absX > absY && absX > 8) {
-          lockedHorizontal = true;
-          hasDragged = true;
-        } else {
-          return;
-        }
-      }
-
-      if (lockedHorizontal) {
-        if (e && e.cancelable) e.preventDefault();
-
-        const now = performance.now();
-        const dt = Math.max(1, now - lastDragTime);
-        const dx = clientX - lastDragX;
-        const instantV = dx / dt;
-        velocity = 0.75 * instantV + 0.25 * velocity;
-        lastDragX = clientX;
-        lastDragTime = now;
-
-        const step = getCardStep();
-        const cyclePx = uniqueCount * step;
-        let currentPx = dragBasePx + deltaX;
-
-        // Continuous live wrap during drag so user can never drag off into empty space
-        const minSafePx = -(3 * uniqueCount) * step;
-        const maxSafePx = -(1 * uniqueCount) * step;
-
-        while (currentPx < minSafePx) {
-          currentPx += cyclePx;
-          dragBasePx += cyclePx;
-        }
-        while (currentPx > maxSafePx) {
-          currentPx -= cyclePx;
-          dragBasePx -= cyclePx;
-        }
-
-        track.style.transform = `translate3d(${currentPx}px, 0, 0)`;
-      }
-    }
-
-    function onEnd() {
-      if (!isDragging) return;
-      isDragging = false;
-      track.classList.remove('is-dragging');
-      track.style.cursor = 'grab';
-
-      const step = getCardStep();
-      if (hasDragged) {
-        if (performance.now() - lastDragTime > 90) {
-          velocity = 0;
-        }
-        // Momentum projection
-        const momentum = Math.max(-500, Math.min(500, velocity * 150));
-        const transformMatch = track.style.transform.match(/translate3d\(([-\d.]+)px/);
-        const currentPx = transformMatch ? parseFloat(transformMatch[1]) : -currentIndex * step;
-        const targetPx = currentPx + momentum;
-        let snappedIndex = Math.round(-targetPx / step);
-
-        // Snap safely inside Cycle 2
-        while (snappedIndex >= 3 * uniqueCount) snappedIndex -= uniqueCount;
-        while (snappedIndex < 2 * uniqueCount) snappedIndex += uniqueCount;
-
-        currentIndex = snappedIndex;
-        applyPosition(currentIndex, true, 280);
-      } else {
-        applyPosition(currentIndex, false);
-      }
-    }
-
-    track.addEventListener('mousedown', (e) => {
-      if (e.button !== 0) return;
-      onStart(e.clientX, e.clientY);
     });
 
     window.addEventListener('mousemove', (e) => {
-      if (isDragging) onMove(e.clientX, e.clientY, e);
+      if (!isMouseDown) return;
+
+      const currentX = getEventX(e);
+      const deltaX = currentX - startX;
+      if (Math.abs(deltaX) > 6) {
+        hasDragged = true;
+      }
+
+      const now = performance.now();
+      const dt = Math.max(1, now - lastTime);
+      const dx = currentX - lastX;
+      velocity = 0.75 * (dx / dt) + 0.25 * velocity;
+      lastX = currentX;
+      lastTime = now;
+
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        container.scrollLeft = startScrollLeft - deltaX;
+      });
     });
 
-    window.addEventListener('mouseup', () => {
-      if (isDragging) onEnd();
-    });
+    const handleMouseUp = () => {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      container.classList.remove('is-dragging');
+      track.classList.remove('is-dragging');
 
-    track.addEventListener('touchstart', (e) => {
-      if (e.touches.length === 1) {
-        onStart(e.touches[0].clientX, e.touches[0].clientY);
-      }
-    }, { passive: true });
-
-    track.addEventListener('touchmove', (e) => {
-      if (isDragging && e.touches.length === 1) {
-        onMove(e.touches[0].clientX, e.touches[0].clientY, e);
-      }
-    }, { passive: false });
-
-    track.addEventListener('touchend', () => {
-      if (isDragging) onEnd();
-    }, { passive: true });
-
-    track.addEventListener('touchcancel', () => {
-      if (isDragging) onEnd();
-    }, { passive: true });
-
-    // Trackpad horizontal wheel support
-    const wrap = track.parentElement;
-    if (wrap) {
-      let wheelTimer = null;
-      wrap.addEventListener('wheel', (e) => {
-        const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
-        const delta = isHorizontal ? e.deltaX : (e.shiftKey ? e.deltaY : 0);
-        if (Math.abs(delta) > 1) {
-          e.preventDefault();
-          clearTimeout(wheelTimer);
-          if (delta > 25) {
-            stepNext();
-          } else if (delta < -25) {
-            stepPrev();
-          }
+      if (hasDragged) {
+        const now = performance.now();
+        const isRecentFlick = (now - lastTime) < 140;
+        if (isRecentFlick && Math.abs(velocity) > 0.15) {
+          // Momentum inertia glide
+          const momentumPx = Math.max(-650, Math.min(650, velocity * 220));
+          const targetScroll = container.scrollLeft - momentumPx;
+          container.style.scrollBehavior = 'smooth';
+          container.style.scrollSnapType = 'x mandatory';
+          container.scrollTo({
+            left: targetScroll,
+            behavior: 'smooth'
+          });
+        } else {
+          container.style.scrollBehavior = 'smooth';
+          container.style.scrollSnapType = 'x mandatory';
         }
-      }, { passive: false });
-    }
+        setTimeout(() => { hasDragged = false; }, 80);
+      } else {
+        container.style.scrollBehavior = 'smooth';
+        container.style.scrollSnapType = 'x mandatory';
+      }
+    };
 
-    // Suppress card link clicks if dragged
-    track.addEventListener('click', (e) => {
+    window.addEventListener('mouseup', handleMouseUp);
+
+    // 6. Suppress accidental link clicks on drag release
+    container.addEventListener('click', (e) => {
       if (hasDragged) {
         e.preventDefault();
         e.stopPropagation();
@@ -361,224 +259,30 @@
       }
     }, true);
 
-    // Resize handler
-    let resizeTimer = null;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        applyPosition(currentIndex, false);
-      }, 100);
-    });
+    // 7. Trackpad & Shift+Wheel support
+    container.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+        // Native horizontal trackpad scrolling
+        return;
+      }
+      if (e.shiftKey && Math.abs(e.deltaY) > 0) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
 
-    // Initialize initial position in Cycle 1
-    applyPosition(currentIndex, false);
+    // Expose control methods
+    container._stepNext = scrollNext;
+    container._stepPrev = scrollPrev;
+    track._stepNext = scrollNext;
+    track._stepPrev = scrollPrev;
 
-    track._stepPrev = stepPrev;
-    track._stepNext = stepNext;
-
-    return { stepPrev, stepNext };
+    return { scrollNext, scrollPrev };
   }
 
   /**
-   * CONTINUOUS MARQUEE ENGINE FOR CUSTOMER REVIEWS
+   * Delegated Quick Add & Color Swatches across all product cards
    */
-  function setupInfiniteLTRSwipeRow(track, options) {
-    if (!track) return;
-
-    const animName = options.animName || 'popularMarqueeLTR';
-    const duration = options.duration || 36;
-    const cloneMultiplier = options.cloneMultiplier || 0;
-
-    track.addEventListener('dragstart', (e) => e.preventDefault());
-    track.style.touchAction = 'pan-y';
-    track.style.cursor = 'grab';
-
-    if (cloneMultiplier > 0) {
-      const originalCards = Array.from(track.children);
-      for (let m = 0; m < cloneMultiplier; m++) {
-        const frag = document.createDocumentFragment();
-        originalCards.forEach((card) => {
-          const clone = card.cloneNode(true);
-          clone.setAttribute('data-infinite-clone', 'true');
-          frag.appendChild(clone);
-        });
-        track.appendChild(frag);
-      }
-    }
-
-    function getHalfWidth() {
-      return track.scrollWidth / 2;
-    }
-
-    let isPaused = false;
-    let isDragging = false;
-    let hasDragged = false;
-    let startX = 0;
-    let startY = 0;
-    let lastClientX = 0;
-    let startTime = 0;
-    let currentX = 0;
-    let lockedHorizontal = false;
-
-    function getCurrentTranslateX(el) {
-      const style = window.getComputedStyle(el);
-      const transform = style.transform || style.webkitTransform;
-      if (!transform || transform === 'none') return 0;
-      const match = transform.match(/matrix.*\((.+)\)/);
-      if (match && match[1]) {
-        const parts = match[1].split(',').map(s => parseFloat(s.trim()));
-        if (parts.length === 6) return parts[4];
-        if (parts.length === 16) return parts[12];
-      }
-      return 0;
-    }
-
-    function resumeMarquee(x) {
-      const halfWidth = getHalfWidth();
-      if (halfWidth <= 20) return;
-
-      let normX = x;
-      while (normX > 0) normX -= halfWidth;
-      while (normX < -halfWidth) normX += halfWidth;
-
-      const progress = (-normX) / halfWidth;
-      const remainingTime = Math.max(0.5, (1 - progress) * duration);
-
-      track.style.animation = 'none';
-      void track.offsetWidth;
-
-      track.style.transform = `translate3d(${normX}px, 0, 0)`;
-      track.style.animation = `${animName} ${duration}s linear infinite`;
-      track.style.animationDelay = `-${(progress * duration).toFixed(3)}s`;
-      track.style.animationPlayState = isPaused ? 'paused' : 'running';
-    }
-
-    track.addEventListener('mouseenter', () => {
-      isPaused = true;
-      if (!isDragging) {
-        track.style.animationPlayState = 'paused';
-      }
-    });
-
-    track.addEventListener('mouseleave', () => {
-      isPaused = false;
-      if (!isDragging) {
-        track.style.animationPlayState = 'running';
-      }
-    });
-
-    function onPointerStart(clientX, clientY) {
-      isDragging = true;
-      hasDragged = false;
-      lockedHorizontal = false;
-      startX = clientX;
-      startY = clientY;
-      lastClientX = clientX;
-      startTime = Date.now();
-
-      currentX = getCurrentTranslateX(track);
-      track.style.animation = 'none';
-      track.style.transition = 'none';
-      track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-
-      track.classList.add('is-dragging');
-      track.style.cursor = 'grabbing';
-    }
-
-    function onPointerMove(clientX, clientY, e) {
-      if (!isDragging) return;
-
-      const deltaX = clientX - startX;
-      const deltaY = clientY - startY;
-
-      if (!lockedHorizontal) {
-        const absX = Math.abs(deltaX);
-        const absY = Math.abs(deltaY);
-
-        if (absY >= absX && absY > 5) {
-          isDragging = false;
-          track.classList.remove('is-dragging');
-          track.style.cursor = 'grab';
-          resumeMarquee(currentX);
-          return;
-        }
-
-        if (absX > absY && absX > 8) {
-          lockedHorizontal = true;
-          hasDragged = true;
-        } else {
-          return;
-        }
-      }
-
-      if (lockedHorizontal) {
-        if (e && e.cancelable) e.preventDefault();
-
-        const halfWidth = getHalfWidth();
-        let targetX = currentX + (clientX - lastClientX);
-
-        if (halfWidth > 20) {
-          while (targetX > 0) targetX -= halfWidth;
-          while (targetX < -halfWidth) targetX += halfWidth;
-        }
-
-        currentX = targetX;
-        lastClientX = clientX;
-        track.style.transform = `translate3d(${targetX}px, 0, 0)`;
-      }
-    }
-
-    function onPointerEnd() {
-      if (!isDragging) return;
-      isDragging = false;
-      track.classList.remove('is-dragging');
-      track.style.cursor = 'grab';
-      resumeMarquee(currentX);
-    }
-
-    track.addEventListener('mousedown', (e) => {
-      if (e.button !== 0) return;
-      onPointerStart(e.clientX, e.clientY);
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (isDragging) onPointerMove(e.clientX, e.clientY, e);
-    });
-
-    window.addEventListener('mouseup', () => {
-      if (isDragging) onPointerEnd();
-    });
-
-    track.addEventListener('touchstart', (e) => {
-      if (e.touches.length === 1) {
-        onPointerStart(e.touches[0].clientX, e.touches[0].clientY);
-      }
-    }, { passive: true });
-
-    track.addEventListener('touchmove', (e) => {
-      if (isDragging && e.touches.length === 1) {
-        onPointerMove(e.touches[0].clientX, e.touches[0].clientY, e);
-      }
-    }, { passive: false });
-
-    track.addEventListener('touchend', () => {
-      if (isDragging) onPointerEnd();
-    }, { passive: true });
-
-    track.addEventListener('touchcancel', () => {
-      if (isDragging) onPointerEnd();
-    }, { passive: true });
-
-    track.addEventListener('click', (e) => {
-      if (hasDragged) {
-        e.preventDefault();
-        e.stopPropagation();
-        hasDragged = false;
-      }
-    }, true);
-  }
-
-  // Delegated Quick Add & Color Swatches across all cards (including dynamic infinite clones)
   function initGlobalCardDelegation() {
     document.addEventListener('click', (e) => {
       // 1. Popular Choices Quick Add Button
@@ -645,7 +349,7 @@
         return;
       }
 
-      // 3. Interactive Color Swatches on Cloned Cards
+      // 3. Interactive Color Swatches
       const swatch = e.target.closest('.color-dot, .swatch-dot');
       if (swatch) {
         e.preventDefault();
@@ -674,101 +378,84 @@
     }, true);
   }
 
-  function wireNavButton(btn, stepFn) {
-    if (!btn) return;
-    btn.setAttribute('tabindex', '0');
-    btn.setAttribute('role', 'button');
-    btn.style.pointerEvents = 'auto';
-    btn.style.cursor = 'pointer';
-
-    const trigger = (e) => {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      btn.classList.add('btn-clicked');
-      setTimeout(() => btn.classList.remove('btn-clicked'), 140);
-      stepFn();
-    };
-
-    btn.addEventListener('click', trigger);
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        trigger(e);
-      }
-    });
-  }
-
-  function initAllInfiniteRows() {
+  /**
+   * Initialize All Slider Rows across the site
+   */
+  function initAllSliderRows() {
     initGlobalCardDelegation();
 
-    // 1. Trending Drops Product Card Row (#trendingDropsTrack)
+    // 1. Curated Releases / Trending Drops (#trendingDropsTrack inside .trending-drops-slider-wrap)
+    const dropsWrap = document.querySelector('.trending-drops-slider-wrap');
     const dropsTrack = document.getElementById('trendingDropsTrack');
-    if (dropsTrack) {
-      setupInfiniteLoopSwipeRow(dropsTrack, {
-        uniqueCount: 8
+    if (dropsWrap && dropsTrack) {
+      makeSmoothSwipeRow(dropsWrap, {
+        track: dropsTrack,
+        cardSelector: '.drop-3d-card',
+        prevBtn: document.getElementById('dropsPrevBtn'),
+        nextBtn: document.getElementById('dropsNextBtn')
       });
-
-      const prevBtn = document.getElementById('dropsPrevBtn');
-      const nextBtn = document.getElementById('dropsNextBtn');
-      wireNavButton(prevBtn, () => dropsTrack._stepPrev && dropsTrack._stepPrev());
-      wireNavButton(nextBtn, () => dropsTrack._stepNext && dropsTrack._stepNext());
     }
 
     // 2. Popular Choices Row 1: iPhone Covers
     const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track, .popular-row-cases .popular-slider-track');
     if (popTrack1) {
-      setupInfiniteLoopSwipeRow(popTrack1, {
-        uniqueCount: 8
+      makeSmoothSwipeRow(popTrack1, {
+        cardSelector: '.pop-slider-item',
+        prevBtn: document.getElementById('popCoversPrevBtn'),
+        nextBtn: document.getElementById('popCoversNextBtn')
       });
-
-      const prevBtn1 = document.getElementById('popCoversPrevBtn');
-      const nextBtn1 = document.getElementById('popCoversNextBtn');
-      wireNavButton(prevBtn1, () => popTrack1._stepPrev && popTrack1._stepPrev());
-      wireNavButton(nextBtn1, () => popTrack1._stepNext && popTrack1._stepNext());
     }
 
     // 3. Popular Choices Row 2: Watch Bands
     const popTrack2 = document.querySelector('.popular-row-bands .popular-slider-track, .popular-row-watchbands .popular-slider-track');
     if (popTrack2) {
-      setupInfiniteLoopSwipeRow(popTrack2, {
-        uniqueCount: 8,
-        initialOffsetIndex: 2
+      makeSmoothSwipeRow(popTrack2, {
+        cardSelector: '.pop-slider-item',
+        prevBtn: document.getElementById('popBandsPrevBtn'),
+        nextBtn: document.getElementById('popBandsNextBtn')
       });
-
-      const prevBtn2 = document.getElementById('popBandsPrevBtn');
-      const nextBtn2 = document.getElementById('popBandsNextBtn');
-      wireNavButton(prevBtn2, () => popTrack2._stepPrev && popTrack2._stepPrev());
-      wireNavButton(nextBtn2, () => popTrack2._stepNext && popTrack2._stepNext());
     }
 
-    // 4. Community Videos Track (#videosTrack)
+    // 4. Community Videos Track (#videosTrack inside .videos-slider-wrapper)
+    const videosWrap = document.querySelector('.videos-slider-wrapper');
     const videosTrack = document.getElementById('videosTrack');
-    if (videosTrack) {
-      setupInfiniteLoopSwipeRow(videosTrack, {
-        uniqueCount: 6
+    if (videosWrap && videosTrack) {
+      makeSmoothSwipeRow(videosWrap, {
+        track: videosTrack,
+        cardSelector: '.video-card, .video-reel-card',
+        prevBtn: document.getElementById('videoPrevBtn'),
+        nextBtn: document.getElementById('videoNextBtn')
       });
-
-      const videoPrevBtn = document.getElementById('videoPrevBtn');
-      const videoNextBtn = document.getElementById('videoNextBtn');
-      wireNavButton(videoPrevBtn, () => videosTrack._stepPrev && videosTrack._stepPrev());
-      wireNavButton(videoNextBtn, () => videosTrack._stepNext && videosTrack._stepNext());
     }
 
-    // 5. Customer Reviews Track (#reviewsTrack) (Continuous Marquee)
+    // 5. Customer Reviews Track (#reviewsTrack inside .reviews-slider-wrap)
+    const reviewsWrap = document.querySelector('.reviews-slider-wrap');
     const reviewsTrack = document.getElementById('reviewsTrack');
-    if (reviewsTrack) {
-      setupInfiniteLTRSwipeRow(reviewsTrack, {
-        animName: 'reviewsMarqueeLTR',
-        duration: 40,
-        cloneMultiplier: 1
+    if (reviewsWrap && reviewsTrack) {
+      makeSmoothSwipeRow(reviewsWrap, {
+        track: reviewsTrack,
+        cardSelector: '.review-item-card'
+      });
+    }
+
+    // 6. Collections Filter Navbar (#catalogNavBar on collections page)
+    const catalogNav = document.getElementById('catalogNavBar');
+    if (catalogNav) {
+      makeSmoothSwipeRow(catalogNav, {
+        cardSelector: '.catalog-cat-card'
       });
     }
   }
 
+  // Export globally for dynamic re-initialization if needed
+  window.CovertokSwipe = {
+    init: initAllSliderRows,
+    makeSmoothSwipeRow: makeSmoothSwipeRow
+  };
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAllInfiniteRows);
+    document.addEventListener('DOMContentLoaded', initAllSliderRows);
   } else {
-    initAllInfiniteRows();
+    initAllSliderRows();
   }
 })();

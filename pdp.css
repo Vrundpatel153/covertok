@@ -607,7 +607,7 @@ html, body {
 }
 
 .pdp-badge-bestseller {
-  background: linear-gradient(135deg, #0A0A0A 0%, #18181B 100%);
+  background: linear-gradient(135deg, #0A0A0A 0%, #2D2721 100%);
   color: #FFFFFF;
   font-family: var(--pdp-font-head);
   font-size: 0.7rem;
@@ -629,7 +629,7 @@ html, body {
   letter-spacing: 0.05em;
   padding: 5px 12px;
   border-radius: var(--pdp-radius-pill);
-  box-shadow: 0 4px 12px rgba(10, 10, 12, 0.25);
+  box-shadow: 0 4px 12px rgba(10, 10, 12, 0.12);
   align-self: flex-start;
 }
 
@@ -764,7 +764,7 @@ html, body {
 
 .pdp-thumb-btn.active {
   border-color: var(--pdp-gold);
-  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.2), var(--pdp-shadow-md);
+  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.12), var(--pdp-shadow-md);
   transform: translateY(-2px);
 }
 
@@ -879,7 +879,7 @@ html, body {
 .pdp-hero-desc {
   font-size: 0.88rem;
   line-height: 1.55;
-  color: #3F3F46;
+  color: #5A554E;
   margin: 0 0 16px 0;
   max-width: 540px;
 }
@@ -1118,7 +1118,7 @@ html, body {
 }
 
 .btn-pdp-cart:hover {
-  background: #18181B;
+  background: #2D2721;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(23, 21, 19, 0.25);
 }
@@ -1422,7 +1422,7 @@ html, body {
 .pdp-finish-card.active {
   border-color: var(--pdp-gold);
   background: #FFFDF9;
-  box-shadow: 0 0 0 2px rgba(10, 10, 12, 0.2), var(--pdp-shadow-md);
+  box-shadow: 0 0 0 2px rgba(10, 10, 12, 0.12), var(--pdp-shadow-md);
 }
 
 .pdp-finish-title {
@@ -1874,7 +1874,7 @@ html, body {
 
 .desc-highlight-item {
   font-size: 0.85rem;
-  color: #18181B;
+  color: #2D2721;
   line-height: 1.45;
 }
 
@@ -2639,7 +2639,7 @@ html, body {
   border-radius: 14px;
   background: var(--pdp-gold-bg);
   color: #0A0A0A;
-  border: 1px solid rgba(10, 10, 12, 0.2);
+  border: 1px solid rgba(10, 10, 12, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3983,7 +3983,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   gap: 12px;
   padding: 14px 16px;
   background: #FFFFFF;
-  border: 1.5px solid rgba(10, 10, 12, 0.38);
+  border: 1.5px solid rgba(10, 10, 12, 0.12);
   border-radius: 16px;
   box-shadow: 0 4px 18px rgba(10, 10, 12, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
@@ -3993,7 +3993,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 .covertok-trust-item:hover {
   border-color: #0A0A0C;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(10, 10, 12, 0.18), 0 3px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(10, 10, 12, 0.12), 0 3px 8px rgba(0, 0, 0, 0.06);
 }
 
 .covertok-trust-icon {
@@ -4001,7 +4001,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
   height: 36px !important;
   min-width: 36px !important;
   max-width: 36px !important;
-  border: 1px solid rgba(10, 10, 12, 0.22) !important;
+  border: 1px solid rgba(10, 10, 12, 0.12) !important;
   border-radius: 10px !important;
   display: flex !important;
   align-items: center !important;
@@ -4114,24 +4114,24 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
 }
 
 .pdp-urgency-fire svg {
-  stroke: #FF5A18 !important;
+  stroke: #0A0A0C !important;
   flex-shrink: 0 !important;
 }
 
 .pdp-urgency-stock {
-  background: #F4F4F5 !important;
-  border: 1.5px solid #E4E4E7 !important;
-  color: #18181B !important;
-  box-shadow: 0 1px 4px rgba(10, 10, 12, 0.05), inset 0 1px 0 #FFFFFF !important;
+  background: #FFF7ED !important;
+  border: 1.5px solid #FFEDD5 !important;
+  color: #9A3412 !important;
+  box-shadow: 0 1px 4px rgba(234, 88, 12, 0.05), inset 0 1px 0 #FFFFFF !important;
 }
 
 .pdp-urgency-stock strong {
-  color: #0A0A0C !important;
+  color: #7C2D12 !important;
   font-weight: 800 !important;
 }
 
 .pdp-urgency-stock svg {
-  stroke: #18181B !important;
+  stroke: #EA580C !important;
   flex-shrink: 0 !important;
 }
 
@@ -4245,7 +4245,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     gap: 8px !important;
     padding: 0 10px !important;
     border-radius: 12px !important;
-    border: 1.5px solid rgba(10, 10, 12, 0.38) !important;
+    border: 1.5px solid rgba(10, 10, 12, 0.12) !important;
     box-shadow: 0 2px 8px rgba(10, 10, 12, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04) !important;
     background: #FFFFFF !important;
     height: 56px !important;
@@ -4259,7 +4259,7 @@ body.sticky-bar-visible .pdp-floating-whatsapp {
     height: 32px !important;
     min-width: 32px !important;
     max-width: 32px !important;
-    border: 1px solid rgba(10, 10, 12, 0.22) !important;
+    border: 1px solid rgba(10, 10, 12, 0.12) !important;
     border-radius: 8px !important;
     background: rgba(10, 10, 12, 0.08) !important;
     display: flex !important;
@@ -4831,13 +4831,13 @@ html body #siteHeader,
 /* Flame / Sold item */
 .pdp-urgency-fire {
   background: #FFFFFF !important;
-  border: 1px solid rgba(10, 10, 12, 0.16) !important;
-  box-shadow: 0 1px 4px rgba(255, 90, 24, 0.06) !important;
+  border: 1px solid rgba(10, 10, 12, 0.12) !important;
+  box-shadow: 0 1px 4px rgba(10, 10, 12, 0.06) !important;
   color: #18181B !important;
 }
 
 .pdp-urgency-fire svg {
-  stroke: #FF5A18 !important;
+  stroke: #0A0A0C !important;
   width: 14px !important;
   height: 14px !important;
   flex-shrink: 0 !important;
@@ -4855,32 +4855,32 @@ html body #siteHeader,
 
 /* Stock item */
 .pdp-urgency-stock {
-  background: #F4F4F5 !important;
-  border: 1px solid rgba(10, 10, 12, 0.32) !important;
-  box-shadow: 0 1px 4px rgba(10, 10, 12, 0.06) !important;
-  color: #18181B !important;
+  background: #FFF7ED !important;
+  border: 1px solid rgba(234, 88, 12, 0.32) !important;
+  box-shadow: 0 1px 4px rgba(234, 88, 12, 0.06) !important;
+  color: #9A3412 !important;
 }
 
 .pdp-urgency-stock svg {
-  stroke: #18181B !important;
+  stroke: #EA580C !important;
   width: 14px !important;
   height: 14px !important;
   flex-shrink: 0 !important;
 }
 
 .pdp-urgency-stock strong {
-  color: #0A0A0C !important;
+  color: #7C2D12 !important;
   font-weight: 800 !important;
 }
 
 .pdp-urgency-stock span {
-  color: #18181B !important;
+  color: #9A3412 !important;
   font-weight: 700 !important;
 }
 
 /* 5. Brand Eyebrow Tag & Option Titles */
 .pdp-brand-tag {
-  color: #FF5A18 !important;
+  color: #0A0A0C !important;
   font-weight: 800 !important;
   letter-spacing: 0.08em !important;
   font-size: 0.72rem !important;

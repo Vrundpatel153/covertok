@@ -120,7 +120,7 @@
 .drops-view-all-btn:hover {
   border-color: #0A0A0C;
   color: #0A0A0C;
-  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.2);
+  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.12);
   transform: translateY(-1px);
 }
 
@@ -131,17 +131,43 @@
 
 /* Infinite Left-Right Scrollable Loop Showcase */
 .trending-drops-slider-wrap {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+  position: relative !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scroll-behavior: smooth !important;
+  -webkit-overflow-scrolling: touch !important;
+  scroll-snap-type: x mandatory !important;
+  overscroll-behavior-x: contain !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  touch-action: pan-x pan-y !important;
   padding: 8px 0 24px;
   cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
   mask-image: linear-gradient(90deg, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 20px, black calc(100% - 20px), transparent 100%);
 }
 
-.trending-drops-slider-wrap:active {
-  cursor: grabbing;
+.trending-drops-slider-wrap::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.trending-drops-slider-wrap:active,
+.trending-drops-slider-wrap.is-dragging {
+  cursor: grabbing !important;
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+}
+
+.trending-drops-slider-wrap.is-dragging * {
+  cursor: grabbing !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  pointer-events: none !important;
 }
 
 .trending-drops-grid {
@@ -154,15 +180,17 @@
   max-width: none !important;
   margin: 0 !important;
   padding: 6px 4px 14px !important;
-  touch-action: pan-y !important;
-  will-change: transform;
+  touch-action: pan-x pan-y !important;
   user-select: none;
   -webkit-user-select: none;
   animation: none !important;
+  transform: none !important;
 }
 
 .trending-drops-grid.is-dragging {
   cursor: grabbing !important;
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
 }
 
 .trending-drops-grid .drop-3d-card {
@@ -170,6 +198,8 @@
   min-width: 280px !important;
   max-width: 280px !important;
   flex-shrink: 0 !important;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: normal !important;
 }
 
 @keyframes dropsMarqueeLTR {
@@ -378,7 +408,7 @@
 
 .drop-review-cnt {
   font-weight: 500;
-  color: #71717A;
+  color: #8C827A;
 }
 
 .drop-title {
@@ -462,7 +492,7 @@
   background: #0A0A0C;
   border-color: #0A0A0C;
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.35);
+  box-shadow: 0 4px 14px rgba(10, 10, 12, 0.12);
 }
 
 .drop-quick-add-btn.added {
@@ -534,7 +564,7 @@
     font-weight: 700 !important;
     letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
-    color: #FF5A18 !important;
+    color: #0A0A0C !important;
     display: inline-block !important;
   }
 
@@ -1080,7 +1110,7 @@
   background: #0A0A0C !important;
   border-color: #0A0A0C !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 6px 16px rgba(10, 10, 12, 0.35) !important;
+  box-shadow: 0 6px 16px rgba(10, 10, 12, 0.12) !important;
 }
 
 /* ==========================================================================
@@ -1130,7 +1160,7 @@
     font-weight: 700 !important;
     letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
-    color: #FF5A18 !important;
+    color: #0A0A0C !important;
     display: inline-block !important;
   }
 
