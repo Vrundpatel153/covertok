@@ -1023,31 +1023,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================
 
-  // 12. BENTO CARDS CLICK
-
   // ==========================================
 
-  document.querySelectorAll('.bento-card').forEach(card => {
-
-    card.addEventListener('click', () => {
-
-      const brand = card.getAttribute('data-brand') || 'Collection';
-
-      showToast(`Showing covers for ${brand.toUpperCase()}...`, 'phone');
-
-      const productsSection = document.getElementById('products');
-
-      if (productsSection) productsSection.scrollIntoView({ behavior: 'smooth' });
-
-    });
-
-  });
-
-
-
-  // ==========================================
-
-  // 13. ANIMATED CARDS DECK TOGGLE & INTERACTION
+  // 12. ANIMATED CARDS DECK TOGGLE & INTERACTION
 
   // ==========================================
 

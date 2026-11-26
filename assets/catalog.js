@@ -35,6 +35,186 @@
     { id: 'buy-three', title: '3-Piece Combo', thumb: 'assets/bundle_clear_case.webp', isCombo: true }
   ];
 
+  // Unified category metadata for all primary tabs and curated alias routes
+  const CATEGORY_META = {
+    'all': {
+      title: 'All Products',
+      label: 'CURATED ARCHIVE',
+      heading: 'Luxury Tech Armor',
+      desc: 'Aerospace titanium, hand-finished leather, and MagSafe precision engineering.',
+      banner: { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok Curated Hardware Collection' }
+    },
+    'iphone-cases': {
+      title: 'Phone Cases',
+      label: 'PRECISION ARMOR',
+      heading: 'iPhone Precision Cases',
+      desc: 'Engineered for impact defense, tactile ergonomic grip, and seamless MagSafe alignment.',
+      banner: { pc: 'assets/collections/banner_cases_pc.webp', mob: 'assets/collections/banner_cases_mob.webp', alt: 'Covertok iPhone Precision Cases' }
+    },
+    'mens-cover': {
+      title: "Men's Covers",
+      label: "MEN’S COLLECTION",
+      heading: "Men's Signature Cases",
+      desc: 'Tactical aramid-inspired textures, rugged bumper edges, and refined metallic tones.',
+      banner: { pc: 'assets/collections/banner_cases_pc.webp', mob: 'assets/collections/banner_cases_mob.webp', alt: "Covertok Men's Cases" }
+    },
+    'womens-cover': {
+      title: "Women's Covers",
+      label: "WOMEN’S COLLECTION",
+      heading: "Women's Curated Cases",
+      desc: 'Pastel finishes, pearled charm accents, glossy MagSafe frames, and soft-touch silicone.',
+      banner: { pc: 'assets/collections/banner_cases_pc.webp', mob: 'assets/collections/banner_cases_mob.webp', alt: "Covertok Women's Cases" }
+    },
+    'covers': {
+      title: 'All Cases & Bumpers',
+      label: 'COMPLETE CASE LINEUP',
+      heading: 'All iPhone Cases & Bumpers',
+      desc: 'Every signature Covertok case and shockproof bumper across minimal, crystal, and leather styles.',
+      banner: { pc: 'assets/collections/banner_cases_pc.webp', mob: 'assets/collections/banner_cases_mob.webp', alt: 'Covertok Cases & Bumpers' },
+      tabId: 'iphone-cases'
+    },
+    'watchbands': {
+      title: 'Watch Bands',
+      label: 'APPLE WATCH BANDS',
+      heading: 'Apple Watch Precision Bands',
+      desc: 'Aerospace titanium link bracelets, fluoroelastomer sport loops, and rugged alpine weave straps.',
+      banner: { pc: 'assets/collections/banner_watch_pc.webp', mob: 'assets/collections/banner_watch_mob.webp', alt: 'Covertok Apple Watch Bands' }
+    },
+    'airpod-covers': {
+      title: 'AirPods Covers',
+      label: 'AIRPODS SUITE',
+      heading: 'AirPods Armor Cases',
+      desc: 'Lightweight, scratch-resistant armor with high-grade aluminum carabiner hardware.',
+      banner: { pc: 'assets/collections/banner_airpods_pc.webp', mob: 'assets/collections/banner_airpods_mob.webp', alt: 'Covertok AirPods Protective Cases' }
+    },
+    'charger-covers': {
+      title: 'Charger Cases',
+      label: 'POWER & HARDWARE',
+      heading: 'MagSafe Charging Armor',
+      desc: 'Precision silicone bumpers and custom designer covers tailored for Apple chargers and cables.',
+      banner: { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok Charger Cases' }
+    },
+    'charger-and-cables': {
+      title: 'Cables & Power',
+      label: 'CHARGING ESSENTIALS',
+      heading: 'High-Speed Fast Charging',
+      desc: 'Fast 100W GaN car chargers, 3-in-1 wireless hubs, and seamless MagSafe charging hardware.',
+      banner: { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok High-Speed Charging' }
+    },
+    'power-essentials': {
+      title: 'Power Essentials',
+      label: 'POWER & CHARGING',
+      heading: 'Power Essentials',
+      desc: 'MagSafe wireless power banks, 100W alloy fast car chargers, and 3-in-1 charging docks.',
+      banner: { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok Power Essentials' },
+      tabId: 'charger-and-cables'
+    },
+    'cables-chargers': {
+      title: 'Charger Cases & Cables',
+      label: 'CHARGING COLLECTION',
+      heading: 'Charger Cases & Fast Charging',
+      desc: 'Designer charger protector sets paired with MagSafe wireless and rapid car chargers.',
+      banner: { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok Charger Cases & Cables' },
+      tabId: 'charger-covers'
+    },
+    'power-accessories': {
+      title: 'Accessories & Power',
+      label: 'DAILY TECH & POWER',
+      heading: 'Other Accessories & Power',
+      desc: 'Wireless power banks, fast chargers, magnetic desk mounts, and tempered glass hardware.',
+      banner: { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Accessories & Power' },
+      tabId: 'other-accessories'
+    },
+    'charger-cases-charms': {
+      title: 'Charger Cases & Charms',
+      label: 'PERSONALIZED HARDWARE',
+      heading: 'Charger Cases & Cover Charms',
+      desc: 'Playful charger case sets, wrist lanyards, pearl bracelets, and tactile case charms.',
+      banner: { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Charger Cases & Charms' },
+      tabId: 'cover-charms'
+    },
+    'hardware': {
+      title: 'Screen & Desk Hardware',
+      label: 'PRECISION HARDWARE',
+      heading: 'Screen Protectors & Desk Mounts',
+      desc: 'Auto-alignment sapphire tempered glass, privacy shields, and foldable aluminum desk stands.',
+      banner: { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Screen & Desk Hardware' },
+      tabId: 'other-accessories'
+    },
+    'cover-charms': {
+      title: 'Cover Charms',
+      label: 'TECH CHARMS',
+      heading: 'Phone Charms & Lanyards',
+      desc: 'Handcrafted wrist lanyards, tactile paracords, and minimal aesthetic hardware.',
+      banner: { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Phone Charms' }
+    },
+    'other-accessories': {
+      title: 'Other Accessories',
+      label: 'DAILY ESSENTIALS',
+      heading: 'Everyday Tech Essentials',
+      desc: 'Sapphire lens shields, magnetic folding desktop stands, and daily mobile accessories.',
+      banner: { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Everyday Tech Accessories' }
+    },
+    'our-bestsellers': {
+      title: 'Bestsellers',
+      label: 'MOST LOVED EDITIONS',
+      heading: 'Most Loved Bestsellers',
+      desc: 'Our highest-rated customer favorites, engineered for long-lasting durability and style.',
+      banner: { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok Bestsellers' }
+    },
+    'new-arrivals': {
+      title: 'New Arrivals',
+      label: 'SEASONAL RELEASES',
+      heading: 'New Arrivals',
+      desc: 'The latest technical gear additions to the Covertok portfolio, updated weekly.',
+      banner: { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok New Arrivals' }
+    }
+  };
+
+  function normalizeCategoryParam(rawCat) {
+    if (!rawCat) return 'all';
+    const c = String(rawCat).trim().toLowerCase();
+    if (c === 'watch-bands' || c === 'iwatch-bands') return 'watchbands';
+    if (c === 'chargers') return 'power-essentials';
+    return c;
+  }
+
+  function matchesCategory(product, catId) {
+    if (!catId || catId === 'all') return true;
+    if (catId === 'our-bestsellers') return !!product.is_bestseller;
+    if (catId === 'new-arrivals') return !!product.is_new;
+    if (catId === 'covers') {
+      return product.category === 'iphone-cases' || product.category === 'mens-cover' || product.category === 'womens-cover' ||
+        (product.collections && product.collections.includes('covers'));
+    }
+    if (catId === 'power-essentials' || catId === 'chargers') {
+      return product.category === 'charger-and-cables' ||
+        (product.collections && product.collections.includes('charger-and-cables')) ||
+        /power\s*bank|wireless\s*charger|car\s*charger/i.test(product.title || '');
+    }
+    if (catId === 'power-accessories') {
+      return product.category === 'other-accessories' || product.category === 'charger-and-cables' ||
+        (product.collections && (product.collections.includes('other-accessories') || product.collections.includes('charger-and-cables')));
+    }
+    if (catId === 'cables-chargers') {
+      return product.category === 'charger-covers' || product.category === 'charger-and-cables' ||
+        (product.collections && (product.collections.includes('charger-covers') || product.collections.includes('charger-and-cables')));
+    }
+    if (catId === 'charger-cases-charms') {
+      return product.category === 'charger-covers' || product.category === 'cover-charms' ||
+        (product.collections && (product.collections.includes('charger-covers') || product.collections.includes('cover-charms')));
+    }
+    if (catId === 'hardware') {
+      return product.category === 'other-accessories' ||
+        /tempered\s*glass|stand|holder|mount|suction/i.test(product.title || '');
+    }
+    return product.category === catId || (product.collections && product.collections.includes(catId));
+  }
+
+  function getActiveTabId(catId) {
+    return (CATEGORY_META[catId] && CATEGORY_META[catId].tabId) || catId;
+  }
+
   function initCatalog() {
     allProducts = window.CovertokProducts || [];
     if (!allProducts.length) {
@@ -44,15 +224,12 @@
 
     // Read initial URL params
     const params = new URLSearchParams(window.location.search);
-    let catParam = params.get('cat') || params.get('category');
-    if (catParam === 'buy-three') {
+    const rawCat = params.get('cat') || params.get('category');
+    if (rawCat === 'buy-three') {
       window.location.replace('combo.html');
       return;
     }
-    if (catParam === 'watch-bands' || catParam === 'iwatch-bands') catParam = 'watchbands';
-    if (catParam === 'cables-chargers') catParam = 'charger-covers';
-    if (catParam === 'power-accessories') catParam = 'charger-and-cables';
-    if (catParam) currentCategory = catParam;
+    if (rawCat) currentCategory = normalizeCategoryParam(rawCat);
     if (params.has('search')) currentSearch = params.get('search');
     else if (params.has('q')) currentSearch = params.get('q');
     if (params.has('sort')) currentSort = params.get('sort');
@@ -69,11 +246,12 @@
       const p = new URLSearchParams(window.location.search);
       const pg = parseInt(p.get('page') || '1', 10);
       catalogCurrentPage = (!isNaN(pg) && pg > 0) ? pg : 1;
-      const cat = p.get('cat') || p.get('category') || 'all';
+      const cat = normalizeCategoryParam(p.get('cat') || p.get('category') || 'all');
       if (cat !== currentCategory) {
         currentCategory = cat;
+        const activeTab = getActiveTabId(currentCategory);
         document.querySelectorAll('.catalog-cat-card').forEach(el => {
-          const isActive = el.getAttribute('data-cat') === currentCategory;
+          const isActive = el.getAttribute('data-cat') === activeTab;
           el.classList.toggle('active', isActive);
           el.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
@@ -91,25 +269,17 @@
     const navBar = document.getElementById('catalogNavBar');
     if (!navBar) return;
 
+    const activeTab = getActiveTabId(currentCategory);
     navBar.innerHTML = '';
     CATEGORIES.forEach(cat => {
-      let count = 0;
-      if (cat.id === 'all') {
-        count = allProducts.length;
-      } else if (cat.id === 'our-bestsellers') {
-        count = allProducts.filter(p => p.is_bestseller).length;
-      } else if (cat.id === 'new-arrivals') {
-        count = allProducts.filter(p => p.is_new).length;
-      } else {
-        count = allProducts.filter(p => p.category === cat.id || (p.collections && p.collections.includes(cat.id))).length;
-      }
+      const count = allProducts.filter(p => matchesCategory(p, cat.id)).length;
 
       const isComboPill = cat.id === 'buy-three';
       const card = document.createElement('div');
-      card.className = `catalog-cat-card ${currentCategory === cat.id ? 'active' : ''}`;
+      card.className = `catalog-cat-card ${activeTab === cat.id ? 'active' : ''}`;
       card.setAttribute('data-cat', cat.id);
       card.setAttribute('role', 'tab');
-      card.setAttribute('aria-selected', currentCategory === cat.id ? 'true' : 'false');
+      card.setAttribute('aria-selected', activeTab === cat.id ? 'true' : 'false');
 
       if (isComboPill) {
         card.innerHTML = `
@@ -159,19 +329,8 @@
 
     if (!grid) return;
 
-    // 1. Filter by category
-    let filtered = allProducts.slice();
-    if (currentCategory !== 'all') {
-      if (currentCategory === 'our-bestsellers') {
-        filtered = filtered.filter(p => p.is_bestseller);
-      } else if (currentCategory === 'new-arrivals') {
-        filtered = filtered.filter(p => p.is_new);
-      } else if (currentCategory === 'covers') {
-        filtered = filtered.filter(p => p.category === 'iphone-cases' || p.category === 'mens-cover' || p.category === 'womens-cover');
-      } else {
-        filtered = filtered.filter(p => p.category === currentCategory || (p.collections && p.collections.includes(currentCategory)));
-      }
-    }
+    // 1. Filter by category using unified catalog matcher
+    let filtered = allProducts.filter(p => matchesCategory(p, currentCategory));
 
     // 2. Filter by Price Bracket
     if (currentPriceBracket !== 'all') {
@@ -253,10 +412,17 @@
       filtered.sort((a, b) => (b.is_bestseller ? 1 : 0) - (a.is_bestseller ? 1 : 0));
     }
 
-    // Update Category Headings & Editorial Descriptions
+    // Update Category Headings & Editorial Descriptions from unified CATEGORY_META
     const activeCatObj = CATEGORIES.find(c => c.id === currentCategory) || CATEGORIES[0];
+    const meta = CATEGORY_META[currentCategory] || {
+      title: activeCatObj.title,
+      label: activeCatObj.title.toUpperCase(),
+      heading: activeCatObj.title,
+      desc: 'Curated authentic Covertok accessories designed to elevate your everyday setup.',
+      banner: CATEGORY_META['all'].banner
+    };
     if (currentHeading) {
-      currentHeading.textContent = activeCatObj.title;
+      currentHeading.textContent = meta.title;
     }
 
     const eyebrowTag = document.getElementById('catalogEyebrowTag');
@@ -265,77 +431,24 @@
     const bannerImg = document.getElementById('catalogBannerImg');
     const bannerSourceMob = document.getElementById('catalogBannerSourceMob');
 
-    const eyebrowMap = {
-      'all': { badge: 'COVERTOK ATELIER', label: 'CURATED ARCHIVE' },
-      'iphone-cases': { badge: 'COVERTOK ATELIER', label: 'PRECISION ARMOR' },
-      'mens-cover': { badge: 'COVERTOK ATELIER', label: 'MEN’S COLLECTION' },
-      'womens-cover': { badge: 'COVERTOK ATELIER', label: 'WOMEN’S COLLECTION' },
-      'airpod-covers': { badge: 'COVERTOK ATELIER', label: 'AIRPODS SUITE' },
-      'watchbands': { badge: 'COVERTOK ATELIER', label: 'APPLE WATCH BANDS' },
-      'charger-covers': { badge: 'COVERTOK ATELIER', label: 'POWER & HARDWARE' },
-      'charger-and-cables': { badge: 'COVERTOK ATELIER', label: 'CHARGING ESSENTIALS' },
-      'cover-charms': { badge: 'COVERTOK ATELIER', label: 'TECH CHARMS' },
-      'other-accessories': { badge: 'COVERTOK ATELIER', label: 'DAILY ESSENTIALS' },
-      'our-bestsellers': { badge: 'COVERTOK ATELIER', label: 'MOST LOVED EDITIONS' },
-      'new-arrivals': { badge: 'COVERTOK ATELIER', label: 'SEASONAL RELEASES' }
-    };
-
     if (eyebrowTag) {
-      const activeEyebrow = eyebrowMap[currentCategory] || { badge: 'COVERTOK ATELIER', label: activeCatObj.title.toUpperCase() };
       eyebrowTag.innerHTML = `
-        <span class="eyebrow-accent-badge">${activeEyebrow.badge}</span>
+        <span class="eyebrow-accent-badge">COVERTOK ATELIER</span>
         <span class="eyebrow-sep">/</span>
-        <span class="eyebrow-edition-label">${activeEyebrow.label}</span>
+        <span class="eyebrow-edition-label">${meta.label}</span>
       `;
     }
 
     if (mainHeading) {
-      const headingMap = {
-        'all': `Luxury Tech Armor`,
-        'iphone-cases': `iPhone Precision Cases`,
-        'airpod-covers': `AirPods Armor Cases`,
-        'watchbands': `Apple Watch Precision Bands`,
-        'charger-covers': `MagSafe Charging Armor`,
-        'charger-and-cables': `High-Speed Fast Charging`,
-        'cover-charms': `Phone Charms &amp; Lanyards`,
-        'other-accessories': `Everyday Tech Essentials`,
-        'our-bestsellers': `Most Loved Bestsellers`,
-        'new-arrivals': `New Arrivals`
-      };
-      mainHeading.textContent = headingMap[currentCategory] || activeCatObj.title;
+      mainHeading.textContent = meta.heading;
     }
 
     if (categoryDesc) {
-      const descMap = {
-        'all': `Aerospace titanium, hand-finished leather, and MagSafe precision engineering.`,
-        'iphone-cases': `Engineered for impact defense, tactile ergonomic grip, and seamless MagSafe alignment.`,
-        'airpod-covers': `Lightweight, scratch-resistant armor with high-grade aluminum carabiner hardware.`,
-        'watchbands': `Aerospace titanium link bracelets, fluoroelastomer sport loops, and rugged alpine weave straps.`,
-        'charger-covers': `Precision silicone bumpers and docking stations designed for official Apple MagSafe chargers.`,
-        'charger-and-cables': `Fast 100W GaN charging hubs and ballistic-braided reinforced silicone cables.`,
-        'cover-charms': `Handcrafted wrist lanyards, tactile paracords, and minimal aesthetic hardware.`,
-        'other-accessories': `Sapphire lens shields, magnetic folding desktop stands, and daily mobile accessories.`,
-        'our-bestsellers': `Our highest-rated customer favorites, engineered for long-lasting durability and style.`,
-        'new-arrivals': `The latest technical gear additions to the Covertok portfolio, updated weekly.`
-      };
-      categoryDesc.innerHTML = descMap[currentCategory] || `Curated authentic Covertok accessories designed to elevate your everyday setup.`;
+      categoryDesc.textContent = meta.desc;
     }
 
     if (bannerImg) {
-      const bannerMap = {
-        'all': { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok Curated Hardware Collection' },
-        'iphone-cases': { pc: 'assets/collections/banner_cases_pc.webp', mob: 'assets/collections/banner_cases_mob.webp', alt: 'Covertok iPhone Precision Cases' },
-        'airpod-covers': { pc: 'assets/collections/banner_airpods_pc.webp', mob: 'assets/collections/banner_airpods_mob.webp', alt: 'Covertok AirPods Protective Cases' },
-        'watchbands': { pc: 'assets/collections/banner_watch_pc.webp', mob: 'assets/collections/banner_watch_mob.webp', alt: 'Covertok Apple Watch Bands' },
-        'charger-covers': { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok MagSafe Chargers and Hardware' },
-        'charger-and-cables': { pc: 'assets/collections/banner_power_pc.webp', mob: 'assets/collections/banner_power_mob.webp', alt: 'Covertok High-Speed Braided Fast Charging' },
-        'cover-charms': { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Phone Charms and Daily Hardware' },
-        'other-accessories': { pc: 'assets/collections/banner_accessories_pc.webp', mob: 'assets/collections/banner_accessories_mob.webp', alt: 'Covertok Everyday Tech Accessories' },
-        'our-bestsellers': { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok Most Loved Bestsellers' },
-        'new-arrivals': { pc: 'assets/collections/banner_all_pc.webp', mob: 'assets/collections/banner_all_mob.webp', alt: 'Covertok New Arrivals' }
-      };
-
-      const activeBanner = bannerMap[currentCategory] || bannerMap['all'];
+      const activeBanner = meta.banner || CATEGORY_META['all'].banner;
       if (!bannerImg.src.endsWith(activeBanner.pc)) {
         bannerImg.style.opacity = '0';
         bannerImg.style.transform = 'scale(0.98)';
@@ -471,13 +584,23 @@
     const chips = [];
 
     if (currentCategory !== 'all') {
+      const catMeta = CATEGORY_META[currentCategory];
       const catObj = CATEGORIES.find(c => c.id === currentCategory);
       chips.push({
-        label: `Category: ${catObj ? catObj.title : currentCategory}`,
+        label: `Category: ${catMeta ? catMeta.title : (catObj ? catObj.title : currentCategory)}`,
         onRemove: () => {
           currentCategory = 'all';
-          document.querySelectorAll('.catalog-nav-pill').forEach(el => el.classList.remove('active'));
-          document.querySelector('.catalog-nav-pill[data-cat="all"]')?.classList.add('active');
+          catalogCurrentPage = 1;
+          document.querySelectorAll('.catalog-cat-card').forEach(el => {
+            const isAll = el.getAttribute('data-cat') === 'all';
+            el.classList.toggle('active', isAll);
+            el.setAttribute('aria-selected', isAll ? 'true' : 'false');
+          });
+          const newUrl = new URL(window.location);
+          newUrl.searchParams.delete('cat');
+          newUrl.searchParams.delete('category');
+          newUrl.searchParams.delete('page');
+          window.history.pushState({}, '', newUrl);
           filterAndRenderProducts();
         }
       });

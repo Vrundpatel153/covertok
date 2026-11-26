@@ -65,6 +65,7 @@
 
   // Trigger prefetch on hover / touchstart
   function handleLinkInteraction(e) {
+    if (!e.target || typeof e.target.closest !== 'function') return;
     const link = e.target.closest('a[href], [data-href]');
     if (!link) return;
 
