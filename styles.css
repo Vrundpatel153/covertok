@@ -56354,11 +56354,11 @@ html body #siteHeader,
     pointer-events: auto !important;
   }
 
-  /* Discrete Circular Action Buttons for Header Right Utility Icons */
+  /* Pure Clean Utility Icons for Header Right (Directly on transparent header, exactly matching reference) */
   body.home-page .site-header .header-right {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 14px !important;
     background: transparent !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -56366,7 +56366,7 @@ html body #siteHeader,
     border-radius: 0 !important;
     padding: 0 !important;
     box-shadow: none !important;
-    margin-right: clamp(6px, 1vw, 16px) !important;
+    margin-right: clamp(4px, 0.8vw, 12px) !important;
     pointer-events: auto !important;
     z-index: 100 !important;
   }
@@ -56374,39 +56374,40 @@ html body #siteHeader,
   body.home-page .site-header .header-right .header-action-btn,
   body.home-page .site-header .header-right .icon-btn,
   body.home-page .site-header .header-right .mobile-toggle-btn {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
-    border-radius: 50% !important;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    border-radius: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     color: #0A0A0C !important;
-    background: #FFFFFF !important;
-    background-color: #FFFFFF !important;
-    border: 1px solid #E5E7EB !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     padding: 0 !important;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
     pointer-events: auto !important;
   }
 
   body.home-page .site-header .header-right .header-action-btn:hover,
   body.home-page .site-header .header-right .icon-btn:hover,
   body.home-page .site-header .header-right .mobile-toggle-btn:hover {
-    background: #F3F4F6 !important;
-    border-color: #D1D5DB !important;
+    background: transparent !important;
+    border-color: transparent !important;
+    opacity: 0.65 !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: none !important;
   }
 
   body.home-page .site-header .header-right .header-action-btn svg,
   body.home-page .site-header .header-right .icon-btn svg,
   body.home-page .site-header .header-right .mobile-toggle-btn svg {
     stroke: #0A0A0C !important;
-    width: 17px !important;
-    height: 17px !important;
+    width: 20px !important;
+    height: 20px !important;
     display: block !important;
   }
 
