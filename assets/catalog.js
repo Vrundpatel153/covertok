@@ -413,8 +413,8 @@
     if (currentCards.length === 0) {
       gridEl.innerHTML = '';
       const fragment = document.createDocumentFragment();
-      newProducts.forEach((prod) => {
-        const card = createCardFn(prod);
+      newProducts.forEach((prod, idx) => {
+        const card = createCardFn(prod, idx);
         card.style.opacity = '0';
         card.style.transform = 'translateY(24px) scale(0.93)';
         card.style.filter = 'blur(6px)';
@@ -451,8 +451,8 @@
       gridEl.style.minHeight = 'auto';
       gridEl.innerHTML = '';
       const fragment = document.createDocumentFragment();
-      newProducts.forEach((prod) => {
-        const card = createCardFn(prod);
+      newProducts.forEach((prod, idx) => {
+        const card = createCardFn(prod, idx);
         fragment.appendChild(card);
       });
       gridEl.appendChild(fragment);
@@ -645,7 +645,7 @@
   }
 
   // Create single editorial luxury product card (Clean, dominant image, no messy swatches)
-  function createProductCard(product) {
+  function createProductCard(product, cardIdx = 99) {
     const card = document.createElement('div');
     card.className = 'catalog-card';
     card.setAttribute('data-id', product.id);
@@ -697,7 +697,7 @@
       <div class="card-media-stage" onclick="window.location.href='product.html?handle=${product.handle}'">
         ${badgeHtml ? `<div class="card-badges-row">${badgeHtml}</div>` : ''}
         <div class="card-img-wrap">
-          <img src="${bustUrl(initialImg)}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="eager" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
+          <img src="${bustUrl(initialImg)}" alt="${product.title}" class="card-main-img" id="cardImg_${product.id}" loading="${cardIdx < 4 ? 'eager' : 'lazy'}" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
         </div>
       </div>
 

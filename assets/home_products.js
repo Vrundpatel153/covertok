@@ -70,7 +70,7 @@
           <div class="col-prod-card" data-id="${p.id}">
             <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 4 / 4.6; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; border-radius: 18px 18px 0 0; cursor: pointer;" onclick="window.location.href='product.html?handle=${p.handle}'">
               ${badgeHtml}
-              <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="width: 100%; height: 100%; object-fit: contain;" loading="eager" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
+              <img src="${initialImg}" alt="${p.title}" class="col-prod-img card-main-img" id="homeColImg_${p.id}" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
             </div>
 
             <div class="col-prod-info" style="padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1;">
@@ -135,7 +135,7 @@
           <div class="product-card-inner">
             <div class="product-image-box" style="position: relative; overflow: hidden; background: #FFFFFF; border-radius: 18px; border: 1px solid #ECE7DE; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 4.6;">
               ${badgeHtml}
-              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="eager" style="width: 100%; height: 100%; object-fit: contain;" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
+              <img src="${initialImg}" alt="${p.title}" class="product-img card-main-img" id="featuredImg_${p.id}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain;" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
             </div>
             <div class="product-info" style="padding: 12px 4px 4px; display: flex; flex-direction: column;">
               <h3 class="product-name" style="font-size: 0.9rem; font-weight: 700; color: #171513; line-height: 1.35; margin: 0 0 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">

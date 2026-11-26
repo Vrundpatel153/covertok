@@ -16,17 +16,23 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&amp;family=Syne:wght@700;800;900&amp;display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&amp;family=Syne:wght@700;800;900&amp;display=swap" rel="stylesheet" /></noscript>
   <link href="styles.css?v=20261126_smooth_swipe" rel="stylesheet" />
-  <link href="catalog.css?v=20261122_nav_fix" rel="stylesheet" />
-  <link href="microinteractions.css?v=20261117_v25" rel="stylesheet" />
-  <link href="combo.css?v=20261117_v25" rel="stylesheet" />
-  <link href="assets/trending_drops.css?v=20261126_smooth_swipe" rel="stylesheet" />
-  <!-- Preload 3D WebGL Textures for Instant Zero-Lag Rendering -->
-  <link as="image" href="assets/blue_phone_body.webp" rel="preload" type="image/webp" />
-  <link as="image" href="assets/blue_protector_cover.webp" rel="preload" type="image/webp" />
-  <link as="image" href="assets/blue_frameless_assembled.webp" rel="preload" type="image/webp" />
-  <link as="script" href="assets/three.min.js" rel="preload" />
+  <link href="catalog.css?v=20261122_nav_fix" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="microinteractions.css?v=20261117_v25" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="combo.css?v=20261117_v25" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link href="assets/trending_drops.css?v=20261126_smooth_swipe" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="catalog.css?v=20261122_nav_fix" rel="stylesheet" />
+    <link href="microinteractions.css?v=20261117_v25" rel="stylesheet" />
+    <link href="combo.css?v=20261117_v25" rel="stylesheet" />
+    <link href="assets/trending_drops.css?v=20261126_smooth_swipe" rel="stylesheet" />
+  </noscript>
+  <!-- Preload Primary Hero Visuals for Instant LCP -->
+  <link as="image" href="assets/hero_bg_case_1_pc.webp" media="(min-width: 769px)" rel="preload" type="image/webp" fetchpriority="high" />
+  <link as="image" href="assets/hero_hand_case_1.webp?v=20261107_no_black_patch_v8" media="(min-width: 769px)" rel="preload" type="image/webp" fetchpriority="high" />
+  <link as="image" href="assets/hero_bg_case_1_mob.webp" media="(max-width: 768px)" rel="preload" type="image/webp" fetchpriority="high" />
 </head>
 
 <body class="home-page">
@@ -367,7 +373,7 @@
           <div aria-hidden="true" class="hero-desktop-bgs" id="heroDesktopBgs">
             <div class="hero-slide-bg active" data-bg-index="0">
               <div class="hero-slide0-bgs" id="heroSlide0BgsPc">
-                <img alt="Covertok Cosmic Orange" class="hero-sub-bg active" data-sub-idx="0" decoding="async"
+                <img alt="Covertok Cosmic Orange" class="hero-sub-bg active" data-sub-idx="0" decoding="async" fetchpriority="high"
                   src="assets/hero_bg_case_1_pc.webp" />
                 <img alt="Covertok Crystal Rose Gold" class="hero-sub-bg" data-sub-idx="1" decoding="async"
                   src="assets/hero_bg_case_2_pc.webp" />
@@ -437,7 +443,7 @@
               <div aria-label="Covertok 8-Color Showcase" class="hero-hand-slideshow" id="heroHandSlideshow">
                 <div class="hero-hand-stage">
                   <img alt="Covertok Cosmic Orange MagSafe Case" class="hero-hand-frame active" data-case-index="0"
-                    decoding="async" src="assets/hero_hand_case_1.webp?v=20261107_no_black_patch_v8" />
+                    decoding="async" fetchpriority="high" src="assets/hero_hand_case_1.webp?v=20261107_no_black_patch_v8" />
                   <img alt="Covertok Crystal Studded Luxe Case" class="hero-hand-frame" data-case-index="1"
                     decoding="async" src="assets/hero_hand_case_2.webp?v=20261107_no_black_patch_v8" />
                   <img alt="Covertok Caramel Brown Leather Case" class="hero-hand-frame" data-case-index="2"
@@ -589,8 +595,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Transparent Magnetic Wireless Charging Case" class="drop-card-visual"
                   href="product.html?id=9989730304298">
-                  <img alt="Transparent Magnetic Wireless Charging Phone Case" class="drop-product-img" decoding="async"
-                    loading="eager"
+                  <img loading="lazy" alt="Transparent Magnetic Wireless Charging Phone Case" class="drop-product-img" decoding="async"
+                    loading="lazy"
                     src="assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp" />
                   <span class="drop-discount-pill">-35%</span>
                 </a>
@@ -628,8 +634,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Crystal Studded Luxe Case" class="drop-card-visual"
                   href="product.html?id=9982201299242">
-                  <img alt="Crystal Studded Luxe Case – Cosmic Orange" class="drop-product-img" decoding="async"
-                    loading="eager"
+                  <img loading="lazy" alt="Crystal Studded Luxe Case – Cosmic Orange" class="drop-product-img" decoding="async"
+                    loading="lazy"
                     src="assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp" />
                   <span class="drop-discount-pill">-27%</span>
                 </a>
@@ -659,8 +665,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Ultra Clear Sideless Case" class="drop-card-visual"
                   href="product.html?id=9981786390826">
-                  <img alt="Ultra Clear Sideless Anti-Yellow Back Case" class="drop-product-img" decoding="async"
-                    loading="eager"
+                  <img loading="lazy" alt="Ultra Clear Sideless Anti-Yellow Back Case" class="drop-product-img" decoding="async"
+                    loading="lazy"
                     src="assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp" />
                   <span class="drop-discount-pill">-40%</span>
                 </a>
@@ -690,8 +696,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Premium Bowknot Case with Pearl Bracelet" class="drop-card-visual"
                   href="product.html?id=9875994280234">
-                  <img alt="Premium Bowknot Phone Case with Detachable Pearl Bracelet" class="drop-product-img"
-                    decoding="async" loading="eager"
+                  <img loading="lazy" alt="Premium Bowknot Phone Case with Detachable Pearl Bracelet" class="drop-product-img"
+                    decoding="async" loading="lazy"
                     src="assets/products/premium-bowknot-phone-case-with-detachable-pearl-bracelet/off-white/01_packshot.webp" />
                   <span class="drop-discount-pill">-38%</span>
                 </a>
@@ -735,8 +741,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Pastel Heart Print Silicone Case" class="drop-card-visual"
                   href="product.html?id=9873114038570">
-                  <img alt="Pastel Heart Print Soft Silicone Phone Case" class="drop-product-img" decoding="async"
-                    loading="eager"
+                  <img loading="lazy" alt="Pastel Heart Print Soft Silicone Phone Case" class="drop-product-img" decoding="async"
+                    loading="lazy"
                     src="assets/products/pastel-heart-print-soft-silicone-phone-case/ivory-hearts/01_packshot.webp" />
                   <span class="drop-discount-pill">-44%</span>
                 </a>
@@ -777,8 +783,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Ribbed Knit Phone Sling Pouch" class="drop-card-visual"
                   href="product.html?id=10005871362346">
-                  <img alt="Ribbed Knit Phone Sling Pouch – Minimalist Carry" class="drop-product-img" decoding="async"
-                    loading="eager" src="assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp" />
+                  <img loading="lazy" alt="Ribbed Knit Phone Sling Pouch – Minimalist Carry" class="drop-product-img" decoding="async"
+                    loading="lazy" src="assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp" />
                   <span class="drop-discount-pill">-33%</span>
                 </a>
                 <div class="drop-card-info">
@@ -823,8 +829,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Magnetic Wireless Power Bank" class="drop-card-visual"
                   href="product.html?id=9888955924778">
-                  <img alt="Magnetic Wireless Power Bank – Ultra Sleek CNC Aluminum" class="drop-product-img"
-                    decoding="async" loading="eager"
+                  <img loading="lazy" alt="Magnetic Wireless Power Bank – Ultra Sleek CNC Aluminum" class="drop-product-img"
+                    decoding="async" loading="lazy"
                     src="assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp" />
                   <span class="drop-discount-pill">-34%</span>
                 </a>
@@ -865,8 +871,8 @@
               <div class="drop-card-inner">
                 <a aria-label="View Glow In The Dark Sand AirPods Case" class="drop-card-visual"
                   href="product.html?id=9870560330026">
-                  <img alt="Glow In The Dark Sand Liquid AirPods Case" class="drop-product-img" decoding="async"
-                    loading="eager"
+                  <img loading="lazy" alt="Glow In The Dark Sand Liquid AirPods Case" class="drop-product-img" decoding="async"
+                    loading="lazy"
                     src="assets/products/glow-sand-airpods-cases-playful-luminous/neon-orange/01_packshot.webp" />
                   <span class="drop-discount-pill">-30%</span>
                 </a>
@@ -952,7 +958,7 @@
             <div class="bento-card-bg">
               <picture>
                 <source srcset="assets/collections/card_01_iphone_bg.webp" type="image/webp" />
-                <img alt="iPhone Covers Showcase" class="bento-card-img" decoding="async" loading="eager"
+                <img alt="iPhone Covers Showcase" class="bento-card-img" decoding="async" loading="lazy"
                   src="assets/collections/card_01_iphone_bg.webp" />
               </picture>
             </div>
@@ -986,7 +992,7 @@
               <div class="bento-card-bg">
                 <picture>
                   <source srcset="assets/collections/card_02_watch_bg.webp" type="image/webp" />
-                  <img alt="Watch Bands Showcase" class="bento-card-img" decoding="async" loading="eager"
+                  <img alt="Watch Bands Showcase" class="bento-card-img" decoding="async" loading="lazy"
                     src="assets/collections/card_02_watch_bg.webp" />
                 </picture>
               </div>
@@ -1014,7 +1020,7 @@
               <div class="bento-card-bg">
                 <picture>
                   <source srcset="assets/collections/card_03_airpods_bg.webp" type="image/webp" />
-                  <img alt="AirPods Covers Showcase" class="bento-card-img" decoding="async" loading="eager"
+                  <img alt="AirPods Covers Showcase" class="bento-card-img" decoding="async" loading="lazy"
                     src="assets/collections/card_03_airpods_bg.webp" />
                 </picture>
               </div>
@@ -1043,7 +1049,7 @@
               <div class="bento-card-bg">
                 <picture>
                   <source srcset="assets/collections/card_04_cables_bg.webp" type="image/webp" />
-                  <img alt="Charger &amp; Cables Showcase" class="bento-card-img" decoding="async" loading="eager"
+                  <img alt="Charger &amp; Cables Showcase" class="bento-card-img" decoding="async" loading="lazy"
                     src="assets/collections/card_04_cables_bg.webp" />
                 </picture>
               </div>
@@ -1071,7 +1077,7 @@
               <div class="bento-card-bg">
                 <picture>
                   <source srcset="assets/collections/card_05_power_bg.webp" type="image/webp" />
-                  <img alt="Power Essentials Showcase" class="bento-card-img" decoding="async" loading="eager"
+                  <img alt="Power Essentials Showcase" class="bento-card-img" decoding="async" loading="lazy"
                     src="assets/collections/card_05_power_bg.webp" />
                 </picture>
               </div>
@@ -1099,7 +1105,7 @@
               <div class="bento-card-bg">
                 <picture>
                   <source srcset="assets/collections/card_06_accessories_bg.webp" type="image/webp" />
-                  <img alt="Other Accessories Showcase" class="bento-card-img" decoding="async" loading="eager"
+                  <img alt="Other Accessories Showcase" class="bento-card-img" decoding="async" loading="lazy"
                     src="assets/collections/card_06_accessories_bg.webp" />
                 </picture>
               </div>
@@ -1127,8 +1133,8 @@
               <div class="bento-card-bg">
                 <picture>
                   <source srcset="assets/collections/card_07_charms_bg.webp?v=20261021_08" type="image/webp" />
-                  <img alt="Charger Cases &amp; Cover Charms Showcase" class="bento-card-img" decoding="async"
-                    loading="eager" src="assets/collections/card_07_charms_bg.webp?v=20261021_08" />
+                  <img loading="lazy" alt="Charger Cases &amp; Cover Charms Showcase" class="bento-card-img" decoding="async"
+                    loading="lazy" src="assets/collections/card_07_charms_bg.webp?v=20261021_08" />
                 </picture>
               </div>
               <div class="bento-card-body">
@@ -1192,8 +1198,8 @@
               <div class="pop-card-bg-wrap">
                 <picture>
                   <source srcset="assets/popular_choice/card1_iphone_covers_clean.webp" type="image/webp" />
-                  <img alt="iPhone Covers with tan leather MagSafe card wallet" class="popular-card-img"
-                    decoding="async" loading="eager" src="assets/popular_choice/card1_iphone_covers_clean.webp" />
+                  <img loading="lazy" alt="iPhone Covers with tan leather MagSafe card wallet" class="popular-card-img"
+                    decoding="async" loading="lazy" src="assets/popular_choice/card1_iphone_covers_clean.webp" />
                 </picture>
               </div>
               <!-- Top Eyebrow -->
@@ -1234,8 +1240,8 @@
                   <a aria-label="Transparent Magnetic Wireless Charging Phone Case" class="pop-slider-card"
                     href="product.html?id=9989730304298">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Transparent Magnetic Wireless Charging Phone Case" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Transparent Magnetic Wireless Charging Phone Case" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1267,8 +1273,8 @@
                   <a aria-label="Soft Silicone Cover With-Lip Balm" class="pop-slider-card"
                     href="product.html?id=9875589628202">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Soft Silicone Cover With-Lip Balm" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Soft Silicone Cover With-Lip Balm" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1305,8 +1311,8 @@
                   <a aria-label="Crystal Studded Luxe Case – Orange" class="pop-slider-card"
                     href="product.html?id=9982201299242">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Crystal Studded Luxe Case – Orange" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Crystal Studded Luxe Case – Orange" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1330,8 +1336,8 @@
                   <a aria-label="Ultra Clear Sideless Anti-Yellow Back Case" class="pop-slider-card"
                     href="product.html?id=9981786390826">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Ultra Clear Sideless Anti-Yellow Back Case" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Ultra Clear Sideless Anti-Yellow Back Case" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1355,8 +1361,8 @@
                   <a aria-label="Premium Leather-Finish Slim Case with Metal Camera Ring" class="pop-slider-card"
                     href="product.html?id=9980484157738">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Leather-Finish Slim Case with Metal Camera Ring" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Leather-Finish Slim Case with Metal Camera Ring" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1393,8 +1399,8 @@
                   <a aria-label="Aluminium Frame Transparent Case" class="pop-slider-card"
                     href="product.html?id=9979941159210">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Aluminium Frame Transparent Case" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Aluminium Frame Transparent Case" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1429,8 +1435,8 @@
                   <a aria-label="Wavy Edge Transparent Shockproof Pastel Cover" class="pop-slider-card"
                     href="product.html?id=9893318426922">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Wavy Edge Transparent Shockproof Pastel Cover" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Wavy Edge Transparent Shockproof Pastel Cover" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1467,8 +1473,8 @@
                   <a aria-label="Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain" class="pop-slider-card"
                     href="product.html?id=9876014432554">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1492,8 +1498,8 @@
                   <a aria-label="Transparent Magnetic Wireless Charging Phone Case" class="pop-slider-card"
                     href="product.html?id=9989730304298">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Transparent Magnetic Wireless Charging Phone Case" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Transparent Magnetic Wireless Charging Phone Case" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/transparent-magnetic-wireless-charging-phone-case/cosmic-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1525,8 +1531,8 @@
                   <a aria-label="Soft Silicone Cover With-Lip Balm" class="pop-slider-card"
                     href="product.html?id=9875589628202">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Soft Silicone Cover With-Lip Balm" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Soft Silicone Cover With-Lip Balm" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/phone-cover-with-built-in-lip-balm-holder-copy-copy-6/raspberry/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1563,8 +1569,8 @@
                   <a aria-label="Crystal Studded Luxe Case – Orange" class="pop-slider-card"
                     href="product.html?id=9982201299242">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Crystal Studded Luxe Case – Orange" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Crystal Studded Luxe Case – Orange" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/crystal-studded-luxe-case-orange/cosmic-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1588,8 +1594,8 @@
                   <a aria-label="Ultra Clear Sideless Anti-Yellow Back Case" class="pop-slider-card"
                     href="product.html?id=9981786390826">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Ultra Clear Sideless Anti-Yellow Back Case" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Ultra Clear Sideless Anti-Yellow Back Case" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/ultra-clear-sideless-anti-yellow-back-case/crystal-clear/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1613,8 +1619,8 @@
                   <a aria-label="Premium Leather-Finish Slim Case with Metal Camera Ring" class="pop-slider-card"
                     href="product.html?id=9980484157738">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Leather-Finish Slim Case with Metal Camera Ring" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Leather-Finish Slim Case with Metal Camera Ring" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-leather-finish-slim-case-with-metal-camera-ring/black/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1651,8 +1657,8 @@
                   <a aria-label="Aluminium Frame Transparent Case" class="pop-slider-card"
                     href="product.html?id=9979941159210">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Aluminium Frame Transparent Case" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Aluminium Frame Transparent Case" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/aluminium-frame-transparent-case/cosmic-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1687,8 +1693,8 @@
                   <a aria-label="Wavy Edge Transparent Shockproof Pastel Cover" class="pop-slider-card"
                     href="product.html?id=9893318426922">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Wavy Edge Transparent Shockproof Pastel Cover" class="pop-slider-img" decoding="async"
-                        loading="eager"
+                      <img loading="lazy" alt="Wavy Edge Transparent Shockproof Pastel Cover" class="pop-slider-img" decoding="async"
+                        loading="lazy"
                         src="assets/products/wavy-edge-transparent-shockproof-pastel-cover/pink/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1725,8 +1731,8 @@
                   <a aria-label="Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain" class="pop-slider-card"
                     href="product.html?id=9876014432554">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Luxury Steel Blue Heart Sparkle Phone Case with Pearl Chain" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain/steel-blue/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1772,8 +1778,8 @@
                   <a aria-label="Premium Stainless Steel Milanese Loop Strap for Smartwatch" class="pop-slider-card"
                     href="product.html?id=9937879728426">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Stainless Steel Milanese Loop Strap for Smartwatch" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Stainless Steel Milanese Loop Strap for Smartwatch" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1810,8 +1816,8 @@
                   <a aria-label="Premium Silicone Watch Bands – Available in 18 Colors" class="pop-slider-card"
                     href="product.html?id=9882472382762">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Silicone Watch Bands – Available in 18 Colors" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Silicone Watch Bands – Available in 18 Colors" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1848,8 +1854,8 @@
                   <a aria-label="Black Transparent Rugged Apple Watch Case with Bold Orange Strap"
                     class="pop-slider-card" href="product.html?id=9873124557098">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Black Transparent Rugged Apple Watch Case with Bold Orange Strap" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Black Transparent Rugged Apple Watch Case with Bold Orange Strap" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1874,8 +1880,8 @@
                   <a aria-label="Transparent Rugged Apple Watch Case with Orange Sports Strap" class="pop-slider-card"
                     href="product.html?id=9873120330026">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Transparent Rugged Apple Watch Case with Orange Sports Strap" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Transparent Rugged Apple Watch Case with Orange Sports Strap" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1899,8 +1905,8 @@
                   <a aria-label="Transparent Rugged Protective Apple Watch Case with Strap" class="pop-slider-card"
                     href="product.html?id=9873118855466">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Transparent Rugged Protective Apple Watch Case with Strap" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Transparent Rugged Protective Apple Watch Case with Strap" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1924,8 +1930,8 @@
                   <a aria-label="Rugged Armor Protective Watch Case with Sport Band" class="pop-slider-card"
                     href="product.html?id=9873118101802">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Rugged Armor Protective Watch Case with Sport Band" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Rugged Armor Protective Watch Case with Sport Band" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1949,8 +1955,8 @@
                   <a aria-label="Premium Magnetic Leather Loop Straps for Apple Watch" class="pop-slider-card"
                     href="product.html?id=9873108009258">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Magnetic Leather Loop Straps for Apple Watch" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Magnetic Leather Loop Straps for Apple Watch" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1974,8 +1980,8 @@
                   <a aria-label="Magnetic Loop Smartwatch Bands – Dual Color Edition" class="pop-slider-card"
                     href="product.html?id=9871022719274">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Magnetic Loop Smartwatch Bands – Dual Color Edition" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Magnetic Loop Smartwatch Bands – Dual Color Edition" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -1999,8 +2005,8 @@
                   <a aria-label="Premium Stainless Steel Milanese Loop Strap for Smartwatch" class="pop-slider-card"
                     href="product.html?id=9937879728426">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Stainless Steel Milanese Loop Strap for Smartwatch" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Stainless Steel Milanese Loop Strap for Smartwatch" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-stainless-steel-milanese-loop-strap-for-smartwatch/silver/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2037,8 +2043,8 @@
                   <a aria-label="Premium Silicone Watch Bands – Available in 18 Colors" class="pop-slider-card"
                     href="product.html?id=9882472382762">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Silicone Watch Bands – Available in 18 Colors" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Silicone Watch Bands – Available in 18 Colors" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-silicone-watch-bands-available-in-18-colors-copy-1/orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2075,8 +2081,8 @@
                   <a aria-label="Black Transparent Rugged Apple Watch Case with Bold Orange Strap"
                     class="pop-slider-card" href="product.html?id=9873124557098">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Black Transparent Rugged Apple Watch Case with Bold Orange Strap" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Black Transparent Rugged Apple Watch Case with Bold Orange Strap" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/transparent-rugged-apple-watch-case-with-orange-sports-strap-copy/bold-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2101,8 +2107,8 @@
                   <a aria-label="Transparent Rugged Apple Watch Case with Orange Sports Strap" class="pop-slider-card"
                     href="product.html?id=9873120330026">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Transparent Rugged Apple Watch Case with Orange Sports Strap" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Transparent Rugged Apple Watch Case with Orange Sports Strap" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/transparent-rugged-protective-apple-watch-case-with-strap-copy/bright-orange/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2126,8 +2132,8 @@
                   <a aria-label="Transparent Rugged Protective Apple Watch Case with Strap" class="pop-slider-card"
                     href="product.html?id=9873118855466">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Transparent Rugged Protective Apple Watch Case with Strap" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Transparent Rugged Protective Apple Watch Case with Strap" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/rugged-armor-protective-watch-case-with-sport-band-copy/clear-titanium/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2151,8 +2157,8 @@
                   <a aria-label="Rugged Armor Protective Watch Case with Sport Band" class="pop-slider-card"
                     href="product.html?id=9873118101802">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Rugged Armor Protective Watch Case with Sport Band" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Rugged Armor Protective Watch Case with Sport Band" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-silicone-watch-bands-available-in-18-colors-copy/tactical-black/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2176,8 +2182,8 @@
                   <a aria-label="Premium Magnetic Leather Loop Straps for Apple Watch" class="pop-slider-card"
                     href="product.html?id=9873108009258">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Premium Magnetic Leather Loop Straps for Apple Watch" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Premium Magnetic Leather Loop Straps for Apple Watch" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/premium-magnetic-leather-loop-straps-for-apple-watch-copy-copy-3/yellow/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2201,8 +2207,8 @@
                   <a aria-label="Magnetic Loop Smartwatch Bands – Dual Color Edition" class="pop-slider-card"
                     href="product.html?id=9871022719274">
                     <div class="pop-slider-img-wrap">
-                      <img alt="Magnetic Loop Smartwatch Bands – Dual Color Edition" class="pop-slider-img"
-                        decoding="async" loading="eager"
+                      <img loading="lazy" alt="Magnetic Loop Smartwatch Bands – Dual Color Edition" class="pop-slider-img"
+                        decoding="async" loading="lazy"
                         src="assets/products/magnetic-loop-smartwatch-bands-dual-color-edition/orange-midnight-black/01_packshot.webp" />
                     </div>
                     <div class="pop-slider-info">
@@ -2231,8 +2237,8 @@
               <div class="pop-card-bg-wrap">
                 <picture>
                   <source srcset="assets/popular_choice/card2_watch_bands_clean.webp" type="image/webp" />
-                  <img alt="Apple Watch ribbed tan leather link band" class="popular-card-img" decoding="async"
-                    loading="eager" src="assets/popular_choice/card2_watch_bands_clean.webp" />
+                  <img loading="lazy" alt="Apple Watch ribbed tan leather link band" class="popular-card-img" decoding="async"
+                    loading="lazy" src="assets/popular_choice/card2_watch_bands_clean.webp" />
                 </picture>
               </div>
               <div class="pop-card-top-bar">
@@ -2264,8 +2270,8 @@
         <div class="story-video-banner" id="storyVideoBanner">
           <!-- Background Video & Atmospheric Backdrop -->
           <div class="story-banner-media">
-            <video autoplay="" class="story-bg-video" id="storyBgVideo" loop="" muted="" playsinline=""
-              poster="assets/story/story_cases_backdrop.jpg?v=20261102_nocut_v1" preload="auto">
+            <video class="story-bg-video" id="storyBgVideo" loop="" muted="" playsinline=""
+              poster="assets/story/story_cases_backdrop.jpg?v=20261102_nocut_v1" preload="none">
               <source src="assets/story/story_bg_video.mp4?v=20261102_nocut_v1" type="video/mp4" />
               <source src="assets/story/story_brand_cinematic.mp4" type="video/mp4" />
             </video>
@@ -2307,7 +2313,7 @@
             type="button">×</button>
           <div class="story-modal-video-wrap">
             <video class="story-modal-player" controls="" id="storyModalPlayer" playsinline=""
-              poster="assets/story/story_cases_backdrop.jpg?v=20261102_nocut_v1" preload="metadata">
+              poster="assets/story/story_cases_backdrop.jpg?v=20261102_nocut_v1" preload="none">
               <source src="assets/story/story_brand_cinematic.mp4" type="video/mp4" />
               <source src="assets/story/story_bg_video.mp4?v=20261102_nocut_v1" type="video/mp4" />
               Your browser does not support the video tag.
@@ -2327,7 +2333,7 @@
           <!-- Stage Visual Showcase: 3D Trio Advertisement Composition -->
           <div class="fl-stage-media-wrap" id="flStageMediaWrap">
             <!-- Photorealistic Neoclassical Stone Arch Podium Background -->
-            <img alt="" aria-hidden="true" class="fl-stage-bg-img" decoding="async" fetchpriority="high" loading="eager"
+            <img alt="" aria-hidden="true" class="fl-stage-bg-img" decoding="async" fetchpriority="high" loading="lazy"
               onerror="this.style.visibility='hidden'"
               src="assets/frameless_stage_bg.webp?v=20261102_cleansky_v1" />
             <!-- Real GPU-Accelerated 3D WebGL Canvas for all 3 Models -->
@@ -2335,7 +2341,7 @@
             <!-- Instant Preload Fallback Composite (Pre-rendered advertising plate) -->
             <picture class="fl-stage-fallback-ad">
               <source srcset="assets/frameless_stage_ad.webp?v=20261102_cleansky_v1" type="image/webp" />
-              <img alt="" aria-hidden="true" class="fl-stage-media-img" decoding="async" loading="eager"
+              <img alt="" aria-hidden="true" class="fl-stage-media-img" decoding="async" loading="lazy"
                 onerror="this.style.visibility='hidden'"
                 src="assets/frameless_stage_ad.webp?v=20261102_cleansky_v1" />
             </picture>
@@ -2448,13 +2454,13 @@
               </div>
               <div class="fl-offer-social">
                 <div class="fl-avatars-cluster">
-                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="eager"
+                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="lazy"
                     src="assets/avatars/buyer_1.webp" width="34" />
-                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="eager"
+                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="lazy"
                     src="assets/avatars/buyer_2.webp" width="34" />
-                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="eager"
+                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="lazy"
                     src="assets/avatars/buyer_3.webp" width="34" />
-                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="eager"
+                  <img alt="Verified customer" class="fl-avatar-circle" decoding="async" height="34" loading="lazy"
                     src="assets/avatars/buyer_4.webp" width="34" />
                   <span class="fl-avatar-counter">+10K</span>
                 </div>
@@ -2498,7 +2504,7 @@
             <div class="fl-card-media">
               <picture>
                 <source srcset="assets/fl_card_bezel_clean.webp" type="image/webp" />
-                <img alt="Raised Lens Bezel" class="fl-media-img" decoding="async" loading="eager"
+                <img alt="Raised Lens Bezel" class="fl-media-img" decoding="async" loading="lazy"
                   src="assets/fl_card_bezel_clean.webp" />
               </picture>
             </div>
@@ -2519,7 +2525,7 @@
             <div class="fl-card-media">
               <picture>
                 <source srcset="assets/fl_card_profile_clean.webp" type="image/webp" />
-                <img alt="Ultra-Slim Profile" class="fl-media-img" decoding="async" loading="eager"
+                <img alt="Ultra-Slim Profile" class="fl-media-img" decoding="async" loading="lazy"
                   src="assets/fl_card_profile_clean.webp" />
               </picture>
             </div>
@@ -2540,7 +2546,7 @@
             <div class="fl-card-media">
               <picture>
                 <source srcset="assets/fl_card_bumper_clean.webp" type="image/webp" />
-                <img alt="Shock-Absorbing Bumper" class="fl-media-img" decoding="async" loading="eager"
+                <img alt="Shock-Absorbing Bumper" class="fl-media-img" decoding="async" loading="lazy"
                   src="assets/fl_card_bumper_clean.webp" />
               </picture>
             </div>
@@ -2569,7 +2575,7 @@
         <div aria-hidden="true" class="combo-stage-visual">
           <picture>
             <source srcset="assets/combo/combo_master_stage.webp" type="image/webp" />
-            <img alt="" class="combo-stage-img" decoding="async" fetchpriority="high" loading="eager"
+            <img alt="" class="combo-stage-img" decoding="async" fetchpriority="high" loading="lazy"
               src="assets/combo/combo_master_stage.webp" />
           </picture>
         </div>
@@ -2712,8 +2718,8 @@
               <source media="(max-width: 768px)" srcset="assets/hardware_banner_mob.jpg?v=20261102_v1"
                 type="image/jpeg" />
               <source srcset="assets/hardware_banner_pc.webp?v=20261102_v1" type="image/webp" />
-              <img alt="Covertok Tempered Glass &amp; Aluminum Mobile Stands" class="hardware-banner-img"
-                decoding="async" loading="eager" src="assets/hardware_banner_pc.webp?v=20261102_v1" />
+              <img loading="lazy" alt="Covertok Tempered Glass &amp; Aluminum Mobile Stands" class="hardware-banner-img"
+                decoding="async" loading="lazy" src="assets/hardware_banner_pc.webp?v=20261102_v1" />
             </picture>
             <div class="hardware-banner-overlay">
               <div class="hardware-banner-badge">DAILY TECH ESSENTIALS</div>
@@ -2741,8 +2747,8 @@
                 href="product.html?id=9875597623594">
                 <picture>
                   <source srcset="assets/essentials/tempered_glass_hd.webp" type="image/webp" />
-                  <img alt="HD Sapphire Tempered Glass Screen Protector with Auto-Alignment Kit"
-                    class="hardware-card-img" decoding="async" loading="eager"
+                  <img loading="lazy" alt="HD Sapphire Tempered Glass Screen Protector with Auto-Alignment Kit"
+                    class="hardware-card-img" decoding="async" loading="lazy"
                     src="assets/essentials/tempered_glass_hd.webp" />
                 </picture>
                 <span class="hardware-discount-pill">-30%</span>
@@ -2770,8 +2776,8 @@
                 href="product.html?id=9875054297386">
                 <picture>
                   <source srcset="assets/essentials/tempered_glass_privacy.webp" type="image/webp" />
-                  <img alt="Frosted Privacy Tempered Glass with 28° Anti-Spy Shield" class="hardware-card-img"
-                    decoding="async" loading="eager" src="assets/essentials/tempered_glass_privacy.webp" />
+                  <img loading="lazy" alt="Frosted Privacy Tempered Glass with 28° Anti-Spy Shield" class="hardware-card-img"
+                    decoding="async" loading="lazy" src="assets/essentials/tempered_glass_privacy.webp" />
                 </picture>
                 <span class="hardware-discount-pill">-33%</span>
               </a>
@@ -2798,8 +2804,8 @@
                 href="product.html?id=9851843182890">
                 <picture>
                   <source srcset="assets/essentials/mobile_stand_aluminum.webp" type="image/webp" />
-                  <img alt="Foldable Aerospace Aluminum Dual-Hinge Mobile Desk Stand" class="hardware-card-img"
-                    decoding="async" loading="eager" src="assets/essentials/mobile_stand_aluminum.webp" />
+                  <img loading="lazy" alt="Foldable Aerospace Aluminum Dual-Hinge Mobile Desk Stand" class="hardware-card-img"
+                    decoding="async" loading="lazy" src="assets/essentials/mobile_stand_aluminum.webp" />
                 </picture>
                 <span class="hardware-discount-pill">-41%</span>
               </a>
@@ -2826,8 +2832,8 @@
                 href="product.html?id=10017625375018">
                 <picture>
                   <source srcset="assets/essentials/magnetic_mount_studio.webp" type="image/webp" />
-                  <img alt="Magnetic 360° Rotating Mobile Desk Mount &amp; Adsorption Stand" class="hardware-card-img"
-                    decoding="async" loading="eager" src="assets/essentials/magnetic_mount_studio.webp" />
+                  <img loading="lazy" alt="Magnetic 360° Rotating Mobile Desk Mount &amp; Adsorption Stand" class="hardware-card-img"
+                    decoding="async" loading="lazy" src="assets/essentials/magnetic_mount_studio.webp" />
                 </picture>
                 <span class="hardware-discount-pill">-46%</span>
               </a>
@@ -2868,8 +2874,8 @@
         <div class="dual-cards-row">
           <div class="promo-card promo-card-photo">
             <div class="showcase-photo-box">
-              <img alt="Three stylish artist designed iPhone cases on table" class="showcase-photo-img" decoding="async"
-                loading="eager" src="assets/shop_showcase_cases.webp?v=20261104_ultra_hd_v1" />
+              <img loading="lazy" alt="Three stylish artist designed iPhone cases on table" class="showcase-photo-img" decoding="async"
+                loading="lazy" src="assets/shop_showcase_cases.webp?v=20261104_ultra_hd_v1" />
               <div class="showcase-photo-actions">
                 <a class="showcase-action-btn btn-dark" href="collections.html">SHOP NOW</a>
                 <a class="showcase-action-btn btn-light" href="collections.html">VIEW ALL <svg fill="none" height="14"
@@ -2922,13 +2928,13 @@
             <div class="instagram-card-media">
               <picture>
                 <source srcset="assets/instagram/card_01_magsafe_clear.webp" type="image/webp" />
-                <img alt="Clear MagSafe Case held by @style.withme" class="instagram-card-img" decoding="async"
-                  loading="eager" src="assets/instagram/card_01_magsafe_clear.webp" />
+                <img loading="lazy" alt="Clear MagSafe Case held by @style.withme" class="instagram-card-img" decoding="async"
+                  loading="lazy" src="assets/instagram/card_01_magsafe_clear.webp" />
               </picture>
               <div aria-hidden="true" class="instagram-card-gradient"></div>
             </div>
             <div class="instagram-user-header">
-              <img alt="@style.withme avatar" class="instagram-avatar" decoding="async" loading="eager"
+              <img alt="@style.withme avatar" class="instagram-avatar" decoding="async" loading="lazy"
                 src="assets/instagram/avatars/avatar_1.webp" />
               <div class="instagram-user-meta">
                 <span class="instagram-handle">@style.withme</span>
@@ -2945,13 +2951,13 @@
             <div class="instagram-card-media">
               <picture>
                 <source srcset="assets/instagram/card_02_leather_wallets.webp" type="image/webp" />
-                <img alt="Leather Wallet Card Holders held by @minimal.finds" class="instagram-card-img"
-                  decoding="async" loading="eager" src="assets/instagram/card_02_leather_wallets.webp" />
+                <img loading="lazy" alt="Leather Wallet Card Holders held by @minimal.finds" class="instagram-card-img"
+                  decoding="async" loading="lazy" src="assets/instagram/card_02_leather_wallets.webp" />
               </picture>
               <div aria-hidden="true" class="instagram-card-gradient"></div>
             </div>
             <div class="instagram-user-header">
-              <img alt="@minimal.finds avatar" class="instagram-avatar" decoding="async" loading="eager"
+              <img alt="@minimal.finds avatar" class="instagram-avatar" decoding="async" loading="lazy"
                 src="assets/instagram/avatars/avatar_2.webp" />
               <div class="instagram-user-meta">
                 <span class="instagram-handle">@minimal.finds</span>
@@ -2968,13 +2974,13 @@
             <div class="instagram-card-media">
               <picture>
                 <source srcset="assets/instagram/card_03_leopard_case.webp" type="image/webp" />
-                <img alt="Leopard Print Case held by @that_girl.diaries" class="instagram-card-img" decoding="async"
-                  loading="eager" src="assets/instagram/card_03_leopard_case.webp" />
+                <img loading="lazy" alt="Leopard Print Case held by @that_girl.diaries" class="instagram-card-img" decoding="async"
+                  loading="lazy" src="assets/instagram/card_03_leopard_case.webp" />
               </picture>
               <div aria-hidden="true" class="instagram-card-gradient"></div>
             </div>
             <div class="instagram-user-header">
-              <img alt="@that_girl.diaries avatar" class="instagram-avatar" decoding="async" loading="eager"
+              <img alt="@that_girl.diaries avatar" class="instagram-avatar" decoding="async" loading="lazy"
                 src="assets/instagram/avatars/avatar_3.webp" />
               <div class="instagram-user-meta">
                 <span class="instagram-handle">@that_girl.diaries</span>
@@ -2991,13 +2997,13 @@
             <div class="instagram-card-media">
               <picture>
                 <source srcset="assets/instagram/card_04_silver_bow_charm.webp" type="image/webp" />
-                <img alt="Silver Bow Beaded Phone Charm held by @aesthetic.corner" class="instagram-card-img"
-                  decoding="async" loading="eager" src="assets/instagram/card_04_silver_bow_charm.webp" />
+                <img loading="lazy" alt="Silver Bow Beaded Phone Charm held by @aesthetic.corner" class="instagram-card-img"
+                  decoding="async" loading="lazy" src="assets/instagram/card_04_silver_bow_charm.webp" />
               </picture>
               <div aria-hidden="true" class="instagram-card-gradient"></div>
             </div>
             <div class="instagram-user-header">
-              <img alt="@aesthetic.corner avatar" class="instagram-avatar" decoding="async" loading="eager"
+              <img alt="@aesthetic.corner avatar" class="instagram-avatar" decoding="async" loading="lazy"
                 src="assets/instagram/avatars/avatar_4.webp" />
               <div class="instagram-user-meta">
                 <span class="instagram-handle">@aesthetic.corner</span>
@@ -3033,7 +3039,7 @@
             </div>
             <!-- Active Main Photo Display -->
             <div class="modal-main-view">
-              <img alt="Clear MagSafe Case" class="modal-main-img" decoding="async" id="modalMainImg" loading="eager"
+              <img alt="Clear MagSafe Case" class="modal-main-img" decoding="async" id="modalMainImg" loading="lazy"
                 src="assets/instagram/modal/view_01_lifestyle.webp" />
             </div>
           </div>
@@ -3306,13 +3312,13 @@
               data-handle="@covertokofficial" data-product="Leather Magnetic Armor Case" data-video-index="0"
               role="button" tabindex="0">
               <div class="video-media-slot">
-                <video autoplay="" class="video-card-inline-player" loop="" muted="" playsinline=""
-                  poster="assets/community_videos/thumb_video_77302.webp" preload="auto"
+                <video class="video-card-inline-player" loop="" muted="" playsinline=""
+                  poster="assets/community_videos/thumb_video_77302.webp" preload="none"
                   src="assets/community_videos/video_77302.mp4" webkit-playsinline=""></video>
                 <span class="video-duration-badge">00:53</span>
                 <div class="video-card-overlay">
                   <div class="video-creator-meta">
-                    <img alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
+                    <img loading="lazy" alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
                       src="assets/covertok-crest-logo.webp?v=20261125_tc" />
                     <div class="creator-info">
                       <span class="creator-handle">@covertokofficial</span>
@@ -3327,13 +3333,13 @@
               data-handle="@covertokofficial" data-product="Titanium Bezel Frameless Case" data-video-index="1"
               role="button" tabindex="0">
               <div class="video-media-slot">
-                <video autoplay="" class="video-card-inline-player" loop="" muted="" playsinline=""
-                  poster="assets/community_videos/thumb_video_77301.webp" preload="auto"
+                <video class="video-card-inline-player" loop="" muted="" playsinline=""
+                  poster="assets/community_videos/thumb_video_77301.webp" preload="none"
                   src="assets/community_videos/video_77301.mp4" webkit-playsinline=""></video>
                 <span class="video-duration-badge">00:25</span>
                 <div class="video-card-overlay">
                   <div class="video-creator-meta">
-                    <img alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
+                    <img loading="lazy" alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
                       src="assets/covertok-crest-logo.webp?v=20261125_tc" />
                     <div class="creator-info">
                       <span class="creator-handle">@covertokofficial</span>
@@ -3348,13 +3354,13 @@
               data-handle="@covertokofficial" data-product="Gradient Wave Aesthetic Cover" data-video-index="2"
               role="button" tabindex="0">
               <div class="video-media-slot">
-                <video autoplay="" class="video-card-inline-player" loop="" muted="" playsinline=""
-                  poster="assets/community_videos/thumb_video_77299.webp" preload="auto"
+                <video class="video-card-inline-player" loop="" muted="" playsinline=""
+                  poster="assets/community_videos/thumb_video_77299.webp" preload="none"
                   src="assets/community_videos/video_77299.mp4" webkit-playsinline=""></video>
                 <span class="video-duration-badge">00:09</span>
                 <div class="video-card-overlay">
                   <div class="video-creator-meta">
-                    <img alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
+                    <img loading="lazy" alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
                       src="assets/covertok-crest-logo.webp?v=20261125_tc" />
                     <div class="creator-info">
                       <span class="creator-handle">@covertokofficial</span>
@@ -3369,13 +3375,13 @@
               data-handle="@covertokofficial" data-product="Transparent Shockproof MagSafe Armor" data-video-index="3"
               role="button" tabindex="0">
               <div class="video-media-slot">
-                <video autoplay="" class="video-card-inline-player" loop="" muted="" playsinline=""
-                  poster="assets/community_videos/thumb_video_77305.webp" preload="auto"
+                <video class="video-card-inline-player" loop="" muted="" playsinline=""
+                  poster="assets/community_videos/thumb_video_77305.webp" preload="none"
                   src="assets/community_videos/video_77305.mp4" webkit-playsinline=""></video>
                 <span class="video-duration-badge">00:13</span>
                 <div class="video-card-overlay">
                   <div class="video-creator-meta">
-                    <img alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
+                    <img loading="lazy" alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
                       src="assets/covertok-crest-logo.webp?v=20261125_tc" />
                     <div class="creator-info">
                       <span class="creator-handle">@covertokofficial</span>
@@ -3390,13 +3396,13 @@
               data-handle="@covertokofficial" data-product="Card-Sized Magnetic Power Bank" data-video-index="4"
               role="button" tabindex="0">
               <div class="video-media-slot">
-                <video autoplay="" class="video-card-inline-player" loop="" muted="" playsinline=""
-                  poster="assets/community_videos/thumb_video_77298.webp" preload="auto"
+                <video class="video-card-inline-player" loop="" muted="" playsinline=""
+                  poster="assets/community_videos/thumb_video_77298.webp" preload="none"
                   src="assets/community_videos/video_77298.mp4" webkit-playsinline=""></video>
                 <span class="video-duration-badge">00:59</span>
                 <div class="video-card-overlay">
                   <div class="video-creator-meta">
-                    <img alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
+                    <img loading="lazy" alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
                       src="assets/covertok-crest-logo.webp?v=20261125_tc" />
                     <div class="creator-info">
                       <span class="creator-handle">@covertokofficial</span>
@@ -3411,13 +3417,13 @@
               data-handle="@covertokofficial" data-product="Trendsetting Aesthetic Covers" data-video-index="5"
               role="button" tabindex="0">
               <div class="video-media-slot">
-                <video autoplay="" class="video-card-inline-player" loop="" muted="" playsinline=""
-                  poster="assets/community_videos/thumb_video_77297.webp" preload="auto"
+                <video class="video-card-inline-player" loop="" muted="" playsinline=""
+                  poster="assets/community_videos/thumb_video_77297.webp" preload="none"
                   src="assets/community_videos/video_77297.mp4" webkit-playsinline=""></video>
                 <span class="video-duration-badge">00:16</span>
                 <div class="video-card-overlay">
                   <div class="video-creator-meta">
-                    <img alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
+                    <img loading="lazy" alt="@covertokofficial avatar" class="creator-avatar" decoding="async"
                       src="assets/covertok-crest-logo.webp?v=20261125_tc" />
                     <div class="creator-info">
                       <span class="creator-handle">@covertokofficial</span>
@@ -3522,7 +3528,7 @@
               <div class="review-item-card">
                 <div class="review-card-header">
                   <div class="reviewer-meta">
-                    <img alt="Harshit P." class="reviewer-avatar" decoding="async" loading="eager"
+                    <img alt="Harshit P." class="reviewer-avatar" decoding="async" loading="lazy"
                       src="assets/instagram/avatars/avatar_1.webp" />
                     <div class="reviewer-identity">
                       <div class="reviewer-name-wrap">
@@ -3544,15 +3550,15 @@
                 <!-- Customer Photo Strip -->
                 <div class="review-photo-strip">
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77302.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77298.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/instagram/modal/view_01_lifestyle.webp" />
                   </div>
                 </div>
@@ -3572,7 +3578,7 @@
               <div class="review-item-card">
                 <div class="review-card-header">
                   <div class="reviewer-meta">
-                    <img alt="Aarav K." class="reviewer-avatar" decoding="async" loading="eager"
+                    <img alt="Aarav K." class="reviewer-avatar" decoding="async" loading="lazy"
                       src="assets/instagram/avatars/avatar_style_withme.webp" />
                     <div class="reviewer-identity">
                       <div class="reviewer-name-wrap">
@@ -3595,15 +3601,15 @@
                 <!-- Customer Photo Strip -->
                 <div class="review-photo-strip">
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77301.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77305.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/instagram/modal/view_02_camera.webp" />
                   </div>
                 </div>
@@ -3623,7 +3629,7 @@
               <div class="review-item-card">
                 <div class="review-card-header">
                   <div class="reviewer-meta">
-                    <img alt="Kabir A." class="reviewer-avatar" decoding="async" loading="eager"
+                    <img alt="Kabir A." class="reviewer-avatar" decoding="async" loading="lazy"
                       src="assets/instagram/avatars/avatar_minimal_finds.webp" />
                     <div class="reviewer-identity">
                       <div class="reviewer-name-wrap">
@@ -3645,15 +3651,15 @@
                 <!-- Customer Photo Strip -->
                 <div class="review-photo-strip">
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77299.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77297.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/instagram/modal/view_03_flatlay.webp" />
                   </div>
                 </div>
@@ -3673,7 +3679,7 @@
               <div class="review-item-card">
                 <div class="review-card-header">
                   <div class="reviewer-meta">
-                    <img alt="Shalini R." class="reviewer-avatar" decoding="async" loading="eager"
+                    <img alt="Shalini R." class="reviewer-avatar" decoding="async" loading="lazy"
                       src="assets/instagram/avatars/avatar_that_girl_diaries.webp" />
                     <div class="reviewer-identity">
                       <div class="reviewer-name-wrap">
@@ -3696,15 +3702,15 @@
                 <!-- Customer Photo Strip -->
                 <div class="review-photo-strip">
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77297.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77301.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/instagram/card_01_magsafe_clear.webp" />
                   </div>
                 </div>
@@ -3724,7 +3730,7 @@
               <div class="review-item-card">
                 <div class="review-card-header">
                   <div class="reviewer-meta">
-                    <img alt="Shan p." class="reviewer-avatar" decoding="async" loading="eager"
+                    <img alt="Shan p." class="reviewer-avatar" decoding="async" loading="lazy"
                       src="assets/instagram/avatars/avatar_aesthetic_corner.webp" />
                     <div class="reviewer-identity">
                       <div class="reviewer-name-wrap">
@@ -3746,11 +3752,11 @@
                 <!-- Customer Photo Strip -->
                 <div class="review-photo-strip">
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77301.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77305.webp" />
                   </div>
                 </div>
@@ -3770,7 +3776,7 @@
               <div class="review-item-card">
                 <div class="review-card-header">
                   <div class="reviewer-meta">
-                    <img alt="Dr. M S." class="reviewer-avatar" decoding="async" loading="eager"
+                    <img alt="Dr. M S." class="reviewer-avatar" decoding="async" loading="lazy"
                       src="assets/instagram/avatars/avatar_4.webp" />
                     <div class="reviewer-identity">
                       <div class="reviewer-name-wrap">
@@ -3793,11 +3799,11 @@
                 <!-- Customer Photo Strip -->
                 <div class="review-photo-strip">
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77305.webp" />
                   </div>
                   <div class="review-photo-slot">
-                    <img alt="Covertok customer review item" decoding="async" loading="eager"
+                    <img alt="Covertok customer review item" decoding="async" loading="lazy"
                       src="assets/community_videos/thumb_video_77302.webp" />
                   </div>
                 </div>
@@ -3839,7 +3845,7 @@
         <div class="footer-col col-brand-newsletter">
           <div class="footer-logo-wrap" style="margin-bottom: 16px;">
             <a href="index.html" aria-label="Covertok Home">
-              <img src="assets/covertok_logo_horizontal_white.webp?v=20261125_tc" alt="Covertok"
+              <img loading="lazy" src="assets/covertok_logo_horizontal_white.webp?v=20261125_tc" alt="Covertok"
                 class="footer-brand-logo-img"
                 style="height: 38px; width: auto; max-width: 180px; object-fit: contain; display: block; opacity: 0.95;">
             </a>
@@ -4198,7 +4204,7 @@
     <div class="community-reel-dialog">
       <div class="community-reel-top-bar">
         <div class="community-reel-creator">
-          <img alt="@covertokofficial logo" class="community-reel-creator-avatar" decoding="async"
+          <img loading="lazy" alt="@covertokofficial logo" class="community-reel-creator-avatar" decoding="async"
             src="assets/covertok-crest-logo.webp?v=20261125_tc" />
           <span class="community-reel-creator-handle">@covertokofficial</span>
         </div>
@@ -4207,7 +4213,7 @@
       </div>
       <div class="community-reel-player-wrap">
         <video class="community-reel-player" controls="" id="communityReelPlayer" loop="" playsinline=""
-          preload="metadata">
+          preload="none">
           <source src="assets/community_videos/video_77302.mp4" type="video/mp4" />
 
           Your browser does not support the video tag.
@@ -4232,24 +4238,24 @@
     </div>
   </div>
   <div id="storeSharedModalsMount"></div>
-  <script src="assets/products_data.js?v=20261126_v39_acc_75_showcase"></script>
-  <script src="assets/store_core.js?v=20261117_v25"></script>
-  <script src="assets/store_modals.js?v=20261117_v25"></script>
-  <script src="assets/store_flows.js?v=20261117_v25"></script>
-  <script src="assets/bestseller_controller.js?v=20261117_v25"></script>
-  <script src="assets/popular_choices_controller.js"></script>
-  <script src="assets/story_controller.js"></script>
-  <script src="assets/instagram_controller.js?v=20261117_v25"></script>
-  <script src="assets/community_reviews_controller.js?v=20261117_v25"></script>
-  <script src="assets/hero_hand_slideshow.js?v=20261117_v25"></script>
-  <script src="assets/hero_window_fitter.js?v=20261126_v42"></script>
-  <script src="app.js?v=20261117_v25"></script>
-  <script src="assets/home_products.js"></script>
-  <script src="assets/trending_drops_controller.js"></script>
-  <script src="assets/infinite_row_controller.js?v=20261126_inf_swipe_v2"></script>
+  <script defer="" src="assets/products_data.js?v=20261126_v39_acc_75_showcase"></script>
+  <script defer="" src="assets/store_core.js?v=20261117_v25"></script>
+  <script defer="" src="assets/store_modals.js?v=20261117_v25"></script>
+  <script defer="" src="assets/store_flows.js?v=20261117_v25"></script>
+  <script defer="" src="assets/bestseller_controller.js?v=20261117_v25"></script>
+  <script defer="" src="assets/popular_choices_controller.js"></script>
+  <script defer="" src="assets/story_controller.js"></script>
+  <script defer="" src="assets/instagram_controller.js?v=20261117_v25"></script>
+  <script defer="" src="assets/community_reviews_controller.js?v=20261117_v25"></script>
+  <script defer="" src="assets/hero_hand_slideshow.js?v=20261117_v25"></script>
+  <script defer="" src="assets/hero_window_fitter.js?v=20261126_v42"></script>
+  <script defer="" src="app.js?v=20261117_v25"></script>
+  <script defer="" src="assets/home_products.js"></script>
+  <script defer="" src="assets/trending_drops_controller.js"></script>
+  <script defer="" src="assets/infinite_row_controller.js?v=20261126_inf_swipe_v2"></script>
   <!-- Real 3D GPU-Accelerated Interactive Exploded & Assembled Showcase -->
-  <script src="assets/three.min.js"></script>
-  <script src="webgl_stage_ad.js?v=20261127_v26"></script>
+  <script defer="" src="assets/three.min.js"></script>
+  <script defer="" src="webgl_stage_ad.js?v=20261127_v26"></script>
   <!-- Global Product Color Swatches & Quick Add Delegator -->
   <script>
     // Universal Product Card Color Swatch Controller (Instant Click & Hover Preview)

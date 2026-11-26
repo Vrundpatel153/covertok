@@ -10,17 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalBackdrop = document.getElementById('storyModalBackdrop');
   const modalPlayer = document.getElementById('storyModalPlayer');
 
-  // Attempt smooth background video playback with IntersectionObserver
+  // Lazy-load & smoothly play background video only when scrolled near viewport
   if (storyBgVideo) {
     storyBgVideo.muted = true;
     storyBgVideo.playsInline = true;
     const tryPlay = () => {
+      if (storyBgVideo.preload === 'none') {
+        storyBgVideo.preload = 'metadata';
+      }
       const playPromise = storyBgVideo.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {});
       }
     };
-    tryPlay();
 
     if ('IntersectionObserver' in window) {
       const banner = document.getElementById('storyVideoBanner');
@@ -33,9 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
               storyBgVideo.pause();
             }
           });
-        }, { threshold: 0.1 });
+        }, { rootMargin: '300px 0px', threshold: 0.01 });
         observer.observe(banner);
       }
+    } else {
+      tryPlay();
     }
   }
 

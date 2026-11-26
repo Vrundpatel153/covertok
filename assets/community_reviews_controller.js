@@ -5,24 +5,34 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Ensure all inline card videos play continuously without pause
+  // Lazy-play inline card videos only when scrolled near viewport
   const inlineCardVideos = document.querySelectorAll('.video-card-inline-player');
-  inlineCardVideos.forEach(v => {
+  const tryPlayVideo = (v) => {
     v.muted = true;
     v.setAttribute('muted', '');
     v.setAttribute('playsinline', '');
-    const tryPlay = () => {
-      const p = v.play();
-      if (p !== undefined) {
-        p.catch(() => {
-          // Fallback if browser requires interaction
-          window.addEventListener('click', () => v.play(), { once: true });
-          window.addEventListener('touchstart', () => v.play(), { once: true });
-        });
-      }
-    };
-    tryPlay();
-  });
+    if (v.preload === 'none') v.preload = 'metadata';
+    const p = v.play();
+    if (p !== undefined) p.catch(() => { });
+  };
+  if ('IntersectionObserver' in window && inlineCardVideos.length > 0) {
+    const vidObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (entry.isIntersecting) {
+          tryPlayVideo(v);
+        } else {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '250px 0px', threshold: 0.01 });
+    inlineCardVideos.forEach(v => {
+      v.muted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      vidObserver.observe(v);
+    });
+  }
 
   // --------------------------------------------------------------------------
   // 1. Genuine Covertok Video Reels Data

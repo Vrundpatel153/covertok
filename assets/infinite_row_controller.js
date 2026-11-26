@@ -75,16 +75,31 @@
     track.insertBefore(beforeFrag, originals[0]);
     track.appendChild(afterFrag);
 
-    // Ensure cloned inline videos remain muted + looping cleanly
-    track.querySelectorAll('video').forEach((v) => {
+    // Ensure cloned inline videos remain muted + looping and lazy-play near viewport
+    const clonedVideos = track.querySelectorAll('video');
+    clonedVideos.forEach((v) => {
       v.muted = true;
       v.setAttribute('muted', '');
       v.setAttribute('playsinline', '');
       v.setAttribute('webkit-playsinline', '');
       v.setAttribute('loop', '');
-      const p = v.play();
-      if (p !== undefined) p.catch(() => { });
+      v.preload = 'none';
     });
+    if ('IntersectionObserver' in window && clonedVideos.length > 0) {
+      const rowVidObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const v = entry.target;
+          if (entry.isIntersecting) {
+            if (v.preload === 'none') v.preload = 'metadata';
+            const p = v.play();
+            if (p !== undefined) p.catch(() => { });
+          } else {
+            v.pause();
+          }
+        });
+      }, { rootMargin: '250px 0px', threshold: 0.01 });
+      clonedVideos.forEach((v) => rowVidObserver.observe(v));
+    }
 
     // Disable browser ghost-image / link-URL dragging inside track so card drags are 1:1 smooth
     track.querySelectorAll('a, img').forEach((el) => {
