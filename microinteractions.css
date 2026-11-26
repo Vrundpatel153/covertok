@@ -123,8 +123,7 @@ body.app-sheet-open {
 }
 
 /* Slide-In Drawer Overlay: Frosted Glass Scrim (Full definition in 15.2) */
-.app-drawer-overlay,
-.app-modal-overlay {
+.app-drawer-overlay {
   position: fixed;
   inset: 0;
   z-index: 10000;
@@ -132,6 +131,15 @@ body.app-sheet-open {
   padding: 0 !important;
   margin: 0 !important;
   overflow: hidden !important;
+}
+
+.app-modal-overlay {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 20px !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
 }
 
 /* Slide-In Sidebars / Drawers (Docked Luxury Drawer) */
@@ -1625,10 +1633,9 @@ body.app-sheet-open {
 .search-input-header {
   display: flex !important;
   align-items: center !important;
-  padding: 16px 16px 36px 16px !important;
-  background: #FAFAFB !important;
+  padding: 16px 20px !important;
   gap: 12px !important;
-  background: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
   border-bottom: 1px solid rgba(228, 228, 231, 0.7) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;

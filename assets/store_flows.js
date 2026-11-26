@@ -41,6 +41,16 @@
     const element = document.getElementById(cardOrDrawerId);
     if (!overlay) return;
 
+    // Prevent multiple stacked overlays/drawers from staying open together
+    document.querySelectorAll('.app-modal-overlay.active, .app-drawer-overlay.active, .search-modal-overlay.active').forEach(el => {
+      if (el.id !== overlayId) {
+        el.classList.remove('active', 'show', 'open');
+        el.setAttribute('aria-hidden', 'true');
+        const inner = el.querySelector('.active');
+        if (inner) inner.classList.remove('active');
+      }
+    });
+
     overlay.classList.add('active');
     overlay.setAttribute('aria-hidden', 'false');
     if (element) {
