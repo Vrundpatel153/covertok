@@ -367,9 +367,13 @@
       });
     }
 
-    // 3. Set Initial Color & Image (Default chosen color or requested variant)
+    // 3. Set Initial Color & Image (Default chosen color matching primary image or requested variant)
     const hasColors = product.colors && product.colors.length > 0;
-    selectedColor = hasColors ? product.colors[0] : null;
+    let defaultColor = null;
+    if (hasColors) {
+      defaultColor = (product.primary_image ? product.colors.find(c => c.image === product.primary_image) : null) || product.colors[0];
+    }
+    selectedColor = defaultColor;
 
     if (hasColors) {
       const urlParams = new URLSearchParams(window.location.search);
@@ -441,7 +445,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261127_v40_packshot_fix';
+    const v = '20261127_v41_swatch_fix';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 

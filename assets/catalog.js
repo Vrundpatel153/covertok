@@ -774,7 +774,15 @@
     card.setAttribute('data-id', product.id);
 
     const hasColors = product.colors && product.colors.length > 0;
-    const initialImg = (hasColors && product.colors[0].image) ? product.colors[0].image : (product.primary_image || '');
+    
+    // Globally match default color swatch to product's actual primary image
+    let defaultColorIdx = 0;
+    if (hasColors && product.primary_image) {
+      const matchIdx = product.colors.findIndex(c => c.image === product.primary_image);
+      if (matchIdx >= 0) defaultColorIdx = matchIdx;
+    }
+    const defaultColor = hasColors ? product.colors[defaultColorIdx] : null;
+    const initialImg = (defaultColor && defaultColor.image) ? defaultColor.image : (product.primary_image || '');
 
     // Clean Discount Pill Only (No arbitrary text labeling)
     let badgeHtml = '';
@@ -791,18 +799,18 @@
     // Cache buster to ensure clients and CDNs immediately receive freshly updated packshots
     const bustUrl = (u) => {
       if (!u) return '';
-      const v = '20261127_v40_packshot_fix';
+      const v = '20261127_v41_swatch_fix';
       return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
     };
 
-    // Color Swatches Palette: Strictly only show when product has multiple colors (> 1)
+    // Color Swatches Palette: Show for all products with colors (>= 1) so single-color items also display their luxury swatch
     let paletteHtml = '';
-    if (hasColors && product.colors.length > 1) {
+    if (hasColors && product.colors.length >= 1) {
       const cols = product.colors;
       const visible = cols.slice(0, 3);
       const remaining = cols.length - 3;
       const dots = visible.map((c, i) => `
-        <span class="color-dot ${i === 0 ? 'active' : ''}" 
+        <span class="color-dot ${i === defaultColorIdx ? 'active' : ''}" 
               style="background-color: ${c.hex || c.value || '#18181B'};" 
               title="${c.name}"
               ${c.image ? `data-color-img="${bustUrl(c.image)}"` : ''}></span>
