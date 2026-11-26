@@ -1,0 +1,156 @@
+[
+  {
+    "index": 1,
+    "id": "03_crystal_luxe_01_model",
+    "handle": "crystal-studded-luxe-case-orange",
+    "role": "01_model",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\01_03_crystal_luxe_01_model.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\crystal-studded-luxe-case-orange\\showcase\\01_model.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\crystal-studded-luxe-case-orange\\showcase\\01_model.png",
+    "size": 1254,
+    "prompt": "Authentic candid lifestyle portrait photograph in STRICT 1:1 SQUARE (1024x1024) of a stylish young woman holding the EXACT iPhone case shown in the attached reference photo:\n- CRITICAL PRODUCT FIDELITY: Hold the phone with the BACK OF THE CASE facing directly toward the camera (do NOT show the screen, and do NOT make the backplate black!). The backplate MUST be crystal-clear glossy TRANSPARENT acrylic over a clean silver/white iPhone back, featuring the exact orange electroplated perimeter frame, the exact row of sparkling white crystal rhinestones around the camera module bezel, and the exact open C-shaped silver/crystal rhinestone MagSafe ring with vertical alignment bar.\n- Human & Scene: Natural warm afternoon window light inside a serene beige minimalist living room or cafe. Realistic natural human skin texture with subtle pores, authentic hand grip, relaxed linen knitwear.\n- STRICTLY NO studio plastic glow, NO overlaid text, NO watermarks."
+  },
+  {
+    "index": 2,
+    "id": "05_leather_slim_01_model",
+    "handle": "premium-leather-finish-slim-case-with-metal-camera-ring",
+    "role": "01_model",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\02_05_leather_slim_01_model.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-leather-finish-slim-case-with-metal-camera-ring\\showcase\\01_model.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-leather-finish-slim-case-with-metal-camera-ring\\showcase\\01_model.png",
+    "size": 1254,
+    "prompt": "Authentic candid lifestyle portrait photograph in STRICT 1:1 SQUARE (1024x1024) of a well-dressed man in a charcoal knit polo holding an iPhone clad in the EXACT case shown in the attached reference photo:\n- CRITICAL PRODUCT FIDELITY: Hold the phone with the BACK OF THE CASE facing clearly toward the camera (do NOT show only the side or front screen!). Show the exact deep matte jet-black micro-grain pebbled vegan leather back with its crisp brushed silver CNC metallic camera bezel ring and silver triple-lens accent frame.\n- Scene & Realism: Warm architectural daylight in a modern walnut study, natural relaxed posture, unretouched human skin texture, sharp focus on the leather texture and metallic bezel.\n- STRICTLY NO watermarks, NO overlaid text."
+  },
+  {
+    "index": 3,
+    "id": "05_leather_slim_03_quality",
+    "handle": "premium-leather-finish-slim-case-with-metal-camera-ring",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\03_05_leather_slim_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-leather-finish-slim-case-with-metal-camera-ring\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-leather-finish-slim-case-with-metal-camera-ring\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio product photograph in STRICT 1:1 SQUARE (1024x1024) tightly cropped onto ONLY the upper camera corner and leather surface of the EXACT black iPhone case shown in the reference photo:\n- DO NOT show the full phone from afar! Fill 85% of the frame at an angled 45-degree macro zoom showing the machined silver aluminum raised camera lens ring bezel, fine-grain matte black vegan leather surface pores, and precision side edge chamfers on a clean light gray studio backdrop (#F4F4F5).\n- Sharp raking softbox lighting revealing crisp tactile leather grain and brushed metal sheen. Zero text overlays."
+  },
+  {
+    "index": 4,
+    "id": "06_aluminium_frame_01_model",
+    "handle": "aluminium-frame-transparent-case",
+    "role": "01_model",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\04_06_aluminium_frame_01_model.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\aluminium-frame-transparent-case\\showcase\\01_model.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\aluminium-frame-transparent-case\\showcase\\01_model.png",
+    "size": 1254,
+    "prompt": "Authentic candid lifestyle portrait photograph in STRICT 1:1 SQUARE (1024x1024) of a young man holding the EXACT Cosmic Orange iPhone case shown in the attached reference photo:\n- CRITICAL PRODUCT FIDELITY: The back of the case MUST face the camera cleanly and match 100%: a solid frosted matte warm-orange backplate framed by a sleek anodized metallic Cosmic Orange aluminum bumper and the distinctive full-width integrated orange aluminum camera island cover plate (DO NOT show a clear transparent silver iPhone back or black MagSafe ring lines!).\n- Human & Scene: Natural daylight studio loft / bright modern workspace, clean white tee under overshirt, natural skin texture and authentic hand grip.\n- Zero text overlays."
+  },
+  {
+    "index": 5,
+    "id": "09_bowknot_01_model",
+    "handle": "premium-bowknot-phone-case-with-detachable-pearl-bracelet",
+    "role": "01_model",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\05_09_bowknot_01_model.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-bowknot-phone-case-with-detachable-pearl-bracelet\\showcase\\01_model.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-bowknot-phone-case-with-detachable-pearl-bracelet\\showcase\\01_model.png",
+    "size": 1254,
+    "prompt": "Authentic candid lifestyle portrait photograph in STRICT 1:1 SQUARE (1024x1024) of a smiling woman in an ivory cream boucle coat holding an iPhone clad in the EXACT case shown in the attached reference photo:\n- CRITICAL PRODUCT FIDELITY: Hold the phone so the BACK OF THE CASE clearly faces the camera (NEVER show the front phone screen!). Match EVERY SINGLE DETAIL of the attached reference case: pebbled cream-ivory vegan leather back framed by a sleek black protective border, a 3D iridescent pearl-finish sculpted bow fixed on the upper center back, the vertical cream leather snap rivet tab near the bottom, and the attached large cream pearl beaded bracelet wristlet plus delicate gold wire bow charm dangling from the bottom gold clasp ring (DO NOT invent a fabric silk ribbon!).\n- Scene & Realism: Soft Paris street daylight, natural unretouched human skin texture, natural hand hold around the phone sides with pearl wrist strap draped lightly.\n- Zero overlaid text or logos."
+  },
+  {
+    "index": 6,
+    "id": "09_bowknot_03_quality",
+    "handle": "premium-bowknot-phone-case-with-detachable-pearl-bracelet",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\06_09_bowknot_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-bowknot-phone-case-with-detachable-pearl-bracelet\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\premium-bowknot-phone-case-with-detachable-pearl-bracelet\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio photograph in STRICT 1:1 SQUARE (1024x1024) zoomed closely onto the lower-center craftsmanship of the EXACT off-white leather bowknot phone case shown in the attached reference photo:\n- DO NOT show the full phone from far away! Fill 85% of the frame at an angled 45-degree studio macro angle showing the pebbled cream vegan leather grain, the lustrous 3D sculpted iridescent bow, the brushed gold snap rivet leather tab, and the gold clasp ring holding the creamy pearls and gold wire bow charm on a bright clean studio surface (#F5F5F7).\n- Crisp luxury jewelry-grade studio lighting, shallow depth of field, zero text."
+  },
+  {
+    "index": 7,
+    "id": "10_pastel_heart_05_marketing",
+    "handle": "pastel-heart-print-soft-silicone-phone-case",
+    "role": "05_marketing",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\07_10_pastel_heart_05_marketing.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\pastel-heart-print-soft-silicone-phone-case\\showcase\\05_marketing.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\pastel-heart-print-soft-silicone-phone-case\\showcase\\05_marketing.png",
+    "size": 1254,
+    "prompt": "Minimalist editorial overhead everyday-carry flatlay photograph in STRICT 1:1 SQUARE (1024x1024) featuring the EXACT IVORY / CREAM colored phone case shown in the attached reference photo:\n- CRITICAL COLOR MATCH: The case MUST remain soft IVORY CREAM matte silicone with tiny delicate muted taupe/silver micro-hearts printed evenly across the back (DO NOT change the case color to pink!).\n- Minimalist Props: Resting cleanly on warm sunlit cream travertine stone beside crisp white wireless earbuds, minimalist tortoise sunglasses, and a linen notebook edge.\n- Soft natural morning window shadows, realistic matte silicone texture, zero text banners."
+  },
+  {
+    "index": 8,
+    "id": "11_bear_crossbody_03_quality",
+    "handle": "luxury-quilted-crossbody-wallet-phone-case-copy-1",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\08_11_bear_crossbody_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\luxury-quilted-crossbody-wallet-phone-case-copy-1\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\luxury-quilted-crossbody-wallet-phone-case-copy-1\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio photograph in STRICT 1:1 SQUARE (1024x1024) tightly cropped onto the plush 3D teddy bear emblem and lower hardware of the EXACT cream phone case shown in the reference photo:\n- DO NOT show the full case and full long strap from afar! Fill 85% of the frame at a 45-degree angled macro studio shot highlighting the fluffy curly fleece 3D teddy bear stitched firmly onto the pebbled cream vegan leather back, plus the stitched card pocket tab and brushed gold D-ring lanyard hardware on clean off-white studio ground (#F6F6F7).\n- Rich tactile textile detail, crisp lighting, zero text overlays."
+  },
+  {
+    "index": 9,
+    "id": "14_smoky_matte_03_quality",
+    "handle": "trendy-graphic-phone-cases-copy",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\09_14_smoky_matte_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\trendy-graphic-phone-cases-copy\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\trendy-graphic-phone-cases-copy\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio photograph in STRICT 1:1 SQUARE (1024x1024) tightly cropped onto the upper camera corner and edge profile of the EXACT smoky translucent matte charcoal-black iPhone case shown in the reference photo:\n- DO NOT show the full upright phone from afar! Fill 85% of the frame at an angled 3/4 macro perspective showing the ultra-thin 0.8mm sandblasted smoky frosted surface, raised protective camera bezel lip around the dual lenses, subtle translucent Apple logo glimpse beneath, and tactile side buttons on a clean bright light gray studio backdrop (#F4F4F5).\n- Crisp Apple hardware photography style, zero text."
+  },
+  {
+    "index": 10,
+    "id": "17_caramel_bear_03_quality",
+    "handle": "luxury-quilted-crossbody-wallet-phone-case-copy",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\10_17_caramel_bear_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\luxury-quilted-crossbody-wallet-phone-case-copy\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\luxury-quilted-crossbody-wallet-phone-case-copy\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio photograph in STRICT 1:1 SQUARE (1024x1024) cropped closely onto the lower-right corner and fluffy bear keychain of the EXACT warm-tan caramel silicone iPhone case shown in the reference photo:\n- DO NOT show the full case from afar! Fill 85% of the frame at a 45-degree studio macro angle showing the smooth warm-tan matte silicone case body with clean black ink minimalist bear line-art, dark brown raised camera bumper edge, and the soft fluffy golden-brown plush teddy bear pom-pom charm resting cleanly beside the corner on a soft studio surface (#F6F6F7).\n- Rich plush fur texture, zero text."
+  },
+  {
+    "index": 11,
+    "id": "18_cream_wallet_chain_03_quality",
+    "handle": "silver-3d-love-heart-phone-case-copy",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\11_18_cream_wallet_chain_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\silver-3d-love-heart-phone-case-copy\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\silver-3d-love-heart-phone-case-copy\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio photograph in STRICT 1:1 SQUARE (1024x1024) cropped tightly onto the cognac leather mini-bag pocket flap, gold lock clasp, and pearl camera studs of the EXACT cream crossbody wallet iPhone case shown in the reference photo:\n- DO NOT show the full long chain from afar! Fill 85% of the frame at a 45-degree studio macro angle showcasing the stitched caramel-brown leather pocket flap, mirror-polished gold lock hardware, cream pebbled leather back, small twin pearl studs next to the camera, and gold woven leather-chain links on clean #F6F6F7 studio surface.\n- Razor-sharp stitching & metal reflections, zero text overlays."
+  },
+  {
+    "index": 12,
+    "id": "28_bumper_02_angle",
+    "handle": "bumper-case",
+    "role": "02_angle",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\12_28_bumper_02_angle.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\bumper-case\\showcase\\02_angle.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\bumper-case\\showcase\\02_angle.png",
+    "size": 1254,
+    "prompt": "Ultra-clean minimalist e-commerce 3/4 isometric studio angle product photograph in STRICT 1:1 SQUARE (1024x1024) of the EXACT Matte BLACK frameless modular bumper iPhone case shown in the attached reference photo:\n- CRITICAL COLOR FIDELITY: Show the MATTE JET BLACK anodized modular bumper case (matching the attached black iPhone 16 Pro Titanium Black back \u2014 DO NOT make it blue!).\n- Show a clean sleek 3/4 floating isometric view of the assembled slim black corner & camera armor bumper mounted snugly onto a matte Space Black iPhone over a pure solid #FFFFFF white studio background with crisp soft ground shadow.\n- Zero floating exploded arrows or text."
+  },
+  {
+    "index": 13,
+    "id": "28_bumper_03_quality",
+    "handle": "bumper-case",
+    "role": "03_quality",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\13_28_bumper_03_quality.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\bumper-case\\showcase\\03_quality.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\bumper-case\\showcase\\03_quality.png",
+    "size": 1254,
+    "prompt": "EXTREME TIGHT MACRO CLOSE-UP studio product photograph in STRICT 1:1 SQUARE (1024x1024) tightly cropped onto ONLY the upper camera bezel armor corner of the EXACT Matte BLACK frameless bumper iPhone case shown in the reference photo:\n- CRITICAL COLOR FIDELITY: MATTE JET BLACK corner guard & camera lens surround mounted on a dark Space Black titanium iPhone frame (DO NOT make it blue!).\n- Highlight the 2.5mm raised CNC black camera armor ring, bare uncovered titanium side rails, and shock-absorbing matte black corner lip on a clean light gray studio surface (#F4F4F5).\n- Ultra-sharp metallic and matte polymer textures, zero text."
+  },
+  {
+    "index": 14,
+    "id": "28_bumper_05_marketing",
+    "handle": "bumper-case",
+    "role": "05_marketing",
+    "ref_jpg": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\scripts\\temp_fidelity_refs\\14_28_bumper_05_marketing.jpg",
+    "out_webp": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\bumper-case\\showcase\\05_marketing.webp",
+    "out_png": "C:\\Users\\vrund\\OneDrive\\Desktop\\covertok\\covertok\\assets\\products\\bumper-case\\showcase\\05_marketing.png",
+    "size": 1254,
+    "prompt": "Minimalist luxury editorial overhead everyday-carry flatlay photograph in STRICT 1:1 SQUARE (1024x1024) featuring the EXACT Matte BLACK frameless modular bumper iPhone case shown in the attached reference photo:\n- CRITICAL COLOR FIDELITY: MATTE JET BLACK corner & camera-island bumper case on a dark Space Black iPhone (DO NOT make it blue!).\n- Scene: Clean architectural flatlay on light warm concrete/limestone desk surface beside a brushed titanium mechanical watch, black wireless earbuds case, and sleek metal pen in soft natural morning sunlight.\n- Crisp realistic materials and shadows, zero text overlays."
+  }
+]

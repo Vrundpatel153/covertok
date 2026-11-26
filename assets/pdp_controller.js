@@ -441,7 +441,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261125_v37_clean_pdp';
+    const v = '20261126_v38_fidelity_14';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 

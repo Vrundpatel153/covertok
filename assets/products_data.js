@@ -42880,8 +42880,7 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
         "price": 599,
         "image": "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
         "images": [
-          "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp",
-          "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/02_lifestyle.webp"
+          "assets/products/trendy-graphic-phone-cases-copy/cosmic-orange/01_packshot.webp"
         ],
         "value": "#FF6A3D"
       },
