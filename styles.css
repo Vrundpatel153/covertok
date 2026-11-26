@@ -54053,30 +54053,29 @@ body.home-page .hero-content {
 }
 
 .hardware-product-title {
-  margin: 0 0 6px 0 !important;
+  margin: 0 0 8px 0 !important;
   font-family: var(--font-heading, 'Manrope', sans-serif) !important;
-  font-size: 0.95rem !important;
+  font-size: 0.92rem !important;
   font-weight: 800 !important;
-  line-height: 1.35 !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
 }
 
 .hardware-product-title a {
+  display: block !important;
   color: #0A0A0C !important;
   text-decoration: none !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
   transition: color 0.2s ease !important;
 }
 
-.hardware-product-title a:hover {
-  color: #0A0A0C !important;
-}
-
 .hardware-product-features {
-  font-family: var(--font-body, 'Inter', sans-serif) !important;
-  font-size: 0.76rem !important;
-  color: #717584 !important;
-  line-height: 1.4 !important;
-  margin: 0 0 16px 0 !important;
-  flex-grow: 1 !important;
+  display: none !important;
 }
 
 .hardware-card-footer {
@@ -55194,10 +55193,25 @@ body.home-page .hero-content {
   }
 
   .hardware-product-title {
-    font-size: 0.78rem !important;
-    line-height: 1.25 !important;
-    min-height: 2.5em !important;
-    margin-bottom: 4px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.3 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 6px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .hardware-product-title a {
+    display: block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .hardware-product-features {
+    display: none !important;
   }
 
   .hardware-pricing-row {
@@ -55416,6 +55430,7 @@ body.home-page .hero-content {
 /* 1. Tighten Card Info Spacing (Eliminate big gaps under title) */
 .pop-slider-info,
 .drop-card-info,
+.hardware-card-info,
 .hardware-card-body,
 .col-prod-info {
   display: flex !important;
@@ -55429,6 +55444,19 @@ body.home-page .hero-content {
   margin-bottom: 6px !important;
   min-height: 0 !important;
   height: auto !important;
+}
+
+.hardware-product-title,
+.hardware-product-title a {
+  display: block !important;
+  width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.hardware-product-features {
+  display: none !important;
 }
 
 .pop-pricing-row,
