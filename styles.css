@@ -56455,7 +56455,7 @@ html body #siteHeader,
     position: relative !important;
     width: 100% !important;
     margin-top: -54px !important;
-    padding: clamp(8px, 0.85vw, 12px) clamp(10px, 1.2vw, 20px) clamp(10px, 1vw, 14px) !important;
+    padding: clamp(8px, 0.85vw, 12px) clamp(10px, 1.2vw, 20px) 16px !important;
     margin-bottom: 0 !important;
     display: block !important;
     background: var(--bg-stone, #FAF9F6) !important;
@@ -56465,9 +56465,9 @@ html body #siteHeader,
   }
 
   body.home-page .hero-card {
-    height: clamp(540px, calc(100vh - 58px), 780px) !important;
-    min-height: 540px !important;
-    max-height: 780px !important;
+    height: clamp(520px, calc(100vh - 96px), 740px) !important;
+    min-height: 520px !important;
+    max-height: 740px !important;
     clip-path: url(#heroCardClip) !important;
     -webkit-clip-path: url(#heroCardClip) !important;
   }
@@ -57072,15 +57072,11 @@ html body #siteHeader,
   padding-bottom: 32px !important;
 }
 
+.trending-drops-section,
 .bento-section,
 .popular-choices-section,
 .story-section {
   padding: 36px 0 !important;
-}
-
-.trending-drops-section,
-#trending-drops {
-  padding: 20px 0 36px !important;
 }
 
 /* Slide 2 & 3 Mobile Hero Banners: fill from bottom to preserve generous top headroom without gaps */
@@ -57627,23 +57623,78 @@ html body #siteHeader,
   }
 }
 
-/* Universal Native Vertical Scroll Guarantee on All Product Rows & Carousels */
+/* Universal 120Hz Smooth Horizontal Touch + Vertical Page Scroll Across ALL Slider Rows */
 .trending-drops-slider-wrap,
+.popular-slider-track,
+.videos-slider-wrapper,
+#reviewsTrack,
+.bento-reel-wrap,
+.hardware-grid,
+.bestseller-cards-viewport,
+.shelf-cards-row,
+.products-scroll-container,
+.product-slider-wrapper,
+#catalogNavBar {
+  touch-action: pan-x pan-y !important;
+  -webkit-overflow-scrolling: touch !important;
+  overscroll-behavior-x: contain !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.trending-drops-slider-wrap::-webkit-scrollbar,
+.popular-slider-track::-webkit-scrollbar,
+.videos-slider-wrapper::-webkit-scrollbar,
+#reviewsTrack::-webkit-scrollbar,
+.bento-reel-wrap::-webkit-scrollbar,
+.hardware-grid::-webkit-scrollbar,
+#catalogNavBar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.trending-drops-slider-wrap,
+.videos-slider-wrapper {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+.reviews-slider-wrap {
+  overflow: hidden !important;
+}
+
+#reviewsTrack {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  animation: none !important;
+  transform: none !important;
+}
+
 .trending-drops-grid,
 #trendingDropsTrack,
 .popular-slider-wrap,
-.popular-slider-track,
 .popular-row-covers,
 .popular-row-bands,
-.bestseller-cards-viewport,
 .bestseller-cards-track,
-.shelf-cards-row,
 #videosTrack,
-#reviewsTrack,
-.marquee-row-track,
-.products-scroll-container,
-.product-slider-wrapper {
-  touch-action: pan-y !important;
+.marquee-row-track {
+  touch-action: pan-x pan-y !important;
+  animation: none !important;
+}
+
+#trendingDropsTrack a,
+#trendingDropsTrack img,
+.popular-slider-track a,
+.popular-slider-track img,
+#videosTrack a,
+#videosTrack img,
+#reviewsTrack a,
+#reviewsTrack img {
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
 }
 
 /* ==========================================================================

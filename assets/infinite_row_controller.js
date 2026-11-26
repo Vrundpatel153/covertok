@@ -1,31 +1,16 @@
 /**
- * Covertok Ultra-Smooth Hardware-Accelerated Swipe Engine
- * High-performance, zero-lag, 60fps/120fps touch & mouse drag engine
- * across all product and review slider rows on the platform:
- *
- * 1. Curated Releases Spotlight Track (#trendingDropsTrack / .trending-drops-slider-wrap)
- * 2. Popular Choices Covers Track (.popular-row-covers .popular-slider-track)
- * 3. Popular Choices Watch Bands Track (.popular-row-bands .popular-slider-track)
- * 4. Community Video Reels Track (#videosTrack / .videos-slider-wrapper)
- * 5. Customer Reviews Track (#reviewsTrack / .reviews-slider-wrap)
- *
- * Provides:
- * - 120Hz Native Compositor Touch Scrolling on Mobile/Tablet (zero JS latency!)
- * - Frictionless Desktop Mouse Drag-to-Scroll with Natural Momentum & Velocity Gliding
- * - CSS Scroll-Snap start alignment (structured, clean, zero coordinate jitter)
- * - Intelligent Drag Discrimination (> 6px suppresses card links, direct clicks fire instantly)
- * - Precision Prev / Next Navigation Buttons with Smooth Boundary Wrap
- * - Native Trackpad & Shift+Wheel support
- * - Delegated Quick Add & Color Swatch Actions across all cards
+ * Covertok True-Infinite 120Hz Touch & Smooth Momentum Swipe Engine
+ * Ensures EVERY slider row across the platform is:
+ * - Truly infinitely scrollable in BOTH left & right directions (seamless 3x cloned track + 0ms teleport wrap)
+ * - Butter-smooth 120Hz native touch-swipeable (touch-action: pan-x pan-y, zero scroll-snap fight)
+ * - Effortlessly draggable with desktop mouse + natural inertia momentum decay + zero ghost-link drag
+ * - Fully interactive (clicks, color swatches, quick-add buttons, video lightbox, and arrow buttons)
  */
 
 (function () {
   'use strict';
 
-  /**
-   * Unified Smooth Swipe Row Controller
-   */
-  function makeSmoothSwipeRow(container, options = {}) {
+  function makeInfiniteSwipeRow(container, options = {}) {
     if (!container) return null;
 
     const track = options.track || container;
@@ -33,37 +18,65 @@
     const prevBtn = options.prevBtn || null;
     const nextBtn = options.nextBtn || null;
 
-    // 1. Remove legacy infinite clones so DOM is clean, fast, and 60fps
-    const legacyClones = track.querySelectorAll('[data-infinite-clone="true"]');
-    legacyClones.forEach(el => el.remove());
-
-    // 2. Hardware-accelerated CSS setup on container
-    container.style.overflowX = 'auto';
-    container.style.overflowY = 'hidden';
-    container.style.scrollBehavior = 'smooth';
-    container.style.webkitOverflowScrolling = 'touch';
-    container.style.scrollSnapType = 'x mandatory';
-    container.style.overscrollBehaviorX = 'contain';
-    container.style.touchAction = 'pan-x pan-y';
-    container.style.scrollbarWidth = 'none';
+    // 1. CSS setup: allow effortless native horizontal + vertical panning, instant 0ms loop resets
+    container.style.setProperty('overflow-x', 'auto', 'important');
+    container.style.setProperty('overflow-y', 'hidden', 'important');
+    container.style.setProperty('scroll-behavior', 'auto', 'important');
+    container.style.setProperty('scroll-snap-type', 'none', 'important');
+    container.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');
+    container.style.setProperty('overscroll-behavior-x', 'contain', 'important');
+    container.style.setProperty('touch-action', 'pan-x pan-y', 'important');
+    container.style.setProperty('scrollbar-width', 'none', 'important');
     container.style.cursor = 'grab';
 
-    // Reset any transform on track
-    track.style.transform = 'none';
-    track.style.willChange = 'auto';
-    track.style.animation = 'none';
+    track.style.setProperty('touch-action', 'pan-x pan-y', 'important');
+    track.style.setProperty('transform', 'none', 'important');
+    track.style.setProperty('animation', 'none', 'important');
 
-    // Ensure all child cards snap cleanly to start
-    const cards = track.querySelectorAll(cardSelector);
-    cards.forEach(card => {
-      card.style.scrollSnapAlign = 'start';
-      card.style.scrollSnapStop = 'normal';
+    // Clean any previous clones before rebuilding exact 3x track (Before + Originals + After)
+    track.querySelectorAll('[data-infinite-clone]').forEach(el => el.remove());
+
+    const originals = Array.from(track.querySelectorAll(cardSelector));
+    if (originals.length < 2) return null;
+
+    originals.forEach((card, i) => {
+      card.setAttribute('data-infinite-orig', String(i));
       card.style.flexShrink = '0';
+      card.style.scrollSnapAlign = 'none';
     });
 
-    // Ensure all inline videos play continuously
-    const inlineVideos = track.querySelectorAll('video');
-    inlineVideos.forEach((v) => {
+    const beforeClones = [];
+    const afterClones = [];
+
+    // Prepend Set Before & Append Set After for symmetrical infinite wrapping in both directions
+    const beforeFrag = document.createDocumentFragment();
+    const afterFrag = document.createDocumentFragment();
+
+    originals.forEach((card) => {
+      const cBefore = card.cloneNode(true);
+      cBefore.removeAttribute('data-infinite-orig');
+      cBefore.setAttribute('data-infinite-clone', 'before');
+      cBefore.setAttribute('aria-hidden', 'true');
+      cBefore.style.flexShrink = '0';
+      cBefore.style.scrollSnapAlign = 'none';
+      beforeFrag.appendChild(cBefore);
+      beforeClones.push(cBefore);
+
+      const cAfter = card.cloneNode(true);
+      cAfter.removeAttribute('data-infinite-orig');
+      cAfter.setAttribute('data-infinite-clone', 'after');
+      cAfter.setAttribute('aria-hidden', 'true');
+      cAfter.style.flexShrink = '0';
+      cAfter.style.scrollSnapAlign = 'none';
+      afterFrag.appendChild(cAfter);
+      afterClones.push(cAfter);
+    });
+
+    track.insertBefore(beforeFrag, originals[0]);
+    track.appendChild(afterFrag);
+
+    // Ensure cloned inline videos remain muted + looping cleanly
+    track.querySelectorAll('video').forEach((v) => {
       v.muted = true;
       v.setAttribute('muted', '');
       v.setAttribute('playsinline', '');
@@ -73,44 +86,162 @@
       if (p !== undefined) p.catch(() => { });
     });
 
-    // 3. Dynamic Card Step Calculation
+    // Disable browser ghost-image / link-URL dragging inside track so card drags are 1:1 smooth
+    track.querySelectorAll('a, img').forEach((el) => {
+      el.setAttribute('draggable', 'false');
+    });
+    track.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+    });
+
+    // Measure exact set width (including CSS gap) using original[0] vs beforeClone[0]
+    function getSetWidth() {
+      if (beforeClones[0] && originals[0]) {
+        const w = originals[0].offsetLeft - beforeClones[0].offsetLeft;
+        if (w > 100) return w;
+      }
+      if (afterClones[0] && originals[0]) {
+        const w = afterClones[0].offsetLeft - originals[0].offsetLeft;
+        if (w > 100) return w;
+      }
+      return Math.max(300, container.scrollWidth / 3);
+    }
+
     function getCardStep() {
-      const visibleCards = track.querySelectorAll(cardSelector);
-      if (visibleCards.length > 1 && visibleCards[0] && visibleCards[1]) {
-        const step = visibleCards[1].offsetLeft - visibleCards[0].offsetLeft;
+      if (originals.length > 1 && originals[0] && originals[1]) {
+        const step = originals[1].offsetLeft - originals[0].offsetLeft;
         if (step > 40) return step;
       }
-      if (visibleCards[0] && visibleCards[0].offsetWidth > 40) {
+      if (originals[0] && originals[0].offsetWidth > 40) {
         const style = window.getComputedStyle(track);
-        const gap = parseFloat(style.gap) || 20;
-        return visibleCards[0].offsetWidth + gap;
+        const gap = parseFloat(style.gap) || 18;
+        return originals[0].offsetWidth + gap;
       }
       return 290;
     }
 
-    // 4. Smooth Prev / Next Navigation with Circular Wrap
-    function scrollNext() {
-      const step = getCardStep();
-      const maxScroll = Math.max(0, container.scrollWidth - container.clientWidth);
-      if (container.scrollLeft >= maxScroll - 24) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        container.scrollBy({ left: step, behavior: 'smooth' });
+    let setWidth = getSetWidth();
+    let isAdjustingLoop = false;
+
+    function normalizeLoop() {
+      if (isAdjustingLoop) return;
+      setWidth = getSetWidth();
+      if (setWidth <= container.clientWidth * 0.25) return;
+
+      const x = container.scrollLeft;
+      if (x < setWidth * 0.28) {
+        isAdjustingLoop = true;
+        container.scrollLeft = x + setWidth;
+        startScrollLeft += setWidth;
+        targetAnimEnd += setWidth;
+        isAdjustingLoop = false;
+      } else if (x > setWidth * 1.72) {
+        isAdjustingLoop = true;
+        container.scrollLeft = x - setWidth;
+        startScrollLeft -= setWidth;
+        targetAnimEnd -= setWidth;
+        isAdjustingLoop = false;
       }
+    }
+
+    // Center initial view cleanly on the Original middle set
+    requestAnimationFrame(() => {
+      setWidth = getSetWidth();
+      if (setWidth > 0) {
+        container.scrollLeft = setWidth;
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      setWidth = getSetWidth();
+    }, { passive: true });
+
+    // Passive scroll listener keeps infinite wrapping live for native touch inertia & trackpad
+    let scrollRaf = null;
+    container.addEventListener('scroll', () => {
+      if (isAdjustingLoop) return;
+      if (scrollRaf) return;
+      scrollRaf = requestAnimationFrame(() => {
+        scrollRaf = null;
+        normalizeLoop();
+      });
+    }, { passive: true });
+
+    // Smooth rAF animator for momentum glide and button steps (works seamlessly across loop wraps)
+    let animRaf = null;
+    let isMouseDown = false;
+    let hasDragged = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let lastX = 0;
+    let lastTime = 0;
+    let velocity = 0;
+    let targetAnimEnd = 0;
+
+    function stopAnimations() {
+      if (animRaf) {
+        cancelAnimationFrame(animRaf);
+        animRaf = null;
+      }
+    }
+
+    function animateByDelta(deltaPx, durationMs = 340) {
+      stopAnimations();
+      normalizeLoop();
+      const startPos = container.scrollLeft;
+      targetAnimEnd = startPos + deltaPx;
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const t = Math.min(1, elapsed / durationMs);
+        // Smooth quintic ease-out
+        const eased = 1 - Math.pow(1 - t, 3);
+        const currentTarget = targetAnimEnd;
+        const expectedPos = currentTarget - deltaPx * (1 - eased);
+        container.scrollLeft = expectedPos;
+        normalizeLoop();
+        if (t < 1) {
+          animRaf = requestAnimationFrame(step);
+        } else {
+          animRaf = null;
+        }
+      }
+      animRaf = requestAnimationFrame(step);
+    }
+
+    function startMomentum(initialVelPxPerMs) {
+      stopAnimations();
+      let vel = Math.max(-2.6, Math.min(2.6, initialVelPxPerMs));
+      let prevTime = performance.now();
+
+      function glide(now) {
+        const dt = Math.min(32, Math.max(1, now - prevTime));
+        prevTime = now;
+        container.scrollLeft -= vel * dt;
+        normalizeLoop();
+        // Smooth friction tuned to ~60Hz/120Hz frame delta
+        vel *= Math.pow(0.945, dt / 16.67);
+        if (Math.abs(vel) > 0.03) {
+          animRaf = requestAnimationFrame(glide);
+        } else {
+          animRaf = null;
+        }
+      }
+      animRaf = requestAnimationFrame(glide);
+    }
+
+    function scrollNext() {
+      animateByDelta(getCardStep(), 320);
     }
 
     function scrollPrev() {
-      const step = getCardStep();
-      const maxScroll = Math.max(0, container.scrollWidth - container.clientWidth);
-      if (container.scrollLeft <= 24) {
-        container.scrollTo({ left: maxScroll, behavior: 'smooth' });
-      } else {
-        container.scrollBy({ left: -step, behavior: 'smooth' });
-      }
+      animateByDelta(-getCardStep(), 320);
     }
 
     function wireNavBtn(btn, stepFn) {
-      if (!btn) return;
+      if (!btn || btn.dataset.swipeWired === '1') return;
+      btn.dataset.swipeWired = '1';
       btn.setAttribute('tabindex', '0');
       btn.setAttribute('role', 'button');
       btn.style.pointerEvents = 'auto';
@@ -128,27 +259,17 @@
 
       btn.addEventListener('click', trigger);
       btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          trigger(e);
-        }
+        if (e.key === 'Enter' || e.key === ' ') trigger(e);
       });
     }
 
     if (nextBtn) wireNavBtn(nextBtn, scrollNext);
     if (prevBtn) wireNavBtn(prevBtn, scrollPrev);
 
-    // 5. Desktop Pointer Drag & Native Touch Integration
-    let isMouseDown = false;
-    let hasDragged = false;
-    let startX = 0;
-    let startScrollLeft = 0;
-    let lastX = 0;
-    let lastTime = 0;
-    let velocity = 0;
-    let rafId = null;
-
-    // Mobile / Tablet Touch (Let 120Hz native compositor handle scrolling; only track for click suppression)
+    // Touch tracking (Native 120Hz compositor handles actual horizontal & vertical scroll smoothly)
     container.addEventListener('touchstart', (e) => {
+      stopAnimations();
+      normalizeLoop();
       if (e.touches.length === 1) {
         startX = e.touches[0].clientX;
         hasDragged = false;
@@ -156,30 +277,29 @@
     }, { passive: true });
 
     container.addEventListener('touchmove', (e) => {
-      if (e.touches.length === 1) {
-        const diff = Math.abs(e.touches[0].clientX - startX);
-        if (diff > 8) {
-          hasDragged = true;
-        }
+      if (e.touches.length === 1 && Math.abs(e.touches[0].clientX - startX) > 8) {
+        hasDragged = true;
       }
     }, { passive: true });
 
     container.addEventListener('touchend', () => {
       if (hasDragged) {
-        setTimeout(() => { hasDragged = false; }, 80);
+        setTimeout(() => { hasDragged = false; }, 90);
       }
     }, { passive: true });
 
-    // Desktop Mouse Drag Handlers
+    // Desktop Mouse Drag with 1:1 tracking & inertia momentum
     function getEventX(e) {
       return (e.pageX !== undefined && e.pageX !== 0) ? e.pageX : e.clientX;
     }
 
     container.addEventListener('mousedown', (e) => {
-      if (e.button !== 0) return; // Primary left click only
-      if (e.target.closest('button, input, select, textarea, .pop-quick-add-btn, .drop-quick-add-btn, .color-dot, .swatch-dot')) {
+      if (e.button !== 0) return;
+      if (e.target.closest('button, input, select, textarea, .pop-quick-add-btn, .drop-quick-add-btn, .hardware-add-btn, .color-dot, .card-color-dot, .swatch-dot')) {
         return;
       }
+      stopAnimations();
+      normalizeLoop();
 
       isMouseDown = true;
       hasDragged = false;
@@ -189,16 +309,13 @@
       lastTime = performance.now();
       velocity = 0;
 
-      // Disable snap and smooth scroll during active mouse drag for instant 1:1 response
-      container.style.scrollBehavior = 'auto';
-      container.style.scrollSnapType = 'none';
+      container.style.cursor = 'grabbing';
       container.classList.add('is-dragging');
       track.classList.add('is-dragging');
     });
 
     window.addEventListener('mousemove', (e) => {
       if (!isMouseDown) return;
-
       const currentX = getEventX(e);
       const deltaX = currentX - startX;
       if (Math.abs(deltaX) > 6) {
@@ -208,49 +325,33 @@
       const now = performance.now();
       const dt = Math.max(1, now - lastTime);
       const dx = currentX - lastX;
-      velocity = 0.75 * (dx / dt) + 0.25 * velocity;
+      velocity = 0.7 * (dx / dt) + 0.3 * velocity;
       lastX = currentX;
       lastTime = now;
 
-      if (rafId) cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(() => {
-        container.scrollLeft = startScrollLeft - deltaX;
-      });
+      container.scrollLeft = startScrollLeft - deltaX;
+      normalizeLoop();
     });
 
     const handleMouseUp = () => {
       if (!isMouseDown) return;
       isMouseDown = false;
+      container.style.cursor = 'grab';
       container.classList.remove('is-dragging');
       track.classList.remove('is-dragging');
 
       if (hasDragged) {
         const now = performance.now();
-        const isRecentFlick = (now - lastTime) < 140;
-        if (isRecentFlick && Math.abs(velocity) > 0.15) {
-          // Momentum inertia glide
-          const momentumPx = Math.max(-650, Math.min(650, velocity * 220));
-          const targetScroll = container.scrollLeft - momentumPx;
-          container.style.scrollBehavior = 'smooth';
-          container.style.scrollSnapType = 'x mandatory';
-          container.scrollTo({
-            left: targetScroll,
-            behavior: 'smooth'
-          });
-        } else {
-          container.style.scrollBehavior = 'smooth';
-          container.style.scrollSnapType = 'x mandatory';
+        if ((now - lastTime) < 120 && Math.abs(velocity) > 0.12) {
+          startMomentum(velocity);
         }
-        setTimeout(() => { hasDragged = false; }, 80);
-      } else {
-        container.style.scrollBehavior = 'smooth';
-        container.style.scrollSnapType = 'x mandatory';
+        setTimeout(() => { hasDragged = false; }, 90);
       }
     };
 
     window.addEventListener('mouseup', handleMouseUp);
 
-    // 6. Suppress accidental link clicks on drag release
+    // Suppress accidental navigation clicks after a drag gesture
     container.addEventListener('click', (e) => {
       if (hasDragged) {
         e.preventDefault();
@@ -259,33 +360,32 @@
       }
     }, true);
 
-    // 7. Trackpad & Shift+Wheel support
+    // Trackpad horizontal & Shift+Wheel smooth infinite scrolling
     container.addEventListener('wheel', (e) => {
       if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-        // Native horizontal trackpad scrolling
+        // Native two-finger horizontal trackpad scroll; scroll listener handles infinite wrap
         return;
       }
       if (e.shiftKey && Math.abs(e.deltaY) > 0) {
         e.preventDefault();
         container.scrollLeft += e.deltaY;
+        normalizeLoop();
       }
     }, { passive: false });
 
-    // Expose control methods
     container._stepNext = scrollNext;
     container._stepPrev = scrollPrev;
     track._stepNext = scrollNext;
     track._stepPrev = scrollPrev;
 
-    return { scrollNext, scrollPrev };
+    return { scrollNext, scrollPrev, normalizeLoop };
   }
 
-  /**
-   * Delegated Quick Add & Color Swatches across all product cards
-   */
   function initGlobalCardDelegation() {
+    if (window.__covertokCardDelegationInit) return;
+    window.__covertokCardDelegationInit = true;
+
     document.addEventListener('click', (e) => {
-      // 1. Popular Choices Quick Add Button
       const popAddBtn = e.target.closest('.pop-quick-add-btn');
       if (popAddBtn) {
         e.preventDefault();
@@ -313,7 +413,6 @@
         return;
       }
 
-      // 2. Trending Drops Quick Add Button
       const dropAddBtn = e.target.closest('.drop-quick-add-btn');
       if (dropAddBtn) {
         e.preventDefault();
@@ -341,7 +440,7 @@
 
         dropAddBtn.classList.add('added');
         const prevText = dropAddBtn.innerHTML;
-        dropAddBtn.innerHTML = `<span>ADDED</span>`;
+        dropAddBtn.innerHTML = '<span>ADDED</span>';
         setTimeout(() => {
           dropAddBtn.classList.remove('added');
           dropAddBtn.innerHTML = prevText;
@@ -349,46 +448,68 @@
         return;
       }
 
-      // 3. Interactive Color Swatches
-      const swatch = e.target.closest('.color-dot, .swatch-dot');
+      const swatch = e.target.closest('.color-dot, .card-color-dot, .swatch-dot');
       if (swatch) {
         e.preventDefault();
         e.stopPropagation();
 
         const palette = swatch.closest('.product-color-palette');
         if (palette) {
-          palette.querySelectorAll('.color-dot, .swatch-dot').forEach(d => {
+          palette.querySelectorAll('.color-dot, .card-color-dot, .swatch-dot').forEach(d => {
             d.classList.remove('active', 'user-selected');
           });
         }
         swatch.classList.add('active', 'user-selected');
 
-        const newImg = swatch.getAttribute('data-color-img');
-        const card = swatch.closest('.pop-slider-card, .drop-3d-card, .pop-slider-item');
+        const newImg = swatch.getAttribute('data-color-img') || swatch.getAttribute('data-img');
+        const card = swatch.closest('.pop-slider-card, .drop-3d-card, .pop-slider-item, .hardware-card');
         if (card && newImg) {
-          const imgEl = card.querySelector('.pop-slider-img, .drop-product-img');
+          const imgEl = card.querySelector('.pop-slider-img, .drop-product-img, .hardware-card-img');
           if (imgEl) {
             imgEl.style.opacity = '0.7';
             imgEl.src = newImg;
             setTimeout(() => { imgEl.style.opacity = '1'; }, 120);
           }
         }
-        return;
       }
     }, true);
   }
 
-  /**
-   * Initialize All Slider Rows across the site
-   */
+  function initResponsiveFlexRows() {
+    // Rows that transition between Desktop CSS Grid and Mobile/Tablet Horizontal Row (.bento-reel-wrap, .hardware-grid)
+    const bentoReel = document.querySelector('.bento-reel-wrap');
+    if (bentoReel) {
+      const isFlex = window.getComputedStyle(bentoReel).display === 'flex';
+      if (isFlex && !bentoReel.dataset.infiniteFlexInit) {
+        bentoReel.dataset.infiniteFlexInit = '1';
+        makeInfiniteSwipeRow(bentoReel, { cardSelector: '.bento-card' });
+      } else if (!isFlex && bentoReel.dataset.infiniteFlexInit === '1') {
+        bentoReel.dataset.infiniteFlexInit = '0';
+        bentoReel.querySelectorAll('[data-infinite-clone]').forEach(el => el.remove());
+      }
+    }
+
+    const hwGrid = document.querySelector('.hardware-grid');
+    if (hwGrid) {
+      const isFlex = window.getComputedStyle(hwGrid).display === 'flex';
+      if (isFlex && !hwGrid.dataset.infiniteFlexInit) {
+        hwGrid.dataset.infiniteFlexInit = '1';
+        makeInfiniteSwipeRow(hwGrid, { cardSelector: '.hardware-card' });
+      } else if (!isFlex && hwGrid.dataset.infiniteFlexInit === '1') {
+        hwGrid.dataset.infiniteFlexInit = '0';
+        hwGrid.querySelectorAll('[data-infinite-clone]').forEach(el => el.remove());
+      }
+    }
+  }
+
   function initAllSliderRows() {
     initGlobalCardDelegation();
 
-    // 1. Curated Releases / Trending Drops (#trendingDropsTrack inside .trending-drops-slider-wrap)
+    // 1. Curated Releases (#trendingDropsTrack inside .trending-drops-slider-wrap)
     const dropsWrap = document.querySelector('.trending-drops-slider-wrap');
     const dropsTrack = document.getElementById('trendingDropsTrack');
     if (dropsWrap && dropsTrack) {
-      makeSmoothSwipeRow(dropsWrap, {
+      makeInfiniteSwipeRow(dropsWrap, {
         track: dropsTrack,
         cardSelector: '.drop-3d-card',
         prevBtn: document.getElementById('dropsPrevBtn'),
@@ -399,7 +520,7 @@
     // 2. Popular Choices Row 1: iPhone Covers
     const popTrack1 = document.querySelector('.popular-row-covers .popular-slider-track, .popular-row-cases .popular-slider-track');
     if (popTrack1) {
-      makeSmoothSwipeRow(popTrack1, {
+      makeInfiniteSwipeRow(popTrack1, {
         cardSelector: '.pop-slider-item',
         prevBtn: document.getElementById('popCoversPrevBtn'),
         nextBtn: document.getElementById('popCoversNextBtn')
@@ -409,18 +530,18 @@
     // 3. Popular Choices Row 2: Watch Bands
     const popTrack2 = document.querySelector('.popular-row-bands .popular-slider-track, .popular-row-watchbands .popular-slider-track');
     if (popTrack2) {
-      makeSmoothSwipeRow(popTrack2, {
+      makeInfiniteSwipeRow(popTrack2, {
         cardSelector: '.pop-slider-item',
         prevBtn: document.getElementById('popBandsPrevBtn'),
         nextBtn: document.getElementById('popBandsNextBtn')
       });
     }
 
-    // 4. Community Videos Track (#videosTrack inside .videos-slider-wrapper)
+    // 4. Community Video Reels (#videosTrack inside .videos-slider-wrapper)
     const videosWrap = document.querySelector('.videos-slider-wrapper');
     const videosTrack = document.getElementById('videosTrack');
     if (videosWrap && videosTrack) {
-      makeSmoothSwipeRow(videosWrap, {
+      makeInfiniteSwipeRow(videosWrap, {
         track: videosTrack,
         cardSelector: '.video-card, .video-reel-card',
         prevBtn: document.getElementById('videoPrevBtn'),
@@ -428,29 +549,33 @@
       });
     }
 
-    // 5. Customer Reviews Track (#reviewsTrack inside .reviews-slider-wrap)
-    const reviewsWrap = document.querySelector('.reviews-slider-wrap');
+    // 5. Customer Reviews (#reviewsTrack is scroll container inside .reviews-slider-wrap so #reviewsNextBtn stays pinned)
     const reviewsTrack = document.getElementById('reviewsTrack');
-    if (reviewsWrap && reviewsTrack) {
-      makeSmoothSwipeRow(reviewsWrap, {
+    if (reviewsTrack) {
+      makeInfiniteSwipeRow(reviewsTrack, {
         track: reviewsTrack,
-        cardSelector: '.review-item-card'
+        cardSelector: '.review-item-card',
+        nextBtn: document.getElementById('reviewsNextBtn')
       });
     }
 
     // 6. Collections Filter Navbar (#catalogNavBar on collections page)
     const catalogNav = document.getElementById('catalogNavBar');
     if (catalogNav) {
-      makeSmoothSwipeRow(catalogNav, {
+      makeInfiniteSwipeRow(catalogNav, {
         cardSelector: '.catalog-cat-card'
       });
     }
+
+    // 7. Mobile/Tablet Responsive Flex Rows
+    initResponsiveFlexRows();
+    window.addEventListener('resize', initResponsiveFlexRows, { passive: true });
   }
 
-  // Export globally for dynamic re-initialization if needed
   window.CovertokSwipe = {
     init: initAllSliderRows,
-    makeSmoothSwipeRow: makeSmoothSwipeRow
+    makeSmoothSwipeRow: makeInfiniteSwipeRow,
+    makeInfiniteSwipeRow: makeInfiniteSwipeRow
   };
 
   if (document.readyState === 'loading') {

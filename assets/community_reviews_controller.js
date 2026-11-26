@@ -228,34 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // "View More" button removed as requested
 
-  // --------------------------------------------------------------------------
-  // 4. Reviews Slider Navigation & Looping
-  // --------------------------------------------------------------------------
-  const reviewsTrack = document.getElementById('reviewsTrack');
-  const reviewsNextBtn = document.getElementById('reviewsNextBtn');
-
-  if (reviewsTrack && reviewsNextBtn) {
-    const getReviewCardWidth = () => {
-      const firstCard = reviewsTrack.querySelector('.review-item-card');
-      if (firstCard) {
-        const style = window.getComputedStyle(firstCard);
-        const margin = parseInt(style.marginRight, 10) || 18;
-        return firstCard.offsetWidth + margin;
-      }
-      return 328;
-    };
-
-    reviewsNextBtn.addEventListener('click', () => {
-      const step = getReviewCardWidth();
-      const maxScroll = reviewsTrack.scrollWidth - reviewsTrack.clientWidth;
-      if (reviewsTrack.scrollLeft >= maxScroll - 15) {
-        // Loop back smoothly to beginning
-        reviewsTrack.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        reviewsTrack.scrollBy({ left: step, behavior: 'smooth' });
-      }
-    });
-  }
+  // Reviews infinite navigation & touch/drag swipe is managed by infinite_row_controller.js
 
   // --------------------------------------------------------------------------
   // 5. Write a Review Trigger
