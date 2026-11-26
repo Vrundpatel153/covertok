@@ -441,7 +441,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261126_v38_fidelity_14';
+    const v = '20261126_v39_acc_75_showcase';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -1549,7 +1549,7 @@
       return `
         <div class="pdp-showcase-item" data-src="${src}" tabindex="0" role="button" aria-label="Perspective 0${perspectiveNum}">
           <div class="pdp-showcase-img-wrap">
-            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="eager" decoding="async" onerror="if(this.src.endsWith('.webp')){this.src=this.src.replace(/\\.webp$/,'.png');}">
+            <img src="${bustUrl(src)}" alt="Perspective 0${perspectiveNum}" class="pdp-showcase-img" loading="eager" decoding="async" onerror="if(this.src.split('?')[0].endsWith('.webp')){this.src=this.src.replace(/\\.webp(\\?|$)/,'.png$1');}">
           </div>
         </div>
       `;

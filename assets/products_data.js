@@ -24,6 +24,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp",
     "images": [
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/space-black/01_packshot.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/01_model.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/02_angle.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/03_quality.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/04_feature.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/05_marketing.webp",
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/01_extra.webp",
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/02_extra.webp",
       "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/extra/03_extra.webp",
@@ -159,6 +164,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/01_model.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/02_angle.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/03_quality.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/04_feature.webp",
+      "assets/products/premium-magnetic-phone-holder-with-360-rotation-strong-adhesive-mount/showcase/05_marketing.webp"
     ]
   },
   {
@@ -187,11 +199,16 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
     "images": [
       "assets/products/ribbed-knit-phone-sling-pouch/blue/01_packshot.webp",
-      "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/orange/01_packshot.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/pink/01_packshot.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/black/01_packshot.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/brown/01_packshot.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/01_model.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/02_angle.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/03_quality.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/04_feature.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/05_marketing.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/blue/03_lifestyle.jpg",
       "assets/products/ribbed-knit-phone-sling-pouch/extra/01_extra.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/extra/02_extra.webp",
       "assets/products/ribbed-knit-phone-sling-pouch/extra/03_extra.webp",
@@ -683,6 +700,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Long ( sling pouch)"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/01_model.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/02_angle.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/03_quality.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/04_feature.webp",
+      "assets/products/ribbed-knit-phone-sling-pouch/showcase/05_marketing.webp"
     ]
   },
   {
@@ -15793,6 +15817,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp",
     "images": [
       "assets/products/pearl-phone-charm-with-airplane-bow-design/pearlescent-white/01_packshot.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/01_model.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/02_angle.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/03_quality.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/04_feature.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/05_marketing.webp",
       "assets/products/pearl-phone-charm-with-airplane-bow-design/extra/01_extra.webp",
       "assets/products/pearl-phone-charm-with-airplane-bow-design/extra/02_extra.webp",
       "assets/products/pearl-phone-charm-with-airplane-bow-design/extra/03_extra.webp"
@@ -15913,6 +15942,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/01_model.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/02_angle.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/03_quality.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/04_feature.webp",
+      "assets/products/pearl-phone-charm-with-airplane-bow-design/showcase/05_marketing.webp"
     ]
   },
   {
@@ -20590,8 +20626,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/blue/01_packshot.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/peach/01_packshot.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/01_packshot.webp",
-      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/02_lifestyle.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/lavender/01_packshot.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/01_model.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/02_angle.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/03_quality.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/04_feature.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/05_marketing.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/brown/02_lifestyle.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/01_extra.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/02_extra.webp",
       "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/extra/03_extra.webp",
@@ -21072,6 +21113,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Lavender"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/01_model.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/02_angle.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/03_quality.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/04_feature.webp",
+      "assets/products/multi-color-silicone-suction-grips-phone-holder-with-kickstand/showcase/05_marketing.webp"
     ]
   },
   {
@@ -21102,8 +21150,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "images": [
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/black/01_packshot.webp",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/01_packshot.webp",
-      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.webp",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/01_packshot.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/01_model.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/02_angle.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/03_quality.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/04_feature.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/05_marketing.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/rose-gold/02_lifestyle.webp",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/grey/02_lifestyle.webp",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/01_extra.webp",
       "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/extra/02_extra.webp",
@@ -21404,6 +21457,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Grey"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/01_model.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/02_angle.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/03_quality.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/04_feature.webp",
+      "assets/products/magnetic-wireless-power-bank-ultra-sleek-5000mah-10000-mah/showcase/05_marketing.webp"
     ]
   },
   {
@@ -25580,6 +25640,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/ultra-clear/01_packshot.webp",
     "images": [
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/ultra-clear/01_packshot.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/01_model.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/02_angle.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/03_quality.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/04_feature.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/05_marketing.webp",
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/01_extra.webp",
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/02_extra.webp",
       "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/extra/03_extra.webp",
@@ -26047,6 +26112,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iPhone 17 Air"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/01_model.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/02_angle.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/03_quality.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/04_feature.webp",
+      "assets/products/premium-tempered-glass-screen-protector-with-easy-installation-kit/showcase/05_marketing.webp"
     ]
   },
   {
@@ -26074,6 +26146,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/matte-privacy/01_packshot.webp",
     "images": [
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/matte-privacy/01_packshot.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/01_model.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/02_angle.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/03_quality.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/04_feature.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/05_marketing.webp",
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/01_extra.webp",
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/02_extra.webp",
       "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/extra/03_extra.webp"
@@ -26518,6 +26595,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "iphone 16 E"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/01_model.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/02_angle.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/03_quality.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/04_feature.webp",
+      "assets/products/premium-matte-frosted-privacy-tempered-glass-screen-protector/showcase/05_marketing.webp"
     ]
   },
   {
@@ -54711,10 +54795,15 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
     "images": [
       "assets/products/silicone-suction-phone-grip-pad/orange/01_packshot.webp",
-      "assets/products/silicone-suction-phone-grip-pad/orange/02_lifestyle.webp",
       "assets/products/silicone-suction-phone-grip-pad/violet/01_packshot.webp",
-      "assets/products/silicone-suction-phone-grip-pad/violet/02_lifestyle.webp",
       "assets/products/silicone-suction-phone-grip-pad/black/01_packshot.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/01_model.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/02_angle.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/03_quality.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/04_feature.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/05_marketing.webp",
+      "assets/products/silicone-suction-phone-grip-pad/orange/02_lifestyle.webp",
+      "assets/products/silicone-suction-phone-grip-pad/violet/02_lifestyle.webp",
       "assets/products/silicone-suction-phone-grip-pad/black/02_lifestyle.webp",
       "assets/products/silicone-suction-phone-grip-pad/extra/01_extra.webp",
       "assets/products/silicone-suction-phone-grip-pad/extra/02_extra.webp",
@@ -54941,6 +55030,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Black"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/silicone-suction-phone-grip-pad/showcase/01_model.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/02_angle.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/03_quality.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/04_feature.webp",
+      "assets/products/silicone-suction-phone-grip-pad/showcase/05_marketing.webp"
     ]
   },
   {
@@ -55917,6 +56013,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
       "assets/products/magsafe-wallet-with-kickstand/black/01_packshot.webp",
       "assets/products/magsafe-wallet-with-kickstand/dark-blue/01_packshot.webp",
       "assets/products/magsafe-wallet-with-kickstand/violet/01_packshot.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/01_model.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/02_angle.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/03_quality.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/04_feature.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/05_marketing.webp",
       "assets/products/magsafe-wallet-with-kickstand/violet/02_lifestyle.webp",
       "assets/products/magsafe-wallet-with-kickstand/extra/01_extra.webp",
       "assets/products/magsafe-wallet-with-kickstand/extra/02_extra.webp",
@@ -56143,6 +56244,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Violet"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/magsafe-wallet-with-kickstand/showcase/01_model.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/02_angle.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/03_quality.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/04_feature.webp",
+      "assets/products/magsafe-wallet-with-kickstand/showcase/05_marketing.webp"
     ]
   },
   {
@@ -56172,10 +56280,15 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
     "images": [
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/01_packshot.webp",
-      "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/02_lifestyle.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/01_packshot.webp",
-      "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/black/01_packshot.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/01_model.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/02_angle.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/03_quality.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/04_feature.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/05_marketing.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/orange/02_lifestyle.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/dark-blue/02_lifestyle.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/01_extra.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/02_extra.webp",
       "assets/products/magsafe-leather-card-holder-snap-on-wallet/extra/03_extra.webp",
@@ -56404,6 +56517,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Black"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/01_model.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/02_angle.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/03_quality.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/04_feature.webp",
+      "assets/products/magsafe-leather-card-holder-snap-on-wallet/showcase/05_marketing.webp"
     ]
   },
   {
@@ -56434,6 +56554,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/magsafe-wireless-charger-usb-c/pure-white/01_packshot.webp",
     "images": [
       "assets/products/magsafe-wireless-charger-usb-c/pure-white/01_packshot.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/01_model.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/02_angle.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/03_quality.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/04_feature.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/05_marketing.webp",
       "assets/products/magsafe-wireless-charger-usb-c/extra/01_extra.webp",
       "assets/products/magsafe-wireless-charger-usb-c/extra/02_extra.webp"
     ],
@@ -56553,6 +56678,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/01_model.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/02_angle.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/03_quality.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/04_feature.webp",
+      "assets/products/magsafe-wireless-charger-usb-c/showcase/05_marketing.webp"
     ]
   },
   {
@@ -67015,6 +67147,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/space-grey/01_packshot.webp",
     "images": [
       "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/space-grey/01_packshot.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/01_model.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/02_angle.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/03_quality.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/04_feature.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/05_marketing.webp",
       "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/extra/01_extra.webp"
     ],
     "has_colors": true,
@@ -67133,6 +67270,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/01_model.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/02_angle.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/03_quality.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/04_feature.webp",
+      "assets/products/39w-7-1a-fast-car-charger-dual-usb-smart-charging-adapter-for-cigarette-lighter-compact-design-high-speed-charging-universal-compatibility/showcase/05_marketing.webp"
     ]
   },
   {
@@ -67163,6 +67307,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/titanium-black/01_packshot.webp",
     "images": [
       "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/titanium-black/01_packshot.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/01_model.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/02_angle.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/03_quality.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/04_feature.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/05_marketing.webp",
       "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/extra/01_extra.webp"
     ],
     "has_colors": true,
@@ -67281,6 +67430,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/01_model.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/02_angle.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/03_quality.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/04_feature.webp",
+      "assets/products/100w-fast-charging-mini-alloy-car-charger-hidden-dual-port-car-adapter-with-pull-ring-design-for-cigarette-lighter-compact-portable-easy-to-carry-charge/showcase/05_marketing.webp"
     ]
   },
   {
@@ -67310,6 +67466,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp",
     "images": [
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/metallic-silver/01_packshot.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/01_model.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/02_angle.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/03_quality.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/04_feature.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/05_marketing.webp",
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/01_extra.webp",
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/02_extra.webp",
       "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/extra/03_extra.webp",
@@ -67431,6 +67592,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/01_model.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/02_angle.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/03_quality.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/04_feature.webp",
+      "assets/products/foldable-magnetic-phone-holder-strong-magnet-suction-mount-for-desk-wall-car-dashboard-windshield-360-adjustable-rotation-vacuum-adsorption-stand/showcase/05_marketing.webp"
     ]
   },
   {
@@ -67460,6 +67628,11 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
     "primary_image": "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/matte-black/01_packshot.webp",
     "images": [
       "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/matte-black/01_packshot.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/01_model.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/02_angle.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/03_quality.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/04_feature.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/05_marketing.webp",
       "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/extra/01_extra.webp"
     ],
     "has_colors": true,
@@ -67578,6 +67751,13 @@ window.CovertokProducts = window.PRODUCTS_DATA = [
           "Default Title"
         ]
       }
+    ],
+    "showcase": [
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/01_model.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/02_angle.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/03_quality.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/04_feature.webp",
+      "assets/products/3-in-1-wireless-charger-magsafe-compatible-fast-charging-station-for-iphone-16-16-plus-16-pro-16-pro-max-15-15-plus-15-pro-15-pro-max-14-13-12-series-airpods-3rd-2nd-gen-apple-watch-series-9-8-7-6-5-4-se-black/showcase/05_marketing.webp"
     ]
   },
   {
