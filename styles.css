@@ -11400,45 +11400,19 @@ img {
 
 
 .showcase-photo-actions {
-
-
-
-  position: absolute;
-
-
-
+  position: absolute !important;
   top: 50% !important;
-
-
-
   left: 50% !important;
-
-
-
   transform: translate(-50%, -50%) !important;
-
-
-
-  display: flex;
-
-
-
-  align-items: center;
-
-
-
-  gap: 10px;
-
-
-
-  z-index: 10;
-
-
-
-  flex-wrap: wrap;
-
-
-
+  width: max-content !important;
+  max-width: calc(100% - 24px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  z-index: 10 !important;
+  flex-wrap: nowrap !important;
+  margin: 0 !important;
 }
 
 
