@@ -167,7 +167,6 @@
   cursor: grabbing !important;
   user-select: none !important;
   -webkit-user-select: none !important;
-  pointer-events: none !important;
 }
 
 .trending-drops-grid {

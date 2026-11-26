@@ -323,18 +323,18 @@
       lastX = startX;
       lastTime = performance.now();
       velocity = 0;
-
-      container.style.cursor = 'grabbing';
-      container.classList.add('is-dragging');
-      track.classList.add('is-dragging');
     });
 
     window.addEventListener('mousemove', (e) => {
       if (!isMouseDown) return;
       const currentX = getEventX(e);
       const deltaX = currentX - startX;
-      if (Math.abs(deltaX) > 6) {
+      if (!hasDragged) {
+        if (Math.abs(deltaX) <= 6) return;
         hasDragged = true;
+        container.style.cursor = 'grabbing';
+        container.classList.add('is-dragging');
+        track.classList.add('is-dragging');
       }
 
       const now = performance.now();
@@ -488,6 +488,27 @@
         }
       }
     }, true);
+
+    // Whole-card product navigation when clicking non-button areas of any row product card
+    document.addEventListener('click', (e) => {
+      if (e.defaultPrevented) return;
+      if (e.target.closest('a[href], button, input, select, textarea, .pop-quick-add-btn, .drop-quick-add-btn, .hardware-add-btn, .add-to-cart-btn, .color-dot, .card-color-dot, .swatch-dot')) {
+        return;
+      }
+      const card = e.target.closest('.drop-3d-card, .hardware-card, .pop-slider-card, .col-prod-card');
+      if (!card) return;
+
+      const prodLink = card.querySelector('a[href*="product.html"]');
+      if (prodLink && prodLink.getAttribute('href')) {
+        window.location.href = prodLink.getAttribute('href');
+        return;
+      }
+
+      const prodId = card.getAttribute('data-product-id') || card.getAttribute('data-id');
+      if (prodId) {
+        window.location.href = `product.html?id=${encodeURIComponent(prodId)}`;
+      }
+    }, false);
   }
 
   function initResponsiveFlexRows() {
