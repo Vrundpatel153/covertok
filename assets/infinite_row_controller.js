@@ -292,7 +292,7 @@
     }, { passive: true });
 
     container.addEventListener('touchmove', (e) => {
-      if (e.touches.length === 1 && Math.abs(e.touches[0].clientX - startX) > 8) {
+      if (e.touches.length === 1 && Math.abs(e.touches[0].clientX - startX) > 12) {
         hasDragged = true;
       }
     }, { passive: true });
@@ -330,7 +330,7 @@
       const currentX = getEventX(e);
       const deltaX = currentX - startX;
       if (!hasDragged) {
-        if (Math.abs(deltaX) <= 6) return;
+        if (Math.abs(deltaX) <= 10) return;
         hasDragged = true;
         container.style.cursor = 'grabbing';
         container.classList.add('is-dragging');
