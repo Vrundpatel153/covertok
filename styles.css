@@ -52917,7 +52917,7 @@ a.footer-contact-main:hover {
 
   justify-content: space-between !important;
 
-  margin-bottom: 24px !important;
+  margin-bottom: 12px !important;
 
 }
 
@@ -53377,19 +53377,48 @@ a.footer-contact-main:hover {
    - Swipeable reel: 240px snap cards with clean horizontal scroll
    ========================================================================== */
 @media (max-width: 768px) {
+  .trending-drops-section,
+  #trending-drops {
+    padding: 16px 0 12px 0 !important;
+  }
+
+  .trending-drops-slider-wrap,
+  #trendingDropsTrack {
+    padding-bottom: 6px !important;
+    margin-bottom: 0 !important;
+  }
+
   .bento-collections-section {
-    padding: 24px 0 36px 0 !important;
+    padding: 12px 0 28px 0 !important;
+  }
+
+  .bento-top-bar {
+    margin-bottom: 6px !important;
+  }
+
+  .bento-kicker {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.14em !important;
+    color: #71717A !important;
   }
 
   .bento-collections-section .bento-grid {
     display: flex !important;
     flex-direction: column !important;
-    gap: 14px !important;
+    gap: 10px !important;
   }
 
   .bento-intro-card {
     width: 100% !important;
-    padding: 0 0 4px 0 !important;
+    padding: 0 0 2px 0 !important;
+  }
+
+  .bento-intro-card .bento-main-heading {
+    margin: 0 0 6px 0 !important;
+  }
+
+  .bento-intro-card .bento-subtitle {
+    margin: 0 0 6px 0 !important;
   }
 
   /* Card 01 - Hero iPhone Covers (Spacious, Un-squeezed) */
@@ -56905,11 +56934,22 @@ html body #siteHeader,
   padding-bottom: 32px !important;
 }
 
-.trending-drops-section,
 .bento-section,
 .popular-choices-section,
 .story-section {
   padding: 36px 0 !important;
+}
+
+.trending-drops-section,
+#trending-drops {
+  padding: 20px 0 22px !important;
+}
+
+@media (max-width: 768px) {
+  .trending-drops-section,
+  #trending-drops {
+    padding: 14px 0 10px !important;
+  }
 }
 
 /* Slide 2 & 3 Mobile Hero Banners: fill from bottom to preserve generous top headroom without gaps */
