@@ -56306,10 +56306,10 @@ html body #siteHeader,
     border: none !important;
     border-bottom: none !important;
     box-shadow: none !important;
-    padding: 6px 0 0 !important;
+    padding: 0 !important;
     margin: 0 !important;
-    height: auto !important;
-    min-height: 0 !important;
+    height: 48px !important;
+    min-height: 48px !important;
     z-index: 100 !important;
     pointer-events: none !important;
   }
@@ -56337,6 +56337,7 @@ html body #siteHeader,
   body.home-page .site-header .header-left {
     display: flex !important;
     align-items: center !important;
+    gap: clamp(16px, 1.8vw, 28px) !important;
     pointer-events: auto !important;
   }
 
@@ -56410,7 +56411,7 @@ html body #siteHeader,
   }
 
   body.home-page .site-header .main-nav .nav-list {
-    gap: clamp(12px, 1.4vw, 22px) !important;
+    gap: clamp(16px, 1.8vw, 26px) !important;
     flex-wrap: nowrap !important;
   }
 
@@ -56424,7 +56425,7 @@ html body #siteHeader,
   body.home-page .hero-section {
     position: relative !important;
     width: 100% !important;
-    margin-top: -54px !important;
+    margin-top: -48px !important;
     padding: 0 clamp(10px, 1.2vw, 20px) 16px !important;
     margin-bottom: 0 !important;
     display: block !important;
@@ -56437,6 +56438,23 @@ html body #siteHeader,
   body.home-page .hero-card {
     clip-path: url(#heroCardClip) !important;
     -webkit-clip-path: url(#heroCardClip) !important;
+  }
+
+  /* Compact & snug action buttons avoiding cutout collision */
+  body.home-page #heroDynamicCta {
+    padding: 0 18px !important;
+    font-size: 0.76rem !important;
+    gap: 6px !important;
+  }
+
+  body.home-page #heroExploreArrow {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  body.home-page .hero-cta-group {
+    gap: 8px !important;
   }
 
   /* Provide comfortable breathing room & headroom for hero phone packshots */
