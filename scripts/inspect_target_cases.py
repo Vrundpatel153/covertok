@@ -1,18 +1,29 @@
-import json, os
+import os, json
 
-prods = json.load(open('assets/products_data.json', encoding='utf-8'))
-targets = ['power', 'lip', 'suction', 'grip', 'charger', 'leather']
+with open('assets/products_data.js', encoding='utf-8') as f:
+    text = f.read()
 
-for p in prods:
-    h = p['handle'].lower()
-    t = p['title'].lower()
-    if any(k in h or k in t for k in targets):
-        print(f"=== {p['id']} | {p['title']} ===")
-        print(f"  Handle: {p['handle']}")
-        print(f"  Primary: {p.get('primary_image')}")
+idx = text.find('[')
+last_idx = text.rfind(']')
+products = json.loads(text[idx:last_idx+1])
+
+targets = [
+    'transparent-magnetic-wireless-charging-phone-case',
+    'crystal-studded-luxe-case-orange',
+    'ultra-clear-sideless-anti-yellow-back-case',
+    'luxury-steel-blue-heart-sparkle-phone-case-with-pearl-chain',
+    'silver-3d-love-heart-phone-case-copy',
+    'silver-3d-love-heart-phone-case',
+    'luxury-crossbody-wallet-phone-case',
+    'glow-edge-glow-in-dark-transparent-shockproof-clear-cover-with-bumper-camera-protection-for-iphone',
+    'bumper-case'
+]
+
+for p in products:
+    h = p.get('handle')
+    if h in targets:
+        print(f"=== {h} ===")
+        print(f"Title: {p.get('title')}")
+        print(f"Primary: {p.get('primary_image')}")
         for c in p.get('colors', []):
-            print(f"    Color [{c.get('name')}]: {c.get('image')}")
-        folder = f"assets/products/{p['id']}"
-        if os.path.exists(folder):
-            cands = [f for f in sorted(os.listdir(folder)) if f.startswith('white_') or 'packshot' in f]
-            print(f"    Folder white candidates: {cands}")
+            print(f"  Color: {c.get('name')} -> {c.get('image')}")

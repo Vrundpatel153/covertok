@@ -18,5 +18,9 @@
     "vanilla-web"
   ],
   "author": "Covertok",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^25.18.1",
+    "puppeteer-core": "^25.18.1"
+  }
 }

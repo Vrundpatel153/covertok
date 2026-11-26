@@ -32,16 +32,25 @@ const CHROME_EXE = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
     'https://covertok.vercel.app/search.html?q=case',
   ];
 
+  let totalBrokenAll = 0;
   for (const u of urls) {
-    await page.goto(u, { waitUntil: 'networkidle2', timeout: 45000 }).catch(() => {});
-    // Scroll down to trigger lazy images
+    await page.goto(u, { waitUntil: 'domcontentloaded', timeout: 30000 });
     await page.evaluate(async () => {
-      for (let y = 0; y <= document.body.scrollHeight; y += 500) {
+      for (let y = 0; y <= document.body.scrollHeight; y += 600) {
         window.scrollTo(0, y);
-        await new Promise(r => setTimeout(r, 120));
+        await new Promise(r => setTimeout(r, 100));
+      }
+      // Wait for all non-data imgs on page to finish loading (up to 10s)
+      const deadline = Date.now() + 10000;
+      while (Date.now() < deadline) {
+        const pending = Array.from(document.querySelectorAll('img')).filter(i => {
+          const s = i.getAttribute('src') || '';
+          return s && !s.startsWith('data:') && !i.complete;
+        });
+        if (pending.length === 0) break;
+        await new Promise(r => setTimeout(r, 250));
       }
     });
-    await new Promise(r => setTimeout(r, 1200));
 
     const report = await page.evaluate(() => {
       const imgs = Array.from(document.querySelectorAll('img'));
@@ -50,45 +59,38 @@ const CHROME_EXE = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
       for (const img of imgs) {
         const src = img.getAttribute('src') || '';
         if (!src || src.startsWith('data:')) continue;
-        // Skip hidden off-screen video fallback if hidden? No check all!
         if (!img.complete || img.naturalWidth === 0) {
-          broken.push({
-            src: src,
-            alt: img.alt || '',
-            cls: img.className || ''
-          });
+          broken.push({ src, alt: img.alt || '', cls: img.className || '' });
         } else {
           loaded++;
         }
       }
       return { totalImgs: imgs.length, loaded, broken };
     });
+    totalBrokenAll += report.broken.length;
     console.log(`URL: ${u} | imgs=${report.totalImgs} loaded=${report.loaded} broken=${report.broken.length}`);
-    for (const b of report.broken.slice(0, 20)) {
-      console.log('   BROKEN IMG:', b.alt, '->', b.src);
+    for (const b of report.broken.slice(0, 10)) {
+      console.log('   BROKEN:', b.alt, '->', b.src);
+    }
+
+    if (u.endsWith('collections.html?page=5')) {
+      await page.evaluate(() => window.scrollTo(0, 500));
+      await new Promise(r => setTimeout(r, 400));
+      await page.screenshot({ path: 'scripts/live_audit_col_page5.png' });
     }
   }
 
-  // Also test desktop 1440px homepage
-  await page.setViewport({ width: 1440, height: 900 });
-  await page.goto('https://covertok.vercel.app/index.html', { waitUntil: 'networkidle2', timeout: 45000 }).catch(() => {});
-  await page.evaluate(async () => {
-    for (let y = 0; y <= document.body.scrollHeight; y += 600) {
-      window.scrollTo(0, y);
-      await new Promise(r => setTimeout(r, 100));
-    }
+  // Screenshot mobile index popular covers slider (around Steel Blue Heart)
+  await page.goto('https://covertok.vercel.app/index.html', { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await new Promise(r => setTimeout(r, 2500));
+  await page.evaluate(() => {
+    const el = document.querySelector('.popular-row-covers');
+    if (el) el.scrollIntoView({ block: 'center' });
   });
   await new Promise(r => setTimeout(r, 1000));
-  const deskRep = await page.evaluate(() => {
-    const imgs = Array.from(document.querySelectorAll('img'));
-    const broken = imgs.filter(i => i.getAttribute('src') && !i.getAttribute('src').startsWith('data:') && (!i.complete || i.naturalWidth === 0))
-                       .map(i => ({ src: i.getAttribute('src'), alt: i.alt }));
-    return { total: imgs.length, broken };
-  });
-  console.log(`DESKTOP index.html | imgs=${deskRep.total} broken=${deskRep.broken.length}`);
-  for (const b of deskRep.broken) console.log('   DESK BROKEN:', b.alt, '->', b.src);
+  await page.screenshot({ path: 'scripts/live_audit_home_popular.png' });
 
-  console.log(`\nTotal >=400 network responses: ${failed404.length}`);
+  console.log(`\nSUMMARY: totalBroken=${totalBrokenAll} | HTTP>=400=${failed404.length}`);
   for (const f of [...new Set(failed404.map(x => `${x.status} ${x.url}`))]) {
     console.log('  NET ERR:', f);
   }
