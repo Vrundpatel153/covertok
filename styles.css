@@ -1160,6 +1160,12 @@ img {
 
   padding: 0 48px 0 16px !important;
 
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  box-sizing: border-box !important;
+
   height: 32px !important;
 
   max-height: 32px !important;
@@ -52398,7 +52404,7 @@ a.footer-contact-main:hover {
 
 /* Desktop Hand Model: RIGHT SIDE ONLY, Tall & Prominent */
 
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   .hero-hand-slideshow {
     position: absolute !important;
     bottom: 0 !important;
@@ -52460,7 +52466,7 @@ a.footer-contact-main:hover {
 
 /* Mobile Overrides (< 992px) */
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 
   .hero-section {
     padding: 12px 12px 20px !important;
@@ -53704,10 +53710,13 @@ body.home-page .hero-content {
   pointer-events: auto !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 
   body.home-page .site-header,
   body.home-page #siteHeader {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     padding: 0 !important;
     height: 56px !important;
     min-height: 56px !important;
@@ -53721,6 +53730,7 @@ body.home-page .hero-content {
 
   body.home-page .site-header .header-inner,
   body.home-page #siteHeader .header-inner {
+    width: 100% !important;
     height: 100% !important;
     min-height: 100% !important;
     display: flex !important;
@@ -56271,7 +56281,7 @@ html body #siteHeader,
 /* ==========================================================================
    HOMEPAGE DESKTOP STEPPED HERO WINDOW NESTING & UNIVERSAL NAVBAR
    ========================================================================== */
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
 
   html body.home-page .site-header,
   html body.home-page #siteHeader,
@@ -56317,8 +56327,18 @@ html body #siteHeader,
     pointer-events: none !important;
   }
 
-  body.home-page .site-header .header-left,
-  body.home-page .site-header .main-nav,
+  body.home-page .site-header .header-left {
+    display: flex !important;
+    align-items: center !important;
+    pointer-events: auto !important;
+  }
+
+  body.home-page .site-header .main-nav {
+    display: flex !important;
+    align-items: center !important;
+    pointer-events: auto !important;
+  }
+
   body.home-page .site-header a,
   body.home-page .site-header button,
   body.home-page .site-header .nav-link,
@@ -56326,58 +56346,59 @@ html body #siteHeader,
     pointer-events: auto !important;
   }
 
-  /* Haute Floating Pill Capsule for Header Right Utility Icons */
+  /* Discrete Circular Action Buttons for Header Right Utility Icons */
   body.home-page .site-header .header-right {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 4px !important;
-    background: rgba(255, 255, 255, 0.88) !important;
-    backdrop-filter: blur(24px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
-    border-radius: 999px !important;
-    padding: 3px 6px !important;
-    border: 1px solid rgba(255, 255, 255, 0.6) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
-    margin-right: clamp(4px, 0.8vw, 12px) !important;
+    gap: 8px !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    margin-right: 0 !important;
     pointer-events: auto !important;
     z-index: 100 !important;
-    transition: transform 0.22s ease, box-shadow 0.22s ease !important;
-  }
-
-  body.home-page .site-header .header-right:hover {
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
-    transform: translateY(-1px) !important;
   }
 
   body.home-page .site-header .header-right .header-action-btn,
-  body.home-page .site-header .header-right .icon-btn {
-    width: 36px !important;
-    height: 36px !important;
-    min-width: 36px !important;
-    min-height: 36px !important;
+  body.home-page .site-header .header-right .icon-btn,
+  body.home-page .site-header .header-right .mobile-toggle-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     color: #0A0A0C !important;
-    background: transparent !important;
-    border: none !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E5E7EB !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
     padding: 0 !important;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
     pointer-events: auto !important;
   }
 
   body.home-page .site-header .header-right .header-action-btn:hover,
-  body.home-page .site-header .header-right .icon-btn:hover {
-    background: rgba(0, 0, 0, 0.06) !important;
-    transform: scale(1.05) !important;
+  body.home-page .site-header .header-right .icon-btn:hover,
+  body.home-page .site-header .header-right .mobile-toggle-btn:hover {
+    background: #F3F4F6 !important;
+    border-color: #D1D5DB !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08) !important;
   }
 
   body.home-page .site-header .header-right .header-action-btn svg,
-  body.home-page .site-header .header-right .icon-btn svg {
+  body.home-page .site-header .header-right .icon-btn svg,
+  body.home-page .site-header .header-right .mobile-toggle-btn svg {
     stroke: #0A0A0C !important;
-    width: 17px !important;
-    height: 17px !important;
+    width: 18px !important;
+    height: 18px !important;
     display: block !important;
   }
 
@@ -56413,15 +56434,15 @@ html body #siteHeader,
 
   /* Provide comfortable breathing room & headroom for hero phone packshots */
   body.home-page .hero-sub-bg {
-    object-position: right 68% !important;
+    object-position: right 48% !important;
   }
 
   body.home-page .hero-slide-bg[data-bg-index="1"] .hero-bg-img {
-    object-position: right 65% !important;
+    object-position: right 48% !important;
   }
 
   body.home-page .hero-slide-bg[data-bg-index="2"] .hero-bg-img {
-    object-position: right 60% !important;
+    object-position: right 48% !important;
   }
 }
 
@@ -57445,7 +57466,7 @@ html body #siteHeader,
    HOMEPAGE MOBILE HERO - NAVBAR BREATHING ROOM GAP
    Only on mobile viewports (< 992px) and only on homepage hero (body.home-page)
    ========================================================================== */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 
   body.home-page .hero-section,
   body.home-page #hero {
@@ -57456,7 +57477,7 @@ html body #siteHeader,
 
 
 /* MOBILE HERO ELEVATION & STATIC TEXT ANCHORING */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 
   body.home-page .hero-slide .hero-content .hero-editorial-desc,
   .hero-slide .hero-content .hero-editorial-desc,
