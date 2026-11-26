@@ -292,14 +292,14 @@
         if (warrantyDesc) warrantyDesc.textContent = 'Military-grade defense';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`;
         }
       } else {
         warrantyTitle.textContent = 'Precision Fit';
         if (warrantyDesc) warrantyDesc.textContent = '100% device match';
         if (warrantyIcon) {
           warrantyIcon.className = 'covertok-trust-icon';
-          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><polyline points="9 11 11 13 15 9"/></svg>`;
+          warrantyIcon.innerHTML = `<svg class="trust-badge-icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><polyline points="9 11 11 13 15 9"/></svg>`;
         }
       }
     }
@@ -1928,15 +1928,15 @@
         actionAddBtn.style.display = 'block';
 
         if (inSlotKey) {
-          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF5500" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
+          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0A0A0C" stroke-width="2.5" style="vertical-align:-1px; margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg>In Your Combo (Slot ${inSlotKey}) • Tap to Remove</span>`;
           actionAddBtn.style.background = '#0A0A0A';
           actionAddBtn.style.color = '#FFFFFF';
-          actionAddBtn.style.borderColor = '#FF5500';
+          actionAddBtn.style.borderColor = '#0A0A0C';
         } else {
-          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#FF5500" stroke="none" style="vertical-align:-1px; margin-right:4px;"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
+          actionAddBtn.innerHTML = `<span><svg width="12" height="12" viewBox="0 0 24 24" fill="#0A0A0C" stroke="none" style="vertical-align:-1px; margin-right:4px;"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2.5"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5"/></svg>Add this ${comboCatLabel} to 3-Piece Combo (₹1,199 Deal)</span>`;
           actionAddBtn.style.background = '#FFFFFF';
           actionAddBtn.style.color = '#0A0A0A';
-          actionAddBtn.style.borderColor = '#FF5500';
+          actionAddBtn.style.borderColor = '#0A0A0C';
         }
       }
     }

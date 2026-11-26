@@ -3,7 +3,7 @@
    Ultra-smooth in-and-out transitions, physics-based springs,
    hover elevations, drawers, modals, checkout, user profile, wishlist,
    tracking, coupons, and interactive feedback.
-   Theme: #FFFFFF Canvas, #0A0A0A Obsidian, #FF5500 Warm Artisan Gold
+   Theme: #FFFFFF Canvas, #0A0A0A Obsidian, #0A0A0C Warm Artisan Gold
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -36,8 +36,8 @@ button:active:not(:disabled), .btn:active:not(:disabled) {
 /* Subtle Card Hover Floating with Gold Glow */
 .bestseller-card:hover, .pdp-product-card:hover, .review-item-card:hover {
   transform: translateY(-6px) scale(1.008);
-  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 20px rgba(255, 85, 0, 0.2);
-  border-color: rgba(255, 85, 0, 0.45);
+  box-shadow: 0 20px 42px -8px rgba(23, 21, 19, 0.16), 0 0 20px rgba(10, 10, 12, 0.12);
+  border-color: rgba(10, 10, 12, 0.12);
 }
 
 /* Specular Card Light-Sweep Shine Animation - Removed for Clean Modern Aesthetics */
@@ -233,7 +233,7 @@ body.app-sheet-open {
   height: 38px;
   border-radius: 12px;
   background: #FFFFFF;
-  border: 1.5px solid rgba(255, 85, 0, 0.45);
+  border: 1.5px solid rgba(10, 10, 12, 0.12);
   color: #0A0A0A;
   display: flex;
   align-items: center;
@@ -1022,7 +1022,7 @@ body.app-sheet-open {
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.775rem !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   margin-top: 2px !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -1166,7 +1166,7 @@ body.app-sheet-open {
 
 .checkout-input:focus {
   background: #FFFFFF;
-  border-color: #FF5500;
+  border-color: #0A0A0C;
   box-shadow: var(--gold-glow);
 }
 
@@ -1189,7 +1189,7 @@ body.app-sheet-open {
 }
 
 .checkout-option-card.selected {
-  border-color: #FF5500;
+  border-color: #0A0A0C;
   background: #FFFDF9;
   box-shadow: var(--gold-glow);
 }
@@ -1240,7 +1240,7 @@ body.app-sheet-open {
 
 .checkout-order-number-box {
   background: #FFFFFF;
-  border: 1px dashed #FF5500;
+  border: 1px dashed #0A0A0C;
   border-radius: 14px;
   padding: 14px;
   margin: 18px 0;
@@ -1328,7 +1328,7 @@ body.app-sheet-open {
 }
 
 .wishlist-move-cart-btn:hover {
-  background: #FF5500;
+  background: #0A0A0C;
 }
 
 .wishlist-remove-btn {
@@ -1369,7 +1369,7 @@ body.app-sheet-open {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 2px solid #FF5500;
+  border: 2px solid #0A0A0C;
   object-fit: cover;
 }
 
@@ -1395,7 +1395,7 @@ body.app-sheet-open {
 
 .profile-points-badge {
   background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 85, 0, 0.45);
+  border: 1px solid rgba(10, 10, 12, 0.12);
   padding: 3px 8px;
   border-radius: 999px;
   font-size: 0.7rem;
@@ -1427,7 +1427,7 @@ body.app-sheet-open {
 
 .profile-tab-btn.active {
   color: #0A0A0A;
-  border-bottom-color: #FF5500;
+  border-bottom-color: #0A0A0C;
 }
 
 .profile-order-card {
@@ -1513,8 +1513,8 @@ body.app-sheet-open {
 }
 
 .track-step-node.current .track-step-bullet {
-  background: #FF5500;
-  border-color: #FF5500;
+  background: #0A0A0C;
+  border-color: #0A0A0C;
   color: #FFFFFF;
   box-shadow: 0 0 0 4px rgba(169, 129, 53, 0.25);
 }
@@ -1554,7 +1554,7 @@ body.app-sheet-open {
   justify-content: space-between;
   padding: 16px;
   background: #FFFFFF;
-  border: 1.5px dashed #FF5500;
+  border: 1.5px dashed #0A0A0C;
   border-radius: 16px;
   gap: 14px;
   transition: all 0.2s ease;
@@ -1573,7 +1573,7 @@ body.app-sheet-open {
   letter-spacing: 0.08em;
   background: #0A0A0A;
   color: #FFFFFF;
-  border: 1px solid rgba(255, 85, 0, 0.45);
+  border: 1px solid rgba(10, 10, 12, 0.12);
   padding: 6px 14px;
   border-radius: 8px;
   display: inline-block;
@@ -1589,7 +1589,7 @@ body.app-sheet-open {
 
 .offer-apply-btn {
   padding: 8px 16px;
-  background: #FF5500;
+  background: #0A0A0C;
   color: #FFFFFF;
   border: none;
   border-radius: 999px;
@@ -1736,8 +1736,8 @@ body.app-sheet-open {
   /* Specular Chamfer Edge Borders */
   --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.90);
   --liquid-glass-border-subtle: 1px solid rgba(255, 255, 255, 0.75);
-  --liquid-glass-border-hover: 1px solid rgba(255, 85, 0, 0.55);
-  --liquid-glass-border-gold: 1.5px solid rgba(255, 85, 0, 0.45);
+  --liquid-glass-border-hover: 1px solid rgba(10, 10, 12, 0.12);
+  --liquid-glass-border-gold: 1.5px solid rgba(10, 10, 12, 0.12);
 
   /* Optical Refraction & Frosted Blur */
   --liquid-glass-blur: blur(28px) saturate(190%) contrast(102%);
@@ -1747,7 +1747,7 @@ body.app-sheet-open {
   /* Specular Highlights & Ambient Shadows */
   --liquid-glass-shadow: 0 16px 40px -8px rgba(23, 21, 19, 0.08), 0 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.98), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.02);
   --liquid-glass-shadow-elevated: 0 28px 65px -12px rgba(23, 21, 19, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.95), inset 0 2px 2px 0 #FFFFFF, inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
-  --liquid-glass-shadow-hover: 0 32px 70px -12px rgba(23, 21, 19, 0.16), 0 0 32px rgba(255, 85, 0, 0.22), inset 0 2px 2px 0 #FFFFFF;
+  --liquid-glass-shadow-hover: 0 32px 70px -12px rgba(23, 21, 19, 0.16), 0 0 32px rgba(10, 10, 12, 0.12), inset 0 2px 2px 0 #FFFFFF;
 
   /* Spring Physics */
   --liquid-glass-transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, background 0.28s ease;
@@ -1907,7 +1907,7 @@ body:not(.home-page) #siteHeader,
 
 .icon-btn:hover .cart-badge,
 .pdp-action-icon-btn:hover .pdp-badge-count {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   border-color: #0A0A0A !important;
 }
 
@@ -2045,9 +2045,9 @@ body:not(.home-page) #siteHeader,
 .bestseller-atc-btn:hover,
 .catalog-card-quick-btn:hover,
 .drop-atc-btn:hover {
-  background: var(--color-accent, #FF5500) !important;
+  background: var(--color-accent, #0A0A0C) !important;
   border-color: rgba(255, 255, 255, 0.45) !important;
-  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.45), inset 0 1px 1px #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(10, 10, 12, 0.12), inset 0 1px 1px #FFFFFF !important;
   transform: scale(1.04) !important;
 }
 
@@ -2083,7 +2083,7 @@ body:not(.home-page) #siteHeader,
 .catalog-cat-card:hover,
 .catalog-price-btn:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(255, 85, 0, 0.6) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   color: #0A0A0A !important;
   transform: translateY(-2px) scale(1.03) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 1px 1px #FFFFFF !important;
@@ -2125,9 +2125,9 @@ body:not(.home-page) #siteHeader,
 }
 
 .catalog-cat-card.active .cat-pill-count {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
   box-shadow: none !important;
   font-weight: 800 !important;
 }
@@ -2169,20 +2169,20 @@ body:not(.home-page) #siteHeader,
 .combo-full-page-link:hover,
 .guarantee-tile:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(255, 85, 0, 0.52) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
   transform: translateY(-6px) scale(1.008) !important;
 }
 
 /* Bento Collections Section - Persistent Warm Accent Borders */
 .bento-collections-section .bento-card {
-  border: 1.5px solid rgba(255, 85, 0, 0.45) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(255, 85, 0, 0.06) !important;
+  border: 1.5px solid rgba(10, 10, 12, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(10, 10, 12, 0.06) !important;
 }
 
 .bento-collections-section .bento-card:hover {
-  border-color: rgba(255, 85, 0, 0.85) !important;
-  box-shadow: 0 16px 40px rgba(255, 85, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
+  box-shadow: 0 16px 40px rgba(10, 10, 12, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06) !important;
 }
 
 /* Dedicated Collection Header Banner */
@@ -2248,11 +2248,11 @@ body:not(.home-page) #siteHeader,
 
 .bento-card:hover .bento-card-btn,
 .bento-card-btn:hover {
-  background: var(--color-accent, #FF5500) !important;
+  background: var(--color-accent, #0A0A0C) !important;
   border-color: rgba(255, 255, 255, 0.45) !important;
   color: #FFFFFF !important;
   transform: scale(1.15) translateX(3px) !important;
-  box-shadow: 0 8px 26px rgba(255, 85, 0, 0.45), inset 0 1px 1px #FFFFFF !important;
+  box-shadow: 0 8px 26px rgba(10, 10, 12, 0.12), inset 0 1px 1px #FFFFFF !important;
 }
 
 /* 7. UNIVERSAL STICKY ACTION BARS (Mobile & Desktop) */
@@ -2304,9 +2304,9 @@ body:not(.home-page) #siteHeader,
 .combo-sticky-checkout-btn:hover,
 .combo-sticky-cta:not(:disabled):hover,
 .sticky-atc-btn:hover {
-  background: var(--color-accent, #FF5500) !important;
+  background: var(--color-accent, #0A0A0C) !important;
   border-color: rgba(255, 255, 255, 0.45) !important;
-  box-shadow: 0 10px 30px rgba(255, 85, 0, 0.45), inset 0 1px 1px #FFFFFF !important;
+  box-shadow: 0 10px 30px rgba(10, 10, 12, 0.12), inset 0 1px 1px #FFFFFF !important;
   transform: translateY(-2px) scale(1.02) !important;
 }
 
@@ -2355,14 +2355,14 @@ body:not(.home-page) #siteHeader,
 .checkout-option-card:hover,
 .profile-order-card:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(255, 85, 0, 0.45) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
 .checkout-option-card.selected {
   background: rgba(250, 248, 242, 0.92) !important;
-  border-color: #FF5500 !important;
-  box-shadow: 0 12px 30px rgba(255, 85, 0, 0.2), inset 0 1.5px 1px #FFFFFF !important;
+  border-color: #0A0A0C !important;
+  box-shadow: 0 12px 30px rgba(10, 10, 12, 0.12), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* 9. UNIVERSAL SEARCH BARS, FORM INPUTS & TEXT FIELDS */
@@ -2514,7 +2514,7 @@ body:not(.home-page) #siteHeader,
 .review-card:hover,
 .video-card:hover {
   transform: translateY(-6px) scale(1.012) !important;
-  border-color: rgba(255, 85, 0, 0.45) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
 }
 
@@ -2534,9 +2534,9 @@ body:not(.home-page) #siteHeader,
 .reviews-nav-btn:hover,
 .bestseller-nav-btn:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(255, 85, 0, 0.6) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   transform: translateY(-2px) scale(1.08) !important;
-  box-shadow: 0 10px 28px rgba(255, 85, 0, 0.25), inset 0 1.5px 1px #FFFFFF !important;
+  box-shadow: 0 10px 28px rgba(10, 10, 12, 0.12), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* 11. UNIVERSAL PDP SPECIFICATIONS, TRUST BADGES, INFO PANELS & ACCORDIONS */
@@ -2564,8 +2564,8 @@ body:not(.home-page) #siteHeader,
 .pdp-accordion-item:hover,
 .pdp-summary-card:hover {
   background: var(--liquid-glass-bg-hover) !important;
-  border-color: rgba(255, 85, 0, 0.45) !important;
-  box-shadow: 0 12px 32px rgba(255, 85, 0, 0.14), inset 0 1.5px 1px #FFFFFF !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
+  box-shadow: 0 12px 32px rgba(10, 10, 12, 0.14), inset 0 1.5px 1px #FFFFFF !important;
 }
 
 /* 12. UNIVERSAL INFORMATION, POLICY & CONTACT PAGES */
@@ -2587,7 +2587,7 @@ body:not(.home-page) #siteHeader,
 .highlight-card:hover,
 .toc-card:hover,
 .policy-card:hover {
-  border-color: rgba(255, 85, 0, 0.5) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   box-shadow: var(--liquid-glass-shadow-hover) !important;
   transform: translateY(-4px) !important;
 }
@@ -2752,11 +2752,11 @@ button:active,
 
 @keyframes checkAuraPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(255, 85, 0, 0.7);
+    box-shadow: 0 0 0 0 rgba(10, 10, 12, 0.12);
     opacity: 1;
   }
   100% {
-    box-shadow: 0 0 0 16px rgba(255, 85, 0, 0);
+    box-shadow: 0 0 0 16px rgba(10, 10, 12, 0.00);
     opacity: 0;
   }
 }
@@ -2787,10 +2787,10 @@ button:active,
 
 .combo-card-checkbox:hover {
   background: #FFFFFF !important;
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
   color: #171513 !important;
   transform: translateY(-2px) scale(1.03) !important;
-  box-shadow: 0 6px 16px rgba(255, 85, 0, 0.22), inset 0 1px 1px #FFFFFF !important;
+  box-shadow: 0 6px 16px rgba(10, 10, 12, 0.12), inset 0 1px 1px #FFFFFF !important;
 }
 
 .combo-check-circle {
@@ -2825,9 +2825,9 @@ button:active,
 /* Checked State: Pure Artisan Obsidian & Gold Bloom */
 .combo-card-checkbox.checked {
   background: linear-gradient(135deg, #1C1A18 0%, #0A0A0A 100%) !important;
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.36), 0 2px 6px rgba(0, 0, 0, 0.24), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(10, 10, 12, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
   animation: checkboxElasticPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -2841,9 +2841,9 @@ button:active,
 }
 
 .combo-card-checkbox.checked .combo-check-circle {
-  background: linear-gradient(135deg, #FF8A00 0%, #FF5500 100%) !important;
-  border-color: #FF5500 !important;
-  box-shadow: 0 0 10px rgba(255, 85, 0, 0.6) !important;
+  background: linear-gradient(135deg, #18181B 0%, #0A0A0C 100%) !important;
+  border-color: #0A0A0C !important;
+  box-shadow: 0 0 10px rgba(10, 10, 12, 0.12) !important;
   animation: checkCirclePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
@@ -2861,8 +2861,8 @@ button:active,
 /* Checked Card Parent Selection Glow */
 .combo-catalog-card.selected,
 .combo-catalog-card.is-selected {
-  border-color: rgba(255, 85, 0, 0.85) !important;
-  box-shadow: 0 18px 42px -6px rgba(255, 85, 0, 0.3), 0 0 0 1.5px rgba(255, 85, 0, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
+  box-shadow: 0 18px 42px -6px rgba(10, 10, 12, 0.12), 0 0 0 1.5px rgba(10, 10, 12, 0.12), inset 0 2px 2px rgba(255, 255, 255, 0.95) !important;
   transform: translateY(-4px) scale(1.01) !important;
 }
 
@@ -2898,7 +2898,7 @@ button:active,
 .pdp-switch-pill:hover,
 .catalog-price-btn:hover {
   transform: translateY(-2px) scale(1.025) !important;
-  border-color: rgba(255, 85, 0, 0.65) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), inset 0 1px 1px #FFFFFF !important;
 }
 
@@ -2929,7 +2929,7 @@ button:active,
 
 .luxury-sort-dropdown.open .sort-trigger-icon {
   transform: rotate(180deg) !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .luxury-sort-menu {
@@ -2959,7 +2959,7 @@ button:active,
 
 .luxury-sort-option:hover {
   transform: translateX(4px) !important;
-  background: rgba(255, 85, 0, 0.12) !important;
+  background: rgba(10, 10, 12, 0.12) !important;
   color: #171513 !important;
 }
 
@@ -2981,7 +2981,7 @@ button:active,
 
 .catalog-chip:hover {
   transform: translateY(-1px) scale(1.02) !important;
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
 }
 
 .catalog-chip-remove {
@@ -3059,8 +3059,8 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none !important;
-  border-color: #FF5500 !important;
-  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.22), 0 6px 18px rgba(255, 85, 0, 0.1) !important;
+  border-color: #0A0A0C !important;
+  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.12), 0 6px 18px rgba(10, 10, 12, 0.10) !important;
 }
 
 /* ==========================================================================
@@ -3334,10 +3334,10 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .mobile-link:hover {
-  background: rgba(255, 85, 0, 0.12) !important;
+  background: rgba(10, 10, 12, 0.12) !important;
   color: #0A0A0A !important;
   transform: translateX(6px) !important;
-  box-shadow: inset 3.5px 0 0 #FF5500 !important;
+  box-shadow: inset 3.5px 0 0 #0A0A0C !important;
 }
 
 .mobile-link:active {
@@ -3345,10 +3345,10 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .mobile-link.active {
-  background: rgba(255, 85, 0, 0.16) !important;
+  background: rgba(10, 10, 12, 0.12) !important;
   color: #0A0A0A !important;
   font-weight: 800 !important;
-  box-shadow: inset 3.5px 0 0 #FF5500 !important;
+  box-shadow: inset 3.5px 0 0 #0A0A0C !important;
 }
 
 /* --- 15.8 Cart Free Shipping Molten Gold Shimmer Bar --- */
@@ -3367,16 +3367,16 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .cart-shipping-bar-fill {
   background: linear-gradient(
     90deg, 
-    #FF5500 0%, 
+    #0A0A0C 0%, 
     #F5DEB3 25%, 
     #FFE5B4 50%, 
     #F5DEB3 75%, 
-    #FF5500 100%
+    #0A0A0C 100%
   ) !important;
   background-size: 200% 100% !important;
   animation: shippingGlowShimmer 2.4s infinite linear !important;
   border-radius: 999px !important;
-  box-shadow: 0 0 12px rgba(255, 85, 0, 0.45) !important;
+  box-shadow: 0 0 12px rgba(10, 10, 12, 0.12) !important;
 }
 
 /* --- 15.9 Discreet Luxury Scrollbar for All Sidebars --- */
@@ -3401,7 +3401,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .cart-drawer::-webkit-scrollbar-thumb,
 #cartDrawerSheet::-webkit-scrollbar-thumb,
 #accountDrawerSheet::-webkit-scrollbar-thumb {
-  background: rgba(255, 85, 0, 0.35) !important;
+  background: rgba(10, 10, 12, 0.12) !important;
   border-radius: 999px !important;
   transition: background 0.2s ease !important;
 }
@@ -3409,7 +3409,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .mobile-nav-drawer::-webkit-scrollbar-thumb:hover,
 .app-drawer::-webkit-scrollbar-thumb:hover,
 .cart-drawer::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 85, 0, 0.75) !important;
+  background: rgba(10, 10, 12, 0.12) !important;
 }
 
 
@@ -3417,7 +3417,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 /* ==========================================================================
    UNIVERSAL CART DRAWER & 3 FOR ₹1,199 MILESTONE PROGRESS TRACKER
-   Covertok Clean Luxury Theme: Orange (#FF5500), White, Obsidian Black
+   Covertok Clean Luxury Theme: Orange (#0A0A0C), White, Obsidian Black
    ========================================================================== */
 
 /* Top Announcement Strip inside Cart Sheet */
@@ -3447,7 +3447,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   border-radius: 14px !important;
   padding: 13px 15px !important;
   margin-bottom: 14px !important;
-  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.05), inset 0 1px 1.5px #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(10, 10, 12, 0.05), inset 0 1px 1.5px #FFFFFF !important;
   position: relative;
 }
 
@@ -3465,7 +3465,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 11px;
   font-weight: 800;
-  color: #FF5500;
+  color: #0A0A0C;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -3474,9 +3474,9 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #FF5500;
+  background: #0A0A0C;
   display: inline-block;
-  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 0 0 2px rgba(10, 10, 12, 0.12);
   animation: bundleDotPulse 2s infinite ease-in-out;
 }
 
@@ -3525,7 +3525,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 .cart-milestone-fill {
   height: 100%;
-  background: linear-gradient(90deg, #FF7733 0%, #FF5500 100%);
+  background: linear-gradient(90deg, #27272A 0%, #0A0A0C 100%);
   border-radius: 999px;
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -3574,14 +3574,14 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-milestone-lbl-bold {
-  color: #FF5500;
+  color: #0A0A0C;
   font-weight: 700;
 }
 
 /* Completed & Active Node States */
 .cart-milestone-node.is-completed .cart-milestone-circle {
-  background: #FF5500;
-  border-color: #FF5500;
+  background: #0A0A0C;
+  border-color: #0A0A0C;
   color: #FFFFFF;
 }
 
@@ -3600,14 +3600,14 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-milestone-node.is-active .cart-milestone-circle {
-  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 0 0 3px rgba(10, 10, 12, 0.12);
 }
 
 .cart-milestone-node.is-unlocked .cart-milestone-circle {
-  background: #FF5500;
-  border-color: #FF5500;
+  background: #0A0A0C;
+  border-color: #0A0A0C;
   color: #FFFFFF;
-  box-shadow: 0 0 12px rgba(255, 85, 0, 0.45);
+  box-shadow: 0 0 12px rgba(10, 10, 12, 0.12);
 }
 
 /* Cart Item Tags */
@@ -3618,8 +3618,8 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .cart-tag-deal {
   display: inline-block;
   background: #FFF0E8 !important;
-  color: #FF5500 !important;
-  border: 1px solid rgba(255, 85, 0, 0.4) !important;
+  color: #0A0A0C !important;
+  border: 1px solid rgba(10, 10, 12, 0.12) !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 10px !important;
   font-weight: 700 !important;
@@ -3654,7 +3654,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-item-row.is-bundled {
-  border-color: rgba(255, 85, 0, 0.25) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 244, 0.8) 100%) !important;
 }
 
@@ -3727,7 +3727,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-coupon-apply-btn:hover {
-  background: #FF5500;
+  background: #0A0A0C;
 }
 
 /* Live Celebratory Savings Strip */
@@ -3755,7 +3755,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 /* ==========================================================================
    UNIVERSAL CART DRAWER & 3 FOR ₹1,199 MILESTONE PROGRESS TRACKER
-   Covertok Clean Luxury Theme: Orange (#FF5500), White, Obsidian Black
+   Covertok Clean Luxury Theme: Orange (#0A0A0C), White, Obsidian Black
    ========================================================================== */
 
 /* Top Announcement Strip inside Cart Sheet */
@@ -3785,7 +3785,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   border-radius: 14px !important;
   padding: 14px 16px !important;
   margin-bottom: 14px !important;
-  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.05), inset 0 1px 1.5px #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(10, 10, 12, 0.05), inset 0 1px 1.5px #FFFFFF !important;
   position: relative !important;
 }
 
@@ -3806,7 +3806,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 11px !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
@@ -3817,9 +3817,9 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   width: 7px !important;
   height: 7px !important;
   border-radius: 50% !important;
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   display: inline-block !important;
-  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25) !important;
+  box-shadow: 0 0 0 2px rgba(10, 10, 12, 0.12) !important;
   animation: bundleDotPulse 2s infinite ease-in-out !important;
 }
 
@@ -3839,7 +3839,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   background: rgba(255, 255, 255, 0.85) !important;
   padding: 2px 7px !important;
   border-radius: 999px !important;
-  border: 1px solid rgba(255, 85, 0, 0.18) !important;
+  border: 1px solid rgba(10, 10, 12, 0.12) !important;
 }
 
 .cart-bundle-instruction {
@@ -3876,7 +3876,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 
 .cart-milestone-fill {
   height: 100% !important;
-  background: linear-gradient(90deg, #FF7733 0%, #FF5500 100%) !important;
+  background: linear-gradient(90deg, #27272A 0%, #0A0A0C 100%) !important;
   border-radius: 999px !important;
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
@@ -3937,14 +3937,14 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-milestone-btm-highlight {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   font-weight: 700 !important;
 }
 
 /* Completed & Active Node States */
 .cart-milestone-node.is-completed .cart-milestone-circle {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
 }
 
@@ -3964,14 +3964,14 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-milestone-node.is-active .cart-milestone-circle {
-  box-shadow: 0 0 0 4px rgba(255, 85, 0, 0.25) !important;
+  box-shadow: 0 0 0 4px rgba(10, 10, 12, 0.12) !important;
 }
 
 .cart-milestone-node.is-unlocked .cart-milestone-circle {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
-  box-shadow: 0 0 14px rgba(255, 85, 0, 0.5) !important;
+  box-shadow: 0 0 14px rgba(10, 10, 12, 0.12) !important;
   animation: bundleUnlockedPulse 1.5s infinite ease-in-out !important;
 }
 
@@ -3988,8 +3988,8 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 .cart-tag-deal {
   display: inline-block !important;
   background: #FFF0E8 !important;
-  color: #FF5500 !important;
-  border: 1px solid rgba(255, 85, 0, 0.4) !important;
+  color: #0A0A0C !important;
+  border: 1px solid rgba(10, 10, 12, 0.12) !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 10px !important;
   font-weight: 700 !important;
@@ -4024,7 +4024,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-item-row.is-bundled {
-  border-color: rgba(255, 85, 0, 0.25) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 244, 0.8) 100%) !important;
 }
 
@@ -4097,7 +4097,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-coupon-apply-btn:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 }
 
 /* Live Celebratory Savings Strip */
@@ -4161,7 +4161,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   position: absolute;
   top: -2px;
   right: -2px;
-  background: #FF5500;
+  background: #0A0A0C;
   color: #FFFFFF;
   font-family: var(--font-body, 'Inter', sans-serif);
   font-size: 10px;
@@ -4260,11 +4260,11 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-quick-chip:hover {
-  border-color: #FF5500;
-  color: #FF5500;
+  border-color: #0A0A0C;
+  color: #0A0A0C;
   background: #FFFBF9;
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(255, 85, 0, 0.08);
+  box-shadow: 0 3px 8px rgba(10, 10, 12, 0.08);
 }
 
 /* Perks Strip Box */
@@ -4371,9 +4371,9 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-coupon-apply-btn:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
 }
 
 
@@ -4557,7 +4557,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   height: 36px !important;
   min-width: 36px !important;
   border-radius: 10px !important;
-  background: rgba(255, 85, 0, 0.08) !important;
+  background: rgba(10, 10, 12, 0.08) !important;
   flex-shrink: 0 !important;
 }
 
@@ -4639,9 +4639,9 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 9.5px !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
-  background: rgba(255, 85, 0, 0.08) !important;
-  border: 1px solid rgba(255, 85, 0, 0.2) !important;
+  color: #0A0A0C !important;
+  background: rgba(10, 10, 12, 0.08) !important;
+  border: 1px solid rgba(10, 10, 12, 0.12) !important;
   padding: 2px 8px !important;
   border-radius: 999px !important;
   letter-spacing: 0.04em !important;
@@ -4671,8 +4671,8 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-empty-rec-card:hover {
-  border-color: rgba(255, 85, 0, 0.45) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.08) !important;
+  border-color: rgba(10, 10, 12, 0.12) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.08) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -4742,7 +4742,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-empty-rec-title:hover {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .cart-empty-rec-pricing {
@@ -4756,7 +4756,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 12px !important;
   font-weight: 800 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 .cart-empty-rec-mrp {
@@ -4785,7 +4785,7 @@ body.app-sheet-open > :not(.app-drawer-overlay):not(.app-modal-overlay):not(#sto
 }
 
 .cart-empty-rec-add-btn:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: scale(1.02) !important;
 }
@@ -4851,7 +4851,7 @@ body.mobile-nav-open {
 }
 
 .mobile-nav-body::-webkit-scrollbar-thumb:hover {
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 }
 
 /* Category section divider & label in mobile drawer */
@@ -4888,7 +4888,7 @@ body.mobile-nav-open {
 .mobile-cat-link:hover,
 .mobile-cat-link:active {
   background: #FFFBF9 !important;
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   padding-left: 20px !important;
 }
 
@@ -4900,7 +4900,7 @@ body.mobile-nav-open {
 }
 
 .mobile-cat-link:hover .mobile-cat-arrow {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
   transform: translateX(3px) !important;
 }
 

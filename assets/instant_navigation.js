@@ -92,7 +92,7 @@
       left: 0;
       height: 3px;
       width: 0%;
-      background: linear-gradient(90deg, #FF5500 0%, #FFAA00 100%);
+      background: linear-gradient(90deg, #0A0A0C 0%, #71717A 50%, #0A0A0C 100%);
       z-index: 99999999;
       pointer-events: none;
       transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;

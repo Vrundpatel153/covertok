@@ -630,7 +630,7 @@
 
 .catalog-breadcrumb a:hover {
 
-  color: var(--color-accent, #FF5500);
+  color: var(--color-accent, #0A0A0C);
 
 }
 
@@ -731,7 +731,7 @@
   align-items: center !important;
   padding: 3px 8px !important;
   border-radius: 5px !important;
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
   color: #FFFFFF !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 0.65rem !important;
@@ -1063,7 +1063,7 @@
 
 .catalog-cat-card.active .cat-pill-count {
 
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 
   color: #FFFFFF !important;
 
@@ -1085,7 +1085,7 @@
 
   border-radius: 999px;
 
-  background: #FF5500;
+  background: #0A0A0C;
 
   color: #FFFFFF;
 
@@ -1333,7 +1333,7 @@
 
 .catalog-filters-btn.active svg {
 
-  stroke: #FF5500;
+  stroke: #0A0A0C;
 
 }
 
@@ -1981,9 +1981,9 @@
 
   color: #FFFFFF;
 
-  border-color: #FF5500;
+  border-color: #0A0A0C;
 
-  box-shadow: 0 2px 8px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(10, 10, 12, 0.12);
 
 }
 
@@ -2037,7 +2037,7 @@
 
 .catalog-price-input:focus {
 
-  border-color: #E77242;
+  border-color: #0A0A0C;
 
 }
 
@@ -2077,7 +2077,7 @@
 
 .catalog-stock-label:hover {
 
-  border-color: #E77242;
+  border-color: #0A0A0C;
 
 }
 
@@ -3289,7 +3289,7 @@
 
 .qv-color-swatch.active {
 
-  box-shadow: 0 0 0 2px #E77242;
+  box-shadow: 0 0 0 2px #0A0A0C;
 
   transform: scale(1.12);
 
@@ -3393,7 +3393,7 @@
 
   justify-content: center;
 
-  color: #E77242;
+  color: #0A0A0C;
 
   flex-shrink: 0;
 
@@ -4365,9 +4365,9 @@
 
   border-radius: 50%;
 
-  background: #FF5500;
+  background: #0A0A0C;
 
-  box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.25);
+  box-shadow: 0 0 0 2px rgba(10, 10, 12, 0.12);
 
   display: inline-block;
 
@@ -4524,15 +4524,15 @@
 
 .card-add-btn:hover {
 
-  background: #FF5500 !important;
+  background: #0A0A0C !important;
 
   color: #FFFFFF !important;
 
-  border-color: #FF5500 !important;
+  border-color: #0A0A0C !important;
 
   transform: translateY(-1px) !important;
 
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.12) !important;
 
 }
 
@@ -5008,7 +5008,7 @@
 }
 
 .card-product-title:hover {
-  color: #FF5500 !important;
+  color: #0A0A0C !important;
 }
 
 /* 3. Price on Left, Color Swatches on Right Row */
@@ -5155,11 +5155,11 @@
 }
 
 .card-add-btn:hover {
-  background: #FF5500 !important;
-  border-color: #FF5500 !important;
+  background: #0A0A0C !important;
+  border-color: #0A0A0C !important;
   color: #FFFFFF !important;
   transform: translateY(-1.5px) !important;
-  box-shadow: 0 6px 18px rgba(255, 85, 0, 0.35) !important;
+  box-shadow: 0 6px 18px rgba(10, 10, 12, 0.12) !important;
 }
 
 .card-add-btn:active {
@@ -5427,9 +5427,9 @@
   margin: 14px auto !important;
   max-width: 260px !important;
   background: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 85, 0, 0.38) !important;
+  border: 1.5px solid rgba(10, 10, 12, 0.12) !important;
   border-radius: 999px !important;
-  box-shadow: 0 4px 18px rgba(255, 85, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 18px rgba(10, 10, 12, 0.10), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
   color: #18181B !important;
   font-family: var(--font-body, 'Inter', sans-serif) !important;
   font-size: 13px !important;
@@ -5448,8 +5448,8 @@
 .catalog-infinite-spinner {
   width: 16px !important;
   height: 16px !important;
-  border: 2px solid rgba(255, 85, 0, 0.2) !important;
-  border-top-color: #FF5500 !important;
+  border: 2px solid rgba(10, 10, 12, 0.12) !important;
+  border-top-color: #0A0A0C !important;
   border-radius: 50% !important;
   animation: catalogSpinner 0.65s linear infinite !important;
   flex-shrink: 0 !important;
