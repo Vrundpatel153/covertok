@@ -5756,6 +5756,7 @@ img {
 
 
   -webkit-background-clip: text;
+  background-clip: text;
 
 
 
@@ -5821,7 +5822,6 @@ img {
 
 
 
-}
 
 
 
@@ -5843,7 +5843,6 @@ img {
 
 
 
-}
 
 
 
@@ -5865,7 +5864,6 @@ img {
 
 
 
-}
 
 
 
@@ -18534,6 +18532,7 @@ a.footer-contact-main:hover {
 
 
     -webkit-line-clamp: 2;
+    line-clamp: 2;
 
 
 
@@ -19647,6 +19646,7 @@ a.footer-contact-main:hover {
 
 
     -webkit-appearance: none !important;
+    appearance: none !important;
 
 
 
@@ -31725,6 +31725,7 @@ a.footer-contact-main:hover {
 
 
     -webkit-background-clip: text !important;
+    background-clip: text !important;
 
 
 
@@ -38409,6 +38410,7 @@ a.footer-contact-main:hover {
 
 
   -webkit-line-clamp: 2;
+  line-clamp: 2;
 
 
 
@@ -42178,6 +42180,7 @@ a.footer-contact-main:hover {
 
 
   -webkit-line-clamp: 2;
+  line-clamp: 2;
 
 
 
@@ -49598,6 +49601,7 @@ a.footer-contact-main:hover {
 
 
   -webkit-line-clamp: 3;
+  line-clamp: 3;
 
 
 
@@ -50394,7 +50398,6 @@ a.footer-contact-main:hover {
 
 
 
-}
 
 
 
@@ -52248,6 +52251,7 @@ a.footer-contact-main:hover {
 .hero-slide .hero-text-signature {
   background: linear-gradient(135deg, #FFFFFF 20%, #E4E4E7 60%, #A1A1AA 100%) !important;
   -webkit-background-clip: text !important;
+  background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   color: #FFFFFF !important;
   text-shadow: 0 2px 14px rgba(255, 255, 255, 0.22) !important;
@@ -56132,6 +56136,7 @@ p,
   .drop-card-title {
     display: -webkit-box !important;
     -webkit-line-clamp: 2 !important;
+    line-clamp: 2 !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
     min-height: 2.5em !important;
@@ -56679,7 +56684,6 @@ html body #siteHeader,
 #mobileMenuToggle:active,
 #mobileNavOpen:active {
   transform: scale(0.94) !important;
-}
 }
 
 @media (max-width: 768px) {
