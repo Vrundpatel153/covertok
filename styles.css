@@ -57210,14 +57210,12 @@ html body #siteHeader,
 }
 
 
-/* Clean color palette display - hide empty wrappers and single color dots */
-.product-color-palette:empty,
-.product-color-palette:has(> .color-dot:only-child) {
+/* Clean color palette display - hide only empty wrappers so single-color products display their swatch */
+.product-color-palette:empty {
   display: none !important;
 }
 
-.card-color-swatches:empty,
-.card-color-swatches:has(> .card-color-dot:only-child) {
+.card-color-swatches:empty {
   display: none !important;
 }
 
