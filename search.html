@@ -1749,7 +1749,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/products_data.js?v=20261127_v41_swatch_fix"></script>
+  <script src="assets/products_data.js?v=20261127_v42_single_swatch_fix"></script>
   <script src="assets/store_core.js?v=20261104_search_modal_v1"></script>
   <script src="assets/store_modals.js?v=20261103_no_coupon_v3"></script>
   <script src="assets/store_flows.js?v=20261103_no_coupon_v3"></script>
@@ -1916,13 +1916,18 @@
         }
 
         let paletteHtml = '';
-        if (product.colors && product.colors.length > 1) {
+        if (product.colors && product.colors.length >= 1) {
           const cols = product.colors;
           const visible = cols.slice(0, 3);
           const remaining = cols.length - 3;
+          let defIdx = 0;
+          if (product.primary_image) {
+            const m = product.colors.findIndex(c => c.image === product.primary_image);
+            if (m >= 0) defIdx = m;
+          }
           const dots = visible.map((c, i) => `
-            <span class="color-dot ${i === 0 ? 'active' : ''}" 
-                  style="background-color: ${c.hex};" 
+            <span class="color-dot ${i === defIdx ? 'active' : ''}" 
+                  style="background-color: ${c.hex || c.value || '#18181B'};" 
                   title="${c.name}"
                   ${c.image ? `data-color-img="${c.image}"` : ''}></span>
           `).join('');

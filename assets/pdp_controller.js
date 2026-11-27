@@ -445,7 +445,7 @@
 
   const bustUrl = (u) => {
     if (!u) return '';
-    const v = '20261127_v41_swatch_fix';
+    const v = '20261127_v42_single_swatch_fix';
     return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
   };
 
@@ -1798,15 +1798,22 @@
         ? `₹${Math.round(p.original_price).toLocaleString('en-IN')}`
         : '';
 
-      // Color Swatches Palette: Strictly only show when product has multiple colors (> 1)
+      // Color Swatches Palette: Show for all products with colors (>= 1) so single-color items also show their luxury swatch
       let paletteHtml = '';
-      if (p.colors && p.colors.length > 1) {
+      if (p.colors && p.colors.length >= 1) {
         const cols = p.colors;
         const visible = cols.slice(0, 3);
         const remaining = cols.length - 3;
+        
+        let defaultIdx = 0;
+        if (p.primary_image) {
+          const match = p.colors.findIndex(c => c.image === p.primary_image);
+          if (match >= 0) defaultIdx = match;
+        }
+
         const dots = visible.map((c, i) => `
-          <span class="color-dot ${i === 0 ? 'active' : ''}" 
-                style="background-color: ${c.hex};" 
+          <span class="color-dot ${i === defaultIdx ? 'active' : ''}" 
+                style="background-color: ${c.hex || c.value || '#18181B'};" 
                 title="${c.name}"
                 ${c.image ? `data-color-img="${c.image}"` : ''}></span>
         `).join('');

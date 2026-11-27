@@ -799,7 +799,7 @@
     // Cache buster to ensure clients and CDNs immediately receive freshly updated packshots
     const bustUrl = (u) => {
       if (!u) return '';
-      const v = '20261127_v41_swatch_fix';
+      const v = '20261127_v42_single_swatch_fix';
       return u.includes('?') ? `${u}&v=${v}` : `${u}?v=${v}`;
     };
 
@@ -1048,15 +1048,20 @@
     }
 
     // Color Swatches
-    if (product.colors && product.colors.length > 1) {
+    if (product.colors && product.colors.length >= 1) {
       colorGroup.style.display = 'block';
-      colorNameEl.textContent = product.colors[0].name;
-      selectedColor = product.colors[0].name;
-      selectedImg = product.colors[0].image || product.primary_image;
+      let defIdx = 0;
+      if (product.primary_image) {
+        const m = product.colors.findIndex(c => c.image === product.primary_image);
+        if (m >= 0) defIdx = m;
+      }
+      colorNameEl.textContent = product.colors[defIdx].name;
+      selectedColor = product.colors[defIdx].name;
+      selectedImg = product.colors[defIdx].image || product.primary_image;
 
       swatchesGrid.innerHTML = product.colors.map((c, i) => `
         <button type="button" 
-          class="qv-color-swatch ${i === 0 ? 'active' : ''}" 
+          class="qv-color-swatch ${i === defIdx ? 'active' : ''}" 
           data-color="${c.name}" 
           data-img="${c.image}" 
           style="background: ${c.hex || c.value || '#18181B'};" 

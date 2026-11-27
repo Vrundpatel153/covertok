@@ -15,6 +15,26 @@
     setupSliderControls('productGrid', 'prodSliderPrev', 'prodSliderNext');
   }
 
+  function renderSwatchesHtml(p, targetImgId) {
+    const colors = p.colors || [];
+    if (colors.length === 0) return '';
+    const visibleColors = colors.slice(0, 3);
+    const remainingColors = colors.length - 3;
+    return `
+      <div class="product-color-palette" style="display: flex; align-items: center; gap: 4px;">
+        ${visibleColors.map((c, i) => `
+          <span class="color-swatch-dot ${i === 0 ? 'active' : ''}" 
+                style="background-color: ${c.hex}; width: 14px; height: 14px; border-radius: 50%; display: inline-block; border: 1.5px solid ${i === 0 ? '#171513' : '#E5E7EB'}; box-shadow: 0 1px 2px rgba(0,0,0,0.06); cursor: pointer;"
+                title="${c.name}"
+                data-img="${c.image || ''}"
+                onclick="event.stopPropagation(); const img = document.getElementById('${targetImgId}'); if (img && this.dataset.img) { img.src = this.dataset.img; this.parentElement.querySelectorAll('.color-swatch-dot').forEach(d => { d.classList.remove('active'); d.style.borderColor = '#E5E7EB'; }); this.classList.add('active'); this.style.borderColor = '#171513'; }">
+          </span>
+        `).join('')}
+        ${remainingColors > 0 ? `<span style="font-size: 0.68rem; font-weight: 700; color: #8C827A; margin-left: 2px;">+${remainingColors}</span>` : ''}
+      </div>
+    `;
+  }
+
   // 1. SECTION 5: "SHOP OUR COLLECTIONS" Dynamic Category Tabs & Grid
   function setupCollectionsSection() {
     const pillsBar = document.getElementById('collectionsFilterPills');
@@ -66,6 +86,8 @@
           badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #0A0A0C; color: #FFFFFF; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
         }
 
+        const swatchesHtml = renderSwatchesHtml(p, `homeColImg_${p.id}`);
+
         return `
           <div class="col-prod-card" data-id="${p.id}">
             <div class="col-prod-media" style="position: relative; background: #FFFFFF; aspect-ratio: 4 / 4.6; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; border-radius: 18px 18px 0 0; cursor: pointer;" onclick="window.location.href='product.html?handle=${p.handle}'">
@@ -78,9 +100,12 @@
               <a href="product.html?handle=${p.handle}" style="font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; color: #171513; text-decoration: none; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px;">
                 ${p.title}
               </a>
-              <div class="col-prod-price-box" style="display: flex; align-items: baseline; gap: 8px; margin-top: auto;">
-                <span class="col-price-now" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #171513;">${p.price_formatted}</span>
-                ${p.original_price > p.price ? `<span class="col-price-was" style="font-size: 0.82rem; color: #8C827A; text-decoration: line-through;">${p.original_price_formatted}</span>` : ''}
+              <div class="col-prod-price-box" style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto;">
+                <div style="display: flex; align-items: baseline; gap: 8px;">
+                  <span class="col-price-now" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #171513;">${p.price_formatted}</span>
+                  ${p.original_price > p.price ? `<span class="col-price-was" style="font-size: 0.82rem; color: #8C827A; text-decoration: line-through;">${p.original_price_formatted}</span>` : ''}
+                </div>
+                ${swatchesHtml}
               </div>
             </div>
           </div>
@@ -130,6 +155,8 @@
         badgeHtml = `<span class="luxury-card-tag" style="position: absolute; top: 10px; left: 10px; z-index: 2; padding: 4px 9px; border-radius: 999px; background: #0A0A0C; color: #FFFFFF; font-weight: 800; font-size: 0.68rem; letter-spacing: 0.04em;">BESTSELLER</span>`;
       }
 
+      const swatchesHtml = renderSwatchesHtml(p, `featuredImg_${p.id}`);
+
       return `
         <div class="product-card" data-id="${p.id}" onclick="window.location.href='product.html?handle=${p.handle}'" style="cursor: pointer;">
           <div class="product-card-inner">
@@ -141,7 +168,10 @@
               <h3 class="product-name" style="font-size: 0.9rem; font-weight: 700; color: #171513; line-height: 1.35; margin: 0 0 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                 <a href="product.html?handle=${p.handle}" style="color: inherit; text-decoration: none;">${p.title}</a>
               </h3>
-              <div class="product-price" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #171513; margin-top: auto;">${p.price_formatted}</div>
+              <div class="product-pricing-swatches-row" style="display: flex; align-items: center; justify-content: space-between; margin-top: auto;">
+                <div class="product-price" style="font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #171513;">${p.price_formatted}</div>
+                ${swatchesHtml}
+              </div>
             </div>
           </div>
         </div>
