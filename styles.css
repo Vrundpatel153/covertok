@@ -58277,3 +58277,8 @@ body.mobile-nav-open {
     padding: 10px 12px 14px !important;
   }
 }
+
+/* Defensive guard: keep removed legacy bento-case-fan hidden if cached HTML ever references it */
+.bento-case-fan {
+  display: none !important;
+}
